@@ -1,0 +1,442 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_24.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_24.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Nov 24 00:00:02 2002
+00:05 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+01:22 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+01:26 -!- sinfonian [~bshirclif@207.218.223.253] has joined #linux4be
+01:33 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+01:33 < metalac> anyone here?
+01:33 < sinfonian> yea
+01:33 < sinfonian> whats up?
+01:33 < metalac> i'm having some trouble mounting my compact flash on my linux bo
+01:33 < metalac> x
+01:34 < metalac> i mean it mounts fine, but i can't write to it
+01:34 < jal0> hey guys just got input working on serial.
+01:34 < metalac> and am having some hard time setting permissions, you know anything about it?
+01:34 < sinfonian> holy moly s**t
+01:34 < sinfonian> sweet jal0
+01:34 < metalac> so what you can type now?
+01:35 < sinfonian> honestly I dont.. but maybe you can chmod the disk?
+01:35 < jal0> antagonizt: you there?
+01:35 < metalac> sinfonian: tried but no luck
+01:35 < sinfonian> how well is the serial input working.. can you use console now?
+01:36 < sinfonian> metalac.. have you tried a gui app?  
+01:36 < jal0> just got it working about 2 seconds ago :)
+01:36 < metalac> i guess i could try with tha
+01:36 < metalac> t
+01:36 < metalac> jal0: is it stable?
+01:36 < sinfonian> sweet.. console and everything?
+01:37 < jal0> right now its a standalone app
+01:37 < sinfonian> ok
+01:37 < jal0> just a terminal repeater, what ever you type gets sent back to you via the be300
+01:37 < sinfonian> ok
+01:38 < jal0> it's not using interrupts yet either its done by polling
+01:38 < sinfonian> so do you think you can get that in the serial driver?
+01:38 < jal0> yeah, but i was thinking of getting interrupts working first
+01:39 < sinfonian> will the input work with polling?
+01:39 < jal0> yeap
+01:39 < sinfonian> well why dont you give us that at first.. 
+01:39 < sinfonian> since the interupts might take a lot longer 
+01:39 < sinfonian> I can play around with it if I can serial input
+01:39 < jal0> going to upload what i have in a sec.
+01:40 < sinfonian> sweet
+01:42 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+01:42 < sinfonian> is john around?
+01:42 < sinfonian> antagonizt..,.. you here?
+01:44 < jal0> ok its at /home/be300/old_linux/testcode/SERIAL_DRIVER
+01:44 < sinfonian> cool
+01:44 < jal0> it's not really a drive yet :)
+01:45 < jal0> it's a standalone app, you run it under the loader
+01:45 < jal0> vrserial.elf
+01:47 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+01:47 < metalac> god damn the cf card
+02:00 < sinfonian> damn where were the secret pictures?
+02:02 < sinfonian> I guess I will add them later
+02:02 < jal0> did you check the logs
+02:03 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+02:03 < sinfonian> na
+02:03 < jal0> hang on
+02:03 < jal0_logger>  http://www.linux4.be/~jroark/images/pg-kb-ob-vt-01.jpeg
+02:03 < jal0_logger>  http://www.linux4.be/~jroark/images/pg-kb-ob-vt-02.jpeg
+02:03 < sinfonian> say... what do you guys think I should say in my article other then the picts and the progress and a discliamer that it isnt near complete yet?
+02:03 < sinfonian> thanks
+02:04 < jal0> np
+02:04 < jal0> just that help is always welcomed, even if its just documentation efforts
+02:05 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+02:05 < sinfonian> ok
+02:05 < sinfonian> what else?
+02:05 < jal0> has anybody tried the serial code i uploaded yet?
+02:06 < sinfonian> I will in a sec
+02:06 < metalac> jal0: you need a serial cable for that right?
+02:06 < jal0> yeap
+02:06 < sinfonian> I got one
+02:06 < metalac> i can't get the stupid cf to work so i can load linux on it
+02:07 < sinfonian> actually jalo.. I need to get offline for a while
+02:07 < sinfonian> expecting a phone call any minute
+02:07 < jal0> ok later
+02:09 < metalac> hej jal0 do you know why i wouldn't be able to change permissions in Linux?
+02:09 < jal0> are you root?
+02:09 < metalac> yes, that's the weird thing
+02:10 < metalac> i chmod dir to 777 and when i ln -l it tells me its 755 still
+02:10 < jal0> then i have no idea, what error are you getting?
+02:10 < jal0> ls -l 
+02:10 < jal0> what does it say
+02:10 < metalac> :) yeah sorry typo
+02:11 < metalac> drwxr-xr-x    2 root     root        16384 Jan  1  1970 CF
+02:11 < jal0> is it write protected
+02:11 < metalac> i'm trying to change permissions on my compact flash reader, but doesn't seem to be working
+02:12 < metalac> well in /etc/fstab there is nothing saying it's read-only
+02:13 < jal0> try unmounting it and then mounting it again
+02:13 < metalac> nope still the same permissions on it
+02:13 < sinfonian> alright guys I will talk with youlater
+02:13 < jal0> later
+02:13 < sinfonian> bye
+02:13 -!- sinfonian [~bshirclif@207.218.223.253] has left #linux4be []
+02:16 < metalac> it's funny i can change permissions to my /mnt/cdrom folder but /mnt/CF i can't
+02:35 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit [Remote closed the connection]
+02:59 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+02:59 < metalac> well finaly got that CF working right
+02:59 < jal0> what was the problem
+03:00 < metalac> have no clue, but i had to edit the change the owner group and add my user to that group
+03:00 < jal0> ic
+03:01 < metalac> how long will it take me to put linux on it and start it on be??
+03:01 < jal0> not sure what you mean
+03:02 < metalac> well just want to see how it looks
+03:03 < jal0> just copy the file to CF instert in BE then run loader
+03:05 < metalac> ok i'm working on it
+03:05 < metalac> so all i need is a bootloader and kernel right
+03:05 < metalac> anything else?
+03:06 < jal0> and the booloader configuration file
+03:06 < metalac> have that too
+03:08 < metalac> sweet 
+03:08 < metalac> but i only got the black screen and picture of tux
+03:09 < jal0> what kernel are you using?
+03:09 < metalac> Kernel 2.4.18 with serial debug and framebuffer support:
+03:09 < metalac> that's what it says on the page
+03:09 < metalac> btw how do i get rid of it now?
+03:09 < metalac> reset the be?
+03:09 < jal0> you compiled it yourself
+03:10 < metalac> no
+03:10 < metalac> i just used the one you guys already compiled
+03:10 < jal0> where did you get it from
+03:11 < metalac> http://www.linux4.be/download/kernel/vmlinux
+03:11 < jal0> http://www.linux4.be/~jroark/files/vmlinux-pgui-test1
+03:11 < jal0> try this one, just rename it to vmlinux
+03:12 < metalac> k
+03:12 < jal0> image=vmlinux
+03:12 < jal0> label=Linux
+03:12 < jal0> append=console=tty0 console=ttyS0,9600 root=/dev/ram init=/bin/sh
+03:13 < jal0> in the configuration file for the loader
+03:17 < metalac> i see you have the keyboard going
+03:17 < metalac> so far it looks good
+03:17 < jal0> yes but no touchscreen support
+03:18 < metalac> what is the problem with it?
+03:18 < jal0> we havn't located the registers for it yet
+03:19 < metalac> oh wow it works with CF out :)
+03:19 < metalac> did you look on how they do it with ipaq's and those sort of devices?
+03:20 < jal0> different hardware
+03:20 < metalac> that's true
+03:21 < metalac> although i like what i see so far
+03:21 < jal0> there is still lots more to do
+03:22 < metalac> well yeah, but it seems like a lot of progress since summer
+03:22 < metalac> there was a lot of downtime since augus
+03:22 < metalac> t
+03:26 < metalac> anyways it's 2:00am here got go to sleep
+03:26 < metalac> see ya
+03:26 < metalac> thnx for help
+03:26 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+04:22 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has joined #linux4be
+04:22 < themaw> hi!
+05:51 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has quit ["Client Exiting"]
+06:45 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has joined #linux4be
+07:01 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has quit [Remote closed the connection]
+13:04 -!- toddlr [~toddlr@pool-138-89-86-42.mad.east.verizon.net] has joined #Linux4BE
+13:06 -!- toddlr [~toddlr@pool-138-89-86-42.mad.east.verizon.net] has quit [Client Quit]
+14:10 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has left #Linux4BE []
+14:13 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+14:17 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit [Client Quit]
+14:19 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+14:20 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit [Client Quit]
+14:21 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+14:40 < jal0> hi antagonizt
+14:41 < antagonizt> hey what is going on?
+14:41 < antagonizt> i saw you started work on the serial driver
+14:41 < jal0> got rx and tx working 
+14:41 < antagonizt> in the driver...
+14:41 < antagonizt> ?
+14:41 < jal0> not yet its a standalone app
+14:41 < antagonizt> ok
+14:42 < antagonizt> yeah i never tested the input code i had in the driver...
+14:42 < antagonizt> rx rather
+14:42 < jal0> i'm working on a monitor program
+14:42 < antagonizt> cool
+14:42 < antagonizt> something to dump mem locations... regs etc?
+14:43 < jal0> the first example is at /home/be300/old_linux/testcode/SERIAL_DRIVER
+14:43 < jal0> not really a drive though :)
+14:43 < antagonizt> yeah... it'll be hard to get a driver going without interupts
+14:44 < jal0> thats what the monitor is for,
+14:44 < antagonizt> to figure out the interupt?
+14:44 < jal0> help in looking for registers
+15:03 < antagonizt> neat... well let me know if you have any trouble figuring out what i was thinking when i did X or Y in the serial driver
+15:03 < jal0> ok, looking for info on the interrupt vector tables for the vr4131 now
+15:14 -!- Filip_ [~Filip@166.212-136-217.adsl.skynet.be] has joined #Linux4BE
+15:15 < jal0> hey filip
+15:15 < Filip_> hi jal0
+15:15 < Filip_> just reading thelog
+15:15 < Filip_> congrats for the progress on serial
+15:16 < jal0> still lots more work
+15:16 < Filip_> going to look at some different touchpanel drivers, to see how they work
+15:17 < jal0> need to figure out where the interrupt vectors are
+15:35 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+15:56 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+16:09 < Filip_> jal0 ?
+16:09 < jal0> yeah
+16:09 < Filip_> you've got PB
+16:09 < jal0> yeap
+16:10 < Filip_> how is it structured ? I mean the huge amount of diskspace
+16:10 < jal0> enormous
+16:10 < jal0> 4 gigs
+16:10 < Filip_> is htere like a separate folder for MIPS includes / sample code ?
+16:11 < jal0> not really, the only things i installed were the stuff for MIPS not the other processors with there were about 8 others
+16:12 < Filip_> you mean only mips gives you 4GB ??
+16:12 < jal0> yeap
+16:12 < Filip_> so if you install the full monty, you'll need a diskarray 
+16:13 < Filip_> if you start comiling stuff with it, it will even grow
+16:13 < Filip_> compiling
+16:13  * Filip_ always  tought  CE stood for 'compact edition'
+16:13 < jal0> never tried compiling anything, just using the help files and source code
+16:14 < Filip_> it's version 4 you got, right ?
+16:14 < jal0> yeap, pluse i downloaded the 3.0 source code
+16:15 < Filip_> CE 3.0 that is ?
+16:15 < jal0> yeap
+16:30 < jal0> filip: did you check out my serial code?
+16:31 -!- Filip__ [~Filip@166.212-136-217.adsl.skynet.be] has joined #Linux4BE
+16:32 -!- Filip_ [~Filip@166.212-136-217.adsl.skynet.be] has quit [Read error: 54 (Connection reset by peer)]
+17:53 -!- Filip__ [~Filip@166.212-136-217.adsl.skynet.be] has left #Linux4BE []
+18:32 < jal0> antagonizt: you there?
+18:36 < antagonizt> mostly
+18:36 < antagonizt> what's up?
+18:37 < jal0> strange thing happens in my prog. anytime i try and dereference a pointer at addresss 0xAF000200 and above, my program restarts(frome the beginning). the part that dereferences them mem is in a while loop so how could it just restart?? strange....
+18:37 < jal0> a while(1) loop
+18:37 < antagonizt> weird
+18:39 < jal0> the program i'm talking about is the monitor. i have a basic <E>xamine memory command setup so far. i plan on <D>ump memory, <M>odify memory, and Display <R>egister commands next.
+18:40 < antagonizt> cool
+18:40 < jal0> to you have you be300 setup, i was wondering if you could do me a favor
+18:41 < antagonizt> sure...
+18:42 < jal0> start = 0xAF000200;
+18:42 < jal0> pStart = (unsigned char*)start;
+18:42 < jal0> dummy= *pStart;
+18:42 < jal0> if you could place this somewhere in kernel code and see what happen duing boot
+18:43 < jal0> basically what i'm seeing is that when executing the 'dummy=*pStart', my prog resets and starts at the beginning like its the first time its being ran
+18:44 < jal0> only if you have the time though :)
+18:45 < antagonizt> isn't start the name of your init func?
+18:45 < antagonizt> main
+18:45 < jal0> yes, good though, but the compiler should be smart enough no to confuse a function with a variable name
+18:46 < jal0> but i'll try changing names... hang on
+18:49 < jal0> nope still same thing
+18:49 < antagonizt> i threw it in right before the after the serial init and it didn't do anything...
+18:50 < antagonizt> no affect
+18:51 < jal0> hmm, wonder if i need to be initializing something
+18:54 < jal0> thanks though
+19:00 < antagonizt> np
+19:00 < jal0> while(1)
+19:00 < jal0> {
+19:00 < jal0> 	/* Print address */
+19:00 < jal0> 	phex(memStart,8,2);
+19:00 < jal0> 	SerialOutString("=  ");
+19:00 < jal0> 	SerialOutString("[phex-before]");
+19:00 < jal0> 	/* Print contents */
+19:00 < jal0> 	i=(long)(*pMemStart & 0xFF);
+19:00 < jal0> 	SerialOutString("[phex-in]");
+19:00 < jal0> 	phex(i,2,2);
+19:00 < jal0> 	SerialOutString("[phex-out]");
+19:00 < jal0> 	crlf();
+19:00 < jal0> 	memStart++;
+19:00 < jal0> 	pMemStart++;
+19:00 < jal0> }
+19:00 < jal0> -----------------------------
+19:00 < jal0> BE300 Monitor v0.01 by Jal0
+19:00 < jal0> >Examine  af000200
+19:00 < jal0> [phex]AF000200  =  [phex-before]x
+19:00 < jal0> BE300 Monitor v0.01 by Jal0
+19:00 < jal0> >
+19:00 < jal0> ------------------------------
+19:01 < jal0> this is the output, i get phex-before, but thats it, no phex-in
+19:01 < jal0> the only thing seperating the two is the dereferencing instruction
+19:02 < jal0> i=(long)(*pMemStart & 0xFF);
+19:02 < jal0> this is all enclosed in a while(1) loop, but i get an x char then the program resets
+19:02 < jal0> strange
+19:04 < jal0> any other ideas, ... sorry if i'm bothering you :)
+19:04 < antagonizt> where is this code... could i take a closer look at it?
+19:04 < jal0> hang on i'll upload it
+19:07 < jal0> it under /home/be300/old_linux/testcode/BEMON
+19:08 < jal0> when it starts, at the command prompt just type 'e' it will finish the command name for you, then put in the address af000200
+19:09 < jal0> actually if you put the address af0001f0 it will start printing mem locs then reset at af000200
+19:17 < antagonizt> at boot i get this...
+19:17 < antagonizt> x
+19:17 < antagonizt> BE300 Monitor v0.01 by Jal0
+19:17 < antagonizt> >ERROR : Unknown Command   
+19:17 < antagonizt> >ERROR : Unknown Command A
+19:17 < antagonizt>                           
+19:17 < antagonizt> >ERROR : Unknown Command T
+19:17 < antagonizt>                           
+19:17 < antagonizt> >ERROR : Unknown Command  
+19:17 < antagonizt>                           
+19:17 < antagonizt> >ERROR : Unknown Command S
+19:17 < antagonizt>                           
+19:17 < antagonizt> >ERROR : Unknown Command 7
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command =
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command 4
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command 5
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command  
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command S
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command 0
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command =
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command 0
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command  
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command L
+19:18 < antagonizt>                           
+19:18 < antagonizt> >ERROR : Unknown Command Q
+19:18 < antagonizt>                           
+19:18 < antagonizt> >
+19:18 < antagonizt> some kind of modem code?
+19:18 < jal0> thats looks like the modem initializiation string from your terminal program
+19:19 < jal0> are you at a cmd prompt
+19:19 < antagonizt> minicom
+19:19 < jal0> do you see '>'
+19:19 < antagonizt> yes
+19:19 < jal0> type e
+19:19 < antagonizt> >Examine  af000200
+19:19 < antagonizt> [phex]AF000200  =  [phex-before]x
+19:19 < antagonizt> BE300 Monitor v0.01 by Jal0
+19:20 < jal0> now type e, then address af0001f0
+19:20 < antagonizt> [phex]AF0001F0  =  [phex-before][phex-in][phex]00  [phex-out]
+19:21 < antagonizt> all the way to AF0001FF
+19:21 < antagonizt> then [phex]AF000200  =  [phex-before]x
+19:21 < antagonizt> and it resets
+19:21 < jal0> yeap, that part works, just at af000200 it resets
+19:21 < jal0> now if you look in the code its an endless loop, so how is it resetting?
+19:22 < jal0> and where is that 'x' coming from?
+19:23 < jal0> the same thing happens at ALL addresses above af0001ff
+19:23 < jal0> weird
+19:25 < jal0> do you see what i'm talking about?
+19:25 < antagonizt> yes
+19:27 < jal0> is there a way to get the program to run after the kerel boots?
+19:27 < antagonizt> not in user land
+19:28 < jal0> maybe as a function call just befor init
+19:29 < jal0> once we have a good monitor/debugger, it will make searching for register a little more easier i think
+--- Log closed Mon Nov 25 00:00:28 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

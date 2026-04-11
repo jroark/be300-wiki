@@ -1,0 +1,250 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              Native Win32/Cygwin Linux4BE Developers HowTo
+                            jal0@linux4.be
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.INITIAL ENVIRONMENT SETTINGS:
+
+!!!! MAKE SURE YOUR HOME DIRECTORY PATH DOES NOT CONTAIN ANY SPACES
+
+#### cygwin1.dll version: 1.3.10
+#### gcc version: 2.95.3-5 (cygwin special)
+#### uname output: CYGWIN_NT-5.0
+
+bash$ export target=mipsel-linux
+bash$ export prefix=~/toolchains/xLinux4BE
+bash$ export archive=$prefix/archive
+bash$ export MAKE_MODE=UNIX
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.GETTING THE SOURCES:
+
+bash$ mkdir -p $archive
+bash$ cd $archive
+
+#### Login into CVS tree at http://linux-mips.sourceforge.net/ to get 
+#### the linux-mips modifications for the linux kernel. Press "Return" 
+#### when prompted for password. You only need to do this once on any 
+#### machine.
+
+bash$ cvs -d:pserver:anonymous@cvs.linux-mips.sourceforge.net:/cvsroot/linux-mips login
+
+#### Check out a copy of the tree.
+
+bash$ cvs -z3 -d:pserver:anonymous@cvs.linux-mips.sourceforge.net:/cvsroot/linux-mips co linux
+
+#### Take a look of ./linux/Makefile and determine the kernel version to 
+#### download. To avoid name conflict, rename linux directory to 
+#### sf-linux-$sf_version, Then pack it up for storage.
+
+bash$ version=$(grep ^VERSION\ *=\ * ./linux/Makefile | sed -e s%VERSION\ *=\ *%%)
+bash$ patchlevel=$(grep ^PATCHLEVEL\ *=\ * ./linux/Makefile | sed -e s%PATCHLEVEL\ *=\ *%%)
+bash$ sublevel=$(grep ^SUBLEVEL\ *=\ * ./linux/Makefile | sed -e s%SUBLEVEL\ *=\ *%%)
+bash$ export sf_version=$version.$patchlevel.$sublevel
+bash$ mv linux sf-linux-$sf_version
+bash$ cd sf-linux-$sf_version; tar -zcvpf ../sf-linux-$sf_version.tar.gz .; cd ..
+
+#### Goto http://www.kernel.org/pub/linux/kernel/ to grab the right
+#### version of kernel source.
+
+bash$ wget -P$archive http://www.kernel.org/pub/linux/kernel/v$version.$patchlevel/linux-$sf_version.tar.gz
+
+#### Get the linux4BE kernel sources
+bash$ linux4BE_version=20020706
+bash$ wget -P$archive  http://www.linux4.be/download/kernel/linux4be$linux4BE_version.tgz 
+
+
+#### Goto ftp://ftp.kernel.org and get a copy of binutils
+
+bash$ export binutils_version=2.12.90.0.4
+bash$ wget -P$archive ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-$binutils_version.tar.gz
+
+#### Goto ftp://ftp.gnu.org and get copies of gcc and glibc.
+
+bash$ export gcc_version=3.0.4
+bash$ export glibc_version=2.2.4
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/gcc/gcc-$gcc_version/gcc-$gcc_version.tar.gz 
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/glibc/glibc-$glibc_version.tar.gz 
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-$glibc_version.tar.gz
+
+#### Get a default kernel ramdisk image to play with.
+
+bash$ wget -P$archive http://www.linux4.be/download/ramdisk/ramdisk.gz
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.INSTALLING THE SOURCES:
+
+
+bash$ mkdir -p $prefix/build
+bash$ cd $prefix/build
+
+#### Install the Linux Kernel Sources
+
+bash$ tar -xzf $archive/linux-$sf_version.tar.gz
+bash$ cd $prefix/build/linux
+
+#### Install the mipsel-linux kernel Sources
+
+bash$ tar -xzf $archive/sf-linux-$sf_version.tar.gz
+
+#### Install the linux4BE kernel Sources
+
+bash$ tar -xzf $archive/linux4be$linux4BE_version.tgz
+
+#### Install binutils Sources
+
+bash$ cd $prefix/build
+bash$ tar -xzf $archive/binutils-$binutils_version.tar.gz
+
+#### Install gcc Sources
+
+bash$ cd $prefix/build
+bash$ tar -xzf $archive/gcc-$gcc_version.tar.gz
+
+#### Install libc sources
+
+bash$ cd $prefix/build
+bash$ tar -xzf $archive/glibc-$glibc_version.tar.gz
+bash$ cd glibc-$glibc_version 
+bash$ tar -xzf $archive/glibc-linuxthreads-$glibc_version.tar.gz 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.BUILD CROSS-BINUTILS:
+
+
+bash$ cd $prefix/build/binutils-$binutils_version
+bash$ ./configure --target=$target --prefix=$prefix > ../binutils-configure.log 2>&1
+bash$ make > ../binutils-build.log 2>&1
+bash$ make install > ../binutils-install.log 2>&1
+bash$ cd .. 
+
+#### add to path so cross-binutils can be found
+
+bash$ export PATH=$PATH:$prefix/bin
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.BUILD GCC 'C' BOOTSTRAP CROSS-COMPILER:
+
+
+#### build & install the bootstap compiler
+
+bash$ cd $prefix/build/gcc-$gcc_version
+bash$ ./configure --target=$target --prefix=$prefix --without-headers --with-newlib --disable-shared > ../gcc-bootstrap-configure.log 2>&1
+bash$ make all-gcc > ../gcc-bootstrap-build.log 2>&1
+bash$ make install-gcc > ../gcc-bootstrap-install.log 2>&1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6.CONFIGURE THE KERNEL SOURCES:
+
+bash$ cd $prefix/build/linux
+
+#### set up default device configuration file. You may have to add the
+#### following in .config to the frambuffer section following 
+#### CONFIG_FB_SIMPLE=y:
+	CONFIG_FB_SIMPLE_MEMBASE=aa200000
+	CONFIG_FB_SIMPLE_MEMSIZE=0
+
+bash$ make CROSS_COMPILE=$target- mrproper
+bash$ cp config_be300 .config
+
+#### configure linux for device
+
+bash$ make CROSS_COMPILE=$target- oldconfig
+bash$ make CROSS_COMPILE=$target- dep > ../kernel-dep.log 2>&1
+bash$ make CROSS_COMPILE=$target- clean
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.BUILDING THE GLIBC RUNTIME LIBRARY:
+
+#### create kernel source simlinks
+
+bash$ cd $prefix/mipsel-linux
+bash$ mkdir include 
+bash$ cd include 
+bash$ ln -s $prefix/build/linux/include/asm-mips asm 
+bash$ ln -s $prefix/build/linux/include/linux linux
+
+#### configure & install
+
+bash$ cd $prefix/build
+bash$ mkdir glibc-build
+bash$ cd glibc-build
+bash$ CC=$target-gcc $prefix/build/glibc-$glibc_version/configure --host=$target --prefix=$prefix --with-headers=$prefix/$target/include --enable-add-ons --disable-sanity-checks --disable-debug --disable-profile > ../glibc-configure.log 2>&1
+
+#### sitback, this may take a while!
+
+bash$ make > ../glibc-build.log 2>&1
+
+#### change files with .exe extensions so they can be installed
+
+bash$ for i in $(find . -name '*.exe' -printf %p\ ) ; do mv -f $i $(echo $i | sed -e s%.exe%%) ; done 
+
+#### install
+
+bash$ make install_root=$prefix/$target prefix="" install > ../glibc-install.log 2>&1
+
+#### fix library
+
+bash$ echo "GROUP ( libc.so.6 libc_nonshared.a )" > $prefix/$target/lib/libc.so
+
+#### change files with .exe extensions for target platform
+
+bash$ cd $prefix/$target/bin
+bash$ for i in $(find . -name '*.exe' -printf %p\ ) ; do mv -f $i $(echo $i | sed -e s%.exe%%) ; done 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8.REBUILD GCC 'C/C++' CROSS-COMPILER:
+
+bash$ cd $prefix/build/gcc-$gcc_version
+bash$ make clean
+bash$ ./configure --target=$target --prefix=$prefix --enable-languages=c,c++ > ../gcc-configure.log 2>&1
+bash$ make > ../gcc-build.log 2>&1
+bash$ install > ../gcc-install.log 2>&1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9.CREATING A RAMDISK
+
+#### copy over the default ramdisk.
+^^^^ NOTE: Step 9 & 10 can be done after Step 7. before rebuilding gcc.
+
+bash$ cd $prefix/build/linux
+bash$ cp $archive/ramdisk.gz ./arch/mips/ramdisk
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+10.BUILD THE LINUX KERNEL
+
+bash$ cd $prefix/build/linux
+bash$ make CROSS_COMPILE=$target- vmlinux > ../kernel-vmlinux.log 2>&1
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11.BOOTING THE KERNEL
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12.SETUP ENVIRONMENT SCRIPTS
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13.BUILD & TEST USERLAND CODE
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+14.UPDATING THE SOURCES
+
+#### packaging up the runtime headers and libraries for bootstrapping 
+#### future toolsets.
+
+#### packaging up the toolchain binaries
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+14.COMMON PROBLEMS

@@ -1,0 +1,373 @@
+ProcArray = 006698E0
+ProcArray[0] = 006698E0
+  lpszProcName:  00074B10 (NK.EXE)    dwVMBase:       02000000
+  pcmdline:      00074B38 ()
+  pStdNames:     00AB991C (00000000)      procnum:        00
+  hProc:         00FFF002 (00000000)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80FFF024 (00FFF024)      pTh:            80FFF024 (00FFF024)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000001                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  00000000 (00000000)
+  BasePtr:       80060000 (00060000)      bTrustLevel:    02
+  e32_ptr:       00669940                 o32_ptr:        00000000 (00000000)
+  oe_ptr:        00669930
+ e32_unit[EXP]  rva = 00000000 (00060000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 00000000 (00060000)    size = 00000000  - IMPORT TABLE
+ e32_unit[RES]  rva = 00000000 (00060000)    size = 00000000  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00058000 (000B8000)    size = 00003A70  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00060000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00069000 (000C9000)    size = 000076B0  - FIXUP TABLE
+ pagemode = 00000000
+ filetype = 00000003
+ objcnt = 3
+
+Object at 0C60D88C
+
+Object at 0C60D88C
+
+Object at 0C60D88C
+------------------------------------------------------------
+ProcArray[1] = 00669990
+  lpszProcName:  00FEAEE0 (filesys.exe)    dwVMBase:       04000000
+  pcmdline:      00FEAEF8 ()
+  pStdNames:     00AB99CC (00000000)      procnum:        01
+  hProc:         00FFCD4E (00000000)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80FFCB54 (00FFCB54)      pTh:            80FFCB54 (00FFCB54)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000002                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       006699F0                 o32_ptr:        0403BA64 (00FF5A64)
+  oe_ptr:        006699E0
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 00024020 (005D6020)    size = 00000028  - IMPORT TABLE
+ e32_unit[RES]  rva = 0002F000 (005E1000)    size = 000000A4  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 0002C000 (005DE000)    size = 0000206C  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000000
+ filetype = 00000003
+ objcnt = 4
+
+Object at 01163000
+
+Object at 00A27000
+
+Object at 00A2E000
+
+Object at 00A31000
+------------------------------------------------------------
+ProcArray[2] = 00669A40
+  lpszProcName:  00FDCEE0 (device.exe)    dwVMBase:       06000000
+  pcmdline:      00FDCEF8 (20)
+  pStdNames:     00AB9A7C (00000000)      procnum:        02
+  hProc:         00FE21D6 (00000000)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80FE2000 (00FE2000)      pTh:            80D66CD4 (00D66CD4)
+  tlsLowUsed:    0000001F                 tlsHighUsed:    00000000
+  aky:           00000004                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  00000000 (00000000)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669AA0                 o32_ptr:        06017148 (00FDD148)
+  oe_ptr:        00669A90
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 000060C0 (1FFFF0C0)    size = 00000028  - IMPORT TABLE
+ e32_unit[RES]  rva = 00000000 (00000000)    size = 00000000  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00008000 (1FFFF000)    size = 00000618  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 3
+
+Object at 01163000
+
+Object at 2044F000
+
+Object at 2044F000
+------------------------------------------------------------
+ProcArray[3] = 00669AF0
+  lpszProcName:  00F0EEE0 (gwes.exe)    dwVMBase:       08000000
+  pcmdline:      00F0EEF8 (30)
+  pStdNames:     00AB9B2C (00000000)      procnum:        03
+  hProc:         80F1B44A (00F1B44A)      pfnEH:          000162F0 (1FFFF2F0)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80F1B8A8 (00F1B8A8)      pTh:            80EB06D8 (00EB06D8)
+  tlsLowUsed:    0000001F                 tlsHighUsed:    00000000
+  aky:           00000008                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669B50                 o32_ptr:        080B7930 (00F18930)
+  oe_ptr:        00669B40
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 000A2088 (00000000)    size = 00000064  - IMPORT TABLE
+ e32_unit[RES]  rva = 000B1000 (00000000)    size = 000051E0  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 000A8000 (00000000)    size = 00008CDC  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 4
+
+Object at 01163000
+
+Object not in RAM
+
+
+Object not in RAM
+
+
+Object not in RAM
+
+------------------------------------------------------------
+ProcArray[4] = 00669BA0
+  lpszProcName:  00E6FEE0 (Shell32.exe)    dwVMBase:       0A000000
+  pcmdline:      00E6FEF8 ()
+  pStdNames:     00AB9BDC (00000000)      procnum:        04
+  hProc:         00EA0BB2 (00000000)      pfnEH:          00000000 (00000000)
+  pProxList:     80EA0AA0 (00EA0AA0)
+  pMainTh:       80EAAAA4 (00EAAAA4)      pTh:            80D667C0 (00D667C0)
+  tlsLowUsed:    0000003F                 tlsHighUsed:    00000000
+  aky:           00000010                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669C00                 o32_ptr:        0A028658 (00E92658)
+  oe_ptr:        00669BF0
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 00016860 (005C8860)    size = 0000008C  - IMPORT TABLE
+ e32_unit[RES]  rva = 0001B000 (005CD000)    size = 0000C528  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00019000 (005CB000)    size = 00001270  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000002
+ objcnt = 4
+
+Object at 01163000
+
+Object at 00A1A000
+
+Object at 00A1B000
+
+Object at 00A1D000
+------------------------------------------------------------
+ProcArray[5] = 00669C50
+  lpszProcName:  00E9BED8 (explorer.exe)    dwVMBase:       0C000000
+  pcmdline:      00E9BEF8 (60)
+  pStdNames:     00AB9C8C (00000000)      procnum:        05
+  hProc:         80EAA04A (00EAA04A)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80F59638 (00F59638)      pTh:            80F59638 (00F59638)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000020                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  00000000 (00000000)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669CB0                 o32_ptr:        0C0133B4 (00EA93B4)
+  oe_ptr:        00669CA0
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 00002000 (00D0E000)    size = 00000050  - IMPORT TABLE
+ e32_unit[RES]  rva = 00005000 (00D0A000)    size = 00000F04  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00004000 (00000000)    size = 00000078  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000002
+ objcnt = 5
+
+Object at 01163000
+
+Object at 0115E000
+
+Object at 01160000
+
+Object not in RAM
+
+
+Object at 0115A000
+------------------------------------------------------------
+ProcArray[6] = 00669D00
+  lpszProcName:  00D8DED8 (rapisrv.exe)    dwVMBase:       0E000000
+  pcmdline:      00D8DEF0 (1382944)
+  pStdNames:     00AB9D3C (00000000)      procnum:        06
+  hProc:         80DEDFDE (00DEDFDE)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80E3CB70 (00E3CB70)      pTh:            80D664F0 (00D664F0)
+  tlsLowUsed:    0000001F                 tlsHighUsed:    00000000
+  aky:           00000040                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669D60                 o32_ptr:        0E01D2D8 (00D902D8)
+  oe_ptr:        00669D50
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 0000C5D4 (1FFFF5D4)    size = 0000003C  - IMPORT TABLE
+ e32_unit[RES]  rva = 0000F000 (1FFFF000)    size = 00000580  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 0000E000 (1FFFF000)    size = 00000ADC  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 4
+
+Object at 01163000
+
+Object at 2044F000
+
+Object at 2044F000
+
+Object at 2044F000
+------------------------------------------------------------
+ProcArray[7] = 00669DB0
+  lpszProcName:  00D89EC8 (rnaapp.exe)    dwVMBase:       10000000
+  pcmdline:      00D89EE0 (-n -m -e"`USB`")
+  pStdNames:     00AB9DEC (00000000)      procnum:        07
+  hProc:         80D93796 (00D93796)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80D76D24 (00D76D24)      pTh:            80EA0654 (00EA0654)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000080                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669E10                 o32_ptr:        1001544C (00D8744C)
+  oe_ptr:        00669E00
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 00003310 (00D10310)    size = 00000028  - IMPORT TABLE
+ e32_unit[RES]  rva = 00007000 (1FFFF000)    size = 00002AB4  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00006000 (1FFFF000)    size = 00000154  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 4
+
+Object at 01163000
+
+Object not in RAM
+
+
+Object at 2044F000
+
+Object at 2044F000
+------------------------------------------------------------
+ProcArray[8] = 00669E60
+  lpszProcName:  00D98EE8 (ReplLog)    dwVMBase:       12000000
+  pcmdline:      00D98EF8 ()
+  pStdNames:     00AB9E9C (00000000)      procnum:        08
+  hProc:         00D934BE (00000000)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80E30400 (00E30400)      pTh:            80D76AAC (00D76AAC)
+  tlsLowUsed:    0000001F                 tlsHighUsed:    00000000
+  aky:           00000100                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669EC0                 o32_ptr:        1201C3B8 (00D9B3B8)
+  oe_ptr:        00669EB0
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 0000B27C (1FFFF27C)    size = 0000003C  - IMPORT TABLE
+ e32_unit[RES]  rva = 0000E000 (1FFFF000)    size = 00003410  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 0000D000 (1FFFF000)    size = 00000848  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 4
+
+Object at 01163000
+
+Object at 2044F000
+
+Object at 2044F000
+
+Object at 2044F000
+------------------------------------------------------------
+ProcArray[9] = 00669F10
+  lpszProcName:  00D22ED0 (MyDLL_CE_Loader.exe)    dwVMBase:       14000000
+  pcmdline:      00D22EF8 ()
+  pStdNames:     00AB9F4C (00000000)      procnum:        09
+  hProc:         80DEDC9E (00DEDC9E)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80DB044C (00DB044C)      pTh:            80DB044C (00DB044C)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000200                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       00669F70                 o32_ptr:        1401312C (00D2612C)
+  oe_ptr:        00669F60
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 0000201C (00D0E01C)    size = 0000003C  - IMPORT TABLE
+ e32_unit[RES]  rva = 00005000 (00D0A000)    size = 000007EC  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00004000 (00000000)    size = 00000104  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000002
+ objcnt = 5
+
+Object at 01163000
+
+Object at 0115E000
+
+Object at 01160000
+
+Object not in RAM
+
+
+Object at 0115A000
+------------------------------------------------------------
+ProcArray[10] = 00669FC0
+  lpszProcName:  00D0CED8 (SysDumpCE.exe)    dwVMBase:       16000000
+  pcmdline:      00D0CEF8 ()
+  pStdNames:     00AB9FFC (00000000)      procnum:        0A
+  hProc:         80D24336 (00D24336)      pfnEH:          00000000 (00000000)
+  pProxList:     00000000 (00000000)
+  pMainTh:       80D245B4 (00D245B4)      pTh:            80D245B4 (00D245B4)
+  tlsLowUsed:    0000000F                 tlsHighUsed:    00000000
+  aky:           00000400                 dwDyingThreads: 0
+  hDbgrThrd:     00000000 (00000000)      ZonePtr:        00000000 (00000000)
+  DbgActive:     00                       bChainDebug:    00
+  pmodResource:  FFFFFFFF (1FFFFFFF)
+  BasePtr:       00010000 (00000000)      bTrustLevel:    02
+  e32_ptr:       0066A020                 o32_ptr:        16013390 (00D10390)
+  oe_ptr:        0066A010
+ e32_unit[EXP]  rva = 00000000 (00000000)    size = 00000000  - EXPORT TABLE
+ e32_unit[IMP]  rva = 0000201C (00D0E01C)    size = 0000003C  - IMPORT TABLE
+ e32_unit[RES]  rva = 00005000 (00D0A000)    size = 000005A4  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00004000 (00000000)    size = 000000F0  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00000000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00000000 (00000000)    size = 00000000  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000002
+ objcnt = 5
+
+Object at 01163000
+
+Object at 0115E000
+
+Object at 01160000
+
+Object not in RAM
+
+
+Object at 0115A000
+------------------------------------------------------------

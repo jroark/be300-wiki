@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_02.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8401084254797071";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel ="4966654158";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_02.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Feb 02 00:00:10 2003
+00:56 -!- PsycoXul_ [psyco@adsl-63-205-45-144.dsl.lsan03.pacbell.net] has joined #linux4be
+01:05 -!- PsycoXul [psyco@adsl-63-205-42-250.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+01:05 -!- PsycoXul_ is now known as PsycoXul
+14:58 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_away, Baalz
+14:59 -!- Netsplit over, joins: jal0_away, Baalz
+--- Log closed Mon Feb 03 00:00:37 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

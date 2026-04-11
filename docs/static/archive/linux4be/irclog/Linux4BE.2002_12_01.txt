@@ -1,0 +1,474 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_01.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_01.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Dec 01 00:00:18 2002
+01:00 -!- antagonizt is now known as antagonizt[zZz]
+01:04 -!- jal0 is now known as jal0_X-\
+03:39 -!- bshircliffe [~bshirclif@twhou-207-218-233-252.ev1.net] has joined #linux4be
+05:39 -!- bshircliffe [~bshirclif@twhou-207-218-233-252.ev1.net] has quit [Read error: 54 (Connection reset by peer)]
+13:28 -!- antagonizt[zZz] is now known as antagonizt
+13:30 -!- jal0_X-\ is now known as jal0
+13:37 -!- Den_Beiren[AWAY [~me@11.39-200-80.adsl.skynet.be] has joined #linux4be
+13:44 -!- Den_Beiren[AWAY [~me@11.39-200-80.adsl.skynet.be] has quit ["BorgIRC 2.5.0169 - by: STING - http://www.borgirc.net"]
+13:45 -!- Den_Beiren[AWAY [~me@11.39-200-80.adsl.skynet.be] has joined #linux4be
+13:56 -!- Den_Beiren[AWAY is now known as Den_Beiren[AWAY]
+13:57 -!- Den_Beiren[AWAY] is now known as Den_Beiren[AWAY
+13:57 -!- Den_Beiren[AWAY is now known as Den_Beiren
+14:11 -!- xTimG [~tim@HSE-Toronto-ppp313037.sympatico.ca] has quit [Read error: 104 (Connection reset by peer)]
+14:13 -!- Den_Beiren is now known as Den_Beiren[AWAY]
+15:57 -!- Den_Beiren[AWAY] [~me@11.39-200-80.adsl.skynet.be] has left #linux4be []
+16:03 -!- bshircliffe [~bshirclif@twhou-215-38.ev1.net] has joined #linux4be
+16:08 < bshircliffe> whats going on guys
+16:08 < antagonizt> not much...
+16:11 -!- Filip [~Filip@230.245-136-217.adsl.skynet.be] has joined #Linux4BE
+16:11 < antagonizt> hey filip
+16:11 < Filip> hi folks
+16:11 < bshircliffe> hi
+16:11 < bshircliffe> whats up?
+16:12 < Filip> keep on hacking in the free world ;-)
+16:12 < Filip> trying  jal0's new monitor
+16:12 < bshircliffe> great
+16:30 < jal0> hey filip
+16:30 < Filip> hi jal0, your monitor looks great
+16:31 < jal0> thanks, still lots to do, backspace dosent seem to work as expected
+16:31 < Filip> only v0.01 
+16:31 < jal0> plan on implementing command history too
+16:32 < Filip> search ? watch ?
+16:33 < jal0> i looked at pmon, look good, but would be hard to implement. it uses nmi interrupt.
+16:33 < Filip> did you try serial at higher speeds ?
+16:33 < jal0> no, but should be real easy to modify.
+16:34 < jal0> SetSerial(9600, EVEN_PARITY, 8, 1); in function "start"
+16:34 < jal0> just change it to whatever you like
+16:36 < Filip> could save some time when dumping several MB's
+16:37 < jal0> the problem with creating a real monitor is that it needs some form of hardware support. so implementing say loading programs and breakpoints would be hard to do
+16:38 < jal0> you would have to implement some hardware support, usually this is in the form of a nmi, where commands from the serial port interrupt the currently running program and pass control to the monitor.
+16:39 < jal0> basically shorting the rx line to the nmi line of the processor works
+16:40 < jal0> there are software methods but they are alot more difficult to implement and cannot be used for debugging interrupts themselves
+16:41 < jal0> i'm hoping that maybe once this project get futher along, someone will donate working pda's so they can be modified to support such things. :)
+16:42 < Filip> like Casio ?
+16:43 < jal0> sure, would be great, but i doubt it. unless it's benificial to them, i don't see them contributing anything
+16:44 < bshircliffe> I need to e-mail casiovince
+16:44 < jal0> i probabbly just end up buying another one for that purpose eventually
+16:47 < jal0> has anyone tried to implement the code from my serial example in the kernel? maybe we can get kgdb working.
+16:47 < jal0> although i'm not sure if it requires an interrupt based serial driver or not
+16:48 < Filip> I didn't try, and now that the mysterious crashes are gone have no immediate need
+16:49 < jal0> filip: what would you recommend the best path of learning cvs, i don't mess with our because i don't want to screw things up.
+16:49 < jal0> it would be easer that emailing people my updates
+16:50 < jal0> maybe install a local cvs server and play with it?
+16:51 < Filip> don't need a server to play with cvs: if you're on your local linux box
+16:51 < Filip> just set your CVSROOT to something (/home/cvs) 
+16:51 < jal0> i have a linux box on the network, just not my main development system
+16:53 < jal0> i'll do some searching on google for some tutorials
+16:53 < Filip> http://www.loria.fr/~molli/cvs/doc/cvs_toc.html
+16:54 < jal0> ;-)
+16:54 < Filip> sourceforge used to have a good introductioin to it as well, but haven't checked it for a long time
+16:54 < jal0> cool, thanks
+16:59 < jal0> filip: have you seen the memory access bug i mentioned in my email? have any idea whats going on?
+16:59 < Filip> at what addresses are you seeing it ?
+17:00 < Filip> maybe you're triggering an interupt
+17:02 < jal0> AF000900
+17:02 < Filip> did you look at the way our bootloader is starting your proggie ? it's mapping the interupt vector
+17:02 < Filip> so an interupt could restart the prog
+17:03 < jal0> yeah, but it should restart it from the beginning, rather just were it was interrupted
+17:03 < jal0> should=shouldn't
+17:03 < Filip> your trying to peek into the cpu
+17:04 < Filip> looking for pci ?
+17:05 < jal0> just poking around for recognizable text and such. but yes pci is my next focus, i want to get usb working
+17:06 < jal0> should be easier once i get the pcb and can take a look at how the external memory map is constructed
+17:07 < jal0> AF000800 should be the siu base of the vr4131
+17:08 < Filip> indeed
+17:08 < jal0> also poking around the AA008680 which suposedly is the vr4173 sui base, but the info there dosn't match what it should be.
+17:10 < jal0> besides the fact, that the vr4173 has no siu :/
+17:12 -!- bshircliffe [~bshirclif@twhou-215-38.ev1.net] has quit [Read error: 54 (Connection reset by peer)]
+17:12 < jal0> btw, i think that the D89041F100 is not a chip id, rather a datecode or maybe batch number. i see the similar format id on the vr4131 chip under the actual chip id
+17:13 < jal0> under=over
+17:13 < jal0> http://www.linux4.be/~jroark/images/Board_bot.jpg
+17:16 < Filip> and what's the other number ?
+17:16 < jal0> one is a batch number the other a datecode most likely
+17:18 < Filip> so no real identification ?
+17:19 -!- jalo [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+17:19 < jalo> oops
+17:21 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+17:21 -!- jalo [~not@12-243-94-89.client.attbi.com] has quit [Client Quit]
+17:21 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+17:22 < jal0> hopefully there will be some markings under the chip :)
+17:24 < Filip> is that common practice  ?
+17:26 < jal0> yeah
+17:28 < jal0> usually when mass producing ic's not everyone is stress-tested, only a percentage in a batch are done. the batch number keeps track of this info
+17:30 < jal0> there are differnet manufacturing process of course, so this is only what i believe. the date code format seems to match up with the format on the cpu. another way to check would be to look on a differnt nec component in a different product to see if the format is consistent
+17:34 < jal0> http://www.pocketpcpassion.com/casio/leex/E115Overclock.htm
+17:34 < jal0> ic has the same datecode format
+17:35 < jal0> µPD30121
+17:36 < jal0> is the part number for the 4121
+17:37 < jal0> so actually, D89041F1001 *is* a part number, its µPD89041
+17:38 < Filip> which is ?
+17:40 < jal0> what do you mean?
+17:40 < jal0> http://www.plasma-online.de/index.html?content=http%3A//www.plasma-online.de/english/identify/picture/nec_cpu.html
+17:44 < jal0> VR4131(partid) = D30131F1(onchip) = µPD30131(nec part#)
+17:44 < jal0> so to follow the same format
+17:44 < jal0> D89041F1001(onchip) = µPDD89041(nec part#) = ?(partid)
+17:44 < Filip> µPD89041== ??
+17:45 < Filip> is there some logic in those  number ? like ranges for  companions, cpu's, etc
+17:45 < jal0> the internal part number for the device, if you go to nec and search by id, this is the number you have to give them
+17:46 < jal0> not sure yet, but still have no luck looking for a µPD89041
+17:47 < jal0> or UPD89041
+17:51 -!- Den_Beiren [~me@11.39-200-80.adsl.skynet.be] has joined #linux4be
+17:52 < antagonizt> can we submit our info to that site?
+17:52 < antagonizt> send them a pic and the info that we know... so maybe someone will have some answers?
+17:53 < jal0> not sure
+17:54 < jal0> http://www.necel.com/cgi-bin/nesdis/o002_e.cgi ... no UPD89041
+17:56 < Filip> can you search using wildcards ?  uPD8904*
+17:56 < jal0> yeap
+17:56 < jal0> UPD*
+17:57 < Filip> anything comes close ?
+17:57 < jal0> http://www.necel.com/cgi-bin/nesdis/o002_e.cgi
+17:57 < Filip> upd=micro processor  ?
+17:57 < Den_Beiren> hey Filip
+17:57 < Den_Beiren> hoe ist?
+17:57 < jal0> micro processor device , i think
+17:58 < Filip> hoi Den_Beiren, druk, zoals  meestal
+18:04 -!- YukonTRN [~itguy@242690hfc48.tampabay.rr.com] has joined #Linux4BE
+18:04 < YukonTRN> Is anyone current here?
+18:05 < Filip> hi YukonTRN
+18:05 < jal0> current?
+18:05 < YukonTRN> sorry, currently
+18:05 < jal0> ;)
+18:07 < YukonTRN> I've kinda got myself in a dumb situation... I went to remove the battery from my BE and the wires popped out of the white connector! My problem is I dont know which way the go back in (red, then black, or black, then red?) Can one of you guys help me out?
+18:10 < YukonTRN> If not, I'll poke a stab at it... I just didn't want to reverse the polarity and further risk screwing this thing up. 
+18:10 < Filip> hold on , i'll check
+18:10 < YukonTRN> Filip: Thanks, really appreciate it.
+18:11 < Filip> got my spare battery in front  of me now
+18:12 < Filip> on one side of the white connector, you see the contacts  trough small holes, got that  ?
+18:12 < YukonTRN> sure
+18:13 < YukonTRN> in my hand...apart from the rest of battery. ;)
+18:13 < Filip> that side on top, wires at your side
+18:13 < Filip> left is black,  right is red
+18:15 < YukonTRN> Ok, so If I were looking dead at the front of the white connector the holes would be clossest to the top right?
+18:15 < Filip> yes
+18:16 < YukonTRN> with the little notch on the "top"...?
+18:16 < YukonTRN> ok.. good. 
+18:16 < Filip> correct
+18:16 < YukonTRN> Great, I appreciate it very much! Thank you.
+18:16 < Filip> no prob
+18:22 < jal0> hm, had that same problem. cheep connector
+18:22 -!- Den_Beiren is now known as Den_Beiren[AWAY]
+18:23 < Filip> not supposed to be 'user serviceable' 
+18:23 < jal0> another way is to determine which pin is shorted to a common ground. that what i did
+18:27 < jal0> filip: have you tried contacting besquare about the identity of that chip?
+18:28 < Filip> they don't know anything about it,  don't even have access to the sourcecode for the bsp
+18:29 < Filip> casio did the drivers themselves
+18:29 < jal0> ic
+18:34 < antagonizt> filip, what ever happened to that guy who used to work for NEC?
+18:35 < Filip> didn't  hear back from him :-(
+18:38 < antagonizt> did you guys see my attempt to start a discussion about which user interface to use? http://forum.linux4.be/phpBB2/viewtopic.php?t=21
+18:39 < jal0> reading it now
+18:39 < Filip> me too
+18:41 < Filip> good starting point
+18:41 < Filip> we should maybe  make a  table with objective  (and subjective) criteria
+18:41 < jal0> matchbox look cool
+18:42 < Filip> like memory footprint, available app's, ...
+18:48 -!- Filip [~Filip@230.245-136-217.adsl.skynet.be] has left #Linux4BE []
+19:13 < YukonTRN> Well then, That was an interesting experience.
+19:13 < YukonTRN> (Finnally got the battery connected again.)
+19:13 < antagonizt> did your be explode?
+19:14 < YukonTRN> Filip: Thanks again.
+19:14 < jal0> yeah, i had my connector break also, it was  a pain to fix
+19:14 < YukonTRN> Nah... it's just been out of commission for a great while.
+19:14 < YukonTRN> No kidding.
+19:14 < jal0> batter wont take a charge?
+19:15 < jal0> or hold a charge
+19:15 < YukonTRN> Actually it does. It's charging now.
+19:15 < YukonTRN> No... I decided to explore one day. :/
+19:15 < YukonTRN> Figured it would come off like any other...nope. Very delicate construction I guess.
+19:16 < jal0> havn't used mine on batter for a while, when i do, it reports it is fully charged, and then about 2 minutes later it says its shutting down due to a low battery.
+19:16 < YukonTRN> That's nice. heh
+19:16 < YukonTRN> So, you guys have been working hard on this project for a long time. What's new?
+19:17 < jal0> fishing for touchpanel registers
+19:17 < jal0> mainly
+19:17 < jal0> thats the next big hurdel
+19:18 < YukonTRN> Got ya... what about sound support?  It's the most important of course ;)
+19:18 < jal0> we have quite a lot of other work to do though before having an actual working system
+19:19 < jal0> no sound support as of yet, and i dont think anyone is currently working on it either. it will come,... eventualy :)
+19:19 < YukonTRN> Yeah, what are your plans when you do have a working system? Be the central point for everything linux on BE?
+19:20 < jal0> well for me, when everything is done, i plan on moving on to another pda without linux ;)
+19:20 < YukonTRN> LOL
+19:20 < YukonTRN> That's cool. :)
+19:20 < YukonTRN> Show's you love what you're doing. ;)
+19:20 < jal0> yeap :)
+19:21 < YukonTRN> Hopefully your next one will have more open hardware. 
+19:21 < antagonizt> hey jal0, I've got an old Philips Nino 200 there was a project to get linux on it but it was never finished... wanna work on that for me? :)
+19:21 < jal0> it's not so much the linux thing. its more i like hacking hardware
+19:22 < jal0> sure, but where can I get one?
+19:22 < jal0> and how far did they get?
+19:22 < YukonTRN> I'll send you my cell phone, you can put linux on it. :)
+19:22 < jal0> :)
+19:22 < antagonizt> they are pretty cheap on ebay... but really i was just joking...
+19:23 < jal0> i wasn't :p
+19:23 < antagonizt> i think he got to about where we are the start of touchpanel support
+19:23 < YukonTRN> Oh.. it feels so good to have my BE back... been without it for a while.
+19:23 < antagonizt> although the serial driver was complete
+19:23 < jal0> there a web page?
+19:24 < antagonizt> http://www.cotw.com/projects/nino/port/nino-port-main.html
+19:24 < jal0> was just reading that. i belive he is still working on it
+19:24 < antagonizt> check the project diary last entry on 01-30-2002 was almost have touchscreen working
+19:25 < jal0> yeap
+19:25 < jal0> but nothing about ending the project
+19:26 < YukonTRN> Man, I would love to have the Palm style Hand recognition on my BE... That's the only thing I really don't like about it... and the dang tasks... to simple.
+19:26 < jal0> 04-06-2001 to 01-20-2002 there are no post either
+19:26 < jal0> so its just slow going
+19:26 < antagonizt> maybe he is still working on it... might e-mail him
+19:27 < jal0> would be a though, he may be able to give some inside on how the touchscreen works
+19:27 < antagonizt> yeah the nino is a mips pda
+19:27 < antagonizt> r3700
+19:28 < antagonizt> i just shot him an e-mail and ask if the projet was dead...
+19:29 < jal0> found one for $85, does that sound reasonable?
+19:30 < antagonizt> that is a bit steep... mine is a 200 and i got it for $40
+19:31 < antagonizt> i just had someone offer me a 300 (256 color and 16mb) for $50
+19:31 < antagonizt> the 200 is (4shades of gray and 8mb)
+19:31 < jal0> wow, just found one for $10
+19:31 < antagonizt> now that is a deal
+19:32 < jal0> or should i say 10pounds... whats that in dollars?
+19:34 < antagonizt> $15 i think
+19:40 -!- YukonTRN [~itguy@242690hfc48.tampabay.rr.com] has left #Linux4BE []
+19:44 -!- Den_Beiren[AWAY] [~me@11.39-200-80.adsl.skynet.be] has quit ["BorgIRC 2.5.0169 - by: STING - http://www.borgirc.net"]
+20:59 < antagonizt> jal0, i updated my ramdisk tutorial and added a follow up on adding PicoGUI to it
+21:01 < jal0> sorry steped out for a few, cool i'll take a look at it.
+21:01 < antagonizt> thanks
+21:03 < jal0> have you tried setting up Tiny X
+21:03 < antagonizt> no
+21:03 < antagonizt> just PicoGUI and opie
+21:07 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+21:08 < metalac> so is it true that touchpad support is almost here??
+21:08 < antagonizt> that is one of the things we are currently working on...
+21:09 < antagonizt> and a couple regs were found that look promising
+21:09 < metalac> any support from casio yet?
+21:09 < antagonizt> of course not
+21:09 < metalac> ahahah
+21:12 < metalac> i really don't understand it though, i guess it would be in their interest
+21:13 < antagonizt> well they might have some licensed IP in the BE... they don't want to break any contracts etc...
+21:14 < antagonizt> most software and hardware products are a conglomeration of different manufactures IP 
+21:15 < antagonizt> but you are right they should give us some help... 
+21:18 < metalac> i mean i guess they could give unoffical "hints"
+21:23 < jal0> well i guess it really depends on the perspective of the individual, i personally don't care if they help us or not. i not looking at things from an end user's perspective though. i like hacking. if they gave us all the info, there would be no challenge.
+21:23 < antagonizt> well the software is not trivial
+21:24 < antagonizt> but your right hacking is more fun
+21:24 < antagonizt> gives a better sense of accomplishment
+21:24 < jal0> no, but not the same thing as hacking
+21:25 < jal0> exactly
+21:27 < jal0> cvs is looking pretty cool, i think i'll use is for all my projects, going to implement it at work too ;)
+21:28 < jal0> what the best way to implement multiple CVSROOT's, say for the one on my home machine and the various projects online?
+21:29 < jal0> should i always supply the -d option
+21:29 < antagonizt> not sure i've never set up a CVS server... just used one at SF and filip's
+21:30 < antagonizt> no you can define CVSROOT as a environment var
+21:31 < antagonizt> for example I have export CVSROOT=:ext:jroark@cvs.linux4.be:/cvsroot & export CVS_RSH=/usr/bin/ssh in my .bashrc
+21:31 < antagonizt> so all i type is cvs co <modulename> and it knows where to go
+21:31 < jal0> thinking of creating differnt environment variable say CVSR_LINUX4BE=d:pserver:anonymous@cvs.linux4.be:/cvsroot .... and for my local CVSR_LOCAL=-d "/cygdrive/d/cvsroot"
+21:31 < antagonizt> or cvs commit etc
+21:32 < antagonizt> you should have an account on linux4.be
+21:32 < jal0> i do
+21:32 < jal0> but i do anon because i
+21:32 < antagonizt> so it would be :ext:jal0@cvs.linux4.be:/cvsroot
+21:32 < antagonizt> skip the -d
+21:32 < jal0> im not too familiar with cvs and dont wish to screw things up :)
+21:33 < antagonizt> but cvs won't check for the root at CVSR_LINUX4BE
+21:33 < jal0> ?
+21:33 < antagonizt> not sure how to do multiple roots...
+21:33 < antagonizt> unless you specify with -d every time
+21:34 < jal0> cvs $CVSR_LINUX4BE checkout linux
+21:34 < antagonizt> see you know what you are doing
+21:34 < jal0> or cva $CVSR_LOCAL checkout bemon
+21:35 < jal0> cva=cvs
+21:35 < jal0> environment subsitution
+21:35 < jal0> $CVSR_LINUX4BE=-d:pserver:anonymous@cvs.linux4.be:/cvsroot
+21:35 < antagonizt> yeah shells are amazing tools
+21:36 < jal0> that they are, cmd.exe on windows sucks
+21:37 < antagonizt> so what is your vote for a user interface... or do you think we should "support" more than one?
+21:37 < metalac> oh yeah i was gona say :)
+21:37 < metalac> about that gui 
+21:37 < metalac> i guess if itsn't big trouble it should be made so there is some options
+21:38 < jal0> once we get touchscreen support we will probably have more people wanting to help out. i think multiple distro's is the way to go, at least at first. i plan on going the tiny X path. mainly due to my efforts to port cross-platform gui's like wxWindows and FOX
+21:39 < jal0> which only rely on core xlib support
+21:39 < antagonizt> i wonder how X will run on the BE?
+21:39 < jal0> so one can develop gui application on linux,windows,pds, whatever....
+21:39 < antagonizt> we certainly couldn't run KDE or GNOME on it
+21:39 < metalac> qutopia and opie look almost the same as far as the screenshots go i never used them
+21:39 < jal0> no way to overbloated
+21:40 < antagonizt> but matchbox... or gpe maybe
+21:40 < jal0> matchbox sparkes an intrests
+21:40 < metalac> how about flux?
+21:40 < antagonizt> i use windowmaker on my desktop... which is very anti-bloat but not suited for a pda
+21:40 < antagonizt> never heard of flux
+21:41 < jal0> besides tiny X is distributed with the mainline X.
+21:41 < jal0> so in most cases no additional download will be required for linux users
+21:42 < metalac> sorry not flux i meant blackbox, flux is one of the themes :)
+21:42 < antagonizt> naw lets just go with twm for everyone
+21:42 < metalac> although there is fluxbox win manager
+21:42 < antagonizt> blackbox is very similar to windowmaker
+21:43 < antagonizt> they have that openstep look
+21:43 < metalac> but it's a right-click must sort of wm
+21:43 < antagonizt> what is twm?
+21:43 < antagonizt> rather what is? twm?
+21:44 < jal0> the windows mangager could be decided by the end user.
+21:44 < antagonizt> too compilcated for most...
+21:44 < antagonizt> most will just want a binary backup image or such
+21:45 < jal0> why not some form of binary install and let user decide the front end windows manager
+21:45 < antagonizt> and would be horribly confused if they couldn't get a qtopia app to run on the tiny X based image
+21:46 < metalac> well why not make a simple install for inexperienced user and a more complicated one for experienced ones
+21:46 < antagonizt> we could try it... but perhaps only one UI for the official Linux4BE distro... and any number of other appropriately named distros with different UIs?
+21:47 < jal0> but then again, we are getting ahead of ourselves :-p
+21:47 < metalac> also we should make sure that whatever wm is picked it will look nice on be's screen, since there is that ever present contrast problem with it
+21:47 < metalac> so bunch of shadows would look bad
+21:47 < jal0> contrast problem?
+21:48 < metalac> well it looks bad under strong light and stuff
+21:49 < jal0> yeah but thats a function of the stn display no the software.
+21:49 < metalac> well yeah but if you get some fancy looking wm with a lot of shadows and effect like those it will just ruin it
+21:50 < jal0> ic, but all those special effects take RAM, so i doubt those will be present
+21:50 < jal0> at least initially anyway
+21:51 < metalac> yeah
+22:46 < jal0> antagonizt: you there?
+22:46 < antagonizt> mostly
+22:46 < jal0> the latest busybox fixes alot of bugs http://www.busybox.net/
+22:46 < jal0> like copying files with cp
+22:46 < jal0> that we talked about before
+22:47 < jal0> you may want to update you tutorial
+22:47 < antagonizt> are there any changes in the config?
+22:47 < jal0> dont belive so. just with uclibc
+22:48 < antagonizt> rather Config.h? cause i think it is the same...
+22:48 < antagonizt> i'll just make a note that other versions can be used
+22:48 < jal0> not sure going through my windows verision of creating ramdisks
+22:48 < jal0> ok
+22:57 < antagonizt> i got a reply from the guy working on the philips nino linux port... he says it is still underway and he could use help
+22:59 < jal0> cool, maybe once this project is mostly done, i buy a nino and help out over there :) btw his site is also a place with toolchain binaries can be downloaded from
+23:00 < jal0> http://www.cotw.com/projects/nino/port/mips-tools.html
+23:00 < jal0> going to add a link to my page
+23:00 < jal0> at the next update anyway :)
+23:01 < jal0> the binaries are for linux only :(
+23:05 < jal0> just want to mention that i plan on having the uclib binaries installed in a directory under the mipsel-linux directory so they can be included in the binary distribution of the toolchain
+23:05 < jal0> uclib cross-binaries that is
+23:05 < antagonizt> makes sense...
+23:06 < antagonizt> i talked to some of guys that work on opie and they had no idea if it was even possible to build opie against uClibc
+23:06 < antagonizt> i also posted that question to the uClibc mailing list... no respose yet
+23:07 < jal0> so the dir structure is like this ~/toolchains/xLinux4BE/mipsel-linux for glibc and ~/toolchains/xLinux4BE/mipsel-uclibc-dev for uclibc
+23:07 < antagonizt> cool
+23:07 < antagonizt> usaully toolchains are and such are installed under /opt
+23:08 < antagonizt> but i guess for people that don't have root access
+23:08 < jal0> that was the idea, at schools and such with no root access it would be hard
+23:09 < jal0> so under user is what i decided, but you can unpack the binary distro anywhere you want just have to point your PATH to it
+23:10 < jal0> i also have many different cross-toolchains so keeping them under ~/toolchains makes sense for me at least
+23:26 < jal0> the uclibc libraries get put under / in the be300
+23:27 < jal0> under root? why not /lib
+23:33 < antagonizt> where are you getting that from?
+23:34 < antagonizt> they are installed in /lib
+23:36 < jal0> hmm, ok saw "root file system", though it meat "root in the file system"
+23:37 < jal0> can the libraries be installed along side glibc's without over writing them?
+23:38 < antagonizt> not sure... but i don't think so
+23:39 < jal0> nope, they cant, it's either one or the other... at least for the /lib directory anyway
+23:45 < antagonizt> i'm going to catch some sleep... good night
+23:46 < jal0> later
+23:46 -!- antagonizt is now known as antagonizt[zZz]
+23:46 < jal0> wife want me to watch a movie with her, so i guess i'll be going also, later everyone
+23:47 -!- jal0 is now known as jal0_away
+--- Log closed Mon Dec 02 00:00:44 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

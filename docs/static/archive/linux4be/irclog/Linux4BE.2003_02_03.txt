@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_03.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_03.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Feb 03 00:00:37 2003
+04:06 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Baalz, jal0_away
+04:06 -!- Netsplit over, joins: jal0_away, Baalz
+05:08 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+05:08 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+05:24 -!- Filip__ [Filip@193.190.11.245] has joined #linux4be
+05:26 -!- Filip__ is now known as Filip
+09:19 -!- Filip [Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+09:49 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+09:50 < andrey> hi guys
+11:05 -!- jal0_away is now known as jal0
+11:05 < jal0> hey andrey
+11:43 < andrey> hey jal0
+11:43 < jal0> long time no see :)
+11:44 < andrey> time is always a problem... :-)
+11:44 < andrey> But I look into logs from time to time
+11:45 < jal0> yeah, no the next few weeks, im probably only going to be able to work on things on the weekends. work has me really busy
+11:46 < andrey> looks like everyone is busy these days
+11:47 < jal0> yeah, not much going on here... i saw you were doing some more work on reversing the DLL's a few days back.
+11:48 < andrey> yes, little bit of serial, little bit of Moni^H^H^H^H NAND... :-)
+11:50 < andrey> And looked into interrupt handling also. Several days ago there was a talk in here about same interrupts coming from serial, touch, pcmcia...
+11:50 < andrey> I think I know how to distinguish them.
+11:51 < andrey> oops, I mean little bit of touch, not serial
+11:51 < jal0> cool, that would be very useful
+11:52 < andrey> do you know who's porting interrupt handling?
+11:53 < jal0> i think filip is, i am also, but havent had any time lately
+11:54 < andrey> ic...
+11:56 < andrey> I put a file Inerrupts.txt into ~andrey/wince/src. It has some information about it
+11:57 < jal0> ok, if i get some time, i'll check it out, thanks.
+12:06 < andrey> I hope you have it soon. Noone can work 24 hours a day. :-)
+12:07 < jal0> been doing 13 hours days, then the wife needs attention also :)
+12:08 < andrey> That's true. Especially if you're going somewhere with her on Saturday but suddenly have to go to work.
+12:09 < jal0> :)
+12:09 < andrey> I had it couple of times recently...
+12:10 < jal0> it's funny, she refers to my computer as "the other women in my life". :)
+12:10 < andrey> :-)
+12:11 < andrey> I can imagine... :-)
+12:32 < andrey> ok, have to go now... it was nice talking to you :-) see you later
+12:34 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+22:07 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+22:08 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+22:58 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+22:58 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+22:59 -!- jal0 is now known as jal0_away
+23:21 -!- WebGuest6515 [~eirc@MTL-HSE-ppp178107.qc.sympatico.ca] has joined #Linux4BE
+23:21 < WebGuest6515> any news with linux?
+23:23 < WebGuest6515> hello?
+23:24 -!- WebGuest6515 [~eirc@MTL-HSE-ppp178107.qc.sympatico.ca] has left #Linux4BE []
+--- Log closed Tue Feb 04 00:00:03 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

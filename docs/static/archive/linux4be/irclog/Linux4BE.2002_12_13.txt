@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_13.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_13.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Dec 13 00:00:38 2002
+00:33 -!- someguy [~some@psyche.eggs.net] has left #linux4be []
+00:33 -!- someguy [~some@psyche.eggs.net] has joined #Linux4BE
+03:20 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+03:26 -!- antagonizt[zZz] is now known as antagonizt
+03:26 < antagonizt> morning filip
+03:27 < Filip> morning antagonizt
+03:39 < Filip> I see you got X to compile and run, great
+03:39 < antagonizt> yeah but i couldn't build the libs... so i couldn't build a WM
+03:40 < Filip> can you launch xeyes or xterm or anything ?
+03:40 < antagonizt> it only built the server
+03:40 < antagonizt> no apps no libs... 
+03:41 < Filip> hmm
+03:44 < antagonizt> coolness... check this out
+03:44 < antagonizt> http://www.linux4.be/~jroark/images/pgshot0000.jpeg
+03:45 < antagonizt> first real screenshot of from the BE
+03:45 < antagonizt> i set up PicoGUI to take a screenshot 
+03:45 < antagonizt> then uuencoded the image and cated it over the serial
+03:45 < antagonizt> took for ever
+03:45 < antagonizt> not sure why the image is messed up but it might be because i had rotate set
+03:46 < Filip> what serial sped are you using ? still 9k6 ?
+03:46 < antagonizt> yep
+03:46 < antagonizt> whatever the defualt is
+03:47 < antagonizt> the regular serial driver didn't work so i wrote a blocking misc char driver
+03:47 < Filip> i've got a modified loader that set serial at 115200 , I'll check the sources into CVS later today and put a binary up
+03:47 < Filip> (that version also contains a slightly modified UI with the same logo as the booting kernel)
+03:48 < antagonizt> cool another thing to modify on the UI would be to change the edit box to a combo box
+03:48 < Filip> setting speed in the serial driver code doesn't seem to work,had to set it in CE before booting in order to get it working
+03:48 < antagonizt> that lists all the available kernels
+03:49 < Filip> agree: that edit box is not very usefull . I was tihnking of maybe buttons, but that would limit the number of possibilties
+03:49 < antagonizt> combo box should be easy
+03:49 < Filip> (andI've got  a long list of kernel on my CF card....)
+03:52 < Filip> I should have some time tonight to look at those interrupts again , so I hope we can get serial and CF fully supported soon
+03:52 < antagonizt> cool
+03:52 < Filip> a PPP link at 115K is workable 
+03:53 < antagonizt> especially if we get X working...
+03:53 < antagonizt> that would be nice
+03:53 < Filip> at least you can work remotely on it, and have  a real keyboard
+03:53 < Filip> just both a CF wireless card 
+03:53 < Filip> bought
+03:54 < antagonizt> what type?
+03:54 < Filip> ambicom , on ebay 
+03:55 < Filip> I looked locally, butonly new ones, starting at $160
+03:55 < Filip> now I paid 62USD,  including shipping to Belgium
+03:55 < antagonizt> not bad
+03:56 < antagonizt> what chipset is it?
+03:56 < Filip> not sure, but it had drivers for the BE
+03:56 < antagonizt> probably Prism2.5
+03:56 < Filip> indeed, I think seeing Prism
+03:57 < Filip> my pcmcia's alluse Prism (Belkin)
+03:57 < antagonizt> well luckily there are linux drivers for prism cards
+03:58 < Filip> that's why I bought the Belkin's, use it in my home-brewn AP
+03:59 < antagonizt> it would be nice to have the be as a portable WiFi tester etc...
+03:59 < Filip> old P75/12MB RAM notebook running of a 32MB CF card in IDE mode 
+03:59 < Filip> I've got wireless both in the office (as secondary network for meeting rooms etc) and at home
+04:00 < Filip> would be a great tool for testing range and play with antenna positions
+04:00 < Filip> and just drive around ;-)
+04:01 < antagonizt> war driving
+04:03 < Filip> are there any public 'hotspots' in Boston ?
+04:04 < antagonizt> many of universities have them... and there are some community areas as well
+04:07 < Filip> but are those clear or encrypted ?
+04:07 < antagonizt> mixed
+04:07 < antagonizt> some use nocatauth style logins as well
+04:16 < antagonizt> #2 with aqua theme http://www.linux4.be/~jroark/images/pgshot0001.jpeg
+04:17 < antagonizt> i'm having way too much fun with this
+04:17 < antagonizt> :)
+04:24 < antagonizt> i've got to get going here... i'll be back in the evening
+04:24 -!- antagonizt is now known as antagonizt[bbl]
+04:32 -!- WebGuest8364 [~eirc@193.190.11.245] has joined #Linux4BE
+04:34 -!- WebGuest8364 [~eirc@193.190.11.245] has quit [Client Quit]
+04:34 -!- WebGuest7588 [~eirc@193.190.11.245] has joined #Linux4BE
+04:34 -!- WebGuest7588 [~eirc@193.190.11.245] has quit [Client Quit]
+05:50 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: Filip, antagonizt[bbl], jal0, jal0_logger
+06:10 -!- Netsplit over, joins: jal0_logger, Filip, jal0, antagonizt[bbl]
+06:47 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: Filip, jal0_logger
+06:48 -!- Netsplit over, joins: Filip, jal0_logger
+09:42 -!- Andreas__ [~chatzilla@dclient80-218-89-70.hispeed.ch] has joined #linux4be
+09:42 < Filip> hi Andreas
+09:43 < Andreas__> hello everybody
+09:43 < Andreas__> hi Filip, how are you?
+09:43 < Filip> i'm fine 
+09:44 < Andreas__> I moved back to Switzerland. So, we are now in the same time zone ;)
+09:44 < Filip> where in Switzerland ?
+09:44 < Andreas__> Zurich
+09:45 < Andreas__> I just saw the screenshots of antagonitz from last night; awsome!
+09:45 < Filip> getting closer and closer ;-)
+09:45 < Filip> i'm planning on doing some more interrupt hacking tonight
+09:46 < Andreas__> once I settled down I'd like to get involved too. At least always compile the latest from CVS and get it running on my BE ;)
+09:46 < Filip> we can always  use a hlping hand, lots of stuff to do
+09:48 < Andreas__> right now it's still a little bit low-level for my background. But there's a lot to learn here.
+09:48 < Andreas__> btw, the IRC log on the web site is great! I spent yesterday over 1h catching up.
+09:49 < Filip> we're getting closer to userspace app's, and we can still use people for helping with the website, testing, doc's, creating a real distro, ;;..
+09:50 < Filip> I've ealso been looking at a good faq-bot, but couldn't find one :-(
+09:51 < Andreas__> what about putting those open tasks on a web page, that visitors can see what kind of help is needed?
+09:52 < Andreas__> faq-bot: don't know any.
+09:54 < Andreas__> testing: I plan to grab the latest from CVS this weekend and re-build it locally.
+09:55 < Filip> all comments are always welcome
+09:55 < Andreas__> conf call soon; ttyl
+09:59 < Filip> ttyl
+10:18 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+10:22 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: Filip
+11:02 -!- Filip_ [~Filip@193.190.11.245] has left #Linux4BE []
+11:18 -!- Andreas__ [~chatzilla@dclient80-218-89-70.hispeed.ch] has quit ["ChatZilla 0.8.9 [Mozilla rv:1.1/20020827]"]
+12:28 -!- jal0 is now known as jal0_away
+16:15 -!- Filip [~Filip@41.98-136-217.adsl.skynet.be] has joined #Linux4BE
+16:35 -!- Filip [~Filip@41.98-136-217.adsl.skynet.be] has left #Linux4BE []
+16:39 -!- Filip [~Filip@41.98-136-217.adsl.skynet.be] has joined #linux4be
+17:28 -!- antagonizt[bbl] is now known as antagonizt
+17:28  * antagonizt is back
+18:15 < Filip> hi antagonizt
+19:07 -!- Filip [~Filip@41.98-136-217.adsl.skynet.be] has left #linux4be []
+23:33 -!- jal0_away is now known as jal0
+--- Log closed Sat Dec 14 00:00:05 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

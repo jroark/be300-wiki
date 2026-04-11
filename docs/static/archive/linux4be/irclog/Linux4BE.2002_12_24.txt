@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_24.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_24.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Dec 24 00:00:21 2002
+00:58 -!- jal0 is now known as jal0_zzz
+02:36 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+07:07 -!- jal0_zzz is now known as jal0
+07:07 < jal0> hey filip
+07:31 -!- jal0 is now known as jal0_wrkn
+07:59 < Filip_> hi jal0
+08:17 -!- jal0atWrk [~jal0_wrkn@208.33.58.195] has joined #linux4be
+08:19 < Filip_> jal0 ?
+08:19 < jal0atWrk> hey filip
+08:19 < jal0atWrk> been having connection problems?
+08:19 < jal0atWrk> i see alot of joins/quits
+08:19 < Filip_> not sure if it's me, or splits/joins of the irc network
+08:20 < jal0atWrk> ic
+08:20 < Filip_> to continue yesterdays conversation ...
+08:20 < jal0atWrk> ;)
+08:20 < Filip_> so you think the interface for touchscreen is serial or usb
+08:20 < jal0atWrk> not sure at this point.
+08:20 < Filip_> i imagine to the companion
+08:21 < jal0atWrk> yeap
+08:21 < jal0atWrk> of course :/
+08:21 < Filip_> 3 possibilities: serial, usb, or just (16bits?) raw data
+08:21 < Filip_> sure about companion, and not SIU on the cpu ?
+08:21 < Filip_> I still don't get it why did not use SIU of the cpu  
+08:21 < jal0atWrk> what i need is the pinouts of other casio products that use the same chip
+08:22 < Filip_> or maybe because serial and usb is same connector,  and was easier to implement both in the companion ?
+08:23 < jal0atWrk> maybe they do, at least somewhat, if the companion is indeed an ASIC device, they may be just using it as 'glue logic'
+08:23 < jal0atWrk> inverters/latches/nand etc..
+08:25 < Filip_> so those addresses changing on pen:up down, might have  been serial data ? 
+08:25 < jal0atWrk> yeap, you may only be seeing the first byte of a sequence of bytes in a message
+08:25 < jal0atWrk> where they consistent
+08:26 < Filip_> yes
+08:26 < Filip_> what speed would you expect ? 9K6 ?
+08:26 < jal0atWrk> that what most of the controller chips i have looked at seem to be setup as default
+08:27 < jal0atWrk> 9600 that is
+08:28 < jal0atWrk> do you have captures/addresses of the info that you have found so far?
+08:29 < Filip_> no, but I can  redo them, and  at 115K2
+08:30 < jal0atWrk> ok, another temporary solution could be to develope a mouse driver using the keypad arrows to move it around the screen. i saw a post of something like this on one of the fourms
+08:31 < Filip_> http://www.linux4.be/hackers/memorymap.php has the addresses  that looked interesting
+08:32 < Filip_> how reliable will it be without interupts working  ?
+08:32 < jal0atWrk> depends on how fast we can poll it.
+08:35 < jal0atWrk> what up with antagonizt? havn't seen him around lately
+08:35 < Filip_> nope, me neither, but I've been very busy  as well
+08:40 < Filip_> were you able to find a source for casio datasheets ?
+08:41 < jal0atWrk> they never sent me the CD i requested, not sure why?
+08:41 < jal0atWrk> but i found most of the info on the net anyway
+08:42 < jal0atWrk> but it's not terribly useful without knowing what macro's they used
+08:42 < Filip_> I can open up my old e100 to see if it contains a similar CAK 
+08:43 < jal0atWrk> that may help, i saw some pictures on the web of the em500, and it looks to be using the same chip
+08:43 < Filip_> E100 has working touchscreen support
+08:44 < jal0atWrk> that would be very useful if they are using the same controller
+08:44 < Filip_> I'll open it  one of the  comming days , and i'll try to scan the PCB as well 
+08:44 < Filip_> brb
+08:45 < jal0atWrk> ok sounds good
+08:45  * Filip_ is on the phone
+08:50 < Filip_> back
+08:50 < Filip_> but not for long 
+08:51 < jal0atWrk> have you found any info on the EPSON chip?
+08:51 < Filip_> have a xmas drink in 10minutes ( 3 PM local)
+08:51 < jal0atWrk> ok, i'll talk to you later
+08:51 < Filip_> yes, it's an EPSON L50753 25T1 (A0130S268) (New model for SLA507TH, gate array )
+08:52 < Filip_> http://www.epson-electronics.de/products/displayItem?itemId=S1L50753&categoryId=EEG.IC.ASIC.Gate_Arrays.GA_SLA50000
+08:52 < jal0atWrk> datasheet?
+08:53 < jal0atWrk> hmm, its an ASIC device also :-/
+08:53 < Filip_> indeed .... looks like those Casio engineers liked LEGO
+08:53 < jal0atWrk> hehe
+08:59 < jal0atWrk> talk to you later filip, got to go
+08:59 < Filip_> ttl
+08:59 -!- Filip_ [~Filip@193.190.11.245] has left #Linux4BE []
+08:59 -!- jal0atWrk [~jal0_wrkn@208.33.58.195] has quit []
+14:25 -!- metalac [newbie@D-128-208-35-86.dhcp4.washington.edu] has joined #linux4be
+14:46 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: metalac, jal0_wrkn
+16:31 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+19:28 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+19:39 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+19:44 -!- baal_ is now known as BaalZ
+19:44 -!- BaalZ is now known as Baalz
+22:23 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 110 (Connection timed out)]
+--- Log closed Wed Dec 25 00:00:47 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

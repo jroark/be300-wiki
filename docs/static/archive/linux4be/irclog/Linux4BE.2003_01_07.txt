@@ -1,0 +1,580 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_07.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_07.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Jan 07 00:00:41 2003
+00:47 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+00:47 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+01:00 -!- baal_ is now known as Baalz
+01:02 < Baalz> Hey bunch of drunked dudes! ;)
+01:02 < PsycoXul> heh
+01:02 < PsycoXul> i'm not drunked
+01:03 < PsycoXul> i hope to be highed soon though
+01:03 < Baalz> Hehe I a rollling one at the present moment :)
+01:04 < PsycoXul> congrats
+01:04 < Baalz> Where are you from PsycoXul?
+01:04 < PsycoXul> i gotta wait till some people go to bed heh
+01:04 < PsycoXul> california
+01:04 < Baalz> Hehe ok
+01:05 < Baalz> ctcp PsycoXul time
+01:06 < Baalz> It's early for you :)
+01:06 < PsycoXul> 10pm? heh
+01:06 < PsycoXul> indeed it is
+01:07 < Baalz> Here its 1 o clock the next morning ;)
+01:12 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_wrkn
+01:13 -!- Netsplit over, joins: jal0_wrkn
+01:14 < PsycoXul> oh yeah i just made this background http://psyco.yi.org:8042/aki-forest.png [warning: CG nudity]
+01:14 < PsycoXul> i didn't make her, i just put her in the forest heh
+01:14 < Baalz> Sorry I am a minor ;)
+01:15 < PsycoXul> ok then don't look :p
+01:15 < Baalz> Hum that is the girl from FF right?
+01:15 < PsycoXul> yeah
+01:18 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_wrkn
+01:18 -!- Netsplit over, joins: jal0_wrkn
+01:23 < Baalz> Time for me to sleep...
+01:24 < Baalz> Have a Good Night/Nice Day everyone...
+01:24 < PsycoXul> so soon after rolling one?
+01:24 < PsycoXul> heh
+01:24 < PsycoXul> night
+01:25 < Baalz> I cant event finish this big fat cone ;)
+01:25 < Baalz> See ya...
+01:26 -!- Baalz is now known as Baalzzz
+03:01 -!- Filip [~Filip@193.190.11.245] has joined #linux4be
+06:10 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_wrkn
+06:11 -!- Netsplit over, joins: jal0_wrkn
+06:18 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_wrkn
+06:18 -!- Netsplit over, joins: jal0_wrkn
+07:45 -!- Filip_ [~Filip@193.190.11.245] has joined #linux4be
+07:45 -!- Filip [~Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+10:16 < Baalzzz> Hi everyone
+10:17 -!- Baalzzz is now known as Baal
+10:17 -!- Baal is now known as Baalz
+10:19 < Baalz> Filip, I finished writing the dummies howto...
+10:19 < Baalz> You can se it here in a webpage: http://www.megaoctet.net/~baal/index.php?action=howto&howto=linux4be
+10:19 < Baalz> The plaintext is there: http://www.megaoctet.net/~baal/linux4be.txt
+10:23 < Filip_> hi Baalz
+10:24 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+10:24 < Filip_> hi antagonizt
+10:24 < antagonizt> hello filip
+10:31 < Baalz> Hi filip and antagonizt
+10:41 < Filip_> I lik eyour comment about the 'parameters' option in the cyace config file
+10:41 < Filip_> like your
+10:43 < Baalz> About going tu the gurus section?
+10:45 < Filip_> yep
+10:45 < Baalz> Hehe ok :)
+10:45 < Filip_> so, do you prefer me to copy it onto th main  server, or link to your site ?
+10:45 < Baalz> On the main server
+10:46 < Filip_> and what about credits ? your name/alias/email/mobile hpnoe number/address/bankaccount/ all of the above
+10:46 < Filip_> hpnoe=phone
+10:46 < Baalz> Hum just baal.at.megaoctet.dot.net would be allright
+10:47 < Filip_> ok, I'll do it later tonight when I get home
+10:47 < Filip_> and add it to the frontpage  as a news item
+10:47 < Baalz> Cool :)
+10:52 < Baalz> I dont know how pivot works, do you include the .txt file or do you paste-it in a web form, and, if so, should I escape some characters like " with a \ when I upgrade the file?(Like the next time you release a kernel image.)
+10:53 < Filip_> I'm only using pivot for the homepage/news , all the other pages are handcoded php/html pages
+10:53 < Baalz> Ok
+10:54 < Filip_> I'll add your howto as the homepage for th dummies section
+10:55 < Baalz> I think it's really going to be a good thing because the hackers section is a little scary for newbies...
+10:57 < Filip_> and the dummies section a bit empty
+10:58 < Baalz> Hehe :)
+10:58 < Baalz> The developper one even more...
+11:00 < Baalz> What file holds the framebuffer image that we see at boot
+11:01 < Baalz> ?
+11:02 < Filip_> you mean the tux logo ?
+11:02 < Baalz> Yes
+11:02 < antagonizt> include/asm-mips/linux_logo.h
+11:02 < antagonizt> include/asm-mips/linux_logo_be300.h
+11:03 < Filip_> you don't like it ?
+11:03 < Baalz> I want th change the one on my gentoo box :)
+11:06 < Baalz> I dont understand how this works
+11:06 < Baalz> How do I create an image as a .h?
+11:07 < Baalz> Sorry for the dumb and unrelated questions :)
+11:07 < Filip_> there are tools for it, but don't have  them around (might check google)
+11:08 < antagonizt> there is even a plug-in for gimp that allows you to save as a linux boot logo
+11:08 < Baalz> I can save as Header in the gimp, do you think this would be ok?
+11:09 < Baalz> Or is it something else?
+11:09 < antagonizt> no clue
+11:10 < Filip_> just give it a try, and see what the result looks like
+11:11 < Baalz> Ok I just read the comments in the file and it gives the adress of the program 
+11:17 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+11:18 < MouseLRN> hi2all
+11:18 < Baalz> Hi MouseLRN
+11:18 < MouseLRN> Baalz: how are you?
+11:19 < Baalz> Fine and you?
+11:19 < MouseLRN> fine. I was passed an exam yesterday ;-)
+11:20 < Baalz> Actually, yesterday was the last chrismas party and I still feel a little drunk :)
+11:20 < MouseLRN> ;-)
+11:21 < MouseLRN> do you know HW address of TouchPanel regs for BE300? or where I can learn about it
+11:22 < Baalz> Hum you would have to ask someone else for this
+11:24 < MouseLRN> are there anybody else?
+11:25 < Baalz> There was filip and antagonitz short ago, I guess they will answer if they are still there
+11:26 < MouseLRN> Filip_: hi, are you there?
+11:26 < MouseLRN> Baalz thanks
+11:28 < Baalz> MouseLRN: There is how many letters in the Russian alphabet?
+11:29 < MouseLRN> Baalz do you know, what is LED reg?
+11:29 < MouseLRN> ?
+11:29 < MouseLRN> 33 letters
+11:30 < Baalz> MouseLRN: I dont know about hardware stuff, I only made a tutorial for dummies to install the be300
+11:30 < Baalz> Ok thanks :)
+11:30 < MouseLRN> Baalz ok
+11:30 < MouseLRN> ;-)
+11:32  * Filip_ back
+11:32 < Filip_> hi MouseLRN
+11:33 < Filip_> http://www.linux4.be/hackers/memorymap.php
+11:33 < MouseLRN> Filip_ Hi, what is LED reg?
+11:34 < Filip_> i think the only LED on the BE is not connected to the cpu or companion, but directly driven by the charging circuit
+11:34 < MouseLRN> oh, I see =)
+11:35 < Filip_> not like on the e1xx series, where it is controlled by the cpu 
+11:38 < MouseLRN>  touch panel is working now? I didn't found anything about it in linux4be cvs, but I found something in linux-mips project.
+11:42 < MouseLRN> Filip_ what is your local time?how long you will be here today?
+11:42 -!- Filip__ [~Filip@193.190.11.245] has joined #linux4be
+11:42 < MouseLRN> Filip__ touch panel is working now? I didn't found anything about it in linux4be cvs, but I found something in linux-mips project.
+11:43 < MouseLRN> Filip__ what is your local time?how long you will be here today?
+11:44 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] I came, I saw, I ran away screaming"]
+11:44 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+11:46 < MouseLRN> Filip__ did I miss anything in last 3-5 minutes?what about answers on my questions?
+11:47 < MouseLRN> I'll be later (today), bye2all.
+11:48 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+11:52 -!- Filip__ [~Filip@193.190.11.245] has left #linux4be []
+12:10 -!- Filip_ [~Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+13:56 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_wrkn
+13:59 -!- Netsplit over, joins: jal0_wrkn
+14:57 -!- Filip [~Filip@109.59-201-80.adsl.skynet.be] has joined #linux4be
+15:43 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+15:44 < Filip> hi MouseLRN
+15:44 < MouseLRN> hi
+15:47 < MouseLRN> I looked at memory content (TouchPanel) and found (may be you already know) some addresses where placed X, Y and PenDown bit
+15:47 < Filip> where you able to determine x and y ??
+15:48 < Filip> I was able to detect pen up/down, but not x/y
+15:48 < MouseLRN> X+: 0xaa00032c and 0xaa00035c
+15:49 < MouseLRN> X-: 0xaa000328 and 0xaa000358
+15:49 < MouseLRN> Y+: 0xaa000320 and 0xaa000350
+15:49 < MouseLRN> Y-: 0xaa000324 and 0xaa000354
+15:50 < Filip> but how do you know where (exact x and y position) the pen is ?
+15:50 < MouseLRN> sign "-" mean, that coordinates calculated from end
+15:51 < Filip> how did you test ? userspace app ? modified kernel ?
+15:52 < MouseLRN> I modify giuinfo.c, which print memory content at specified address.
+15:52 < MouseLRN> It's simple ;-)
+15:53 < MouseLRN> cat /proc/giuinfo then I touch panel and 'cat /proc/giuinfo' one more time and so on =)
+15:53 < Filip> ok, got it
+15:55 < MouseLRN> But I found, that if I touch screen in Win, after booting, some addresses (place for x,y) contains some other values (possible, from windows).
+15:56 < MouseLRN> I mean, that before touch in linux, addresses has no zero values
+15:59 < MouseLRN> oh, I have one little question - Linux boot from WinCE is possible ONLY if I poweroff PDA first and then I poweron it, why? If I insert CF (or, simple, after cold reboot, boots from CF), loader will "fly" PDA - only reset works. Sorry for my bad english ;-(
+16:00 < Filip> hmm
+16:00 < MouseLRN> Filip what IRQ TouchPanel (PIU) uses? 13?
+16:00 < Filip> what shell are you using ?
+16:00 < Filip> native casio or xpod ?
+16:00 < MouseLRN> Xpod
+16:01 < MouseLRN> in native casio I have the same problem
+16:01 < Filip> no other app's running ?
+16:01 < MouseLRN> but, from time to time I can boot without this trick.
+16:01 < Filip> IRQ: no clue at all
+16:02 < Filip> I never had this problem, but remember someone else having similar problems
+16:03 < MouseLRN> Filip "IRQ: no clue at all" - you don't know or... ? I didn't understand ;-(
+16:04 < Filip> indeed, we have no reliable info on IRQ's at all
+16:04 < Filip> so you live in Russia ?
+16:04 < MouseLRN> I try to run Qt/Embedded apps (hello world), but it SegFaults ;-(
+16:04 < MouseLRN> Yes, I'm from Russia. I'm a student ;-)
+16:06 < Filip> where in Russia ?
+16:06 < MouseLRN> What chip is using, vrc4173?
+16:06 < MouseLRN> Moscow
+16:06 < Filip> must be late overthere
+16:07 < MouseLRN> ?
+16:08 < Filip> no vrc4173 in our BE's, only a custom chip with no doc
+16:08 < Filip> what time is it now in Moscow ?(22:08 overhere in Belgium)
+16:08 < MouseLRN> 24.12
+16:11 < Baalz> I discoverd yesterday that you can have localtime of anyone with /ctcp nick time :)
+16:12 < MouseLRN> and one more info about touchpanel status: 
+16:12 < MouseLRN> ;-)
+16:13 < PsycoXul> a quick search on google shows several pages saying that the be-300 has a VR4131
+16:13 < Filip> VR4131 is the main cpu
+16:13 < PsycoXul> ok
+16:13 < Filip> but is very oftne used with the vrc4173 companion
+16:13 < Filip> but not in the BE
+16:13 < PsycoXul> ah
+16:14 < Filip> casio used a custom chip for all the interfaces
+16:14 < Filip> brb  (10 minutes)
+16:14 < MouseLRN> ok
+16:22 < MouseLRN> at offsets from 0xaa000000: 00,04,0c,5c-84,8c, and from 0xaa000090: 4c-6c placed touch bit (0x200) and some intrested (may be "data lost" bit or "key repeat bit") - value 0x2 (if "lost", or "repeated").
+16:27 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+16:27 < andrey> hi everybody
+16:27 < MouseLRN> andrey hi
+16:28 < andrey> I saw you question in the log about the interrupts. Based on what I've found interrupts are 0x11 and 0x18
+16:28 < andrey> Don't know the difference though
+16:31 < andrey> What are these offsets you're talking about?
+16:32 < MouseLRN> offset of touch panel status (x's,y's,pendown)
+16:32 < MouseLRN> toggle bits
+16:33 < andrey> bits that are changing when you touch it?
+16:33 < MouseLRN> yes, and addresses, where placed X's and Y's (X+,X-,Y+,Y-)
+16:34 < Filip> hi andrey
+16:35 < Baalz> Hum the forum is broken on linux4.be
+16:36 < MouseLRN> Filip did you saw info about status bits and may be "lost",or "key repeat" bits?
+16:37 < Filip> Baalz: fixed, thanks for letting m know
+16:38 < Filip> yes, but I still don't get how to find an *exact* x/y . 
+16:38 < Filip> I can see how to detect movement and pen up/down
+16:39 < Filip> if I touch the screen exactly in the middle with the stylus (without moving), how can I find out x and y ?
+16:40 < Baalz> I know there is a driver for walcom drawing tablets in the kernel but I dont know if this could be of any use...
+16:40 < Filip> there is a touchanel driver as well (try locate tpanel.c)
+16:44 < MouseLRN> on my BE top left corner had value X+: 0x8300 X-: 0x8d1b; Y+: 0x81e1 Y-: 0x8e30. Those values is minimal,which I can found. I think, that 0x10 - is ONE pixel.
+16:45 < Filip> have to play some more with those registers, but have no time today :-(
+16:45 < MouseLRN> about movement - I try to reset status bit (0xaa000300 & ~ 0x2000), but it didn't change ;-(
+16:45 < Filip> MouseLRN, could you get the 4 corners, and tell the values ?
+16:50 < MouseLRN> formula for coordinates: x = (((X1+X2)-0x8000)/2)+((x1+x2)-0x8000)/2))/2  where X1,X2 - two X+ and x1,x2 - two X-
+16:50 < MouseLRN> the same for y;
+16:51 < MouseLRN> and divide by 0x10
+16:51 < Filip> sorry, don't get it: what's X1,X2 ?
+16:52 < MouseLRN> X1 placed at 0xaa00032c, X2 - at 0xaa00035c
+16:53 < MouseLRN> x1 - 0xaa000328, x2 - 0xaa000358
+16:54 < MouseLRN> sorry, you must use 0x8300 (or similar) instead 0x8000
+16:54 < Filip> I tought value @ 0xaa00032c == value @ 0xaa00035c
+16:54 < MouseLRN> and 0x81e1 (or similar) instead 0x8000 for Y's
+16:55 < Filip> maybe x1,y1 is first sample, x2,y2 second sample ?
+16:55 < MouseLRN> @ 0xaa00032c != @ 0xaa00035c - they differ (~0x2-0x4)
+16:55 < MouseLRN> maybe ;-)
+16:56 < MouseLRN> I can check it
+16:56 < Filip> it's analog, so might have some fluctuations ?
+16:56  * Filip thinks jal0 should know more about this
+16:59 < MouseLRN> may be. We can calc it as: X = ((@0xaa00032c+@0xaa00035c)-0x8300)/(2*0x10) if second pair of X+, X- used for second sample
+16:59 < MouseLRN> for example ;-)
+17:00 < MouseLRN> sorry, not "+" between addresses - must be "-"
+17:03 < andrey> Probably these values (like 0x8300) are calculated during calibration
+17:03 < MouseLRN> oh, I'm sorry (I work a lot today): X = abs(@0xaa00035c-@0xaa00032c)/0x0a
+17:03 < PsycoXul> hmm
+17:04 < PsycoXul> i found this pdf "Driver Design Guidelines for BE-300  CASIO CONFIDENTIAL   2001/10/9"... i don't suppose that might be of any use for anything? heh
+17:04 < Filip> seen them before
+17:04 < PsycoXul> ok
+17:05 < MouseLRN> andrey not needed, because X+ and X- values from 0 and from 240, but it has "big" differ.
+17:05 < Filip> take a look at http://www-s.ti.com/sc/ds/ads7843.pdf ,
+17:06 < Filip> it's a very often used touchscreen controller
+17:06 < andrey> but why does my BE do calibration every time I restart it?
+17:07 < Filip> that's because the touchscreen is overlayed on the lcd (those are different parts), and calibration is needed to map exact lcd location to pen location
+17:07 < Filip> you need to reenter it, because CE forgot you did it before 
+17:08 < Filip> that pdf mentions X+,X-,Y+,Y-
+17:09 -!- MouseLRN [~mouse@info.ru] has quit ["My damn controlling terminal disappeared!"]
+17:11 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:18 < MouseLRN> I check, first pair of X's and Y's almost the same (differ for ~0x1-0x5)
+17:18 < MouseLRN> as second pairs
+17:19 < andrey> ic
+17:19 < MouseLRN> anybody know, why it doesn't work: *__preg16(KSEG1ADDR(0xaa000300)) = *__preg16(KSEG1ADDR(0xaa000300)) & ~0x2000; ? bit isn't clear, I try '- 0x2000', but it hadn't any result
+17:21 < andrey> maybe this bit is not writable?
+17:22 < MouseLRN> maybe. If it's true, then I don't know how to "reset" touchpanel for next "iteration" ;-(
+17:23 < MouseLRN> In tpanel.c, this bit is R/W (but for other chip)
+17:23 < Filip> so you can  only get one sample ?
+17:24 < MouseLRN> yes, and I don't know how to reset touchpanel to get  next status
+17:26 < Filip> try this:
+17:26 < Filip>  * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0020;
+17:26  * Filip says thanks andrey
+17:27 < Filip> tch_ddsi.c , DdsiTouchPanelPowerHandler
+17:27 < MouseLRN> what is g_RegistersMap
+17:27 < Filip> 0xaa000000
+17:28 < andrey> It's just one of the things WinCE does.
+17:28 < Filip> but it's close to what MouseLRN was trying...
+17:29 < andrey> yes, it's close
+17:29 < Filip> MouseLRN,  I'll paste  (part of) the reversed CE code for touchpanel poweron:
+17:29 < MouseLRN> ok, I'll try it now
+17:30 < Filip>     DWORD * ptr; 
+17:30 < Filip>      
+17:30 < Filip>     ptr = (DWORD *) (g_RegistersMap + 0x1118); 
+17:30 < Filip>     if ((*ptr & 0x0001) == 0) *ptr |= 0x0001; 
+17:30 < Filip>     ptr = (DWORD *) (g_RegistersMap + 0x03C8); 
+17:30 < Filip>     if ((*ptr & 0x0003) == 0) *ptr |= 0x0003; 
+17:30 < Filip>     ptr = (DWORD *) (g_RegistersMap + 0x0300); 
+17:30 < Filip>     *ptr |= 0x0001;                                   // reset? 
+17:30 < Filip>     while (*ptr & 0x0001); 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0308) = 1500;     // sample rate? 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x030C) = 200;      // voltage stabilization time? 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0310) = 0x0032; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0318) = 0x0001; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0008; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0020; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x00C0; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) |= 0x0300; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0020; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0300) |= 0x0004; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0304) |= 0x1D00; 
+17:30 < Filip>     * (DWORD *) (g_RegistersMap + 0x0304) |= 0x00FF;
+17:31 < MouseLRN> DWORD == unsigned long ?
+17:31 < andrey> unsigned 32-bit
+17:31 < Filip> andrey is the wizard that made up this C code out of a binary dump
+17:32 < andrey> yes, and then gave up at some point. :-)
+17:32 < MouseLRN> Filip this code cut from Casio SDK?
+17:33 < Filip> no, andrey took a  memory dump from a running  BE
+17:33 < andrey> and tried to restore the code from it
+17:33 < Filip> and reverse engineered the binary back up to readable portions of  C code
+17:34 < andrey> But there are too many unknown things... :-(
+17:34 < MouseLRN> ;-) where you get 'tch_ddsi.c' name?
+17:34 < Filip> that allowed us  to get serial working as well
+17:35 < andrey> ddsi - it's a m-soft abbr for device driver service provider interface
+17:37 < MouseLRN> andrey which tools you use for dump and convert?
+17:39 < andrey> for dump - just several lines of code that read memory from 0x80000000 and save it to a file.
+17:39 < andrey> I can send it to you or to Filip to put somewhere on linux4.be
+17:40 < MouseLRN> did you probe handle any IRQ (0x11-0x18) with working with tpanel?
+17:40 < MouseLRN> andrey mouse@altlinux.ru (I'll see on it tomorrow)
+17:40 < andrey> Then I wrote simple disasm and after that tried to resore code manually using 3.0 source code
+17:41 < andrey> No I didn't. I'm going to but not sure when
+17:41 < MouseLRN> 'using 3.0 source code' - source code of what?
+17:42 < andrey> CE 3.0 source code
+17:42 < andrey> It's not complete but can give you some information.
+17:42 < MouseLRN> andrey where I can get it?
+17:42 < MouseLRN> ;-)
+17:43 < andrey> It was downloadable from microsoft.com some time ago. Maybe still available.
+17:43 < andrey> But I don't remember the link.
+17:44 < MouseLRN> do you have a copy?
+17:45 < andrey> Yes I have. At least some files.
+17:47 < MouseLRN> Filip ok
+17:48 < Filip> on it's way
+17:50 < MouseLRN> ok
+17:53 < MouseLRN> oh, I have cleared bit
+17:53 < MouseLRN> ;-)
+17:53 < Filip> what was it ?
+17:53 < MouseLRN> I try: *(long *)(0xaa000300) &= ~0x2000;
+17:53 < MouseLRN> it works
+17:57 -!- jal0atWrk [~jal0_wrkn@208.33.58.198] has joined #linux4be
+17:57 < jal0atWrk> hey all
+17:57 < jal0atWrk> andrey: you there?
+17:57 < andrey> hi jal0
+17:58 < jal0atWrk> i have a question about a constant 0x0C in your virt2phys function... what does it represent.
+17:58 < MouseLRN> jal0atWrk hi
+17:58 < jal0atWrk> hi mouse
+18:00 < andrey> let me try to remember...
+18:01 < Filip> hi jal0atWrk
+18:01 < jal0atWrk> hey filip
+18:02 < jal0atWrk> andrey: KData->SectionTable->PageTable->MemBlock+offset = physical address... that what i have deduced from the CE Source Code (using the DoVirtualAlloc() function). Does that make sence to you?
+18:03 < jal0atWrk> in virtmem.c
+18:04 < andrey> yes, 0x0C is the offset of pages list in MemBlock structure
+18:04 < andrey> it's in kernel.h
+18:05 < jal0atWrk> at first i though the 0x0C was an offset into the MemBlock structure, but it doesn't seem to match
+18:05 < andrey> to match what?
+18:05 < andrey> ulong       aPages[PAGES_PER_BLOCK]; /* 12: entrylo values */
+18:06 < andrey> 12 is 0x0C :-)
+18:06 < jal0atWrk> hmm, my sources don't say that
+18:06 < jal0atWrk> i have to look again
+18:07 < jal0atWrk> then again, i'm using CE 4.1 sources from PB which may be why :/
+18:09 < MouseLRN> hmm, something strange. If I access to @0xaa000300 by: *__preg16(KSEG1ADDR(0xaa000300)) I have the same value, as I access: *(unsigned long *)(0xaa000300), but,if I change *(unsigned long *)(0xaa000300) &= ~0x2000; value would changed in this construction: *(unsigned long *)(0xaa000300), but if I call *__preg16(KSEG1ADDR(0xaa000300)) one more time, I have an old value.
+18:11 < MouseLRN> and accessing *__preg16(KSEG1+0xaa000300) will cause kernel fault
+18:13 < MouseLRN> and if I first do *(unsigned long *)(0xaa000300) &= ~0x2000; then *__preg16(KSEG1ADDR(0xaa000300)) &= ~0x2000; I'll lost changes ;-(
+18:14 < andrey> mouse, I sent you my code
+18:15 < andrey> does __preg16 mean that you change 16-bit register?
+18:16 < andrey> and when you use "unsigned long" it's 32-bit
+18:17 < jal0atWrk> later all, i'll be back when i get home (;
+18:17 < MouseLRN> and what I shall use? unsigned short int?
+18:17 -!- jal0atWrk [~jal0_wrkn@208.33.58.198] has quit []
+18:21 < andrey> as far as I understand wince uses 32-bit access
+18:21 < MouseLRN> but all linux code, which support vr41xx uses 16bit acess, see code
+18:22 < andrey> maybe. But in this case it's not vr41xx, it's companion chip which can be different
+18:23 < andrey> Anyway if you read 16-bit value, than 32-bit value they are most probably different
+18:27 < MouseLRN> what is KSEG0ADDR, KSEG1ADDR, KSEG2ADDR and KSEG3ADDR?
+18:30 < andrey> I'm not sure but if you look into Vr41xx docs they divide virtual memory into segments.
+18:30 < MouseLRN> I look into asm/addrspace.h
+18:31 < andrey> kseg0 - 0x80000000 - 0x9FFFFFFF - 0.5 GB without TLB mapping, etc
+18:32 < MouseLRN> And what I need? %)
+18:33 < andrey> Depends on what you want :-)
+18:34 < andrey> All hardware registers are usually accessed using kseg1 - without TLB and without cache
+18:34 < Filip> 0xFFFF FFFF
+18:34 < Filip> mapped kseg2
+18:34 < Filip> 0xC000 0000
+18:34 < Filip> unmapped uncached kseg1
+18:34 < Filip> 0xA000 0000
+18:34 < Filip> unmapped cached kseg0
+18:34 < Filip> 0x8000 0000
+18:34 < Filip> 2G kuseg
+18:34 < Filip> 0x0000 0000
+18:34 < Filip> need kseg1, unmapped and uncached
+18:34 < Filip> 0xA0000000
+18:35 < Filip> 0x80000000 kseg0 is same area, but cached
+18:35 < Filip> clear ?
+18:35 < MouseLRN> what do cli() and sti() functions?
+18:36 < andrey> I think using cache for hardware registers could be dangerous
+18:36 < MouseLRN> Ok, I use KSEG1
+18:36 < andrey> disable/enable interrupts?
+18:39 < andrey> btw, if you use KSEG1 which is already 0xA0000000 shouldn't you use 0x0A000300 instead of 0xAA000300?
+18:40 < Filip> probably safer
+18:40 < Filip> going tot get some sleep folks, talk to you later
+18:40 < andrey> see you
+18:41 < MouseLRN> Filip bye
+18:41 -!- Filip [~Filip@109.59-201-80.adsl.skynet.be] has left #linux4be []
+18:53 < MouseLRN> .
+18:54 -!- tonijn [oh@c115002.upc-c.chello.nl] has joined #linux4be
+18:55 < tonijn> nederlands?
+18:56 < tonijn> hoe kan ik rechtstreeks iemand vanuit me isp meteen laten door connecten naar me linux doos
+18:56 < MouseLRN> tonijn no
+18:56 < tonijn> ik heb als server windows en client linux
+18:56 < tonijn> ok english then
+18:57 < tonijn> i have as a server win2k i want let users connect direct to my linux box tru the win server how can i routing that?
+19:00 < andrey> connect how? share files, running telnet, ftp?
+19:02 < tonijn> telnet
+19:03 < tonijn> it is that the user does this:user>conectme >when conect is >direct to the linux
+19:04 < tonijn> because i want keep win as a server
+19:05 < tonijn> for my roulette stuff
+19:06 < andrey> don't know...
+19:07 < tonijn> i want keep let we say the windows as the backbone but when they connect the backbone he get automatic connect to the linux box,i hope i explain it clear
+19:10 < MouseLRN> tonijn try to found win program,which allow to redirect connections on specified port. In linux it's simple
+19:13 < tonijn> yes in linux i know that but i have a irc channel and the roulette script is in win mirc thats why i must keep the windows
+19:15 < MouseLRN> why you can not run win emulator such as wine? or vmware?
+19:16 < PsycoXul> roulette script?
+19:16 < tonijn> yes in mirc
+19:16 < PsycoXul> whats that do?
+19:16 < tonijn> well u know the game roulette?
+19:16 < tonijn> gamble game
+19:17 < PsycoXul> don't tell me you're keeping windows just for a game bot on irc
+19:17 < MouseLRN> I'll go to sleep, bye2all
+19:17 < MouseLRN> see tomorrow
+19:17 < tonijn> no notonly fo that i have here studio 7 for video edit
+19:17 < PsycoXul> night
+19:17 < Baalz> Have a good night MouseLRN
+19:17 < MouseLRN> thanks ;-)
+19:17 -!- MouseLRN [~mouse@info.ru] has quit ["BitchX: a modern client for a old world"]
+19:17 < tonijn> are u all walonian?
+19:18 < PsycoXul> whats walonian?
+19:18 < tonijn> a french part of belgium
+19:18 < tonijn> is this a belgian channel?
+19:18 < PsycoXul> i live in the US
+19:18 < andrey> bye, mouse
+19:18 < PsycoXul> this channel is about linux for the be-300 pda
+19:18 < PsycoXul> heh
+19:19 < tonijn> lol becoz the linux4be 4be i thought 4be=for belgium
+19:19 < PsycoXul> hehe :p
+19:19 < tonijn> im sorry
+19:19 < tonijn> hahaha i was first want talk dutch
+19:20 < tonijn> tonijn is in dutch for tunafish
+19:20 < PsycoXul> hehe
+19:20 < tonijn> yeah cant help it i have that name since my 17th
+19:20 < tonijn> that nick by a friend
+19:22 < tonijn> well btw on the client i have a packetradio converse thats why i want use it for my cb friends
+19:22 < tonijn> packetradio x25 is allowed here
+19:22 < tonijn> on cb
+19:23  * tonijn is dutch thats why my english sux
+19:29 -!- jal0_wrkn is now known as jal0
+19:35 < jal0> andrey: you there?
+19:36 < jal0> hey antagonizt... long time no see, how was the vacation?
+19:38 < andrey> hi jal0
+19:40 < jal0> struct MemBlock {
+19:40 < jal0>     ACCESSLOCK  alk;        /* 00: key code for this set of pages */
+19:40 < jal0>     uchar       cUses;      /* 04: # of page table entries sharing this leaf */
+19:40 < jal0>     uchar       flags;      /* 05: mapping flags */
+19:40 < jal0>     short       ixBase;     /* 06: first block in region */
+19:40 < jal0>     short		hPf;		/* 08: handle to pager */
+19:40 < jal0>     short		cLocks;		/* 0a: lock count */
+19:40 < jal0>     ulong       aPages[PAGES_PER_BLOCK]; /* 12: entrylo values */
+19:40 < jal0> }; /* MemBlock */
+19:40 < jal0> 0x0C != 0x12
+19:41 < jal0> the 12 is a hex value.. this is from the CE3.0 sources
+19:42 < jal0> u understand what i'm trying to say ?
+19:42 < andrey> if cLocks is short and it's at 0x0A then next avail address is 0x0C
+19:42 < andrey> I think it's just a typo of the person who commented it :-)
+19:43 < andrey> I was confused also...
+19:44 < tonijn> to who u talk jal0?
+19:45 < jal0> andrey
+19:45 < jal0> it about a question i ask earlier
+19:46 < jal0> andrey: i tried changing the constant to 0x12 and it segfaulted
+19:50 < jal0> yeap, just realized that... dohh!
+19:51 < jal0> funny, its like that in both the 3.0 and 4.1 sources
+19:52 < andrey> nobody bothered to change. :-) Maybe there are no changes at all? ;-)
+20:03 < tonijn> is the windows ipshare familiar with linux?
+20:31 < andrey> ok, i'm going home. bye everyone...
+20:31 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+20:42 -!- tonijn [oh@c115002.upc-c.chello.nl] has quit []
+22:22 < PsycoXul> which is this thing closer to, as far as compatability with apps goes - palm size pc or pocket pc?
+--- Log closed Wed Jan 08 00:00:08 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

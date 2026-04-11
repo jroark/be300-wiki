@@ -1,0 +1,341 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_27.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_27.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Nov 27 00:00:20 2002
+01:00 -!- HaOd [~HaOd@68.16.44.6] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+01:02 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit ["Client Exiting"]
+03:37 -!- sinfonian [~bshirclif@np-dsl-216-12-216-18.ev1.net] has joined #linux4be
+03:40 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+03:40 < Filip> Hi Brian
+03:41 < sinfonian> hello
+03:42 < Filip> looks like the war has started 
+03:44 < sinfonian> war?
+03:44 < Filip> wolf vs goo
+03:45 < sinfonian> ohhh
+03:45 < sinfonian> I thought you meant iraq
+03:46 < Filip> this one is more fun
+03:47 < sinfonian> yea harpo just sent me a post from expod.net being critical of be-central
+03:47 < Filip> why do those people always act like little children ? One should *never* delete posts, unless they clearly contain illegal contents
+03:48 < sinfonian> I agree
+03:48 < Filip> and even then, you shouldn't justw delete it, but modify it by removing the offending piece and clearly state who/why this was done
+03:48 < sinfonian> I think becentral just attracted more casual users  and not these BE nutz
+03:50 < Filip> I'm pretty sure they all visit be-central as well, but they prefer to post at their 'home' forum
+03:50 < sinfonian> right
+03:54 < jal0> hey filip
+03:54 < Filip> hi jal0
+03:55 < Filip> you folks never sleep ?
+03:55 < jal0> :)
+03:55 < sinfonian> lol.. 
+03:55 < sinfonian> I just got off work an hour ago
+03:55 < sinfonian> waiting tables sucks
+03:55 < jal0> no i'm going now, just to little time, besides i'll get plenty when im dead :)
+03:56 < sinfonian> lol
+03:56 < Filip> did you work all night on your monitor ?
+03:56 < Filip> is there some (partially) useable version somwhere ?
+03:57 < jal0> there will be tomorrow
+03:57 < Filip> got the pcb with me in a padded enveloppe, going to bring it to the postoffice at noon
+03:57 < jal0> i was working on my cywin toolchain sdk
+03:58 < jal0> i havn't updated my page in quite a while :)
+03:58 < jal0> so have you removed any of the chips yet?
+03:59 < Filip> no I didn't, prefer not to touch it with my amateur tools
+03:59 < sinfonian> has there been any more progress lately?
+03:59 < Filip> did some probing around with scope etc
+03:59 < jal0> ok so you dont mind if i do?
+03:59 < Filip> no prob at all, it's all yours
+04:00 < Filip> i'm sure you're better skilled and equiped than I am
+04:00 < jal0> i'll try and save the chips, it may become useful later when figuring out how to flash it
+04:01 < Filip> if we reflash, we should make our own rom-based bootloader (like pmon), to make the reflashing safer
+04:02 < jal0> i want to finish with the update on my page then i clean up the monitor and upload it to the server.
+04:02 < jal0> yeap, thats the idea
+04:02 < Filip> greta
+04:02 < Filip> =great
+04:03 < jal0> although, i curious how microsoft implements their monitor (used for debugging)
+04:04 < Filip> they use the ce kernel for it, with ethernet enabled
+04:05 < sinfonian> hey would pico linux or qtopia support landscape mode?
+04:05 < sinfonian> I think qtopia does
+04:05 < Filip> I think you can even do it within the framebuffer code
+04:06 < jal0> i would also like to see usb functionaliy, i would allow alot more people the operatunity to join in on the fun :)
+04:06 < Filip> it's fairly easy to adapt FB for landscape
+04:07 < Filip> indeed, usb is also on my list of dll's to take a closer look. All custom functions are in seperate dll's with the correct name, makes it easier to look at
+04:07 < Filip> and most are somewhere between 20-50 KB, which is a reasonable size
+04:10 < jal0> i figure once i get the pcb, i'll start working on the hardware reversing aspect of the project. Not mant electronic majors come around here.
+04:10 < jal0> well, i'm off to bed now, got to get up in about 2 hours, later
+04:10 < sinfonian> ok
+04:10 < sinfonian> good night
+04:10 < Filip> cu later
+04:11 -!- jal0 is now known as jal0_Zzz
+04:11 < sinfonian> have you heard of an amiga emulator for the BE?
+04:11 < jal0_Zzz> i let you know when the monitor is available, night
+04:11 < Filip> amiga emulator ??
+04:12 < sinfonian> yea
+04:12 < Filip> sounds crazy to me ...
+04:12 < sinfonian> im just answering peoples questions online
+04:12 < sinfonian> something called UAE'
+04:12 < Filip> brb, phone call
+04:14 < sinfonian> what about commodore64?
+04:27  * Filip is back
+04:27 < Filip> commodore 64 should be doable, but I don't know of any for the moment
+04:27 < sinfonian> yea
+04:27 < sinfonian> dont worry about it 
+04:28 < sinfonian> I already posted it.. 
+04:35 < sinfonian> filip.. can I phpMyAdmin for my site?
+04:35 < sinfonian> I want to look at the database
+04:46 < Filip> sure
+05:00 < sinfonian> im off to bed
+05:00 < sinfonian> good night
+05:00 -!- sinfonian [~bshirclif@np-dsl-216-12-216-18.ev1.net] has left #linux4be []
+06:36 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+10:10 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+10:26 -!- echoalia [~echoalia@third.bitsense.net] has left #linux4be []
+10:29 -!- jal0_Zzz is now known as jal0
+10:31 < Filip> hi jal0
+10:31 < jal0> hey filip
+10:31 < Filip> pcb is on its way to you
+10:31 < jal0> wow, just got about 5" of snow
+10:31 < jal0> cool, can't wait :)
+10:31 < Filip> snow ??
+10:32 < Filip> should arriv ein 3-8 days
+10:32 < Filip> depending on proximity of a major city
+10:32 < jal0> couple hours away from new york
+10:33 < Filip> so probably early next week
+10:34 < jal0> bb in a few, need some coffee and taking the wife to work
+10:34 < Filip> sure, no prob
+10:53 -!- antagonizt[zZz] is now known as antagonizt
+10:53 < antagonizt> hey everyone
+10:53 < antagonizt> it's snowing...
+10:53 < antagonizt> like 6"
+10:58 < Filip> hi antagonizt
+10:59 < Filip> yeah, jal0 told me already : 5" snow at his place
+11:07 < jal0> ib
+11:07 < jal0> hey antagonizt
+11:08 < Filip> used your ski's ?
+11:08 < jal0> :)
+11:08 < Filip> is it normal for this time of the year / place to have snow ?
+11:09 < jal0> no, this is the first time CT has had this much snow since around 1929( just heard it on the radio)
+11:23 < antagonizt> it snowed here almost a month ago... too warm to stick but still kind of odd for october
+11:29 < jal0> who has good scripting knowledge that can help me?
+11:30 < Filip> maybe, but no time now, got to pivk-up the kids
+11:30 < Filip> bbl
+11:30 < jal0> ok later
+11:30 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+11:30 < jal0> antagonizt: you know much about scripting?
+11:33 < antagonizt> what kind of scripting?
+11:33 < jal0> shell, bash or sh
+11:33 < antagonizt> enough to get by...
+11:34 < antagonizt> what do have in mind?
+11:34 < jal0> trying to figure out why    ( echo hello; ( bla 2>&1 | tee ) || echo world )
+11:34 < jal0> dosnt output hello  world
+11:35 < antagonizt> what is bla?
+11:35 < antagonizt> and tee?
+11:36 < jal0> bla is a no command which should report an error, tee is a program used to redirect stdin and stdout (standard unix utility)
+11:45 < antagonizt> not sure ... maybe use an if statment...
+11:47 < jal0> i think i got it...  ( echo hello; ( bla 2>&1 || echo world | tee ) )
+11:56 -!- HaOd [~HaOd@68.16.44.6] has joined #linux4BE
+12:24 -!- HaOd [~HaOd@68.16.44.6] has left #linux4BE []
+12:40 -!- Hao [~HaOd@68.16.44.6] has joined #linux4BE
+14:41 -!- Hao [~HaOd@68.16.44.6] has quit [Read error: 54 (Connection reset by peer)]
+14:55 -!- HaOd [~HaOd@68.16.44.6] has joined #linux4BE
+14:56 -!- Filip [~Filip@78.98-136-217.adsl.skynet.be] has joined #Linux4BE
+15:27 < antagonizt> hi filip
+15:30 < Filip> hi antagonizt
+15:43 -!- HaOd [~HaOd@68.16.44.6] has left #linux4BE []
+16:47 -!- themaw [~chatzilla@pD954851A.dip.t-dialin.net] has joined #linux4be
+16:47 < themaw> hi everyone!
+16:48 < Filip> hi marc
+16:48 < themaw> how's the progress, filip ? :)
+16:49 < Filip> I'm getting an early christmas gift from microsoft
+16:49 < themaw> tell me more..
+16:51 < themaw> had luck with the dlls ?
+16:51 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+16:51 < themaw> hi hewhew ..
+16:51 < hewhew> hi
+16:55 < Filip> hi hewhew
+17:03 -!- HaOd [~HaOd@68.16.44.6] has joined #linux4be
+17:07 -!- themaw [~chatzilla@pD954851A.dip.t-dialin.net] has quit ["ChatZilla 0.8.9 [Mozilla rv:1.1/20020826]"]
+17:12 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:13 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+17:24 -!- HaOd [~HaOd@68.16.44.6] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+17:30 -!- themaw [~marc@pD9E5CC7E.dip.t-dialin.net] has joined #linux4be
+17:30 < themaw> re
+17:56 -!- deepthought [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:58 -!- deepthought [~nykkto@ns2.onkelinx.com] has quit [Client Quit]
+17:59 -!- deepthought [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:59 -!- deepthought [~nykkto@ns2.onkelinx.com] has quit [Client Quit]
+18:00 -!- themaw_ [~marc@p5085D288.dip.t-dialin.net] has joined #linux4be
+18:01 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+18:01 < nykkto> .quit
+18:01 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Client Quit]
+18:02 < themaw_> Filip, just a stupid question: have you got the vr41xx and the vr4773-touchpanel code ?
+18:02 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+18:02 < Filip> it's in the kernel sourcetree
+18:02 < nykkto> sigh
+18:03 < themaw_> i wasn't sure if it was the standard mips kernel .. ok .. never mind.
+18:03  * nykkto wibbles hi
+18:04 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has joined #linux4be
+18:06 < nykkto> NO ONE home?
+18:06 < jal0atWrk> hi nykkto
+18:07 < nykkto> hey, you should be home by now :P
+18:07 < jal0atWrk> nope, long night have to make some time up that i'm going to be loosing due to the holiday
+18:07 < nykkto> what are you a contractor?
+18:08 < jal0atWrk> no, just have project due date
+18:08 < nykkto> that blows :P on the other hand it gets ppl out of your hair :)
+18:09 < nykkto> hey are you any good at solving $TERM issues?
+18:09 < jal0atWrk> i work 2nd shift so i'm pretty much the only one here in my deparment
+18:09 < nykkto> ahh that's right, I forgot :(
+18:09 < jal0atWrk> eveyone $TERM issues?
+18:10 < nykkto> heh, yep I have problems becuase I dont' havea status bar set up
+18:10 < jal0atWrk> not sure what your taking about :/
+18:11 < nykkto> oh, I am in mircII I believe and I get problems with text running over my typing area, n stuff
+18:12 < jal0atWrk> ic
+18:12 < nykkto> humm maby linix for dumbies'll have more info ;)
+18:13 -!- themaw [~marc@pD9E5CC7E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+18:42 -!- themaw_ [~marc@p5085D288.dip.t-dialin.net] has quit ["Client Exiting"]
+18:44 -!- Filip [~Filip@78.98-136-217.adsl.skynet.be] has left #Linux4BE []
+18:48 < jal0atWrk> someone say Hello!
+18:49 < jal0atWrk> anyone here
+18:54 -!- jjjjj [~jal0_wrkn@208.33.58.202] has joined #linux4be
+18:54 < nykkto> hello
+18:54 < jjjjj> Hello!
+18:54 < jal0atWrk> Hi,
+18:54 < nykkto> hi
+18:54 < nykkto> damn still looking 
+18:55 < jal0atWrk> tring out a siple script
+18:55 < nykkto> I dunno why terminal settings are such a pain today I should be able to go with VT100 and be done, but NOooooo
+18:55 < jjjjj> Hello!
+18:55 < jal0atWrk> Hi,
+18:55 < nykkto> freakn echo!
+18:56 < jal0atWrk> can you type in "Hello!" (without the quotes) i'm testing something out.
+18:56 < nykkto> Hello!
+18:56 < jjjjj> Hi,
+18:56 < jal0atWrk> Hi,
+18:57 < nykkto> Hello!  You damn freaky bot thingie!
+18:57 < jal0atWrk> hmm, not working thanks though
+18:57 < nykkto> heh
+18:58 < jal0atWrk> though about adding so triggers to my logger, like 'status' 'latest-info' etc.
+18:58  * nykkto thinks about "Bitchslap" trigger
+18:58 -!- jjjjj [~jal0_wrkn@208.33.58.202] has quit [Client Quit]
+19:00 < jal0atWrk> well, time to get back to work.. later everyone
+19:00 < nykkto> l8r :P
+19:00 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has quit []
+19:18 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+19:18 < Sp4wN> howdy all
+19:28 < nykkto> hi
+19:43 -!- Sp4wN is now known as Sp4wN|civ
+19:43 < nykkto> heh
+20:05 -!- sinfonian [~bshirclif@np-dsl-216-12-216-73.ev1.net] has joined #linux4be
+20:29 -!- Sp4wN|civ is now known as Sp4wN
+20:29 -!- sinfonian [~bshirclif@np-dsl-216-12-216-73.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+20:29 < Sp4wN> didn't even have a chance to play
+20:29 < Sp4wN> =/
+20:38 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit [Remote closed the connection]
+20:38 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+20:59 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+21:06 < nykkto> sheesh
+22:35 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+22:52 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+22:53 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+23:59 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+--- Log closed Thu Nov 28 00:00:47 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

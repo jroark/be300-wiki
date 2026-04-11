@@ -1,0 +1,52 @@
+<pre>
+Serial port opened.
+
+entry=8000246c  addr=80002000-8023f390
+
+entry=8000246c  addr=80002000-8023f390
+
+<4>CPU revision is: 00000c80
+<4>Primary instruction cache 16kb, linesize 32 bytes.
+<4>Primary data cache 16kb, linesize 16 bytes.
+<4>Linux version 2.4.18-mips (Filip@Linux4.BE) (gcc version 3.0.3) #1 Sun Jun 30 19:34:17 EDT 2002
+<6>PClock: 150528000Hz
+<6>VTClock: 75264000Hz
+<6>TClock: 37632000Hz
+<6>mips_counter_frequency: 9408000Hz
+<6> vr41xx_pciu_init<6> OK
+<4>Determined physical RAM map:
+<4> memory: 00fff000 @ 00000000 (usable)
+<4>On node 0 totalpages: 4095
+<4>zone(0): 4095 pages.
+<4>zone(1): 0 pages.
+<4>zone(2): 0 pages.
+<4>Kernel command line: root=/dev/ram0
+<4>Console: colour dummy device 80x25
+<6>serial_be300.c register_console <6>OK
+<4>Calibrating delay loop... 60.00 BogoMIPS
+<4>Memory: 13824k/16380k available (803k kernel code, 2556k reserved, 1236k data, 80k init, 0k high
+mem)
+<4>Dentry-cache hash table entries: 2048 (order: 2, 16384 bytes)
+<4>Inode-cache hash table entries: 1024 (order: 1, 8192 bytes)
+<4>Mount-cache hash table entries: 512 (order: 0, 4096 bytes)
+<4>Buffer-cache hash table entries: 1024 (order: 0, 4096 bytes)
+<4>Page-cache hash table entries: 4096 (order: 2, 16384 bytes)
+<4>Checking for 'wait' instruction...  unavailable.
+<4>POSIX conformance testing by UNIFIX
+<6>Linux NET4.0 for Linux 2.4
+<6>Based upon Swansea University Computer Society NET3.039
+<4>Starting kswapd
+<4>Console: switching to colour frame buffer device 30x40
+<6>fb0: Simple frame buffer device, using 160K of video memory
+<4>Dummy keyboard driver installed.
+<4>Casio Cassiopeia BE-300 Serial Driver version 0.01
+<4>pty: 256 Unix98 ptys configured
+<6>Serial driver version 5.05c (2001-07-08) with MANY_PORTS SHARE_IRQ SERIAL_PCI enabled
+<6>ttyS00 at 0xaf000800 (irq = 17) is a 16550A
+<6>ttyS01 at 0xaf000820 (irq = 29) is a 16550A
+<4>block: 64 slots per queue, batch=16
+<4>VFS: Cannot open root device "ram0" or 01:00
+<4>Please append a correct "root=" boot option
+<0>Kernel panic: VFS: Unable to mount root fs on 01:00
+<4>
+</pre>

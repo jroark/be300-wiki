@@ -1,0 +1,265 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_04.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_04.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Mar 04 00:00:28 2003
+01:55 -!- Netsplit leguin.freenode.net <-> irc.freenode.net quits: Baalz
+01:56 -!- Netsplit over, joins: Baalz
+03:12 -!- Netsplit leguin.freenode.net <-> irc.freenode.net quits: Baalz
+03:12 -!- Netsplit over, joins: Baalz
+04:24 -!- Netsplit leguin.freenode.net <-> irc.freenode.net quits: Baalz
+04:24 -!- Netsplit over, joins: Baalz
+07:35 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+07:37  * jal0 has updated my webpage for those interested at -> http://www.linux4.be/~jal0
+07:38 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Client Quit]
+08:50 -!- Netsplit leguin.freenode.net <-> irc.freenode.net quits: Baalz
+08:50 -!- Netsplit over, joins: Baalz
+13:41 -!- echoalia [~echoalia@WPIT-199-105-115-27.worldpath.net] has joined #linux4BE
+13:42 < echoalia> hello
+13:44 -!- someguy [trilluser@x.eggs.org] has joined #linux4be
+14:49 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+17:15 -!- echoalia [~echoalia@WPIT-199-105-115-27.worldpath.net] has left #linux4BE []
+17:15 -!- someguy [trilluser@x.eggs.org] has left #linux4be []
+18:55 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+18:56 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:37 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+20:47 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:55 -!- andrey [~mr_hyro@ool-43554215.dyn.optonline.net] has joined #linux4be
+20:57 < andrey> hi everyone!
+20:57 < jal0> hey andrey
+20:57 < andrey> hi jal0
+20:57 < jal0> did you have a chance to check out my code?
+20:58 < andrey> yes, a little bit. I liked the idea of wrapping undocumented dlls
+20:59 < andrey> I'm going to do the same for nandaccess.dll
+20:59 < jal0> ok cool, then we could create a sort of cek_undocumented dll library :)
+21:00 < andrey> :-) yes we can. But maybe it's better to create separate wrapper for each dll.
+21:01 < jal0> yes, thats what i was getting at :)
+21:01 < jal0> were you able to get anything to compile?
+21:01 < andrey> btw should it be only be-300 toolkit or for all ce machines?
+21:02 < andrey> No, didn't have time. Maybe tomorrow...
+21:02 < jal0> eventualy all ce devices, i plan on starting a ce hacking site once linux is up and running
+21:03 < andrey> for ce.net everything can be different. Actually it's different even for my Aero-1500 although it's wince 3.0 also.
+21:03 < jal0> oh, btw, i just signed on as the moderator for the linux4be section of 'ABF Unlimited'. It should prove to be interesting :)
+21:05 < jal0> ok, so once you get a good look at my code we can start thinking about setting up a cvs structure.
+21:05 < andrey> is this the site canadian sniper was talking about?
+21:05 < jal0> yeap
+21:05 < jal0> http://www.abfunlimited.zmoz.com/phpBB2/index.php
+21:06 < jal0> its just starting out
+21:07 < jal0> not alot there yet, but i plan on using it as a pleading ground for help ;)
+21:08 < jal0> it's funny to see the number of people complain about how bad windows is, but just try to find any number of those people willing to do anything about it has been difficult
+21:08 < andrey> yes, I stopped by yesterday. Still mostly empty...
+21:09 < jal0> expod.net has a user base of about 3000, the linux4be site .... less than 10
+21:09 < PsycoXul> expod is also usable
+21:09 < jal0> you at work now?
+21:10 < andrey> Well, number of people who complaining are usually much greater than number of people who want to change something.
+21:10 < jal0> so true :)
+21:10 < andrey> No, at home. Just came... :-)
+21:11 < jal0> so were is your hacking code, the actuall progies, not the dumps... i couldn't find then on the linux4be server
+21:11 < andrey> just noticed that xkernel.h contains #include "../../bedump/examples/modules/cek.h" that doesn't exist
+21:12 < andrey> you mean ce code? ~andrey/wince/src/...
+21:13 < jal0> yeah i did some restructuring and may of forgotten to change the paths to some of the headers
+21:13 < andrey> ic
+21:14 < jal0> just delete the path part of it, the cek.h file is now located in the same directory
+21:15 < andrey> yes, I found already. I think I'll take closer look tomorrow.
+21:16 < andrey> are you at home?
+21:16 < jal0> yeah, went to work eary today
+21:17 < jal0> i mean any code that you are using to hack the kernel with, like your modules.c file you sent me a while ago
+21:19 < jal0> hey, i have to step out for a few... have to pick the wife up from work.. you going to be here for a while?
+21:19 < andrey> oh, this... I didn't put it anywhere. 
+21:20 < andrey> Actually I was going to eat something. :-) But I'll stay connected.
+21:20 < jal0> or the nand dupper stuff we talked about yesterday
+21:20 < jal0> ok, bb is about 15-20
+21:21  * jal0 will be back in 15-20
+21:21 < andrey> I can copy my stuff into cvs when we decide the structure. Or, do you think it worth to copy to my home idr first?
+21:40  * jal0 is back
+21:40 < jal0> first to you home dir, then we can agree on how to merge things and structure it.
+21:55 < jal0> andrey: do you know what Gandalf is refering to in this post http://www.abfunlimited.zmoz.com/phpBB2/viewtopic.php?t=133 ?
+22:03 < andrey> not sure. I didn't do any patches to kernel so far
+22:04 < andrey> btw how do you do things like "* jal0 is back"?
+22:04 < jal0> i didn't think so. hmm i'll have to ask what he meant
+22:04 < jal0> "/me is back"
+22:05 < jal0> what client are you using?
+22:05 < andrey> maybe that's waht he (mis)understood from our yesterday talk
+22:06 < jal0> yeah i thinking that also
+22:06 < andrey> mIRC now, but usually irc from linux4.be machine
+22:06 < jal0> in mIRC i use the "/me" command as is "/me is back"
+22:07  * jal0 says give it a try
+22:07 < andrey> I didn't use irc before at all so I'still learning
+22:07  * andrey is still learning :-)
+22:07  * jal0 undstands
+22:07 < jal0> :D
+22:07 < andrey> :-)
+22:08 < jal0> actually i just found out about it about a month ago, i still learning myself
+22:09 < andrey> maybe we shoild try to patch irq processing ourselves to not to disappoint gandalf? :-)
+22:09 < jal0> btw, if you want to say something and not have it logged surround it <like this>
+22:09 < andrey> see, another good thing. so linux4be is not useless at all :-)
+22:09 < jal0> :)
+22:10 < jal0> but i think that only works for the beweb_logger
+22:10 < andrey> yes, I noticed it some time ago. Does it work with jal0_logger? :-)
+22:11 < jal0> nope :P
+22:11 < jal0> i dont want to miss a thing :)
+22:15 < jal0> actually my logger dosn't see pms directed at jal0, but the nick jal0 is set to log pm's only
+22:16 < jal0> i have logs back to july 9th, 2002
+22:16 < andrey> can mirc do that ?
+22:16 < jal0> do what?
+22:16 < jal0> logging?
+22:17 < andrey> yes
+22:18 < andrey> So you logged before filip, er? :-)
+22:18 < jal0> yes mIRC does logging... File->Options  IRC->logging
+22:18 < jal0> yeap
+22:19 < andrey> btw do you know where is he? too busy?
+22:20 < jal0> not sure, no one has heard from him, going to shoot him an email tonight though
+22:23 < jal0> so you going to upload you hacking code to the server? where will it be
+22:24 < andrey> that's interesting - somebody named stephenson.freenode.net tries to scan my ports...
+22:24 < andrey> maybe ~andrey/wince/tools
+22:24 < jal0> script kiddies ugg
+22:25 < andrey> yes, it happens, but freenode.net it's the domain hosting this irc.
+22:25 < andrey> maybe just coincidence though
+22:27 < jal0> did it just happen again?
+22:28 < andrey> I'll put my files tomorrow. I'm going to create a web pages like yours but it can take longer
+22:28 < andrey> no, no more scans
+22:29 < jal0> ok, your page going to be on ce hacking then? if so i keep mine geared towards the hardware hacking and toolchain support
+22:33 < andrey> yes, some hardware discoveries :-) and tools. Or maybe just edit main hardware page? I'll see
+22:35 < andrey> Looks like I gonna have tough couple of weeks, probably after that
+22:35 < jal0> #linux4be.20020723.log(7): [15:33] <andrey> Hi
+22:35 < jal0> #linux4be.20020723.log(10): [15:34] <andrey> So-so. I did something to my BE - it doesn't wake up.
+22:36 < jal0> that the first post i have you logged 
+22:38 < andrey> :-)) yes, i remember that. I was trying to reveal "real" ROM, because existing one doesn't nake much sense
+22:39 < jal0> yeah, you had to disconnect you battery to get things working again :)
+22:39 < andrey> I wrote different values to different ports. :-)
+22:39 < andrey> yes I did that
+22:40 < jal0> <what field of work are you in?>
+22:41 < andrey> <telecommunications>
+22:50 < jal0> btw, did you see what i meant about the undocumented pins on the serial/usb connector?
+22:51 < jal0> from my schematic
+22:55 < andrey> not exacly. from connector schematic or from main board?
+22:56 < jal0> hopefull this programmer will just be a side step untill we can figure out how to load from the serial connector
+22:56 < jal0> both
+22:56 < jal0> the "Not Connected" pins are indeed connected to the ASIC chip and serve some purpose
+22:57 < jal0> i'm betting there for debugging
+22:58 < andrey> like 2, 8 and 16?
+22:59 < jal0> yeap
+22:59 < jal0> although 2 is known
+23:00 < andrey> it can be just debugging output. I don't think it's enough even for network, and definitely not enough for parallel.
+23:00 < andrey> what is it?
+23:00 < jal0> it's enough for serial
+23:01 < jal0> and twisted pair is all you need for some networking protocols
+23:01 < andrey> yes, it's enough. But programming 16 meg through serial...
+23:02 < jal0> no, i didn't mean they were for programming, rather for debugging output from the kernel maybe
+23:03 < andrey> maybe... actually I was thinking that if you insert CF network adapter...
+23:05 < jal0> that too :), i don't know its all just speculation right now :)
+23:05 < jal0> but they do serve some purpose
+23:06 < andrey> that's true... :-)
+23:07 < jal0> on a CE Hacking note, have you ever tried dumping the Exception Table info from any of the DLL's?
+23:08 < andrey> ok, I thing I'll go now... 
+23:08 < andrey> no I didn't is there anything interesting in there?
+23:08 < jal0> ok, talk to you later, tomorrow i'll email you once i have a look at your code
+23:08 < jal0> and we can go from there
+23:09 < jal0> not sure, havn't figured it's structure out yet
+23:09 < jal0> but anything dealing with exceptions could prove useful
+23:10 < jal0> anyway i wont keep you any longer :) take care
+23:10 < andrey> could be... ok, see you
+23:10 -!- andrey [~mr_hyro@ool-43554215.dyn.optonline.net] has left #linux4be []
+--- Log closed Wed Mar 05 00:00:54 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

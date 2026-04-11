@@ -1,0 +1,388 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_26.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_26.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Nov 26 00:00:54 2002
+00:00 -!- antagonizt is now known as antagonizt[zZz]
+00:51 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+07:54 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_logger
+07:54 -!- Netsplit over, joins: jal0_logger
+10:17 -!- someguy [~matt@psyche.eggs.net] has quit [Read error: 104 (Connection reset by peer)]
+12:21 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+13:35 -!- antagonizt[zZz] is now known as antagonizt
+13:39 -!- someguy [~matt@psyche.eggs.net] has joined #linux4be
+14:14 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+14:15 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit [Client Quit]
+14:22 -!- sinfonian [~bshirclif@twhou-212-181.ev1.net] has joined #linux4be
+14:28 -!- sinfonian [~bshirclif@twhou-212-181.ev1.net] has left #linux4be []
+14:46 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+14:47 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+15:46 -!- Filip [~Filip@29.103-136-217.adsl.skynet.be] has joined #Linux4BE
+15:46 < antagonizt> hello filip
+15:46 < Filip> hi  antagonizt
+15:47 < Filip> just re-installed  eVC and SDK
+15:48 < antagonizt> what are you working on?
+15:48 < Filip> using eVC to examin the memory of the running BE
+15:48 < Filip> (running CE that  isi)
+16:11 < Filip> cdm.dll base size=28672,  NANDAccess.dll base size=20480, buzzer.dll base size=20480, touch.dll base size=32768
+16:17 < hewhew> can i view .pdf files with linux on my be?
+16:20 < Filip> not right now
+16:20 < hewhew> blew =(
+16:21  * hewhew keeps dreaming
+16:22  * Filip keeps hacking
+16:22 < hewhew> heh!
+16:22 < hewhew> =)
+17:01 -!- themaw [~marc@pD9548B05.dip.t-dialin.net] has joined #linux4be
+17:01 < themaw> hi folks!
+17:01 < Filip> hi  themaw
+17:03 < themaw> seems like a "howto connect my be to a linux box with usb" is no more needed, since they included an usb-section on the synce-website ..
+17:03 < themaw> And of course they did it afterwards i got it running on every box here ;)
+17:05 < themaw> Do you think it makes sence writing such a thing as a little howto, with common errors included .. 
+17:05 < themaw> ?
+17:07 < Filip> sure, the more doc, the better
+17:20 < hewhew> btw i was kidding about the cybersex
+17:47 < themaw> Filip, can I send you the file to upload it to the linux4be server ?
+17:47 < themaw> (It's not exactly linux 4 the be, but linux 2 the be ;))
+17:49 < Filip> or I can create you n account on the box if you want to 
+17:50 < themaw> fine with me.
+17:51 < themaw> :)
+17:55 -!- themaw_ [~marc@pD9E5C95D.dip.t-dialin.net] has joined #linux4be
+17:56 < themaw_> now my connection broke ..
+17:56 < themaw_> sorry ..
+17:56 -!- themaw__ [~marc@pD9E5C95D.dip.t-dialin.net] has joined #linux4be
+17:56 -!- themaw__ [~marc@pD9E5C95D.dip.t-dialin.net] has quit [Client Quit]
+17:56 < Filip> no prob marc, did you get my pm ?
+17:56 < themaw_> no, i didn't ! wait .. i'll read it in the log ..
+17:58 < themaw_> well, sorry to ask: what does pm stand for ? 
+17:58 < Filip> pm=privat message
+17:58 < Filip> trying again
+18:08 -!- themaw_ is now known as themaw
+18:20 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has joined #linux4be
+18:20 < jal0atWrk> hey everyone
+18:20 < Filip> hi jal0
+18:20 < jal0atWrk> did you get my email filip?
+18:21 < themaw> Good evening jal0 ..
+18:21 < jal0atWrk> hey themaw, hows it going
+18:21 < Filip> jal0, yep, but had no time yet to ship it, probably tomorrow (need to go the postoffice)
+18:22 < themaw> fine, just wrote a kinda little linux-2-be using usb howto ..
+18:22 < jal0atWrk> ok, it will probably take a while to get here anyway 
+18:22 < Filip> themaw, jsust sent you a mail with the details
+18:22 < Filip> jal0: I expect 5 working days
+18:22 < Filip> might be a little faster
+18:22 < jal0atWrk> usp?
+18:23 < themaw> Thanks Filip !
+18:23 < Filip> jal0, no normal post. checked ups and dhl today: they ask about $60 !! for an almost empty enveloppe
+18:24 < jal0atWrk> ouch!
+18:24 < Filip> how long does it take to snail mail something from washington to your place ?
+18:25 < jal0atWrk> my wife get postcard from switzerland and they take about 3-4week to reach the US.
+18:25 < jal0atWrk> 2-3 days for inter-continental mail normally
+18:26 < Filip> airmail  should arrive in a week maximum
+18:27 < jal0atWrk> im really intrested in mapping the address and data lines i thinks the problem with accessing certain memory locations are due to a non-linear addressing scheme fixed in hardware.
+18:27 < Filip> ???
+18:28 < jal0atWrk> like the add1(address bit 1) line being seen by the external ram as address bit 25.
+18:30 < jal0atWrk> i dont thing the ROM/IO memory space is done in a strictly linear fashion, rather there using certain address lines as external chip selects.
+18:31 < jal0atWrk> btw, any progress with the touchpanel?
+18:31 < Filip> jal0, I see
+18:32 < Filip> just reinstalled eVC, was looking at using the included debugger
+18:32 < Filip> Module          Base size     Base Addr 
+18:32 < Filip> cdm.dll           28672          01A00000 
+18:32 < Filip> NANDAccess.dll      20480          01870000 
+18:32 < Filip> buzzer.dll          20480          01900000 
+18:32 < Filip> touch.dll          32768           01A40000
+18:32 < Filip> serial.dll          57344          01940000
+18:32 < Filip> bltbinbuz.dll          24576          018F0000
+18:32 < Filip> usb.dll               40960          01920000
+18:32 < jal0atWrk> i've done it a few time but it's *REALLY* slow :(
+18:33 < Filip> using serial, it's horrible, but usb is ok
+18:33 < themaw> Oh my .. all my usual passwords are too simple ;)
+18:33 < Filip> themaw: like 'marc' and 'themaw' ;-)
+18:34 < jal0atWrk> brb, have to microwave my dinner :)
+18:34 < Filip> enjoy your meal
+18:34 < themaw> ;-)
+18:36 < themaw> OK, Filip, i've uploaded it .. you can take a look at it, if you like to.
+18:37 < themaw> but else, I'll be away now for sleeping .. 
+18:39 < Filip> themaw: looks good, just one typo: 
+18:40 < Filip> Under USB suppot 
+18:40 < Filip> 'r' missing
+18:41 < antagonizt> themaw: also you say 2.2.19 when i'm pretty sure you mean 2.4.19...
+18:41 < themaw> OOps .. i'll correct both ..
+18:42 < jal0atWrk> ib
+18:42 < themaw> ok, done.
+18:43 < themaw> antagonizt: No! i meant the usb backport to 2.2 ... of course .. eh .. ;-) 
+18:48 < themaw> Allright, bye guys!
+18:48 -!- themaw [~marc@pD9E5C95D.dip.t-dialin.net] has quit ["Zz.."]
+18:48 < jal0atWrk> later
+18:49 < antagonizt> hey jal0, how is the serial monitor going?
+18:50 < jal0atWrk> good, except for the strange memory issue. i have dump and examine features now with register info on the way
+19:05 < Filip> jal0: is the monitor useable as it is now ?
+19:18 -!- Filip [~Filip@29.103-136-217.adsl.skynet.be] has left #Linux4BE []
+19:24 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+19:39 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has quit [Read error: 104 (Connection reset by peer)]
+20:15 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+20:15 < nykkto> hullo?
+20:20 < antagonizt> hi
+20:21 < nykkto> hi
+20:21 < nykkto> so hows tricks?
+20:21 < antagonizt> same old same old...
+20:22 < nykkto> too funny, I am on here, and in an expod room somewhere also :)
+20:22 < nykkto> so I have seen, and heard some progress is happening - yea!
+20:23 < nykkto> I gotta get me a *nix box running at home, I was gonna do gnetoo, but I don't have a good internet connection from home - dialup :P
+20:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+20:25 < nykkto> werkin jal0
+20:25 < jal0atWrk> kinda
+20:25 < antagonizt> eh gentoo is alot of pain for little benifit
+20:26 < nykkto> k so any better ideas?
+20:26 < jal0atWrk> writing ringbuffer code for my embedded microboard
+20:27 < antagonizt> i've been using linux for 5 years (3 exclusively) i've used slackware, redhat, mandrake, gentoo, and once LFS 
+20:27 < nykkto> any opinion?
+20:27 < jal0atWrk> i like BFS
+20:28 < nykkto> bfs?
+20:28 < jal0atWrk> busybox from scratch ;)
+20:28 < nykkto> ahh
+20:28 < antagonizt> i found it is easiest for me to install a minimal redhat install (i.e. remove every option and then check only what i want) it usually ends up installing around 700mb
+20:28 < nykkto> I have red hat 5.2;6.1 at home, and solaris x86
+20:29 < antagonizt> 6.1 that is a bit old...
+20:29 < nykkto> yah, that is why I was looking for something newer
+20:30 < antagonizt> i also tried the BSD route... but that is a little too limiting an option for a desktop
+20:31 < jal0atWrk> antagonizt: have you updated your howto to the latest busybox/uclibc?
+20:31 < antagonizt> damn... just reading the be forums... looks like all hell broke loose!
+20:32 < antagonizt> not yet... did't think there was a need at this point
+20:32 < nykkto> which forum where?
+20:32 < antagonizt> another and expod.net
+20:32 < antagonizt> lots of back and forth bitching
+20:32 < nykkto> mmm, I have been peering at xpod, currently int their chat tool too :)
+20:33 < nykkto> ach where?
+20:33 < nykkto> im on xopd right no
+20:33 < nykkto> now
+20:34 < antagonizt> jal0, did you have some windows specific additions?
+20:35 < jal0atWrk> yeah, but i have to look them over again time,time,time,... where does it all go? :)
+20:37 < jal0atWrk> a my notes reference the latest versions so there might be some confusions
+20:38 < antagonizt> have you thought about just writing a simple char driver in linux and a userland app that interfaces with it as a replacement for your monitor prog?
+20:39 < antagonizt> you would have access to much more powerfull library funcs etc... if you took that route
+20:40 < jal0atWrk> not yet, that will be the next step... the main reason for the monitor is for hardware reverse-engineering. im getting a pcb board of the BE and i plan on mapping out the address and databus
+20:41 < jal0atWrk> i also figure that as the more popular this effort becomes, more and more people will want to help, most of them being software oriented. so i'm kinda taking the hardware approach.
+20:42 < nykkto> sounds like fun/work :)
+20:42 < jal0atWrk> yeah, but i love these kinds of things. :)
+20:43 < nykkto> I took apart my digital camera, and gutted a second one for parts to make the 1st one work again.
+20:43 < nykkto> that was kind of a pain
+20:43 < jal0atWrk> i have to i do it at work.
+20:43 < nykkto> heh
+20:44 < jal0atWrk> cool, you had two of the same cameras?
+20:44 < nykkto> um, nope 3
+20:44 < nykkto> Kodak DC-210
+20:45 < nykkto> A couple of Caps fell off I believe, so I swapped the board they were on rather than attempting to solder surface mnt components
+20:45 < jal0atWrk> ok, brain is fried(pointers are a pain), time to go home and work on some linux4be stuff
+20:45 < jal0atWrk> surface mount is easy as long as you have the right tools
+20:46 < nykkto> uh, I have no idea what thouse would be, I have a 15W, and a 30W soldering iron , and a "dental" tool and a single roach clip for it
+20:48 < jal0atWrk> the tips for suface mount components are smaller. and a hot air pencil is a great extra. including twiezers, flux, and solder paste
+20:48 < nykkto> ahh, I see, not regular Radio Shack parts :P
+20:49 < jal0atWrk> also solder wick can be very useful
+20:49 < nykkto> yah, I need to buy some o dat :)
+20:49 < jal0atWrk> you can order most of the stuff out of the radio shack catalog
+20:49 < jal0atWrk> or online
+20:50 < jal0atWrk> ok, be back online when i get home. later
+20:50 < nykkto> I work there, so I geta  discount :P
+20:50 < nykkto> see ya  in a b it
+20:51 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit []
+21:26 < jal0> ok, i'm home now
+22:21 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+22:37 < antagonizt> howdy Sp4wn
+22:37 < Sp4wN> hello
+22:38 < Sp4wN> hows the project going?
+22:38 < antagonizt> same old same old
+22:38 < Sp4wN> it seems to be goin pretty well
+22:38 < Sp4wN> too bad im not very good yet at programmin
+22:39 < Sp4wN> im workin on trees
+22:39 < Sp4wN> =/
+22:39 < antagonizt> it looks promising...
+22:39 < antagonizt> are you a student?
+22:39 < Sp4wN> yeah
+22:39 < Sp4wN> im 17, and in my 3rd year of programming
+22:39 < Sp4wN> junior
+22:40 < antagonizt> they offer cs to freshman in hs?
+22:40 < Sp4wN> yeah
+22:40 < Sp4wN> at my school
+22:40 < Sp4wN> we have a kinda "vocational" school
+22:40 < Sp4wN> its a whole tech thing
+22:40 < Sp4wN> like my freshman year i took vb, then last year i took c++ and this year im taking java and networking and os(winblows =[)
+22:40 < antagonizt> when i was in highschool i took a cs course my junior year, we learned turbo pascal on 8088s
+22:41 < Sp4wN> ooh and graphics on macs
+22:41 < antagonizt> is it a magnet school or something?
+22:41 < Sp4wN> magnet?
+22:41 < Sp4wN> like many people want it, yeah
+22:42 < Sp4wN> and i finished 2nd in my c++ class but thats because the other guy is a genius
+22:42 < Sp4wN> im getting ready for the ap c++ test this year
+22:42 < antagonizt> magnet... a school that specializes in science and tech... usually
+22:42 < Sp4wN> yeah
+22:42 < antagonizt> ap c++?
+22:42 < Sp4wN> yeah
+22:42 < antagonizt> that is crazy
+22:42 < Sp4wN> what do you mean?
+22:42 < Sp4wN> its mostly like working with the ap classes
+22:43 < antagonizt> just strange... i would think high school would focus more on general course work... 
+22:43 < Sp4wN> classes, structs, trees, typdefs, enums, stuff like that
+22:43 < Sp4wN> well...im soo much more advanced than the other class
+22:43 < Sp4wN> im pretty much working independantly
+22:43 < Sp4wN> thus me working with c++ in a java class
+22:43 < Sp4wN> lol
+22:44 < antagonizt> do you own a BE?
+22:44 < Sp4wN> yeah
+22:44 < Sp4wN> good ole be-300 with epodxp on it
+22:45 < Sp4wN> i've been mostly using it for mp3's
+22:45 < Sp4wN> good mp3 player for the price
+22:45 < Sp4wN> and being color, thats awsome
+22:46 < antagonizt> mine mostly sits at my desk...
+22:46 < Sp4wN> ooh
+22:46 < antagonizt> mostly just fun to hack linux with
+22:46 < Sp4wN> yeah
+22:46 < Sp4wN> i should check out some of the source if any is up for public
+22:47 < Sp4wN> see if i even understand it
+22:47 < antagonizt> it's all there at www.linux4.be
+22:47 < antagonizt> do you know how to use cvs?
+22:47 < Sp4wN> yeah
+22:48 < Sp4wN> and recently i switched to 100% linux and i was soo happy...to get rid of ms
+22:48 < nykkto> ack
+22:48 < Sp4wN> tired of explorer crashing every day
+22:48 < nykkto> ooher it still works!
+22:48 < antagonizt> hey nykkto
+22:48 < nykkto> hi
+22:48 < nykkto> so I'm on 2 seperate chats !
+22:48 < nykkto> whee
+22:49 < antagonizt> now you just have to deal with mozilla crashing...
+22:49 < nykkto> nope, using yahelite :)
+22:49 < Sp4wN> whoa, this tree stuff is confusing, if you create a struct and put the struct inside of it ie the structs name is TREENODE and inside it you define TREENODE *left, and TREENODE *right, wouldn't you figure it would keep taking up memory?
+22:50 < Sp4wN> ooh i forgot the "new" reserved word
+22:50 < Sp4wN> lol
+22:53 < nykkto> so how long untill we really break it good?
+22:53 < antagonizt> nykkto, break what?
+22:53 < nykkto> linux?
+22:53 < nykkto> :P
+22:54 < antagonizt> no idea...
+22:54 < antagonizt> lots to be done
+22:54 < nykkto> hahhah
+23:21 < nykkto> humm
+23:26 -!- HaOd [~HaOd@68.16.44.6] has joined #linux4BE
+23:30 < Sp4wN> with the latest development, what you guys have up now, do i need the serial connection?
+23:30 < Sp4wN> or can i use a cf cardreader to up the files
+23:31 < Sp4wN> or is the serial specifically for user input?
+23:32 < antagonizt> Sp4n, the serial cabel is for debug output
+23:32 < Sp4wN> ooh
+23:32 < Sp4wN> ok
+23:33 < antagonizt> it is usefull for debuggin...
+23:33 < HaOd> lol, i dont want to debug, i just want to get a simple list of things i have to do
+23:33 < antagonizt> if you want to do some debugging i would recomend getting one... 
+23:35 < antagonizt> HaOd, not there quite yet
+23:36 < HaOd> darn
+23:37 < HaOd> then i guess i better brush up on kernel compiling and stuff?
+23:37  * nykkto brushes off a kernel of popcorn
+23:38 < antagonizt> if you would like to help out with the kernel hacking or just fiddle with what weve done so far...
+23:39 < HaOd> cool
+23:53 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+23:58  * antagonizt is going to sleep
+23:58 < jal0> later antagonizt
+23:58 -!- antagonizt is now known as antagonizt[zZz]
+23:59 < HaOd> cya, thx for the help
+23:59 < antagonizt[zZz]> np, night folks
+--- Log closed Wed Nov 27 00:00:20 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

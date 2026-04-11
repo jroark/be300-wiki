@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_14.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_14.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Dec 14 00:00:05 2002
+04:29 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+04:58 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+05:20 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+05:58 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+09:15 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+09:29 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: jal0
+09:29 -!- Netsplit over, joins: jal0
+11:36 -!- jal0 is now known as jal0_away
+11:55 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: jal0_away
+11:58 -!- Netsplit over, joins: jal0_away
+13:03 -!- jal0_away is now known as jal0
+14:42 -!- Filip_ [~Filip@254.56-200-80.adsl.skynet.be] has joined #Linux4BE
+15:12 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+15:12 < Filip_> hi antagonizt
+15:12 < antagonizt> hello filip
+15:18 < Filip_> INFO: bootloader is updated. serial speed increased to 115200 baud (vs 9600) and logo added. Source is in cvs, binary is on http://www.linux4.be/download/bootloader/20021214cyace.zip
+17:07 < jal0> hey guys
+17:07 < Filip_> hi jal0
+17:09 < jal0> not sure if you heard, i purchased another used BE for some more hardware hacking.
+17:10 < Filip_> yep, read it. have you got more info from nec ?
+17:11 < jal0> going to try and get a monitor (playing with micromon now) to boot from flash. No CD yet, not sure whats taking so long, going to have to call them on monday
+17:12 < Filip_> how are you going to get it onto the flash ?
+17:12 < jal0> i going to use one of my original 68hc11 prototypes from work a flash it directly.
+17:13 < jal0> just have to write the code. so  i've been studying up on the datasheets
+17:14 < jal0> now that i know the pinouts it shouldnt be that hard. Once a decent monitor is in place, the real hacking can begin 
+17:15 < Filip_> are there any testpads for it, or do you connect directly to the chip ?
+17:16 < jal0> going to use testpads, but still havent located all of them yet, besides only about 25% of the pins actually are signals, the rest are 'no connects'
+17:16 < antagonizt> hi jal0
+17:17 < jal0> hey antagonizt
+17:17 < antagonizt> sounds cool
+17:17 < antagonizt> brb
+17:18 < jal0> yeah me, going to get some coffee
+17:35 < jal0> ok ib
+17:37 < jal0> Filip: have you tried looking at the contents of the registers for the serial port. They make no sense.
+17:38 < Filip_> no, but I was looking at the interupts from the ground up
+17:38 < Filip_> no luck yet...
+17:40 < jal0> going to dig more into how the mmu works, i dont think the base address for the serial port is correct,and depending on how the data/addr lines are setup, we could just be looking at some mirrored address. 
+17:41 < jal0> i have not been able to get any settings to change unless it was done in the bootloader, before it passes control
+17:42 < Filip_> me neither, that's why I updated the bootloader (115K2 is much faster)
+17:44 < jal0> btw, another nice feature of the new monitor im working (RAM version first), is that you only need to download it once to the CF card. when ran you will be able to upload newer kernels/standalone progs to it, at it will then execute them, no more need for activesync.
+17:45 < Filip_> upload over serial ?
+17:46 < Filip_> I never use activesync for it, always  copy to CF card directly
+17:46 < jal0> yeah, untill i can get some time to study usb, but 115200 should not be that bad.
+18:51 -!- Filip_ [~Filip@254.56-200-80.adsl.skynet.be] has left #Linux4BE []
+19:27 -!- metalac [dejann@ougl-pc053.clients.sacg.washington.edu] has joined #linux4be
+20:45 -!- metalac [dejann@ougl-pc053.clients.sacg.washington.edu] has quit ["Client Exiting"]
+23:51 < antagonizt> jal0, i finally got all the X libs to build but i don't know how to start an app... do you?
+23:51 < jal0> nope, sorry
+23:52 < jal0> try using the 'X' command
+23:52 < jal0> ?
+23:53 < antagonizt> i have to be very selective with the files i install...
+23:53 < antagonizt> the server Xfbdev is 1.3M
+23:53 < jal0> with the current memory limits, you should be
+23:54 < jal0> stripped?
+23:54 < antagonizt> 1.2M
+23:55 < jal0> so what the kernel image up to now?
+23:55 < antagonizt> i had to make the ramdisk 5M
+23:55 < jal0> ouch
+23:55 < antagonizt> and the kernel is 3.1M
+23:55 < antagonizt> i'm not sure which so libs i need  either
+23:57 < jal0> i remember reading somewhere, a method of extending an embedded devices memory using a pc-local swap system, probably exteremly slow, but if we run into issues, that may be a temporary solution until we get flash working
+--- Log closed Sun Dec 15 00:00:08 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

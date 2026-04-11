@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_19.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_19.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Dec 19 00:00:06 2002
+03:22 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+04:14 < Baal[AFK]> Hi
+04:14 -!- Baal[AFK] is now known as Baal
+04:14 -!- Baal is now known as Baalz
+06:22 -!- Baalz is now known as Baal[AFK]
+07:47 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+07:55 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+08:21 -!- Filip_ [~Filip@193.190.11.245] has left #Linux4BE []
+09:45 -!- someguy_bbl is now known as someguy
+15:33 -!- Filip [~Filip@143.52-200-80.adsl.skynet.be] has joined #Linux4BE
+15:59 -!- Baal [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+15:59 -!- Baal is now known as Baalz
+15:59 < Filip> hi Baalz
+15:59 < Baalz> Hi filip
+15:59 < Filip> your howto looks good
+16:00 < Baalz> Thank you
+16:00 < Baalz> I was wondering if you would read the logs
+16:00 < Baalz> Anything I should add/remove?
+16:02 < Filip> not that I can think  of now
+16:03 < Baalz> Anyway I can modify it anytime you want
+16:04 < Baalz> The only thing is that I would prefer to keep de packages on linux4.be instead of my homepage since my space there is limited
+16:07 < Baalz> What time is it in Belgium?
+16:08 < Filip> 22:08
+16:08 < Filip> no prob, I'll put them in the download section
+16:10 < Baalz> I will post a news on http://megaoctet.net later tonight this should bring a couple of visitors on linux4.be since we have about 300 visitors a day...
+16:11 < Filip> please don't put it on slashdot before giving me notice
+16:11 < Baalz> Dont worry about that :)
+16:15 < Baalz> I am going tu make some food, I'll see you later...
+16:16 < Filip> cu lter
+16:17 -!- Baalz [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+16:18 -!- Baal[AFK] [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+17:22 -!- Baal [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+17:22 -!- Baal is now known as Baalz
+17:23 < Filip> is this ok for you ? http://www.linux4.be/dummies/index2.php
+17:24 < Filip> files are now on http://www.linux4.be/download/dummies/
+17:26 < Baalz> Don't put the link to my homepage, its just for testing and validating with the w3c
+17:27 < Filip> prefer another lin, or no link at all ?
+17:27 < Filip> lin=link
+17:27 < Baalz> No link at all
+17:28 < Baalz> And this was kind of a draft, I want to add more stuff...
+17:29 < Baalz> Like a little explanation of the cyace config file
+17:34 < Filip> that page is not yet linked to anywhere, but I would like to make it the default page for the 'dummies' section once you consider it finished
+17:35 < Filip> and maybe some links to the screenshots ( http://www.linux4.be/~jroark/images/index.html )
+17:37 < Baalz> I will add this in first place
+17:37 < Baalz> Screenshots are so important :)
+17:38 < Baalz> An image is worth a thousand words...
+17:49 < Baalz> Should I put the screenshots with thumbnails or just links?
+17:50 < Filip> maybe  include at  least  one thumbnail as an eye-catcher
+17:52 < Baalz> I would like to add something so the disclaimer looks less dangerous
+17:53 < Baalz> The way I understand it the ramdisk is loaded from cyace and the CF card is not written in any way so its not realy dangerous
+17:55 < Filip> indeed, the files  are only read , and only using a 'normal'  CE program
+17:55 < Baalz> There is no support to acess the CF card in the kernel right?
+17:55 < Filip> the  bootloader  loads  everything into RAM
+17:55 < Filip> and the linux kernel has no way to access the CF card (or NAND) for now
+17:56 < Baalz> Is it ok if I explain this in the disclaimer?
+17:56 < Filip> sure
+17:59 < Baalz> Ok I am going to add some stuff, cu later...
+17:59 < Filip> cu
+17:59 -!- Baalz is now known as BaalzAFK
+18:19 -!- Filip [~Filip@143.52-200-80.adsl.skynet.be] has left #Linux4BE []
+19:37 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:28 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+20:36 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+23:02 -!- YumaSun [~chatzilla@dialup-65.56.248.169.Dial1.Phoenix1.Level3.net] has joined #linux4be
+23:03 -!- YumaSun [~chatzilla@dialup-65.56.248.169.Dial1.Phoenix1.Level3.net] has left #linux4be []
+--- Log closed Fri Dec 20 00:00:33 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

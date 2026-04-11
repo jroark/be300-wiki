@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_19.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_19.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Jan 19 00:00:00 2003
+08:01 -!- Netsplit brunner.freenode.net <-> irc.freenode.net quits: jal0_logger, BaalzAw
+08:13 -!- PsycoXul [psyco@adsl-63-205-40-78.dsl.lsan03.pacbell.net] has quit [Read error: 104 (Connection reset by peer)]
+08:15 -!- PsycoXul [psyco@adsl-63-205-40-78.dsl.lsan03.pacbell.net] has joined #linux4be
+08:15 -!- Netsplit over, joins: BaalzAw, jal0_logger
+--- Log closed Sun Jan 19 08:20:41 2003
+--- Log opened Sun Jan 19 08:20:43 2003
+08:20 !irc.freenode.net *** Looking up your hostname...
+08:20 !irc.freenode.net *** Checking ident
+08:20 !irc.freenode.net *** Found your hostname
+08:20 !irc.freenode.net *** No identd (auth) response
+--- Log closed Sun Jan 19 08:26:10 2003
+--- Log opened Sun Jan 19 10:04:36 2003
+10:04 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+10:52 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+10:59 < MouseLRN> I tried CF patch - it's nice. I adapted it for Linux4.be project. But on my BE 'lost interrupt' occuries at partition check.
+11:04 -!- sch [~sch@YahooBB219017080083.bbtec.net] has joined #linux4BE
+11:04 < MouseLRN> sch hi
+11:04 < sch> hi MouseLRN
+11:05 < sch> try my cf patch?
+11:07 < MouseLRN> sch yes
+11:08 < MouseLRN> I only add ide-be300.c and patch gui.c and icu.c (skip handle GIU_IRQ(0))
+11:09 < MouseLRN> and have the same result - 'lost interrupt' at partition check ;-(
+11:09 < sch> maybe you need asm-mips/io.h
+11:09 < MouseLRN> as yours
+11:09 < MouseLRN> for what?
+11:10 < MouseLRN> clear_giuint in our project is differ, than in you path.
+11:11 < sch> can't be's pcmcia controller with word access
+11:11 < MouseLRN> what is original lines in io.h for static inline void insw(unsigned long port, void *addr, unsigned int count)
+11:11 < MouseLRN> ?
+11:12 < MouseLRN> it detected my CF card properly
+11:12 < sch> can you read disk ID? 
+11:13 < sch> my english is bad, sorry
+11:13 < MouseLRN> my too ;-)
+11:13 < sch> :)
+11:14 < MouseLRN> hdc: 64MB CTS
+11:14 < sch> hmm..
+11:14 < MouseLRN> hdc: 128256 sectors (66 MB) w/4KiB Cache, CHS=501/8/32
+11:15 < MouseLRN> what do you mean 'disk ID' ?
+11:15 < sch> 64MB CTS
+11:16 < MouseLRN> now I trying with your modification of io.h  plz, wait %)
+11:16 < sch> thanks
+11:22 < MouseLRN> nothing changes: Partition check:
+11:22 < MouseLRN> hdc:hdc: lost interrupt
+11:23 < sch> ;(
+11:26 < MouseLRN> what project do you use, when creating CF patch? linux-vr, linux-mips, linux4be?
+11:26 < MouseLRN> kernel version?
+11:27 < sch> linux-2.4.18 + linux-mips.sf.net + linux4be
+11:30 < MouseLRN> I see
+11:31 < MouseLRN> what IRQ is used for GIU_IRQ?
+11:32 < sch> 0
+11:32 < sch> IRQ 40
+11:35 < sch> http://www.m17n.org/linux-sh/ml/linux-sh/2002-06/msg00002.html
+11:35 < sch> perhaps, this is same problem (lost interrupt)
+11:49 < MouseLRN> and you haven't problem with IRQ 40?
+11:50 < sch> passed partison check
+11:51 < sch> and mount /
+11:52 < sch> /sbin/init was run
+11:53 < sch> then i got "hdc: lost interrupt"
+11:57 < MouseLRN> ;-(
+11:59 < sch> I will go to sleep
+11:59 < MouseLRN> ok. See you later
+11:59 < sch> see you, bye
+12:00 -!- sch [~sch@YahooBB219017080083.bbtec.net] has quit ["Client Exiting"]
+12:02 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Reserve your copy of BitchX-1.0c17 for the Nintendo Gameboy today!"]
+12:20 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+12:21 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+13:52 -!- rhk [~rhk@pm730-42.dialip.mich.net] has joined #linux4be
+14:11 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+14:13 < MouseLRN> hi 2 all
+14:17 -!- MouseLRN [~mouse@info.ru] has quit ["BitchX: better than a penis enlargement!"]
+14:46 -!- sinfonian [~bshirclif@twhou-215-99.ev1.net] has joined #linux4be
+14:46 < sinfonian> hola
+14:46 < sinfonian> wow.. cf card partially working huh.. tell me more :D
+14:47 -!- rhk [~rhk@pm730-42.dialip.mich.net] has quit [Read error: 113 (No route to host)]
+16:51 -!- sinfonian [~bshirclif@twhou-215-99.ev1.net] has quit [Read error: 113 (No route to host)]
+19:53 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: jal0, PsycoXul, jal0_logger, someguy_, BaalzAw
+19:55 -!- Netsplit over, joins: someguy_, BaalzAw, jal0_logger, jal0, PsycoXul
+23:32 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+23:34 < Sp4wN> nice
+23:50 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit ["Client Exiting"]
+--- Log closed Mon Jan 20 00:00:27 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

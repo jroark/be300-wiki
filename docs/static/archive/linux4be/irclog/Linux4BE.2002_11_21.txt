@@ -1,0 +1,495 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_21.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_21.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Nov 21 00:00:33 2002
+01:02 -!- sinfonian [~bshirclif@twhou-213-10.ev1.net] has joined #linux4be
+01:21 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+01:28 -!- sinfonian [~bshirclif@twhou-213-10.ev1.net] has left #linux4be []
+01:47 -!- bshircliffe [~bshirclif@np-dsl-216-12-217-218.ev1.net] has joined #linux4be
+01:47 < bshircliffe> 15
+01:48 -!- PresidentSmith [Prez@user-2ive2o1.dialup.mindspring.com] has joined #linux4be
+01:51 -!- PresidentSmith [Prez@user-2ive2o1.dialup.mindspring.com] has quit [Client Quit]
+01:54 -!- jal0 is now known as jal0_Zzz
+02:00 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has left #linux4be []
+02:03 -!- bshircliffe [~bshirclif@np-dsl-216-12-217-218.ev1.net] has left #linux4be []
+02:59 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+03:05 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+03:05 < Filip> hi nykkto
+03:05 < nykkto> hi
+03:06  * nykkto looks for a time stamp
+03:06 < Filip> http://www.linux4.be/irclog/
+03:06 < nykkto> ahh I C
+03:09 < nykkto> so any new, and interesting news?  I am working on a hardwre problem I have (digital camera)
+03:15 < Filip> no, still have to build my own  'DIY desoldering station' 
+03:15 < Filip> what's th eprob with the digicam ?
+03:16 < nykkto> Oh, a surface mount component fell off, so I am looking to find a couple of replacements to put back on
+03:16 < nykkto> I have a "spare parts" camera, so I am going to start by swapping the whole board
+03:44 < Filip> bbl
+03:44 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+03:49 < nykkto> k
+04:13 < nykkto> la de da
+05:02 < nykkto> no one here?
+05:02 < nykkto> soda! BRB
+05:23 < nykkto> la
+07:34 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+07:55 -!- Filip__ [~Filip@193.190.11.247] has joined #Linux4BE
+07:58 -!- Filip__ [~Filip@193.190.11.247] has left #Linux4BE []
+08:01 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+08:02 -!- Filip_ [~filip@www.linux4.be] has quit [Remote closed the connection]
+09:40 -!- antagonizt[zZz] is now known as antagonizt
+09:41  * antagonizt yawn
+10:45 -!- echoalia [~echoalia@third.bitsense.net] has joined #linux4be
+11:15 -!- jal0_Zzz is now known as jal0
+11:15 < jal0> antagonizt: your there?
+11:15 < antagonizt> fo the most part...
+11:15 < antagonizt> what's up?
+11:16 < jal0> do you remember what the settings were for the dumper prog to dump the entire 16M memory space of the BE
+11:16 < jal0> start A0000000?
+11:16 < jal0> end FFFFFFFF
+11:17 < antagonizt> i never actually used it... filip has a dump somewhere that looked at
+11:17 < jal0> ok, im looking for some address of kernel functions (the Halxxx type)
+11:19 < antagonizt> i think the dump is on the server... and has a txt file that describes where the important offsets are (i.e. where the different drivers are)
+11:19 < Filip> hi folks
+11:20 < jal0> hi filip
+11:20 < antagonizt> hello filip
+11:21 < Filip> jal0, looking for a mem dump ?
+11:21 < jal0> yeap
+11:21 < Filip> take a look at /home/sites/www.linux4.be/old/distro
+11:22 < jal0> ok, thanks
+11:22 < Filip> memory_dump.txt and 80000000_dump.zip
+11:23 < Filip> I've also got a dump of the ROM that's in the bE (16KB)
+11:23 < antagonizt> is the rom the bootloader?
+11:23 < Filip> half
+11:23 < Filip> it's a minimal bootloader, but does not allow for reflashing or anything
+11:24 < Filip> just copies the NAND to ram before kicking it into life
+11:24 < antagonizt> how much of the nand?
+11:24 < Filip> but checks some of the hardware buttons first, to decide if it needs to go into normal or restore mode
+11:24 < Filip> I think (but not sure) that it's not in the NAND
+11:25 < Filip> lives at 0xBFC00000
+11:27 < Filip> i'll probably take a second look at it tonight, it might contain some usefull addresses (and it's only 16KB, so easier to find your way around)
+11:27 < Filip> If I remember right, I think it only contains 8KB of code,
+11:28 < antagonizt> yeah "only" 16,384 bytes ;)
+11:29 < antagonizt> i think the BogoMIPS are consistently higher when the cache fixes are enabled...
+11:29 < Filip> 8KB is much less than about 7MB of running CE kernel
+11:29 < antagonizt> 110 as apposed to 104
+11:30 < Filip> what cache fixes? the patch from lethal, or define in the config file ?
+11:30 < antagonizt> define int the config...
+11:30 < antagonizt> i haven't played with lethals patch much...
+11:30 < antagonizt> once i figured the kernel didn't crash even without it...
+11:31 < Filip> CONFIG_VR4131_CACHE_FIX=y is what I've always used
+11:31 < antagonizt> it boots without it...
+11:31 < Filip> me neither... if it ain't broke, don't fix it
+11:32 < Filip> it looks pretty stable now (except for the weird cach error you encountered yesterday)
+11:32 < Filip> was that with or without  CONFIG_VR4131_CACHE_FIX  ?
+11:32 < antagonizt> w/o
+11:33 < Filip> I only had one oops with the latest code
+11:33 < Filip> and it was my own stupid mistake
+11:33 < antagonizt> i still can't get it to boot immediately after a boot and hard reset... i have to hard reset, let it boot to CE, & then turn it off then on
+11:33 < Filip> (i instructed cyace to use a custome progie as 'init', and when it exited, i got an oops... init is not supposed to exit)
+11:34 < Filip> weird
+11:34 < Filip> what shell are you running ?
+11:34 < antagonizt> Xpod 5.1
+11:34 < antagonizt> no reboots...
+11:34 < Filip> what happens if you don't turn off/on 
+11:34 < Filip> freeze ?
+11:35 < antagonizt> it loads and spits out <4>CPU revision is: 00000c80 over serial then freezes
+11:35 < antagonizt> another cache issue?
+11:36 < antagonizt> power off must clear the cache... right?
+11:36 < Filip> only at boot ?
+11:36 < antagonizt> what do mean only at boot?
+11:36 < Filip> not sure at all
+11:37 < Filip> cache bug that only shows up early at boot, after a reset ?
+11:37 < jal0> antagonizt: i had the same problem when switching between usb and serial using activesync and pc-connect. i would have to do a hard reset then turn in on and off again
+11:37 < antagonizt> hmm... here are the steps one by one
+11:38 < antagonizt> boot linux
+11:38 < Filip> maybe an xpod 5.1 bug, i'm still using an oldr version (5.0beta, never officially released)
+11:38 < antagonizt> hard reset
+11:38 < antagonizt> (cf card is still inserted, so it boots back to linux)
+11:38 < Filip> that's what i do very often
+11:38 < antagonizt> but never makes it... it freezes after telling me the cpu revision
+11:39 < Filip> never had that problem
+11:39 < Filip> have to go now
+11:39 < Filip> bbl
+11:39 < jal0> maybe something is not getting initialized properly seeing that CE dosn't fully load?
+11:39 < jal0> later filip
+11:39 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+11:39 < antagonizt> however if i remove the cf after the first linux boot, and let it back into CE and then power off with the button, it lets me boot back to linux by inserting the cf again
+11:40 < antagonizt> no big deal really
+11:40 < antagonizt> but kinda odd
+11:40 < jal0> what if you boot linux, hardreset while removing the card, let CE boot and stick the card back in
+11:41 < antagonizt> iirc still freezes... let me try again
+11:43 < antagonizt> still freezes
+11:43 < jal0> weird, i dont see that problem at all but im using the original casio shell
+11:44 < antagonizt> maybe if i get sick of it enough i'll boot up my gf's comp and restore to the casio shell
+11:46 < antagonizt> have you had a chance to do any serial driver work?
+11:47 < antagonizt> the more i look at it the more i'm convinced it is a standard 16650 uart...
+11:47 < antagonizt> but i can't get the standard driver to work with it?
+11:47 < jal0> not yet trying to figure out how to get my find4173 code to work.
+11:47 < jal0> generic code to enumerate devices on the BUS.
+11:48 < antagonizt> won't you have to enable the pci bus... iirc that caused all kinds of trouble
+11:49 < jal0> no its just code that looks for vender id's for device attached to the bus, fairly straight forward code
+11:49 < jal0> the problem is using none exported functions in ceddk.dll
+11:50 < jal0> have to dereference functions using known addresses, that why i need the memdump
+12:27 -!- marc [~marc@pD9548672.dip.t-dialin.net] has joined #linux4be
+12:28 < marc> hi !
+12:29 < antagonizt> hi marc
+12:31 < marc> how's the progress ? :)
+12:31 < antagonizt> same old same old
+12:32 < marc> i just read the logfile of today .. wouldn't it be easier to reverse-engeneer the ROM-file for the button's adresses ? 
+12:33 < antagonizt> in reference to what?
+12:33 < antagonizt> which button?
+12:34 < marc> At least the "OK" button, cuz the BE-bootloader in the rom cares if it is pressed or not. So it finds out at some point.
+12:34 < antagonizt> never thought of that
+12:35 < marc> Well, for me 16 K of reverse-assembly sounds still very large, but what a factor to 4 megs .. ;)
+12:36 < antagonizt> should mention that to filip...
+12:36 < marc> OK, i will, right after coming back .. have to visit some client with internet-connectivity-problems now .. brb!
+12:36 -!- marc is now known as marc_brb
+12:36 < antagonizt> esc button should be there as well
+12:37 -!- marc_brb is now known as marc_bbl
+12:37 < marc_bbl> yes, right .. i'm not sure about what the esc-button does, OK is safe mode ..
+12:37 < marc_bbl> ok, cu later !
+12:39 < antagonizt> later
+12:44 < antagonizt> marc, when your back, when you hold down ok and it prompt you one of the options is to push esc to continue regular bootup... so it should be there as well
+13:19 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit []
+13:33 < someguy> hello
+13:48 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+13:51 < someguy> hello
+13:53 < antagonizt> hey
+13:54 < someguy> hey, I was wondering how to get the program to dump the bootloader so I can take a look at it
+13:54 < antagonizt> no clue
+13:54 < antagonizt> have to ask filip
+13:54 < someguy> ok
+13:54 < someguy> thansk
+13:57 < antagonizt> are you good at RE?
+14:11 < someguy> no
+14:11 < someguy> it has been a while since I have looked at asm even
+14:11 < someguy> and that was x86 asm
+14:12 < someguy> reboot, be back soon
+14:13 -!- someguy is now known as someguy_bbl
+14:29 -!- someguy_bbl is now known as someguy
+15:24 -!- Filip [~Filip@122.172-136-217.adsl.skynet.be] has joined #Linux4BE
+15:25 < Filip> hi red
+15:25 < Filip> hi folks
+15:25 < antagonizt> hey
+15:25 < Filip> hi antagonizt
+15:25 < Filip> is jal0  in ?
+15:26 < Filip> or anyone else with electronics experience ?
+15:26 < antagonizt> not sure
+15:26 < Filip> i looked some more at the pcb, and now i've got some questions....
+15:28 < Filip> some components are numbered starting at 1, other starting at 200 and yet others at 300 (if you look at the white silkscreen)
+15:28 < Filip> to me this looks like those components are grouped by some way
+15:29 < Filip> hardware buttons are in the same range as the cpu (>1)
+15:29 < Filip> touchpanel in group >300
+15:30 < Filip> eearphone jack >300
+15:30 < Filip> power >200
+15:31 < antagonizt> did you see marc's idea about the buttons and the boot rom?
+15:32 < Filip> yep, that's why i mentioned the boot rom, and it checking the hardware buttons
+15:32 < Filip> but if my logic above makes sense to an EE, buttons are in an other group vs touchpanel
+15:33 < Filip> hardware buttons are i main group with cpu and companion
+15:34 < hewhew> <--- futur EE
+15:34 < Filip> so, do my remarks make sense ?
+15:35 < Filip> (you can see the pcb with silkscreen at 
+15:35 < Filip> http://www.linux4.be/~jroark/images/Board_top2.jpg
+15:35 < Filip> http://www.linux4.be/~jroark/images/Board_bot.jpg
+15:36 < hewhew> let me reread
+15:36 < Filip> tracing the pcb is impossbile without removing the bga's
+15:37 < hewhew> did you try with a multimeter.. that beeps if the r< 10-100 ohmz?
+15:37 < Filip> but it's bga package: can't reach any of the pns on the cpu and companion
+15:37 < hewhew> hmm ok
+15:38 < Filip> plus multi-layer pcb
+15:39 < hewhew> spaghetti
+15:40 < hewhew> i have no idea
+15:41 < hewhew> it looks like a computer in a compressed tin can
+15:41 < Filip> that's what it is 
+15:44 < hewhew> btw i have my amateur radio license =)
+15:44 < hewhew> i can legally broadcast
+15:44 < Filip> can I receive it in Belgium ?
+15:44 < hewhew> hmm i cant do HF legally.. =(
+15:47 < Filip> brb
+15:56 < marc_bbl> hewhew: when did you get a hamradio license ?
+15:56 -!- marc_bbl is now known as marc
+15:57 < marc> Hi Filip .. 
+15:57 < Filip> hi marc
+15:57 < Filip> not into electronics by accident ?
+15:58 < marc> well, Filip, even if the touchscreen and the buttons are in another group, it still makes sence figuring out how they can be traced, right ?
+15:58 < someguy> how can I get the rom?
+15:58 < Filip> sure
+15:58 < Filip> someguy: hold on
+15:58 < someguy> ok
+15:59 < hewhew> marc: like a few months ago
+15:59 < marc> hewhew: nice .. i am too :)
+16:00 < hewhew> whats your call sign in germany?
+16:00 < marc> dh3maw
+16:00 < hewhew> im va2veg
+16:00 < Filip> http://www.linux4.be/download/ce/rom.bin
+16:01 < Filip> use a tool like IDA Pro to open it
+16:01 < marc> Oh .. i have to pick a different nick .. 
+16:01 -!- marc is now known as themaw
+16:01 < hewhew> heh 35 hits on google of your callsign
+16:01 < someguy> thanks
+16:02 < Filip> let me know if you have trouble using IDA Pro
+16:02 < themaw> Okay .. get used to my new nickname, guys ! :)
+16:06 < themaw> Well, 35 is much .. i'm sure you'll find some old pictures of me ..
+16:07 < hewhew> youll find nothing of me ;P
+16:07 < hewhew> va2 -> Quebec  veg -> sounds like the word chilling in french
+16:08 < hewhew> (slang)
+16:09 < themaw> je ne connais pas le mot "veg" .. ok .. uhh .. i've spoken no frensh for quite a time ;))
+16:11 < hewhew> c cool
+16:11 < hewhew> veg... le verbe.. veger...
+16:12 < hewhew> rien foutre..
+16:12 < hewhew> (c'est du slang)
+16:12 < hewhew> j'suis veg... j'fou rien
+16:12 < themaw> ok .. compris.
+16:13 < themaw> but .. back to the topic, mh ?
+16:14 < hewhew> mk
+16:18 < antagonizt> what is a call sign?
+16:19 < themaw> You get a call sign when you get a ham radio license ..
+16:19 < themaw> It's a method of identification .. unique in the world.
+16:19 < antagonizt> oh
+16:20 < hewhew> tv stations, radio stations.. they have all have callsigns too
+16:21 < themaw> kinda like a MAC adress ;-)
+16:28 -!- themaw [~marc@pD9548672.dip.t-dialin.net] has left #linux4be []
+16:28 -!- themaw [~marc@pD9548672.dip.t-dialin.net] has joined #linux4be
+16:28 < themaw> yeah .. that worked fine :)
+16:45 < antagonizt> filip... looking at that rom.bin... part of it is a fat16 filesystem?
+16:46 < Filip> i think only first 8KB are important
+16:48 < antagonizt> is the first 8KB code or data?
+16:48 < Filip> mixed
+16:49 < Filip> if i remember correclty, two possible starting points
+16:49 < Filip> on for cold boot, one for warm
+16:49 < antagonizt> most of the first 8KB is just repeating bytes = 0xFF
+16:50 < Filip> hmm, i'll check it, maybe it's the wrong file
+16:50  * Filip digs around
+16:52 < antagonizt> li $k0, 0xBFC002F0
+16:52 < antagonizt> jr      $k0
+16:53 < antagonizt> first 20bytes
+16:53 < antagonizt> surounded by two noops
+16:58 < Filip> be back in ten minutes, don't run
+17:01 -!- marc_ [~marc@pD9548672.dip.t-dialin.net] has joined #linux4be
+17:03 < marc_> grmpf .. wrong nick again ..
+17:04 -!- marc_ [~marc@pD9548672.dip.t-dialin.net] has quit [Client Quit]
+17:04 -!- themaw-p [~marc@pD9548672.dip.t-dialin.net] has joined #linux4be
+17:06 < Filip> didn't reinstall IDA Pro since my last PC crash....
+17:08 < Filip> going to get the install now, will take some more time
+17:11 < antagonizt> what conventions does ida pro use... what reg is $k0?
+17:18 < antagonizt> nv, 26
+17:30 -!- someguy is now known as someguy_bbl
+17:30 < Filip> antagonizt, I'm back
+17:32  * Filip is looking for his book 'see MIPS run'
+17:34 < antagonizt> ooooh assembly fun
+17:36 < Filip> ok, page 97, table 5.1:
+17:36 < Filip> Reset NMI 0xBFC0 000
+17:36 < Filip> TLB Refill 0xBFC0 0200
+17:37 < Filip> XTLB Refill 0xBFC0 0280
+17:37 < Filip> Cache error 0xBFC0 0300
+17:37 < Filip> all other exceptions 0xBFC0 0380
+17:39 < Filip> want more infoon those ?
+17:39 < antagonizt> pg 97?
+17:39 < antagonizt> from your book?
+17:40 < Filip> yep. TLB refill is basically a cache miss, refilling the address translation table
+17:40 < Filip> TLB=32bits, XTLB=64
+17:41 < Filip> these addresses are only valid for sR(BEV)==1
+17:41 < Filip> meaning uncached, startup-safe kseg1
+17:44 < Filip> so it's jumping to 0xbfC002F0 , probably becaus it has got more room there (for not running into the  0xBFC00200 TLB Refill )
+17:45 < Filip>  0x9FC006F0
+17:45 < Filip> what lives there ?
+17:46 < antagonizt> not in the rom
+17:46 < Filip> noop, but might be a hardware register
+17:47 < Filip> like one of the hard buttons ?
+17:47 < antagonizt> where did you get 0x9FC006F0 from?
+17:48 < Filip> we should also make a memory map with all know regions 
+17:48 < Filip> dissasmbled 0xBFC002F0
+17:48 < Filip> that's where NMI jumps to
+17:49 < antagonizt> did you load the whole mem dump?
+17:49 < Filip> no, the dump is starts at 0xBFC00000
+17:49 < Filip> so first byte in the file is NMI
+17:50 < Filip> 0x0000200 is TLB Refill
+17:50 < Filip> etc
+17:51 < Filip> (make sure to use mipsl in IDA Pro)
+17:52 < antagonizt> so loading segment is 0xBFC00000
+17:53 < Filip> indeed
+17:53 < Filip> hmm, loading segment, or loadinf offset ?
+17:54 < antagonizt> segment?
+17:57 < Filip> offset looks better (just tried both)
+18:00 < Filip> what do you expect this code to do (even before looking at the code) ?
+18:00 < Filip> i was thinking of:
+18:00 < Filip> check the hard buttons (one of the first things)
+18:00 < antagonizt> check the status of the buttons.
+18:00 < antagonizt> maybe some setup
+18:00 < Filip> display the blue progress bar while copying compressed nk.bin to ram ?
+18:01 < Filip> after hard-boot
+18:01 < antagonizt> sure
+18:01 < antagonizt> there appears to be a fat16 filesystem in it?
+18:01 < Filip> or maybe code for re-creating it ?
+18:01 < Filip> just the header ?
+18:02 < antagonizt> 0xBFC002C8
+18:03 < Filip> could it be a string, in order to build the ram filesystem ?
+18:05 < Filip> label it FAT16 in your IDA, will make it easier to see it if you happen to cross it in your code later on
+18:05 < antagonizt> how do you do that?
+18:06 < Filip> just hit 'n' whn you're on that line
+18:06 < antagonizt> it looks like the vendor id field in a fat bootsector... fat16 followed by three bytes at null
+18:08 < antagonizt> rather three null bytes
+18:08 < Filip> it's also loading from 0xAA00A000
+18:08 < Filip> videoram is at 0XAA200000
+18:10 < Filip> is there a text displayed at the blue progress bar ?
+18:10 < antagonizt> Loading...
+18:10 < antagonizt> or rather Starting...
+18:11 < Filip> could be a bitmap, more memory efficient
+18:12 < antagonizt> actually it says Initializing...
+18:12 < antagonizt> wrong twice :)
+18:12 < Filip> you just tried it ?
+18:12 < antagonizt> yes
+18:13 < antagonizt> no matter it doesn't appear anywhere anyway
+18:14 < Filip> almost sure it's a bitmap
+18:14 < Filip> much smaller than embedding a font, and code to print text
+18:14 < Filip> that's about the only text it displays, and maybe the 'bye..'
+18:21 < Filip> 0xAA00A000 is kjcmu from the decode ce code
+18:21 < Filip> (clock mask  unit)
+18:21 < antagonizt> how many words at 0xBFC002F0 did you convert to code?
+18:23 < Filip> i'm rather browsing to the addresses now
+18:23 < antagonizt> that is where it jumps to right?
+18:26 < Filip> loading from 0x9FC006F0 ,  0x9FC004DC , 0x9FC00C21 , 0x9FC00C85
+18:26 < Filip> indeed
+18:27 < Filip> (i labeled 00 = nMI, 2F0 from_nmi
+18:28 < Filip> looks like that 0x9FC00??? is an interesting range to watch
+18:30 < antagonizt> 4 addrs... 4 buttons
+18:30 < antagonizt> well except the pad
+18:30 < Filip> hmm, I would rather expect 1 addrs, 4 bits
+18:31 < Filip> pad= 4 buttons, 8 total
+18:35 < antagonizt> it is not letting me convert the three words starting at BFC00270 to code?
+18:35 < antagonizt> to instructions followed by a np
+18:35 < antagonizt> nop
+18:35 < antagonizt> i select them then hit the code button...
+18:36 < Filip> means no valid opcode
+18:37 -!- themaw-p [~marc@pD9548672.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+18:43 < antagonizt> how can it jump to an offset with no valid opcode?
+18:43 < Filip> where does it jump to that one ?
+18:46 < antagonizt> li      $k0, 0xBFC002F0 ; load immediate
+18:46 < antagonizt> li      $k0, 0xBFC002F0 ; jump register
+18:46 < antagonizt> right?
+18:46 < antagonizt> jr      $k0 ; jump register
+18:47 < antagonizt> rather
+18:47 < antagonizt> or is my mips super ruster
+18:47 < antagonizt> rusty
+18:48 < Filip> going to document all know addresses and ranges tomorrow
+18:49 < Filip> where do you get that 270
+18:49 < antagonizt> dope! i can't even read my own typing!
+18:49 < antagonizt> :)
+18:49 < antagonizt> lol
+18:50 < Filip> should use labels
+18:51 < Filip> bedtime for me
+18:51 < antagonizt> night
+18:51 < Filip> i'll make a list of known addresses and areas tomorrow
+18:51 < antagonizt> sounds good
+18:51 < antagonizt> cu
+18:51 < Filip> cu
+18:52 -!- Filip [~Filip@122.172-136-217.adsl.skynet.be] has left #Linux4BE []
+18:59 -!- themaw [~marc@pD9548672.dip.t-dialin.net] has quit ["Client Exiting"]
+19:05 -!- jal0atWrk [~jal0_wrkn@208.33.58.204] has joined #linux4be
+19:22 -!- sinfonian [~bshirclif@np-dsl-216-12-217-231.ev1.net] has joined #linux4be
+19:22 -!- jal0atWrk [~jal0_wrkn@208.33.58.204] has quit [Read error: 104 (Connection reset by peer)]
+19:23 < sinfonian> hola
+19:23 < sinfonian> just wanted to see if there was any progress lately?
+19:25 < antagonizt> we did some RE and filip has some ideas to try tomorrow
+19:25 < sinfonian> great
+19:25 < sinfonian> some RE?
+19:26 < antagonizt> reverse engineering
+19:26 < antagonizt> on the boot rom
+19:26 < sinfonian> ahh
+19:27 < sinfonian> anyluck?
+19:27 < antagonizt> there  is a log at http://www.linux4.be/irclog/
+19:27 < sinfonian> sweet
+19:27 < sinfonian> alright i will look at that later
+19:27 < sinfonian> I got to head out.... you guys are the best...  
+19:27 < sinfonian> e-mail me if you guys need anything
+19:27 -!- sinfonian [~bshirclif@np-dsl-216-12-217-231.ev1.net] has left #linux4be []
+21:38 -!- another [~another@d217-195.RES.UMontreal.CA] has joined #linux4be
+21:38 < another> BitchX-1.0c19+ by panasync - Linux 2.4.18
+21:38 < hewhew> hi another
+21:38 < another> hi hewhew
+21:38 < hewhew> how are you?
+21:38 < another> fine you?
+21:38 < hewhew> im ok...
+21:38 < another> my be300 is gonna rock when linux takes it over
+21:38 < hewhew> yea...
+21:38 < hewhew> cant wait
+22:16 -!- blitzed [~blitz@Toronto-HSE-ppp3657893.sympatico.ca] has joined #Linux4BE
+22:23 -!- blitzed [~blitz@Toronto-HSE-ppp3657893.sympatico.ca] has quit ["Client Exiting"]
+23:16 -!- antagonizt is now known as antagonizt[zZz]
+23:19 -!- jal0 is now known as jal0_ZzZ
+23:49 -!- another [~another@d217-195.RES.UMontreal.CA] has quit ["blah"]
+--- Log closed Fri Nov 22 00:00:59 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

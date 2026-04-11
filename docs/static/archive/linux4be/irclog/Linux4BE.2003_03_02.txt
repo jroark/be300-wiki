@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_02.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_02.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Mar 02 00:00:36 2003
+00:18 -!- PsycoXul [psyco@adsl-63-205-42-89.dsl.lsan03.pacbell.net] has quit ["fucking usb"]
+00:36 -!- PsycoXul [psyco@adsl-63-205-46-5.dsl.lsan03.pacbell.net] has joined #linux4be
+05:07 -!- wolphie [~wolphie@pearlart.hu] has quit ["bye"]
+11:41  * jal0_x-\ is around
+11:41 -!- jal0_x-\ is now known as jal0
+15:52 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+15:57 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+16:24 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+16:30 -!- cybergamer [cybergamer@cs6669206-117.austin.rr.com] has joined #Linux4BE
+16:30 < cybergamer> howdy
+16:30 < jal0> hey cybergamer
+16:31 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+16:31 < cybergamer> i saw the website and even tho i dont kno much about linux, i have experience with unix and am a sysadmin of windows
+16:31 < cybergamer> and would like to help in any way i can
+16:32 < cybergamer> i do web design, know a bit about unix, and mainly do graphic design
+16:32 < cybergamer> how can i help get linux on the be?
+16:32 < jal0> what would you be intrested in doing
+16:32 < cybergamer> hm
+16:32 < cybergamer> anything that helps really
+16:32 < jal0> you know programming?
+16:33 < cybergamer> no, unfortunately not
+16:33 < cybergamer> i've been trying to learn C in my spare time, but its not goin well.. :-P
+16:33 < cybergamer> :-/
+16:33 < jal0> you like documentation
+16:33 < jal0> :)
+16:33 < jal0> or even beta testing?
+16:34 < cybergamer> i would be happy to do beta testing
+16:34 < cybergamer> and even happier to do graphics for yall
+16:34 < cybergamer> although i dont kno if graphics r needed
+16:35 < jal0> not really at this point, but our documentation/howto's could use some sprucing up
+16:35 < cybergamer> i do webdesign (www.nsgn.net is my site, so check it out)
+16:35 < cybergamer> so i could help with website stuff also
+16:35 < cybergamer> hm, what needs to be done on the docks?
+16:35 < cybergamer> *docs
+16:36 < jal0> you should check with filip, who lately hasn't been around
+16:36 < cybergamer> i noticed :-/
+16:36 < cybergamer> where is he?
+16:36 < jal0> as for the doc's, just follow then and give some feedback. 
+16:37 < jal0> not sure, he's been busy with his 9to5
+16:38 < cybergamer> ah
+16:38 < jal0> you on a windoz box?
+16:38 < cybergamer> i dont know if ill get time today, but i will try to check out the docs soon
+16:38 < cybergamer> right now im on windows X_X
+16:38 < cybergamer> but
+16:38 < cybergamer> most of the time i am on my unix based OSX machine :-D :-D
+16:38 < cybergamer> unix stability rocks!
+16:39 < cybergamer> :-)
+16:39 < jal0> any experience with cygwin
+16:40 < cybergamer> nope
+16:40 < cybergamer> cuz i try to avoid windows as much as possible
+16:40 < cybergamer> i love my ibook :-D
+16:41 < jal0> ic
+16:42 < jal0> well if you want to help, the best bet is to download the stuff for the howto's and try them out. and provide feedback. 
+16:42 < cybergamer> ok, i will try to fit that in to my schedule
+16:42 < cybergamer> ;-)
+16:42 < cybergamer> i gotta run, but ill be around sometime in the future
+16:42 < cybergamer> later guys
+16:42 < jal0> ok, later
+16:43 -!- cybergamer [cybergamer@cs6669206-117.austin.rr.com] has quit []
+20:21 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+23:13 < jal0> hey antagonizt
+23:14 < jal0> long time no see :)
+23:14 < antagonizt> howdy
+23:15 < jal0> havn't see filip is quit some time, you?
+23:15 < antagonizt> nope
+23:15 -!- jadic [~jadic@pc-24-151-42-064.newt1.ct.charter.com] has joined #linux4be
+23:16 < jal0> hello jadic
+23:18 -!- jadic [~jadic@pc-24-151-42-064.newt1.ct.charter.com] has quit [Client Quit]
+23:28 < jal0> so what have you been up to lately?
+23:28 < antagonizt> not much... just looking for work
+23:29 < antagonizt> thinking of moving back to San Francisco
+23:29 < antagonizt> the market in houston is awfull
+23:29 < jal0> wow, that a lot of moving around
+23:30 < jal0> at least you have your BE300 to keep things organized :)
+23:31 < antagonizt> yeah... i figure if i had never moved to boston i would still be in san francisco... so i want to go back
+23:31 < jal0> why the move?
+23:32 < antagonizt> my girlfriend wanted me around and she was getting her phd at boston college
+23:32 < antagonizt> rather is getting her phd
+23:32 < jal0> ic
+23:52 < jal0> ok, time to go to bed, talk to you later antagonizt
+23:52 < antagonizt> later
+23:53 -!- jal0 is now known as jal0_
+23:53 -!- jal0_ is now known as jal0_away
+--- Log closed Mon Mar 03 00:00:02 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

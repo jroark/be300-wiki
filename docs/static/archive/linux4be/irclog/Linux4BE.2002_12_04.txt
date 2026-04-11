@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_04.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_04.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Dec 04 00:00:37 2002
+00:09 -!- metalac [staff@staffpc3.uwired.washington.edu] has quit ["Client Exiting"]
+00:18 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: antagonizt, jal0
+00:21 -!- Netsplit over, joins: jal0, antagonizt
+01:31  * hewhew whips the hackers
+01:42 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+02:05 -!- sinfonian [~bshirclif@np-dsl-216-12-216-77.ev1.net] has joined #linux4be
+02:07 < antagonizt> hey brian what are you doing up at 3:00a.m. CST?
+02:07 < jal0> only 2:13 here ;)
+02:08 < antagonizt> 2:08 and 18F... brrrr
+02:09 < antagonizt> windchill of 6F
+02:09 < jal0> about the same here
+02:09 < jal0> you on the east coast
+02:09 < antagonizt> Boston
+02:09 < jal0> conn
+02:10 < jal0> CT
+02:17 < antagonizt> it's late i'm going to get some sleep...
+02:17 < antagonizt> later everyone
+02:17 < jal0> later
+02:17 < jal0> me too i think
+02:17 -!- antagonizt is now known as antagonizt[zZz]
+02:27 -!- sinfonian [~bshirclif@np-dsl-216-12-216-77.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+02:55 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+03:09 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+03:16 < jal0> hey filip
+03:17 < Filip_> hi jal0
+03:24 < jal0> night ;)
+03:24 -!- jal0 is now known as jal0_Zzz
+03:27 -!- Filip [~Filip@193.190.11.247] has quit [Read error: 110 (Connection timed out)]
+05:14 -!- Filip__ [~Filip@193.190.11.245] has joined #Linux4BE
+05:20 -!- Filip___ [~Filip@193.190.11.245] has joined #Linux4BE
+05:28 -!- Filip__ [~Filip@193.190.11.245] has quit [Read error: 60 (Operation timed out)]
+05:32 -!- Filip_ [~Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+05:35 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+05:35 -!- Filip___ [~Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+08:06 -!- Filip_ [~Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+08:46 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+10:06 -!- WebGuest0965 [~eirc@p50838FB7.dip.t-dialin.net] has joined #Linux4BE
+10:07 < Filip> hi  WebGuest0965
+10:07 < WebGuest0965> hi. sorry for invading, just testing.
+10:07 -!- WebGuest0965 [~eirc@p50838FB7.dip.t-dialin.net] has quit [Client Quit]
+11:09 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+11:17 -!- Filip [~Filip@193.190.11.245] has quit [Read error: 60 (Operation timed out)]
+11:23 -!- jal0_Zzz is now known as jal0
+11:23 < Filip_> morning jal0
+11:24 < jal0> hey filip
+11:24 < Filip_> about to run ....
+11:24 < jal0> ok. talk to you later
+11:24 < Filip_> still no pcb ?
+11:24 < jal0> still waiting 
+11:26 < Filip_> talk to  you later
+11:26 -!- Filip_ [~Filip@193.190.11.245] has left #Linux4BE []
+13:28 -!- someguy [~matt@psyche.eggs.net] has quit [Read error: 113 (No route to host)]
+13:59 -!- antagonizt[zZz] is now known as antagonizt
+14:38 -!- sinfonian [~bshirclif@twhou-213-61.ev1.net] has joined #linux4be
+14:41 < sinfonian> Hello everyone
+14:42 < antagonizt> hey brian
+14:51 < sinfonian> brb
+14:51 -!- sinfonian [~bshirclif@twhou-213-61.ev1.net] has left #linux4be []
+15:55 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+15:57 -!- Filip [~Filip@117.168-136-217.adsl.skynet.be] has joined #linux4be
+16:33 < antagonizt> what is going on filip?
+16:34 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+16:34 < jal0> hey filip, got the pcb
+16:34 < jal0> :)
+16:35 < Filip> heating up your soldering station ?
+16:35 < jal0> but taking the day off from work today so i wont be able to remove those ic just yet :(
+16:35 < jal0> going to use the tools at work
+16:35 < Filip> and visual   inspection  diidn't learn you anything yet ?
+16:36 < jal0> took some hi-res scans and starting to map things out
+16:37 < jal0> does casio release info on any of their ic's ?
+16:37 < jal0> cant find a ic type department on their web, only consumer electronics
+16:37 < Filip> did you see the ram's ?
+16:38 < jal0> yeap, hidden under that film
+16:38 < Filip> why that film ?
+16:38 < Filip> and is that a common package ?
+16:38 < jal0> not sure yet
+19:28 -!- Filip [~Filip@117.168-136-217.adsl.skynet.be] has left #linux4be []
+20:36 < jal0> antagonizt: you there?
+20:37 < antagonizt> yes
+20:37 < jal0> just updated my page with some new pics of the pcb
+20:37 < jal0> new Hi-Rez ones :)
+20:39 < antagonizt> indeed very high rez
+20:39 < jal0> man, it's been dead here lately, guess the excitement is wearing off
+20:40 < jal0> you know if casio releases ANY documents on the IC's. Havent been able to find even 1 pdf
+20:41 < antagonizt> not sure nothing i've seen
+20:41 < jal0> cant even find where you can buy an ic manufactured by casio.
+20:42 < antagonizt> people are impulsive and impatient... and too busy getting excited about all the hype around eXpod Gold (if they can't see a screen shot they don't care about it)
+20:43 < antagonizt> no perrty screen shots of qtopia on the be so no interest
+20:44 < jal0> seems that way
+20:47 < antagonizt> so are you going to start removing the ICs tomorrow?
+20:47 < jal0> yeap
+20:47 < antagonizt> cool
+20:47 < jal0> cant wait :)
+20:48 < jal0> almost went in tonight just to do it. but its a 25 min drive there so almost 1 hour both ways. i changed my mind ;)
+20:49 < jal0> you still working on qtopia?
+20:53 < jal0> whatever happend to pocketlinux
+20:54 < antagonizt> naw the libs are too large for our ramdisks
+20:54 < antagonizt> the qte and opie libs and bins are 9.5M
+20:55 < antagonizt> making the ramdisk 12M
+20:55 < antagonizt> too large for the BE
+20:55 < jal0> at least for now that is
+20:56 < jal0> if you dont care about speed, once we have CF access we can have as much virtual memory as we want 
+20:57 < jal0> i bet running from CF is dreadfully slow though
+21:03 < antagonizt> yeah... if we go with opie or qtopia we'll need it though
+21:09 < jal0> tiny x still look good to me, it has been reported to work with uClibc which is a big plus
+--- Log closed Thu Dec 05 00:00:03 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: registers.php,v 1.1.1.1 2002/07/05 20:51:43 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/registers.php,v $">
+<title>Linux4.BE :: Hackers :: Registers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="../hackers/index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/books.php.html">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/faq.php.html">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/bootloader.php.html">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/toolchain.php.html">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/kernel.php.html">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/ramdisk.php.html">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/hardware.php.html">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/memorymap.php.html">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="../irclog/index.php.html">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/cvs.php.html">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: Registers</span>
+  </p><p><span class="bodytext">
+
+
+<table cellspacing="5" class="code">
+<tr> <td class="subtitle">Register</td><td class="subtitle"> VR4131</td><td  class="subtitle" class="subtitle">VR4102</td><td class="subtitle"> VR4181</td></tr>
+<tr><td>VRIP_BASE_ADDR</td><td>0x0f000000</td><td>0x0b000000</td><td>0x0a000000</td></tr>
+<tr><td>VRIP_BCU_ADDR</td><td>0x0f000000</td><td>0x0b000000</td><td>0x0a000000</td></tr>
+<tr><td>VRIP_DMAAU_ADDR</td><td>0x0f000020</td><td>0x0b000020</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_DCU_ADDR</td><td>0x0f000040</td><td>0x0b000040</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_CMU_ADDR</td><td>0x0f000060</td><td>0x0b000060</td><td>0x0a000004</td></tr>
+<tr><td>VRIP_ICU_ADDR</td><td>0x0f000080</td><td>0x0b000080</td><td>0x0a000080</td></tr>
+<tr><td>VRIP_PMU_ADDR</td><td>0x0f0000c0</td><td>0x0b0000a0</td><td>0x0a0000a0</td></tr>
+<tr><td>VRIP_RTC_ADDR</td><td>0x0f000100</td><td>0x0b0000c0</td><td>0x0a0000c0</td></tr>
+<tr><td>VRIP_DSU_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b0000e0</td><td>0x0a0000e0</td></tr>
+<tr><td>VRIP_GIU_ADDR</td><td>0x0f000140</td><td>0x0b000100</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_PIU_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b000120</td><td>0x0a000122</td></tr>
+<tr><td>VRIP_AIU_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b000160</td><td>0x0a000160</td></tr>
+<tr><td>VRIP_KIU_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b000180</td><td>0x0a000180</td></tr>
+<tr><td>VRIP_DSIU_ADDR</td><td>0x0f000820</td><td>0x0b0001a0</td><td>0x0a0001a0</td></tr>
+<tr><td>VRIP_LED_ADDR</td><td>0x0f000180</td><td>0x0b000240</td><td>0x0a000240</td></tr>
+<tr><td>VRIP_SIU_ADDR</td><td>0x0f000800</td><td>0x0c000000</td><td>0x0c000010</td></tr>
+<tr><td>VRIP_HSP_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0c000020</td><td>0x0a000020</td></tr>
+<tr><td>VRIP_FIR_ADDR</td><td>0x0f000840</td><td>0x0b000000</td><td>0x0a000000</td></tr>
+<tr><td>VRIP_MEMCON_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0a000300</td></tr>
+<tr><td>VRIP_ISABRG_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b0002c0</td></tr>
+<tr><td>VRIP_ECU_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b0006e0</td></tr>
+<tr><td>VRIP_DCU81_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0a000020</td></tr>
+<tr><td>VRIP_CSI81_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b000900</td></tr>
+<tr><td>VRIP_GIU81_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0b000300</td></tr>
+<tr><td>VRIP_LCD_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0a000400</td></tr>
+<tr><td>VRIP_SIU1_ADDR</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td><td>0x0c000000</td></tr>
+<tr><td>VRIP_SCU_ARR</td><td>0x0f001000</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_SDRAMU_ADDR</td><td>0x0f000400</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_PCI_ADDR</td><td>0x0f000c00</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_PCICONF_ADDR</td><td>0x0f000d00</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td></tr>
+<tr><td>VRIP_CSI_ADDR</td><td>0x0f0001a0</td><td>VRIP_NO_ADDR</td><td>VRIP_NO_ADDR</td></tr>
+
+</table>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/07/05 20:51:43 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html>

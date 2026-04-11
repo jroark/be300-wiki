@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_27.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_27.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Dec 27 00:00:40 2002
+00:27 -!- rohit [~rohit@202.54.13.34] has joined #linux4be
+00:29 -!- rohit [~rohit@202.54.13.34] has left #linux4be ["Client Exiting"]
+01:38 -!- jal0 is now known as jal0_zzz
+02:27 -!- WebGuest0236 [~eirc@ppp-209-87-240-167.storm.ca] has joined #Linux4BE
+02:27 -!- WebGuest0236 is now known as another
+02:30 -!- another [~eirc@ppp-209-87-240-167.storm.ca] has quit [Client Quit]
+11:42 -!- metalac [staff@ougl-staffmac01.uwired.washington.edu] has joined #linux4be
+11:50 -!- metalac [staff@ougl-staffmac01.uwired.washington.edu] has quit ["Client Exiting"]
+11:59 -!- Baalz [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 110 (Connection timed out)]
+15:28 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+15:28 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has left #linux4be []
+16:38 -!- hewhew [~eirc@ppp-209-87-245-135.storm.ca] has joined #Linux4BE
+17:02 -!- hewhew [~eirc@ppp-209-87-245-135.storm.ca] has quit ["Today is a good day to chat."]
+17:24 -!- Filip_ [~Filip@161.173-136-217.adsl.skynet.be] has joined #Linux4BE
+17:50 -!- Filip_ [~Filip@161.173-136-217.adsl.skynet.be] has left #Linux4BE []
+18:43 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_zzz
+18:46 -!- Netsplit over, joins: jal0_zzz
+20:00 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has joined #linux4be
+20:00 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has quit [Client Quit]
+--- Log closed Sat Dec 28 00:00:08 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

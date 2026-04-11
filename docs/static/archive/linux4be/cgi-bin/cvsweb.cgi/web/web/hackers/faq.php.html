@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+<TITLE>web/web/hackers/faq.php - view - 1.3</TITLE></HEAD>
+<BODY BGCOLOR="#eeeeee">
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#9999ee"><tr valign=bottom><td><a href="faq.php.html"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></a> <b>Return to <A HREF="faq.php?sortby=date#rev1.3">faq.php</A>
+ CVS log</b> <IMG SRC="/icons/text.gif" ALT="[TXT]" BORDER="0" WIDTH="20" HEIGHT="22"></td><td align=right><IMG SRC="/icons/dir.gif" ALT="[DIR]" BORDER="0" WIDTH="20" HEIGHT="22"> <b>Up to  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b></td></tr></table><HR noshade><table width="100%"><tr><td bgcolor="#ffffff">File:  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/faq.php.html">faq.php</a>&nbsp;(<A HREF="/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/faq.php?rev=1.3&amp;sortby=date" target="cvs_checkout" onClick="window.open('/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/faq.php?rev=1.3','cvs_checkout','resizeable,scrollbars');"><b>download</b></A>)<BR>
+Revision <B>1.3</B>, <i>Sat Nov 23 23:46:53 2002 UTC</i> (9 months, 1 week ago) by <i>filip</i>
+<BR>CVS Tags: <b>HEAD</b><BR>Changes since <b>1.2: +11 -3
+ lines</b><PRE>
+added ram-chips info and memorymap
+</PRE>
+</td></tr></table><HR noshade><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;meta name=&quot;VERSION&quot; content=&quot;$Id: faq.php,v 1.3 2002/11/23 23:46:53 filip Exp $&quot;&gt;
+&lt;meta name=&quot;SOURCE&quot; content=&quot;$Source: /cvsroot/web/web/hackers/faq.php,v $&quot;&gt;
+&lt;title&gt;Linux4.BE :: Hackers :: FAQ&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/linux4be&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;? include &quot;../header.php&quot;; ?&gt;
+&lt;table width=&quot;100%&quot;&gt;
+&lt;tr&gt;
+&lt;td width=&quot;10%&quot; valign=&quot;top&quot;&gt;
+&lt;? include &quot;menu.php&quot;; ?&gt;
+&lt;/td&gt;
+&lt;td&gt;
+ &nbsp;&lt;P&gt;
+ &nbsp;&lt;span class=&quot;subtitle&quot;&gt;Hackers :: FAQ&lt;/span&gt;
+ &nbsp;&lt;span class=&quot;bodytext&quot;&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp;&lt;b&gt;Q: Do you need to reflash the ROM in order to use linux on the BE ?&lt;/b&gt;
+ &nbsp;&lt;/p&gt;&lt;p&gt;&lt;b&gt;A:&lt;/b&gt; There is no need to reflash the rom in your BE in order to run linux, it is completely non-destructive. The way we've set it up is using a CF card, which contains the bootloader and the kernel image. The bootloader is set to autorun on card insertion, so 10 seconds after you insert the CF card the BE is running Linux. When you do a reset, you get back to CE (and if you did not remove that CF card you're back to Linux another 10 seconds later). Our goal is to really make it a 'just press a button and it is done' experience. In the (not so near) future we will provide a simple tool and CF-images that can easily be put onto an empty CF card, for now there is still some (simple) manual work to do. 
+ &nbsp;&lt;/p&gt;&lt;p&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp; &lt;b&gt;Q: Where do I start ?&lt;/b&gt;
+ &nbsp;&lt;/p&gt;&lt;p&gt;&lt;b&gt;A:&lt;/b&gt; If you're new to MIPS and/or Linux kernel development, check out the &lt;a href=&quot;books.php&quot;&gt;books&lt;/a&gt; page for information for some good reading.
+ &nbsp;&lt;/p&gt;First thing you need is the toolchain, in order to cross-compile the kernel for your MIPS BE300 on an i386 system:
+ &nbsp;&lt;br&gt;if you're using Windows, look here &lt;a href=&quot;<A HREF="http://www.linux4.be/~jal0/">http://www.linux4.be/~jal0/</A>&quot;&gt;http://www.linux4.be/~jal0/&lt;/a&gt;
+ &nbsp;&lt;br&gt;if you're using Linux, look here &lt;a href=&quot;<A HREF="http://www.linux4.be/hackers/toolchain.php">http://www.linux4.be/hackers/toolchain.php</A>&quot;&gt;http://www.linux4.be/hackers/toolchain.php&lt;/a&gt;&lt;p&gt;
+ &nbsp;&lt;/p&gt;
+ &nbsp;&lt;p&gt;Then you need the kernel sources, available at &lt;a href=&quot;<A HREF="http://www.linux4.be/hackers/kernel.php">http://www.linux4.be/hackers/kernel.php</A>&quot;&gt;http://www.linux4.be/hackers/kernel.php&lt;/a&gt;
+ &nbsp;&lt;/p&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp;You'll also need a ramdisk, see &lt;a href=&quot;<A HREF="http://www.linux4.be/~jroark/howto/ramdisk.html">http://www.linux4.be/~jroark/howto/ramdisk.html</A>&quot;&gt;http://www.linux4.be/~jroark/howto/ramdisk.html&lt;/a&gt;
+ &nbsp;&lt;/p&gt;
+ &nbsp;&lt;p&gt;and finally the bootloader: &lt;a href=&quot;<A HREF="http://www.linux4.be/hackers/bootloader.php">http://www.linux4.be/hackers/bootloader.php</A>&quot;&gt;http://www.linux4.be/hackers/bootloader.php&lt;/a&gt; 
+ &nbsp;You've still got a question, or even better, an answer ? Please let me know ! 
+ &nbsp;&lt;br&gt;&lt;a href=&quot;mailto:<A HREF="mailto:filip@linux4.be">filip@linux4.be</A>&quot;&gt;Filip@Linux4.BE&lt;/a&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp;&lt;span class=&quot;date&quot;&gt;Last updated on $Date: 2002/11/23 23:46:53 $&lt;/span&gt;
+ &nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>

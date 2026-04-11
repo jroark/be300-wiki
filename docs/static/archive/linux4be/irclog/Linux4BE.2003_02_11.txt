@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_11.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_11.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Feb 11 00:00:46 2003
+00:36 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Excess Flood]
+00:36 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+00:42 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit [Read error: 113 (No route to host)]
+02:05 -!- jal0 is now known as jal0_away
+02:54 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+02:54  * Filip looks around
+05:38 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+05:47 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+06:49  * mouse is back (gone 15:44:49)
+07:56 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 54 (Connection reset by peer)]
+07:59 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+07:59 -!- PsycoXul [psyco@adsl-63-205-45-144.dsl.lsan03.pacbell.net] has quit ["blah"]
+08:10 -!- PsycoXul [psyco@adsl-63-205-41-218.dsl.lsan03.pacbell.net] has joined #linux4be
+10:23  * mouse is away: va a casa...
+10:48 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 110 (Connection timed out)]
+10:58 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+10:58 -!- jal0_away is now known as jal0
+11:10 < Filip> hi jal0
+11:13 < jal0> hey filip, whats new
+11:16 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+11:16 -!- Filip [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+11:16 < Filip_> going to take a look at andrey's interrupt findings in a couple of hours
+11:17 < jal0> cool, i have some spare time today (took a vacation day). going to contiue my efforts in dumping system files. 
+11:19 < jal0> did you see my post of BE-Central... Was in a bad mood when i responed, hopefully no one takes it the wrong way.
+11:22 < Filip_> wich post ?
+11:23 < Filip_> what topic ?
+11:24 < jal0> http://www.be-central.be/modules.php?op=modload&name=phpBB_14&file=index&action=viewtopic&topic=1793&forum=15&14
+11:26 < jal0> i just wanted to let others now not "everyone agrees".
+11:27 < Filip_> I have no problem it...
+11:28 < Filip_> not everyone wants to jump on the latest gadget... I still have a working  Pilot 1000
+11:29 < jal0> :)
+11:29 < Filip_> and I'll keep using my BE till it's broken, and even then I'll probaly look for a cheap replacement
+11:31 < PsycoXul> yeah
+11:31 < Filip_> the closest competition for the BE overhere in Europe is the Dell Axim (just shipping over here), but it's still 320Euro (about the same in USD)
+11:31 < jal0> yeah, me too. It easier to replace if i break it.
+11:31 < PsycoXul> i just got mine and i can't wait to get linux on there
+11:31 < PsycoXul> though apparently i'll need to send mine to casio cause it's already crapped out
+11:31 < Filip_> I can still get at least 2, and probably even 3 BE's for that money
+11:32 < jal0> PsycoXul: still cant boot?
+11:32 < PsycoXul> nope :/
+11:32 < PsycoXul> i've tried doing the 2-step reset so many times i lost count 
+11:32 < PsycoXul> still nothing but stuck at "Starting..."
+11:32 < Filip_> tried all the tricks ? including dancing around the table while the Be's in the  fridge  ?
+11:32 < PsycoXul> heh
+11:33 < Filip_> did you remove the battery ?
+11:33 < PsycoXul> yep
+11:33 < Filip_> what's the symptom ?
+11:34 < PsycoXul> it just gets stuck on the "Starting..." screen
+11:34 < jal0> what were you doing before you reboot and saw this problem for the first time:
+11:34 < PsycoXul> i was browsing the web and listening to an mp3 on a windows share accross the network
+11:34 < PsycoXul> via an ne2k-compat nic
+11:35 < PsycoXul> i was switching from the web browser to mp3 player and it locked up with an hour glass
+11:35 < PsycoXul> so i hit reset, and then it started doing this
+11:35 < jal0> you try a safe boot -> restore
+11:35 < PsycoXul> yep
+11:35 < PsycoXul> goes back to "Starting..." and gets stuck there
+11:35 < PsycoXul> regular safe-boot and 2-step restore safe boot both
+11:35 < Filip_> you did remove the CF card when trying the two step reset ?
+11:36 < PsycoXul> tried it with and without both my CF cards and nic
+11:37 < Filip_> did you already leave it on and let it completely run out of battery  ?
+11:37 < PsycoXul> hmm nope haven't tried that
+11:38 < jal0> if you cant do the two step reset, then the only way i can think of is to send it to CASIO for repair. Or wait till we learn how to flash the device ourselves :)
+11:38 < Filip_> did you try with an autorun CF card ? 
+11:39 < Filip_> jal0: that would mean reflashing using a hardware device, and not the software way since he's not able to run any program now
+11:39 < PsycoXul> no
+11:40 < Filip_> did you get the blue progress bar when  doing a reset  ?
+11:40 < PsycoXul> for the 2-step reset yeah
+11:40 < jal0> yeap, but once we know how to do it, a hardware device wouldnt be too difficult to design.. but it may be a long wait
+11:40 < Filip_> because I think at that point it is copying the CE kernel back form NAND to memory 
+11:41 < PsycoXul> heh
+11:41 < Filip_> and it took  the same amount of time, or did it go much faster ?
+11:41 < PsycoXul> my mom's thinking of getting one and seeing if our sam's club here has them
+11:41 < PsycoXul> if she gets one from there i think i'll just take mine back to them in her package and exchange it so i don't have to wait on casio heh
+11:42 < PsycoXul> Filip_: as/than what?
+11:43 < Filip_> as before. did the progress bar take about the same time to get  to 100% , or did it go much faster than usual (before), and did it go all the way to 100 %?
+11:44 < PsycoXul> oh seems to take the same time and go to 100%
+11:45 < Filip_> does the backlight still dims a  bit after a couple of minutes, or does it stay  bright ?
+11:46 < Filip_> (if the CE kernel is still running , power-savings should kick in)
+11:46 < PsycoXul> um it used to dim before i took the battery out i think
+11:47 < PsycoXul> but i think it's staying bright now
+11:47 < PsycoXul> oh yeah it was also playing a sound before
+11:47 < Filip_> what music where you listening to ;-)
+11:48 < PsycoXul> iirc i'd turn it on, it'd say "Starting..." then it it would get brighter and play a sound, then after a short while go dim
+11:48 < PsycoXul> heh tatu
+11:48 < PsycoXul> :p
+11:48 < Filip_> in that case, an autostart  CF card might get something started (try using our bootloader or some explorer)
+11:49 < PsycoXul> ok i'll try that
+11:51 < Filip_> ok, got go now (pick up thkids)
+11:51 < PsycoXul> see you, thanks
+11:51 < Filip_> be back in 3 hours or so, talk to you later....
+11:51 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+12:08 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+12:08 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has left #linux4be []
+12:09 < PsycoXul> ahh damnit
+12:09 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+12:09 < PsycoXul> er wrong chan sorry
+12:09 < jal0> ?
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

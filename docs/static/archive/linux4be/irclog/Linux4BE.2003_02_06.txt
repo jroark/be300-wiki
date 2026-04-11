@@ -1,0 +1,295 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_06.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_06.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Feb 06 00:00:34 2003
+00:10 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit []
+03:00 -!- wolphie [~wolphie@pearlart.hu] has quit ["bye"]
+03:15 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+03:15 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+03:16 < Filip> hi mouse
+03:16 < mouse> hi
+03:19 < Filip> just locked myself out of the server 
+03:19 < Filip> was trying to set up an ipsec tunnel, but forgot to tell portsentry about it
+03:21 < Filip> portsentry detected activity on port 500/UDP, thinking it was a portscan, and added a dny entry for my IP in iptables
+03:21 < mouse> hmm ;-(
+03:35 < Filip> server's back to normal now, and fully patched for all known exploits 
+03:36 < Filip> so back to BE hacking tonight...
+03:40 < mouse> ;-)
+06:08 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Remote closed the connection]
+10:41 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+10:41 -!- Filip [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+10:53 -!- Filip___ [Filip@193.190.11.245] has joined #linux4be
+10:53 -!- Filip_ [Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+11:00 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+11:00 -!- Filip___ [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+11:06 -!- Filip___ [Filip@193.190.11.245] has joined #linux4be
+11:06 -!- Filip_ [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+11:10 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+11:10 -!- Filip___ [Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+11:12 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+11:39 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+13:19 -!- Den_Beiren [~me@38.125-136-217.adsl.skynet.be] has joined #linux4be
+13:38 -!- Den_Beiren [~me@38.125-136-217.adsl.skynet.be] has quit []
+14:35 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+14:43 -!- WebGuest3207 [~eirc@MTL-HSE-ppp176984.qc.sympatico.ca] has joined #Linux4BE
+14:44 < WebGuest3207> Anyone here?
+14:45 < WebGuest3207> oh well, guess not, i'll drop by later
+14:45 -!- WebGuest3207 [~eirc@MTL-HSE-ppp176984.qc.sympatico.ca] has quit [Client Quit]
+15:48 < antagonizt> sort of
+15:58 -!- Filip_ [~Filip@232.57-201-80.adsl.skynet.be] has joined #linux4be
+15:59 < antagonizt> howdy filip
+16:00 < Filip_> hi antagonizt
+16:01 -!- Filip_ is now known as Filip
+17:50 -!- jal0atWrk [~jal0_wrkn@208.33.58.221] has joined #linux4be
+17:50 < jal0atWrk> hey everyone
+17:50 < antagonizt> hi
+17:50 < jal0atWrk> antagonizt: long time no see
+17:51 < jal0atWrk> finally moveed in?
+17:51 < antagonizt> nope
+17:51 < antagonizt> just using my laptop
+17:51 < jal0atWrk> dohh 
+17:51 < antagonizt> i'd rather not settle in... i'm staying with my mother for a bit
+17:51 -!- WebGuest8248 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has joined #Linux4BE
+17:52 < jal0atWrk> :>
+17:52 -!- WebGuest8248 is now known as canadian_sniper
+17:52 < canadian_sniper> what' the latest?
+17:54 < canadian_sniper> hello?
+17:54 < jal0atWrk> CF patches
+17:54 < canadian_sniper> any luck with getting it to work after initialization?
+17:54 < jal0atWrk> not for me, havn
+17:55 < jal0atWrk> ops
+17:55 < antagonizt> are all the patches in cvs?
+17:55 < jal0atWrk> havn't had the time lately to play with things
+17:55 < jal0atWrk> yes 
+17:56 < jal0atWrk> at least that what the topic says, but i havn't tried checking them out lately
+17:56 < canadian_sniper> is cf working fully now?
+17:57 < jal0atWrk> nope, just some initialization 
+17:57 -!- canadian_sniper [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has quit ["Today is a good day to chat."]
+17:57 -!- WebGuest6868 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has joined #Linux4BE
+17:58 -!- WebGuest6868 is now known as canadian_sniper
+17:58 < canadian_sniper> oops
+17:58 < canadian_sniper> did you get the touchscreen up yet?
+17:59 < jal0atWrk> from what i've heard is that it's mostly working. the main problem seems to be getting the IRQ issuse resolved.
+18:01 < canadian_sniper> yes, I heard there is an irq conflict with the cf
+18:02 < jal0atWrk> mostly because we havn't fully implimented the IRQ aspect of the kernel (we lack the details)
+18:02 < canadian_sniper> oh, well, that helps
+18:03 < antagonizt> i think andrey has made some progress with the irq issues
+18:03 < canadian_sniper> good to hear
+18:04 < jal0atWrk> yeah, hes been reversing some of the CE code. i took a look at it at its looks pretty interesting. the hard part is verifying the info is indeed correct.
+18:05 < canadian_sniper> that' the problem with decompiling, is he decompiling the actual ce kernel?
+18:06 < jal0atWrk> in a way, he's using a RAM dump
+18:07 < canadian_sniper> good idea, what' filip been up to?
+18:07 < jal0atWrk> fixing server issues i believe
+18:07 < canadian_sniper> I' new, so i' trying to get caught up, i'e been reading all of the irc logs
+18:07 < jal0atWrk> you plan on helping with the development?
+18:07 < canadian_sniper> as much as I can, i don' know much, but i'l try
+18:08 < jal0atWrk> what do you know?
+18:08 < antagonizt> are we still using the same date from the sf mips cvs tree?
+18:08 < canadian_sniper> nothing really, but I learn very quickly
+18:08 < jal0atWrk> or should i say what type of stuff interests you
+18:08 < jal0atWrk> antagonizt: yes, i believe
+18:08 < canadian_sniper> everything, I am obsessed with Linux,
+18:09 < canadian_sniper> and i' good at figuring stuff out, right now, i' working on my own epod version
+18:09 < jal0atWrk> end user, or kernel hacker?
+18:09 < jal0atWrk> end user software i mean
+18:09 < jal0atWrk> hardware?
+18:09 < canadian_sniper> mostly end-user, before my computer was destroyed, I was just starting to hack
+18:10 < canadian_sniper> I' really good at hardware, if I get some of those books mentioned, I could read them all and be a great help
+18:11 < jal0atWrk> so what type of thing intrests you MOST.
+18:11 < canadian_sniper> hardware
+18:11 < jal0atWrk> have you read any of the MIPs reference manuals?
+18:12 < jal0atWrk> i'd start there, someone with a good understanding of how the processor deals with interrups would be useful.
+18:12 < canadian_sniper> not yet, but I will, I did do some research, basic at least, but some on the chip that is in the Be
+18:13 < canadian_sniper> I'l tell you what, I'l make it my project to learn everything I can about the interrups, an get back to you
+18:14 < jal0atWrk> sounds good :)
+18:14 < jal0atWrk> have you seen the book reference on the linux4be site?
+18:15 < canadian_sniper> cool, let ervyone know, anyone wanting to contact me, canadian_sniper@msn.com, but I am a member on the forum now too
+18:15 < canadian_sniper> yes, I saw the reference manual, the pdf one? If yes, than I saw it, but I haven' read it yet, I will
+18:15 < jal0atWrk> ok, but you just did.... its being logged :)
+18:15 < canadian_sniper> I just did what?
+18:16 < jal0atWrk> let everyone know
+18:16 < jal0atWrk> we all read the logs :)
+18:16 < Baalz> canadian_sniper: Are you from montreal?
+18:17 < canadian_sniper> okay, good
+18:17 < canadian_sniper> Yes
+18:17 < Baalz> Hi everyone!
+18:17 < canadian_sniper> Why?
+18:17 < Baalz> Me too :)
+18:17 < jal0atWrk> hey Baalz
+18:17 < canadian_sniper> Cool! Where about?
+18:17 < Baalz> Beadry metro
+18:17 < Baalz> Beuadry metro
+18:18 < Baalz> beaudry :)
+18:18 < Baalz> And you?
+18:18 < canadian_sniper> Okay, I don' know where that is, Blue lign?
+18:18 < canadian_sniper> West Island, Pointe-Claire
+18:18 < Baalz> One station east from Berri
+18:18 < Baalz> On the green line
+18:18 < Baalz> Ok
+18:18 < canadian_sniper> Oh, okay, cool
+18:19 < Baalz> Anyway I was just passing, see you later guys
+18:19 < jal0atWrk> later Baalz
+18:19 < canadian_sniper> later
+18:22 -!- WebGuest3253 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has joined #Linux4BE
+18:22 -!- WebGuest3253 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has quit [Client Quit]
+18:24 < canadian_sniper> got the mips chip pdf file, looking at it now
+18:24 < jal0atWrk> it's a great read ;)
+18:24 < canadian_sniper> lol, I think I had it before, just didn' pay much attention to it
+18:25 < canadian_sniper> I'l put it on my be, running my own hacked 5.1, any good pdf readers you know of?
+18:25 < canadian_sniper> That will read a 2.2mb file?
+18:25 < jal0atWrk> no, sorry, dont use my BE except for hacking 
+18:26 < canadian_sniper> okay, cool
+18:26 < jal0atWrk> i also found it easier to just print the PDF out. i did it at work of course :)
+18:26 < canadian_sniper> how long is it? I' still downloading
+18:26 < jal0atWrk> you on a dial up?
+18:27 < canadian_sniper> bell high speed
+18:28 < canadian_sniper> 12.5 mb/s
+18:28 < jal0atWrk> wow, 2.2mb file should of been finish a while ago
+18:28 < canadian_sniper> it' done now, it took about 1.5 min
+18:29 < jal0atWrk> if you curious how your speed rates visit http://www.bandwidthspeedtest.com
+18:29 < jal0atWrk> and do the speed test
+18:30 < canadian_sniper> trying it now
+18:31 < jal0atWrk> i only got a 1.3mb rating here at work
+18:31 < canadian_sniper> what's that on?
+18:31 < jal0atWrk> t1
+18:32 < canadian_sniper> wow, that' low for T1
+18:32 < canadian_sniper> o man, that' crap
+18:32 < jal0atWrk> yeap
+18:33 < canadian_sniper> comm:126.3kb storage:15.4kb
+18:33 < jal0atWrk> thats for your connection?
+18:34 < canadian_sniper> yep
+18:34 < canadian_sniper> crap
+18:34 < jal0atWrk> you using a modem?
+18:35 < canadian_sniper> dsl
+18:35 < canadian_sniper> not much better than dial-up though
+18:35 < jal0atWrk> ugg, your right that does suck
+18:35 < jal0atWrk> is it shared?
+18:35 < canadian_sniper> no, it' basic dsl
+18:36 < jal0atWrk> you should contact your provider. that speed dosn't sound right
+18:36 < canadian_sniper> I know, i'l try again later, after a restart, I was also downloading and chatting at the same time
+18:37 -!- WebGuest1235 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has joined #Linux4BE
+18:37 -!- WebGuest1235 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has quit [Client Quit]
+18:37 < jal0atWrk> ic, i had dsl, switched to cable and i like it much better. no special ppoe software to install
+18:38 < jal0atWrk> and its almost twice as fast
+18:38 < canadian_sniper> I know, it' not my comp though, when I get a job, i' going to get my own, and get cable.
+18:40 < canadian_sniper> Just ran it again, got 131.7, bit better
+18:40 -!- Filip [~Filip@232.57-201-80.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+18:40 < jal0atWrk> well, dinner break is about over, got to get back to work :(, talk to you later. And good luck with the reading :)
+18:40 < canadian_sniper> yep, talk to you later
+18:41 -!- jal0atWrk [~jal0_wrkn@208.33.58.221] has quit []
+18:41 -!- canadian_sniper [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has quit ["Today is a good day to chat."]
+18:41 -!- WebGuest0506 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has joined #Linux4BE
+18:41 -!- WebGuest0506 [~eirc@MTL-HSE-ppp179090.qc.sympatico.ca] has quit [Client Quit]
+19:43 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+23:28 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+23:29 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+23:47 -!- The [~Beef@wa-longview6a-98.lgvwwa.adelphia.net] has joined #linux4be
+23:49 -!- The is now known as The_Evil_Monkey
+23:49 -!- The_Evil_Monkey [~Beef@wa-longview6a-98.lgvwwa.adelphia.net] has quit [Client Quit]
+23:54 -!- The_Evil_Monkey [~beef@wa-longview6a-98.lgvwwa.adelphia.net] has joined #linux4be
+23:55 < The_Evil_Monkey> Hello
+23:57 -!- The_Evil_Monkey [~beef@wa-longview6a-98.lgvwwa.adelphia.net] has left #linux4be []
+--- Log closed Fri Feb 07 00:00:00 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_24.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_24.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Jan 24 00:00:13 2003
+00:08 < nykkto> Well just to let all you log readers know I still live :P
+00:12 -!- nykkto [~eirc@208.205.19.122] has left #Linux4BE []
+03:21 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+03:52 -!- bshircliffe [~bshirclif@np-dsl-216-12-216-54.ev1.net] has joined #linux4be
+03:53 < Filip> hi brian
+03:54 < bshircliffe> hi
+03:54 < bshircliffe> whats going on?
+03:59 < Filip> work work work and work:-(
+03:59 < Filip> did you play with mouse's recent images ?
+04:00 < Filip> with initial touchscreen support, allowing you to draw on the screen ?
+04:00 < bshircliffe> draw really?
+04:00 < bshircliffe> nope
+04:02 < Filip> yep, a simple drawing pad application (or how do you call such a thing ?)
+04:02 < bshircliffe> a nopepad
+04:02 < bshircliffe> notepad
+04:02 < bshircliffe> well I am impressed
+04:03 < Filip> and CF memory cards are being detected (but not yet useable), show brand, size etc.
+04:04 < Filip> <4>hdc: SanDisk SDCFB-64, ATA DISK drive  
+04:04 < Filip> <4>ide1 at 0x170-0x177,0x376 on irq 40
+04:04 < Filip> <6>hdc: 125440 sectors (64 MB) w/1KiB Cache, CHS=490/8/32
+04:04 < Filip> <6>Partition check:
+04:04 < Filip> <6> hdc: hdc1
+04:05 < bshircliffe> right.. I have seen that...  seems to be a irq problem
+04:14 < bshircliffe> I am going to finally get my ham radio license this week
+04:14 < Filip> themaw is also a hammer I think
+04:15 < bshircliffe> yea?
+04:15 < bshircliffe> I have been wanting to get my license since I was 10
+04:28 -!- bshircliffe [~bshirclif@np-dsl-216-12-216-54.ev1.net] has left #linux4be []
+04:28 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+04:36 < Filip> morning mouse
+04:37 < mouse> Filip: morning
+04:41 < mouse> I'm trying to build qt embedded
+04:44 < Filip> and how's it going ?
+04:46 < mouse> building...
+04:47 < mouse> I started within 5 minutes ;-)
+04:56 < mouse> libstdc++ like uClibc exists?
+04:57 < mouse> or I might compile by mipsel-linux-g++ instead mipsel-uclibc-g++ ?
+04:58 < Filip> you'll probably need to use mipsel-linux-g++ 
+04:58 < mouse> ;-(
+05:43 < mouse> Out of memory ;-(
+05:45 < Filip> your PC or the  BE when loading ?
+05:46 < mouse> BE, when loading simple QTe program (hello)
+05:46 < Filip> what's the size of the ramdisk ?
+05:48 < mouse> 8 Mb
+05:50 < Filip> 16MB - 8MB ramdisk  -2 MB running kernel etc
+05:50 < Filip> what's the free mem ? (got top installed ?)
+05:52 < mouse> 428 kb free
+05:52 < mouse> cat /proc/meminfo
+05:53 < mouse> may be try to booting from CF?
+05:56 < Filip> 428KB : that's tight
+06:09  * mouse is away: ÐÏÛ£Ì ÏÂÅÄÁÔØ
+07:15  * mouse is back (gone 01:06:03)
+07:15 < mouse> cool, now I owned my nick on irc.freenode.net ;-)
+07:23 < Filip> you registerd it ?
+07:27 < mouse> yes
+07:27 < mouse> I ask about it on #freenode
+09:30 -!- BaalzAw [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+09:31 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+09:33 < mouse> Baalz: hi
+09:34 < Baalz> Hi mouse :)
+09:35 < Filip> hi Baalz
+09:36 < Baalz> Hi filip :) I got some gimping to do for my site, I'll come back later...
+09:36 -!- Baalz is now known as BaalzAw
+09:36 < BaalzAw> Cu guys
+10:22 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+10:49 -!- bshircliffe [~bshirclif@twhou-207-218-202-179.ev1.net] has joined #linux4be
+10:55 -!- bshircliffe [~bshirclif@twhou-207-218-202-179.ev1.net] has left #linux4be []
+11:17 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+11:17 < andrey> hi guys!
+11:21 < mouse> oh, hi
+11:22 < mouse> yesterday I wrote you email. Did you read it?
+11:27 < andrey> yes, that's why I'm here. :-)
+11:32 < mouse> andrey: 
+11:41 < mouse> I'll must go. See later.
+11:43 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["va a casa"]
+11:44 < andrey> mouse, cu
+12:08 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+14:38 -!- Filip__ [~Filip@212.100-136-217.adsl.skynet.be] has joined #linux4be
+14:39 -!- Filip__ is now known as Filip
+16:48 -!- seeder [seeder@bad.commedia.pl] has joined #linux4BE
+16:49 < Filip> Hi seeder
+16:49 -!- SeederGOD [1001@c8-16.icpnet.pl] has joined #linux4BE
+16:49 -!- SeederGOD [1001@c8-16.icpnet.pl] has quit [Remote closed the connection]
+16:50 < seeder> hello
+16:51 < seeder> i'm here just for  watching :)  how ya doin
+17:10  * Filip  is gojng to reboot, back in 10 minutes
+17:10 -!- Filip [~Filip@212.100-136-217.adsl.skynet.be] has left #linux4be []
+17:28 -!- seeder is now known as SeederGOD
+17:38 -!- SeederGOD [seeder@bad.commedia.pl] has quit ["BitchX: the headache medicine"]
+17:42 -!- Filip [~Filip@212.100-136-217.adsl.skynet.be] has joined #linux4be
+18:55 -!- Filip___ [~Filip@65.102-136-217.adsl.skynet.be] has joined #linux4be
+18:55 -!- Filip [~Filip@212.100-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+18:56 -!- Filip___ is now known as Filip
+19:18 -!- Filip [~Filip@65.102-136-217.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+19:25 -!- jal0atWrk [~jal0_wrkn@208.33.58.204] has joined #linux4be
+19:25 -!- jal0atWrk [~jal0_wrkn@208.33.58.204] has quit [Client Quit]
+23:01 -!- metalac [staff@staffpc3.uwired.washington.edu] has joined #linux4be
+23:05 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+--- Log closed Sat Jan 25 00:00:39 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

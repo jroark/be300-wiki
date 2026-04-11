@@ -1,0 +1,2 @@
+User-agent: TurnitinBot
+Disallow: /            #Will disallow all urls on your site

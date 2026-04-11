@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/ TR/html4/loose.dtd">
+<html>
+<head>
+  <title>My simple Linux4.BE contributions</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF">
+  <table width="85%" align="center">
+    <tr valign="top">
+      <td width="80" height="80">
+        <a href="./"><img src="images/linux_logo_be300.png" 
+        border="0" alt="Linux4.BE"></a>
+      </td>
+      <td>
+        <tt>
+        <h3><b>Here you will find some stuff I have been working on for the 
+        <a href="./">Linux4.BE</a> project & some of my 
+        rambles.</b></h3></tt>
+      </td>
+    </tr>
+  </table>
+  <hr width="85%" align="center">
+  <table width="85%" align="center">
+    <tr>
+      <td>
+         <tt>
+         <p>Besides hacking on the kernel I have written several 
+         tutorials...</p>
+         <p>Like this <a href="howto/ramdisk.html">tutorial</a> for building a 
+         uClibc/Busybox based ramdisk for the BE <br>and this follow up <a 
+         href="howto/picogui.html">tutorial</a> for adding PicoGUI to your 
+         ramdisk.</p>
+         <p>Some <a href="howto/opie_notes.txt">notes</a> on my attempts to 
+         build <a href="http://opie.handhelds.org/">opie</a> against uClibc 
+         0.9.16 for the BE.</p>
+         <p>Here are some <a href="images/index.html">pictures</a> &
+         screenshots I collected 
+         of the BE running Linux.</p>
+  <hr width="100%" align="center">
+         <p><b>To take screenshots</b> 
+         type the following on your desktop with the BE
+         serial cable hooked up:
+         <i><pre>cat /dev/ttyS0 > fb.raw.uu</pre></i>
+         and this on your BE:
+         <i><pre>cat /dev/fb | uuencode fb.raw > /dev/ttyS0</pre></i>
+         Then use a program like <a 
+         href="http://www.minlinux.org/projects/fb2png/">fb2png</a> to convert 
+         the raw file to a png.
+<i><pre>uudecode fb.raw.uu
+fb2png fb.raw fb.png 0 240 320 16</pre></i></p>
+<p><b>NOTE</b>: you probably can't do this with the standard serial driver as of
+12/17/2002... I was using a crappy blocking standard misc char <a 
+href="files/serial_be300.c">driver</a> that will never be in CVS cause it's 
+too stupid. fb2png doesn't work right either... 
+cause technically the be has a 15bpp display but it fakes it with a 256x320x16
+virtual display</p>
+  <hr width="100%" align="center">
+         <p><a href="progress/">This</a> is a Linux4.BE progress chart.</p>
+         <p>Here are my <a href="links.html">bookmarks</a>. I find them usefull
+         you may also.</p>
+         <p><h3>Various kernels and ramdisks I have built</h3></p>
+         <p>11/18/2002 - <a href="files/vmlinux-pgui-test1.bz2">kernel</a>[1.2M] 
+         with a 4M <a href="files/ramdisk-pgui-test1.gz">ramdisk</a>[512k] that 
+         contains uClibc 0.9.15, busybox 0.60.4, & PicoGui CVS-11/18/2002</p>
+         <ul><li>Note: PicoGui should display a test image like this 
+         <a href="images/be-picogui-test1-02.jpeg">one</a>.</li></ul>
+         <p>11/19/2002 - A <a href="files/ramdisk-pgui-full.gz">ramdisk</a>[731k]
+         that contains uClibc 0.9.15, busybox 0.60.4, PicoGUI CVS, & every 
+         PicoGUI app I could build.</p><ul><li>
+         Note: this ramdisk requires Networking support.</li><li>
+         here is a <a href="files/vmlinux-pgui-demo.bz2">kernel</a>[1.4M] 
+         with the above ramdisk</li><li>
+         PicoGUI starts with pgboard, omnibar, & canvastst. (It should look 
+         like <a href="images/pg-kb-ob-vt-01.jpeg">this</a> or <a 
+         href="files/pgui-final.mpg">this</a> video [608k].)</li></ul>
+<p>05/18/2003 - <a href="files/vmlinux-mw.bz2">kernel</a>[1.8M] with <a href="http://www.microwindows.org">microwindows</a> CVS, uClibc 0.9.19, busybox 0.60.5, & a lot of the demo apps that come with microwindows.</p>
+<ul>
+<li>Note: the scanning button keyboard driver and <a href="./~mouse">mouse&apos;s</a> touchscreen driver are included with this kernel.</li>
+<li>to start microwindows start nano-X and any other apps you want running. for example: <i>nano-X & nxkbd & nxterm & sleep 10000</i> starts nano-X, a keyboard app and a terminal.</li>
+<li><a href="files/ramdisk-mw.gz">here</a>[1.2M] is just the ramdisk</li>
+</ul>
+         <p>&nbsp;</p>
+         <p>e-mail me 
+         &lt;<a href="mailto:jroark@linux4.be">jroark@linux4.be</a>&gt;</p>
+         </tt>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

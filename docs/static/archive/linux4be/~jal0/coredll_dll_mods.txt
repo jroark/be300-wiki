@@ -1,0 +1,2136 @@
+name: 0144B558 (coredll.dll)     $0194A054  PHY=$00000000(V) / $00105054(Z)
+KernelRamBase = 00450000
+self: 80FFFEA8 (0144FEA8)       next: 00000000 (00450000)
+BasePtr: 03F80000 (00450000)    startip: 01F84A5C (0050FA5C)
+e32.vsize: 00080000    e32.vbase: 01F80000 (00450000)
+pmodResource: 00000000 (00450000)
+inuse: 000007FF                 calledfunc: 000007FF (00450000)
+refcnt[]: 1-2-45-7-4-2-2-2-2-3-3-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+processOwner's  processPtr 00AB98E0, procnum:00, dwVMBase: 02000000
+process0's      processPtr 00AB98E0, procnum:00, dwVMBase: 02000000
+Module adjBaseAdr: 00450000 (00000000) (00450000)
+DbgFlags: 00000000              ZonePtr: 00000000 (00450000)
+&oe: 0144FF0C (00450000)        &e32: 0144FF1C (00450000)
+o32_ptr: 03FE6570 (0144B570)
+breadcrumb: 00000000            bTrustLevel: 00000002
+wFlags: 00000000                dwNoNotify: 00000000
+------------------------------------------------------------
+ e32_unit[EXP]  rva = 0005CE70 (00567E70)    size = 000090CE  - EXPORT TABLE
+   exp_dllname   = 00060F52  exp_vermajor = 00000000  exp_verminor = 00000000
+   exp_timestamp = 3B8DBD6A  exp_flags    = 00000000
+   exp_ordbase   = 00000001  exp_eatcnt   = 00000805  exp_namecnt  = 00000571
+   exp_eat       = 0005CE98  exp_name     = 0005EEAC  exp_ordinal  = 00060470
+      Entry Point           Ord      Name
+       00015358 (000D0358)   @1       (0011F8AA) SystemStarted
+       00015634 (000D0634)   @2       (0011E44E) InitializeCriticalSection
+       00015600 (000D0600)   @3       (0011CDDB) DeleteCriticalSection
+       0001559C (000D059C)   @4       (0011D013) EnterCriticalSection
+       000154B8 (000D04B8)   @5       (0011E6ED) LeaveCriticalSection
+       00014B50 (000CFB50)   @6       (0011D11B) ExitThread
+       00014AAC (000CFAAC)   @7       (0011E9F2) PSLNotify
+       00024FB0 (000DFFB0)   @8       (0011E443) InitLocale
+       000323A4 (000ED3A4)   @9       (0011E4C2) InterlockedTestExchange
+       000323CC (000ED3CC)   @10      (0011E4AD) InterlockedIncrement
+       000323F0 (000ED3F0)   @11      (0011E484) InterlockedDecrement
+       00032384 (000ED384)   @12      (0011E499) InterlockedExchange
+       00015160 (000D0160)   @13      (0011F926) ThreadBaseFunc
+       00015230 (000D0230)   @14      (0011E825) MainThreadBaseFunc
+       00015310 (000D0310)   @15      (0011F951) TlsGetValue
+       000152E8 (000D02E8)   @16      (0011F95D) TlsSetValue
+       00015438 (000D0438)   @17      (0011DC59) GetVersionEx
+       00020110 (000DB110)   @18      (0011C84B) CompareFileTime
+       000206F0 (000DB6F0)   @19      (0011F8B8) SystemTimeToFileTime
+       000208CC (000DB8CC)   @20      (0011D18B) FileTimeToSystemTime
+       00020AB4 (000DBAB4)   @21      (0011D173) FileTimeToLocalFileTime
+       00020B30 (000DBB30)   @22      (0011E7BC) LocalFileTimeToFileTime
+       00020C90 (000DBC90)   @23      (0011D784) GetLocalTime
+       00020D10 (000DBD10)   @24      (0011F4D5) SetLocalTime
+       00020BAC (000DBBAC)   @25      (0011DB45) GetSystemTime
+       00020C04 (000DBC04)   @26      (0011F650) SetSystemTime
+       00021018 (000DC018)   @27      (0011DBFF) GetTimeZoneInformation
+       00021110 (000DC110)   @28      (0011F69E) SetTimeZoneInformation
+       00020CD0 (000DBCD0)   @29      (0011D4CC) GetCurrentFT
+       00014F44 (000CFF44)   @30      (0011E53C) IsAPIReady
+       0003C45C (000F745C)   @31      (00120944) memchr
+       00015464 (000D0464)   @32      (0011D2C2) GetAPIAddress
+       00020020 (000DB020)   @33      (0011E79D) LocalAlloc
+       0001FFA0 (000DAFA0)   @34      (0011E7F1) LocalReAlloc
+       0001FF64 (000DAF64)   @35      (0011E7FE) LocalSize
+       0001FB08 (000DAB08)   @36      (0011E7D4) LocalFree
+       0003264C (000ED64C)   @37      (0011F0E2) RemoteLocalAlloc
+       000325C4 (000ED5C4)   @38      (0011F103) RemoteLocalReAlloc
+       00032560 (000ED560)   @39      (0011F116) RemoteLocalSize
+       000324FC (000ED4FC)   @40      (0011F0F3) RemoteLocalFree
+       000324BC (000ED4BC)   @41      (0011E7A8) LocalAllocInProcess
+       00032470 (000ED470)   @42      (0011E7DE) LocalFreeInProcess
+       00032424 (000ED424)   @43      (0011E808) LocalSizeInProcess
+       0001FE84 (000DAE84)   @44      (0011DD40) HeapCreate
+       0001FB64 (000DAB64)   @45      (0011DD4B) HeapDestroy
+       0001FCFC (000DACFC)   @46      (0011DD36) HeapAlloc
+       0001FD98 (000DAD98)   @47      (0011DD60) HeapReAlloc
+       0001FC98 (000DAC98)   @48      (0011DD6C) HeapSize
+       0001FA90 (000DAA90)   @49      (0011DD57) HeapFree
+       0001FA10 (000DAA10)   @50      (0011D97A) GetProcessHeap
+       00031650 (000EC650)   @51      (0011DD75) HeapValidate
+       0001F8B8 (000DA8B8)   @52      (0011D6F9) GetHeapSnapshot
+       0000D4AC (000C84AC)   @53      (0011C4FF) CeModuleJit
+       0001FA1C (000DAA1C)   @54      (0011C83B) CompactAllHeaps
+         !! RESERVED !!      @55   
+       000425AC (000FD5AC)   @56      (00120F29) wsprintfW
+       00042558 (000FD558)   @57      (00120F33) wvsprintfW
+       0003C4A4 (000F74A4)   @58      (00120E93) wcscat
+       0003C534 (000F7534)   @59      (00120E9A) wcschr
+       0003C580 (000F7580)   @60      (00120EA1) wcscmp
+       0003C4FC (000F74FC)   @61      (00120EA8) wcscpy
+       0003C5E8 (000F75E8)   @62      (00120EAF) wcscspn
+       0003C83C (000F783C)   @63      (00120EB7) wcslen
+       0003C86C (000F786C)   @64      (00120EBE) wcsncat
+       0003C8D8 (000F78D8)   @65      (00120EC6) wcsncmp
+       0003C948 (000F7948)   @66      (00120ECE) wcsncpy
+       0003C9B4 (000F79B4)   @67      (00120122) _wcsnset
+       0003CA40 (000F7A40)   @68      (00120ED6) wcspbrk
+       0003CAF4 (000F7AF4)   @69      (00120EDE) wcsrchr
+       0003CBDC (000F7BDC)   @70      (0012012B) _wcsrev
+       0003CC94 (000F7C94)   @71      (00120133) _wcsset
+       0003CCE8 (000F7CE8)   @72      (00120EE6) wcsspn
+       0003CDB4 (000F7DB4)   @73      (00120EED) wcsstr
+       0003C650 (000F7650)   @74      (001200FF) _wcsdup
+       00004C14 (000BFC14)   @75      (00120F09) wcstombs
+       00004D00 (000BFD00)   @76      (0012093B) mbstowcs
+       0003CE38 (000F7E38)   @77      (00120EFB) wcstok
+       0003CF3C (000F7F3C)   @78      (0012015E) _wtol
+       0003D0B0 (000F80B0)   @79      (00120164) _wtoll
+       00032720 (000ED720)   @80      (0011ECE3) Random
+         !! RESERVED !!      @81   
+       0001749C (000D249C)   @82      (0011EC1B) ProfileStart
+       000174F0 (000D24F0)   @83      (0011EC28) ProfileStop
+         !! RESERVED !!      @84   
+         !! RESERVED !!      @85   
+         !! RESERVED !!      @86   
+       000363F0 (000F13F0)   @87      (0011FCF3) __C_specific_handler
+       00014E04 (000CFE04)   @88      (0011DD10) GlobalMemoryStatus
+       00015398 (000D0398)   @89      (0011F894) SystemParametersInfoW
+       0002592C (000E092C)   @90      (0011C988) CreateDIBSection
+       00025A80 (000E0A80)   @91      (0011D0E3) EqualRgn
+       00025860 (000E0860)   @92      (0011C8E8) CreateAcceleratorTableW
+       0002590C (000E090C)   @93      (0011CE61) DestroyAcceleratorTable
+       0002581C (000E081C)   @94      (0011E702) LoadAcceleratorsW
+       00032F68 (000EDF68)   @95      (0011EFE4) RegisterClassW
+       00025300 (000E0300)   @96      (0011C8AC) CopyRect
+       00025670 (000E0670)   @97      (0011D0D9) EqualRect
+       000253E4 (000E03E4)   @98      (0011E437) InflateRect
+       0002541C (000E041C)   @99      (0011E51F) IntersectRect
+       00025328 (000E0328)   @100     (0011E60B) IsRectEmpty
+       000253AC (000E03AC)   @101     (0011E982) OffsetRect
+       00025358 (000E0358)   @102     (0011EC43) PtInRect
+       000252B4 (000E02B4)   @103     (0011F5BE) SetRect
+       000252D0 (000E02D0)   @104     (0011F5C6) SetRectEmpty
+       000256D0 (000E06D0)   @105     (0011F854) SubtractRect
+       000254EC (000E04EC)   @106     (0011FA5F) UnionRect
+       0001F170 (000DA170)   @107     (0011C795) ClearCommBreak
+       0001F1AC (000DA1AC)   @108     (0011C7A4) ClearCommError
+       0001F22C (000DA22C)   @109     (0011D0EC) EscapeCommFunction
+       0001F324 (000DA324)   @110     (0011D45B) GetCommMask
+       0001F36C (000DA36C)   @111     (0011D467) GetCommModemStatus
+       0001F3B4 (000DA3B4)   @112     (0011D47A) GetCommProperties
+       0001F3FC (000DA3FC)   @113     (0011D48C) GetCommState
+       0001F444 (000DA444)   @114     (0011D499) GetCommTimeouts
+       0001F48C (000DA48C)   @115     (0011EC57) PurgeComm
+       0001F4CC (000DA4CC)   @116     (0011F356) SetCommBreak
+       0001F508 (000DA508)   @117     (0011F363) SetCommMask
+       0001F548 (000DA548)   @118     (0011F36F) SetCommState
+       0001F584 (000DA584)   @119     (0011F37C) SetCommTimeouts
+       0001F5C0 (000DA5C0)   @120     (0011F730) SetupComm
+       0001F614 (000DA614)   @121     (0011F9C5) TransmitCommChar
+       0001F654 (000DA654)   @122     (0011FC11) WaitCommEvent
+       00029DD8 (000E4DD8)   @123     (0011D089) EnumPnpIds
+       00029DB8 (000E4DB8)   @124     (0011D060) EnumDevices
+       00029DF8 (000E4DF8)   @125     (0011D576) GetDeviceKeys
+       00025BE4 (000E0BE4)   @126     (0011CB3E) CryptAcquireContextW
+       000264A8 (000E14A8)   @127     (0011CCCA) CryptReleaseContext
+       000265DC (000E15DC)   @128     (0011CC20) CryptGenKey
+       000268B0 (000E18B0)   @129     (0011CB83) CryptDeriveKey
+       00026AB0 (000E1AB0)   @130     (0011CBA3) CryptDestroyKey
+       00026C18 (000E1C18)   @131     (0011CCF0) CryptSetKeyParam
+       00026D1C (000E1D1C)   @132     (0011CC66) CryptGetKeyParam
+       00026FA0 (000E1FA0)   @133     (0011CC11) CryptExportKey
+       000270D8 (000E20D8)   @134     (0011CCBB) CryptImportKey
+       000272E4 (000E22E4)   @135     (0011CBD8) CryptEncrypt
+       00027424 (000E2424)   @136     (0011CB76) CryptDecrypt
+       0002755C (000E255C)   @137     (0011CB66) CryptCreateHash
+       000279D8 (000E29D8)   @138     (0011CCA7) CryptHashSessionKey
+       000278B8 (000E28B8)   @139     (0011CC99) CryptHashData
+       00027AE8 (000E2AE8)   @140     (0011CB92) CryptDestroyHash
+       00027CB8 (000E2CB8)   @141     (0011CD39) CryptSignHashW
+       00027E04 (000E2E04)   @142     (0011CD48) CryptVerifySignatureW
+       00026DF8 (000E1DF8)   @143     (0011CC2C) CryptGenRandom
+       00026E84 (000E1E84)   @144     (0011CC89) CryptGetUserKey
+       0002822C (000E322C)   @145     (0011CD27) CryptSetProviderW
+       00028150 (000E3150)   @146     (0011CC54) CryptGetHashParam
+       0002804C (000E304C)   @147     (0011CCDE) CryptSetHashParam
+       00027FB0 (000E2FB0)   @148     (0011CC77) CryptGetProvParam
+       00027E38 (000E2E38)   @149     (0011CD01) CryptSetProvParam
+       000283D4 (000E33D4)   @150     (0011CD13) CryptSetProviderExW
+       00028850 (000E3850)   @151     (0011CC3B) CryptGetDefaultProviderW
+       00028B18 (000E3B18)   @152     (0011CBE5) CryptEnumProviderTypesW
+       00028D78 (000E3D78)   @153     (0011CBFD) CryptEnumProvidersW
+       000263EC (000E13EC)   @154     (0011CB53) CryptContextAddRef
+       00026710 (000E1710)   @155     (0011CBC6) CryptDuplicateKey
+       000276F8 (000E26F8)   @156     (0011CBB3) CryptDuplicateHash
+       00014D60 (000CFD60)   @157     (0011C17E) AttachDebugger
+       00014CDC (000CFCDC)   @158     (0011F48C) SetInterruptEvent
+       00066540 (00FFB540)   @159     (0011E5E2) IsExiting
+       0000AF88 (000C5F88)   @160     (0011C9C7) CreateDirectoryW
+       0000AFA8 (000C5FA8)   @161     (0011F126) RemoveDirectoryW
+       0000B650 (000C6650)   @162     (0011DB64) GetTempPathW
+       0000AFC8 (000C5FC8)   @163     (0011E8C7) MoveFileW
+       0000AFE8 (000C5FE8)   @164     (0011C8A2) CopyFileW
+       0000B008 (000C6008)   @165     (0011CDFA) DeleteFileW
+       0000B048 (000C6048)   @166     (0011D63C) GetFileAttributesW
+       0000B068 (000C6068)   @167     (0011D1DE) FindFirstFileW
+       0000B0B4 (000C60B4)   @168     (0011CA23) CreateFileW
+       0000B134 (000C6134)   @169     (0011F3FD) SetFileAttributesW
+       0000B154 (000C6154)   @170     (0011EE65) ReadFile
+       0000B1C4 (000C61C4)   @171     (0011FC8E) WriteFile
+       0000B1E8 (000C61E8)   @172     (0011D66A) GetFileSize
+       0000B208 (000C6208)   @173     (0011F410) SetFilePointer
+       0000B228 (000C6228)   @174     (0011D64F) GetFileInformationByHandle
+       0000B248 (000C6248)   @175     (0011D222) FlushFileBuffers
+       0000B268 (000C6268)   @176     (0011D676) GetFileTime
+       0000B288 (000C6288)   @177     (0011F41F) SetFileTime
+       0000B2A8 (000C62A8)   @178     (0011F3DC) SetEndOfFile
+       0000B2C8 (000C62C8)   @179     (0011CEAC) DeviceIoControl
+       0000B350 (000C6350)   @180     (0011D1C3) FindClose
+       0000B370 (000C6370)   @181     (0011D1ED) FindNextFileW
+       0000B390 (000C6390)   @182     (0011C761) CheckPassword
+       0000B3B0 (000C63B0)   @183     (0011CDC7) DeleteAndRenameFile
+       0000B028 (000C6028)   @184     (0011D597) GetDiskFreeSpaceExW
+       0001F124 (000DA124)   @185     (0011E617) IsValidCodePage
+       00024DB0 (000DFDB0)   @186     (0011D2BB) GetACP
+       00024DA8 (000DFDA8)   @187     (0011D883) GetOEMCP
+       0001F080 (000DA080)   @188     (0011D32B) GetCPInfo
+       00024B64 (000DFB64)   @189     (0011F2A2) SetACP
+       00024A5C (000DFA5C)   @190     (0011F51D) SetOEMCP
+       0001EFCC (000D9FCC)   @191     (0011E59B) IsDBCSLeadByte
+       0001EF44 (000D9F44)   @192     (0011E5AA) IsDBCSLeadByteEx
+       0001EFEC (000D9FEC)   @193     (00120482) iswctype
+       0001753C (000D253C)   @194     (00120C03) towlower
+       0001D9E4 (000D89E4)   @195     (00120C0C) towupper
+       0001EC40 (000D9C40)   @196     (0011E8F8) MultiByteToWideChar
+       0001DD58 (000D8D58)   @197     (0011FC5C) WideCharToMultiByte
+       0001915C (000D415C)   @198     (0011C85B) CompareStringW
+       0001D228 (000D8228)   @199     (0011E6D3) LCMapStringW
+       00024460 (000DF460)   @200     (0011D791) GetLocaleInfoW
+       00022538 (000DD538)   @201     (0011F4E2) SetLocaleInfoW
+       0002D910 (000E8910)   @202     (0011DBF0) GetTimeFormatW
+       0002D1D4 (000E81D4)   @203     (0011D537) GetDateFormatW
+       0002C520 (000E7520)   @204     (0011D872) GetNumberFormatW
+       0002BE94 (000E6E94)   @205     (0011D4B9) GetCurrencyFormatW
+       00021DE8 (000DCDE8)   @206     (0011D028) EnumCalendarInfoW
+       0002201C (000DD01C)   @207     (0011D0BC) EnumTimeFormatsW
+       00021464 (000DC464)   @208     (0011D04F) EnumDateFormatsW
+       00024660 (000DF660)   @209     (0011E627) IsValidLocale
+       0002222C (000DD22C)   @210     (0011C88D) ConvertDefaultLocale
+       00022224 (000DD224)   @211     (0011DAB0) GetSystemDefaultLangID
+       00022224 (000DD224)   @212     (0011DC44) GetUserDefaultLangID
+       0002221C (000DD21C)   @213     (0011DA9B) GetSystemDefaultLCID
+       00024C6C (000DFC6C)   @214     (0011F623) SetSystemDefaultLCID
+       0002221C (000DD21C)   @215     (0011DC31) GetUserDefaultLCID
+       0001D724 (000D8724)   @216     (0011DA64) GetStringTypeW
+       0001D610 (000D8610)   @217     (0011DA53) GetStringTypeExW
+       0001A3A4 (000D53A4)   @218     (0011D26E) FoldStringW
+       00022100 (000DD100)   @219     (0011D0A9) EnumSystemLocalesW
+       0001D79C (000D879C)   @220     (0011D094) EnumSystemCodePagesW
+       0001DB9C (000D8B9C)   @221     (0011C707) CharLowerW
+       0001DAB8 (000D8AB8)   @222     (0011C6F8) CharLowerBuffW
+       0001DA54 (000D8A54)   @223     (0011C726) CharUpperBuffW
+       0001DB1C (000D8B1C)   @224     (0011C735) CharUpperW
+       0001D784 (000D8784)   @225     (0011C71C) CharPrevW
+       0001D764 (000D8764)   @226     (0011C712) CharNextW
+       00019C04 (000D4C04)   @227     (00120921) lstrcmpW
+       00019B98 (000D4B98)   @228     (0012092A) lstrcmpiW
+       00017610 (000D2610)   @229     (00120118) _wcsnicmp
+       000175AC (000D25AC)   @230     (00120107) _wcsicmp
+       0001DB9C (000D8B9C)   @231     (00120110) _wcslwr
+       0001DB1C (000D8B1C)   @232     (0012013B) _wcsupr
+       0002447C (000DF47C)   @233     (0011CD5E) DBCanonicalize
+       0002AC5C (000E5C5C)   @234     (0011D287) FormatMessageW
+       0000B3D0 (000C63D0)   @235     (0011F030) RegisterDevice
+       0000B3F0 (000C63F0)   @236     (0011CE50) DeregisterDevice
+       0000B410 (000C6410)   @237     (0011E737) LoadFSD
+       0000B4B0 (000C64B0)   @238     (0011F55D) SetPassword
+       0000B4D0 (000C64D0)   @239     (0011D8F9) GetPasswordActive
+       0000B4F0 (000C64F0)   @240     (0011F569) SetPasswordActive
+       0000B510 (000C6510)   @241     (0011D15B) FileSystemPowerFunction
+       0000B530 (000C6530)   @242     (0011C7E3) CloseAllFileHandles
+       0000B550 (000C6550)   @243     (0011EE6E) ReadFileWithSeek
+       0000B670 (000C6670)   @244     (0011C7CD) CloseAllDeviceHandles
+       0000B690 (000C6690)   @245     (0011C999) CreateDeviceHandle
+       000145F8 (000CF5F8)   @246     (0011CB2E) CreateWindowExW
+       00012378 (000CD378)   @247     (0011F6F5) SetWindowPos
+       00014268 (000CF268)   @248     (0011DC99) GetWindowRect
+       00014230 (000CF230)   @249     (0011D3D8) GetClientRect
+       000141C4 (000CF1C4)   @250     (0011E52D) InvalidateRect
+       00014158 (000CF158)   @251     (0011DC74) GetWindow
+       00013F9C (000CEF9C)   @252     (0011FC70) WindowFromPoint
+       00013F70 (000CEF70)   @253     (0011C780) ChildWindowFromPoint
+       00013F04 (000CEF04)   @254     (0011C7B3) ClientToScreen
+       00013EE4 (000CEEE4)   @255     (0011F214) ScreenToClient
+       00013EC4 (000CEEC4)   @256     (0011F70F) SetWindowTextW
+       00013EA4 (000CEEA4)   @257     (0011DCC9) GetWindowTextW
+       00013E38 (000CEE38)   @258     (0011F6E6) SetWindowLongW
+       00013E00 (000CEE00)   @259     (0011DC8A) GetWindowLongW
+       00013D94 (000CED94)   @260     (0011C225) BeginPaint
+       00013D28 (000CED28)   @261     (0011D00A) EndPaint
+       00013CBC (000CECBC)   @262     (0011D517) GetDC
+       00013C30 (000CEC30)   @263     (0011F0BA) ReleaseDC
+       000123F8 (000CD3F8)   @264     (0011CDA9) DefWindowProcW
+       00013BD0 (000CEBD0)   @265     (0011CE9E) DestroyWindow
+       00013BB0 (000CEBB0)   @266     (0011F77D) ShowWindow
+       00013B90 (000CEB90)   @267     (0011FAC5) UpdateWindow
+       00013B70 (000CEB70)   @268     (0011F553) SetParent
+       00013B04 (000CEB04)   @269     (0011D8EF) GetParent
+       00013AC4 (000CEAC4)   @270     (0011DC7E) GetWindowDC
+       000138A4 (000CE8A4)   @271     (0011E635) IsWindow
+       00013768 (000CE768)   @272     (0011E8D1) MoveWindow
+       00013748 (000CE748)   @273     (0011DC24) GetUpdateRgn
+       00013728 (000CE728)   @274     (0011DC16) GetUpdateRect
+       00013708 (000CE708)   @275     (0011C257) BringWindowToTop
+       000136E8 (000CE6E8)   @276     (0011DCB4) GetWindowTextLengthW
+       000136C8 (000CE6C8)   @277     (0011E578) IsChild
+       0001363C (000CE63C)   @278     (0011FAD2) ValidateRect
+       000130D4 (000CE0D4)   @279     (0011F5DE) SetScrollInfo
+       000130B4 (000CE0B4)   @280     (0011F5EC) SetScrollPos
+       00013090 (000CE090)   @281     (0011F5F9) SetScrollRange
+       00013070 (000CE070)   @282     (0011DA14) GetScrollInfo
+       00012FC0 (000CDFC0)   @283     (0011D3CA) GetClassNameW
+       00012FA0 (000CDFA0)   @284     (0011E897) MapWindowPoints
+       000143E0 (000CF3E0)   @285     (0011C281) CallWindowProcW
+       00012BDC (000CDBDC)   @286     (0011D216) FindWindowW
+       00012B18 (000CDB18)   @287     (0011CFE1) EnableWindow
+       00012AF8 (000CDAF8)   @288     (0011E63E) IsWindowEnabled
+       00011DF0 (000CCDF0)   @289     (0011F22C) ScrollWindowEx
+       00011B1C (000CCB1C)   @290     (0011EBD3) PostThreadMessageW
+       00011AFC (000CCAFC)   @291     (0011D0CD) EnumWindows
+       00011A3C (000CCA3C)   @292     (0011DCED) GetWindowThreadProcessId
+       00011870 (000CC870)   @293     (0011F060) RegisterSIPanel
+       00011850 (000CC850)   @294     (0011EED7) RectangleAnimation
+       00033AEC (000EEAEC)   @295     (0011F1D5) SHGetSpecialFolderPath
+       00011810 (000CC810)   @296     (0011DD23) GwesPowerOffSystem
+       000117D0 (000CC7D0)   @297     (0011C1A5) BatteryDrvrGetLevels
+       000117B0 (000CC7B0)   @298     (0011C1BA) BatteryDrvrSupportsChangeNotification
+       0001157C (000CC57C)   @299     (0011F2B9) SetAssociatedMenu
+       0001155C (000CC55C)   @300     (0011D2E0) GetAssociatedMenu
+       00016AF0 (000D1AF0)   @301     (0011EAC2) PegOidGetInfo
+       00016B40 (000D1B40)   @302     (0011EA5D) PegFindFirstDatabase
+       00016B88 (000D1B88)   @303     (0011EA72) PegFindNextDatabase
+       00016BC8 (000D1BC8)   @304     (0011EA29) PegCreateDatabase
+       00016C64 (000D1C64)   @305     (0011EB3A) PegSetDatabaseInfo
+       00016D0C (000D1D0C)   @306     (0011EAD0) PegOpenDatabase
+       00016D90 (000D1D90)   @307     (0011EA3B) PegDeleteDatabase
+       00016DB8 (000D1DB8)   @308     (0011EB2A) PegSeekDatabase
+       00016E24 (000D1E24)   @309     (0011EA4D) PegDeleteRecord
+       00016EC4 (000D1EC4)   @310     (0011EAE0) PegReadRecordProps
+       00016F40 (000D1F40)   @311     (0011EB64) PegWriteRecordProps
+       00016AF0 (000D1AF0)   @312     (0011C518) CeOidGetInfo
+       00016B40 (000D1B40)   @313     (0011C350) CeFindFirstDatabase
+       00016B88 (000D1B88)   @314     (0011C37A) CeFindNextDatabase
+       00016BC8 (000D1BC8)   @315     (0011C2D6) CeCreateDatabase
+       00016C64 (000D1C64)   @316     (0011C609) CeSetDatabaseInfo
+       00016D0C (000D1D0C)   @317     (0011C534) CeOpenDatabase
+       00016D90 (000D1D90)   @318     (0011C2FA) CeDeleteDatabase
+       00016DB8 (000D1DB8)   @319     (0011C5FA) CeSeekDatabase
+       00016E24 (000D1E24)   @320     (0011C31E) CeDeleteRecord
+       00016EC4 (000D1EC4)   @321     (0011C554) CeReadRecordProps
+       00016F40 (000D1F40)   @322     (0011C6E5) CeWriteRecordProps
+       00016FB0 (000D1FB0)   @323     (0011DA3F) GetStoreInformation
+       00017070 (000D2070)   @324     (0011C40B) CeGetReplChangeMask
+       00017090 (000D2090)   @325     (0011C658) CeSetReplChangeMask
+       000170B0 (000D20B0)   @326     (0011C3F5) CeGetReplChangeBitsEx
+       000170D0 (000D20D0)   @327     (0011C642) CeSetReplChangeBitsEx
+       000170F0 (000D20F0)   @328     (0011C2A6) CeClearReplChangeBitsEx
+       00017110 (000D2110)   @329     (0011C41F) CeGetReplOtherBitsEx
+       00017130 (000D2130)   @330     (0011C66C) CeSetReplOtherBitsEx
+       00017150 (000D2150)   @331     (0011C57A) CeRegisterFileSystemNotification
+       00017170 (000D2170)   @332     (0011C59B) CeRegisterReplNotification
+       000171B0 (000D21B0)   @333     (0011EFB9) RegisterAFS
+       00017190 (000D2190)   @334     (0011F03F) RegisterHiddenAFS
+       000171D0 (000D21D0)   @335     (0011CE30) DeregisterAFS
+       000171F0 (000D21F0)   @336     (0011DAD5) GetSystemMemoryDivision
+       00017210 (000D2210)   @337     (0011F638) SetSystemMemoryDivision
+       00017230 (000D2230)   @338     (0011EFC5) RegisterAFSName
+       00017250 (000D2250)   @339     (0011CE3E) DeregisterAFSName
+       00017270 (000D2270)   @340     (0011C291) CeChangeDatabaseLCID
+       00017290 (000D2290)   @341     (0011CF5F) DumpFileSystemHeap
+       00032774 (000ED774)   @342     (0011ED11) RasDial
+       000327A0 (000ED7A0)   @343     (0011EDE9) RasHangup
+       000327A0 (000ED7A0)   @344     (0011EDDF) RasHangUp
+       000327C0 (000ED7C0)   @345     (0011ED3C) RasEnumEntries
+       000327E4 (000ED7E4)   @346     (0011ED88) RasGetEntryDialParams
+       00032804 (000ED804)   @347     (0011EE24) RasSetEntryDialParams
+       00032824 (000ED824)   @348     (0011ED9E) RasGetEntryProperties
+       00032850 (000ED850)   @349     (0011EE3A) RasSetEntryProperties
+       0003287C (000ED87C)   @350     (0011EE50) RasValidateEntryName
+       0003289C (000ED89C)   @351     (0011ECEA) RasDeleteEntry
+       000328BC (000ED8BC)   @352     (0011EE00) RasRenameEntry
+       000328DC (000ED8DC)   @353     (0011ED19) RasEnumConnections
+       000328FC (000ED8FC)   @354     (0011ED4B) RasGetConnectStatus
+       0003291C (000ED91C)   @355     (0011ED73) RasGetEntryDevConfig
+       00032940 (000ED940)   @356     (0011EE0F) RasSetEntryDevConfig
+       00032960 (000ED960)   @357     (0011EDF3) RasIOControl
+       00047134 (00102134)   @358     (001204F3) lineClose
+       00047154 (00102154)   @359     (00120527) lineDeallocateCall
+       00047174 (00102174)   @360     (00120553) lineDrop
+       00047194 (00102194)   @361     (00120612) lineGetDevCaps
+       000471B8 (001021B8)   @362     (00120621) lineGetDevConfig
+       000471D8 (001021D8)   @363     (001206B6) lineGetTranslateCaps
+       00048654 (00103654)   @364     (001206E0) lineInitialize
+       000471F8 (001021F8)   @365     (00120700) lineMakeCall
+       0004721C (0010221C)   @366     (00120730) lineNegotiateAPIVersion
+       00047248 (00102248)   @367     (00120760) lineOpen
+       0004728C (0010228C)   @368     (00120833) lineSetDevConfig
+       000472AC (001022AC)   @369     (00120865) lineSetStatusMessages
+       000487CC (001037CC)   @370     (001208C1) lineShutdown
+       000472CC (001022CC)   @371     (001208DB) lineTranslateAddress
+       00047350 (00102350)   @372     (00120632) lineGetID
+       00047300 (00102300)   @373     (001208F0) lineTranslateDialog
+       00047324 (00102324)   @374     (00120512) lineConfigDialogEdit
+       0004737C (0010237C)   @375     (001204B2) lineAddProvider
+       00015814 (000D0814)   @376     (0011C18D) AudioUpdateFromRegistry
+       000156F0 (000D06F0)   @377     (00120B33) sndPlaySoundW
+       00015780 (000D0780)   @378     (0011EB89) PlaySoundW
+       00015980 (000D0980)   @379     (00120D81) waveOutGetNumDevs
+       000158B4 (000D08B4)   @380     (00120D4E) waveOutGetDevCaps
+       00015AC0 (000D0AC0)   @381     (00120DCD) waveOutGetVolume
+       00015CFC (000D0CFC)   @382     (00120E5E) waveOutSetVolume
+       000158FC (000D08FC)   @383     (00120D60) waveOutGetErrorText
+       00015884 (000D0884)   @384     (00120D41) waveOutClose
+       00015BDC (000D0BDC)   @385     (00120E06) waveOutPrepareHeader
+       00015D38 (000D0D38)   @386     (00120E6F) waveOutUnprepareHeader
+       00015D80 (000D0D80)   @387     (00120E86) waveOutWrite
+       00015BAC (000D0BAC)   @388     (00120DF9) waveOutPause
+       00015C54 (000D0C54)   @389     (00120E28) waveOutRestart
+       00015C24 (000D0C24)   @390     (00120E1B) waveOutReset
+       00015854 (000D0854)   @391     (00120D30) waveOutBreakLoop
+       00015A78 (000D0A78)   @392     (00120DBA) waveOutGetPosition
+       00015A00 (000D0A00)   @393     (00120D93) waveOutGetPitch
+       00015C84 (000D0C84)   @394     (00120E37) waveOutSetPitch
+       00015A3C (000D0A3C)   @395     (00120DA3) waveOutGetPlaybackRate
+       00015CC0 (000D0CC0)   @396     (00120E47) waveOutSetPlaybackRate
+       00015944 (000D0944)   @397     (00120D74) waveOutGetID
+       00015AFC (000D0AFC)   @398     (00120DDE) waveOutMessage
+       00015B4C (000D0B4C)   @399     (00120DED) waveOutOpen
+       00015F0C (000D0F0C)   @400     (00120CA7) waveInGetNumDevs
+       00015E40 (000D0E40)   @401     (00120C77) waveInGetDevCaps
+       00015E88 (000D0E88)   @402     (00120C88) waveInGetErrorText
+       00015E10 (000D0E10)   @403     (00120C6B) waveInClose
+       00016084 (000D1084)   @404     (00120CE3) waveInPrepareHeader
+       0001615C (000D115C)   @405     (00120D1A) waveInUnprepareHeader
+       00015DC8 (000D0DC8)   @406     (00120C5B) waveInAddBuffer
+       000160FC (000D10FC)   @407     (00120D03) waveInStart
+       0001612C (000D112C)   @408     (00120D0F) waveInStop
+       000160CC (000D10CC)   @409     (00120CF7) waveInReset
+       00015F8C (000D0F8C)   @410     (00120CB8) waveInGetPosition
+       00015ED0 (000D0ED0)   @411     (00120C9B) waveInGetID
+       00015FD4 (000D0FD4)   @412     (00120CCA) waveInMessage
+       00016024 (000D1024)   @413     (00120CD8) waveInOpen
+       000161A4 (000D11A4)   @414     (0012017B) acmDriverAdd
+       000161FC (000D11FC)   @415     (00120188) acmDriverClose
+       00016238 (000D1238)   @416     (00120197) acmDriverDetails
+       00016280 (000D1280)   @417     (001201A8) acmDriverEnum
+       000162C8 (000D12C8)   @418     (001201B6) acmDriverID
+       00016310 (000D1310)   @419     (001201C2) acmDriverMessage
+       00016360 (000D1360)   @420     (001201D3) acmDriverOpen
+       000163A8 (000D13A8)   @421     (001201E1) acmDriverPriority
+       000163F0 (000D13F0)   @422     (001201F3) acmDriverRemove
+       0001642C (000D142C)   @423     (00120203) acmFilterChoose
+       0001645C (000D145C)   @424     (00120213) acmFilterDetails
+       000164A4 (000D14A4)   @425     (00120224) acmFilterEnum
+       000164FC (000D14FC)   @426     (00120232) acmFilterTagDetails
+       00016544 (000D1544)   @427     (00120246) acmFilterTagEnum
+       0001659C (000D159C)   @428     (00120257) acmFormatChoose
+       000165CC (000D15CC)   @429     (00120267) acmFormatDetails
+       00016614 (000D1614)   @430     (00120278) acmFormatEnum
+       0001666C (000D166C)   @431     (00120286) acmFormatSuggest
+       000166C4 (000D16C4)   @432     (00120297) acmFormatTagDetails
+       0001670C (000D170C)   @433     (001202AB) acmFormatTagEnum
+       00016764 (000D1764)   @434     (001202D5) acmStreamClose
+       000167A0 (000D17A0)   @435     (001202E4) acmStreamConvert
+       000167E8 (000D17E8)   @436     (001202F5) acmStreamMessage
+       00016838 (000D1838)   @437     (00120306) acmStreamOpen
+       000168A8 (000D18A8)   @438     (00120314) acmStreamPrepareHeader
+       000168F0 (000D18F0)   @439     (0012032B) acmStreamReset
+       0001692C (000D192C)   @440     (0012033A) acmStreamSize
+       0001697C (000D197C)   @441     (00120348) acmStreamUnprepareHeader
+       000169C4 (000D19C4)   @442     (001202BC) acmGetVersion
+       00016A44 (000D1A44)   @443     (001202CA) acmMetrics
+       000358B8 (000F08B8)   @444     (0011FB3F) WNetAddConnection3W
+       0003590C (000F090C)   @445     (0011FB53) WNetCancelConnection2W
+       0003598C (000F098C)   @446     (0011FB78) WNetConnectionDialog1W
+       00035950 (000F0950)   @447     (0011FB8F) WNetDisconnectDialog
+       000359C0 (000F09C0)   @448     (0011FBA4) WNetDisconnectDialog1W
+       000359F4 (000F09F4)   @449     (0011FBCD) WNetGetConnectionW
+       00035A38 (000F0A38)   @450     (0011FBE0) WNetGetUniversalNameW
+       00035A84 (000F0A84)   @451     (0011FBF6) WNetGetUserW
+       00035AC8 (000F0AC8)   @452     (0011FC03) WNetOpenEnumW
+       00035B68 (000F0B68)   @453     (0011FB6A) WNetCloseEnum
+       00035B1C (000F0B1C)   @454     (0011FBBB) WNetEnumResourceW
+       00032BE4 (000EDBE4)   @455     (0011EEFD) RegCloseKey
+       00032C70 (000EDC70)   @456     (0011EF15) RegCreateKeyExW
+       00032D00 (000EDD00)   @457     (0011EF25) RegDeleteKeyW
+       00032D20 (000EDD20)   @458     (0011EF33) RegDeleteValueW
+       00032D40 (000EDD40)   @459     (0011EF51) RegEnumValueW
+       00032D7C (000EDD7C)   @460     (0011EF43) RegEnumKeyExW
+       00032DB8 (000EDDB8)   @461     (0011EF6B) RegOpenKeyExW
+       00032E28 (000EDE28)   @462     (0011EF79) RegQueryInfoKeyW
+       00032E84 (000EDE84)   @463     (0011EF8A) RegQueryValueExW
+       00032EFC (000EDEFC)   @464     (0011EFAA) RegSetValueExW
+       00032F28 (000EDF28)   @465     (0011EF09) RegCopyFile
+       00032F48 (000EDF48)   @466     (0011EF9B) RegRestoreFile
+       000172B0 (000D22B0)   @467     (0011EB4D) PegSetUserNotification
+       0001739C (000D239C)   @468     (0011EA10) PegClearUserNotification
+       000173BC (000D23BC)   @469     (0011EB1A) PegRunAppAtTime
+       000173DC (000D23DC)   @470     (0011EB09) PegRunAppAtEvent
+       000173FC (000D23FC)   @471     (0011EAA8) PegHandleAppNotifications
+       0001741C (000D241C)   @472     (0011EA86) PegGetUserNotificationPreferences
+       000172B0 (000D22B0)   @473     (0011C6A8) CeSetUserNotification
+       0001739C (000D239C)   @474     (0011C2BE) CeClearUserNotification
+       000173BC (000D23BC)   @475     (0011C5EB) CeRunAppAtTime
+       000173DC (000D23DC)   @476     (0011C5DB) CeRunAppAtEvent
+       000173FC (000D23FC)   @477     (0011C4AF) CeHandleAppNotifications
+       0001741C (000D241C)   @478     (0011C48E) CeGetUserNotificationPreferences
+       0001743C (000D243C)   @479     (0011C33D) CeEventHasOccurred
+       00034B30 (000EFB30)   @480     (0011F73A) ShellExecuteEx
+       00032F88 (000EDF88)   @481     (0011F757) Shell_NotifyIcon
+       00033C00 (000EEC00)   @482     (0011F1B3) SHGetFileInfo
+       00032FD0 (000EDFD0)   @483     (0011F177) SHAddToRecentDocs
+       00033A08 (000EEA08)   @484     (0011F1A2) SHCreateShortcut
+       00033598 (000EE598)   @485     (0011F1C1) SHGetShortcutTarget
+       00034324 (000EF324)   @486     (0011F1FB) SHShowOutOfMemory
+       000341C8 (000EF1C8)   @487     (0011F1EC) SHLoadDIBitmap
+       00030040 (000EB040)   @488     (0011D8BC) GetOpenFileNameW
+       00030024 (000EB024)   @489     (0011DA03) GetSaveFileNameW
+       0000B6D0 (000C66D0)   @490     (0011EC94) QueryAPISetID
+       0000B7B4 (000C67B4)   @491     (0011F902) TerminateThread
+       0000F934 (000CA934)   @492     (0011CB21) CreateThread
+       0000F89C (000CA89C)   @493     (0011CACC) CreateProcessW
+       0000B7D4 (000C67D4)   @494     (0011D0FF) EventModify
+       0000B8C4 (000C68C4)   @495     (0011C9D8) CreateEventW
+       0000B930 (000C6930)   @496     (0011F823) Sleep
+       0000B9F8 (000C69F8)   @497     (0011FC48) WaitForSingleObject
+       0000B98C (000C698C)   @498     (0011FC31) WaitForMultipleObjects
+       0000BA74 (000C6A74)   @499     (0011F861) SuspendThread
+       0000BAC4 (000C6AC4)   @500     (0011F160) ResumeThread
+         !! RESERVED !!      @501  
+       0000BB04 (000C6B04)   @502     (0011F66B) SetThreadContext
+       0000F540 (000CA540)   @503     (0011FC1F) WaitForDebugEvent
+       0000F5AC (000CA5AC)   @504     (0011C87A) ContinueDebugEvent
+       0000F618 (000CA618)   @505     (0011CD7E) DebugActiveProcess
+       0000F658 (000CA658)   @506     (0011EE7F) ReadProcessMemory
+       0000F67C (000CA67C)   @507     (0011FCAA) WriteProcessMemory
+       0000F638 (000CA638)   @508     (0011D233) FlushInstructionCache
+       0000F6A0 (000CA6A0)   @509     (0011E9B3) OpenProcess
+       0000F70C (000CA70C)   @510     (0011CF72) DumpKCallProfile
+       0000F768 (000CA768)   @511     (0011F8CD) THCreateSnapshot
+       0000F7D4 (000CA7D4)   @512     (0011F8DE) THGrow
+       0000F840 (000CA840)   @513     (0011E959) NotifyForceCleanboot
+       0000BB24 (000C6B24)   @514     (0011F67C) SetThreadPriority
+       0000BB9C (000C6B9C)   @515     (0011DBC2) GetThreadPriority
+       0000BDC8 (000C6DC8)   @516     (0011D777) GetLastError
+       0000BD6C (000C6D6C)   @517     (0011F4C8) SetLastError
+       0000BE34 (000C6E34)   @518     (0011D607) GetExitCodeThread
+       0000BE54 (000C6E54)   @519     (0011D5F4) GetExitCodeProcess
+       0000BE74 (000C6E74)   @520     (0011F949) TlsCall
+       0000BEE0 (000C6EE0)   @521     (0011E547) IsBadCodePtr
+       0000BF54 (000C6F54)   @522     (0011E55D) IsBadReadPtr
+       0000BFCC (000C6FCC)   @523     (0011E56A) IsBadWritePtr
+       0000C044 (000C7044)   @524     (0011FAFE) VirtualAlloc
+       0000C0B0 (000C70B0)   @525     (0011FB17) VirtualFree
+       0000C11C (000C711C)   @526     (0011FB23) VirtualProtect
+       0000C188 (000C7188)   @527     (0011FB32) VirtualQuery
+       0000C2CC (000C72CC)   @528     (0011E76D) LoadLibraryW
+       0000C3A4 (000C73A4)   @529     (0011D296) FreeLibrary
+       0000C4E8 (000C74E8)   @530     (0011D94F) GetProcAddressW
+       0000C5C0 (000C75C0)   @531     (0011D1FB) FindResource
+       0000C5C0 (000C75C0)   @532     (0011D208) FindResourceW
+       0000C62C (000C762C)   @533     (0011E784) LoadResource
+       0000C698 (000C7698)   @534     (0011F814) SizeofResource
+       0000C8B4 (000C78B4)   @535     (0011DBE3) GetTickCount
+       0000C920 (000C7920)   @536     (0011D99F) GetProcessVersion
+       0000C98C (000C798C)   @537     (0011D7EE) GetModuleFileNameW
+       0000CA64 (000C7A64)   @538     (0011ECA2) QueryPerformanceCounter
+       0000CAD0 (000C7AD0)   @539     (0011ECBA) QueryPerformanceFrequency
+       0000CB9C (000C7B9C)   @540     (0011D27A) ForcePageout
+       0000CC68 (000C7C68)   @541     (0011E9D3) OutputDebugStringW
+       0000CCC4 (000C7CC4)   @542     (0011DAC7) GetSystemInfo
+       0000CD20 (000C7D20)   @543     (0011ECD4) RaiseException
+       0000F9AC (000CA9AC)   @544     (0011F8F1) TerminateProcess
+       0000CD60 (000C7D60)   @545     (0011E90C) NKDbgPrintfW
+       0000CDD0 (000C7DD0)   @546     (0011F01F) RegisterDbgZones
+       0000CE3C (000C7E3C)   @547     (0011F3A3) SetDaylightTime
+       0000CE98 (000C7E98)   @548     (0011CA10) CreateFileMappingW
+       0000D0D4 (000C80D4)   @549     (0011E87A) MapViewOfFile
+       0000CF90 (000C7F90)   @550     (0011FA75) UnmapViewOfFile
+       0000CFFC (000C7FFC)   @551     (0011D249) FlushViewOfFile
+       0000CF10 (000C7F10)   @552     (0011C9E5) CreateFileForMapping
+       0000B84C (000C684C)   @553     (0011C806) CloseHandle
+       0000D15C (000C815C)   @554     (0011E865) MapUncompressedFileW
+       0000D2B8 (000C82B8)   @555     (0011CA72) CreateMutexW
+       0000D240 (000C8240)   @556     (0011F0C4) ReleaseMutex
+       0000D1C8 (000C81C8)   @557     (0011E66F) KernelIoControl
+       0000D3B0 (000C83B0)   @558     (0011C128) AddEventAccess
+       0000D3D0 (000C83D0)   @559     (0011C8DB) CreateAPISet
+       0000D440 (000C8440)   @560     (0011FB0B) VirtualCopy
+       0000D518 (000C8518)   @561     (0011F912) ThreadAttachAllDLLs
+       0000D574 (000C8574)   @562     (0011F935) ThreadDetachAllDLLs
+       0000D5D0 (000C85D0)   @563     (0011FA32) U_ropen
+       0000D63C (000C863C)   @564     (0011FA3A) U_rread
+       0000D6A8 (000C86A8)   @565     (0011FA42) U_rwrite
+       0000D714 (000C8714)   @566     (0011FA29) U_rlseek
+       0000D780 (000C8780)   @567     (0011FA20) U_rclose
+       0000D7EC (000C87EC)   @568     (0011E92B) NKvDbgPrintfW
+       0000D848 (000C8848)   @569     (0011EC34) ProfileSyscall
+       0000D8A4 (000C88A4)   @570     (0011D9C0) GetRealTime
+       0000D910 (000C8910)   @571     (0011F5B2) SetRealTime
+       0000D97C (000C897C)   @572     (0011EC06) ProcessDetachAllDLLs
+       0000D9D8 (000C89D8)   @573     (0011D14B) ExtractResource
+       0000DA44 (000C8A44)   @574     (0011E65E) KernExtractIcons
+       0000DAB4 (000C8AB4)   @575     (0011D9F4) GetRomFileInfo
+       0000DB20 (000C8B20)   @576     (0011D9E4) GetRomFileBytes
+       0000DB90 (000C8B90)   @577     (0011C268) CacheSync
+       0000DBEC (000C8BEC)   @578     (0011C148) AddTrackedItem
+       0000DC6C (000C8C6C)   @579     (0011CE1E) DeleteTrackedItem
+       0000DCD8 (000C8CD8)   @580     (0011EBF5) PrintTrackedItem
+       0000DD44 (000C8D44)   @581     (0011D715) GetKPhys
+       0000DDB0 (000C8DB0)   @582     (0011DD06) GiveKPhys
+       0000DE1C (000C8E1C)   @583     (0011F3E9) SetExceptionHandler
+       0000DE78 (000C8E78)   @584     (0011F080) RegisterTrackedItem
+       0000DEE4 (000C8EE4)   @585     (0011D1B1) FilterTrackedItem
+       0000DF40 (000C8F40)   @586     (0011F4A7) SetKernelAlarm
+       0000DF9C (000C8F9C)   @587     (0011EEEA) RefreshKernelAlarm
+         !! RESERVED !!      @588  
+       0000DFF8 (000C8FF8)   @589     (0011C812) CloseProcOE
+       0000E054 (000C9054)   @590     (0011F448) SetGwesOOMEvent
+       0000E0B4 (000C90B4)   @591     (0011F834) StringCompress
+       0000E120 (000C9120)   @592     (0011F843) StringDecompress
+       0000E18C (000C918C)   @593     (0011C230) BinaryCompress
+       0000E1F8 (000C91F8)   @594     (0011C23F) BinaryDecompress
+       0000E268 (000C9268)   @595     (0011E468) InputDebugCharW
+       0000E2D4 (000C92D4)   @596     (0011F8E5) TakeCritSec
+       0000E330 (000C9330)   @597     (0011E6E0) LeaveCritSec
+       0000E38C (000C938C)   @598     (0011E846) MapPtrToProcess
+       0000E3F8 (000C93F8)   @599     (0011E856) MapPtrUnsecure
+       0000E464 (000C9464)   @600     (0011D95F) GetProcFromPtr
+       0000E4D0 (000C94D0)   @601     (0011E554) IsBadPtr
+       0000E53C (000C953C)   @602     (0011D92F) GetProcAddrBits
+       0000E5A8 (000C95A8)   @603     (0011D619) GetFSHeapInfo
+       0000E614 (000C9614)   @604     (0011E9BF) OtherThreadsRunning
+       0000E680 (000C9680)   @605     (0011E6B5) KillAllOtherThreads
+       0000E6DC (000C96DC)   @606     (0011D8CD) GetOwnerProcess
+       0000E748 (000C9748)   @607     (0011D351) GetCallerProcess
+       0000E7B4 (000C97B4)   @608     (0011D709) GetIdleTime
+       0000E820 (000C9820)   @609     (0011F4F1) SetLowestScheduledPriority
+       0000E88C (000C988C)   @610     (0011E5EC) IsPrimaryThread
+       0000E8F8 (000C98F8)   @611     (0011F597) SetProcPermissions
+       0000E964 (000C9964)   @612     (0011D4EA) GetCurrentPermissions
+       00029964 (000E4964)   @613     (0011E5CC) IsEncryptionPermitted
+       0000EAA8 (000C9AA8)   @614     (0011F68E) SetTimeZoneBias
+       0000EB04 (000C9B04)   @615     (0011F332) SetCleanRebootFlag
+       0000EB60 (000C9B60)   @616     (0011C95B) CreateCrit
+       0000EBCC (000C9BCC)   @617     (0011EBE6) PowerOffSystem
+       0000EC28 (000C9C28)   @618     (0011F3B3) SetDbgZone
+       0000EC98 (000C9C98)   @619     (0011FA10) TurnOnProfiling
+       0000ECF4 (000C9CF4)   @620     (0011F9FF) TurnOffProfiling
+       0000BC34 (000C6C34)   @621     (0011C681) CeSetThreadPriority
+       0000BC14 (000C6C14)   @622     (0011C434) CeGetThreadPriority
+       0000ED50 (000C9D50)   @623     (0011E919) NKTerminateThread
+       0000EDAC (000C9DAC)   @624     (0011D96E) GetProcName
+       0000EE18 (000C9E18)   @625     (0011F46C) SetHandleOwner
+       0000EE84 (000C9E84)   @626     (0011E72C) LoadDriver
+       0000EEF0 (000C9EF0)   @627     (0011E4F9) InterruptInitialize
+       0000EF5C (000C9F5C)   @628     (0011E4EB) InterruptDone
+       0000EFB8 (000C9FB8)   @629     (0011E4DA) InterruptDisable
+       0000F014 (000CA014)   @630     (0011F49E) SetKMode
+       0000F080 (000CA080)   @631     (0011F584) SetPowerOffHandler
+       0000F0EC (000CA0EC)   @632     (0011F458) SetGwesPowerHandler
+       0000F1C4 (000CA1C4)   @633     (0011C86A) ConnectDebugger
+       0000F230 (000CA230)   @634     (0011F47B) SetHardwareWatch
+       0000F29C (000CA29C)   @635     (0011EFD5) RegisterAPISet
+       0000F2BC (000CA2BC)   @636     (0011C8CB) CreateAPIHandle
+       0000F334 (000CA334)   @637     (0011FAEE) VerifyAPIHandle
+       0000F354 (000CA354)   @638     (0011E9E6) PPSHRestart
+       0000F3B0 (000CA3B0)   @639     (0011F788) SignalStarted
+       0000F4D4 (000CA4D4)   @640     (0011D989) GetProcessIndexFromID
+       0000F468 (000CA468)   @641     (0011D362) GetCallerProcessIndex
+       0000F40C (000CA40C)   @642     (0011CD91) DebugNotify
+       0000AD98 (000C5D98)   @643     (0011C10D) AFS_Unmount
+       0000ADB8 (000C5DB8)   @644     (0011C013) AFS_CreateDirectoryW
+       0000ADD8 (000C5DD8)   @645     (0011C0E1) AFS_RemoveDirectoryW
+       0000ADF8 (000C5DF8)   @646     (0011C070) AFS_GetFileAttributesW
+       0000AE18 (000C5E18)   @647     (0011C0F6) AFS_SetFileAttributesW
+       0000AE38 (000C5E38)   @648     (0011C028) AFS_CreateFileW
+       0000AE7C (000C5E7C)   @649     (0011C038) AFS_DeleteFileW
+       0000AE9C (000C5E9C)   @650     (0011C087) AFS_MoveFileW
+       0000AEBC (000C5EBC)   @651     (0011C048) AFS_FindFirstFileW
+       0000AEDC (000C5EDC)   @652     (0011C0C2) AFS_RegisterFileSystemFunction
+       0004AAAC (00105AAC)   @653     (00120B54) sscanf
+       0000AEFC (000C5EFC)   @654     (0011C0A9) AFS_PrestoChangoFileName
+       0000AF1C (000C5F1C)   @655     (0011BFFB) AFS_CloseAllFileHandles
+       0000AF3C (000C5F3C)   @656     (0011C05B) AFS_GetDiskFreeSpace
+       0000AF68 (000C5F68)   @657     (0011C095) AFS_NotifyMountedFS
+       00012E90 (000CDE90)   @658     (0011C925) CreateCaret
+       00012E70 (000CDE70)   @659     (0011CE79) DestroyCaret
+       00012E50 (000CDE50)   @660     (0011DD82) HideCaret
+       00012E30 (000CDE30)   @661     (0011F768) ShowCaret
+       00012E10 (000CDE10)   @662     (0011F30B) SetCaretPos
+       00012DF0 (000CDDF0)   @663     (0011D395) GetCaretPos
+       00012DD0 (000CDDD0)   @664     (0011F2F9) SetCaretBlinkTime
+       00012DB0 (000CDDB0)   @665     (0011D383) GetCaretBlinkTime
+       00011620 (000CC620)   @666     (0011CED4) DisableCaretSystemWide
+       00011600 (000CC600)   @667     (0011CF9A) EnableCaretSystemWide
+       00011DD0 (000CCDD0)   @668     (0011E997) OpenClipboard
+       00011DB0 (000CCDB0)   @669     (0011C7F7) CloseClipboard
+       00011D90 (000CCD90)   @670     (0011D449) GetClipboardOwner
+       00011D70 (000CCD70)   @671     (0011F345) SetClipboardData
+       00011D4C (000CCD4C)   @672     (0011D40A) GetClipboardData
+       00011CE0 (000CCCE0)   @673     (0011F006) RegisterClipboardFormatW
+       00011CC0 (000CCCC0)   @674     (0011C8B5) CountClipboardFormats
+       00011CA0 (000CCCA0)   @675     (0011D03A) EnumClipboardFormats
+       00011C80 (000CCC80)   @676     (0011D431) GetClipboardFormatNameW
+       00011C60 (000CCC60)   @677     (0011CF8B) EmptyClipboard
+       00011C40 (000CCC40)   @678     (0011E580) IsClipboardFormatAvailable
+       00011C20 (000CCC20)   @679     (0011D914) GetPriorityClipboardFormat
+       00011C00 (000CCC00)   @680     (0011D8A5) GetOpenClipboardWindow
+       00011BBC (000CCBBC)   @681     (0011D41B) GetClipboardDataAlloc
+       000119FC (000CC9FC)   @682     (0011F38C) SetCursor
+       00011410 (000CC410)   @683     (0011E720) LoadCursorW
+       00012C60 (000CDC60)   @684     (0011C76F) CheckRadioButton
+       00012C3C (000CDC3C)   @685     (0011F264) SendDlgItemMessageW
+       00012C1C (000CDC1C)   @686     (0011F3CC) SetDlgItemTextW
+       00012BFC (000CDBFC)   @687     (0011D5D1) GetDlgItemTextW
+       00012D2C (000CDD2C)   @688     (0011C9AC) CreateDialogIndirectParamW
+       000128C4 (000CD8C4)   @689     (0011CD9D) DefDlgProcW
+       00013234 (000CE234)   @690     (0011CEBC) DialogBoxIndirectParamW
+       00013214 (000CE214)   @691     (0011D000) EndDialog
+       000131F4 (000CE1F4)   @692     (0011D5B8) GetDlgItem
+       00013188 (000CE188)   @693     (0011D5AB) GetDlgCtrlID
+       00011A7C (000CCA7C)   @694     (0011D584) GetDialogBaseUnits
+       00012C80 (000CDC80)   @695     (0011D5C3) GetDlgItemInt
+       00012D70 (000CDD70)   @696     (0011D860) GetNextDlgTabItem
+       00012D50 (000CDD50)   @697     (0011D84C) GetNextDlgGroupItem
+       00012CC0 (000CDCC0)   @698     (0011E5BB) IsDialogMessageW
+       00011A9C (000CCA9C)   @699     (0011E838) MapDialogRect
+       00012CA0 (000CDCA0)   @700     (0011F3BE) SetDlgItemInt
+       00012F54 (000CDF54)   @701     (0011D6E5) GetForegroundWindow
+       00012ED0 (000CDED0)   @702     (0011F434) SetForegroundWindow
+       00012EB0 (000CDEB0)   @703     (0011F2A9) SetActiveWindow
+       00013AA4 (000CEAA4)   @704     (0011F42B) SetFocus
+       00013A38 (000CEA38)   @705     (0011D6AE) GetFocus
+       00013A18 (000CEA18)   @706     (0011D2D0) GetActiveWindow
+       000142E0 (000CF2E0)   @707     (0011D378) GetCapture
+       000142C0 (000CF2C0)   @708     (0011F2EE) SetCapture
+       000142A0 (000CF2A0)   @709     (0011F0AB) ReleaseCapture
+       00011930 (000CC930)   @710     (0011F4B6) SetKeyboardTarget
+       00011910 (000CC910)   @711     (0011D765) GetKeyboardTarget
+       00011830 (000CC830)   @712     (0011F749) ShellModalEnd
+       000117F0 (000CC7F0)   @713     (0011C1E0) BatteryGetLifeTimeInfo
+       00011790 (000CC790)   @714     (0011C1F7) BatteryNotifyOfTimeChange
+       00011ADC (000CCADC)   @715     (0011DB16) GetSystemPowerStatusEx
+       000118F0 (000CC8F0)   @716     (0011E96E) NotifyWinUserSystem
+       00015438 (000D0438)   @717     (0011DC66) GetVersionExW
+       0000B5D0 (000C65D0)   @718     (0011FC98) WriteFileWithSeek
+       00042438 (000FD438)   @719     (00120B41) sprintf
+       00015334 (000D0334)   @720     (0011F884) SystemMemoryLow
+       00046BC0 (00101BC0)   @721     (00120C2D) vfwprintf
+         !! RESERVED !!      @722  
+       00011A1C (000CCA1C)   @723     (0011CA43) CreateIconIndirect
+         !! RESERVED !!      @724  
+       000134E8 (000CE4E8)   @725     (0011CE86) DestroyIcon
+       00013508 (000CE508)   @726     (0011CF3E) DrawIconEx
+       00012B78 (000CDB78)   @727     (0011D13C) ExtractIconExW
+       0001354C (000CE54C)   @728     (0011E749) LoadIconW
+       00042410 (000FD410)   @729     (00120071) _snprintf
+       00012F74 (000CDF74)   @730     (0011E753) LoadImageW
+       000114DC (000CC4DC)   @731     (0011C7C2) ClipCursor
+       00011470 (000CC470)   @732     (0011D3F1) GetClipCursor
+       00011450 (000CC450)   @733     (0011D500) GetCursor
+       00011430 (000CC430)   @734     (0011D50A) GetCursorPos
+       00047040 (00102040)   @735     (00120464) fwscanf
+       000113F0 (000CC3F0)   @736     (0011F396) SetCursorPos
+       000113D0 (000CC3D0)   @737     (0011F772) ShowCursor
+       00031890 (000EC890)   @738     (0011DD8C) ImageList_Add
+       0003197C (000EC97C)   @739     (0011DD9A) ImageList_AddMasked
+       00031A7C (000ECA7C)   @740     (0011DDAE) ImageList_BeginDrag
+       00031C08 (000ECC08)   @741     (0011DDD1) ImageList_CopyDitherImage
+       0003182C (000EC82C)   @742     (0011DDEB) ImageList_Create
+       00031850 (000EC850)   @743     (0011DDFC) ImageList_Destroy
+       00031ABC (000ECABC)   @744     (0011DE0E) ImageList_DragEnter
+       00031ADC (000ECADC)   @745     (0011DE22) ImageList_DragLeave
+       00031AFC (000ECAFC)   @746     (0011DE36) ImageList_DragMove
+       00031B3C (000ECB3C)   @747     (0011DE49) ImageList_DragShowNolock
+       00031930 (000EC930)   @748     (0011DE62) ImageList_Draw
+       0003199C (000EC99C)   @749     (0011DE71) ImageList_DrawEx
+       000319E8 (000EC9E8)   @750     (0011DE82) ImageList_DrawIndirect
+       00031A9C (000ECA9C)   @751     (0011DEAD) ImageList_EndDrag
+       000318F0 (000EC8F0)   @752     (0011DEBF) ImageList_GetBkColor
+       00031B5C (000ECB5C)   @753     (0011DED4) ImageList_GetDragImage
+       00031A28 (000ECA28)   @754     (0011DEEB) ImageList_GetIcon
+       00031B7C (000ECB7C)   @755     (0011DEFD) ImageList_GetIconSize
+       00031870 (000EC870)   @756     (0011DF13) ImageList_GetImageCount
+       00031BBC (000ECBBC)   @757     (0011DF2B) ImageList_GetImageInfo
+       00031A48 (000ECA48)   @758     (0011DF42) ImageList_LoadImage
+       00031BDC (000ECBDC)   @759     (0011DF56) ImageList_Merge
+       00031A08 (000ECA08)   @760     (0011DF66) ImageList_Remove
+       0003195C (000EC95C)   @761     (0011DF77) ImageList_Replace
+       000318B0 (000EC8B0)   @762     (0011DF89) ImageList_ReplaceIcon
+       000318D0 (000EC8D0)   @763     (0011DF9F) ImageList_SetBkColor
+       00031B1C (000ECB1C)   @764     (0011DFB4) ImageList_SetDragCursorImage
+       00031B9C (000ECB9C)   @765     (0011DFD1) ImageList_SetIconSize
+       00031910 (000EC910)   @766     (0011DFFF) ImageList_SetOverlayImage
+       00031C40 (000ECC40)   @767     (0011DDC2) ImageList_Copy
+       00031C64 (000ECC64)   @768     (0011DE99) ImageList_Duplicate
+       00031C84 (000ECC84)   @769     (0011DFE7) ImageList_SetImageCount
+       0000A114 (000C5114)   @770     (0011E019) ImmAssociateContext
+       00006200 (000C1200)   @771     (0011E043) ImmConfigureIMEW
+       000077A4 (000C27A4)   @772     (0011E065) ImmCreateIMCC
+       00007714 (000C2714)   @773     (0011E085) ImmDestroyIMCC
+       000062D4 (000C12D4)   @774     (0011E0A2) ImmEnumRegisterWordW
+       0000665C (000C165C)   @775     (0011E0B7) ImmEscapeW
+       00007C48 (000C2C48)   @776     (0011E0C2) ImmGenerateMessage
+       00008EBC (000C3EBC)   @777     (0011E0EF) ImmGetCandidateListW
+       00009058 (000C4058)   @778     (0011E0D5) ImmGetCandidateListCountW
+       00009BA8 (000C4BA8)   @779     (0011E104) ImmGetCandidateWindow
+       00009A88 (000C4A88)   @780     (0011E11A) ImmGetCompositionFontW
+       00009548 (000C4548)   @781     (0011E131) ImmGetCompositionStringW
+       00009964 (000C4964)   @782     (0011E14A) ImmGetCompositionWindow
+       00007B14 (000C2B14)   @783     (0011E162) ImmGetContext
+       0000A988 (000C5988)   @784     (0011E170) ImmGetConversionListW
+       0000984C (000C484C)   @785     (0011E186) ImmGetConversionStatus
+       00007E18 (000C2E18)   @786     (0011E19D) ImmGetDefaultIMEWnd
+       00005E10 (000C0E10)   @787     (0011E1B1) ImmGetDescriptionW
+       00008DFC (000C3DFC)   @788     (0011E1C4) ImmGetGuideLineW
+       00042068 (000FD068)   @789     (0011E1E2) ImmGetIMCCLockCount
+       0000A7B4 (000C57B4)   @790     (0011E1F6) ImmGetIMCCSize
+       0000A8E0 (000C58E0)   @791     (0011E205) ImmGetIMCLockCount
+       0000A3F4 (000C53F4)   @792     (0011E23F) ImmGetOpenStatus
+       00005BE8 (000C0BE8)   @793     (0011E250) ImmGetProperty
+       000063C8 (000C13C8)   @794     (0011E25F) ImmGetRegisterWordStyleW
+         !! RESERVED !!      @795  
+       00007E9C (000C2E9C)   @796     (0011E2A8) ImmIsUIMessageW
+       00007A88 (000C2A88)   @797     (0011E2B8) ImmLockIMC
+       0000783C (000C283C)   @798     (0011E2C3) ImmLockIMCC
+         !! RESERVED !!      @799  
+       0000673C (000C173C)   @800     (0011E2CF) ImmNotifyIME
+       0000A844 (000C5844)   @801     (0011E2DC) ImmReSizeIMCC
+       0000657C (000C157C)   @802     (0011E2EA) ImmRegisterWordW
+       0000AA58 (000C5A58)   @803     (0011E2FB) ImmReleaseContext
+       00042068 (000FD068)   @804     (0011E320) ImmSIPanelState
+         !! RESERVED !!      @805  
+       00009D74 (000C4D74)   @806     (0011BFD3) ImmSetActiveContext
+       00008AC4 (000C3AC4)   @807     (0011E330) ImmSetCandidateWindow
+       00008934 (000C3934)   @808     (0011E346) ImmSetCompositionFontW
+       0000832C (000C332C)   @809     (0011E35D) ImmSetCompositionStringW
+       000087A4 (000C37A4)   @810     (0011E376) ImmSetCompositionWindow
+       0000861C (000C361C)   @811     (0011E38E) ImmSetConversionStatus
+       00031CF8 (000ECCF8)   @812     (0011E3A5) ImmSetHotKey
+       00031D18 (000ECD18)   @813     (0011E1D5) ImmGetHotKey
+       0000A2B0 (000C52B0)   @814     (0011E3C2) ImmSetOpenStatus
+       00008478 (000C3478)   @815     (0011E3D3) ImmSetStatusWindowPos
+       000322D0 (000ED2D0)   @816     (0011E3E9) ImmSimulateHotKey
+       0000767C (000C267C)   @817     (0011E3FB) ImmUnlockIMC
+       0000AA58 (000C5A58)   @818     (0011E408) ImmUnlockIMCC
+       0000649C (000C149C)   @819     (0011E416) ImmUnregisterWordW
+       00011970 (000CC970)   @820     (0011D812) GetMouseMovePoints
+       000116A0 (000CC6A0)   @821     (0011EC61) QASetWindowsJournalHook
+       00011680 (000CC680)   @822     (0011EC79) QAUnhookWindowsJournalHook
+       0001135C (000CC35C)   @823     (0011F278) SendInput
+       000116C0 (000CC6C0)   @824     (0012096D) mouse_event
+       000115E0 (000CC5E0)   @825     (0011CFBB) EnableHardwareKeyboard
+       000133FC (000CE3FC)   @826     (0011D2F2) GetAsyncKeyState
+       000119DC (000CC9DC)   @827     (0011D753) GetKeyboardStatus
+       00011770 (000CC770)   @828     (0011E67F) KeybdGetDeviceInfo
+       00011750 (000CC750)   @829     (0011E692) KeybdInitStates
+       00011714 (000CC714)   @830     (0011E6A2) KeybdVKeyToUnicode
+       00012FE0 (000CDFE0)   @831     (0011E888) MapVirtualKeyW
+       00011990 (000CC990)   @832     (0011EBA5) PostKeybdMessage
+       00013140 (000CE140)   @833     (0012048B) keybd_event
+       000115C0 (000CC5C0)   @834     (0011D303) GetAsyncShiftFlags
+       000112DC (000CC2DC)   @835     (0011F051) RegisterHotKey
+       000112BC (000CC2BC)   @836     (0011FAA6) UnregisterHotKey
+       00011950 (000CC950)   @837     (0011F86F) SystemIdleTimerReset
+       00011E60 (000CCE60)   @838     (0011F989) TranslateAcceleratorW
+       000118D0 (000CC8D0)   @839     (0011E939) NLedGetDeviceInfo
+       000118B0 (000CC8B0)   @840     (0011E94B) NLedSetDevice
+       00013860 (000CE860)   @841     (0011E478) InsertMenuW
+       00013840 (000CE840)   @842     (0011C172) AppendMenuW
+       00013820 (000CE820)   @843     (0011F14B) RemoveMenu
+       00013800 (000CE800)   @844     (0011CE92) DestroyMenu
+       000137D4 (000CE7D4)   @845     (0011F978) TrackPopupMenuEx
+       000137B4 (000CE7B4)   @846     (0011E77A) LoadMenuW
+       00013794 (000CE794)   @847     (0011CFD2) EnableMenuItem
+       000135FC (000CE5FC)   @848     (0011C740) CheckMenuItem
+       000135D8 (000CE5D8)   @849     (0011C74E) CheckMenuRadioItem
+       0001356C (000CE56C)   @850     (0011CE06) DeleteMenu
+       00012B58 (000CDB58)   @851     (0011CA67) CreateMenu
+       00013884 (000CE884)   @852     (0011CABC) CreatePopupMenu
+       00011B9C (000CCB9C)   @853     (0011F50C) SetMenuItemInfoW
+       00011B7C (000CCB7C)   @854     (0011D7A0) GetMenuItemInfoW
+       00012B38 (000CDB38)   @855     (0011DA73) GetSubMenu
+       0001153C (000CC53C)   @856     (0011CF49) DrawMenuBar
+       00011BE0 (000CCBE0)   @857     (0011E8AF) MessageBeep
+       00013AE4 (000CEAE4)   @858     (0011E8BB) MessageBoxW
+       00014340 (000CF340)   @859     (0011CF05) DispatchMessageW
+       0001338C (000CE38C)   @860     (0011D71E) GetKeyState
+       0001448C (000CF48C)   @861     (0011D7D0) GetMessageW
+       00011B5C (000CCB5C)   @862     (0011D7B1) GetMessagePos
+       00011660 (000CC660)   @863     (0011D7DC) GetMessageWNoWait
+       00013000 (000CE000)   @864     (0011EA03) PeekMessageW
+       0001458C (000CF58C)   @865     (0011EBB6) PostMessageW
+       0001456C (000CF56C)   @866     (0011EBC3) PostQuitMessage
+       00046CAC (00101CAC)   @867     (00120454) fwprintf
+       000144F8 (000CF4F8)   @868     (0011F282) SendMessageW
+       00011B3C (000CCB3C)   @869     (0011F28F) SendNotifyMessageW
+       00014430 (000CF430)   @870     (0011F9B4) TranslateMessage
+       0001159C (000CC59C)   @871     (0011E8DC) MsgWaitForMultipleObjectsEx
+       0001133C (000CC33C)   @872     (0011D7BF) GetMessageSource
+       0001361C (000CE61C)   @873     (0011E714) LoadBitmapW
+       00013258 (000CE258)   @874     (0011E791) LoadStringW
+       00012BBC (000CDBBC)   @875     (0011F6B5) SetTimer
+       00012B9C (000CDB9C)   @876     (0011E6C9) KillTimer
+       00011640 (000CC640)   @877     (0011F969) TouchCalibrate
+       00012D90 (000CDD90)   @878     (0011D3A1) GetClassInfoW
+       00013C10 (000CEC10)   @879     (0011D3BC) GetClassLongW
+       00013BF0 (000CEBF0)   @880     (0011F324) SetClassLongW
+       00013C10 (000CEC10)   @881     (0011D3AF) GetClassLong
+       00013BF0 (000CEBF0)   @882     (0011F317) SetClassLong
+       00014694 (000CF694)   @883     (0011EFF3) RegisterClassWStub
+       00014654 (000CF654)   @884     (0011FA85) UnregisterClassW
+       00013FC8 (000CEFC8)   @885     (0011DAED) GetSystemMetrics
+       0001365C (000CE65C)   @886     (0011E64E) IsWindowVisible
+       000138DC (000CE8DC)   @887     (0011C157) AdjustWindowRectEx
+       00011A5C (000CCA5C)   @888     (0011D5E1) GetDoubleClickTime
+       000138FC (000CE8FC)   @889     (0011DA7E) GetSysColor
+       0001151C (000CC51C)   @890     (0011F616) SetSysColors
+       000113B0 (000CC3B0)   @891     (0011F094) RegisterWindowMessageW
+       00011890 (000CC890)   @892     (0011F070) RegisterTaskBar
+       0000FC44 (000CAC44)   @893     (0011C137) AddFontResourceW
+       00010BCC (000CBBCC)   @894     (0011C5B6) CeRemoveFontResource
+       0000FDC4 (000CADC4)   @895     (0011CA2F) CreateFontIndirectW
+       00010054 (000CB054)   @896     (0011D130) ExtTextOutW
+       000103C0 (000CB3C0)   @897     (0011DB7E) GetTextExtentExPointW
+       00010460 (000CB460)   @898     (0011DBA1) GetTextMetricsW
+       00010BCC (000CBBCC)   @899     (0011EAF3) PegRemoveFontResource
+       000105C4 (000CB5C4)   @900     (0011F137) RemoveFontResourceW
+       0000FD40 (000CAD40)   @901     (0011C900) CreateBitmap
+       0000FD64 (000CAD64)   @902     (0011C931) CreateCompatibleBitmap
+       0000FCDC (000CACDC)   @903     (0011C250) BitBlt
+       000104A4 (000CB4A4)   @904     (0011E8A7) MaskBlt
+       00010868 (000CB868)   @905     (0011F829) StretchBlt
+       00010AE0 (000CBAE0)   @906     (0011F9D6) TransparentImage
+       000105E4 (000CB5E4)   @907     (0011F156) RestoreDC
+       00010638 (000CB638)   @908     (0011F20D) SaveDC
+       000109BC (000CB9BC)   @909     (0011C966) CreateDCW
+       0000FD84 (000CAD84)   @910     (0011C948) CreateCompatibleDC
+       0000FE90 (000CAE90)   @911     (0011CDF1) DeleteDC
+       0000FEB0 (000CAEB0)   @912     (0011CE11) DeleteObject
+       00010148 (000CB148)   @913     (0011D316) GetBkColor
+       00010168 (000CB168)   @914     (0011D321) GetBkMode
+       000101C8 (000CB1C8)   @915     (0011D4D9) GetCurrentObject
+       000101E8 (000CB1E8)   @916     (0011D568) GetDeviceCaps
+       00010248 (000CB248)   @917     (0011D88C) GetObjectType
+       00010228 (000CB228)   @918     (0011D89A) GetObjectW
+       00010334 (000CB334)   @919     (0011DA30) GetStockObject
+       000103A0 (000CB3A0)   @920     (0011DB71) GetTextColor
+       00010678 (000CB678)   @921     (0011F249) SelectObject
+       000106E4 (000CB6E4)   @922     (0011F2CB) SetBkColor
+       00010750 (000CB750)   @923     (0011F2D6) SetBkMode
+       000107FC (000CB7FC)   @924     (0011F65E) SetTextColor
+       00010A80 (000CBA80)   @925     (0011CA8D) CreatePatternBrush
+       0001099C (000CB99C)   @926     (0011CAA0) CreatePen
+       000109FC (000CB9FC)   @927     (0011D1A9) FillRgn
+       00010A1C (000CBA1C)   @928     (0011F5AA) SetROP2
+       0000FDA4 (000CADA4)   @929     (0011C970) CreateDIBPatternBrushPt
+       0000FE04 (000CAE04)   @930     (0011CAAA) CreatePenIndirect
+       0000FE24 (000CAE24)   @931     (0011CB10) CreateSolidBrush
+       0000FF1C (000CAF1C)   @932     (0011CF16) DrawEdge
+       0000FF3C (000CAF3C)   @933     (0011CF1F) DrawFocusRect
+       0000FFCC (000CAFCC)   @934     (0011CF83) Ellipse
+       000100DC (000CB0DC)   @935     (0011D1A0) FillRect
+       00010268 (000CB268)   @936     (0011D90B) GetPixel
+       000102A8 (000CB2A8)   @937     (0011DA8A) GetSysColorBrush
+       0000FC64 (000CAC64)   @938     (0011E9FC) PatBlt
+       00010520 (000CB520)   @939     (0011EB94) Polygon
+       00010540 (000CB540)   @940     (0011EB9C) Polyline
+       00010580 (000CB580)   @941     (0011EECD) Rectangle
+       00010604 (000CB604)   @942     (0011F16D) RoundRect
+       000107BC (000CB7BC)   @943     (0011F2E0) SetBrushOrgEx
+       000107DC (000CB7DC)   @944     (0011F57B) SetPixel
+       0000FF5C (000CAF5C)   @945     (0011CF55) DrawTextW
+       00010AA0 (000CBAA0)   @946     (0011C90D) CreateBitmapFromPointer
+       000108BC (000CB8BC)   @947     (0011CA7F) CreatePalette
+       0001097C (000CB97C)   @948     (0011D835) GetNearestPaletteIndex
+       0001091C (000CB91C)   @949     (0011D8DD) GetPaletteEntries
+       0001095C (000CB95C)   @950     (0011DAFE) GetSystemPaletteEntries
+       0001093C (000CB93C)   @951     (0011F541) SetPaletteEntries
+       00010208 (000CB208)   @952     (0011D825) GetNearestColor
+       000108FC (000CB8FC)   @953     (0011EEA5) RealizePalette
+       000108DC (000CB8DC)   @954     (0011F256) SelectPalette
+         !! RESERVED !!      @955  
+         !! RESERVED !!      @956  
+         !! RESERVED !!      @957  
+         !! RESERVED !!      @958  
+         !! RESERVED !!      @959  
+         !! RESERVED !!      @960  
+         !! RESERVED !!      @961  
+         !! RESERVED !!      @962  
+         !! RESERVED !!      @963  
+         !! RESERVED !!      @964  
+       0000FFF0 (000CAFF0)   @965     (0011D06C) EnumFontFamiliesW
+       00010010 (000CB010)   @966     (0011D07E) EnumFontsW
+       00010440 (000CB440)   @967     (0011DB94) GetTextFaceW
+       0000FD20 (000CAD20)   @968     (0011C830) CombineRgn
+       0000FDE4 (000CADE4)   @969     (0011CAE9) CreateRectRgnIndirect
+       00010030 (000CB030)   @970     (0011D10B) ExcludeClipRect
+       000101A8 (000CB1A8)   @971     (0011D3E6) GetClipBox
+       00010188 (000CB188)   @972     (0011D3FF) GetClipRgn
+       00010288 (000CB288)   @973     (0011D9CC) GetRegionData
+       00010314 (000CB314)   @974     (0011D9DA) GetRgnBox
+       00010480 (000CB480)   @975     (0011E50D) IntersectClipRect
+       00010500 (000CB500)   @976     (0011E98D) OffsetRgn
+       00010560 (000CB560)   @977     (0011EC4C) PtInRegion
+       000105A4 (000CB5A4)   @978     (0011EEB4) RectInRegion
+       00010658 (000CB658)   @979     (0011F23B) SelectClipRgn
+       000109DC (000CB9DC)   @980     (0011CADB) CreateRectRgn
+       00010A3C (000CBA3C)   @981     (0011EEC1) RectVisible
+       00010A5C (000CBA5C)   @982     (0011F5D3) SetRectRgn
+       00010AC0 (000CBAC0)   @983     (0011F6BE) SetViewportOrgEx
+       00010C0C (000CBC0C)   @984     (0011F532) SetObjectOwner
+       00011E2C (000CCE2C)   @985     (0011F223) ScrollDC
+       00010BEC (000CBBEC)   @986     (0011CFB0) EnableEUDC
+       000114FC (000CC4FC)   @987     (0011CF2D) DrawFrameControl
+       00042618 (000FD618)   @988     (00120177) abs
+       000432B0 (000FE2B0)   @989     (00120361) acos
+       0004301C (000FE01C)   @990     (00120366) asin
+       00042970 (000FD970)   @991     (0012036B) atan
+       00042B64 (000FDB64)   @992     (00120370) atan2
+       000436B0 (000FE6B0)   @993     (0012037B) atoi
+       000435F4 (000FE5F4)   @994     (00120380) atol
+       00043570 (000FE570)   @995     (00120376) atof
+       0003C3F4 (000F73F4)   @996     (0011FEF3) _atodbl
+       0003C428 (000F7428)   @997     (0011FEFB) _atoflt
+       0003D3F8 (000F83F8)   @998     (0011FF0B) _cabs
+       0004377C (000FE77C)   @999     (0012038C) ceil
+       0003D8DC (000F88DC)   @1000    (0011FF11) _chgsign
+       0003E084 (000F9084)   @1001    (0011FF1A) _clearfp
+       0003E0C4 (000F90C4)   @1002    (0011FF23) _controlfp
+       0003D888 (000F8888)   @1003    (0011FF2E) _copysign
+       00043F34 (000FEF34)   @1004    (0012039A) cos
+       00044474 (000FF474)   @1005    (0012039E) cosh
+       00044D30 (000FFD30)   @1006    (001203A3) difftime
+       00044D50 (000FFD50)   @1007    (001203AC) div
+       0003E4C8 (000F94C8)   @1008    (0011FF38) _ecvt
+       00044F58 (000FFF58)   @1009    (001203B0) exp
+       00039270 (000F4270)   @1010    (001203B4) fabs
+       0003E434 (000F9434)   @1011    (0011FF49) _fcvt
+       0003DEF0 (000F8EF0)   @1012    (0011FF57) _finite
+       000453AC (001003AC)   @1013    (001203F5) floor
+       00045560 (00100560)   @1014    (001203FB) fmod
+       0003DF68 (000F8F68)   @1015    (0011FF72) _fpclass
+       0003F238 (000FA238)   @1016    (0011FF7B) _fpieee_flt
+       0003E13C (000F913C)   @1017    (0011FF87) _fpreset
+       00046700 (00101700)   @1018    (0012042E) free
+       000459C0 (001009C0)   @1019    (00120433) frexp
+       0003FCA8 (000FACA8)   @1020    (0011FF90) _frnd
+       000401C0 (000FB1C0)   @1021    (0011FF96) _fsqrt
+       00040668 (000FB668)   @1022    (0011FF9D) _gcvt
+       0003D3B8 (000F83B8)   @1023    (0011FFB7) _hypot
+       0003DF1C (000F8F1C)   @1024    (0011FFC7) _isnan
+       00040A78 (000FBA78)   @1025    (0011FFCE) _itoa
+       00040BA4 (000FBBA4)   @1026    (0011FFD4) _itow
+       00040CD0 (000FBCD0)   @1027    (0011FFDA) _j0
+       00040F30 (000FBF30)   @1028    (0011FFDE) _j1
+       000417F8 (000FC7F8)   @1029    (0011FFE2) _jn
+       00042618 (000FD618)   @1030    (00120497) labs
+       00045B5C (00100B5C)   @1031    (0012049C) ldexp
+       000470BC (001020BC)   @1032    (001204A2) ldiv
+       00048BA0 (00103BA0)   @1033    (0012090F) log
+       00048E40 (00103E40)   @1034    (00120913) log10
+       0003D950 (000F8950)   @1035    (0011FFF8) _logb
+       00049108 (00104108)   @1036    (00120919) longjmp
+       00041F00 (000FCF00)   @1037    (0011FFFE) _lrotl
+       00041F58 (000FCF58)   @1038    (00120005) _lrotr
+       00040AB0 (000FBAB0)   @1039    (0012000C) _ltoa
+       00040BDC (000FBBDC)   @1040    (00120012) _ltow
+       0004372C (000FE72C)   @1041    (00120934) malloc
+       00041F74 (000FCF74)   @1042    (00120018) _memccpy
+       00049148 (00104148)   @1043    (0012094B) memcmp
+       000494C0 (001044C0)   @1044    (00120952) memcpy
+       00041FD8 (000FCFD8)   @1045    (00120021) _memicmp
+       000494C0 (001044C0)   @1046    (00120959) memmove
+       00049C58 (00104C58)   @1047    (00120961) memset
+       00045EEC (00100EEC)   @1048    (00120968) modf
+       0004204C (000FD04C)   @1049    (0012002A) _msize
+       0003DACC (000F8ACC)   @1050    (00120031) _nextafter
+       00049DF0 (00104DF0)   @1051    (00120AF0) pow
+       0004A618 (00105618)   @1052    (00120B11) qsort
+       0004A978 (00105978)   @1053    (00120B17) rand
+       0004A9D0 (001059D0)   @1054    (00120B1C) realloc
+       00041EC4 (000FCEC4)   @1055    (0012004D) _rotl
+       00041F1C (000FCF1C)   @1056    (00120053) _rotr
+       0003D928 (000F8928)   @1057    (00120059) _scalb
+       00043C78 (000FEC78)   @1058    (00120B2A) sin
+       0004465C (000FF65C)   @1059    (00120B2E) sinh
+       000401C0 (000FB1C0)   @1060    (00120B49) sqrt
+       0004A948 (00105948)   @1061    (00120B4E) srand
+       0003E060 (000F9060)   @1062    (00120086) _statusfp
+       0004AAF4 (00105AF4)   @1063    (00120B5B) strcat
+       0004AC54 (00105C54)   @1064    (00120B62) strchr
+       0004AC84 (00105C84)   @1065    (00120B69) strcmp
+       0004ACC8 (00105CC8)   @1066    (00120B70) strcpy
+       0004AE14 (00105E14)   @1067    (00120B77) strcspn
+       0004AEE8 (00105EE8)   @1068    (00120B7F) strlen
+       0004AF08 (00105F08)   @1069    (00120B86) strncat
+       0004AF74 (00105F74)   @1070    (00120B8E) strncmp
+       0004AFE4 (00105FE4)   @1071    (00120B96) strncpy
+       0004B058 (00106058)   @1072    (00120BB5) strstr
+       0004B3D4 (001063D4)   @1073    (00120BC3) strtok
+       000425E0 (000FD5E0)   @1074    (001200D4) _swab
+       000441D4 (000FF1D4)   @1075    (00120BEA) tan
+       00044974 (000FF974)   @1076    (00120BEE) tanh
+         !! RESERVED !!      @1077 
+         !! RESERVED !!      @1078 
+       00040AE8 (000FBAE8)   @1079    (001200DA) _ultoa
+       00040C14 (000FBC14)   @1080    (001200E1) _ultow
+       0004B0F0 (001060F0)   @1081    (00120EF4) wcstod
+       0004B514 (00106514)   @1082    (00120F02) wcstol
+       0004B538 (00106538)   @1083    (00120F12) wcstoul
+       000411FC (000FC1FC)   @1084    (0012016B) _y0
+       000414D8 (000FC4D8)   @1085    (0012016F) _y1
+       00041B10 (000FCB10)   @1086    (00120173) _yn
+       0003C3B4 (000F73B4)   @1087    (0011FFE6) _ld12tod
+       0003C3D4 (000F73D4)   @1088    (0011FFEF) _ld12tof
+       0003B688 (000F6688)   @1089    (0011FE7A) __strgtold12
+       0004B978 (00106978)   @1090    (00120BF3) tolower
+       0004B9A0 (001069A0)   @1091    (00120BFB) toupper
+       00042068 (000FD068)   @1092    (0012003C) _purecall
+       00066434 (00FFB434)   @1093    (0011FF5F) _fltused
+       00004E00 (000BFE00)   @1094    (0011BF6B) ??3@YAXPAX@Z
+       00004DE0 (000BFDE0)   @1095    (0011BF5E) ??2@YAPAXI@Z
+       00042584 (000FD584)   @1096    (0012007B) _snwprintf
+       000425AC (000FD5AC)   @1097    (00120BD9) swprintf
+       0004B92C (0010692C)   @1098    (00120BE2) swscanf
+       00042558 (000FD558)   @1099    (00120C48) vswprintf
+       00036398 (000F1398)   @1100    (0011FFA3) _getstdfilex
+       0004AA1C (00105A1C)   @1101    (00120B24) scanf
+       00046234 (00101234)   @1102    (00120AF4) printf
+       000461DC (001011DC)   @1103    (00120C37) vprintf
+       00045288 (00100288)   @1104    (0012046C) getchar
+       00046384 (00101384)   @1105    (00120AFB) putchar
+       000409B8 (000FB9B8)   @1106    (00120474) gets
+       000422B8 (000FD2B8)   @1107    (00120B03) puts
+       000451D8 (001001D8)   @1108    (001203D3) fgetc
+       00040998 (000FB998)   @1109    (001203E1) fgets
+       000462C0 (001012C0)   @1110    (0012040E) fputc
+       00042238 (000FD238)   @1111    (00120414) fputs
+       0004B9C8 (001069C8)   @1112    (00120C15) ungetc
+       0003EE94 (000F9E94)   @1113    (00120400) fopen
+       0004671C (0010171C)   @1114    (00120439) fscanf
+       00046294 (00101294)   @1115    (00120406) fprintf
+       00046148 (00101148)   @1116    (00120C24) vfprintf
+       0003F024 (000FA024)   @1117    (00120143) _wfdopen
+       0003E9E4 (000F99E4)   @1118    (001203B9) fclose
+       0003E888 (000F9888)   @1119    (0011FF3E) _fcloseall
+       00046440 (00101440)   @1120    (00120428) fread
+       00046D38 (00101D38)   @1121    (0012045D) fwrite
+       0003E554 (000F9554)   @1122    (001203CC) fflush
+       0003E6D8 (000F96D8)   @1123    (0011FF68) _flushall
+       0003EF74 (000F9F74)   @1124    (0011FF4F) _fileno
+       00043998 (000FE998)   @1125    (001203C0) feof
+       00043A00 (000FEA00)   @1126    (001203C5) ferror
+       00043924 (000FE924)   @1127    (00120391) clearerr
+       000452D0 (001002D0)   @1128    (001203D9) fgetpos
+       000468FC (001018FC)   @1129    (00120446) fsetpos
+       00046798 (00101798)   @1130    (00120440) fseek
+       00046950 (00101950)   @1131    (0012044E) ftell
+       0004246C (000FD46C)   @1132    (001200F3) _vsnwprintf
+       0004BAA8 (00106AA8)   @1133    (00120F22) wscanf
+       00046CD8 (00101CD8)   @1134    (00120F1A) wprintf
+       00046C54 (00101C54)   @1135    (00120C52) vwprintf
+       0003F168 (000FA168)   @1136    (00120479) getwchar
+       0003F118 (000FA118)   @1137    (00120B08) putwchar
+       00040A18 (000FBA18)   @1138    (0011FFB0) _getws
+       00042260 (000FD260)   @1139    (00120046) _putws
+       00045344 (00100344)   @1140    (001203E7) fgetwc
+       000463D0 (001013D0)   @1141    (0012041A) fputwc
+       0004BA38 (00106A38)   @1142    (00120C1C) ungetwc
+       00040978 (000FB978)   @1143    (001203EE) fgetws
+       00042214 (000FD214)   @1144    (00120421) fputws
+       0003EE74 (000F9E74)   @1145    (0012014C) _wfopen
+       000423E4 (000FD3E4)   @1146    (00120C3F) vsprintf
+       00042350 (000FD350)   @1147    (001200E8) _vsnprintf
+       0000BAE4 (000C6AE4)   @1148    (0011DBB1) GetThreadContext
+       0000FA38 (000CAA38)   @1149    (0011DA22) GetStdioPathW
+       0000F9CC (000CA9CC)   @1150    (0011F608) SetStdioPathW
+       00035B9C (000F0B9C)   @1151    (0011FCD6) _InitStdioLib
+       00032C50 (000EDC50)   @1152    (0011EF5F) RegFlushKey
+       0000FAA4 (000CAAA4)   @1153    (0011EE91) ReadRegistryFromOEM
+       0000FB10 (000CAB10)   @1154    (0011FCBD) WriteRegistryToOEM
+       0000CB3C (000C7B3C)   @1155    (0011FC80) WriteDebugLED
+       0001129C (000CC29C)   @1156    (0011FA96) UnregisterFunc1
+       000134C8 (000CE4C8)   @1157    (0011C211) BeginDeferWindowPos
+       0001348C (000CE48C)   @1158    (0011CDB8) DeferWindowPos
+       0001346C (000CE46C)   @1159    (0011CFEE) EndDeferWindowPos
+       000119BC (000CC9BC)   @1160    (0011D73C) GetKeyboardLayoutNameW
+       0000C1F4 (000C71F4)   @1161    (0011E81B) LockPages
+       0000C260 (000C7260)   @1162    (0011FA69) UnlockPages
+       00033008 (000EE008)   @1163    (0011F189) SHCreateExplorerInstance
+       00016FF0 (000D1FF0)   @1164    (0011C50B) CeMountDBVol
+       00016FD0 (000D1FD0)   @1165    (0011C32D) CeEnumDBVolumes
+       00010B80 (000CBB80)   @1166    (0011F99F) TranslateCharsetInfo
+       0000CF10 (000C7F10)   @1167    (0011C9FA) CreateFileForMappingW
+       0004739C (0010239C)   @1168    (0012081C) lineSetCurrentLocation
+       000354E4 (000F04E4)   @1169    (0011F80A) SipStatus
+       00035570 (000F0570)   @1170    (0011F7BB) SipRegisterNotification
+       000355D0 (000F05D0)   @1171    (0011F800) SipShowIM
+       00035630 (000F0630)   @1172    (0011F7B0) SipGetInfo
+       00035698 (000F0698)   @1173    (0011F7F5) SipSetInfo
+       000357C0 (000F07C0)   @1174    (0011F796) SipEnumIM
+       000356F8 (000F06F8)   @1175    (0011F7A0) SipGetCurrentIM
+       00035760 (000F0760)   @1176    (0011F7D3) SipSetCurrentIM
+       0000C9F8 (000C79F8)   @1177    (0011D801) GetModuleHandleW
+       0000F158 (000CA158)   @1178    (0011F6CF) SetWDevicePowerHandler
+       0000B450 (000C6450)   @1179    (0011C119) ActivateDevice
+       0000B470 (000C6470)   @1180    (0011CD6D) DeactivateDevice
+       00002F98 (000BDF98)   @1181    (0011FCD0) _HUGE
+       00010BA0 (000CBBA0)   @1182    (0011D126) ExtEscape
+         !! RESERVED !!      @1183 
+         !! RESERVED !!      @1184 
+       00013C9C (000CEC9C)   @1185    (0011D51D) GetDCEx
+       0000CBF8 (000C7BF8)   @1186    (0011DBD4) GetThreadTimes
+       0003F1B0 (000FA1B0)   @1187    (00120068) _setmode
+         !! RESERVED !!      @1188 
+       00016B68 (000D1B68)   @1189    (0011C38D) CeFindNextDatabaseEx
+       00016BA8 (000D1BA8)   @1190    (0011C2E7) CeCreateDatabaseEx
+       00016C44 (000D1C44)   @1191    (0011C61B) CeSetDatabaseInfoEx
+       00016C94 (000D1C94)   @1192    (0011C543) CeOpenDatabaseEx
+       00016D70 (000D1D70)   @1193    (0011C30B) CeDeleteDatabaseEx
+       00016E44 (000D1E44)   @1194    (0011C566) CeReadRecordPropsEx
+       00016AD0 (000D1AD0)   @1195    (0011C525) CeOidGetInfoEx
+       00016B20 (000D1B20)   @1196    (0011C364) CeFindFirstDatabaseEx
+       00017010 (000D2010)   @1197    (0011C6D6) CeUnmountDBVol
+       0000A6F8 (000C56F8)   @1198    (0011E054) ImmCreateContext
+       0000A630 (000C5630)   @1199    (0011E073) ImmDestroyContext
+       000096C0 (000C46C0)   @1200    (0011E278) ImmGetStatusWindowPos
+       0003F048 (000FA048)   @1201    (00120154) _wfreopen
+       0001131C (000CC31C)   @1202    (0011F71E) SetWindowsHookExW
+       000112FC (000CC2FC)   @1203    (0011FA4B) UnhookWindowsHookEx
+       00042068 (000FD068)   @1204    (0011C272) CallNextHookEx
+       00009FB8 (000C4FB8)   @1205    (0011E02D) ImmAssociateContextEx
+       00004F38 (000BFF38)   @1206    (0011E094) ImmDisableIME
+       00005F28 (000C0F28)   @1207    (0011E218) ImmGetIMEFileNameW
+         !! RESERVED !!      @1208 
+       0000605C (000C105C)   @1209    (0011E29F) ImmIsIME
+       00007B5C (000C2B5C)   @1210    (0011E28E) ImmGetVirtualKey
+       00006104 (000C1104)   @1211    (0011E22B) ImmGetImeMenuItemsW
+         !! RESERVED !!      @1212 
+       000152C0 (000D02C0)   @1213    (0011E5FC) IsProcessDying
+       00035510 (000F0510)   @1214    (0011F7E3) SipSetDefaultRect
+       0000D068 (000C8068)   @1215    (0011D259) FlushViewOfFileMaybe
+       00014CB4 (000CFCB4)   @1216    (0011D2A2) FreeLibraryAndExitThread
+       00017030 (000D2030)   @1217    (0011C3A2) CeFlushDBVol
+       0000516C (000C016C)   @1218    (0011BF94) DefaultImcGet
+       00005300 (000C0300)   @1219    (0011BFA2) DefaultImeWndGet
+       00006FE0 (000C1FE0)   @1220    (0011BFC5) ImmProcessKey
+       00007180 (000C2180)   @1221    (0011BFE7) ImmTranslateMessage
+       00005B44 (000C0B44)   @1222    (0011E3B2) ImmSetImeWndIMC
+       00005D14 (000C0D14)   @1223    (0011BFB3) ImmGetUIClassName
+       00012EF0 (000CDEF0)   @1224    (0011D6B7) GetForegroundInfo
+       00012F2C (000CDF2C)   @1225    (0011D6C9) GetForegroundKeyboardTarget
+       00017050 (000D2050)   @1226    (0011C3AF) CeFreeNotification
+       0002B034 (000E6034)   @1227    (0011D341) GetCRTStorageEx
+       0002B000 (000E6000)   @1228    (0011D335) GetCRTFlags
+       0000506C (000C006C)   @1229    (0011D72A) GetKeyboardLayout
+       0000C410 (000C7410)   @1230    (0011D93F) GetProcAddressA
+       0000C554 (000C7554)   @1231    (0011D4A9) GetCommandLineW
+       0000C47C (000C747C)   @1232    (0011CEEB) DisableThreadLibraryCalls
+       0001552C (000D052C)   @1233    (0011F9E7) TryEnterCriticalSection
+       0001481C (000CF81C)   @1234    (0011DB53) GetTempFileNameW
+       0000B088 (000C6088)   @1235    (0011D1CD) FindFirstFileExW
+       0000B6B0 (000C66B0)   @1236    (0011D557) GetDeviceByIndex
+       00014700 (000CF700)   @1237    (0011D627) GetFileAttributesExW
+       0000D324 (000C8324)   @1238    (0011CAFF) CreateSemaphoreW
+       0000D390 (000C8390)   @1239    (0011F0D1) ReleaseSemaphore
+       00015064 (000D0064)   @1240    (0011C81E) ComThreadBaseFunc
+       0000C338 (000C7338)   @1241    (0011E75E) LoadLibraryExW
+       00005490 (000C0490)   @1242    (0011E30D) ImmRequestMessageW
+         !! RESERVED !!      @1243 
+       0000BC74 (000C6C74)   @1244    (0011C695) CeSetThreadQuantum
+       0000BC54 (000C6C54)   @1245    (0011C448) CeGetThreadQuantum
+       000473BC (001023BC)   @1246    (001204A7) lineAccept
+       000473DC (001023DC)   @1247    (001204C2) lineAddToConference
+       000473FC (001023FC)   @1248    (001204D6) lineAnswer
+       0004741C (0010241C)   @1249    (001204E1) lineBlindTransfer
+       0004743C (0010243C)   @1250    (001204FD) lineCompleteTransfer
+       0004745C (0010245C)   @1251    (0012053A) lineDevSpecific
+       00047480 (00102480)   @1252    (0012054A) lineDial
+       000474A0 (001024A0)   @1253    (0012055C) lineForward
+       000474D4 (001024D4)   @1254    (00120568) lineGenerateDigits
+       000474F4 (001024F4)   @1255    (0012057B) lineGenerateTone
+       00047518 (00102518)   @1256    (0012058C) lineGetAddressCaps
+       00047544 (00102544)   @1257    (0012059F) lineGetAddressID
+       00047568 (00102568)   @1258    (001205B0) lineGetAddressStatus
+       00047588 (00102588)   @1259    (001205C5) lineGetAppPriority
+       000475B4 (001025B4)   @1260    (001205D8) lineGetCallInfo
+       000475D4 (001025D4)   @1261    (001205E8) lineGetCallStatus
+       000475F4 (001025F4)   @1262    (001205FA) lineGetConfRelatedCalls
+       00047614 (00102614)   @1263    (0012063C) lineGetIcon
+       00047634 (00102634)   @1264    (00120648) lineGetLineDevStatus
+       00047654 (00102654)   @1265    (0012065D) lineGetMessage
+       00047674 (00102674)   @1266    (0012066C) lineGetNewCalls
+       00047694 (00102694)   @1267    (0012067C) lineGetNumRings
+       000476B4 (001026B4)   @1268    (0012068C) lineGetProviderList
+       000476D4 (001026D4)   @1269    (001206A0) lineGetStatusMessages
+       000476F4 (001026F4)   @1270    (001206CB) lineHandoff
+       00047714 (00102714)   @1271    (001206D7) lineHold
+       000485FC (001035FC)   @1272    (001206EF) lineInitializeEx
+       00047734 (00102734)   @1273    (0012070D) lineMonitorDigits
+       00047754 (00102754)   @1274    (0012071F) lineMonitorMedia
+       00047774 (00102774)   @1275    (00120748) lineNegotiateExtVersion
+       000477A0 (001027A0)   @1276    (00120769) linePickup
+       000477C4 (001027C4)   @1277    (00120774) linePrepareAddToConference
+       000477E4 (001027E4)   @1278    (0012078F) lineRedirect
+       00047804 (00102804)   @1279    (0012079C) lineReleaseUserUserInfo
+       00047824 (00102824)   @1280    (001207B4) lineRemoveFromConference
+       00047844 (00102844)   @1281    (001207CD) lineSendUserUserInfo
+       00047864 (00102864)   @1282    (001207E2) lineSetAppPriority
+       00047890 (00102890)   @1283    (001207F5) lineSetCallParams
+       000478B4 (001028B4)   @1284    (00120807) lineSetCallPrivilege
+       000478D4 (001028D4)   @1285    (00120844) lineSetMediaMode
+       000478F4 (001028F4)   @1286    (00120855) lineSetNumRings
+       00047914 (00102914)   @1287    (0012087B) lineSetTerminal
+       00047948 (00102948)   @1288    (0012088B) lineSetTollList
+       00047968 (00102968)   @1289    (0012089B) lineSetupConference
+       00047994 (00102994)   @1290    (001208AF) lineSetupTransfer
+       000479B4 (001029B4)   @1291    (001208CE) lineSwapHold
+       000479D4 (001029D4)   @1292    (00120904) lineUnhold
+       000479F4 (001029F4)   @1293    (00120979) phoneClose
+       00047A14 (00102A14)   @1294    (00120984) phoneConfigDialog
+       00047A34 (00102A34)   @1295    (00120996) phoneDevSpecific
+       00047A54 (00102A54)   @1296    (001209A7) phoneGetDevCaps
+       00047A78 (00102A78)   @1297    (001209B7) phoneGetGain
+       00047A98 (00102A98)   @1298    (001209C4) phoneGetHookSwitch
+       00047AB8 (00102AB8)   @1299    (001209E2) phoneGetIcon
+       00047AD8 (00102AD8)   @1300    (001209D7) phoneGetID
+       00047AF8 (00102AF8)   @1301    (001209EF) phoneGetMessage
+       00047B18 (00102B18)   @1302    (001209FF) phoneGetRing
+       00047B38 (00102B38)   @1303    (00120A0C) phoneGetStatus
+       00047B58 (00102B58)   @1304    (00120A1B) phoneGetStatusMessages
+       00047B78 (00102B78)   @1305    (00120A32) phoneGetVolume
+       000486F8 (001036F8)   @1306    (00120A41) phoneInitializeEx
+       00047B98 (00102B98)   @1307    (00120A53) phoneNegotiateAPIVersion
+       00047BC4 (00102BC4)   @1308    (00120A6C) phoneNegotiateExtVersion
+       00047BF0 (00102BF0)   @1309    (00120A85) phoneOpen
+       00047C24 (00102C24)   @1310    (00120A8F) phoneSetGain
+       00047C44 (00102C44)   @1311    (00120A9C) phoneSetHookSwitch
+       00047C64 (00102C64)   @1312    (00120AAF) phoneSetRing
+       00047C84 (00102C84)   @1313    (00120ABC) phoneSetStatusMessages
+       00047CA4 (00102CA4)   @1314    (00120AD3) phoneSetVolume
+       000487B0 (001037B0)   @1315    (00120AE2) phoneShutdown
+         !! RESERVED !!      @1316 
+         !! RESERVED !!      @1317 
+         !! RESERVED !!      @1318 
+         !! RESERVED !!      @1319 
+         !! RESERVED !!      @1320 
+         !! RESERVED !!      @1321 
+         !! RESERVED !!      @1322 
+         !! RESERVED !!      @1323 
+         !! RESERVED !!      @1324 
+         !! RESERVED !!      @1325 
+         !! RESERVED !!      @1326 
+         !! RESERVED !!      @1327 
+         !! RESERVED !!      @1328 
+         !! RESERVED !!      @1329 
+         !! RESERVED !!      @1330 
+         !! RESERVED !!      @1331 
+         !! RESERVED !!      @1332 
+         !! RESERVED !!      @1333 
+         !! RESERVED !!      @1334 
+         !! RESERVED !!      @1335 
+         !! RESERVED !!      @1336 
+         !! RESERVED !!      @1337 
+         !! RESERVED !!      @1338 
+         !! RESERVED !!      @1339 
+         !! RESERVED !!      @1340 
+         !! RESERVED !!      @1341 
+         !! RESERVED !!      @1342 
+         !! RESERVED !!      @1343 
+         !! RESERVED !!      @1344 
+         !! RESERVED !!      @1345 
+       0004374C (000FE74C)   @1346    (00120385) calloc
+         !! RESERVED !!      @1347 
+         !! RESERVED !!      @1348 
+         !! RESERVED !!      @1349 
+         !! RESERVED !!      @1350 
+         !! RESERVED !!      @1351 
+       0001737C (000D237C)   @1352    (0011C6BE) CeSetUserNotificationEx
+       0001745C (000D245C)   @1353    (0011C471) CeGetUserNotificationHandles
+       0001747C (000D247C)   @1354    (0011C45B) CeGetUserNotification
+         !! RESERVED !!      @1355 
+         !! RESERVED !!      @1356 
+       0000E9D0 (000C99D0)   @1357    (0011C3D3) CeGetCurrentTrust
+       00011ABC (000CCABC)   @1358    (0011DB2D) GetSystemPowerStatusEx2
+         !! RESERVED !!      @1359 
+         !! RESERVED !!      @1360 
+         !! RESERVED !!      @1361 
+         !! RESERVED !!      @1362 
+         !! RESERVED !!      @1363 
+         !! RESERVED !!      @1364 
+         !! RESERVED !!      @1365 
+         !! RESERVED !!      @1366 
+         !! RESERVED !!      @1367 
+         !! RESERVED !!      @1368 
+         !! RESERVED !!      @1369 
+         !! RESERVED !!      @1370 
+         !! RESERVED !!      @1371 
+         !! RESERVED !!      @1372 
+         !! RESERVED !!      @1373 
+         !! RESERVED !!      @1374 
+         !! RESERVED !!      @1375 
+         !! RESERVED !!      @1376 
+         !! RESERVED !!      @1377 
+         !! RESERVED !!      @1378 
+         !! RESERVED !!      @1379 
+         !! RESERVED !!      @1380 
+         !! RESERVED !!      @1381 
+         !! RESERVED !!      @1382 
+         !! RESERVED !!      @1383 
+         !! RESERVED !!      @1384 
+         !! RESERVED !!      @1385 
+         !! RESERVED !!      @1386 
+         !! RESERVED !!      @1387 
+         !! RESERVED !!      @1388 
+         !! RESERVED !!      @1389 
+         !! RESERVED !!      @1390 
+         !! RESERVED !!      @1391 
+         !! RESERVED !!      @1392 
+         !! RESERVED !!      @1393 
+         !! RESERVED !!      @1394 
+       0000EA3C (000C9A3C)   @1395    (0011C3C2) CeGetCallerTrust
+       00029AC8 (000E4AC8)   @1396    (0011E9A5) OpenDeviceKey
+       000111FC (000CC1FC)   @1397    (0011D546) GetDesktopWindow
+       0001125C (000CC25C)   @1398    (0011F702) SetWindowRgn
+       0001123C (000CC23C)   @1399    (0011DCA7) GetWindowRgn
+       0001121C (000CC21C)   @1400    (0011D525) GetDDrawCallbacks
+         !! RESERVED !!      @1401 
+         !! RESERVED !!      @1402 
+       0004B2A4 (001062A4)   @1403    (00120BBC) strtod
+       0004B55C (0010655C)   @1404    (00120BCA) strtol
+       0004B57C (0010657C)   @1405    (00120BD1) strtoul
+       0003CA9C (000F7A9C)   @1406    (00120B9E) strpbrk
+       0003CB6C (000F7B6C)   @1407    (00120BA6) strrchr
+       0003CD54 (000F7D54)   @1408    (00120BAE) strspn
+       0003C6AC (000F76AC)   @1409    (00120090) _strdup
+       0003C704 (000F7704)   @1410    (00120098) _stricmp
+       0003C7A0 (000F77A0)   @1411    (001200A9) _strnicmp
+       0003C9FC (000F79FC)   @1412    (001200B3) _strnset
+       0003CC38 (000F7C38)   @1413    (001200BC) _strrev
+       0003CCC0 (000F7CC0)   @1414    (001200C4) _strset
+       0003D2F8 (000F82F8)   @1415    (001200A1) _strlwr
+       0003D358 (000F8358)   @1416    (001200CC) _strupr
+       0001F01C (000DA01C)   @1417    (0011FFBE) _isctype
+       0003D1D8 (000F81D8)   @1418    (0011FF03) _atoi64
+       00014320 (000CF320)   @1419    (0011E429) InSendMessage
+       00014300 (000CF300)   @1420    (0011D9B1) GetQueueStatus
+       0000B430 (000C6430)   @1421    (0011E73F) LoadFSDEx
+         !! RESERVED !!      @1422 
+         !! RESERVED !!      @1423 
+       00032994 (000ED994)   @1424    (0011ED2C) RasEnumDevicesW
+       0000B490 (000C6490)   @1425    (0011C5CB) CeResyncFilesys
+         !! RESERVED !!      @1426 
+         !! RESERVED !!      @1427 
+         !! RESERVED !!      @1428 
+         !! RESERVED !!      @1429 
+         !! RESERVED !!      @1430 
+         !! RESERVED !!      @1431 
+         !! RESERVED !!      @1432 
+         !! RESERVED !!      @1433 
+         !! RESERVED !!      @1434 
+         !! RESERVED !!      @1435 
+         !! RESERVED !!      @1436 
+         !! RESERVED !!      @1437 
+         !! RESERVED !!      @1438 
+         !! RESERVED !!      @1439 
+         !! RESERVED !!      @1440 
+         !! RESERVED !!      @1441 
+         !! RESERVED !!      @1442 
+       0000FB7C (000CAB7C)   @1443    (0011C3E5) CeGetRandomSeed
+         !! RESERVED !!      @1444 
+         !! RESERVED !!      @1445 
+       0000BC94 (000C6C94)   @1446    (0011C4EC) CeMapArgumentArray
+       0000FBE8 (000CABE8)   @1447    (0011FAB7) UpdateNLSInfo
+       0000B73C (000C673C)   @1448    (0011EB78) PerformCallBack4
+         !! RESERVED !!      @1449 
+         !! RESERVED !!      @1450 
+       00035F1C (000F0F1C)   @1451    (0011C4C8) CeLogData
+       00035F1C (000F0F1C)   @1452    (0011C4DE) CeLogSetZones
+       0001127C (000CC27C)   @1453    (0011C16A) AllKeys
+       000110CC (000CC0CC)   @1454    (0011DCD8) GetWindowTextWDirect
+       0000BD00 (000C6D00)   @1455    (0011C62F) CeSetExtendedPdata
+       00004E38 (000BFE38)   @1456    (0011BF78) ??_U@YAPAXI@Z
+       00004E1C (000BFE1C)   @1457    (0011BF86) ??_V@YAXPAX@Z
+       000329E0 (000ED9E0)   @1458    (0011EDC9) RasGetProjectionInfoW
+       0000C704 (000C7704)   @1459    (0011FADF) VerQueryValueW
+       0000C848 (000C7848)   @1460    (0011D69A) GetFileVersionInfoW
+       0000C770 (000C7770)   @1461    (0011D682) GetFileVersionInfoSizeW
+       0000E054 (000C9054)   @1462    (0011F526) SetOOMEvent
+       00032A1C (000EDA1C)   @1463    (0011EDB4) RasGetLinkStatistics
+       00032A60 (000EDA60)   @1464    (0011ED5F) RasGetDispPhoneNumW
+       00032AF4 (000EDAF4)   @1465    (0011ECF9) RasDevConfigDialogEditW
+       0000C7DC (000C77DC)   @1466    (0011CA56) CreateLocaleView
+       00035F1C (000F0F1C)   @1467    (0011C4D2) CeLogReSync
+         !! RESERVED !!      @1468 
+         !! RESERVED !!      @1469 
+         !! RESERVED !!      @1470 
+         !! RESERVED !!      @1471 
+         !! RESERVED !!      @1472 
+         !! RESERVED !!      @1473 
+         !! RESERVED !!      @1474 
+         !! RESERVED !!      @1475 
+         !! RESERVED !!      @1476 
+         !! RESERVED !!      @1477 
+         !! RESERVED !!      @1478 
+         !! RESERVED !!      @1479 
+         !! RESERVED !!      @1480 
+         !! RESERVED !!      @1481 
+         !! RESERVED !!      @1482 
+         !! RESERVED !!      @1483 
+         !! RESERVED !!      @1484 
+         !! RESERVED !!      @1485 
+         !! RESERVED !!      @1486 
+         !! RESERVED !!      @1487 
+         !! RESERVED !!      @1488 
+         !! RESERVED !!      @1489 
+         !! RESERVED !!      @1490 
+         !! RESERVED !!      @1491 
+         !! RESERVED !!      @1492 
+         !! RESERVED !!      @1493 
+         !! RESERVED !!      @1494 
+         !! RESERVED !!      @1495 
+         !! RESERVED !!      @1496 
+         !! RESERVED !!      @1497 
+         !! RESERVED !!      @1498 
+         !! RESERVED !!      @1499 
+         !! RESERVED !!      @1500 
+         !! RESERVED !!      @1501 
+         !! RESERVED !!      @1502 
+         !! RESERVED !!      @1503 
+         !! RESERVED !!      @1504 
+         !! RESERVED !!      @1505 
+         !! RESERVED !!      @1506 
+         !! RESERVED !!      @1507 
+         !! RESERVED !!      @1508 
+         !! RESERVED !!      @1509 
+         !! RESERVED !!      @1510 
+         !! RESERVED !!      @1511 
+         !! RESERVED !!      @1512 
+         !! RESERVED !!      @1513 
+         !! RESERVED !!      @1514 
+         !! RESERVED !!      @1515 
+         !! RESERVED !!      @1516 
+         !! RESERVED !!      @1517 
+         !! RESERVED !!      @1518 
+         !! RESERVED !!      @1519 
+         !! RESERVED !!      @1520 
+         !! RESERVED !!      @1521 
+         !! RESERVED !!      @1522 
+         !! RESERVED !!      @1523 
+         !! RESERVED !!      @1524 
+         !! RESERVED !!      @1525 
+         !! RESERVED !!      @1526 
+         !! RESERVED !!      @1527 
+         !! RESERVED !!      @1528 
+         !! RESERVED !!      @1529 
+         !! RESERVED !!      @1530 
+         !! RESERVED !!      @1531 
+         !! RESERVED !!      @1532 
+         !! RESERVED !!      @1533 
+         !! RESERVED !!      @1534 
+         !! RESERVED !!      @1535 
+         !! RESERVED !!      @1536 
+         !! RESERVED !!      @1537 
+         !! RESERVED !!      @1538 
+         !! RESERVED !!      @1539 
+         !! RESERVED !!      @1540 
+         !! RESERVED !!      @1541 
+         !! RESERVED !!      @1542 
+         !! RESERVED !!      @1543 
+         !! RESERVED !!      @1544 
+         !! RESERVED !!      @1545 
+         !! RESERVED !!      @1546 
+         !! RESERVED !!      @1547 
+         !! RESERVED !!      @1548 
+         !! RESERVED !!      @1549 
+         !! RESERVED !!      @1550 
+         !! RESERVED !!      @1551 
+         !! RESERVED !!      @1552 
+         !! RESERVED !!      @1553 
+         !! RESERVED !!      @1554 
+         !! RESERVED !!      @1555 
+         !! RESERVED !!      @1556 
+         !! RESERVED !!      @1557 
+         !! RESERVED !!      @1558 
+         !! RESERVED !!      @1559 
+         !! RESERVED !!      @1560 
+         !! RESERVED !!      @1561 
+         !! RESERVED !!      @1562 
+         !! RESERVED !!      @1563 
+         !! RESERVED !!      @1564 
+         !! RESERVED !!      @1565 
+         !! RESERVED !!      @1566 
+         !! RESERVED !!      @1567 
+         !! RESERVED !!      @1568 
+         !! RESERVED !!      @1569 
+         !! RESERVED !!      @1570 
+         !! RESERVED !!      @1571 
+         !! RESERVED !!      @1572 
+         !! RESERVED !!      @1573 
+         !! RESERVED !!      @1574 
+         !! RESERVED !!      @1575 
+         !! RESERVED !!      @1576 
+         !! RESERVED !!      @1577 
+         !! RESERVED !!      @1578 
+         !! RESERVED !!      @1579 
+         !! RESERVED !!      @1580 
+         !! RESERVED !!      @1581 
+         !! RESERVED !!      @1582 
+         !! RESERVED !!      @1583 
+         !! RESERVED !!      @1584 
+         !! RESERVED !!      @1585 
+         !! RESERVED !!      @1586 
+         !! RESERVED !!      @1587 
+         !! RESERVED !!      @1588 
+         !! RESERVED !!      @1589 
+         !! RESERVED !!      @1590 
+         !! RESERVED !!      @1591 
+         !! RESERVED !!      @1592 
+         !! RESERVED !!      @1593 
+         !! RESERVED !!      @1594 
+         !! RESERVED !!      @1595 
+         !! RESERVED !!      @1596 
+         !! RESERVED !!      @1597 
+         !! RESERVED !!      @1598 
+         !! RESERVED !!      @1599 
+         !! RESERVED !!      @1600 
+         !! RESERVED !!      @1601 
+         !! RESERVED !!      @1602 
+         !! RESERVED !!      @1603 
+         !! RESERVED !!      @1604 
+         !! RESERVED !!      @1605 
+         !! RESERVED !!      @1606 
+         !! RESERVED !!      @1607 
+         !! RESERVED !!      @1608 
+         !! RESERVED !!      @1609 
+         !! RESERVED !!      @1610 
+         !! RESERVED !!      @1611 
+         !! RESERVED !!      @1612 
+         !! RESERVED !!      @1613 
+         !! RESERVED !!      @1614 
+         !! RESERVED !!      @1615 
+         !! RESERVED !!      @1616 
+         !! RESERVED !!      @1617 
+         !! RESERVED !!      @1618 
+         !! RESERVED !!      @1619 
+         !! RESERVED !!      @1620 
+         !! RESERVED !!      @1621 
+         !! RESERVED !!      @1622 
+         !! RESERVED !!      @1623 
+         !! RESERVED !!      @1624 
+         !! RESERVED !!      @1625 
+         !! RESERVED !!      @1626 
+         !! RESERVED !!      @1627 
+         !! RESERVED !!      @1628 
+         !! RESERVED !!      @1629 
+         !! RESERVED !!      @1630 
+         !! RESERVED !!      @1631 
+         !! RESERVED !!      @1632 
+         !! RESERVED !!      @1633 
+         !! RESERVED !!      @1634 
+         !! RESERVED !!      @1635 
+         !! RESERVED !!      @1636 
+         !! RESERVED !!      @1637 
+         !! RESERVED !!      @1638 
+         !! RESERVED !!      @1639 
+         !! RESERVED !!      @1640 
+         !! RESERVED !!      @1641 
+         !! RESERVED !!      @1642 
+         !! RESERVED !!      @1643 
+         !! RESERVED !!      @1644 
+         !! RESERVED !!      @1645 
+         !! RESERVED !!      @1646 
+         !! RESERVED !!      @1647 
+         !! RESERVED !!      @1648 
+         !! RESERVED !!      @1649 
+         !! RESERVED !!      @1650 
+         !! RESERVED !!      @1651 
+         !! RESERVED !!      @1652 
+         !! RESERVED !!      @1653 
+         !! RESERVED !!      @1654 
+         !! RESERVED !!      @1655 
+         !! RESERVED !!      @1656 
+         !! RESERVED !!      @1657 
+         !! RESERVED !!      @1658 
+         !! RESERVED !!      @1659 
+         !! RESERVED !!      @1660 
+         !! RESERVED !!      @1661 
+         !! RESERVED !!      @1662 
+         !! RESERVED !!      @1663 
+         !! RESERVED !!      @1664 
+         !! RESERVED !!      @1665 
+         !! RESERVED !!      @1666 
+         !! RESERVED !!      @1667 
+         !! RESERVED !!      @1668 
+         !! RESERVED !!      @1669 
+         !! RESERVED !!      @1670 
+         !! RESERVED !!      @1671 
+         !! RESERVED !!      @1672 
+         !! RESERVED !!      @1673 
+         !! RESERVED !!      @1674 
+         !! RESERVED !!      @1675 
+         !! RESERVED !!      @1676 
+         !! RESERVED !!      @1677 
+         !! RESERVED !!      @1678 
+         !! RESERVED !!      @1679 
+         !! RESERVED !!      @1680 
+         !! RESERVED !!      @1681 
+         !! RESERVED !!      @1682 
+         !! RESERVED !!      @1683 
+         !! RESERVED !!      @1684 
+         !! RESERVED !!      @1685 
+         !! RESERVED !!      @1686 
+         !! RESERVED !!      @1687 
+         !! RESERVED !!      @1688 
+         !! RESERVED !!      @1689 
+         !! RESERVED !!      @1690 
+         !! RESERVED !!      @1691 
+         !! RESERVED !!      @1692 
+         !! RESERVED !!      @1693 
+         !! RESERVED !!      @1694 
+         !! RESERVED !!      @1695 
+         !! RESERVED !!      @1696 
+         !! RESERVED !!      @1697 
+         !! RESERVED !!      @1698 
+         !! RESERVED !!      @1699 
+         !! RESERVED !!      @1700 
+         !! RESERVED !!      @1701 
+         !! RESERVED !!      @1702 
+         !! RESERVED !!      @1703 
+         !! RESERVED !!      @1704 
+         !! RESERVED !!      @1705 
+         !! RESERVED !!      @1706 
+         !! RESERVED !!      @1707 
+         !! RESERVED !!      @1708 
+         !! RESERVED !!      @1709 
+         !! RESERVED !!      @1710 
+         !! RESERVED !!      @1711 
+         !! RESERVED !!      @1712 
+         !! RESERVED !!      @1713 
+         !! RESERVED !!      @1714 
+         !! RESERVED !!      @1715 
+         !! RESERVED !!      @1716 
+         !! RESERVED !!      @1717 
+         !! RESERVED !!      @1718 
+         !! RESERVED !!      @1719 
+         !! RESERVED !!      @1720 
+         !! RESERVED !!      @1721 
+         !! RESERVED !!      @1722 
+         !! RESERVED !!      @1723 
+         !! RESERVED !!      @1724 
+         !! RESERVED !!      @1725 
+         !! RESERVED !!      @1726 
+         !! RESERVED !!      @1727 
+         !! RESERVED !!      @1728 
+         !! RESERVED !!      @1729 
+         !! RESERVED !!      @1730 
+         !! RESERVED !!      @1731 
+         !! RESERVED !!      @1732 
+         !! RESERVED !!      @1733 
+         !! RESERVED !!      @1734 
+         !! RESERVED !!      @1735 
+         !! RESERVED !!      @1736 
+         !! RESERVED !!      @1737 
+         !! RESERVED !!      @1738 
+         !! RESERVED !!      @1739 
+         !! RESERVED !!      @1740 
+         !! RESERVED !!      @1741 
+         !! RESERVED !!      @1742 
+         !! RESERVED !!      @1743 
+         !! RESERVED !!      @1744 
+         !! RESERVED !!      @1745 
+         !! RESERVED !!      @1746 
+         !! RESERVED !!      @1747 
+         !! RESERVED !!      @1748 
+         !! RESERVED !!      @1749 
+         !! RESERVED !!      @1750 
+         !! RESERVED !!      @1751 
+         !! RESERVED !!      @1752 
+         !! RESERVED !!      @1753 
+         !! RESERVED !!      @1754 
+         !! RESERVED !!      @1755 
+         !! RESERVED !!      @1756 
+         !! RESERVED !!      @1757 
+         !! RESERVED !!      @1758 
+         !! RESERVED !!      @1759 
+         !! RESERVED !!      @1760 
+         !! RESERVED !!      @1761 
+         !! RESERVED !!      @1762 
+         !! RESERVED !!      @1763 
+         !! RESERVED !!      @1764 
+         !! RESERVED !!      @1765 
+         !! RESERVED !!      @1766 
+         !! RESERVED !!      @1767 
+         !! RESERVED !!      @1768 
+         !! RESERVED !!      @1769 
+         !! RESERVED !!      @1770 
+         !! RESERVED !!      @1771 
+         !! RESERVED !!      @1772 
+         !! RESERVED !!      @1773 
+         !! RESERVED !!      @1774 
+         !! RESERVED !!      @1775 
+         !! RESERVED !!      @1776 
+         !! RESERVED !!      @1777 
+         !! RESERVED !!      @1778 
+         !! RESERVED !!      @1779 
+         !! RESERVED !!      @1780 
+         !! RESERVED !!      @1781 
+         !! RESERVED !!      @1782 
+         !! RESERVED !!      @1783 
+         !! RESERVED !!      @1784 
+         !! RESERVED !!      @1785 
+         !! RESERVED !!      @1786 
+         !! RESERVED !!      @1787 
+         !! RESERVED !!      @1788 
+         !! RESERVED !!      @1789 
+         !! RESERVED !!      @1790 
+         !! RESERVED !!      @1791 
+         !! RESERVED !!      @1792 
+         !! RESERVED !!      @1793 
+         !! RESERVED !!      @1794 
+         !! RESERVED !!      @1795 
+         !! RESERVED !!      @1796 
+         !! RESERVED !!      @1797 
+         !! RESERVED !!      @1798 
+         !! RESERVED !!      @1799 
+         !! RESERVED !!      @1800 
+         !! RESERVED !!      @1801 
+         !! RESERVED !!      @1802 
+         !! RESERVED !!      @1803 
+         !! RESERVED !!      @1804 
+         !! RESERVED !!      @1805 
+         !! RESERVED !!      @1806 
+         !! RESERVED !!      @1807 
+         !! RESERVED !!      @1808 
+         !! RESERVED !!      @1809 
+         !! RESERVED !!      @1810 
+         !! RESERVED !!      @1811 
+         !! RESERVED !!      @1812 
+         !! RESERVED !!      @1813 
+         !! RESERVED !!      @1814 
+         !! RESERVED !!      @1815 
+         !! RESERVED !!      @1816 
+         !! RESERVED !!      @1817 
+         !! RESERVED !!      @1818 
+         !! RESERVED !!      @1819 
+         !! RESERVED !!      @1820 
+         !! RESERVED !!      @1821 
+         !! RESERVED !!      @1822 
+         !! RESERVED !!      @1823 
+         !! RESERVED !!      @1824 
+         !! RESERVED !!      @1825 
+         !! RESERVED !!      @1826 
+         !! RESERVED !!      @1827 
+         !! RESERVED !!      @1828 
+         !! RESERVED !!      @1829 
+         !! RESERVED !!      @1830 
+         !! RESERVED !!      @1831 
+         !! RESERVED !!      @1832 
+         !! RESERVED !!      @1833 
+         !! RESERVED !!      @1834 
+         !! RESERVED !!      @1835 
+         !! RESERVED !!      @1836 
+         !! RESERVED !!      @1837 
+         !! RESERVED !!      @1838 
+         !! RESERVED !!      @1839 
+         !! RESERVED !!      @1840 
+         !! RESERVED !!      @1841 
+         !! RESERVED !!      @1842 
+         !! RESERVED !!      @1843 
+         !! RESERVED !!      @1844 
+         !! RESERVED !!      @1845 
+         !! RESERVED !!      @1846 
+         !! RESERVED !!      @1847 
+         !! RESERVED !!      @1848 
+         !! RESERVED !!      @1849 
+         !! RESERVED !!      @1850 
+         !! RESERVED !!      @1851 
+         !! RESERVED !!      @1852 
+         !! RESERVED !!      @1853 
+         !! RESERVED !!      @1854 
+         !! RESERVED !!      @1855 
+         !! RESERVED !!      @1856 
+         !! RESERVED !!      @1857 
+         !! RESERVED !!      @1858 
+         !! RESERVED !!      @1859 
+         !! RESERVED !!      @1860 
+         !! RESERVED !!      @1861 
+         !! RESERVED !!      @1862 
+         !! RESERVED !!      @1863 
+         !! RESERVED !!      @1864 
+         !! RESERVED !!      @1865 
+         !! RESERVED !!      @1866 
+         !! RESERVED !!      @1867 
+         !! RESERVED !!      @1868 
+         !! RESERVED !!      @1869 
+         !! RESERVED !!      @1870 
+         !! RESERVED !!      @1871 
+         !! RESERVED !!      @1872 
+         !! RESERVED !!      @1873 
+         !! RESERVED !!      @1874 
+         !! RESERVED !!      @1875 
+         !! RESERVED !!      @1876 
+         !! RESERVED !!      @1877 
+         !! RESERVED !!      @1878 
+         !! RESERVED !!      @1879 
+         !! RESERVED !!      @1880 
+         !! RESERVED !!      @1881 
+         !! RESERVED !!      @1882 
+         !! RESERVED !!      @1883 
+         !! RESERVED !!      @1884 
+         !! RESERVED !!      @1885 
+         !! RESERVED !!      @1886 
+         !! RESERVED !!      @1887 
+         !! RESERVED !!      @1888 
+         !! RESERVED !!      @1889 
+         !! RESERVED !!      @1890 
+         !! RESERVED !!      @1891 
+         !! RESERVED !!      @1892 
+         !! RESERVED !!      @1893 
+         !! RESERVED !!      @1894 
+         !! RESERVED !!      @1895 
+         !! RESERVED !!      @1896 
+         !! RESERVED !!      @1897 
+         !! RESERVED !!      @1898 
+         !! RESERVED !!      @1899 
+         !! RESERVED !!      @1900 
+         !! RESERVED !!      @1901 
+         !! RESERVED !!      @1902 
+         !! RESERVED !!      @1903 
+         !! RESERVED !!      @1904 
+         !! RESERVED !!      @1905 
+         !! RESERVED !!      @1906 
+         !! RESERVED !!      @1907 
+         !! RESERVED !!      @1908 
+         !! RESERVED !!      @1909 
+         !! RESERVED !!      @1910 
+         !! RESERVED !!      @1911 
+         !! RESERVED !!      @1912 
+         !! RESERVED !!      @1913 
+         !! RESERVED !!      @1914 
+         !! RESERVED !!      @1915 
+         !! RESERVED !!      @1916 
+         !! RESERVED !!      @1917 
+         !! RESERVED !!      @1918 
+         !! RESERVED !!      @1919 
+         !! RESERVED !!      @1920 
+         !! RESERVED !!      @1921 
+         !! RESERVED !!      @1922 
+         !! RESERVED !!      @1923 
+         !! RESERVED !!      @1924 
+         !! RESERVED !!      @1925 
+         !! RESERVED !!      @1926 
+         !! RESERVED !!      @1927 
+         !! RESERVED !!      @1928 
+         !! RESERVED !!      @1929 
+         !! RESERVED !!      @1930 
+         !! RESERVED !!      @1931 
+         !! RESERVED !!      @1932 
+         !! RESERVED !!      @1933 
+         !! RESERVED !!      @1934 
+         !! RESERVED !!      @1935 
+         !! RESERVED !!      @1936 
+         !! RESERVED !!      @1937 
+         !! RESERVED !!      @1938 
+         !! RESERVED !!      @1939 
+         !! RESERVED !!      @1940 
+         !! RESERVED !!      @1941 
+         !! RESERVED !!      @1942 
+         !! RESERVED !!      @1943 
+         !! RESERVED !!      @1944 
+         !! RESERVED !!      @1945 
+         !! RESERVED !!      @1946 
+         !! RESERVED !!      @1947 
+         !! RESERVED !!      @1948 
+         !! RESERVED !!      @1949 
+         !! RESERVED !!      @1950 
+         !! RESERVED !!      @1951 
+         !! RESERVED !!      @1952 
+         !! RESERVED !!      @1953 
+         !! RESERVED !!      @1954 
+         !! RESERVED !!      @1955 
+         !! RESERVED !!      @1956 
+         !! RESERVED !!      @1957 
+         !! RESERVED !!      @1958 
+         !! RESERVED !!      @1959 
+         !! RESERVED !!      @1960 
+         !! RESERVED !!      @1961 
+         !! RESERVED !!      @1962 
+         !! RESERVED !!      @1963 
+         !! RESERVED !!      @1964 
+         !! RESERVED !!      @1965 
+         !! RESERVED !!      @1966 
+         !! RESERVED !!      @1967 
+         !! RESERVED !!      @1968 
+         !! RESERVED !!      @1969 
+         !! RESERVED !!      @1970 
+         !! RESERVED !!      @1971 
+         !! RESERVED !!      @1972 
+         !! RESERVED !!      @1973 
+         !! RESERVED !!      @1974 
+         !! RESERVED !!      @1975 
+         !! RESERVED !!      @1976 
+         !! RESERVED !!      @1977 
+         !! RESERVED !!      @1978 
+         !! RESERVED !!      @1979 
+         !! RESERVED !!      @1980 
+         !! RESERVED !!      @1981 
+         !! RESERVED !!      @1982 
+         !! RESERVED !!      @1983 
+         !! RESERVED !!      @1984 
+         !! RESERVED !!      @1985 
+         !! RESERVED !!      @1986 
+         !! RESERVED !!      @1987 
+         !! RESERVED !!      @1988 
+         !! RESERVED !!      @1989 
+         !! RESERVED !!      @1990 
+         !! RESERVED !!      @1991 
+         !! RESERVED !!      @1992 
+         !! RESERVED !!      @1993 
+         !! RESERVED !!      @1994 
+         !! RESERVED !!      @1995 
+         !! RESERVED !!      @1996 
+         !! RESERVED !!      @1997 
+         !! RESERVED !!      @1998 
+         !! RESERVED !!      @1999 
+       00042314 (000FD314)   @2000    (00120060) _setjmp
+       000363E8 (000F13E8)   @2001    (0011FCE4) _RtlCheckStack
+       0003B5F4 (000F65F4)   @2002    (0011FE42) __ll_rshift
+       0003B564 (000F6564)   @2003    (0011FE24) __ll_lshift
+       0003B63C (000F663C)   @2004    (0011FE30) __ll_mul
+       0003AF50 (000F5F50)   @2005    (0011FE1B) __ll_div
+       0003B17C (000F617C)   @2006    (0011FE39) __ll_rem
+       0003AD20 (000F5D20)   @2007    (0011FDFA) __ll_bit_extract
+       0003AE0C (000F5E0C)   @2008    (0011FE0B) __ll_bit_insert
+       0003658C (000F158C)   @2009    (0011FE58) __ll_to_f
+       0003684C (000F184C)   @2010    (0011FE4E) __ll_to_d
+       0003B5AC (000F65AC)   @2011    (0011FEBE) __ull_rshift
+       0003B0B4 (000F60B4)   @2012    (0011FEAA) __ull_div
+       0003B2DC (000F62DC)   @2013    (0011FEB4) __ull_rem
+       0003AAF0 (000F5AF0)   @2014    (0011FE87) __ull_bit_extract
+       0003ABDC (000F5BDC)   @2015    (0011FE99) __ull_bit_insert
+       00036630 (000F1630)   @2016    (0011FED6) __ull_to_f
+       00036900 (000F1900)   @2017    (0011FECB) __ull_to_d
+       000366B0 (000F16B0)   @2018    (0011FD6C) __f_to_ll
+       00036988 (000F1988)   @2019    (0011FD08) __d_to_ll
+       00036780 (000F1780)   @2020    (0011FD76) __f_to_ull
+       00036B6C (000F1B6C)   @2021    (0011FD12) __d_to_ull
+       000395D8 (000F45D8)   @2022    (0011FD81) __fpadd
+       000370AC (000F20AC)   @2023    (0011FD1D) __dpadd
+       000395C8 (000F45C8)   @2024    (0011FDA1) __fpsub
+       0003709C (000F209C)   @2025    (0011FD3D) __dpsub
+       00039934 (000F4934)   @2026    (0011FD99) __fpmul
+       0003753C (000F253C)   @2027    (0011FD35) __dpmul
+       00039B74 (000F4B74)   @2028    (0011FD91) __fpdiv
+       000378AC (000F28AC)   @2029    (0011FD2D) __dpdiv
+       0003A024 (000F5024)   @2030    (0011FDB2) __fptoli
+       0003A150 (000F5150)   @2031    (0011FDBB) __fptoul
+       00039E58 (000F4E58)   @2032    (0011FDF1) __litofp
+       00039F48 (000F4F48)   @2033    (0011FEEA) __ultofp
+       00038458 (000F3458)   @2034    (0011FD4E) __dptoli
+       00038658 (000F3658)   @2035    (0011FD57) __dptoul
+       00037E48 (000F2E48)   @2036    (0011FDE8) __litodp
+       00037ED8 (000F2ED8)   @2037    (0011FEE1) __ultodp
+       00037F44 (000F2F44)   @2038    (0011FDA9) __fptodp
+       000380AC (000F30AC)   @2039    (0011FD45) __dptofp
+       0003A278 (000F5278)   @2040    (0011FD89) __fpcmp
+       00038784 (000F3784)   @2041    (0011FD25) __dpcmp
+       0003A5D0 (000F55D0)   @2042    (0011FE68) __lts
+       0003A49C (000F549C)   @2043    (0011FDE2) __les
+       0003A3F4 (000F53F4)   @2044    (0011FD66) __eqs
+       0003A704 (000F5704)   @2045    (0011FDCA) __ges
+       0003A838 (000F5838)   @2046    (0011FDD6) __gts
+       0003A96C (000F596C)   @2047    (0011FE74) __nes
+       00038C24 (000F3C24)   @2048    (0011FE62) __ltd
+       00038A5C (000F3A5C)   @2049    (0011FDDC) __led
+       00038968 (000F3968)   @2050    (0011FD60) __eqd
+       00038DEC (000F3DEC)   @2051    (0011FDC4) __ged
+       00038FB4 (000F3FB4)   @2052    (0011FDD0) __gtd
+       0003917C (000F417C)   @2053    (0011FE6E) __ned
+ e32_unit[IMP]  rva = 00000000 (00450000)    size = 00000000  - IMPORT TABLE
+ e32_unit[RES]  rva = 00070000 (00450000)    size = 00005A38  - RESOURCE TABLE
+ e32_unit[EXC]  rva = 00067000 (00450000)    size = 0000896C  - EXCEPTION TABLE
+ e32_unit[SEC]  rva = 00000000 (00450000)    size = 00000000  - SECURITY TABLE
+ e32_unit[FIX]  rva = 00076000 (00450000)    size = 000098C0  - FIXUP TABLE
+ pagemode = 00000001
+ filetype = 00000003
+ objcnt = 4
+ objPtr0 = 03FE6570 (0144B570)
+   o32_rva     = 00001000    o32_realaddress = 03F81000 (0050C000)
+   o32_vsize   = 00064F3E    o32_psize       = 00065000
+   o32_access  = 00000020
+      PAGE_EXECUTE_READ
+   o32_flags   = 60000020
+      IMAGE_SCN_CNT_CODE
+      IMAGE_SCN_MEM_EXECUTE
+      IMAGE_SCN_MEM_READ
+   o32_dataptr = 00000000 (00450000)
+
+Dumping Object at 0050C000*****************************************************************************************************
+
+ objPtr1 = 03FE658C (0144B58C)
+   o32_rva     = 00066000    o32_realaddress = 03FE6000 (0144B000)
+   o32_vsize   = 000005E0    o32_psize       = 00000237
+   o32_access  = 00000004
+      PAGE_READWRITE
+   o32_flags   = C0002040
+      IMAGE_SCN_CNT_INITIALIZED_DATA
+      IMAGE_SCN_COMPRESSED
+      IMAGE_SCN_MEM_READ
+      IMAGE_SCN_MEM_WRITE
+   o32_dataptr = 00000000 (00450000)
+
+Dumping Object at 0144B000*
+
+ objPtr2 = 03FE65A8 (0144B5A8)
+   o32_rva     = 00067000    o32_realaddress = 03FE7000 (00450000)
+   o32_vsize   = 0000896C    o32_psize       = 000044F0
+   o32_access  = 00000002
+      PAGE_READONLY
+   o32_flags   = 40002040
+      IMAGE_SCN_CNT_INITIALIZED_DATA
+      IMAGE_SCN_COMPRESSED
+      IMAGE_SCN_MEM_READ
+   o32_dataptr = 00000000 (00450000)
+
+Can't dump, Object not in RAM
+
+ objPtr3 = 03FE65C4 (0144B5C4)
+   o32_rva     = 00070000    o32_realaddress = 03FF0000 (00450000)
+   o32_vsize   = 00006000    o32_psize       = 00005C00
+   o32_access  = 00000002
+      PAGE_READONLY
+   o32_flags   = 40000040
+      IMAGE_SCN_CNT_INITIALIZED_DATA
+      IMAGE_SCN_MEM_READ
+   o32_dataptr = 00000000 (00450000)
+
+Can't dump, Object not in RAM
+

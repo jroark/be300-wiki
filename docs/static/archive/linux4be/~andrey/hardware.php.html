@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>Linux4.BE :: Andrey's page :: Hardware</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#336699" vlink="#336699" alink="#336699">
+  <center>
+  <a href="../" >
+    <img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+    <br>Back to the Linux4BE Homepage
+  </a>
+</center>
+
+  <table width="100%">
+    <tr>
+      <td width="15%" valign="top"/>
+      <td valign="top">
+        <p class="subtitle"><br>&nbsp;&nbsp;&nbsp;&nbsp;BE-300 Hardware :: General</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" valign="top">
+        <br>
+        <a href="index.php.html">Start page<a><br>
+<a href="hardware.php.html">Hardware<a><br>
+  <a href="video.php.html">&nbsp;&nbsp;Video memory<a><br>
+  <a href="interrupts.php.html">&nbsp;&nbsp;Interrupts<a><br>
+  <a href="serial.php.html">&nbsp;&nbsp;Serial port<a><br>
+  <a href="touch.php.html">&nbsp;&nbsp;Touch screen<a><br>
+  <a href="socket.php.html">&nbsp;&nbsp;CF socket<a><br>
+
+      </td>
+      <td valign="top">
+        <p><span class="bodytext">
+          <br>Disclaimer! <br>All information here is obtained in an experimental way and
+          cannot be guaranteed to be correct. Use it on your own risk.
+        </p>
+        <p><span class="bodytext">
+          All hardware specs are already listed <a href="../hackers/hardware.php.html">here</a>
+          so I won't repeat them. Just want to mention two things. First, BE-300 is much closer
+          to conventional PC than most other (especially old) PDAs. Casio used NAND-flash memory
+          there, which is cheaper than NOR memory but lacks the possibility to execute code
+          directly from it. You can think of NAND-memory as of "hard-drive" rather than ROM,
+          which means that code should be loaded into RAM before you can execute it. No execute-in-place.
+          Because of this, such architecture requires real ROM (analogous to PC's BIOS) to boot.
+          <br><br>
+          It looks like BE-300 has 16K of ROM (masked?) at 0xBFC00000-0xBFC03FFF. But the code 
+          there is really strange. It even looks like Casio hides real ROM after boot and exposes 
+          the fake one. Maybe I'm wrong though...
+          <br><br>
+          Second, BE-300 has custom chip for handling peripherial devices, such as
+          <a href="touch.php.html">touch-screen</a> or <a href="socket.php.html">compact flash socket</a>.
+          Even <a href="serial.php.html">a serial port</a> by some unknown
+          reason uses this chip while Vr4131 CPU has its own serial port implementation.
+        </p>
+      </td>
+    </tr>
+</body>
+
+</html>

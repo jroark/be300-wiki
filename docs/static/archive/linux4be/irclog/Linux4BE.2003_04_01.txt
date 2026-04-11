@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_01.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_01.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Apr 01 00:00:17 2003
+03:21 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+04:21 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+04:58 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+08:57 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 104 (Connection reset by peer)]
+16:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has joined #linux4be
+17:30 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+17:39 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has quit [Read error: 113 (No route to host)]
+18:08  * jal0 is aroung
+18:08 < jal0> hey everyone
+18:10 < andrey> hey jal0
+18:11 < jal0> how goes things
+18:12 < andrey> slowly...
+18:13 < andrey> checked you output files. Are you still going to extract dlls from memory dump?
+18:14 < andrey> or directly from memory...
+18:16 < jal0> i gave up on that, it seems to be a wast of time when i can get more info the way i'm doing things now ;)
+18:17 < andrey> like creating output files? :-)
+18:18 < andrey> I just thought that we can use some smart disasms like ada or something. Unless we're going to write similar tools ourselves :-)
+18:18 < jal0> i just finished re'ing RegisterDevice() and have the address of g_DevChain, which is the global device driver chain, head pointer. working on dumping the entire chain of device drivers now
+18:20 < andrey> That's interesting...
+18:21 < andrey> Some time ago I tried to get this list by reading registry. Let me try to find this stuff...
+18:21 < jal0> only problem is that the variable is created at compile time as a static global, there is no garentees that the location of it will be the same on all PDA's.
+18:24 < jal0> http://www.linux4.be/~jal0/registerdevice.txx  <-- contains the dismed/re'd code and notes
+18:24 < andrey> That's why I prefer to work with dump. :-)
+18:24 < jal0> yeap
+18:25 < jal0> http://www.linux4.be/~jal0/registerdevice.txt .... opps
+18:26 < andrey> doesn't work :-( I see something really quick and then being transferred to linux4.be start page
+18:26 < jal0> yea me too 
+18:27 < jal0> hang on
+18:27 < jal0> http://www.linux4.be/~jal0/RegisterDevice.txt
+18:28 < jal0> didnt realize it was case sensitive
+18:32 < jal0> did you find the stuff you were talking about with the registry?
+18:34 < andrey> yes, I just sent it to you. Couple of files... 
+18:37 < jal0> now that i know what the handle represents it all makes sense :)
+18:37 < andrey> I'm checking source code for this... What a mess! Some constants I dont'remember where I get it from...
+18:38 < jal0> thats why i try never to use "magic" values ;p
+18:39 < andrey> Well, it makes sense if you're just going to understand how it works, once...
+18:39 < jal0> or at least not uless i document them
+18:39 < jal0> :D
+18:39 < andrey> This one is a good idea. I should've done this.
+18:41 < jal0> btw: the registry dosn't list the handle for all the devices
+18:42 < jal0> and hey... is there anything that you HAVE'NT already beat me to the puch on? :)
+18:43 < andrey> Sure, it does not! But it can be combined with what you have...
+18:43 < jal0> it seems like our re'ing train of thoughs are going in the same direction... mine lagging just a bit.
+18:44 < andrey> I think it rather covers same areas but in different order. I was doing this device stuff long time ago
+18:45 < andrey> And seems like we're not only trying to run linux but also curious about how CE works :-)
+18:46 < jal0> i think once i get a general device driver dumpper written, i'm going to bear down on the serial port issues and get things working on linux
+18:46 < jal0> yeap, :)
+18:46 < andrey> you mean interrupts handling?
+18:47 < jal0> yeah, and look more into some of the registers. Could never get setting baud rates and stuff working under linux. everything had to be initialized under CE.
+18:48 < jal0> i REALLY want to get a kernel debugger working
+18:54 < jal0> ok, need to take a nap, got up too eary this morning.... talk to you later andry
+18:54 < andrey> ok, see you... :-)
+18:55 -!- jal0 is now known as jal0_X-|
+19:01 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+--- Log closed Wed Apr 02 00:00:44 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

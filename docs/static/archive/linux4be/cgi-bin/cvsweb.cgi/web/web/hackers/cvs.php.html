@@ -1,0 +1,56 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<title>CVS log for web/web/hackers/cvs.php</title>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<img src="../../../../../icons/apache_pb.gif"> <h1 align="center">CVS log for web/web/hackers/cvs.php</h1>
+<A HREF="/cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#cvs.php"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></A>
+ <b>Up to  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b><p>
+<A HREF="#diff">Request diff between arbitrary revisions</A>
+<HR NOSHADE>
+Default branch: 1<BR>
+<HR size=1 NOSHADE><a NAME="rev1.1"></a><a NAME="HEAD"></a>
+ Revision <A HREF="cvs.php?rev=1.1&amp;content-type=text/x-cvsweb-markup&amp;sortby=date"><b>1.1</b></A> / (<A HREF="/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/cvs.php?rev=1.1&amp;content-type=text/plain&amp;sortby=date" target="cvs_checkout" onClick="window.open('/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/cvs.php?rev=1.1&amp;content-type=text/plain','cvs_checkout','resizeable,scrollbars');"><b>download</b></A>) - <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/cvs.php.html">annotate</a> - <A HREF="/cgi-bin/cvsweb.cgi/web/web/hackers/cvs.php?r1=1.1&amp;sortby=date">[select for diffs]</A>
+, <i>Mon Jul  8 09:10:05 2002 UTC</i> (13 months, 4 weeks ago) by <i>filip</i>
+<BR>CVS Tags: <b><A HREF="cvs.php?sortby=date&amp;only_with_tag=HEAD">HEAD</A>
+</b><BR>Diff<PRE>
+added cvs info
+</PRE>
+<HR NOSHADE><A NAME=diff>
+This form allows you to request diff's between any two
+revisions of a file.  You may select a symbolic revision
+name using the selection box or you may type in a numeric
+name using the type-in text box.
+</A><P>
+<FORM METHOD="GET" ACTION="/cgi-bin/cvsweb.cgi/web/web/hackers/cvs.php.diff" NAME="diff_select">
+<INPUT TYPE=HIDDEN NAME="sortby" VALUE="date">
+Diffs between 
+<SELECT NAME="r1">
+<OPTION VALUE="text" SELECTED>Use Text Field
+<OPTION VALUE="0.1:MAIN">MAIN
+<OPTION VALUE="1.1:HEAD">HEAD
+</SELECT>
+<INPUT TYPE="TEXT" SIZE="12" NAME="tr1" VALUE="1.1" onChange='document.diff_select.r1.selectedIndex=0'>
+ and 
+<SELECT NAME="r2">
+<OPTION VALUE="text" SELECTED>Use Text Field
+<OPTION VALUE="0.1:MAIN">MAIN
+<OPTION VALUE="1.1:HEAD">HEAD
+</SELECT>
+<INPUT TYPE="TEXT" SIZE="12" NAME="tr2" VALUE="1.1" onChange='document.diff_select.r2.selectedIndex=0'>
+<BR>Type of Diff should be a&nbsp;<SELECT NAME="f">
+<OPTION VALUE=h SELECTED>Colored Diff<OPTION VALUE=H>Long Colored Diff<OPTION VALUE=u>Unidiff<OPTION VALUE=c>Context Diff</SELECT><INPUT TYPE=SUBMIT VALUE="  Get Diffs  ">
+</FORM>
+<HR noshade>
+<A name=logsort></A>
+<FORM METHOD="GET" ACTION="/cgi-bin/cvsweb.cgi/web/web/hackers/cvs.php">
+<INPUT TYPE=HIDDEN NAME="sortby" VALUE="date">
+Sort log by: 
+<SELECT NAME="logsort" onchange="submit()">
+<OPTION VALUE=cvs>Not sorted<OPTION VALUE=date SELECTED>Commit date<OPTION VALUE=rev>Revision</SELECT>
+<INPUT TYPE=SUBMIT VALUE="  Sort  ">
+</FORM>
+<hr noshade><address><font size=-1>CVSweb by &lt;zeller@think.de&gt;</font></address></body></html>
+</BODY></HTML>

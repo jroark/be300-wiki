@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_21.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_21.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Dec 21 00:00:59 2002
+04:45 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+05:03 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+15:35 -!- Filip [~Filip@61.101-136-217.adsl.skynet.be] has joined #Linux4BE
+15:41 -!- Filip_ [~Filip@61.101-136-217.adsl.skynet.be] has joined #Linux4BE
+15:41 -!- Filip [~Filip@61.101-136-217.adsl.skynet.be] has quit [Read error: 54 (Connection reset by peer)]
+15:43 -!- Filip__ [~Filip@61.101-136-217.adsl.skynet.be] has joined #Linux4BE
+15:43 -!- Filip_ [~Filip@61.101-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:50 -!- Filip_ [~Filip@61.101-136-217.adsl.skynet.be] has joined #Linux4BE
+15:50 -!- Filip__ [~Filip@61.101-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:52 -!- Filip__ [~Filip@61.101-136-217.adsl.skynet.be] has joined #Linux4BE
+15:52 -!- Filip_ [~Filip@61.101-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:54 -!- Filip__ [~Filip@61.101-136-217.adsl.skynet.be] has quit [Client Quit]
+--- Log closed Sun Dec 22 00:00:26 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

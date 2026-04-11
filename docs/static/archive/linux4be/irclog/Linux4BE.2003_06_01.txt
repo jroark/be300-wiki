@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_06_01.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_06_01.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Jun 01 00:00:46 2003
+02:21 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+04:00 -!- prk_away [~konversat@81-172-59-254.usuarios.retecal.es] has quit ["bye"]
+04:16 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+10:55 -!- jal0_away is now known as jal0
+15:31 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+20:50 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+22:21 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+22:29 -!- mutexmutant [root@Toronto-HSE-ppp3718164.sympatico.ca] has joined #linux4be
+22:33 -!- mutexmutant [root@Toronto-HSE-ppp3718164.sympatico.ca] has left #linux4be []
+22:35 -!- mutexmutant [root@Toronto-HSE-ppp3718164.sympatico.ca] has joined #linux4be
+22:46 < mutexmutant> HELLO ANYBODY THERE
+22:46 < jal0> hey
+22:46 < jal0> no need to shout :)
+22:46 < mutexmutant> hi jal0, can you help me on that, I just compiled linux4be and it reboots every 3 minutes
+22:47 < jal0> using the original casio shell i suppose?
+22:48 < mutexmutant> on linux shell, yes, I folowed the instuctions, is there a watchdog in it
+22:49 < jal0> yeah, you'll need to install expod 5.1 for that to go away. Its an issue we have not gotten around to fixing 
+22:50 < mutexmutant> ok
+22:50 < jal0> besides, expod makes things alot easier to work with
+22:53 < mutexmutant> Another question, I wonder how many people are involed in Linux4be now
+22:54 < jal0> about 5 :(... although not much has been done lately.
+22:54 < jal0> too busy with our day jobs
+22:54 < mutexmutant> ya, I understand
+22:57 < mutexmutant> I dont have a serial cable, would it be possible to talk to the casio with the usb craddle in a near future?
+22:58 < jal0> probably not the near future, there is still alot to do before we can get usb working
+22:58 < mutexmutant> thanks, it's late for me, I have to go.
+22:58 < jal0> ok later
+22:59 -!- mutexmutant [root@Toronto-HSE-ppp3718164.sympatico.ca] has left #linux4be []
+23:45 -!- antagoni1t [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+23:45 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit [Read error: 104 (Connection reset by peer)]
+--- Log closed Mon Jun 02 00:00:10 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

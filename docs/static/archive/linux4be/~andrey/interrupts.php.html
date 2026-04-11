@@ -1,0 +1,317 @@
+<html>
+
+<head>
+  <title>Linux4.BE :: Andrey's page :: Hardware :: Interrupts</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#336699" vlink="#336699" alink="#336699">
+  <center>
+  <a href="../" >
+    <img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+    <br>Back to the Linux4BE Homepage
+  </a>
+</center>
+
+  <table width="100%">
+    <tr>
+      <td width="15%" valign="top"/>
+      <td valign="top">
+        <p class="subtitle"><br>&nbsp;&nbsp;&nbsp;&nbsp;BE-300 Hardware :: Interrupts</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" valign="top">
+        <br>
+        <a href="index.php.html">Start page<a><br>
+<a href="hardware.php.html">Hardware<a><br>
+  <a href="video.php.html">&nbsp;&nbsp;Video memory<a><br>
+  <a href="interrupts.php.html">&nbsp;&nbsp;Interrupts<a><br>
+  <a href="serial.php.html">&nbsp;&nbsp;Serial port<a><br>
+  <a href="touch.php.html">&nbsp;&nbsp;Touch screen<a><br>
+  <a href="socket.php.html">&nbsp;&nbsp;CF socket<a><br>
+
+      </td>
+      <td valign="top">
+        <p><span class="bodytext">
+          <br>This page describes how hardware interrupts are handled inside Windows CE.
+          Only IRQ0 and timer IRQ are processed. If any of the IRQ1-IRQ4 occurs
+          BE tries to disable it.
+          <br><br>First thing that both interrupt handers (IRQ0 and Timer) do is writing 1 to 
+          three 32-bit registers: 0xAA001120, 0xAA00112C, and 0xAA001B20. Probably some kind
+          of interrupt acknowledgement. Then in case of IRQ0 BE calls appropriate handler based
+          on the value in System Interrupt Registers - SYSINT1REG (0xAF000080) and 
+          SYSINT2REG (0xAF0000A0). On my BE only four handlers are installed:
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;SYSINT1REG bit 0 (Battery interrupt request)           
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;SYSINT1REG bit 1 (Power switch interrupt request)      
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;SYSINT1REG bit 3 (Elapsed Time timer interrupt request)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;SYSINT1REG bit 8 (GIU (higher/lower) interrupt request)
+        </p>
+
+        <p class="subtitle"><br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Interrupts</p>
+        <p><span class="bodytext">
+          In case of GIU interrupt BE does similar to IRQ0 thing, which is calling a handler
+          based on the value in interrupt mask register. In this case it's GIU Interrupt Lower
+          Register - GIUINTLREG (0xAF000088). Again, not all handlers are defined, just six
+          of them:
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr 0
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr 1
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr 7
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr 9
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr A
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;GIU Intr B
+          <br><br>GIU interrupts are heavily cascaded. For example, GIU Intr 0 is cascaded again
+          based on the value in register 0xAA000004, and while bit 0 in this register means
+          PCMCIA interrupt and bit 1 generates SYSINTR_KEYBOARD, bit 2 makes BE cascade even more
+          based on register 0xAA001040.
+        </p>
+
+        <p class="subtitle"><br>&nbsp;&nbsp;&nbsp;&nbsp;Interrupt handling in BE-300</p>
+        
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top"><p><span class="bodytext">W[xxxxxxxx]</p></td>
+              <td valign="top"><p><span class="bodytext">: word (32-bit)</p></td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top"><p><span class="bodytext">H[xxxxxxxx]</p></td>
+              <td valign="top"><p><span class="bodytext">: half-word (16-bit)</p></td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top"><p><span class="bodytext">B[xxxxxxxx]</p></td>
+              <td valign="top"><p><span class="bodytext">: byte (8-bit)</p></td>
+            </tr>
+          </table>
+        </p>
+        <hr width="100%">
+        <p><span class="bodytext">
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">IRQ0:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">W[AA00112C] = 1<br>
+                                    W[AA001120] = 1<br>
+                                    W[AA001B2C] = 1<br></p>
+              </td>
+              <td valign="top">
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+              </td>
+              <td valign="top">
+                <p class="bodytext">switch SYSINT1REG (AF000080):</p>
+              </td>
+              <td valign="top" align="left">
+                <p class="bodytext">bit 0: Battery IRQ<br>
+                                    bit 1: Power Switch IRQ<br>
+                                    bit 3: Elapsed Timer IRQ<br>
+                                    bit 8: <a href="#giu_irq">GIU IRQ</a></p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="giu_irq"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIU IRQ:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">switch GIUINTLREG (AF000088):</p>
+              </td>
+              <td valign="top" align="left">
+                <p class="bodytext">bit 0: <a href="#girq0">GIRQ0</a><br>
+                                    bit 1: GIRQ1<br>
+                                    bit 7: GIRQ7<br>
+                                    bit 9: GIRQ9<br>
+                                    bit A: GIRQA<br>
+                                    bit B: GIRQB</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">H[AF000148] = 1 (clear interrupt flag)</p>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+              </td>
+              <td valign="top">
+                <p class="bodytext">switch W[AA000004]:</p>
+              </td>
+              <td valign="top" align="left">
+                <p class="bodytext">bit 0: <a href="#girq0_0">GIRQ0-0</a><br>
+                                    bit 1: <a href="#girq0_1">GIRQ0-1</a><br>
+                                    bit 2: <a href="#girq0_2">GIRQ0-2</a><br>
+                                    bit 4: <a href="#girq0_4">GIRQ0-4</a><br>
+                                    bit 6: GIRQ0-6<br>
+                                    bit 7: GIRQ0-7<br>
+                                    bit 8: GIRQ0-8<br>
+                                    bit 9: <a href="#girq0_9">GIRQ0-9</a><br>
+                                    bit C: GIRQ0-C<br>
+                                    bit 10: GIRQ0-10</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0_0"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0-0:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">if (H[AA00A03C] & 0x0022):</p>
+              </td>
+              <td valign="top">
+                <p class="bodytext">W[AA000010] &= ~0x08<br>
+                                    return 0x15 (SYSINTR_PCMCIA_STATE)</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top">
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">if (H[AA00A03C] & 0x0001):</p>
+              </td>
+              <td valign="top">
+                <p class="bodytext">W[AA000010] &= ~0x08<br>
+                                    return 0x17 (SYSINTR_PCMCIA_LEVEL)</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top">
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">else:</p>
+              </td>
+              <td valign="top">
+                <p class="bodytext">return 0 (SYSINTR_NOP)</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0_1"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0-1:</p>
+              </td>
+              <td width="45%" valign="top"/>
+              <td>
+                <p class="bodytext">W[AA000014] &= ~0x08<br>
+                                    H[AF00008C] &= ~0x02<br>
+                                    (disable PowerSW interrupt?)<br>
+                                    return 0x10 (SYSINTR_KEYBOARD)</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0_2"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0-2:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">switch H[AA001040]:</p>
+              </td>
+              <td valign="top" align="left">
+                <p class="bodytext">bit 0: GIRQ0-2-0<br>
+                                    bit 2: GIRQ0-2-2<br>
+                                    bit 4: GIRQ0-2-4</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0_4"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0-4:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">intr = H[AA008004] (byte 0 - pending interrupts)<br>
+                                    intr &= (intr >> 8) (byte 1 - interrupt mask)</p>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <td valign="top"/>
+              <td valign="top">
+                <p class="bodytext">switch (intr):</p>
+              </td>
+              <td>
+                <p class="bodytext">bit 0: GIRQ0-4-0<br>
+                                    bit 4: GIRQ0-4-4</p>
+              </td>
+            </tr>
+          </table>
+
+          <hr width="100%">
+          <a name="girq0_9"></a>
+          <table width="100%">
+            <tr>
+              <td width="10%" valign="top">
+                <p class="bodytext">GIRQ0-9:</p>
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">intr = W[AA000304] (byte 0 - pending interrupts)<br>
+                                    intr &= (intr >> 8) (byte 1 - interrupt mask)</p>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <td width="10%" valign="top"/>
+              <td width="45%" valign="top">
+                <p class="bodytext">if (intr & 0x5C):</p>
+              </td>
+              <td>
+                <p class="bodytext">W[AA000304] &= 0xA300 (~5C00 & FF00)<br>
+                                    return 0x11 (SYSINTR_TOUCH)</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top"/>
+              <td width="45%" valign="top">
+                <p class="bodytext">if (intr & 0x01):</p>
+              </td>
+              <td>
+                <p class="bodytext">W[AA000304] &= 0xFE00 (~0100 & FF00)<br>
+                                    return 0x18 (SYSINTR_TOUCH_CHANGED)</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="10%" valign="top">
+              </td>
+              <td width="45%" valign="top">
+                <p class="bodytext">else:</p>
+              </td>
+              <td valign="top">
+                <p class="bodytext">return 0 (SYSINTR_NOP)</p>
+              </td>
+            </tr>
+          </table>
+        </p>
+      </td>
+    </tr>
+</body>
+
+</html>

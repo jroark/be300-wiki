@@ -1,0 +1,373 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_18.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_18.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Dec 18 00:00:15 2002
+01:27 -!- antagonizt is now known as antagonizt[zZz]
+02:03 < jal0_logger> antagonizt: you there?
+04:12 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+04:43 -!- antagonizt[zZz] is now known as antagonizt
+04:43  * antagonizt has to stop waking up so early!
+04:43 < antagonizt> morning filip
+04:43 < Filip> morning antagonizt
+04:44 < antagonizt> i can't seem to get X to let clients connect...
+04:44 < antagonizt> i get this error every time
+04:45 < antagonizt> XIO:  fatal IO error 131 (Connection reset by peer) on X server ":0.0"
+04:45 < Filip> xhost + ?
+04:45 < antagonizt> maybe?
+04:45 < Filip> network (loopback) is up ?
+04:45 < antagonizt> yep
+04:48 < antagonizt> i was passing the server -ac which should ignore access control list stuff though
+04:49 < Filip> error 131==connection reset by peer ?
+04:49 < Filip> you didn't install ipchains on you rBE I suppose ;-)
+04:49 < antagonizt> no iptables
+04:49 < antagonizt> lol
+04:50 < Filip> are you able to ping 127.0.0.1 ?
+04:50 < antagonizt> haven't tried yet... need to rebuild busybox again
+04:50 < Filip> you mention server ":0.0", did you try exporting DISPLAY=127.0.0.1:0.0 first ?
+04:51 < antagonizt> i have DISPLAY=:0.0
+04:51 < antagonizt> should be fine
+04:51 < Filip> connection reset,  so it means it was able to connect
+04:54 < antagonizt> i thought it could be related to Xauthority and what not as well
+04:54 < antagonizt> going to try the ping and xhost ideas
+04:57 < antagonizt> looks like we can fit X matchbox and all the needed libs in a 5.5M ramdisk
+04:57 < Filip> nice
+04:57 < antagonizt> not as small as PicoGUI but much more versatile
+04:59 < antagonizt> ping localhost works
+04:59 < Filip> more 'out of the box' applications supported
+04:59 < Filip> or at least asier to port
+05:00 < antagonizt> no luck same error
+05:00 < antagonizt> i did 
+05:00 < antagonizt> xhost localhost
+05:00 < antagonizt> xinit xlogo -- :0
+05:11 < antagonizt> oh well...
+05:11 < antagonizt> so how is the interrupt hacking going?
+05:11 < Filip> not a lot tim this week, a couple of deadlines at the office
+05:11 < Filip> i've ben looking and adding debug to the kernel's interrupt code
+05:12 < Filip> looks not that hard, things get initialised correclty
+05:12 < Filip> but  looks like no interrupt handler is triggered at all
+05:13 < Filip> brb
+05:13 < antagonizt> that's no good
+05:14 < antagonizt> ok
+10:10 -!- Baal [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:11 < Baal> Hi
+10:11 < Baal> Anybody here?
+10:22 < Filip> hi Baal
+10:22 < Baal> Hi Filip :)
+10:24 < Baal> Is there a tarball I can extract to my CF card to try linux on my BE or I have toi compile everything?
+10:25 < Baal> I did not see anything ton the website :(
+10:30 < Filip> you ned thebootloader and thekernel, that's all
+10:30 < Filip> bootloader is at
+10:31 < Filip> http://www.linux4.be/download/bootloader/20021214cyace.zip
+10:31 < Filip> (there is a readme included)
+10:31  * Filip is looking for a recent demo kernel 
+10:32 < Baal> Thank you
+10:32 < Baal> Is there a pre-compiled version of the PicoGUI?
+10:33 < Filip> http://www.linux4.be/~jroark/files/vmlinux-pgui-demo
+10:34 < Filip> http://www.linux4.be/~jroark/files/Linux4BE.zip
+10:34 < Baal> PicoGUI is inside the kernel?
+10:34 < Filip> that lastone should contain everything, including bootloader
+10:34 < Filip> it's a kernel with embedded ramdisk, ramdisk contains  picoGUI
+10:34 < Baal> Ok 
+10:35 < Baal> Thank you very much :)
+10:35 < Filip> there is also a kernel with working input (using the hardware buttons)
+10:35 < Filip> but consol only, allows you to try the basic commands (uname, ls, ....)
+10:36 < Baal> Where is it?
+10:36 < Filip> hold on
+10:37 < Baal> I dont understand how you can type letters with the 6 hardware buttons...
+10:38 < Filip> http://www.linux4.be/download/kernel/vmlinux_input.gz
+10:39 < Filip> the round cursor button alllows you to scroll torugh the alphabet
+10:39 < Filip> give it a try, it's pretty cool
+10:39 < Baal> Ok
+10:40 < Filip> (don't forget to gunzip the vmlinux_input.gz , and an entry for it in de  cyacfg.txt config file)
+10:41 < Baal> Ok
+10:46 < Baal> image=vmlinux_input
+10:46 < Baal> label=linux4be-input
+10:46 < Baal> append=console=tty0 root=/dev/ram
+10:47 < Baal> Is thi ok?
+10:47 < Filip> no console= 
+10:47 < Filip> in fact  you do not need the append  line, unless you want to work over (broken) serial
+10:47 < Baal> I dont even have a serial cable :)
+10:48 < Filip> this is min:
+10:48 < Filip> mine:
+10:48 < Filip> image=vmlinux_input
+10:48 < Filip> label=input
+10:48 < Filip> image=vmlinux
+10:48 < Filip> label=linux
+10:48 < Filip> image=vmlinux
+10:48 < Filip> label=serial
+10:48 < Filip> append=console=ttyS00,115200
+10:49 < Filip> if you plan on using serial, watch out which version of the bootloader you're using (the older ones use 9600, the newest 115200 baud)
+10:56 < Baal> I cant beleive it!
+10:57 < Baal> This is so nice
+10:57 < Baal> It boots so fast!
+10:58 < Filip> it's got a nice little processor inside
+10:59 < Filip> so, convinced to join ?
+11:00 < Baal> Well I am not a coder
+11:01 < Baal> But I could translate documentation in french
+11:01 < Filip> vous parlez français?
+11:01 < Baal> Oui c'est ma langue maternelle
+11:02 < Filip> canadian french or french french ?
+11:02 < Baal> Québécois! ;)
+11:02 < Baal> (Canadian)
+11:05 < Baal> Would this be useful?
+11:05 < Filip> before we can translate documentation, we first need to write some ;-)
+11:05 < Filip> but we can use all help  
+11:06 < Baal> I was thinking about the toolchain howto...
+11:06 < Filip> updating website, testing, ....
+11:06 < Baal> Of course I want to help by anyway I can! :)
+11:07 < jal0_logger> hey all
+11:07 < Filip> not sure if those rather low-level doc's are worth translating: most people into programming do understand english well enough
+11:07 < Filip> end-user documentationmakes more sense to me
+11:07 < Baal> You are right
+11:07 < Filip> like 'where to download/ howto install' (basically the question that brought you here)
+11:08 < Filip> the Linux4BE for Dummies
+11:10 < jal0_logger> hey guys, i'm going to be out of commission for a little while, my development boxs' hard drive crashed and i lost everything. :-<
+11:10 < Baal> This is so sad!
+11:11 < jal0_logger> My own fault, should of implemented some form of backup system.
+11:12 < Filip> jal0, know th feeling: had the same thing a coupl of months ago
+11:12 < Filip> luckily there is an excellent 'howto' on the web for creating your own toolchain ;-)
+11:12 < jal0_logger> filip: do you have a copy of the programmers manual, it's no longer on the NEC site and it has some examples i was working on with the cache system?
+11:13 < jal0_logger> hehe, funny :>
+11:13 < Filip> not sure, hold on
+11:15 < Filip> you know the name of the document ?
+11:15 < Filip> -rw-rw-r--    1 filip    be300     2390454 Jul  5 09:41 U14579EJ2V0UM00.pdf 
+11:15 < Filip> -rw-rw-r--    1 filip    be300     2744728 Jul  5 09:41 U15350EJ2V0UM00.pdf 
+11:15 < Filip> -rw-rw-r--    1 filip    be300      619346 Jul  5 09:41 ds_k9f2808q(u)0b.pdf
+11:15 < Filip> -rw-rw-r--    1 filip    be300      110920 Jul  5 09:41 sla50000datasheet.pdf
+11:16 < jal0_logger> no, its the one i said had the examples of initialization and code snippets
+11:16 < jal0_logger> got it from the old nec japan site before they dissapeared
+11:17 < jal0_logger> i may have it a work though
+11:24 < Baal> I'll see you later guys, I am going to see the two towers...
+11:25 < jal0_logger> later
+11:25 -!- Baal is now known as Baal[AFK]
+12:14 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+14:54 -!- koen [~none@d51524AF4.kabel.telenet.be] has joined #linux4be
+14:55 -!- koen [~none@d51524AF4.kabel.telenet.be] has left #linux4be []
+16:36 -!- Filip [~Filip@120.49-200-80.adsl.skynet.be] has joined #Linux4BE
+16:40 -!- Baal[AFK] is now known as Baal
+16:40 -!- Baal is now known as Baalz
+16:40 < Baalz> Hi Filip
+16:40 < Filip> hi Baalz
+16:41 < Baalz> I am strarting to write a text at the moment
+16:41 < Filip> title ?
+16:41 < Baalz> I was wondering about something...
+16:41 < Baalz> Installing Linux on your BE-300
+16:42 < Filip> great
+16:42 < Baalz> Is it possible to invert the behavior of the rocker button?
+16:43 < Baalz> So we would use it to scroll in the history instead of of for the input?
+16:43 < Filip> we can remap all keys, but this is only a temporary solution till we get touchscreen to work
+16:43 < Baalz> It would be easier to input text
+16:43 < Filip> alltough I think it could still be of use even afterwards
+16:44 < Filip> where would your document fit ? dummies/Developers/Hackers / all of the above
+16:44 < Baalz> Dummies
+16:44 < Baalz> The aim is to convince more people to join
+16:45 < Filip> that section is pretty empty for now :-(
+16:46 < Baalz> If people can get linux booting in under five minutes it will attract people I think
+16:47 < Filip> I recommend people to install it on CF if they can, and not on nand
+16:47 < Baalz> Of course
+16:47 < Filip> during all my hacking, I lost 1 BE and had to reformat my CF a couple of times: it's easy to reformat a CF card, but reformatting the NAND is a no-go
+16:48 < Baalz> I will make a préconfigured tarball that they only have to uncompress on their CF and boot
+16:48 < Filip> (maybe call it 'internal memory' , I tihnk that's the term casio always uses)
+16:49 < Filip> and a big fat disclaimer ;-)
+16:49 < Baalz> This is where I am now
+16:49 < Baalz> :)
+16:50 < Baalz> Il write a draft and if you want some changes to be made there will be no problems
+16:53 < Filip> perfect
+17:11 < Baalz> What do you think about what I said for the rocket button?
+17:13 < Baalz> Rocket + keypad would scroll in history and the keypad only for inputing characters
+17:13 < Filip> this is current mapping:
+17:13 < Filip>  
+17:13 < Filip>  * rkt = no action (it is used to shift other btns actions) 
+17:13 < Filip>  * ok = enter 
+17:13 < Filip>  * esc = tab 
+17:13 < Filip>  * pwr = ctrl + alt + delete 
+17:13 < Filip>  * up = up 
+17:13 < Filip>  * down = down 
+17:13 < Filip>  * right = right 
+17:13 < Filip>  * left = left 
+17:13 < Filip>  * 
+17:13 < Filip>  * rkt + ok = space 
+17:13 < Filip>  * rkt + esc = backspace 
+17:13 < Filip>  * rkt + pwr = ctrl + c 
+17:13 < Filip>  * rkt + up = next alpha numeric char 
+17:13 < Filip>  * rkt + down = previous alpha numeric char 
+17:13 < Filip>  * rkt + right = select current alpha numeric and move to next 
+17:13 < Filip>  * rkt + left = overwrite previous alpha numeric char 
+17:13 < Filip>  
+17:14 < Baalz> This would be easier:
+17:14 < Baalz> up = next alpha numeric char
+17:15 < Baalz> down = previous alpha numeric char
+17:15 < Baalz> rkt + up = up
+17:15 < Baalz> rkt + down = down
+17:15 < Baalz> You understand what I mean?
+17:16 < Filip> yes, I  see. I think antagonizt made up the current mappings, but it's not hard to change them
+17:18 < antagonizt> hey folks
+17:19 < Baalz> Hi antagonizt
+17:19 < Filip> that's the one
+17:19 < Filip> h's guilty ;-)
+17:19 < Baalz> :)
+17:19 < antagonizt> I think the the driver should be much simpler and just return a masked byte with what is down...
+17:19 < antagonizt> there should be a userland daemon process that interperts the buttons based on a config file
+17:20 < antagonizt> a button keyboard daemon
+17:21 < Filip> with a possibility to reconfigure on the fly
+17:21 < antagonizt> i never thought the current driver was anything more than a stop-gap solution
+17:21 < Baalz> Yeah but switching the effects of the buttons would make it much easier to input text for the moment
+17:21 < Filip> have different mappings for different  applications
+17:22 < someguy> any luck on locating the touchscreen stuff?
+17:22 < antagonizt> although i'm not sure how to send keycodes form userland? maybe write them back to the driver?
+17:22 < Filip> hi someguy
+17:22 < someguy> hi
+17:22 < antagonizt> we know where at least some of the touchscreen is... don't we?
+17:22 < Filip> no, i've been looking at interrupts but haven't had a lot of time lately
+17:23 < Filip> indeed, we know some locations,  but doesn't look like it's  sufficient to get x/y
+17:24 < someguy> on the docs for the PIU on the other NEC chips, it looks like it uses multiple buffers for x/y data
+17:24 < Filip> we can detect  pen up/down, but no position 
+17:24 < someguy> and may need the driver to actually change the states on the PIU
+17:24 < antagonizt> if it works anything like a mouse... which iirc it does... then there are no x/y coords to find
+17:24 < antagonizt> just offsets from the last position
+17:25 < Filip> it's different: mouse gives delta's (you can lift the mouse and place it elsewhere, cursor stays)
+17:26 < Filip> touchscreen you can lift stylus, but when you touch again, that becomes the active point
+17:27 < antagonizt> but that movement is equivelant to a mouse drag... no?
+17:28 < someguy> on their other VR chips, they give location as AD Converter output
+17:28 < someguy> then the driver converts that number to the location, based on calibration info
+17:30 < someguy> I have to get going, will be back later - maybe my serial cable came in the mail
+17:30 -!- someguy is now known as someguy_bbl
+17:47 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has joined #linux4be
+17:48 < Filip> hi jal0
+17:49 < jal0atWrk> hey filip, how goes things
+17:49 < Filip> too busy  :-(
+17:49 < Filip> your  harddrive  is really lost ?
+17:49 < jal0atWrk> yeap :(
+17:50 < jal0atWrk> just downloaded alot of it again from the website
+17:51 < jal0atWrk> been reading a really good book "See mips run". 
+17:51 < Filip> it's my bible as well
+17:51 < jal0atWrk> now alot of the stuff in the datasheet make a little more sense
+17:54 < jal0atWrk> going to pick up a raid card this weekend, hard drives crashes suck!
+18:07 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+18:07 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has quit [Read error: 104 (Connection reset by peer)]
+18:41 < Filip> bbl
+18:42 -!- Filip [~Filip@120.49-200-80.adsl.skynet.be] has left #Linux4BE []
+18:46 < Baalz> Anybody left here?
+18:54 < Baalz> I wrote a small howto on linux4be and I would need someone to take a look at it...
+18:54 -!- jal0atWrk [~jal0_wrkn@208.33.58.192] has joined #linux4be
+18:55 < Baalz> Hi jal0
+18:55 < Baalz> Do you have a minute to check my Linux4BE howto?
+18:56 -!- Baalz [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+18:56 -!- Baalz [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+19:23 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: Baalz, jal0atWrk, jal0_logger, someguy_bbl
+19:23 -!- Netsplit over, joins: Baalz, jal0_logger, someguy_bbl
+19:56 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has joined #linux4be
+20:29 -!- Baalz is now known as Baal[AFK]
+20:33 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has quit [Read error: 113 (No route to host)]
+20:34 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+20:34 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit [Client Quit]
+20:43 < Baal[AFK]> Well in case you guys read the logs the bots are recording, you can see a Draft of my howto there: http://www.megaoctet.net/~baal/index.php?action=howto&howto=linux4be
+20:46 < Baal[AFK]> The real included file is there: http://megaoctet.net/~baal/linux4be.txt
+20:47 < Baal[AFK]> I'll se you tomorow guys...
+20:47 < Baal[AFK]> Sweet Dreams! :)
+23:53 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: Baal[AFK], jal0_logger, someguy_bbl
+23:54 -!- Netsplit over, joins: Baal[AFK], jal0_logger, someguy_bbl
+--- Log closed Thu Dec 19 00:00:06 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

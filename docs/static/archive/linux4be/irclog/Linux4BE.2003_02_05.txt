@@ -1,0 +1,261 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_05.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_05.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Feb 05 00:00:16 2003
+02:50 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+--- Log opened Wed Feb 05 08:02:17 2003
+08:02 !irc.freenode.net *** Looking up your hostname...
+08:02 !irc.freenode.net *** Checking ident
+08:02 !irc.freenode.net *** Found your hostname
+08:02 !irc.freenode.net *** No identd (auth) response
+--- Log closed Wed Feb 05 08:08:17 2003
+--- Log opened Wed Feb 05 10:02:53 2003
+10:02 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+10:03 < mouse> anybody?
+10:34 < Filip> hi mouse
+10:35 < mouse> Filip: hi
+10:52 -!- andrey [~andrey@66.33.46.16] has joined #Linux4be
+10:52 < andrey> hi everyone
+10:53 < Filip> hi andrey
+10:53 < andrey> are there problems with linux4.be?
+10:53 < mouse> andrey: hi
+10:57 -!- jal0_away is now known as jal0
+10:57 < jal0> hey people
+10:57 < jal0> andrey: the server crashed yesterday
+10:57 < mouse> jal0: hi
+10:58 < jal0> hey mouse
+10:59 < andrey> hi jal0
+11:00 < andrey> and log file keeps opening and closing even today.
+11:00 < jal0> not sure if filip ever found the cause
+11:01 < andrey> strange...
+11:07 < Filip> about the log: i rebooted  the machine a couple of hours ago (kernel upgrade), and the controlling terminal is still alive for rtheloger,  that's probably why it keeps opening closing
+11:08 < jal0> andrey: had some problems trying to look at you diss. code. Couldn't access your dir. i finnaly got access, but i had to type the full path. just ~andrey/ was not accessible, but ~/andrey/wince was.
+11:09 < jal0> hi filip
+11:11 < Filip> hi jal0
+11:15 < andrey> jal0: I changed ~andrey to be accessible for be300 group. Filip: is it ok?
+11:15 < jal0> hang on i'll check
+11:15 < jal0> looks good
+11:18 < jal0> andrey: have you ever played with the REC Decompiler (http://www.backerstreet.com/rec/rec.htm) ?
+11:18 < jal0> it seems to support mips
+11:18 < andrey> Fine. unless it's site policy. Because all home directories don't have read access for group
+11:19 < andrey> no, I didn't know about it. Did you try it?
+11:20 < andrey> sounds interesting. Maybe I'll give it a try.
+11:21 < jal0> no, but i thought i would give it a try. you have to play with a "cmd" file to add symbols
+11:25 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+11:25 -!- Filip [Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+11:25 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+11:29 < jal0> andrye: was thinking of modifying the modules.c file of your to produce "command files".
+11:30 < jal0> which is basically the information you already dump, just formatted in a different way
+11:32 < andrey> sure, go ahead.
+11:33 < andrey> command files for REC?
+11:34 < jal0> btw, i finnaly figured out how to generate "physical addresses" realtime. which i not as straight forward as it may sound, you have to deal with the cache.
+11:34 < jal0> yes
+11:36 < andrey> what is "realtime"?
+11:37 < jal0> i can say create a pointer to a string ( char* test= {"Hello World"} ) in my program and then find the physical memory where it is located while the program is running.
+11:39 < jal0> it's alot different that just converting the linear address to physical address used with memory dumps, because you cannot be sure that any memory was actually written due to the cache.
+11:41 < jal0> i basically had to create an interface to the undocumented CacheSync function provided by coredll.dll.
+11:45 < jal0> the code for it is in ~jal0/Virt2Phys
+11:45 < jal0> im not sure how to set permissions for the directory though in windows
+11:48 < jal0> ok, i think i figured it out. if you have a chance can you see if you can access it?
+12:02 < andrey> I can cd to ~jal0 but cannot do ls. But if I cd to ~jal0/Virt2Phys than I'm ok.
+12:02 < jal0> hmm
+12:03 < jal0> try now
+12:03 < andrey> ls: .: Permission denied
+12:04 < andrey> just do "chmod g+r"
+12:04 < jal0> try again
+12:04 < jal0> i'm using a windows GUI prog WinSCP
+12:06 < andrey> what is the protocol? FTP?
+12:06 < andrey> ok, works now
+12:06 < jal0> SCP? not sure
+12:08 < jal0> Virt2Phys.cpp is basically the code from you modules.c file, changes to used file mapping. in addition, it works with actual ram real time.
+12:09 < andrey> ic. I'm looking into it now.
+12:10 < jal0> i also tryed to add some more documentation :)
+12:10 < andrey> btw if you determine physical address and then use 0x80000000+physAddr won't it go through cache?
+12:10 < jal0> yes, i beleive, why
+12:10 < andrey> comments? or separate file?
+12:11 < andrey> It that case you don't need to commit cache before accessing.
+12:11 < jal0> both
+12:12 < jal0> actually you do if your creating variables on the stack as in the example program.
+12:12 < jal0> the problem is not with converting the linear address, rather copying data from the RAM pointed to by the physical address
+12:15 < jal0> when doing stuff "real time" accessing kernel data should be done through the cache, as it can be changed by windows. thats the reason for using KSEG0_BASE as _rambase.
+12:16 < jal0> but when you need to actually access the physical memory, you have to make sure that the cache has been "written back"
+12:18 < andrey> ic
+12:18 < jal0> if you comment out the call to CacheSync(), you'll see the effects. the output is not always correct.
+12:20 < jal0> i would also like to maybe add these headers to CVS, and add new stuff to them as we find it. most of the info use to create then was from the different versions of PB
+12:22 < jal0> anyway, time to go to work :(. talk to you later
+12:22 < andrey> Make sense.
+12:22 < andrey> take care
+12:22 -!- jal0 is now known as jal0_away
+13:09 -!- wolphie [~wolphie@pearlart.hu] has joined #linux4BE
+13:09 < wolphie> re
+13:17 < wolphie> hmm it seems i killed a be300 :(
+13:22 < andrey> how?
+13:23 < wolphie> don't know, reflashed original backup
+13:23 < wolphie> now i can only see the battery and clock
+13:24 < wolphie> no casiomenu
+13:25 < wolphie> if i flash expod 5.0, the busy cursos rotating and nothing happens
+13:25 < wolphie> cursos=cursor
+13:30 < wolphie> there is a bug. if you set the home and the visiting to same timezone alarm is freezing
+13:30 < wolphie> this is why i tried to restore backup
+13:32 < andrey> did you try to reset it?
+13:34 < wolphie> wiht stylus ? yes
+13:34 < wolphie> with
+13:35 < andrey> with stylus and power button down?
+13:35 < wolphie> yes, same effect
+13:35 < andrey> or just remove the battery and let it rest for an hour or so
+13:36 < wolphie> hmm i haven't tried remove battery
+13:36 < wolphie> possibly it will help
+13:36 < andrey> It helped me once. I don't remember the problem though...
+13:37 < andrey> If flash was written incorrectly it won't help :-(
+13:39 < wolphie> i can start in safe mode and reflash with original
+13:39 < wolphie> flashing is works with pcconnect now
+13:39 < wolphie> but always get busy cursor with expod, and no casiomenu with original
+13:41 < andrey> try battery, maybe it'll help.
+13:43 < wolphie> is it enough if i unplug the connector behind the serial connector ? it seems it comes from battery
+13:43 < wolphie> a red and a black cable
+13:43 < wolphie> with little white connector
+13:56 < andrey> probably... I don't remember.
+13:58 < wolphie> ok, unplugged, power button not working
+14:02 < andrey> just wait a little bit and plug it again.
+14:21 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+14:22 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+15:01 < wolphie> hmm
+15:01 < wolphie> replugged, reflashed but nothing
+15:03 < wolphie> when i reflash original, not asking time settings at first boot
+15:14 -!- Filip [~Filip@60.49-200-80.adsl.skynet.be] has joined #linux4be
+15:16 < wolphie> hi Filip
+15:18 < Filip> hi wolphie
+15:44 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+15:45 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+15:45 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+16:16 < andrey> maybe your flash image is corrupted?
+16:28 -!- bshircliffe [~bshirclif@twhou-207-218-200-179.ev1.net] has joined #linux4be
+16:28 < bshircliffe> hey guys
+16:29 < bshircliffe> so whats new?  I read antagonist now lives here in Houston?
+16:29 < Filip> hi Brian
+16:29 < bshircliffe> hello
+16:30 < Filip> indeed, you've got  a new  neighbour
+16:30 < bshircliffe> thats great...  I need to take him out for a beer
+16:32 < bshircliffe> so any new progress lately?
+16:34 < Filip> workload is getting back to normal, so start to get some spare hacking  time again
+16:34 < bshircliffe> great
+16:34 < Filip> server crashed  yesterday,  spent  some time searching for a reason, but couldn't see anything  abnormal
+16:35 < bshircliffe> ok
+16:35 < Filip> the only thing which was not at latest patch-level was  the kernel
+16:36 < Filip> so upgraded kernel today ( a 4minutes additional  downtime)
+16:44 -!- bshircliffe [~bshirclif@twhou-207-218-200-179.ev1.net] has quit [Read error: 113 (No route to host)]
+16:48 < andrey> hi Brian
+16:48 < andrey> oops, too late :-(
+16:49 < wolphie> andrey : i think image is ok. copied from be300 cd, tried on to machines to reflash
+16:49 < wolphie> to=two
+17:51 -!- Filip [~Filip@60.49-200-80.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+18:22 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+18:49 -!- metalac [dejann@128.208.95.223] has joined #linux4be
+19:10 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit [Read error: 110 (Connection timed out)]
+19:22 -!- andrey [~andrey@66.33.46.16] has left #Linux4be []
+19:25 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_away, metalac, PsycoXul, jal0_logger
+19:27 -!- Netsplit over, joins: jal0_logger, PsycoXul, jal0_away
+--- Log closed Thu Feb 06 00:00:34 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

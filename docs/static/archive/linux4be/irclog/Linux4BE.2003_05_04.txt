@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_05_04.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_05_04.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun May 04 00:00:43 2003
+05:35 -!- BaalZzZ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+05:35 -!- BaalZzZ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+14:45 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+15:35 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+15:36 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Client Quit]
+15:38 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+16:27 -!- antagonizt [~jroark@adsl-63-206-213-244.dsl.snfc21.pacbell.net] has joined #Linux4BE
+16:36 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+17:42 < antagonizt> hey jal0
+17:42 < jal0> hey antagonizt
+17:42 < jal0> how goes things
+17:43 < antagonizt> pretty good
+17:43 < jal0> just got a new HD (120 GB) and doing some house cleaning
+17:44 < antagonizt> looks like i might be getting some contract work from PGP to subsidize my part time IT job
+17:45 < jal0> cool, so your not moving again i take it then
+17:45 < antagonizt> i hope not
+17:45 < jal0> :)
+17:45 < antagonizt> i should be able to stay in SF even if i only have my IT work
+17:45 < antagonizt> and this PGP contract looks promising
+17:46 < antagonizt> and might even turn into a fulltime SW engineering gig
+17:46 < jal0> cool
+17:46 < antagonizt> i was playing with mouse's SDL proggy... very nice
+17:47 < jal0> yeah, i
+17:47 < antagonizt> did he do some kernel hacking... i couldn't get his demos to work with the source form cvs
+17:47 < jal0> i'm still trying to reverse the CE driver
+17:47 < jal0> not sure
+17:48 < antagonizt> i thought the binary kernel he had up... said something about initializing interupts?
+17:49 < jal0> yeah, but only partly... Windows CE is really doing most of the hardware init stuff
+17:49 < antagonizt> i don't think that code has been added to cvs
+17:50 < antagonizt> the interupt code from mouse
+17:51 < jal0> no i dont think so either... he wasn't finished with it at the time
+17:54 < antagonizt> well it looks very promising
+17:55 < jal0> indeed :)
+17:55 < antagonizt> hopefully i can get a little more settled in and get back to work on all of this
+17:56 < jal0> me also, things are hectic right now, doing alot of home improvements now that the summer is here
+17:56 < antagonizt> good time to do that
+17:56 < jal0> :)
+18:09  * antagonizt has to run
+18:09 -!- antagonizt is now known as antagonizt_away
+20:15 -!- andrey [~hyro@ool-4355449f.dyn.optonline.net] has joined #linux4be
+20:19 < jal0> hey andrey, long time no see :)
+20:21 < andrey> Hey jal0!
+20:22 < andrey> lot of work
+20:22 < jal0> i feel your pain ;)
+20:22 < andrey> Actually I'm working now...
+20:22 < jal0> :)
+20:22 < andrey> How it's going?
+20:23 < jal0> been busy with some home improvements lately
+20:23 < jal0> still hacking the Serial Driver code though
+20:23 < andrey> ic
+20:24 < andrey> I finally installed linux firewall at home so I can irc from there instead of linux4.be :-)
+20:24 < jal0> :)
+20:24 < andrey> but when I tried to compile gcc it crashes :-(
+20:25 < jal0> what kind of crashes?
+20:25 < andrey> I downloaded linux version of mips-gcc from you page but it looks for some files in /home/jal0/... :-)
+20:26 < jal0> yeah, i though i fixed that, you just have to change the path inside one of the libraries... hangon i look for it
+20:26 < andrey> So I tried to compile my own. But I've got some segment violation, then could not run mc and finally it hang on reboot
+20:27 < andrey> Actually it's old MediaGX-233 and probably not fully compatible. I'm thinking about replacing the MB.
+20:28 < jal0> compatible with what?
+20:28 < andrey> With intel or whatever kernel is looking for
+20:29 < andrey> It was the Cyrix's attempt of building integerated chipset long time ago. One chip has sound, video, etc
+20:30 < jal0> ok... with the problems you were having change libc.so with the following single line (libc.so is actually just a text file) ->  GROUP ( libc.so.6 libc_nonshared.a )
+20:32 < jal0> basically when libc is compiled, its done with absolute paths, removing the path component is what you need to do... As long as the --search-dirs is correct for the cross-compiler
+20:32 < jal0> i also have the step-by-step how-to linked on my site... have you seen it?
+20:33 < jal0> or should i say.... my page :)
+20:33 < andrey> I was following it when it crashed.
+20:33 < andrey> btw did you hear enything from filip lately?
+20:33 < jal0> do you remember what you were doing when you got the seg falut
+20:34 < andrey> I think I finished building binutils and gcc stubs and was building libc
+20:34 < jal0> no nothing at all, last time i talked to him he set me up with permissions to restart the logger if it dies and set me up as a mod for the fourms
+20:35 < jal0> how much mem do you have in the machine?
+20:36 < andrey> 128M
+20:36 < jal0> should be more than enough. what linux distro were you running?
+20:36 < andrey> Debian 3.0
+20:38 < jal0> hmm, no reports for that distro... i've had success reports on RedHat and Mandrake systems. But cant seen how debian should be any different. What native version of gcc were you using?
+20:42 < andrey> 2.95.4
+20:43 < jal0> should be fine
+20:44 < andrey> I still think it's hardware problem. Actually I saw some maintenance processes still hanging in memory. They were running from cron at 6 a.m. and were still there in the afternoon.
+20:44 < andrey> Or maybe I just set something wrong. :-)
+20:45 < andrey> anyway I need faster mb to compile such things. it's taking hours...
+20:47 < jal0> yeap, it does take long, took about 3 hours on a 233MHz machine of mine 
+20:50 < andrey> Maybe something was already wrong at that moment. I think I try again. When I have time... :-)
+20:50 < jal0> :)
+20:51 < andrey> Ok, I'll probably go...
+20:52 < jal0> ok, later
+20:52 < andrey> Was nice talking to you :-)
+20:52 < andrey> later...
+20:52 < jal0> any you :)
+20:52 < andrey> ?
+20:52 < jal0> nice talking to you also ;)
+20:52 < andrey> :-)
+20:52 -!- andrey [~hyro@ool-4355449f.dyn.optonline.net] has left #linux4be []
+22:17 -!- jal0 is now known as jal0_ZZZ
+22:33 -!- antagonizt_away [~jroark@adsl-63-206-213-244.dsl.snfc21.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+22:45 -!- antagonizt_away [~jroark@adsl-63-206-213-244.dsl.snfc21.pacbell.net] has joined #Linux4BE
+--- Log closed Mon May 05 00:00:07 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

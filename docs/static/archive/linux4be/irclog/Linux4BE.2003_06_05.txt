@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_06_05.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_06_05.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Jun 05 00:00:24 2003
+01:06 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+05:47 -!- PsycoXul_ [psyco@adsl-63-205-41-241.dsl.lsan03.pacbell.net] has joined #linux4be
+05:47 -!- PsycoXul [psyco@adsl-67-123-42-49.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+05:49 -!- PsycoXul_ [psyco@adsl-63-205-41-241.dsl.lsan03.pacbell.net] has quit [Client Quit]
+05:52 -!- PsycoXul [psyco@adsl-63-205-41-241.dsl.lsan03.pacbell.net] has joined #linux4be
+06:01 -!- PsycoXul_ [psyco@adsl-63-205-41-122.dsl.lsan03.pacbell.net] has joined #linux4be
+06:01 -!- PsycoXul [psyco@adsl-63-205-41-241.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+06:05 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+09:20 -!- Netsplit kornbluth.freenode.net <-> irc.freenode.net quits: baal_, jal0_logger
+09:24 -!- Netsplit over, joins: jal0_logger, baal_
+15:08 -!- Lethal [~lethal@CPE-65-29-137-188.wi.rr.com] has quit [Read error: 60 (Operation timed out)]
+15:23 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+15:33 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+16:52 -!- Effguy [~effguy@blk2-201-170.eastlink.ca] has joined #linux4BE
+17:37 -!- Effguy [~effguy@blk2-201-170.eastlink.ca] has quit ["Client exiting"]
+17:55 -!- High_Voltz [1000@209-240-27-176.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+18:29 -!- High_Voltz [1000@209-240-27-176.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+19:01 -!- High_Voltz [1000@209-240-23-117.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+20:22 -!- High_Voltz [1000@209-240-23-117.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+21:07 -!- prk [~konversat@81-172-59-254.usuarios.retecal.es] has joined #linux4be
+21:08 < prk> hi!
+21:08 < jal0> hey
+21:09 < jal0> any luck deciding the path your going to take with learning the linux kernel
+21:10 < prk> well, studing some chapters of "the linux kernel" :)
+21:10 < jal0> ic
+21:11 < prk> and when tired, looking some code
+21:12 < jal0> that the best documentation you'll ever find ;)
+21:13 < prk> yea, but looking it without having an overview can be a nightmare...
+21:14 < jal0> yeap.. you have to learn how to section it off, and take in all in in small parts
+21:17 < prk> right now i'm looking the diffs betwen the original and the linux-vr cvs
+22:31 -!- PsycoXul_ is now known as PsycoXul
+--- Log closed Fri Jun 06 00:00:48 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

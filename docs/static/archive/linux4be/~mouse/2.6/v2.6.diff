@@ -1,0 +1,287 @@
+--- kernel/printk.c.orig	2003-10-20 17:16:55 +0400
++++ kernel/printk.c	2003-11-27 18:21:40 +0300
+@@ -414,8 +414,21 @@
+ 	_call_console_drivers(start_print, end, msg_level);
+ }
+ 
++/* we need uint32 uint8 */
++typedef         unsigned char uint8;
++typedef         unsigned int  uint32;
++
++void Uart16550Put(uint8 byte);
++
+ static void emit_log_char(char c)
+ {
++	if (c == '\n') { 
++		Uart16550Put('\r'); 
++		Uart16550Put('\n'); 
++	} else { 
++		Uart16550Put(c); 
++	}
++
+ 	LOG_BUF(log_end) = c;
+ 	log_end++;
+ 	if (log_end - log_start > log_buf_len)
+@@ -731,3 +744,122 @@
+ 		tty->driver->write(tty, 0, msg, strlen(msg));
+ 	return;
+ }
++
++/* -------------------------- early-printk hack ---------------------- */
++
++/* base addr of uart and clock timing */
++#define         BASE                    0xAA008680
++#define         MAX_BAUD                9600
++#define         REG_OFFSET              4
++
++/*
++ * 0 - we need to do serial init
++ * 1 - skip serial init
++ */
++static int serialPortInitialized = 1;
++
++/*
++ *  * the default baud rate *if* we do serial init
++ *   */
++#define         BAUD_DEFAULT            UART16550_BAUD_9600
++
++/* === END OF CONFIG === */
++
++
++#define         UART16550_BAUD_2400             2400
++#define         UART16550_BAUD_4800             4800
++#define         UART16550_BAUD_9600             9600
++#define         UART16550_BAUD_19200            19200
++#define         UART16550_BAUD_38400            38400
++#define         UART16550_BAUD_57600            57600
++#define         UART16550_BAUD_115200           115200
++
++#define         UART16550_PARITY_NONE           0
++#define         UART16550_PARITY_ODD            0x08
++#define         UART16550_PARITY_EVEN           0x18
++#define         UART16550_PARITY_MARK           0x28
++#define         UART16550_PARITY_SPACE          0x38
++
++#define         UART16550_DATA_5BIT             0x0
++#define         UART16550_DATA_6BIT             0x1
++#define         UART16550_DATA_7BIT             0x2
++#define         UART16550_DATA_8BIT             0x3
++
++#define         UART16550_STOP_1BIT             0x0
++#define         UART16550_STOP_2BIT             0x4
++
++/* register offset */
++#define         OFS_RCV_BUFFER          (0)
++#define         OFS_TRANS_HOLD          (0)
++#define         OFS_SEND_BUFFER         (0)
++#define         OFS_INTR_ENABLE         (4)
++#define         OFS_INTR_ID             (8)
++#define         OFS_DATA_FORMAT         (3*REG_OFFSET)
++#define         OFS_LINE_CONTROL        (3*REG_OFFSET)
++#define         OFS_MODEM_CONTROL       (0x10)
++#define         OFS_RS232_OUTPUT        (0x10)
++#define         OFS_LINE_STATUS         (0x14)
++#define         OFS_MODEM_STATUS        (6*REG_OFFSET)
++#define         OFS_RS232_INPUT         (6*REG_OFFSET)
++#define         OFS_SCRATCH_PAD         (7*REG_OFFSET)
++
++#define         OFS_DIVISOR_LSB         (0*REG_OFFSET)
++#define         OFS_DIVISOR_MSB         (1*REG_OFFSET)
++
++
++/* memory-mapped read/write of the port */
++#define         UART16550_READ(y)    (*((volatile uint8*)(BASE + y)))
++#define         UART16550_WRITE(y, z)  ((*((volatile uint8*)(BASE + y))) = z)
++
++void Uart16550Init(uint32 baud, uint8 data, uint8 parity, uint8 stop)
++{
++	/* disable interrupts */
++        UART16550_WRITE(OFS_LINE_CONTROL, 0x0);
++	UART16550_WRITE(OFS_INTR_ENABLE, 0);
++
++	/* set up buad rate */
++	{ 
++		uint32 divisor;
++       
++		/* set DIAB bit */
++	        UART16550_WRITE(OFS_LINE_CONTROL, 0x80);
++        
++	        /* set divisor */
++	        divisor = MAX_BAUD / baud;
++	       	UART16550_WRITE(OFS_DIVISOR_LSB, divisor & 0xff);
++	        UART16550_WRITE(OFS_DIVISOR_MSB, (divisor & 0xff00)>>8);
++
++        	/* clear DIAB bit */
++	        UART16550_WRITE(OFS_LINE_CONTROL, 0x0);
++	}
++
++	/* set data format */
++	UART16550_WRITE(OFS_DATA_FORMAT, data | parity | stop);
++}
++
++uint8 Uart16550GetPoll(void)
++{
++        if (!serialPortInitialized) {
++                serialPortInitialized = 1;
++                Uart16550Init(BAUD_DEFAULT,
++                              UART16550_DATA_8BIT,
++                              UART16550_PARITY_NONE, UART16550_STOP_1BIT);
++        }
++
++	while((UART16550_READ(OFS_LINE_STATUS) & 0x1) == 0);
++	return UART16550_READ(OFS_RCV_BUFFER);
++}
++
++
++void Uart16550Put(uint8 byte)
++{
++        if (!serialPortInitialized) {
++                serialPortInitialized = 1;
++                Uart16550Init(BAUD_DEFAULT,
++                              UART16550_DATA_8BIT,
++                              UART16550_PARITY_NONE, UART16550_STOP_1BIT);
++        }
++
++	while ((UART16550_READ(OFS_LINE_STATUS) &0x20) == 0);
++	UART16550_WRITE(OFS_SEND_BUFFER, byte);
++}
+--- drivers/char/tty_io.c.orig	2003-10-09 17:09:30 +0400
++++ drivers/char/tty_io.c	2003-11-27 18:32:46 +0300
+@@ -141,6 +141,13 @@
+ 	      unsigned int cmd, unsigned long arg);
+ static int tty_fasync(int fd, struct file * filp, int on);
+ extern void rs_360_init(void);
++/*
++ * Casio Casiopeia BE-300 init functions 
++ * Added by John Roark <jroark@cs.usfca.edu> 
++ * 06-28-2002
++ */
++extern void be300_console_init(void);
++extern void be300_init(void);
+ 
+ static struct tty_struct *alloc_tty_struct(void)
+ {
+@@ -2386,6 +2393,9 @@
+ #ifdef CONFIG_EARLY_PRINTK
+ 	disable_early_printk();
+ #endif
++#ifdef CONFIG_SERIAL_BE300_CONSOLE
++	be300_console_init();
++#endif
+ #ifdef CONFIG_SERIAL_68360
+  	/* This is not a console initcall. I know not what it's doing here.
+ 	   So I haven't moved it. dwmw2 */
+@@ -2416,6 +2426,9 @@
+ #ifdef CONFIG_VT
+ static struct cdev vc0_cdev;
+ #endif
++#ifdef CONFIG_SERIAL_BE300
++static struct cdev be300_cdev;
++#endif
+ 
+ /*
+  * Ok, now we can initialize the rest of the tty devices and can count
+@@ -2463,6 +2476,19 @@
+ 
+ 	vty_init();
+ #endif
++
++#ifdef CONFIG_SERIAL_BE300
++/*
++	strcpy(be300_cdev.kobj.name, "dev.be300");
++	cdev_init(&be300_cdev, &console_fops);
++	if (cdev_add(&be300_cdev, MKDEV(TTY_MAJOR, 0), 1) ||
++	    register_chrdev_region(MKDEV(TTY_MAJOR, 0), 1, "/dev/vc/0") < 0)
++		panic("Couldn't register /dev/tty0 driver\n");
++	devfs_mk_cdev(MKDEV(TTY_MAJOR, 0), S_IFCHR|S_IRUSR|S_IWUSR, "vc/0");
++	tty_add_class_device ("tty0", MKDEV(TTY_MAJOR, 0), NULL);
++*/
++	be300_serial_init();
++#endif
+ 	return 0;
+ }
+ module_init(tty_init);
+--- arch/mips/kernel/unaligned.c.orig	2003-10-20 17:13:20 +0400
++++ arch/mips/kernel/unaligned.c	2003-11-27 18:48:42 +0300
+@@ -89,9 +89,9 @@
+ #define STR(x)  __STR(x)
+ #define __STR(x)  #x
+ 
+-#ifdef CONFIG_PROC_FS
++//#ifdef CONFIG_PROC_FS
+ unsigned long unaligned_instructions;
+-#endif
++//#endif
+ 
+ static inline int emulate_load_store_insn(struct pt_regs *regs,
+ 	void *addr, unsigned long pc,
+@@ -367,6 +367,7 @@
+ 
+ 		value = regs->regs[insn.i_format.rt];
+ 		__asm__ __volatile__ (
++			".set\tnoat\n"
+ #ifdef __BIG_ENDIAN
+ 			"1:\tswl\t%1,(%2)\n"
+ 			"2:\tswr\t%1, 3(%2)\n\t"
+@@ -377,6 +378,7 @@
+ #endif
+ 			"li\t%0, 0\n"
+ 			"3:\n\t"
++			".set\tat\n"
+ 			".section\t.fixup,\"ax\"\n\t"
+ 			"4:\tli\t%0, %3\n\t"
+ 			"j\t3b\n\t"
+@@ -472,19 +474,19 @@
+ 	if (fixup_exception(regs))
+ 		return 1;
+ 
+-	die_if_kernel ("Unhandled kernel unaligned access", regs);
++	//die_if_kernel ("Unhandled kernel unaligned access", regs);
+ 	send_sig(SIGSEGV, current, 1);
+ 
+ 	return 0;
+ 
+ sigbus:
+-	die_if_kernel("Unhandled kernel unaligned access", regs);
++	//die_if_kernel("Unhandled kernel unaligned access", regs);
+ 	send_sig(SIGBUS, current, 1);
+ 
+ 	return 0;
+ 
+ sigill:
+-	die_if_kernel("Unhandled kernel unaligned access or invalid instruction", regs);
++	//die_if_kernel("Unhandled kernel unaligned access or invalid instruction", regs);
+ 	send_sig(SIGILL, current, 1);
+ 
+ 	return 0;
+@@ -493,6 +495,7 @@
+ asmlinkage void do_ade(struct pt_regs *regs)
+ {
+ 	unsigned long *regptr, newval;
++//#ifdef CONFIG_MIPS_FPU_EMULATOR
+ 	extern int do_dsemulret(struct pt_regs *);
+ 	mm_segment_t seg;
+ 	unsigned long pc;
+@@ -505,6 +508,7 @@
+ 	/* Terminate if exception was recognized as a delay slot return */
+ 	if (do_dsemulret(regs))
+ 		return;
++//#endif /* CONFIG_MIPS_FPU_EMULATOR */
+ 
+ 	/* Otherwise handle as normal */
+ 
+@@ -536,12 +540,13 @@
+ 		if (regptr)
+ 			*regptr = newval;
+ 	}
++	unaligned_instructions++;
+ 	set_fs(seg);
+ 
+ 	return;
+ 
+ sigbus:
+-	die_if_kernel("Kernel unaligned instruction access", regs);
++	//die_if_kernel("Kernel unaligned instruction access", regs);
+ 	force_sig(SIGBUS, current);
+ 
+ 	/*

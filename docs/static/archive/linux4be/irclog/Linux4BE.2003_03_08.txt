@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_08.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_08.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Mar 08 00:00:12 2003
+00:30 -!- PsycoXuul [psyco@adsl-64-161-172-144.dsl.lsan03.pacbell.net] has joined #linux4be
+00:47 -!- PsycoXul [psyco@adsl-64-161-173-170.dsl.lsan03.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+00:49  * jal0 is within
+00:55 -!- PsycoXuul is now known as PsycoXul
+00:57 < PsycoXul> well that ones too easy
+00:57 < PsycoXul> so i won't even make a comment on being without
+00:57 < jal0> yeah i know
+00:58 < jal0> without linux on my be300 :(
+00:58 < PsycoXul> heh
+00:58 < PsycoXul> i'm without my be300
+00:58 < jal0> why's that
+00:58 < PsycoXul> i just finally sent it off to casio the other day heh
+00:59 < jal0> ic
+01:00 < PsycoXul> they seem to be real easy going with their rma stuff
+01:01 < PsycoXul> the recording just tells you to send it off with a note saying whats wrong heh
+01:01 < PsycoXul> i wouldn't have even had to talk to a real person if i hadn't been not sure if i should just send the unit itself or anything that came with it too
+01:02 < jal0> no charge?
+01:02 < PsycoXul> she told me to just send the unit alone, nothing else.. even to not send the stylus
+01:02 < PsycoXul> well had to pay shipping and insurance
+01:02 < jal0> ic, what was wrong with it again?
+01:03 < PsycoXul> wouldn't get past "Starting..."
+01:03 < PsycoXul> not even to safe mode
+01:04 < jal0> ic, maybe they found a bug in there software so instead of doing a recall, they just do replacements 'no questions asked'
+01:04 < PsycoXul> maybe
+01:05 < jal0> well back to bed... talk to you later
+01:05 < PsycoXul> but then i don't think the recording system was even be-specific
+01:05 < PsycoXul> see ya
+01:06  * jal0 is _______ <- fill in the blank
+01:06  * jal0 is sleeping
+01:06 < PsycoXul> heh
+01:07 -!- jal0 is now known as jal0_Zzz
+07:54 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+07:54 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+12:58 -!- jal0_Zzz is now known as jal0
+12:58  * jal0 is here
+13:13 -!- PsycoXul [psyco@adsl-64-161-172-144.dsl.lsan03.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+13:24 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+13:48 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+13:54 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+13:54 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+15:16 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+15:16 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+15:16 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+15:16 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has quit [Client Quit]
+15:16 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+15:47 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+17:50 -!- DarkEddie [~chatzilla@cc36102-a.zwoll1.ov.home.nl] has joined #linux4BE
+17:59 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+18:36 -!- PsycoXul [psyco@adsl-64-161-173-8.dsl.lsan03.pacbell.net] has joined #linux4be
+19:19 -!- DarkEddie [~chatzilla@cc36102-a.zwoll1.ov.home.nl] has quit [Read error: 54 (Connection reset by peer)]
+20:32 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+22:32 -!- PsycoXul [psyco@adsl-64-161-173-8.dsl.lsan03.pacbell.net] has quit [Remote closed the connection]
+22:48 -!- PsycoXul [psyco@adsl-63-205-46-97.dsl.lsan03.pacbell.net] has joined #linux4be
+23:28 -!- PsycoXuul [psyco@adsl-63-205-44-143.dsl.lsan03.pacbell.net] has joined #linux4be
+23:37 -!- PsycoXul [psyco@adsl-63-205-46-97.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+23:56 -!- PsycoXuul is now known as PsycoXul
+--- Log closed Sun Mar 09 00:00:37 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

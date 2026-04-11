@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_25.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_25.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Jan 25 00:00:39 2003
+00:06 -!- metalac [staff@staffpc3.uwired.washington.edu] has quit ["Client Exiting"]
+--- Log closed Sat Jan 25 00:38:58 2003
+--- Log opened Sat Jan 25 00:52:30 2003
+00:52 !irc.freenode.net *** Looking up your hostname...
+00:52 !irc.freenode.net *** Checking ident
+00:52 !irc.freenode.net *** No identd (auth) response
+00:52 !irc.freenode.net *** Found your hostname
+--- Log closed Sat Jan 25 00:57:40 2003
+--- Log opened Sat Jan 25 02:18:31 2003
+02:18 !irc.freenode.net *** Looking up your hostname...
+02:18 !irc.freenode.net *** Checking ident
+02:18 !irc.freenode.net *** Found your hostname
+02:19 !irc.freenode.net *** No identd (auth) response
+--- Log closed Sat Jan 25 02:24:42 2003
+--- Log opened Sat Jan 25 03:12:22 2003
+03:12 !irc.freenode.net *** Looking up your hostname...
+03:12 !irc.freenode.net *** Found your hostname, welcome back
+03:12 !irc.freenode.net *** Checking ident
+03:13 !irc.freenode.net *** No identd (auth) response
+--- Log closed Sat Jan 25 03:18:43 2003
+--- Log opened Sat Jan 25 05:01:25 2003
+05:01 -!- themaw [~marc@pD95484C9.dip.t-dialin.net] has joined #linux4be
+05:01 < themaw> hi
+07:43 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_away
+07:56 -!- Netsplit over, joins: jal0_away
+08:51 -!- BaalzAw is now known as Baalz
+10:03 -!- MattLSU [MattLSU@139.84.178.44] has joined #linux4be
+10:48 -!- MattLSU [MattLSU@139.84.178.44] has quit []
+13:26 -!- sch_away [~sch@YahooBB219017080083.bbtec.net] has quit ["Client Exiting"]
+13:52 -!- SeederGOD [1001@c8-16.icpnet.pl] has joined #linux4be
+15:36 -!- Filip_ [~Onkelinx@65.102-136-217.adsl.skynet.be] has joined #linux4be
+15:36 < Filip_> hi all
+15:37 -!- Filip_ is now known as Filip
+16:03 < SeederGOD> what is the status of development ?
+16:16 < Filip> a lot of things partially working
+16:25 < SeederGOD> such as ?
+16:25 < SeederGOD> i've run dummies linux ;)
+16:26 < Baalz> Well dummies linux will soon include a paint program :)
+16:26 < SeederGOD> :)
+16:26 < Baalz> Hi everyone :)
+16:26 < Baalz> Not here for long...
+16:26 < SeederGOD> does touchscreen works ?
+16:27 < Baalz> It does but not perfectly
+16:27 < SeederGOD> what is wrong ?
+16:28 < Baalz> SeederGOD: If I knew I would solve the problem ;)
+16:28 < SeederGOD> Baalz: :>
+16:29 < Baalz> SeederGOD: A new package will be available in the following days...
+16:30 < SeederGOD> let ask again, what it's doesn't do correctly ?
+16:30 < SeederGOD> do you know why system reboot after a while ?
+16:30 < Baalz> Filip: Take a look at this: http://www.linuks.mine.nu/worldmap/ I will make a map like this with Linux4BE people when I have spare time
+16:31 < Baalz> SeederGOD: Never faced this prob but it seems that upgrading to the latest expod solves the problem
+16:33 < Baalz> SeederGOD: I don't exactly know about the the touchscreen but you will see the paint program segfault if you draw too close to the bottom border...
+16:33 < SeederGOD> Baalz: bu how can i upgrade to expod, when i have only linux driven comps
+16:34 < Baalz> SeederGOD: No way I know of you can do it...
+16:34 < Baalz> Except copying expod to a CF card and restoring from it but I never tried that
+16:35 < SeederGOD> Baalz: maybe it is connected with this pic. buttons
+16:36 < SeederGOD> when i copy a to CF it asks about passwd and it says that this is not backup of this BE
+16:36 < Baalz> The pic buttons are working, this is how you select the colors but anyway Mouse is responsible for this...
+16:36 < Baalz> SeederGOD: Dont you know anyone who has windows?
+16:38 < SeederGOD> Baalz: i know, but me don't wonna go to that person, and i'll have to restore all my data
+16:39 < Baalz> Well, there is nothing I can do for you, sorry.
+16:39 < SeederGOD> Baalz: about that touchscreen, hmm, i can only speculate
+16:40 < SeederGOD> Baalz: if say that new expod solves the problem :) you did.
+16:40 < Baalz> Wll it would be of no use to tell me but if you have an idea say it, people are reading the logs from the chan when not here
+16:41 < Baalz> Hehe :)
+16:41 < Baalz> -Wll +Well
+16:41 -!- Filip [~Onkelinx@65.102-136-217.adsl.skynet.be] has quit [Read error: 110 (Connection timed out)]
+16:43 < SeederGOD> hmm i'll think about it, but now i have to go back to statistics ( i have an exam sesion)
+16:43 < Baalz> See you later SeederGOD!
+16:44 < SeederGOD> Baalz: C U
+16:44 -!- SeederGOD [1001@c8-16.icpnet.pl] has left #linux4be ["bye bye"]
+18:00 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+18:00 -!- MouseLRN is now known as mouse
+18:01 < mouse> hi 2 all
+18:03 -!- mouse [~mouse@IREX-GW-2.radio-msu.net] has quit [Client Quit]
+18:17 -!- themaw [~marc@pD95484C9.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+22:24 -!- rhk [~rhk@pm851-31.dialip.mich.net] has joined #linux4be
+23:18 -!- rhk [~rhk@pm851-31.dialip.mich.net] has quit ["Client Exiting"]
+--- Log closed Sun Jan 26 00:00:05 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

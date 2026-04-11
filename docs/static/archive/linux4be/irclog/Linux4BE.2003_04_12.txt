@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_12.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_12.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Apr 12 00:00:36 2003
+00:25 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["BitchX: it makes bathtime lots of fun!"]
+00:29 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has joined #Linux4BE
+01:06 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["[BX] Oral sex makes your day"]
+--- Log closed Sat Apr 12 05:12:42 2003
+--- Log opened Sat Apr 12 05:13:25 2003
+05:13 !irc.freenode.net *** Looking up your hostname...
+05:13 !irc.freenode.net *** Checking ident
+05:13 !irc.freenode.net *** Found your hostname
+05:13 !irc.freenode.net *** No identd (auth) response
+--- Log closed Sat Apr 12 05:19:21 2003
+--- Log opened Sat Apr 12 06:19:28 2003
+06:19 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: PsycoXul
+06:20 -!- Netsplit over, joins: PsycoXul
+12:58 -!- WebGuest6027 [~eirc@CPE00045afdbde0-CM014240005165.cpe.net.cable.rogers.com] has joined #Linux4BE
+13:00 < WebGuest6027> .
+13:00 < WebGuest6027> hey
+13:01 -!- WebGuest6027 is now known as eXpodGoldUser
+13:01 < eXpodGoldUser> anyone here?
+13:02 < eXpodGoldUser> ok
+13:04 < eXpodGoldUser> .
+13:04 < eXpodGoldUser> .
+13:10 < eXpodGoldUser> h%eC3ll2%oC11
+13:10 < eXpodGoldUser> hello
+13:11 < eXpodGoldUser> i am here
+13:11 < eXpodGoldUser> A
+13:11 < eXpodGoldUser> R
+13:11 < eXpodGoldUser> E
+13:11 < eXpodGoldUser>  
+13:11 < eXpodGoldUser> Y
+13:11 < eXpodGoldUser> O
+13:11 < eXpodGoldUser> U
+13:11 < eXpodGoldUser>  
+13:11 < eXpodGoldUser> H
+13:11 < eXpodGoldUser> E
+13:11 < eXpodGoldUser> R
+13:11 < eXpodGoldUser> E
+13:11 < eXpodGoldUser> ?
+13:12 < eXpodGoldUser> im a little bored
+13:15 < eXpodGoldUser> .
+13:15 < eXpodGoldUser> .
+13:15 < eXpodGoldUser> .
+13:15 < eXpodGoldUser> .
+13:15 < eXpodGoldUser> .
+13:16 -!- eXpodGoldUser [~eirc@CPE00045afdbde0-CM014240005165.cpe.net.cable.rogers.com] has quit ["Today is a good day to chat."]
+13:59  * mouse is away: fue a casa...
+15:19 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has joined #Linux4BE
+16:12 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["[BX] Reserve your copy of BitchX-1.0c19 for the PalmPilot today!"]
+21:56  * jal0 is around
+22:43 -!- nykkto [~nykkto@66.33.46.16] has joined #linux4be
+22:44 < nykkto> burp
+22:45 < jal0> hey nykkto
+22:45 < nykkto> clear
+22:45 < nykkto> cls
+22:45 < jal0> ???
+22:45  * jal0 wonder what wrong with nykkto
+22:45 < nykkto> lol My terminal suckss!!
+22:45 < jal0> :) ... figured something like that
+22:46 < nykkto> yah it is not scrolling
+22:46 < jal0> you on a linux box?
+22:46 < nykkto> um, sorta I am in a cygwin window sshed to linux4.be then into IRCii
+22:47 < jal0> ic
+22:47 < nykkto> lol make sure to add some extra spaces to you replies so I can see it ieaier :P
+22:48 < jal0> never tried that, in fact, i'm not even sure how to do it
+22:48 < nykkto> what how to get into linux 4 be? or cygwin?
+22:48 < jal0> linux4be
+22:49 < jal0> space
+22:49 < jal0> space
+22:49 < jal0> space
+22:49 < nykkto> ahh I just do ssh to linux4.be with the proper flag to auto assign my username, and enter my password
+22:49  * jal0 wonders if thats enough space
+22:49 < nykkto> yep, I just need a few at the end so I can see the change specially on the short lines
+22:50 < jal0> with what commands? not sure how to "ssh to linux4.be"
+22:50 < nykkto> ok, what os are you using?
+22:50 < jal0> win2k
+22:51 < nykkto> ok do you have cygwin?  or an ssh client?
+22:51 < jal0> i have cygwin
+22:51 < nykkto> sorry you have what?
+22:51 < jal0> cygwin                                       space
+22:52 < jal0> space
+22:52 < jal0> space
+22:52 < nykkto> ok then make sure you have the ssh package for it
+22:52 < jal0> i believe i downloaded everything               space
+22:52 < jal0> spac
+22:52 < jal0> space
+22:53 < nykkto> lol - spce I do  "ssh -l username linux4.b4
+22:54 < nykkto> it is the same password as the mail server
+22:54 < jal0> ic.... hmm guess i dont have it :(
+22:54 < nykkto> I assume you did a which ssh
+22:55 < jal0> ?
+22:56 < jal0> never knew about the which command.... cool
+22:56 < nykkto> yah, then again you know more than I do :p I am currently downloading all the cygwin stuff so I get the updates!  I just got calbe installed today!
+22:56 < jal0> but no, i dont have the ssh package
+22:56 < nykkto> lol - you not know which lol
+22:56 < jal0> not much experience with linux side of things
+22:57 < nykkto> rofl, I thought you did - heh woza
+22:59 < jal0> nope. my main experience is in windows. i only do linux kernel hacking... not much work on the user side of things 
+23:00 < nykkto> humm humm - I never suspected
+23:00 < nykkto>                                                   
+23:02 < nykkto> whoo hoo I now can set up my wireless access point to access the cable modem, and the internet!  Awesome!
+23:02 < jal0> indeed, broadband access is awesome
+23:02 < nykkto> wireless broadband is better!
+23:03 < jal0> indeed... if you have the need
+23:03 < nykkto> lol - who NEEDS it I just DESIRE it!
+23:04 < nykkto> I forgot the password for it, so I have to set it up again :|
+23:04 < jal0> make sure you set up a firewall. you would be amazed at the number of systems you can hack into just by driving around with a wireless nick in a laptop
+23:05 < nykkto> lol - no I would not be surprized.  I plan on setting up a ssh tunnel through a linux box to keep it out of my local network
+23:06 < jal0> ic, sorry got to go. something just came up, talk to you later
+23:07 -!- jal0 is now known as jal0_away
+23:07 < nykkto> kool, thanks :P  catch ya later :)
+23:07 < jal0_away> ater
+--- Log closed Sun Apr 13 00:00:43 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

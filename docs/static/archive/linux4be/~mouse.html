@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="./css/linux4be" type="text/css">
+</head>
+<b>22 Oct 2003</b> Alpha build of Linux <a href="vmlinux2.6_serial.bz2">kernel 2.6</a>. <b>Need to test serial!</b><br>
+<li><b><a href="vmlinux2.6_serial.bz2">vmlinux</a></b> image<br>
+<li><b><a href="linux2.6-l4be.diff.bz2">patch</a></b> for current linux-mips kernel source<br>
+<br>
+<b>12 Aug 2003</b> I've modify CyaCE <a href="loader/">loader</a>.
+Now you can load & run any images from network via ActiveSync.
+You need <a href="http://synce.sf.net">SynCE</a> tools such as <b>synce-libsynce,-librapi2,-dccm,-serial</b>.
+First build and install libsynce, then librapi2, dccm and serial.
+Under user run <b>dccm</b> program.
+After attaching of Casio BE-300, run synce-serial-config ttyUSB0 or ttySx.
+Then run synce-serial-start - it will run pppd.
+Now you can run ActiveSync on BE-300.
+<a href="loader">There</a> you can find source of modified <a href="loader/cyace-net.tar.bz2">CyaCE loader</a> and <a href="loader/loader.tar.bz2">binary file</a> with source of server-side program.<br><br>
+<b>NOTE:</b>I didn't try new loader with <b>serial cable</b>.<br>
+<br>
+<b>20 Jun 2003</b> new <a href="linux4be-alt.tar.bz2">tools collection</a>:<br>
+<li><b>binutils</b> 2.14.90<br>
+<li><b>gcc</b> 3.2.1<br>
+<li><b>glibc</b> 2.2.6<br>
+<li><a href="linux4be-addon-alt.tar.bz2"><b>missed libs for gcc</b></a><br>
+<br>
+<b>23 Jan 2003</b> regstat updated. Now X/Y gets with small noise.<br>
+<br>
+<li><a href="SDL-be.diff.gz">patch</a> for SDL,which adds support for 240x320 resolution plus some fixes<br>
+<li><a href="giuinfo.c">giuinfo.c</a> - test file to regstat<br>
+<li>precompiled <a href="libSDL.tar.gz">SDL</a> library within uClibc. Note that you need to set <b>SDL_NOMOUSE=1</b> before run apps<br>
+<li>some <a href="memory">memory</a> address info<br>
+<li><a href="regstat.tar.gz">RegStatus</a> for Linux contains linux driver for TouchPanel and two utils: <b>regstat</b>, which show realtime status of X/Y's pair and <b>sdlregstat</b>, which allow to calibrate TPanel (now, it not fully functional, works as paint program. See README in archive for more details). <b>Last update: <i>03.20 23 Jan 2003 +003 MSK</i> Prev update: <i>02.20 19 Jan 2003 +003 MSK</i></b><br>
+<li><a href="tpanel.exe">tpanel</a> program for WinCE, which shows realtime X/Y's pair status and it's <a href="tpanel.tar.gz">source</a> for M$ eVC<br>
+<li><a href="vmlinux_sdlregtest.gz">vmlinux</a> image, contains regstat and SDL regstat programs<br>
+</html>

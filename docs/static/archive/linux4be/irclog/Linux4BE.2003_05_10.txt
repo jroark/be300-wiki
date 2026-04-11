@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_05_10.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_05_10.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat May 10 00:00:34 2003
+07:30  * mouse is back (gone 41:45:46)
+08:36 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+08:36 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+08:36 < mouse> jal0 hi
+08:36 < jal0> hey mouse
+08:36 < jal0> so how goes things
+08:39 < mouse> jal0 fine :)
+08:51 < mouse> jal0 whats new?
+08:51 < jal0> finally should be able to get some time this weekend to work on linux4be :)
+08:52 < mouse> :)
+08:55 < jal0> so have you commited your kernel mods to cvs for the touch screen driver?
+08:55 < mouse> no
+08:55 < mouse> have I write access to cvs?
+08:55 < jal0> not sure, but i believe so
+08:56 < jal0> could you create a diff?
+08:57 < mouse> my patch is modified Makefile and one .c-file :) you can find it on my page (RegStat archive)
+08:57 < jal0> www.linux4.be/~mouse
+08:57 < mouse> yes
+08:58 < jal0> when i get things recompiled here i'll commit them if thats ok with you
+08:59 < mouse> ok
+09:00 < jal0> brb... need coffee ;)
+09:00 < mouse> :)
+09:06 < jal0> back
+09:21 < mouse> how progress with IRQ is going?
+09:22 < jal0> im still working on full reversing the serial hardware.. then plan on working on the usb hardware. which should open up things for people without a serial cable
+09:25 < jal0> you working on anything currently?
+09:25 < mouse> ok, what is simple way to load kernel? I mean,that I often rebuild kernel and put it on CF,but it isn't comfortable :(
+09:26 < jal0> you on a linux box?
+09:27 < mouse> now, I do nothing... =( today evening I'll will continue my work on touch screen...
+09:27 < mouse> yes
+09:27 < jal0> what do you mean by not comfortable
+09:29 < mouse> I mean, that every time after rebuild I need to copy kernel image to CF...
+09:30 < jal0> you using a CF reader then
+09:31 < mouse> yes, I do
+09:32 < jal0> that pretty much as easy as its going to get... untill usb is working at least 
+09:32 < mouse> ok, ic
+09:33 < jal0> i started working on a debug monitor. but loading the image "on the fly" take too long over serial :(
+09:40 < mouse> ok, I'll go to home. See later...
+09:40  * mouse is away: fue a casa...
+09:40 < jal0> later
+09:51 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit []
+10:11 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+12:39 -!- mouse[home] [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+12:39 < mouse[home]> anybody?
+12:50 -!- mouse[home] [~mouse@IREX-GW-2.radio-msu.net] has quit ["mouse[home] has no reason"]
+17:12 -!- ayashi [~jooo@node-c-8042.a2000.nl] has joined #linux4be
+17:12 < ayashi> hell
+17:12 < ayashi> hello
+17:13 < antagonizt> hi ayashi
+17:14 < ayashi> :)
+17:14 < ayashi> how'r you?
+17:15 < antagonizt> good you?
+17:15 < ayashi> yep doing good 2
+17:18 -!- ayashi [~jooo@node-c-8042.a2000.nl] has quit ["-=|=- Death`Angel Script v1.3(War Edition)  -=|=- Get It At http://daswar.com/"]
+19:09 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+19:24 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Sun May 11 00:00:59 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,447 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 Linux4BE Mips Cross-Toolchain HowTo v0.2
+                            jal0@linux4.be
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CHANGELOG
+
+29November2002: Version chages from 0.1 to v0.2.
+    [  N/A  ] - Major overhaul to support SDK.
+    [  N/A  ] - Now can be used for both Linux and Win32/Cywin 
+                environments.
+
+03August2002: Version chages from 'initial release' to v0.1.
+    [CHANGES] - Added this section to the HowTo. Also added version 
+                numbering to the HowTo.
+    [Step 1]  - Added Info on how to change user's home directory in case
+                the current one has spaces in it. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.INITIAL ENVIRONMENT SETTINGS:
+
+!!!! MAKE SURE YOUR HOME DIRECTORY PATH DOES NOT CONTAIN ANY SPACES
+!!!! 
+!!!! IF IT DOES, REPLACE [USERNAMEWITHOUTSPACES] IN THE FOLLOWING 
+!!!! 
+!!!! COMMAND THEN EXECUTE.
+!!!!
+!!!! bash$ cp /etc/passwd /etc/passwd_old ; sed -e s%"$(whoami)"%[USERNAMEWITHOUTSPACES]%g /etc/passwd > /etc/temp ; mv /etc/temp /etc/passwd
+!!!!
+
+#### cygwin1.dll version: 1.3.12
+#### gcc version: 2.95.3-5 (cygwin special)
+#### uname output: CYGWIN_NT-5.0
+
+bash$ export target=mipsel-linux
+bash$ export host=$MACHTYPE
+bash$ export build=$MACHTYPE
+bash$ export prefix=~/toolchains/xLinux4BE
+bash$ export archive=~/Linux4BE_SDK_20020808/pkgs
+bash$ export MAKE_MODE=UNIX
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.GETTING THE SOURCES:
+
+#### NOTE: If you are using the SDK and have already downloaded the  
+#### toolchain packages to the <sdk_path>/pkgs directory, this step
+#### can be skipped. In which case you should set the following
+#### environment variable to match the packages you have. Default
+#### values are given.
+#### 
+####    bash$ export binutils_version=2.12
+####    bash$ export gcc_version=3.0.4
+####    bash$ export glibc_version=2.2.4 (Linux Platforms Only)
+####    bash$ export sf_version=2.4.18
+####    bash$ export linux4be_version=20021129
+####
+
+bash$ mkdir -p $archive
+bash$ cd $archive
+
+#### Login into CVS tree at http://www.linux4.be to get 
+#### the latest linux4BE kernel modifications. Press "Return" 
+#### when prompted for password. You only need to do this once on any 
+#### machine. To avoid name conflict, rename linux directory to 
+#### linux4be-$linux4be_version, Then pack it up for storage.
+
+bash$ linux4be_version=20021129
+bash$ cvs -d:pserver:anonymous@cvs.linux4.be:/cvsroot login 
+bash$ cvs -z3 -d:pserver:anonymous@cvs.linux4.be:/cvsroot co linux/kernel 
+bash$ mv linux linux4BE-$linux4be_version
+bash$ cd linux4be-$linux4be_version/kernel; tar -zcpf ../../linux4be-$linux4be_version.tar.gz .; cd ../..
+
+
+#### Login into CVS tree at http://linux-mips.sourceforge.net to get 
+#### the linux-mips modifications for the linux kernel. Press "Return" 
+#### when prompted for password. You only need to do this once on any 
+#### machine. Also note that this may not be the lastest as indicated
+#### by the [-D "12-nov-2002"] option to cvs. 
+
+bash$ cvs -z3 -d:pserver:anonymous@cvs.linux-mips.sourceforge.net:/cvsroot/linux-mips co -D "12-nov-2002" linux
+
+#### Take a look of ./linux/Makefile and determine the kernel version to 
+#### download. To avoid name conflict, rename linux directory to 
+#### sf-linux-$sf_version, Then pack it up for storage.
+
+bash$ version=$(grep ^VERSION\ *=\ * ./linux/Makefile | sed -e s%VERSION\ *=\ *%%)
+bash$ patchlevel=$(grep ^PATCHLEVEL\ *=\ * ./linux/Makefile | sed -e s%PATCHLEVEL\ *=\ *%%)
+bash$ sublevel=$(grep ^SUBLEVEL\ *=\ * ./linux/Makefile | sed -e s%SUBLEVEL\ *=\ *%%)
+
+bash$ export sf_version=$version.$patchlevel.$sublevel
+
+bash$ mv linux sf-linux-$sf_version
+bash$ cd sf-linux-$sf_version; tar -zcpf ../sf-linux-$sf_version.tar.gz .; cd ..
+
+#### Goto http://www.kernel.org/pub/linux/kernel/ to grab the right
+#### version of kernel source.
+
+bash$ wget -P$archive http://www.kernel.org/pub/linux/kernel/v$version.$patchlevel/linux-$sf_version.tar.gz
+
+#### Goto ftp://ftp.gnu.org and get copies of binutils and gcc.
+
+bash$ export binutils_version=2.12
+bash$ export gcc_version=3.0.4
+
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/binutils/binutils-$binutils_version.tar.gz
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/gcc/gcc-$gcc_version/gcc-$gcc_version.tar.gz 
+
+vvvv (Linux Platforms Only)
+
+#### Goto ftp://ftp.gnu.org and get a copy of glibc including linuxthreads.
+
+bash$ export glibc_version=2.2.4
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/glibc/glibc-$glibc_version.tar.gz 
+bash$ wget -P$archive ftp://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-$glibc_version.tar.gz
+
+^^^^ (Linux Platforms Only)
+
+#### Get a default kernel ramdisk image to play with.
+
+bash$ wget -P$archive http://www.linux4.be/download/ramdisk/ramdisk.gz
+
+vvvv (Win32/Cygwin Platforms Only)
+
+#### Get the linux4be target runtime
+bash$ wget -P$archive http://www.linux4.be/~jal0/linux4be-runtime-$sf_version-$linux4be_version.tar.gz
+
+^^^^ (Win32/Cygwin Platforms Only)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.INSTALLING THE SOURCES:
+
+
+bash$ mkdir -p $prefix/build
+bash$ cd $prefix/build
+
+vvvv (Linux Platforms Only)
+
+#### Install the Linux Kernel Sources
+
+bash$ tar -xzf $archive/linux-$sf_version.tar.gz
+bash$ cd $prefix/build/linux
+
+^^^^ (Linux Platforms Only)
+
+#### Install the stock kernel Sources
+
+bash$ tar -xzf $archive/linux-$sf_version.tar.gz
+
+#### Install the mipsel-linux kernel Sources
+
+bash$ cd linux; tar -xzf $archive/sf-linux-$sf_version.tar.gz; cd ..
+
+#### Install the linux4BE kernel Sources
+
+bash$ cd linux; tar -xzf $archive/linux4be-$linux4be_version.tar.gz; cd ..
+
+#### Install binutils Sources
+
+bash$ tar -xzf $archive/binutils-$binutils_version.tar.gz
+
+#### Install gcc Sources
+
+bash$ tar -xzf $archive/gcc-$gcc_version.tar.gz
+
+vvvv (Linux Platforms Only)
+
+#### Install libc sources
+
+bash$ tar -xzf $archive/glibc-$glibc_version.tar.gz
+bash$ cd glibc-$glibc_version 
+bash$ tar -xzf $archive/glibc-linuxthreads-$glibc_version.tar.gz 
+
+^^^^ (Linux Platforms Only)
+
+vvvv (Win32/Cygwin Platforms Only)
+
+#### Unpack Linux4BE Runtime package
+
+bash$ tar -xzf $archive/linux4be-runtime-$sf_version-$linux4be_version.tar.gz
+
+#### Fix shared library libc.so
+echo "GROUP ( libc.so.6 libc_nonshared.a )" > linux4be-runtime-$sf_version-$linux4be_version/lib/libc.so
+
+^^^^ (Win32/Cygwin Platforms Only)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.BUILD CROSS-BINUTILS:
+
+bash$ mkdir bld-binutils-$binutils_version
+bash$ cd bld-binutils-$binutils_version
+
+bash$ ../binutils-$binutils_version/configure \
+            --target=$target \
+            --prefix=$prefix \
+            2>&1 | tee ../binutils-configure.log
+		  
+bash$ make 2>&1 | tee ../binutils-build.log
+bash$ make install 2>&1 | tee ../binutils-install.log
+bash$ cd .. 
+
+#### add to path so cross-binutils can be found
+
+bash$ export PATH=$prefix/bin:$PATH
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.CONFIGURE THE KERNEL SOURCES:
+
+#### Firts packagae up the sources in case you want to start over later.
+
+bash$ mv linux linux4be-$sf_version-$linux4be_version
+bash$ tar -zcpf $archive/linux4be-$sf_version-$linux4be_version.tar.gz linux4be-$sf_version-$linux4be_version
+		
+bash$ cd linux4be-$sf_version-$linux4be_version
+
+bash$ make CROSS_COMPILE=$target- mrproper
+bash$ cp config_be300 .config
+
+#### configure linux for device
+
+bash$ make CROSS_COMPILE=$target- oldconfig
+bash$ make CROSS_COMPILE=$target- dep 2>&1 | tee ../kernel-dep.log
+
+#### create kernel source simlinks
+
+bash$ cd $prefix/$target
+bash$ mkdir include 
+bash$ cd include 
+bash$ ln -s $prefix/build/linux4be-$sf_version-$linux4be_version/include/asm-mips asm 
+bash$ ln -s $prefix/build/linux4be-$sf_version-$linux4be_version/include/linux linux
+
+bash$ cd $prefix/build
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6.BUILD GCC 'C' BOOTSTRAP CROSS-COMPILER:  (Linux Platforms Only)
+
+#### build & install the bootstap compiler
+
+bash$ mkdir bld-gcc_s1-$gcc_version
+bash$ cd bld-gcc_s1-$gcc_version
+
+bash$ ../gcc-$gcc_version/configure \
+            --target=$target \
+            --prefix=$prefix \
+            --with-gnu-as \
+            --with-gnu-ld \
+            --with-as=$prefix/bin/$target-as \
+            --with-ld=$prefix/bin/$target-ld \
+            --with-newlib \
+            --disable-shared \
+            2>&1 | tee ../gcc_s1-configure.log
+            
+bash$ make SUBDIRS="libiberty texinfo gcc" \
+            ALL_TARGET_MODULES= \
+            CONFIGURE_TARGET_MODULES= \
+            INSTALL_TARGET_MODULES= \
+            LANGUAGES="c" \
+            2>&1 | tee ../gcc_s1-build.log
+            
+bash$ make SUBDIRS="libiberty texinfo gcc" \
+            INSTALL_TARGET_MODULES= \
+            LANGUAGES="c" install \
+            2>&1 | tee ../gcc_s1-install.log
+            
+bash$ cd ..
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.BUILDING THE GLIBC RUNTIME LIBRARY:  (Linux Platforms Only)
+
+#### configure & install
+
+bash$ cd $prefix/build
+bash$ mkdir glibc-build
+bash$ cd glibc-build
+
+bash$ CC=$target-gcc CC=$target-gcc \
+            BUILD_CC=gcc \
+            AR=$target-ar \
+            RANLIB=$target-ranlib \
+            ../glibc-$glibc_version/configure \
+            --prefix=$prefix/$target \
+            --host=$target \
+            --enable-add-ons=linuxthreads \
+            --disable-sanity-checks \
+            2>&1 | tee ../glibc-configure.log
+
+#### sitback, this may take a while!
+
+bash$ make 2>&1 | tee ../glibc-build.log
+
+#### install
+
+bash$ make install 2>&1 | tee ../glibc-install.log
+
+#### fix library for packaging up
+
+bash$ echo "GROUP ( libc.so.6 libc_nonshared.a )" > $prefix/$target/lib/libc.so
+bash$ cd ..
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8.BUILD GCC 'C/C++' 2nd-Stage CROSS-COMPILER:  (Linux Platforms Only)
+
+bash$ mkdir bld-gcc_s1-$gcc_version
+bash$ cd bld-gcc_s1-$gcc_version
+
+bash$ ../gcc-$gcc_version/configure \
+            --target=$target \
+            --prefix=$prefix \
+            --with-gnu-as \
+            --with-gnu-ld \
+            --with-as=$prefix/bin/$target-as \
+            --with-ld=$prefix/bin/$target-ld \
+            --enable-languages=c,c++ \
+            --enable-shared \
+            --enable-threads \
+            2>&1 | tee ../gcc_s2-configure.log
+
+bash$ make 2>&1 | tee ../gcc_s2-build.log
+bash$ install 2>&1 | tee ../gcc_s2-install.log
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+9.BUILD GCC 'C/C++' CROSS-COMPILER:  (Win32/Cygwin Platforms Only)
+
+bash$ mkdir bld-gcc-$gcc_version
+bash$ cd bld-gcc-$gcc_version
+
+bash$ ../gcc-$gcc_version/configure \
+            --target=$target \
+            --host=$host \
+            --prefix=$prefix \
+            --enable-languages=c,c++ \
+            --enable-shared \
+            --enable-threads \
+            --with-headers=$prefix/build/linux4be-runtime-$sf_version-$linux4be_version/include \
+            --with-libs=$prefix/build/linux4be-runtime-$sf_version-$linux4be_version/lib \
+            2>&1 | tee ../gcc-configure.log
+
+bash$ make 2>&1 | tee ../gcc-build.log
+bash$ install 2>&1 | tee ../gcc-install.log
+bash$ cd ..
+
+
+#### Remove .exe extensions from cross-compiled target binaries
+bash$ cd $prefix/$target/bin
+bash$ for i in $(find . -name '*.exe' -printf %p\ ) ; do mv -f $i $(echo $i | sed -e s%.exe%%) ; done 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+10.FINAL STEP
+
+#### Now fix cross toolchain includes
+bash$ cd $prefix/$target
+bash$ rm -fr include
+bash$ mv ./sys-include ./include
+bash$ ln -s ./include ./sys-include
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  !!!!!!!!!! ALL DONE !!!!!!!!!!
+
+!!!! BELOW ARE SOME OTHER THING THAT MAY BE USEFULE
+
+########
+#### Packaging up the runtime environment for later use
+####
+#### If not already set,
+####
+####     bash$ export $prefix=~/toolchains/xLinux4BE
+####     bash$ export $target=mipsel-linux
+####     bash$ export $sf_version=2.4.18
+####     bash$ export $linux4be_version=20021129
+####
+
+bash$ cd $prefix
+bash$ ln -s ./$target ./linux4be-runtime-$sf_version-$linux4be_version
+
+bash$ tar -zcpf $archive/linux4be-runtime-"$sf_version"-"$linux4be_version"_new.tar.gz \
+                 ./linux4be-runtime-$sf_version-$linux4be_version/include \
+                 ./linux4be-runtime-$sf_version-$linux4be_version/lib
+
+bash$ rm -f ./linux4be-runtime-$sf_version-$linux4be_version
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+########
+#### Packaging up the entire cross-toolchain binaries
+####   This assums the cross-tools are located at ~/toolchain/xLinux4BE
+####
+#### If not already set,
+####
+####     bash$ export $prefix=~/toolchains/xLinux4BE
+####     bash$ export $sf_version=2.4.18
+####     bash$ export $linux4be_version=20021129
+####
+
+bash$ cd ~
+
+bash$ ln -s ./toolchains/xLinux4BE ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"
+                                 !!!! OR !!!!
+bash$ ln -s ./toolchains/xLinux4BE ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"
+
+
+bash$ tar -zcpf $archive/linux4be-tools-win32-"$sf_version"-"$linux4be_version"_new.tar.gz \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/bin \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/include \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/info \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/lib \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/man \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/mipsel-linux \
+                 ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"/share
+                                 !!!! OR !!!!
+bash$ tar -zcpf $archive/linux4be-tools-linux-"$sf_version"-"$linux4be_version"_new.tar.gz \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/bin \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/include \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/info \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/lib \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/man \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/mipsel-linux \
+                 ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"/share
+
+bash$ rm -f ./linux4be-tools-win32-"$sf_version"-"$linux4be_version"
+                                 !!!! OR !!!!
+bash$ rm -f ./linux4be-tools-linux-"$sf_version"-"$linux4be_version"
+
+########
+#### Installing cross-toolchain binaries
+####   This assums the cross-tools will be installed at ~/toolchain/xLinux4BE
+####   and the cross-tools package is located at ~/$sdk_root
+####
+#### If not already set,
+####
+####     bash$ export $sdk_root=~/linux4be_sdk_20021129
+####     bash$ export $sf_version=2.4.18
+####     bash$ export $linux4be_version=20021129
+####
+
+bash$ mkdir -p ~/toolchains
+bash$ cd ~/toolchains
+
+bash$ tar -xzf $sdk_root/linux4be-tools-win32-"$sf_version"-"$linux4be_version".tar.gz
+bash$ mv linux4be-tools-win32-"$sf_version"-"$linux4be_version" xLinux4BE
+                                 !!!! OR !!!!
+bash$ tar -xzf $sdk_root/linux4be-tools-linux-"$sf_version"-"$linux4be_version".tar.gz
+bash$ mv linux4be-tools-linux-"$sf_version"-"$linux4be_version" xLinux4BE
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

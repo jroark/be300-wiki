@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+<TITLE>web/web/hackers/clean.php - view - 1.3</TITLE></HEAD>
+<BODY BGCOLOR="#eeeeee">
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#9999ee"><tr valign=bottom><td><a href="clean.php.html"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></a> <b>Return to <A HREF="clean.php?sortby=date#rev1.3">clean.php</A>
+ CVS log</b> <IMG SRC="/icons/text.gif" ALT="[TXT]" BORDER="0" WIDTH="20" HEIGHT="22"></td><td align=right><IMG SRC="/icons/dir.gif" ALT="[DIR]" BORDER="0" WIDTH="20" HEIGHT="22"> <b>Up to  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b></td></tr></table><HR noshade><table width="100%"><tr><td bgcolor="#ffffff">File:  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/clean.php.html">clean.php</a>&nbsp;(<A HREF="/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/clean.php?rev=1.3&amp;sortby=date" target="cvs_checkout" onClick="window.open('/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/clean.php?rev=1.3','cvs_checkout','resizeable,scrollbars');"><b>download</b></A>)<BR>
+Revision <B>1.3</B>, <i>Wed Nov 13 14:40:14 2002 UTC</i> (9 months, 3 weeks ago) by <i>filip</i>
+<BR>CVS Tags: <b>HEAD</b><BR>Changes since <b>1.2: +4 -4
+ lines</b><PRE>
+Updated after sync
+</PRE>
+</td></tr></table><HR noshade><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;meta name=&quot;VERSION&quot; content=&quot;$Id: clean.php,v 1.3 2002/11/13 14:40:14 filip Exp $&quot;&gt;
+&lt;meta name=&quot;SOURCE&quot; content=&quot;$Source: /cvsroot/web/web/hackers/clean.php,v $&quot;&gt;
+&lt;title&gt;Linux4.BE :: Hackers :: Getting the clean sourcetree&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/linux4be&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;? include &quot;../header.php&quot;; ?&gt;
+&lt;table width=&quot;100%&quot;&gt;
+&lt;tr&gt;
+&lt;td width=&quot;10%&quot; valign=&quot;top&quot;&gt;
+&lt;? include &quot;menu.php&quot;; ?&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+ &nbsp;&lt;P&gt;
+ &nbsp;&lt;span class=&quot;subtitle&quot;&gt;Hackers :: Getting the clean sourcetree&lt;/span&gt;
+ &nbsp;&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;bodytext&quot;&gt;
+
+&lt;pre&gt;
+<A HREF="http://linux-mips.sourceforge.net/">http://linux-mips.sourceforge.net/</A>
+
+Quick Guide to Use Linux-MIPS CVS Tree on Sourceforge
+Login into CVS tree.
+cvs -d:pserver:<A HREF="mailto:anonymous@cvs.linux-mips.sourceforge.net">anonymous@cvs.linux-mips.sourceforge.net</A>:/cvsroot/linux-mips login
+
+Press &quot;Return&quot; when prompted for password. You only need to do this once on any machine.
+Check out a copy of the tree (using the -D option).
+cvs -z3 -d:pserver:<A HREF="mailto:anonymous@cvs.linux-mips.sourceforge.net">anonymous@cvs.linux-mips.sourceforge.net</A>:/cvsroot/linux-mips co -D &quot;12-nov-2002&quot; linux
+
+To avoid name conflict, rename linux directory to sf-linux.
+Take a look of sf-linux/Makefile and determine the kernel version. Let us say it is v2.4.18.
+Goto <A HREF="http://www.kernel.org/pub/linux/kernel/">http://www.kernel.org/pub/linux/kernel/</A> to grab the right version of kernel source. Unzip and
+untar it in the same directory as linux-2.4.18.
+cd linux-2.4.18
+cp -af ../sf-linux/* .
+
+&lt;/pre&gt;
+&lt;/span&gt;
+ &nbsp;&lt;/p&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp;&lt;span class=&quot;date&quot;&gt;Last updated on $Date: 2002/11/13 14:40:14 $&lt;/span&gt;
+ &nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/html&gt; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>

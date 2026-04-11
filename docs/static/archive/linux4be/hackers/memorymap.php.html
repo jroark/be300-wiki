@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: memorymap.php,v 1.3 2002/11/26 09:08:49 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/memorymap.php,v $">
+<title>Linux4.BE :: Hackers :: Memory Map </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="../hackers/index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/books.php.html">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/faq.php.html">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/bootloader.php.html">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/toolchain.php.html">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/kernel.php.html">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/ramdisk.php.html">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/hardware.php.html">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/memorymap.php.html">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="../irclog/index.php.html">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/cvs.php.html">CVS</a>
+</td></tr>
+</table>
+</td>
+<td>
+  <P>
+  <span class="subtitle">Hackers :: Memory Map</span>
+  </p><p><span class="bodytext">
+This is a list of all known memory locations on the BE300.
+<br>Please note that only the vr4131 information is from an official manual, all the others are mainly based on voodoo magic and there is absolutely no guarantee those are correct : if you use this information and it breaks something, you're on your own. 
+  </p>
+  <table>
+    <tr><td> 0xaa000000 </td><td> <b>---------- Start Kj Companion -----</b></td></tr>
+    <tr><td> 0xaa000000 </td><td> PIU Base on companion              </td></tr>
+    <tr><td> 0xaa000000 </td><td> Cak Base on companion              </td></tr>
+    <tr><td> 0xaa000000 </td><td> GPIO Base on companion             </td></tr>
+    <tr><td> 0xaa000301 </td><td> touchpanel related                 </td></tr>
+    <tr><td> 0xaa00031C </td><td> touchpanel related                 </td></tr>
+    <tr><td> 0xaa000980 </td><td> BlgReg_BASE ,size 0x68 (Casio SDK, buzzer.h)    </td></tr>
+    <tr><td> 0xaa001000 </td><td> ???? Base on companion, CF related </td></tr>
+    <tr><td> 0xaa001128	</td><td> CmmReg_BASE ,size 0x04 (Casio SDK, buzzer.h)    </td></tr>
+    <tr><td> 0xaa007800 </td><td> ScCmcu Base on companion           </td></tr>
+    <tr><td> 0xaa008000 </td><td> Vic/CommMode Base on companion     </td></tr>
+    <tr><td> 0xaa008680 </td><td> SIU Base on companion              </td></tr>
+    <tr><td> 0xaa00a000 </td><td> KjCMU Base on companion            </td></tr>
+    <tr><td> 0xaa200000 </td><td> video memory (framebuffer)         </td></tr>
+    <tr><td> 0xab000060 </td><td> CMU CLKMSK on companion ?          </td></tr>
+    <tr><td> 0xab00011c </td><td> GIU_PODATL on companion ?          </td></tr>
+    <tr><td> 0xaf000000 </td><td> <b>---------- Start vr4131 -----------</b></td></tr>
+    <tr><td> 0xaf000000 </td><td> VRIP Base on vr4131                </td></tr>
+    <tr><td> 0xaf000060 </td><td> CMU on vr4131                      </td></tr>
+    <tr><td> 0xaf000100 </td><td> RTC on vr4131                      </td></tr>
+    <tr><td> 0xaf000140 </td><td> GIU on vr4131 (used by serial)     </td></tr>
+    <tr><td> 0xaf000800 </td><td> SIU Base on vr4131                 </td></tr>
+    <tr><td> 0xaf000820 </td><td> DSIU Base on vr4131                </td></tr>
+    <tr><td> 0xaf000c00 </td><td> PCI Addr  on vr4131                </td></tr>
+    <tr><td> 0xaf000d00 </td><td> PCICONF Addr on vr4131             </td></tr>
+    <tr><td> 0xbfc00000 </td><td> <b>---------- Start bootrom ----------</b></td></tr>
+    <tr><td> 0xbfc00000 </td><td> Reset NMI  (in bootrom)            </td></tr>
+    <tr><td> 0xbfc00200 </td><td> TLB Refill (in bootrom)            </td></tr>
+    <tr><td> 0xbfc00280 </td><td> XTLB Refill (in bootrom)           </td></tr>
+    <tr><td> 0xbfc00300 </td><td> Cache Error (in bootrom)           </td></tr>
+  </table>
+  </font>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/26 09:08:49 $</span>
+  </p>
+</td>
+</tr>
+</table>
+
+</html> 
+
+

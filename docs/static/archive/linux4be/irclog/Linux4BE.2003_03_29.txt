@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_29.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_29.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Mar 29 00:00:01 2003
+01:22 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+01:22 < metalac> hey
+01:30 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit ["Client exiting"]
+01:33 -!- sch [~sch@YahooBB219017080047.bbtec.net] has joined #linux4BE
+01:39 -!- sch [~sch@YahooBB219017080047.bbtec.net] has left #linux4BE ["Client Exiting"]
+10:20 -!- jal0_bbl is now known as jal0
+10:20  * jal0 is around
+13:52 -!- WebGuest9639 [~eirc@d218-98.RES.UMontreal.CA] has joined #Linux4BE
+13:55 < WebGuest9639> hi?
+13:55 < jal0> hello
+13:55 < WebGuest9639> how are you/
+13:55 < WebGuest9639> ?
+13:56 < jal0> good... and you?
+13:56 < WebGuest9639> <-- wew, another, woowooo or whatever i used to call myself here
+13:56 < WebGuest9639> not bad... just a horrible hang over
+13:57 < jal0> ic, you up kind of early ;-)
+13:57 < WebGuest9639> yea...
+13:57 < WebGuest9639> i saw bowling for columbine yesterday
+13:57 < WebGuest9639> then im not quite sure
+13:57 < WebGuest9639> so whats new with development?
+13:59 < jal0> not much on the linux side, me and andrey have been working on the CE side of things... trying to extract info from CE that would be useful. like hardware registers and such
+13:59 < jal0> i set up a new form topic on it at the linux4be fourms
+14:00 < WebGuest9639> brb
+14:00 < jal0> ok
+14:18 < WebGuest9639> sick... gravol... bbl
+14:18 < jal0> later
+15:57 < WebGuest9639> hi?
+16:18  * jal0 is here... kinda
+16:33 < WebGuest9639> so linux is still far from fully controlling a be ?
+16:33 < jal0> yeap
+16:35 < jal0> at least if things contiue at there present pase
+16:35 < WebGuest9639> ok
+16:45 < WebGuest9639> hmmmm
+16:57 < WebGuest9639> bbl
+16:58 -!- WebGuest9639 [~eirc@d218-98.RES.UMontreal.CA] has quit ["Today is a good day to chat."]
+21:00 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: PsycoXul
+21:01 -!- Netsplit over, joins: PsycoXul
+--- Log closed Sun Mar 30 00:00:26 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

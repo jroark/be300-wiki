@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_12.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_12.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Feb 12 09:48:46 2003
+09:48 !irc.freenode.net *** Looking up your hostname...
+09:48 !irc.freenode.net *** Checking ident
+09:48 !irc.freenode.net *** Found your hostname
+--- Log opened Wed Feb 12 09:49:03 2003
+09:49 !irc.freenode.net *** Looking up your hostname...
+09:49 !irc.freenode.net *** Checking ident
+09:49 !irc.freenode.net *** Found your hostname
+09:49 !irc.freenode.net *** No identd (auth) response
+--- Log closed Wed Feb 12 09:55:03 2003
+--- Log opened Wed Feb 12 09:56:45 2003
+09:56 < andrey> btw the log closed again.
+09:57 < andrey> sorry, it's working... :-)
+09:57 < Filip_> that's because i just started it again controlling terminal is still alive (I'll logout for a second to stop it from closing:opening)
+09:59 < jal0> i'm still working (a i get some time) on reconstructing DLL's from memory dumps
+10:00 < jal0> not sure about everyone else, but time seems to be the prevailing issue
+10:01 < Filip_> I looked at your interrupt code lastnight, looks good so far. As soon as I have half a day, i'll see if I can patch it in to the kernel code
+10:03 < andrey> I didn't follow all interrupt yet, looks like BE handles a lot of them.
+10:04 < andrey> But at least we can distinguish touch, buttons and CF.
+10:05 < andrey> jal0, I saw you posting on be-central yesterday. I don't think it's a waste of time either.
+10:05 < andrey> Obviously... :-)
+10:12 < jal0> :)
+10:15 < jal0> well, off to work later everone
+10:15 -!- jal0 is now known as jal0_wrkn
+10:19 < andrey> later
+11:07 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+11:22 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+11:31 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+11:32 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+11:38 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+11:38 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+16:55 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+18:59 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+19:31 -!- High_Voltz [~jake@209-240-27-121.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+20:48 -!- High_Voltz [~jake@209-240-27-121.tc1.woodsfield.oh.dial.1st.net] has quit [Remote closed the connection]
+21:25 -!- jal0_wrkn is now known as jal0
+--- Log closed Thu Feb 13 00:00:18 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

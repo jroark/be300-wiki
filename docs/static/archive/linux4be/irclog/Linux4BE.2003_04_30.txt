@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Apr 30 13:00:54 2003
+13:00 !irc.freenode.net *** Looking up your hostname...
+13:00 !irc.freenode.net *** Checking ident
+13:00 !irc.freenode.net *** Found your hostname
+13:00 !irc.freenode.net *** No identd (auth) response
+--- Log opened Wed Apr 30 13:07:30 2003
+13:07 !irc.freenode.net *** Looking up your hostname...
+13:07 !irc.freenode.net *** Found your hostname, welcome back
+13:07 !irc.freenode.net *** Checking ident
+13:07 !irc.freenode.net *** No identd (auth) response
+--- Log opened Wed Apr 30 13:08:18 2003
+13:08 !irc.freenode.net *** Looking up your hostname...
+13:08 !irc.freenode.net *** Found your hostname, welcome back
+13:08 !irc.freenode.net *** Checking ident
+13:08 !irc.freenode.net *** No identd (auth) response
+--- Log closed Wed Apr 30 13:14:18 2003
+--- Log opened Wed Apr 30 13:14:30 2003
+13:14 < WebGuest2193> hmmmm
+13:15 -!- WebGuest2193 is now known as jal0_at_wrk
+13:15  * mouse is away: fue a casa...
+13:15 < jal0_at_wrk> OK everyone finally figured out how to get the beweb_logger back online
+13:16 -!- jal0_at_wrk [~eirc@208.33.58.152] has quit [Client Quit]
+13:17 -!- WebGuest7170 [~eirc@208.33.58.152] has joined #Linux4BE
+13:17 < WebGuest7170> just another test :)
+13:17 -!- WebGuest7170 [~eirc@208.33.58.152] has quit [Client Quit]
+16:51 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has joined #Linux4BE
+16:52 < antagonizt> anybody active?
+19:11 -!- jal0_Zzz [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+22:44 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["BitchX: no additives or preservatives"]
+23:21 -!- Netsplit kornbluth.freenode.net <-> irc.freenode.net quits: mouse
+23:22 -!- Netsplit over, joins: mouse
+--- Log closed Thu May 01 00:00:29 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,317 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_10.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_10.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Dec 10 00:00:18 2002
+00:09 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt
+00:09 -!- Netsplit over, joins: antagonizt
+01:12 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt
+01:13 -!- Netsplit over, joins: antagonizt
+03:06 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+04:04 < antagonizt> morning filip
+04:04 < Filip> hi antagonizt
+04:15 < Filip> what happened to Goo's ? forgot to pay, excessive traffic, bug, hacked ?
+04:15 < Filip> or all of the above
+04:16 < antagonizt> excessive traffic... i think? i joined #expod and ask what happened nobody responded but goo changed the topic to expod.net down due to excessice traffic... i joked and said i thought the feds busted the door in... someone called me a spy? and then goo kicked me off the channel?
+04:17 < Filip> I've been thinking about those attacks of the past weeks: maybe their goal was not to bring the site down, but make sure to get a huge bill
+04:17 < antagonizt> not sure what to make of it all...
+04:18 < Filip> it looks like the 'attacker' was using a high-bandwith connection and dozens of web-spiders in parallel, downloading the complete site
+04:18 < antagonizt> that sux
+04:18 < Filip> well, that new apache module iinstalled locks them out 
+04:19 < antagonizt> cool
+04:21 < Filip> last month consumed 26GB
+04:21 < antagonizt> yikes! within your limits?
+04:21 < Filip> yep, still within limits;  and additional blocks of 5GB are reasonable 
+04:22 < Filip> current plan includes 30GB
+04:24 < Filip> USD 2 / GB extra, and have to buy them in blocks of 20GB. But unused bandwidth is automatically carried on to the following months
+04:28 < antagonizt> how do increment a var in shell script?
+04:29 < antagonizt> what is the equivalant of ++?
+04:29 < Filip> a=a+1
+04:30 < antagonizt> MAJOR=176
+04:30 < antagonizt>  MAJOR = MAJOR + 1
+04:30 < antagonizt> MAJOR: command not found
+04:32 < antagonizt> nv
+04:36 < antagonizt> MAJOR=`expr $MAJOR + 1`
+04:38 < Filip> indeed, that was it
+05:26 < antagonizt> i can't get pgui to use either kb driver...
+05:31 < Filip> well, it looks like the terminal behind pg is getitng the input, and is scrolling the framebuffer
+05:32 < antagonizt> that only happens when you don't specify an input driver...
+05:32 < antagonizt> try ttykb or pgserver --pgserver.input=rawttykb
+05:32 < Filip> is it  possible to launch pgserver as init ?
+05:33 < antagonizt> not sure?
+05:33 < antagonizt> that first on should be --pgserver.input=ttykb
+05:35 < antagonizt> top says: Mem 6308K used, 7416K free 
+05:35 < Filip> that's with a 4MB ramdisk mounted ?
+05:35 < antagonizt> with a 4mb ramdisk with uClibc, busybox, picogui, & jpeg6b only busybox running
+05:36 < Filip> so when using nand or cf instead of ramdisk,  should give 2.3MB used,  11.4MB free
+05:37 < antagonizt> very nice
+05:37 < antagonizt> + swap
+05:37 < Filip> 11.4+2.3= 13.7 < 16
+05:39 < antagonizt> ?
+05:40 < Filip> we've lost  2.3 MB
+05:40 < antagonizt> Mem: 6308K used, 7416K free, 0K shrd, 76K buff, 4928K cached Load average: 0.02, 0.01, 0.00
+05:45 < antagonizt> total is 18728K
+05:45 < antagonizt> we gained ram
+05:46 < Filip> :-)
+05:47 < antagonizt> K=1000 and k=1024 right?
+05:48 < Filip> cat /proc/meminfo 
+05:50 < antagonizt> 13724kB
+05:50 < antagonizt> MemTotal:
+05:52 < antagonizt> thank god for tab completion
+05:53 < Filip> how do you cut & past with the d-pad ?
+05:57 < antagonizt> can't right now
+05:59 < antagonizt> can you even do that without gpm?
+05:59 < Filip> not sure, I use my terminal emulator's functionality for this (TeraTerm)
+06:00 < Filip> i'm almsot neever directly on any of my servers, always remote
+06:00 < Filip> almost
+06:01 < antagonizt> what with you being in Belgium and the servers in Florida (right?) 
+06:02 < Filip> that's for my personal server; most of the server we use here in the office are either downstairs (development), or a couple of miles down the road (production)
+06:02 < Filip> production is at a high-end hosting provider (too expensive for my personal use)
+06:03 < Filip> US based companies are much  cheaper (like dialtone, rackspace   etc)
+06:29 < antagonizt> did you see the note i left in the logs about gdb?
+06:30 < Filip> yep, too large for ramdisk ....
+06:30 < Filip> but once serial is upà, should be feasable
+06:31 < Filip> using serial deebug or even minimal ramdisk with nfs and  ppp support and run (very slow) over it
+07:28 < antagonizt> you can't pass pgserver as init... but you can pass a shell script that brings up the loopback and then starts pgserver
+07:28 < antagonizt> but it still fails
+07:49 < antagonizt> cool pgui rotate works...
+07:50 < antagonizt> landscape mode
+08:04 < Filip> nice
+08:04 < Filip> is it a parameter to pgservr ?
+08:04 < antagonizt> either in pgserver.conf as [pgserver] rotate = 90 or a param --pgserver.rotate=90
+08:05 < antagonizt> i also can't get it to use themes?
+08:05 < antagonizt> it would be nice to have that aqua theme... it looks slick
+08:06 < antagonizt> hmmm maybe i need libpng
+08:06 < antagonizt> i built libjpeg...
+08:23 < Filip> think we'll need a 'release manager' soon : someone who's  making sure we have a complete release with all up-to-date  stuff form the different people
+08:24 < antagonizt> have to settle on an UI... jal0 is interested in TinyX
+08:24 < Filip> so we can release a binary distro, and all theosurces orclear instructions on how to get them and recompile the complete thing
+08:25 < Filip> we can have several UI's : a core distribution without GUI, and optional GUI packages
+08:26 < Filip> is there some kind of package manager (like rpm) on other pda's ?
+08:26 < antagonizt> uhmm i think the ipaq uses something... *.ipk?
+08:26 < antagonizt> might only be for opie/qtopia though
+08:28 < Filip> I like the slackware system: base packages  (a),  networking (N), GTK and GNOME (GTK),  Kde (kdE), 
+08:29 < Filip> you have to install base, and all the rest  is up to you
+08:29 < antagonizt> yeah i think tared gzips should be fine... for a while anyway
+08:29 < antagonizt> not too many deps just yet
+08:30 < Filip> indeed, maybe provide a diskimage for the base, and all the rest tgz's
+08:30 < Filip> I'm afraid a real packaging system is going to use  too many  space on  the limited device
+08:33 < Filip> http://www.okpos.com/wiki/pos/EmbeddedGUIAndGtk
+09:04 < antagonizt> grrr... pgui themes cause a Data bus error?
+09:05 < Filip> wow
+09:05 < antagonizt> ?
+09:05 < Filip> does it do anyting exotic ?
+09:06 < antagonizt> exotic?
+09:06 < antagonizt> just loads some png files...
+09:07 < Filip> hmm.  oversized maybe ?
+09:08 < Filip> is itlibpng or pg themes that causes the trouble ?
+09:08 < antagonizt> maybe i'm giving it the wrong coords
+09:09 < Filip> trying rotated ?
+09:09 < antagonizt> yeah
+09:09 < Filip> try normal
+09:09 < antagonizt> should it be 320x240x16 or 240x320x16? or should i even try 4bpp?
+09:10 < antagonizt> it's WxHxD
+09:13 < antagonizt> :wq
+09:13 < antagonizt> oops
+09:17 < antagonizt> no luck
+09:20 < antagonizt> it starts to dispay the Background image then causes an Oops
+09:21 < Filip> and the portion it displays looks ok or not ?
+09:21 < antagonizt> looks fine to me
+09:22 < antagonizt> it's a little hard to tell.. looks a bit like the swirly blue background of OSX... but maybe that's just what i want to see :)
+09:23 < antagonizt> it flashes only for a second and only about 4cm of the top
+09:23 < Filip> maybe try an uncached kernel,  will be slower so more time to check  ;-)
+09:26 < antagonizt> it doesn't seem to matter what dimensions i tell picogui to use?
+09:27 < Filip> what's the size of that image ? maybe crop it first to the correct size ?
+09:29 < antagonizt> not sure... they use some kind of compiled theme file
+09:29 < Filip> but the source image  must be somewhere, no ? 
+09:30 < Filip> or is it tiled form a small piece ?
+09:30 < antagonizt> no idea
+09:30 < antagonizt> have to find the uncompiled theme soure
+09:43 < antagonizt> the bg is tiled?
+09:44 < Filip> might be
+09:44 < antagonizt> no it is... i found the theme tools and it has the aqua "source"
+09:45 < antagonizt> hmm.. fbset returns 
+09:45 < antagonizt> mode "240x320-300"
+09:45 < antagonizt> geometry 240 320 256 320 16
+09:46 < antagonizt> timings 20000 64 64 32 64 2
+09:46 < antagonizt> accel false
+09:46 < antagonizt> rgba 5/11,6/5/5/0/0/0
+09:46 < antagonizt> endmode
+09:47 < Filip> looks ok to me
+09:48 < Filip> not usire what the '-300' means in mode
+09:48 < Filip> 240 320 is the actual res, 256 320 virtual
+09:49 < Filip> 6/5/5 are thecolor bits (16 in total)
+09:49 < antagonizt> rather: rgba 5/11,6/5,5/0,0/0
+09:51 < Filip> hmm
+09:54 < Filip> got it :  looks ok
+09:54 < antagonizt> the picogui guys say it must be a bug? that we should use gdb and get a backtrace where it crashes and e-mail to them
+09:55 < antagonizt> got what?
+09:55 < Filip> red= 5 bits starting  at offset 11, 6 
+09:55 < Filip> the meaning of rgba 5/11,6/5,5/0,0/0
+09:55 < antagonizt> oh
+09:55 < Filip> didn't make sense to me at first
+09:57 < Filip> but how to get a dump out of it ....
+09:57 < Filip> early printk hack over serial  stops once we enter userland
+09:58 < antagonizt> we could take the serial driver out of tty land and make it a blocking misc char device
+09:58 < Filip> unless there is a way to redirect console to the unfinished serial
+10:25 < someguy> hello
+10:25 < antagonizt> hi someguy
+10:26 < someguy> while browsing around the sources looking for something else
+10:26 < someguy> I saw the vr41xxwdt.c driver
+10:26 < someguy> would that work for the watch dog timer in the be, or is it different?
+10:28 < someguy> never mind
+10:28 < someguy> I think I see my answer now
+10:28 < someguy> vr4131 doesn't have a DSU
+10:30 < Filip> hi someguy
+10:30 < someguy> hi
+10:33 < someguy> I was looking at the giu stuff
+10:33 < someguy> wanted to try writing an interrupt handler for that one GIU pin that changes
+10:35 < someguy> I am kindof lost though, I cannot find any other examples that use the giu stuff
+10:35 < someguy> wasn't sure if maybe one of you guys had looked at it before
+10:35 < Filip> someguy, you should take a look at:   linux/arch/mips/vr41xx/common/icu.c
+10:35 < someguy> that is where it gets called from right?
+10:36 < Filip> icu= interrupt control unit
+10:36 < someguy> yeah
+10:36 < Filip> thiats the generic code used for other vr4122 and 4131cpu's, and it's quite readable
+10:37 < Filip> and int-handler.S in that same dir
+10:41 < someguy> I guess I will play with it some more and see what I can learn
+10:55 < someguy> is there anything that actually uses the giu or something similar for devices that I could look at?
+10:56 < Filip> not that I now of.... not even a LED (it looks like the  only LED on the  BE is used  by the charging circuit only)
+10:57 < Filip> if you're looking for other pda's or boards:
+10:57 < someguy> yeah, that would work
+10:57 < someguy> just understanding cascading and things
+10:57 < Filip> take a look at  'eagle'
+10:57 < someguy> what functions to call to hook in
+10:57 < someguy> ok
+10:58 < Filip> linux/arch/mips/vr41xx/vr4122/eagle
+10:58 < Filip> it's a NEC reference board 
+10:59 < Filip> SDB NEC DDB-Vr4122 (Eagle) 
+11:22 < Filip> bbl
+11:22 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+13:37 < someguy> what platform type should I use to build windows executables in eVC++?
+13:37 < someguy> MIPSII_FP, MIPSII, MIPSIV, MIPS16?
+13:51 < antagonizt> someguy: go to http://dev.cassiopeia.jp/en/ and download the BE300 SDK 
+13:52 < antagonizt> bbl
+13:52 -!- antagonizt is now known as antagonizt[bbl]
+13:55 < someguy> thanks
+15:24 -!- Filip2 [~Filip@143.97-136-217.adsl.skynet.be] has joined #linux4be
+17:57 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+17:57 < jal0atWrk> hey people
+17:58 < Filip2> hi jal0
+17:58 < jal0atWrk> anything new?
+18:00 < Filip2> not from my side, being  to busy at work :-(
+18:00 < jal0atWrk> i feel you, me also 
+18:23 -!- Filip2 [~Filip@143.97-136-217.adsl.skynet.be] has left #linux4be []
+18:23 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit [Read error: 104 (Connection reset by peer)]
+18:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.200] has joined #linux4be
+18:49 -!- jal0atWrk [~jal0_wrkn@208.33.58.200] has quit [Client Quit]
+23:11 < jal0> hmm, not much going on i see
+23:24 -!- antagonizt[bbl] is now known as antagonizt
+23:25 < antagonizt> hey jal0
+23:25 < jal0> hey antagonizt
+23:26 < jal0> anything new?
+23:27 < antagonizt> nope
+23:27 < jal0> been pretty busy myself, got a new project at work
+--- Log closed Wed Dec 11 00:00:44 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

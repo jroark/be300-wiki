@@ -1,0 +1,268 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_02.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_02.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Dec 02 00:00:44 2002
+00:55 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+01:17 -!- jal0_away is now known as jal0
+03:19 -!- sinfonian [~bshirclif@twhou-207-218-233-136.ev1.net] has joined #linux4be
+03:23 -!- sinfonian [~bshirclif@twhou-207-218-233-136.ev1.net] has left #linux4be []
+08:24 -!- antagonizt[zZz] [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+10:19 -!- sinfonian [~bshirclif@twhou-215-195.ev1.net] has joined #linux4be
+10:29 -!- sinfonian [~bshirclif@twhou-215-195.ev1.net] has left #linux4be []
+10:52 < jal0> hmm
+11:05 < someguy> hi jal0
+11:05 < jal0> hey some guy ;)
+11:06 < someguy> where is everyone?
+11:07 < jal0> not sure, it monday, probably work, i be heading there in about an hour or two myself
+11:07 < someguy> have any useful registers been found recently?
+11:08 < jal0> not that i'm aware of, i believe filip is mapping out the touchscreen ones
+11:09 < someguy> that is cool
+12:06 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+12:16 -!- themaw [~marc@pD9E5C441.dip.t-dialin.net] has joined #linux4be
+12:16 < themaw> hi everyone ..
+12:16 < jal0> hey themaw
+12:16 < antagonizt> hello
+12:17 < themaw> jal0, thanks for the email .. i just sent you the jpg !
+12:17 < jal0> ok
+12:17 < themaw> (it's a cutted screencopy of kedit with the original file ;))
+12:18 < jal0> themaw: i'll have to look at it tonight when i get home from work. time for work now :(
+12:18 < jal0> later everyone
+12:19 -!- jal0 is now known as jal0_wrkn
+12:19 < themaw> ok .. 
+12:42 < themaw> dumdidum ..
+14:41 -!- themaw_ [~marc@pD9E5C14E.dip.t-dialin.net] has joined #linux4be
+14:57 -!- themaw [~marc@pD9E5C441.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+15:09 -!- themaw_ is now known as themaw
+15:13 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has joined #Linux4BE
+15:15 < Filip> my PB arrived today :-)
+15:15 < antagonizt> cool
+15:16 < Filip> it's 'only' two DVD's 
+15:16 < Filip> full install is over 7GB
+15:16 < antagonizt> this is PB 3.0
+15:16 < Filip> yep, PB3.0
+15:16 < antagonizt> yikes
+15:17 < Filip> normal install is about 1.7 GB
+15:17 < Filip> 7GB is if you install all the target cpu's
+15:17 < antagonizt> how much just for mips
+15:17 < Filip> DVD1 has got folders for disk1 -> disk11
+15:18 < Filip> there are several mips flavours, but if you want the r4100 only , it's close to 1.7GB
+15:18 < antagonizt> is the ide the same as eVC
+15:18 < antagonizt> ?
+15:19 < Filip> not sure, still need to install it (there is no dvd in the notebook i planned  to use, so need to transfer it first over the network or create cd's out of it)
+15:20 < Filip> or install oveer the  network
+15:20 < Filip> i'm reading and browsing the contents now to determine what exactly i need to install
+15:20 < antagonizt> hope you have 100 mbit 
+15:21 < Filip> i normally use WiFi, but i'll hook my crossed cable for this one
+15:21 < Filip> on two 100mbit nic's
+15:37 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+17:22 < antagonizt> filip, how goes the struggle?
+17:24 < Filip> a lot of information (.hlp, .doc , .cpp, .h )
+17:24 < Filip> contains 'standard' touchpanel source
+17:24 < hewhew> whats the zero of transmission in a electrical circuit ?
+17:25 < Filip> ??
+17:25 < hewhew> yea.. i dont know either
+17:25 < Filip> well, I don't even get the question 
+17:26 < Filip> what's "zero of transmission" ? ground ?
+17:26 < hewhew> zero of transmission of a system
+17:26 < hewhew> zéro de transmission d'un système
+17:28 < Filip> maybe jal0 knows, he's in to electronics
+17:28 < hewhew> ok cool.. ill ask him when he gets back =)
+17:29 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has joined #linux4be
+17:29 < hewhew> speaking of the devil 
+17:29 < hewhew> .. =)
+17:29 < jal0atWrk> hey people
+17:30 < Filip> hi jal0
+17:30 < jal0atWrk> hmm, speaking of me :)
+17:30 < hewhew> jal0: would you know by any chance what the "zero of transmission of a system" is ?
+17:30 < hewhew> in electronics
+17:30 < jal0atWrk> in what context?
+17:31 < Filip> wow, looks like he knows several answers
+17:31 < hewhew> in dynamic circuits
+17:32 < jal0atWrk> not sure what you mean, lossy circits?
+17:32 < hewhew> i think it has something todo with filters
+17:33 < jal0atWrk> where are you getting this question from?
+17:33 < hewhew> from a homework in my electrical circuit course
+17:33 < jal0atWrk> are they talking about transformer coupling?
+17:34 < hewhew> nope
+17:34 < jal0atWrk> "zero of transmission of a system" thats in your book
+17:35 < hewhew> nope.. havent found it in my 'book' since the teacher isnt using that for the course =(
+17:35 < hewhew> my friend wrote : it is the values of the time constants where the value of the current is the same as the source
+17:36 < jal0atWrk> i'd have to see the circuit to understand the question.
+17:37 < hewhew> there isnt a circuit =(
+17:37 < jal0atWrk> it sounds like you are talking about transmission ratio's
+17:38 < jal0atWrk> like between transmitter and reciever
+17:38 < hewhew> hmmm
+17:38 < hewhew> something todo with a high filter or low filter or the one with both ?
+17:38 < jal0atWrk> band-pass filters?
+17:39 < hewhew> yea.. maybe that sounds like it
+17:39 < hewhew> those have zeros of transmissions?
+17:40 < jal0atWrk> idealy in the band that they are filtering
+17:40 < hewhew> ok
+17:40 < jal0atWrk> meaning nothing gets through, or "zero transmission"
+17:41 < jal0atWrk> which in theory is possible, but in practice hard to achieve
+17:41 < hewhew> is it like a limit ?
+17:42 < jal0atWrk> kinda, think of a radio tuner...
+17:42 < jal0atWrk> the reason it works is that all other freqs are blocked.
+17:43 < jal0atWrk> so you only hear on freq at a time. the worse quality of the radio, the more interference you have
+17:44 < hewhew> ok
+17:44 < hewhew> it defines a upper or lower limit of the range of frequencies that are accepted?
+17:45 < jal0atWrk> "zero transmission" in other words is "infinite attenuation"
+17:45 < jal0atWrk> at some freq
+17:45 < hewhew> ok cool thanks alot =)
+17:46 < jal0atWrk> np
+17:47 < jal0atWrk> so anything else happening around here?
+17:48 < hewhew> <-- end of session bad tripping
+17:49 < hewhew> which is normal
+17:49 < jal0atWrk> ?
+17:50 < jal0atWrk> brb, heating up my dinner
+17:50 < hewhew> i gave in one 40 pages last monday, one 15 pages last thursday, one 15 pages today and another 20 pages for tommorow 9 am
+17:50 < hewhew> heh
+18:00 < jal0atWrk> b
+18:03 < Filip> jal0, monitor works fine till now
+18:03 < Filip> no 'back to starts' on any of the valid regions I explored so far (about 2MB in total)
+18:03 < jal0atWrk> cool, have you seen the problem at all?
+18:05 < Filip> yes, with the address you mentioned last time, but not on any of the existing data areas
+18:05 < jal0atWrk> ok, so it's just no me then :)
+18:06 < Filip> pcb didn't show up yet ?
+18:06 < Filip> my PB arrived today: 2DVD's
+18:06 < jal0atWrk> nope :(, still waiting
+18:07 < jal0atWrk> wow
+18:07 < jal0atWrk> thats like 8 gigs
+18:07 -!- themaw [~marc@pD9E5C14E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+18:07 < Filip> fullinstall is over 7GB, but that's not needed 
+18:08 < Filip> that's whn you select all possible targets, we only need mips r4100
+18:08 < jal0atWrk> did they make you do an online registration?
+18:09 < Filip> nope
+18:10 < Filip> didn't sign anything, and no shrink-wrapped eula
+18:10 < Filip> cost $0.00
+18:10 < jal0atWrk> they did me :(
+18:10 < jal0atWrk> only cost me $10
+18:12 < jal0atWrk> it looks like the guy working on the philips nino 200 is also working on touchscreen, maybe we should talk to him on some pointer
+18:15 < Filip> there is some kind of 'standard' touchscreen driver sourcecode in PB
+18:24 -!- sinfonian [~bshirclif@twhou-207-218-232-113.ev1.net] has joined #linux4be
+18:25 < Filip> hi brian
+18:26 < sinfonian> hello
+18:26 < sinfonian> whats going on guys?
+18:26 < Filip> received my PB today, so struggling trough a lot of documentation
+18:27 < sinfonian> pb?
+18:27 < Filip> platform builder
+18:27 < sinfonian> ok
+18:31 < sinfonian> well got to run
+18:31 < sinfonian> talk to you tomorrow
+18:31 < hewhew> what does pb do?
+18:31 -!- sinfonian [~bshirclif@twhou-207-218-232-113.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+18:33 < Filip> pb is used by device manufacturers to build their version of CE
+18:33 < Filip> casio used it to develop their drivers, the casio shell and the link the complete image
+18:33 < Filip> it also allows for thirs parties to develop drivers
+18:33 < hewhew> ah ok
+18:48 < hewhew> damping coefficient determines the impact of a resistance on the response of the system?
+18:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has quit [Read error: 104 (Connection reset by peer)]
+19:10 < Filip> going to get some sleep, talk to you later
+19:11 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has left #Linux4BE []
+19:33 -!- jal0atWrk [~jal0_wrkn@208.33.58.193] has joined #linux4be
+21:52 -!- jal0atWrk [~jal0_wrkn@208.33.58.193] has quit [Read error: 113 (No route to host)]
+23:04 -!- jal0_wrkn is now known as jal0
+--- Log closed Tue Dec 03 00:00:11 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

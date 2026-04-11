@@ -1,0 +1,307 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: hardware.php,v 1.3 2002/11/23 23:46:53 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/hardware.php,v $">
+<title>Linux4.BE :: Hackers :: Hardware</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="../hackers/index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/books.php.html">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/faq.php.html">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/bootloader.php.html">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/toolchain.php.html">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/kernel.php.html">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/ramdisk.php.html">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/hardware.php.html">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/memorymap.php.html">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="../irclog/index.php.html">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/cvs.php.html">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: Hardware</span>
+  </p><p><span class="bodytext">
+
+<span class="bodytext">
+<table>
+<tr>
+  <td class="menu">  
+    BE-300 Memory configuration: <a href="memory.php.html">click here for the details</a>
+  </td>
+</tr>
+<tr>
+  <td class="menu">
+    From the official specifications:
+  </td>
+</tr>
+<tr>
+  <td>
+    <table>
+      <tr>
+        <td valign="top">
+          Processor:
+        </td>
+        <td>
+          NEC VR4131 @ 166Mhz, 280 MIPS (64 bit)	
+          <br> (vrip address and <a href="registers.php.html">registers</a> are same as 4122)
+	  <br><a href="../download/pdf/U15350EJ2V0UM00.pdf" target="_blank">Preliminary User's Manual (NEC Japan, Thanks to Andrey)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Display:
+        </td>
+        <td>
+          3.2 inch, 320x240 pixel, 32,768 color STN
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+  <td class="menu">
+    From 'operation screwdriver':
+  </td>
+</tr>
+<tr>
+  <td>
+    <table>
+      <tr>
+        <td>
+          LCD Controller:
+        </td>
+        <td>
+          EPSON L50753 25T1 (A0130S268)
+	  <br> New model for SLA507TH, gate array
+	  <br><a href="http://www.epson-electronics.de/products/displayItem?itemId=S1L50753&categoryId=EEG.IC.ASIC.Gate_Arrays.GA_SLA50000" target="_blank">spec's at epson</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          RAM:
+        </td>
+        <td>
+          Samsung K4S641633D-GL1H000 2078 Sdram 4x16, 64M (two pieces)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Unknown:
+        </td>
+        <td>
+          CASIO CAK2007 (0125 JBH)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Custom chip:
+        </td>
+        <td>
+          NEC D89041F1001 
+	  <br>This chip has the same size/package as he VR4131, could be a custom VRC4173 ?
+	  <br><a href="../download/pdf/U14579EJ2V0UM00.pdf" target="_blank">Vrc 4173 User's Manual (NEC Japan)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Flash RAM (NAND):
+        </td>
+        <td>
+          Samsung K9F 2808U0B
+	  <br><a href="http://www.samsungelectronics.com/semiconductors/Flash/NAND/128M_bit/K9F2808Q0B/ds_k9f2808q(u)0b.pdf" target="_blank">spec's at Samsung (PDF)</a>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+  <td class="menu">
+    From other sources:
+  </td>
+</tr>
+<tr>
+  <td>
+    <table>
+      <tr>
+        <td>
+          AC Jack
+        </td>
+        <td>
+          Hosiden partnr. HEC3654 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Headphone Jack
+        </td>
+        <td>
+	  Hosiden partnr. HSJ1636 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          RS232C Connector 
+        </td>
+        <td>
+	  Hosiden partnr. TCX3110 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Reset Switch
+        </td>
+        <td>
+	  Matshusita Electric Industrial 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CF Connector
+        </td>
+        <td>
+	  Molex Japan 
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td class="menu">
+    Pictures:
+  </td>
+</tr>
+<tr>
+  <td>
+    <table>
+      <tr>
+        <td>
+          The top of the mainboard.
+        </td>
+        <td>
+          <a href="../~jroark/images/Board_top2.jpg">here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          The bottom of the mainboard.
+        </td>
+        <td>
+          <a href="../~jroark/images/Board_bot.jpg">here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          The top of the LCD.
+        </td>
+        <td>
+          <a href="../~jroark/images/LCD_top.jpg">here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          The botom of the LCD.
+        </td>
+        <td>
+          <a href="../~jroark/images/LCD_bot.jpg">here</a>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+</span>
+
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/23 23:46:53 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

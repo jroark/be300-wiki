@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Linux4.BE :: linux2be - Connecting your BE to a Linux box</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+
+<style type="text/css">
+	p.code{
+		margin-left : 40px;
+	}
+	.subtitle{
+		font-size : small;
+	}
+</style>
+
+<body>
+<center>
+<a href="../pivot/index.html" >
+<img src="../img/linux4be_logo.jpg" border="0" alt="Back To The Linux4.BE Home Page" align="middle">
+<BR>Back to the Linux4BE Homepage
+</a>
+</center>
+
+<P>
+<span class="subtitle">Linux2BE - Connecting your BE-300 to a Linux box.</span>
+</p>
+
+<p>
+<span class="bodytext">
+Are you tired of having to boot Windoze for syncing your BE ? Well,
+then here's the right page for you. 
+</span>
+</p>
+
+<p>
+<span class="bodytext">
+<table><tr><td valign=top>
+1.</td><td>
+You have to get a recent kernel release. I used 2.4.20-rc1, some versions of 
+2.4.19 were reported to not work. Earlier releases did not even include
+support for the CASIO device. You can get the kernel at your local 
+<a href="ftp://ftp.kernel.org">ftp.kernel.org</a>-mirror.<br><br>
+In order to compile the kernel, you have to extract it and afterwards go
+into menuconfig or xconfig and select the following:
+<br><br>
+First, you enter <b>Network devices</b> and select 
+<b>[*] Network device support</b>
+and <b>&lt;M> PPP (point-to-point protocol) support</b><br>
+You will need the <b>&lt;M> support for async serial ports</b> as well.
+[*] PPP filtering will be useful as well if you plan to go surfing with your
+PDA. You can also include <b>&lt;M>  PPP Deflate compression</b> and 
+<b>&lt;M> PPP BSD-Compress compression</b>.
+<br><br>
+Under <b>USB support ---></b> &lt;*> Support for USB has to be checked.
+You also have to include either the <b>UHCI Alternate Driver (JE)
+support</b> or the <b>OHCI (Compaq, iMacs, OPTi, SiS, ALi, ...) support</b>
+depending on your system.<br>
+At <b>USB Serial Converter support</b> you have to check 
+<b>&lt;M> USB Serial Converter support</b> (i.e as a module), as well as
+<b>&lt;M> USB Compaq iPAQ / HP Jornada / Casio EM500 Driver</b>
+<br><br>
+As far as I know, this should be it. Save the configuration and run
+<b>make dep clean bzImage modules modules_install</b>
+<br><br>
+Now tell lilo to boot the new-made kernel in the kernel-source-subdir
+<i>arch/i386/boot/bzImage</i> and boot your new kernel.
+
+<br><br>
+</td></tr>
+<tr><td valign=top>2.</td><td>
+Get SYNCE. <a href="http://synce.sourceforge.net">SYNCE</a> is a project that develops applications to connect 
+Linux to your Windows CE PDA. They also have a little USB connection <a href="http://synce.sourceforge.net/synce/usb.php.html">howto</a>.
+Be sure to get at least version 0.4 of synce-serial.
+If you now, after inserting the usbserial and ipaq module into the kernel
+see a message in the kernel log (/var/log/messages) like <br><br>
+<i>usbserial.c: Compaq iPAQ converter detected<br>
+usbserial.c: Compaq iPAQ converter now attached to ttyUSB0 (or usb/tts/0 for devfs)
+</i>
+<br><br>
+Your USB connection works. 
+
+</td></tr>
+<tr><td valign=top>
+3.</td><td>You start "synce-serial-start" as root after having done
+the synce serial setup like described on the synce website. If pppd starts
+well, everything should work fine. Try playing around with tools like "pls"
+or "pcp". Have fun !!
+</td>
+</table>
+
+</span>
+</p>
+<br>
+<p>
+<span class="bodytext">
+Common Errors:<br>
+<br>
+<table><tr><td>ERROR:</td><td>
+Usage of too old pppd. </td></tr><tr><td valign=top>
+SYMPTOMS:</td><td>
+You get communication errors when trying to connect as well as "critical
+errors".</td></tr><tr><td valign=top>
+FIX:</td><td>
+Simply get a newer pppd (either from your distributor or as source package).
+For me it was changing from ppp-2.4.1-51 to 2.4.1-170. </td></tr></table>
+
+<br>
+<br>
+
+<table><tr><td>ERROR:</td><td>
+No running dccm. </td></tr><tr><td valign=top>
+SYMPTOMS:</td><td>
+After a few seconds of connection, you PDA says:<br>
+"Cannot start communications with the desktop computer. The computer is not
+available or busy and currently cannot accept connections."
+</td></tr><tr><td valign=top>
+FIX:</td><td>
+The PDA discovers that nothing answers on the desktop computer at port 
+5679. This is the place where dccm should be running. Get it from the 
+<a href="http://synce.sourceforge.net">synce project</a> and install it.
+
+ </td></tr></table>
+
+
+</span></p>
+<div align=right>
+Last change: 27.11.02 themaw

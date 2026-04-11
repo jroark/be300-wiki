@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+<TITLE>web/web/hackers/kernel.php - view - 1.3</TITLE></HEAD>
+<BODY BGCOLOR="#eeeeee">
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#9999ee"><tr valign=bottom><td><a href="kernel.php.html"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></a> <b>Return to <A HREF="kernel.php?sortby=date#rev1.3">kernel.php</A>
+ CVS log</b> <IMG SRC="/icons/text.gif" ALT="[TXT]" BORDER="0" WIDTH="20" HEIGHT="22"></td><td align=right><IMG SRC="/icons/dir.gif" ALT="[DIR]" BORDER="0" WIDTH="20" HEIGHT="22"> <b>Up to  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b></td></tr></table><HR noshade><table width="100%"><tr><td bgcolor="#ffffff">File:  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/kernel.php.html">kernel.php</a>&nbsp;(<A HREF="/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/kernel.php?rev=1.3&amp;sortby=date" target="cvs_checkout" onClick="window.open('/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/kernel.php?rev=1.3','cvs_checkout','resizeable,scrollbars');"><b>download</b></A>)<BR>
+Revision <B>1.3</B>, <i>Fri Nov 22 10:20:37 2002 UTC</i> (9 months, 2 weeks ago) by <i>filip</i>
+<BR>CVS Tags: <b>HEAD</b><BR>Changes since <b>1.2: +4 -2
+ lines</b><PRE>
+first version of all known addresses
+</PRE>
+</td></tr></table><HR noshade><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;meta name=&quot;VERSION&quot; content=&quot;$Id: kernel.php,v 1.3 2002/11/22 10:20:37 filip Exp $&quot;&gt;
+&lt;meta name=&quot;SOURCE&quot; content=&quot;$Source: /cvsroot/web/web/hackers/kernel.php,v $&quot;&gt;
+&lt;title&gt;Linux4.BE :: Hackers :: Kernel&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/linux4be&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;? include &quot;../header.php&quot;; ?&gt;
+&lt;table width=&quot;100%&quot;&gt;
+&lt;tr&gt;
+&lt;td width=&quot;10%&quot; valign=&quot;top&quot;&gt;
+&lt;? include &quot;menu.php&quot;; ?&gt;
+&lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+ &nbsp;&lt;P&gt;
+ &nbsp;&lt;span class=&quot;subtitle&quot;&gt;Hackers :: Kernel&lt;/span&gt;
+ &nbsp;&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;bodytext&quot;&gt;
+
+
+In the near future you will find here more versions of the kernel, both with and without integrated ramdisk.&lt;/p&gt;
+&lt;p&gt;
+&lt;span class=&quot;subtitle&quot;&gt;Kernels For Cassiopeia BE300&lt;/span&gt;
+&lt;br&gt;
+Kernel 2.4.18 with serial debug and framebuffer support: &lt;a href=&quot;/download/kernel/vmlinux&quot;&gt;vmlinux&lt;/a&gt; Use the &lt;a href=&quot;bootloader.php&quot;&gt;bootloader&lt;/a&gt; to get it started.
+&lt;p&gt;
+&lt;span class=&quot;subtitle&quot;&gt;Patches for the BE300 kernel&lt;/span&gt;
+&lt;br&gt;
+If you did not yet get a clean version of the sources, make sure to get a stable starting point &lt;a href=&quot;clean.php&quot;&gt;by clicking here&lt;/a&gt; 
+&lt;br&gt;
+You can get the latest specific BE300 files from the Linux4BE CVS server:
+&lt;br&gt;Login into CVS tree.
+&lt;br&gt;cvs -d:pserver:<A HREF="mailto:anonymous@cvs.linux4.be">anonymous@cvs.linux4.be</A>:/cvsroot login
+&lt;br&gt;
+&lt;br&gt;Press &quot;Return&quot; when prompted for password. You only need to do this once on any machine.
+&lt;br&gt;Check out a copy of the tree.
+&lt;br&gt;cvs -z3 -d:pserver:<A HREF="mailto:anonymous@cvs.linux4.be">anonymous@cvs.linux4.be</A>:/cvsroot co linux/kernel
+&lt;br&gt;
+&lt;br&gt;Now copy those files over your existing sourcetree, and you're ready to build:
+&lt;br&gt;make mrproper ; cp config_be300 .config ; make oldconfig dep clean ; make
+
+&lt;p&gt;(&lt;a href=&quot;clean.php&quot;&gt;click here&lt;/a&gt; for instructions on getting a 'clean' sourcetree.)
+&lt;p&gt;&lt;span class=&quot;subtitle&quot;&gt;Kernels For Cassiopeia E100&lt;/span&gt;
+&lt;br&gt;
+&lt;a href=&quot;/download/kernel/vmlinux_e100_nofb_2_4_18.gz&quot;&gt;Linux version 2.4.18-mips (gzipped, size 782.686 bytes)&lt;/a&gt; Version that uses CF root-disk, no framebuffer support (needs serial cable to connect)
+&lt;p&gt;
+&lt;span class=&quot;subtitle&quot;&gt;Example bootmessage&lt;/span&gt;
+&lt;br&gt;&lt;a href=&quot;bootmsg_be300.php&quot;&gt;Click here for an example of a bootmessage from a BE300)&lt;/a&gt;
+&lt;br&gt; &lt;a href=&quot;bootmsg.php&quot;&gt;Click here for an example of a bootmessage from an E100&lt;/a&gt;
+&lt;/span&gt;
+
+ &nbsp;&lt;/p&gt;
+ &nbsp;&lt;p&gt;
+ &nbsp;&lt;span class=&quot;date&quot;&gt;Last updated on $Date: 2002/11/22 10:20:37 $&lt;/span&gt;
+ &nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/html&gt; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>

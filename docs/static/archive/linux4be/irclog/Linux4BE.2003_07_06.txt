@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_07_06.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_07_06.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Jul 06 00:00:49 2003
+03:07 -!- BaalOcc [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 60 (Operation timed out)]
+09:14 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+09:23 -!- High_Voltz [1000@209-240-27-176.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+10:26 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+10:26 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+12:15 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+12:44 -!- High_Voltz [1000@209-240-27-176.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+12:59 -!- High_Voltz [1000@209-240-27-41.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+13:08 -!- highvoltz [~nobody@209-240-27-191.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+13:23 -!- High_Voltz [1000@209-240-27-41.tc1.woodsfield.oh.dial.1st.net] has quit [No route to host]
+13:35 -!- High_Voltz [1000@209-240-27-18.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+13:53 -!- highvoltz [~nobody@209-240-27-191.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+14:12 -!- High_Voltz [1000@209-240-27-18.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+15:35 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 60 (Operation timed out)]
+15:40 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+17:36 -!- BaalOcc [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+17:36 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+18:01 -!- High_Voltz [1000@209-240-27-250.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+18:23 -!- High_Voltz [1000@209-240-27-250.tc1.woodsfield.oh.dial.1st.net] has quit ["Client exiting"]
+20:18 -!- High_Voltz [1000@209-240-27-117.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+21:13 -!- High_Voltz [1000@209-240-27-117.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+21:19 -!- antagonizt [~jroark@adsl-64-172-46-193.dsl.snfc21.pacbell.net] has joined #Linux4BE
+21:22 -!- BaalOcc [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 60 (Operation timed out)]
+--- Log closed Mon Jul 07 00:00:14 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

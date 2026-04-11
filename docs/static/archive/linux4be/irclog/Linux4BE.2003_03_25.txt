@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_25.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_25.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Mar 25 00:00:16 2003
+02:42 -!- amd [~amd@80-235-124-190-tln.edu.estpak.ee] has joined #linux4be
+02:51 < amd> hello
+04:16 -!- PsycoXul_ [psyco@adsl-63-205-47-208.dsl.lsan03.pacbell.net] has joined #linux4be
+04:18 -!- PsycoXul [psyco@adsl-63-205-47-208.dsl.lsan03.pacbell.net] has quit [Read error: 54 (Connection reset by peer)]
+04:35 -!- amd [~amd@80-235-124-190-tln.edu.estpak.ee] has quit ["back to physics class..."]
+08:17  * mouse is back (gone 19:53:09)
+09:09 -!- jal0_zzz is now known as jal0
+09:10 < mouse> jal0: hi
+09:10 < jal0> hey mouse
+09:11 < jal0> how goes things
+09:11 < mouse> fine, thx
+10:05 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+10:06 < mouse> andrey: 
+10:06 < andrey> hi guys
+10:06 < andrey> hi mouse
+10:06 < andrey> did you get my email?
+10:07 < mouse> andrey: yes
+10:07 < andrey> do you know the answer? :-)
+10:08 < mouse> no :(
+10:08 < andrey> :-(
+10:10 < andrey> ok, I'll try to figure out... :-)
+10:12 < mouse> ok
+11:53 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+11:53 < Chewie> Hi there
+12:02 < mouse> Chewie: hi
+12:07 < Chewie> I just got a be300 from Amazon :]
+12:08 < andrey> hi Chewie
+12:41 < Chewie> Anyone tried pocket scumm?
+12:41 < mouse> Chewie: no
+12:43 < Chewie> I almost cried when I saw Monkey Island on the BE :)
+12:43 < Chewie> But it hangs shortly after the password check :(
+13:12 -!- PsycoXul_ is now known as PsycoXul
+13:42 -!- jal0atWrk [~jal0_wrkn@208.33.58.224] has joined #linux4be
+13:42  * jal0atWrk look around as says HI
+13:43 < PsycoXul> hello
+13:43 < mouse> jal0atWrk: hi
+13:44 < andrey> hi jal0
+13:44 < jal0atWrk> hey... looks like traffic is picking up here lately :)
+13:44 < jal0atWrk> andrey: you get my email?
+13:46 < andrey> yes I did. :-)
+13:48 < andrey> I think that utility to convert system call address to function address could be useful but don't see a reason to put in into v2p
+13:48 < andrey> Unless you want to build fully-functional GUI out of it. :-)
+13:48 < jal0atWrk> that was my eventual plan
+13:50 < jal0atWrk> i plan to take the knowledge that i have gained in this project and using it on my next... im looking into getting the axim, different processor, but things shouldnt be too different.
+13:51 < jal0atWrk> but we still have a ways to go to getting the linux4be at a point where its a viable alternative to CE
+13:52 < andrey> I was looking into it also... :-) But then decided that I already have too many PDAs to play with :-)
+13:52 < jal0atWrk> ;)
+13:54 < andrey> BTW do you know whether it has any custom chips? ;-)
+13:54 < jal0atWrk> i think the hardest part would be to create the RAM dumps like we do on MIPS platforms. Not sure is strongarm's memory management is the same
+13:54 < jal0atWrk> havn't been able to locate any pics on the net with it taken apart :(
+13:55 < andrey> You have a chance to be the first :-)
+13:55 < jal0atWrk> but i would suspect it does
+13:55 < andrey> Will you be here for a while? Actually I was going to have some lunch...
+13:56 < jal0atWrk> yeah, i'll be in and out... my connection at work sucks so sometimes i get disconnected
+13:56 < andrey> I think they didn't have any reason to move from all-kernel mode in CE.NET
+13:57 < jal0atWrk> yeah, but i dont thing non-cached access would be the same and on the mips
+13:57 < andrey> So you can just read it like you read in from 80000000 on BE.
+13:57 < andrey> I think it should be same idea. Maybe different addresses though
+13:58 < jal0atWrk> well i find out when i get to that point ;-)
+13:58 < andrey> Ok, got to go. Bb after lunch...
+13:58 < jal0atWrk> ok, later
+13:58 < andrey> :-)
+13:58  * andrey is out for lunch
+14:38 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+14:38 -!- jal0atWrk [~jal0_wrkn@208.33.58.224] has quit [Read error: 54 (Connection reset by peer)]
+14:38 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+14:45 < Chewie> Got one question: can the BE address any CF size? I mean, will a 1GB CF work in BE?
+14:59 -!- jal0atWrk [~jal0_wrkn@208.33.58.213] has joined #linux4be
+15:04  * mouse is away: fue a casa...
+15:04 < jal0atWrk> later mouse
+15:05 < mouse> jal0atWrk: bb
+15:05 < jal0atWrk> ok
+15:06 < Chewie> mouse: You should say "se fue a casa..." :)
+15:06  * Chewie is Spanish
+15:07 < jal0atWrk> what does that mean?
+15:07  * Chewie is away: he went home
+15:07 < Chewie> That
+15:08 < jal0atWrk> ic
+15:08 < Chewie> jal0atWrk: Got one question: can the BE address any CF size? I mean, will a 1GB CF work in BE?
+15:09 < jal0atWrk> not sure, never thought to ask, the price of the card would be worth more that the BE300 itself ;)
+15:10 < Chewie> Hehe
+15:10 < jal0atWrk> you should ask over at BE-Central, they would probably know
+15:10 < Chewie> It's just an example... and a 256MB one?
+15:10 < jal0atWrk> yeah, those work
+15:10 < Baalz> Yes it does I have a 256 one
+15:10 < jal0atWrk> hi Baalz
+15:11 < Baalz> Hi guys
+15:11 < Chewie> Baalz: Ok thanks
+15:20  * andrey is back
+15:20  * jal0atWrk welcomes back andrey :)
+15:21 < andrey> :-)
+15:21 < andrey> hi Baalz
+15:22 < Baalz> Hi andrey
+15:22 < jal0atWrk> andrey: so anything in paticular you working on hacking in the CE OS?
+15:22 < andrey> not much lately... :-(
+15:23 < andrey> Some time ago I added more code to touch files and did some investigation on NAND flash but it's not done yet.
+15:24 < andrey> I think we need to implement GIU interrupt handling and touch driver to show some progress :-)
+15:24 < jal0atWrk> yeah saw that nand stuff, should be useful when compaing dumps taken from my harware interface i'm working on
+15:25 < andrey> I mean NAND registers (and DMA registers since CE uses DMA to read/write flash)
+15:25 < jal0atWrk> yeah, going to add interrpts to the serial driver and a kdbg stub for kernel debugging once i dig a little deeper in the CE driver.
+15:26 < andrey> would be great :-)
+15:27 < jal0atWrk> yeap, then help out with touch and CF
+15:28 < andrey> BTW on my lunch I thought little bit more about the Axim. It can have different memory structure. Like my Aero-1500 which is MIPS and CE 3.0 but totally different from BE because kernel is running from ROM there.
+15:28 < andrey> And it's a real ROM, not flash
+15:28 < jal0atWrk> yeap, only way to know for shure to buy one and start playing ;)
+15:29 < andrey> or search the Internet for people who already did it. :-)
+15:30 < andrey> I thing there is a theorem: for any hardware device there is at least one programmer who wants to put linux in there. :-)
+15:30 < jal0atWrk> once we get those areas (IRQ,CF,Serial,Touch) working, the rest should move along alot easier. Then i'll look into getting an Axim
+15:31 < jal0atWrk> .... and hudreds of user waiting for it to happen ;-)
+15:31 < andrey> That's true
+15:32 < andrey> I mean, true for "alot easier", but the last one is true also :-)
+16:22 < Chewie> Indeed, there's an anxious one here
+16:22 -!- jal0atWrk [~jal0_wrkn@208.33.58.213] has quit [Read error: 104 (Connection reset by peer)]
+16:40 < Chewie> Once it works, it should run any of the GUIs around ther. no? opie, qtopia, picogui...
+16:41 < andrey> It should. As soon as kernel is working...
+16:44 < Chewie> Great
+17:53 -!- Chewie [~chewie@the-geek.org] has quit [Remote closed the connection]
+17:53 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+18:20 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+18:27 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+19:52  * jal0 is here
+20:09 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 110 (Connection timed out)]
+20:12 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+--- Log closed Wed Mar 26 00:00:42 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

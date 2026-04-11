@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<rss version="2.0" 
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		xmlns:admin="http://webns.net/mvcb/"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+	<channel>
+		<title>Linux4.BE</title>
+		<link>http://www.linux4.be/pivot/index.php</link>
+		<description>Linux for the Casio BE-300</description>
+		<dc:language>en-us</dc:language>
+		<dc:creator></dc:creator>
+		<dc:rights>Copyright 2005</dc:rights>
+		<dc:date>2005-06-10T10:56:05+02:00</dc:date>
+		<admin:generatorAgent rdf:resource="http://www.pivotlog.net/?ver=Pivot+-+1.15%3A+%27Soundwave%27" />
+		<admin:errorReportsTo rdf:resource="mailto:rsserrors@pivotlog.net"/>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+	<item>
+		<title>Finally back again !</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=37</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=37#comm</comments>
+		<description>Hi folks,
+
+after a week of downtime and a lot of trouble for getting access to my backup we're back online (on a new server). I'm still restoring data and configuring the different sites/accounts/packages/... 
+If you notice something strange, please drop me an email: filip at onkelinx.com
+
+Cheers,
+ 
+   Filip.</description>
+		<guid isPermaLink="false">37@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Hi folks,<br />
+<br />
+after a week of downtime and a lot of trouble for getting access to my backup we're back online (on a new server). I'm still restoring data and configuring the different sites/accounts/packages/... <br />
+If you notice something strange, please drop me an email: filip at onkelinx.com<br />
+<br />
+Cheers,<br />
+ <br />
+   Filip. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-11-25T09:16:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Console is back on LCD</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=36</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=36#comm</comments>
+		<description> As you can see, console is back on framebuffer.  The updated framebuffer sourcecode and the new bootlogo are in CVS. If you want to try it yourself, download http://www.linux4.be/2004/linux4be20040908.zip(it's the latest loader, kernel with new ramdisk and config). Click on the 'more' or 'comments' link below for a larger view.</description>
+		<guid isPermaLink="false">36@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ <img src="http://www.linux4.be/pivot/images/be300boot_th.jpg" style='margin-right:10px; margin-bottom:5px;' border="0" title="BE300 Booting" alt="BE300 Booting" align="left" /> As you can see, console is back on framebuffer.  The updated framebuffer sourcecode and the new bootlogo are in CVS. If you want to try it yourself, download <a href="http://www.linux4.be/2004/linux4be20040908.zip"  title="full bundle" target='_blank'>http://www.linux4.be/2004/linux4be20040908.zip</a>(it's the latest loader, kernel with new ramdisk and config). Click on the 'more' or 'comments' link below for a larger view.<p style="text-align:center;"><img src="http://www.linux4.be/pivot/images/be300boot_med.jpg" border="0" title="Larger bootimage" alt="Larger bootimage" /></p> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-09-08T14:08:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>TUX is back on the BE's LCD</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=35</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=35#comm</comments>
+		<description>I had a look at the sfb.c (simple framebuffer) code, tweaked some color settings and now Tux is back greeting me on the LCD of my BE300. sfb.c still needs a decent cleanup, but the modified code is in CVS, a pre-compiled kernel is at  http://www.linux4.be/2004/vmlinux20040908a
+
+Cheers,
+
+ Filip.</description>
+		<guid isPermaLink="false">35@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I had a look at the sfb.c (simple framebuffer) code, tweaked some color settings and now Tux is back greeting me on the LCD of my BE300. sfb.c still needs a decent cleanup, but the modified code is in CVS, a pre-compiled kernel is at  <a href="http://www.linux4.be/2004/vmlinux20040908a"  title="http://www.linux4.be/2004/vmlinux20040908a" target='_blank'>http://www.linux4.be/2004/vmlinux20040908a</a><br />
+<br />
+Cheers,<br />
+<br />
+ Filip. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-09-07T17:40:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>One step closer ...</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=34</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=34#comm</comments>
+		<description>Got a 2.6.x kernel past the 'mounting root' point. Serial seems to buggy, so we'll have to look into that next. A bootlog is available: http://www.linux4.be/2004/bootlog.txt</description>
+		<guid isPermaLink="false">34@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Got a 2.6.x kernel past the 'mounting root' point. Serial seems to buggy, so we'll have to look into that next. A bootlog is available: <a href="http://www.linux4.be/2004/bootlog.txt"  title="http://www.linux4.be/2004/bootlog.txt" target='_blank'>http://www.linux4.be/2004/bootlog.txt</a> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-09-04T16:05:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Two VR4131 Rev1.2 patches</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=33</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=33#comm</comments>
+		<description>Today I recieved an email from Seiichi with two paches that should fix a couple of cache bugs for the VR4131 rev. 1.2  (which is in the BE300). Both patches applied cleanly, and it looks like it fixed part of the problem: I now get to exactly the same point all the time (after about a dozen of reboots): 
+Linux version 2.6.8.1 (filip@build.linux4.be) (gcc version 2.96-sdelinuxmips-040127) #3 Wed Sep 1 15:09:07 CEST 2004
+CPU revision is: 00000c80
+PClock: 165888000Hz
+VTClock: 82944000Hz
+TClock: 41472000Hz
+Determined physical RAM map:
+ memory: 00fff000 @ 00000000 (usable)
+Initial ramdisk at: 0x80201000 (307200 bytes)
+On node 0 totalpages: 4095
+  DMA zone: 4095 pages, LIFO batch:1
+  Normal zone: 0 pages, LIFO batch:1
+  HighMem zone: 0 pages, LIFO batch:1
+Built 1 zonelists
+Kernel command line:
+Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.
+Primary data cache 16kB 2-way, linesize 16 bytes.
+PID hash table entries: 64 (order 6: 512 bytes)
+Using 0.033 MHz high precision timer.
+Console: colour dummy device 80x25
+Kernel panic: Exception vector 1 called
+In idle task - not syncing
+
+
+You can get a precompiled kernel , vr4131_cachebug_fix.patch and  vr4131_no_change_cache_line.patch. 
+
+Filip.</description>
+		<guid isPermaLink="false">33@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Today I recieved an email from Seiichi with two paches that should fix a couple of cache bugs for the VR4131 rev. 1.2  (which is in the BE300). Both patches applied cleanly, and it looks like it fixed part of the problem: I now get to exactly the same point all the time (after about a dozen of reboots): <br />
+<4>Linux version 2.6.8.1 (filip@build.linux4.be) (gcc version 2.96-sdelinuxmips-040127) #3 Wed Sep 1 15:09:07 CEST 2004<br />
+<4>CPU revision is: 00000c80<br />
+<6>PClock: 165888000Hz<br />
+<6>VTClock: 82944000Hz<br />
+<6>TClock: 41472000Hz<br />
+<4>Determined physical RAM map:<br />
+<4> memory: 00fff000 @ 00000000 (usable)<br />
+<4>Initial ramdisk at: 0x80201000 (307200 bytes)<br />
+<7>On node 0 totalpages: 4095<br />
+<7>  DMA zone: 4095 pages, LIFO batch:1<br />
+<7>  Normal zone: 0 pages, LIFO batch:1<br />
+<7>  HighMem zone: 0 pages, LIFO batch:1<br />
+<4>Built 1 zonelists<br />
+<4>Kernel command line:<br />
+<4>Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.<br />
+<4>Primary data cache 16kB 2-way, linesize 16 bytes.<br />
+<4>PID hash table entries: 64 (order 6: 512 bytes)<br />
+<4>Using 0.033 MHz high precision timer.<br />
+<4>Console: colour dummy device 80x25<br />
+<0>Kernel panic: Exception vector 1 called<br />
+<0>In idle task - not syncing<br />
+<4><br />
+<br />
+You can get <a href="http://www.linux4.be/2004/vmlinux20040901"  target='_blank'>a precompiled kernel</a> , <a href="http://www.linux4.be/2004/vr4131_cachebug_fix.patch"  target='_blank'>vr4131_cachebug_fix.patch</a> and <a href="http://www.linux4.be/2004/vr4131_no_change_cache_line.patch"  target='_blank'> vr4131_no_change_cache_line.patch</a>. <br />
+<br />
+Filip. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-09-01T16:58:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>CVS updated</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=32</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=32#comm</comments>
+		<description>CVS has just been updated:
+1. imported my patches for the 2.6.x kernel (unstable) 
+2. imported mouse's 'network enabled' version of CyaCE. I also added a standalone win32 server for it, which allows me to load the kernel using my WiFi CF card in the BE directly from my development machine while leaving the serial cable for the debug (printk).
+
+enjoy, 
+
+ Filip.</description>
+		<guid isPermaLink="false">32@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ CVS has just been updated:<br />
+1. imported my patches for the 2.6.x kernel (unstable) <br />
+2. imported mouse's 'network enabled' version of CyaCE. I also added a standalone win32 server for it, which allows me to load the kernel using my WiFi CF card in the BE directly from my development machine while leaving the serial cable for the debug (printk).<br />
+<br />
+enjoy, <br />
+<br />
+ Filip. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-08-28T16:49:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Some more bootmessages</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=30</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=30#comm</comments>
+		<description>my latest build fails rather early when booting, but a reset (with the CF still inserted) gets it a lot further:</description>
+		<guid isPermaLink="false">30@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ my latest build fails rather early when booting, but a reset (with the CF still inserted) gets it a lot further:Serial port opened.<br />
+<br />
+entry=80244018  addr=80001000-8026b5e8<br />
+<br />
+entry=80244018  addr=80001000-8026b5e8<br />
+<br />
+<4>Linux version 2.6.8.1 (be300@debian) (gcc version 2.96-sdelinuxmips-040127) #<br />
+8 Mon Aug 23 06:51:32 CEST 2004<br />
+<4>Linux version 2.6.8.1 (be300@debian) (gcc version 2.96-sdelinuxmips-040127) #<br />
+8 Mon Aug 23 06:51:32 CEST 2004<br />
+<4>CPU revision is: 00000c80<br />
+<6>PClock: 165888000Hz<br />
+<6>VTClock: 82944000Hz<br />
+<6>TClock: 41472000Hz<br />
+<4>Determined physical RAM map:<br />
+<4> memory: 00fff000 @ 00000000 (usable)<br />
+<4>Initial ramdisk at: 0x801f7000 (307200 bytes)<br />
+<7>On node 0 totalpages: 4095<br />
+<7>  DMA zone: 4095 pages, LIFO batch:1<br />
+<7>  Normal zone: 0 pages, LIFO batch:1<br />
+<7>  HighMem zone: 0 pages, LIFO batch:1<br />
+<4>Built 1 zonelists<br />
+<4>Kernel command line:<br />
+<4>Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.<br />
+<4>Primary data cache 16kB 2-way, linesize 16 bytes.<br />
+<4>PID hash table entries: 64 (order 6: 512 bytes)<br />
+<4>Using 0.033 MHz high precision timer.<br />
+Linux version 2.6.8.1 (be300@debian) (gcc version 2.96-sdelinuxmips-040127) #8 M<br />
+on Aug 23 06:51:32 CEST 2004<br />
+CPU revision is: 00000c80<br />
+PClock: 165888000Hz<br />
+VTClock: 82944000Hz<br />
+TClock: 41472000Hz<br />
+Determined physical RAM map:<br />
+ memory: 00fff000 @ 00000000 (usable)<br />
+Initial ramdisk at: 0x801f7000 (307200 bytes)<br />
+Built 1 zonelists<br />
+Kernel command line:<br />
+Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.<br />
+Primary data cache 16kB 2-way, linesize 16 bytes.<br />
+PID hash table entries: 64 (order 6: 512 bytes)<br />
+Using 0.033 MHz high precision timer.<br />
+<4>Console: colour dummy device 80x25<br />
+Console: colour dummy device 80x25<br />
+<4>Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)<br />
+Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)<br />
+<4>Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)<br />
+Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)<br />
+<6>Memory: 13412k/16380k available (1710k kernel code, 2948k reserved, 601k data<br />
+, 92k init, 0k highmem)<br />
+Memory: 13412k/16380k available (1710k kernel code, 2948k reserved, 601k data, 9<br />
+2k init, 0k highmem)<br />
+<4>Calibrating delay loop... Calibrating delay loop... 98.04 BogoMIPS<br />
+98.04 BogoMIPS<br />
+<4>Mount-cache hash table entries: 512 (order: 0, 4096 bytes)<br />
+Mount-cache hash table entries: 512 (order: 0, 4096 bytes)<br />
+<4>Checking for 'wait' instruction... Checking for 'wait' instruction...  unavai<br />
+lable.<br />
+ unavailable.<br />
+<6>checking if image is initramfs...checking if image is initramfs...it isn't (n<br />
+o cpio magic); looks like an initrd<br />
+it isn't (no cpio magic); looks like an initrd<br />
+<6>Freeing initrd memory: 300k freed<br />
+Freeing initrd memory: 300k freed<br />
+<6>NET: Registered protocol family 16<br />
+NET: Registered protocol family 16<br />
+<4>Can't analyze prologue code at 801a9f78<br />
+Can't analyze prologue code at 801a9f78<br />
+<6>fb0: Simple frame buffer device, using 512K of video memory<br />
+fb0: Simple frame buffer device, using 512K of video memory<br />
+<4>Console: switching to colour frame buffer device 60x53<br />
+Console: switching to colour frame buffer device 60x53<br />
+<4>Casio Cassiopeia BE-300 Serial Driver version 0.01<br />
+Casio Cassiopeia BE-300 Serial Driver version 0.01<br />
+<4>ttyS0 at 0xAA008680 (irq = 19) is a NEC D89041F1001 UART<br />
+ttyS0 at 0xAA008680 (irq = 19) is a NEC D89041F1001 UART<br />
+<6>rtc: Digital UNIX epoch (1952) detected<br />
+rtc: Digital UNIX epoch (1952) detected<br />
+<6>Real Time Clock Driver v1.12a<br />
+Real Time Clock Driver v1.12a<br />
+<4>RAMDISK driver initialized: 16 RAM disks of 4096K size 1024 blocksize<br />
+RAMDISK driver initialized: 16 RAM disks of 4096K size 1024 blocksize<br />
+<6>loop: loaded (max 8 devices)<br />
+loop: loaded (max 8 devices)<br />
+<6>PPP generic driver version 2.4.2<br />
+PPP generic driver version 2.4.2<br />
+<6>PPP Deflate Compression module registered<br />
+PPP Deflate Compression module registered<br />
+<6>PPP BSD Compression module registered<br />
+PPP BSD Compression module registered<br />
+<6>NET: Registered protocol family 2<br />
+NET: Registered protocol family 2 ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-08-23T14:17:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Kernel 2.6.8 : first sign of life on my BE300</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=29</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=29#comm</comments>
+		<description>I've got a 2.6.8 kernel compiled for my BE-300, but after a couple of failed attempts (nothing happened on the screen), I had to put the 'early printk hack' back in to see where it hangs: 
+
+Serial port opened.
+entry=80168018  addr=80001000-801899f8
+entry=80168018  addr=80001000-801899f8
+Linux version 2.6.8-rc4 (root@texas.onkelinx.com) (gcc version 2.96-sdelinuxmips-040127) #15 Fri Aug 20 16:00:25 CDT 2004
+CPU revision is: 00000c80
+PClock: 165888000Hz
+VTClock: 82944000Hz
+TClock: 41472000Hz
+Determined physical RAM map:
+
+
+but the physical RAM map never shows up </description>
+		<guid isPermaLink="false">29@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I've got a 2.6.8 kernel compiled for my BE-300, but after a couple of failed attempts (nothing happened on the screen), I had to put the 'early printk hack' back in to see where it hangs: <br />
+<br />
+<span style="color:Navy;">Serial port opened.<br />
+entry=80168018  addr=80001000-801899f8<br />
+entry=80168018  addr=80001000-801899f8<br />
+<4>Linux version 2.6.8-rc4 (root@texas.onkelinx.com) (gcc version 2.96-sdelinuxmips-040127) #15 Fri Aug 20 16:00:25 CDT 2004<br />
+<4>CPU revision is: 00000c80<br />
+<6>PClock: 165888000Hz<br />
+<6>VTClock: 82944000Hz<br />
+<6>TClock: 41472000Hz<br />
+<4>Determined physical RAM map:<br />
+<br />
+<br />
+</span>but the physical RAM map never shows up <img src='http://www.linux4.be/pivot/pivot/includes/emot/e_18.gif' alt=':-(' align='middle'/> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-08-20T16:12:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Project re-activated</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=28</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=28#comm</comments>
+		<description>After a long time being 'idle' , we've started again: currently updating the toolchain &amp; kernel to a recent version. Once we've got a recent build, we'll tackle touchscreen, compact flash and sound (in that order).</description>
+		<guid isPermaLink="false">28@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ After a long time being 'idle' , we've started again: currently updating the toolchain & kernel to a recent version. Once we've got a recent build, we'll tackle touchscreen, compact flash and sound (in that order). ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2004-08-18T15:30:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>uClibc/BusyBox ramdisk tutorial</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0025</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0025#comm</comments>
+		<description>I have written a tutorial that describes how to create an initial ramdisk based on uClibc and Busybox. It can be viewed here. UPDATE 12092002: I have added a follow-up tutorial on how to add PicoGUI to your ramdisk here.</description>
+		<guid isPermaLink="false">0025@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I have written a tutorial that describes how to create an initial ramdisk based on <a href="http://www.uclibc.org"  target='_blank'>uClibc</a> and <a href="http://www.busybox.net"  target='_blank'>Busybox</a>. It can be viewed <a href="http://www.linux4.be/~jroark/howto/ramdisk.html"  target='_blank'>here</a>. <b>UPDATE</b> 12092002: I have added a follow-up tutorial on how to add <a href="http://www.picogui.org"  target='_blank'>PicoGUI</a> to your ramdisk <a href="http://www.linux4.be http://www.linux4.be/~jroark/howto/picogui.html"  target='_blank'>here</a>. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-11-06T17:31:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Further progress booting kernel</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0024</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0024#comm</comments>
+		<description>I have been able to boot the kernel to the point that it calls init and starts busybox. However, there is still a lot of work to be done. We are experiencing what appears to be caching problems (the kernel only successfully boots uncached) and the serial driver is incomplete and unable to handle interupts properly. The latest fixes are in cvs. Thanks to Angus for the unaligned.c patch. Here are some links to a picture of the booting kernel and the current serial output.</description>
+		<guid isPermaLink="false">0024@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I have been able to boot the kernel to the point that it calls init and starts busybox. However, there is still a lot of work to be done. We are experiencing what appears to be caching problems (the kernel only successfully boots uncached) and the serial driver is incomplete and unable to handle interupts properly. The latest fixes are in cvs. Thanks to Angus for the unaligned.c patch. Here are some links to a <a href="http://www.linux4.be/~jroark/images/be-boot02.jpeg"  target='_blank'>picture</a> of the booting kernel and the current serial <a href="http://www.linux4.be/~jroark/boot.html"  target='_blank'>output</a>. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-11-06T17:23:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Latest kernel patches in CVS</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0022</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0022#comm</comments>
+		<description>I've set-up CVS (with anonymous CVS access) for the BE300 Linux kernel changes; this should make it easier for everyone to get the latest files and compile your own.</description>
+		<guid isPermaLink="false">0022@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I've set-up CVS (with anonymous CVS access) for the BE300 Linux kernel changes; this should make it easier for everyone to get the latest files and compile your own. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-07-08T05:12:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>website updated</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0021</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0021#comm</comments>
+		<description>I've restructured the website to make it easier for users to find the information they are looking for (I hope), creating different sections for dummies, developers and hackers. All remarks are welcome (also spelling mistakes since I'm not native english)</description>
+		<guid isPermaLink="false">0021@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I've restructured the website to make it easier for users to find the information they are looking for (I hope), creating different sections for dummies, developers and hackers. All remarks are welcome (also spelling mistakes since I'm not native english) ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-07-05T16:45:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Linux Kernel booting</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0019</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0019#comm</comments>
+		<description>Thanks to Andrey for discovering the serial registers, I've been able to boot a Linux kernel on my BE300 ! Click here to see the bootlog. The latest version includes basic framebuffer support, so Tux is greeting you on the screen of your BE. You can download both source and pre-compiled binary in the 'kernel' section.</description>
+		<guid isPermaLink="false">0019@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Thanks to Andrey for discovering the serial registers, I've been able to boot a Linux kernel on my BE300 ! Click <a href="http://www.linux4.be/hackers/bootmsg_be300.txt"  target='_blank'>here</a> to see the bootlog. The latest version includes basic framebuffer support, so Tux is greeting you on the screen of your BE. You can download both source and pre-compiled binary in the 'kernel' section. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-06-26T16:35:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Memory configuration</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0017</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0017#comm</comments>
+		<description>A lot of people keep asking me the same questions on the memory configuration of the BE300(RAM/ROM/Flash), so I tried to document it. Details can be found here</description>
+		<guid isPermaLink="false">0017@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ A lot of people keep asking me the same questions on the memory configuration of the BE300(RAM/ROM/Flash), so I tried to document it. Details can be found <a href="http://www.linux4.be/hackers/memory.php"  target='_blank'>here</a> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-06-04T17:22:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Link to Vr4131 Preliminary User's Manual  added</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0016</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0016#comm</comments>
+		<description>In the hardware section a link to the Vr4131 Preliminary User's Manual has been added (thanks to Andrey Shuvikov).</description>
+		<guid isPermaLink="false">0016@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ In the hardware section a link to the Vr4131 Preliminary User's Manual has been added (thanks to Andrey Shuvikov). ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-05-17T10:15:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>CE Expert needed</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0015</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0015#comm</comments>
+		<description>I'm looking for a windows CE expert to help me fix the bootloader code...
+
+I have some trouble using VirtualAlloc/VirtualCopy on the BE-300. Most of the time executing a VirtualCopy (after a succesfull VirtualAlloc) just hangs the BE: no error code, it just does not return from the function call.
+The exact same code runs perfectly on a Cassiopeia E-100 and other WinCE based devices.
+I'm trying to address physical memory (basically just scanning the complete addressable range for a 'magic' number), and I think it happens when I'm trying to look at memory blocks that do not exist, are in ROM or have some kind of lock on it. But how can I check before calling the VirtualCopy if it will return or not ?? On other devices, calling this function with a bad/locked range returns an error, which is OK (my code handles this situation) but freezing the unit till a reset is no good (can't tackle this in my code).
+
+Any known workaround for this ?
+
+Anybody knows if it is possible to intercept the 'watchdog-timer' which resets the BE if a program hangs the BE, and to specify a smaller timeout ? This way I could set a small timer (e.g. 10 seconds)before calling VirtualCopy and if the call does not return, I can recover and continue with the next block.</description>
+		<guid isPermaLink="false">0015@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ <DIV>I'm looking for a windows CE expert to help me fix the bootloader code...</DIV><br />
+<br />
+<DIV>I have some trouble using VirtualAlloc/VirtualCopy on the BE-300. Most of the time executing a VirtualCopy (after a succesfull VirtualAlloc) just hangs the BE: no error code, it just does not return from the function call.</DIV><br />
+<DIV>The exact same code runs perfectly on a Cassiopeia E-100 and other WinCE based devices.</DIV><br />
+<DIV>I'm trying to address physical memory (basically just scanning the complete addressable range for a 'magic' number), and I think it happens when I'm trying to look at memory blocks that do not exist, are in ROM or have some kind of lock on it. But how can I check before calling the VirtualCopy if it will return or not ?? On other devices, calling this function with a bad/locked range returns an error, which is OK (my code handles this situation) but freezing the unit till a reset is no good (can't tackle this in my code).</DIV><br />
+<br />
+<DIV>Any known workaround for this ?</DIV><br />
+<br />
+<DIV>Anybody knows if it is possible to intercept the 'watchdog-timer' which resets the BE if a program hangs the BE, and to specify a smaller timeout ? This way I could set a small timer (e.g. 10 seconds)before calling VirtualCopy and if the call does not return, I can recover and continue with the next block.</DIV> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-04-29T06:15:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Comparing devices...</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0014</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0014#comm</comments>
+		<description>I'm now able to compile and run my test programs for both E100 and BE300. Already found at least one difference between both devices, still have to run several tests.</description>
+		<guid isPermaLink="false">0014@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I'm now able to compile and run my test programs for both E100 and BE300. Already found at least one difference between both devices, still have to run several tests. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-04-24T17:37:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Serial trace during factory restore</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0011</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0011#comm</comments>
+		<description>I did a 'factory restore' of my BE using the serial cable while capturing the com port. I have the first minute logged (the full process takes about 45minutes, so please don't ask me to do this every hour. The capture file is here&amp;nbsp;(2MB !!). You can clearly see the 'dialog' between BE and PC.</description>
+		<guid isPermaLink="false">0011@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I did a 'factory restore' of my BE using the serial cable while capturing the com port. I have the first minute logged (the full process takes about 45minutes, so please don't ask me to do this every hour<img src='http://www.linux4.be/pivot/pivot/includes/emot/e_121.gif' alt=';-)' align='middle'/>. The capture file is <a href="http://www.linux4.be/hackers/serial_trace.php"  target='_blank'>here</a> (2MB !!). You can clearly see the 'dialog' between BE and PC. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-03-15T21:58:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Custom Flash-ROM (and back in business)</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0010</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0010#comm</comments>
+		<description>I just managed to read and modify the CASIO 'factory restore' ROM-image. Want to try it ? 
+Open the file d:pcconBACKUP.BIN with winimage (http://www.winimage.com/) ... 
+Now you can see and modify the contents of the image: it's an uncompressed raw-image with a custom 512bytes CASIO header. 
+
+I took the factory-restore image, deleted ALL the contents, put it on my CF-card (My Documents/Backup) and did a restore from it: now my BE gives an error when booting about an invalid CF (no time to read the complete message) before restarting and getting me back to the casio menu. none of the built-in applications work, but all my CF based apps work again (that's all I need to continue on the bootloader)</description>
+		<guid isPermaLink="false">0010@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ I just managed to read and modify the CASIO 'factory restore' ROM-image. Want to try it ? <br />
+Open the file d:pcconBACKUP.BIN with winimage (http://www.winimage.com/) ... <br />
+Now you can see and modify the contents of the image: it's an uncompressed raw-image with a custom 512bytes CASIO header. <br />
+<br />
+I took the factory-restore image, deleted ALL the contents, put it on my CF-card (My Documents/Backup) and did a restore from it: now my BE gives an error when booting about an invalid CF (no time to read the complete message) before restarting and getting me back to the casio menu. none of the built-in applications work, but all my CF based apps work again (that's all I need to continue on the bootloader)<IMG src="http://potter.ieee.uh.edu/~bshircliffe/modules/phpBB_14/images/smiles/icon_smile.gif"> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-03-11T18:16:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Boot progress</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0008</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0008#comm</comments>
+		<description>Ok, this is where I stand now: I used a slightly modified version of CyaCE, with debug going to serial and some addresses changed, and a custom kernel with the same addresses (modified ld.Script). I've put both the loader and kernel on flash card, and run it from there with the following result on the serial console:
+
+Serial port opened.
+CyaCE ELF Program Loader
+entry=20246c  addr=202000-2dc220
+1b000 bytes debug infomation
+allocate 251 pages
+magic=9248000192f800ff
+loadfile_sub(202000-2a4450, load)
+loadfile_sub(2a4450-2a4450, clear)
+loadfile_sub(2a6000-2be000, load)
+loadfile_sub(2be000-2dc220, clear)
+entry=20246c  addr=202000-2dc220
+loadfile_sub(2dc220-2dc254, copy)
+loadfile_sub(2dc254-2dc2a4, copy)
+loadfile_sub(2dc2a4-2eaca4, load)
+loadfile_sub(2eaca4-2f6abb, load)
+entry point=0x20246c
+execute startprog()
+map interrupt vector OK.
+
+then it freezes, no more output on serial, and not on the BE's screen. After about a 2 minutes it restarts with 'Due to an OS problem processing could not continue...'
+
+All comments appreciated.</description>
+		<guid isPermaLink="false">0008@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Ok, this is where I stand now: I used a slightly modified version of CyaCE, with debug going to serial and some addresses changed, and a custom kernel with the same addresses (modified ld.Script). I've put both the loader and kernel on flash card, and run it from there with the following result on the serial console:<br />
+<br />
+Serial port opened.<br />
+CyaCE ELF Program Loader<br />
+entry=20246c  addr=202000-2dc220<br />
+1b000 bytes debug infomation<br />
+allocate 251 pages<br />
+magic=9248000192f800ff<br />
+loadfile_sub(202000-2a4450, load)<br />
+loadfile_sub(2a4450-2a4450, clear)<br />
+loadfile_sub(2a6000-2be000, load)<br />
+loadfile_sub(2be000-2dc220, clear)<br />
+entry=20246c  addr=202000-2dc220<br />
+loadfile_sub(2dc220-2dc254, copy)<br />
+loadfile_sub(2dc254-2dc2a4, copy)<br />
+loadfile_sub(2dc2a4-2eaca4, load)<br />
+loadfile_sub(2eaca4-2f6abb, load)<br />
+entry point=0x20246c<br />
+execute startprog()<br />
+map interrupt vector OK.<br />
+<br />
+then it freezes, no more output on serial, and not on the BE's screen. After about a 2 minutes it restarts with 'Due to an OS problem processing could not continue...'<br />
+<br />
+All comments appreciated. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-03-09T23:55:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Thanks for the visit, Casio ;-)</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0007</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0007#comm</comments>
+		<description>Today someone from Casio Japan visited the www.linux4.BE website.
+From my access_log:
+hm1.casio.co.jp - - [20/Feb/2002:08:30:55 +0100] &quot;GET / HTTP/1.0&quot; 200 1102 
+....</description>
+		<guid isPermaLink="false">0007@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Today someone from Casio Japan visited the www.linux4.BE website.<br />
+From my access_log:<br />
+<SPAN class=code>hm1.casio.co.jp - - [20/Feb/2002:08:30:55 +0100] "GET / HTTP/1.0" 200 1102 <br />
+....</SPAN> ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-02-20T23:47:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>BE can NOT handle 640x240 !!</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0006</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0006#comm</comments>
+		<description>Well, the screen of our BE's can NOT handle a resolution of 640x240 ... It was a bug in my code. InspectorTux now includes a 'sysinfo' button and displays a red, green and blue square, which means I finally know how the colors are coded. (download the latest Binary (11KB), Zipped binary ( 4KB) or source (23KB), or alternatively check out the source from cvs).
+DISCLAIMER: IT WORKED FOR ME, BUT IT USES UNDOCUMENTED FEATURES, USE AT YOUR OWN RISK !! This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</description>
+		<guid isPermaLink="false">0006@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Well, the screen of our BE's can NOT handle a resolution of 640x240 ... It was a bug in my code. InspectorTux now includes a 'sysinfo' button and displays a red, green and blue square, which means I finally know how the colors are coded. (download the latest <a href="http://www.linux4.be/download/ce/InspectorTux.exe"  target='_blank'>Binary (11KB)</a>, <a href="http://www.linux4.be/download/ce/InspectorTux.zip"  target='_blank'>Zipped binary ( 4KB)</a> or <a href="http://www.linux4.be/download/ce/InspectorTux_src.zip"  target='_blank'>source (23KB)</a>, or alternatively check out the <a href="http://www.linux4.be/cgi-bin/cvsweb.cgi/ce/"  target='_blank'>source from cvs</a>).<br />
+DISCLAIMER: IT WORKED FOR ME, BUT IT USES UNDOCUMENTED FEATURES, USE AT YOUR OWN RISK !! This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-02-19T23:47:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>My BE's near dead experience</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0005</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0005#comm</comments>
+		<description>While continuing the quest for all the hardware details, I had my first BE's near dead experience today..... After running another test-proggie on my BE (playing with video memory and poking at several registers), it became extremely slow: about 1% of normal speed. Turning on or off took more than 15 minutes, and it took ages to do a soft and hard reset... even a restore from flash did not make it faster again, and restore from PC did not work. Only after I removed the internal battery for a couple of minutes, it became snappy again.</description>
+		<guid isPermaLink="false">0005@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ While continuing the quest for all the hardware details, I had my first BE's near dead experience today..... After running another test-proggie on my BE (playing with video memory and poking at several registers), it became extremely slow: about 1% of normal speed. Turning on or off took more than 15 minutes, and it took ages to do a soft and hard reset... even a restore from flash did not make it faster again, and restore from PC did not work. Only after I removed the internal battery for a couple of minutes, it became snappy again. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-02-11T23:46:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Hardware Hacking</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0004</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0004#comm</comments>
+		<description>Both previous efforts with existing sources did not bring the expected result, so I started the real hacking (see here for details)....</description>
+		<guid isPermaLink="false">0004@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ Both previous efforts with existing sources did not bring the expected result, so I started the real hacking (see <a href="http://www.linux4.be/hackers/hardware.php"  target=content target='_blank'>here for details</a>).... ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-02-03T23:43:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>Update</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0003</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0003#comm</comments>
+		<description>more soon !</description>
+		<guid isPermaLink="false">0003@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ more soon ! ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-01-26T23:40:00+02:00</dc:date>
+    </item>
+
+	<item>
+		<title>CyaCE</title>
+		<link>http://www.linux4.be/pivot/pivot/entry.php?id=0002</link>
+		<comments>http://www.linux4.be/pivot/pivot/entry.php?id=0002#comm</comments>
+		<description>It took me several hours of searching to locate the original version at : ftp://cvsftp.cotw.com/Nino/bootloaders/cyace/cyace.tar.bz2 
+After two nights of hacking (without success) I dropped CyaCE in favor of pbsdboot.</description>
+		<guid isPermaLink="false">0002@http://www.linux4.be/pivot/</guid>
+		<content:encoded><![CDATA[ It took me several hours of searching to locate the original version at : <a href="http://www.linux4.beftp://cvsftp.cotw.com/Nino/bootloaders/cyace/cyace.tar.bz2"  target='_blank'>ftp://cvsftp.cotw.com/Nino/bootloaders/cyace/cyace.tar.bz2</a> <br />
+After two nights of hacking (without success) I dropped CyaCE in favor of pbsdboot. ]]></content:encoded>
+		<dc:subject>default</dc:subject>
+		<dc:date>2002-01-26T23:32:00+02:00</dc:date>
+    </item>
+
+</channel>
+</rss>

@@ -1,0 +1,247 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Dec 30 00:00:02 2002
+00:46 -!- jal0 is now known as jal0_zzz
+01:20 -!- pcwhiz [~pcwhiz@cs24175129-174.bham.rr.com] has joined #linux4be
+01:46 -!- pcwhiz [~pcwhiz@cs24175129-174.bham.rr.com] has left #linux4be ["Client Exiting"]
+01:47 -!- LoverNBham [~pcwhiz@cs24175129-174.bham.rr.com] has joined #linux4be
+01:47 -!- LoverNBham [~pcwhiz@cs24175129-174.bham.rr.com] has left #linux4be ["Client Exiting"]
+13:45 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+13:45 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+16:21 -!- Filip_ [~Filip@212.212-136-217.adsl.skynet.be] has joined #Linux4BE
+16:33 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has joined #linux4be
+16:33 < jal0atWrk> hey people
+16:33 < Filip_> hi jal0
+16:33 < jal0atWrk> filip: did you get my email
+16:33 < Filip_> just replied to your e-mail
+16:34 < jal0atWrk> cool
+16:34 < Filip_> take a look at /home/sites/www.linux4.be/web/download/dumps
+16:34 < jal0atWrk> ok, have to do it when i get home, thanks
+16:35 < jal0atWrk> i finally figured out to windows CE converts virtual address to physical ones
+16:36 -!- Filip__ [~Filip@212.212-136-217.adsl.skynet.be] has joined #Linux4BE
+16:36 < jal0atWrk> got a dump of the touch.dll that i'm working on reversing
+16:37 < Filip__> it's using stuff from cdm.dll , isn't it ?
+16:38 < jal0atWrk> not sure, havn't done much yet, finally figured out how to dump it to to the pc
+16:38 < Filip__> to me, it looks like this cdm (casio device manager ??) contains the low-level details
+16:38 -!- Filip_ [~Filip@212.212-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+16:47 < jal0atWrk> so anything new happening?
+16:48 < Filip__> no, i've been very busy these days for business (year endings)
+16:48 < jal0atWrk> ic
+16:52 < Filip__> have you got more info on how a serial touchscreen protocol would  work ?
+16:53 < jal0atWrk> not really, need to figure out how its communicating (Serial, USB, ISA, etc...).
+16:53 < Filip__> assume it's serial, is there some kind of standard, like always a startbyte , penstatus, x, y ?
+16:53 < jal0atWrk> I was hoping i could find someone with a different pda that contains the same controller.
+16:54 < jal0atWrk> don't think so, it probalbly a custom message protocol
+16:55 < Filip__> I've looked at the ALPS site, and it makes reference to a recommended controller from Burr-Brown
+16:55 < Filip__> ALPS LFH8P429XA For LCD: S1D13*** (Seiko Epson)
+16:55 < Filip__> For TABLET: ADS7843 (Burr-Brown)
+16:55 < jal0atWrk> the only other pda that i have been able to find that i believe has the same controller is the em500, which there is no linux disto for either
+16:55 < Filip__> that ADS7843 has several other manufacturers as well, so it looks like a rather common part
+16:55 < jal0atWrk> did you see the links i posted here on some touchscreen controller info
+16:56 < Filip__> when was that ?
+16:56 < jal0atWrk> hmm, maybe a week ago or two
+16:57 < Filip__> the kyocera ones ?
+16:57 < jal0atWrk> not sure, i have the links at home
+16:58 < Filip__> http://www.kyocera.com/kicc/lcd/notes/touchpanels.htm
+16:58 < jal0atWrk> yeap
+16:59 < Filip__> also mentions Burr Brown ADS7486
+16:59 < jal0atWrk> some pretty good info. i'm thinking that the communications are being done though pci though, mainly because the mappings for the controller that i have done so far seem to all go to the companion chip
+17:00 < jal0atWrk> the only real way to tell is probably going to be in reversing the CE drivers
+17:00 < Filip__> so you think the  companion includes a pci controller
+17:01 < jal0atWrk> yeap, event the some of the CF card lines go to it also, and the sound controller also
+17:02 < Filip__> is there a way to detect pci  controllers  ?
+17:03 < jal0atWrk> haven't look into them yet, but i'm sure there are, just finding something that works on the PDA will be the real problem
+17:07 < jal0atWrk> so i think were going to have some real ( fun (-; ) work ahead of us to get touchscreen working. 
+17:07 < baal_> Hi
+17:07 -!- baal_ is now known as Baalz
+17:08 < jal0atWrk> hi baal_
+17:08 < Filip__> hi Baalz
+17:08 -!- Filip__ [~Filip@212.212-136-217.adsl.skynet.be] has left #Linux4BE []
+17:09 -!- Filip_ [~Filip@212.212-136-217.adsl.skynet.be] has joined #Linux4BE
+17:09 -!- Filip___ [~Filip@212.212-136-217.adsl.skynet.be] has joined #Linux4BE
+17:09 < jal0atWrk> wb filip ;)
+17:09 -!- Filip___ [~Filip@212.212-136-217.adsl.skynet.be] has left #Linux4BE []
+17:09 < Filip_> wrong button ;-)
+17:11 < Baalz> There is a program called lspci on linux I dont know if this can help you
+17:11 < Baalz> I guess you guys already know this program
+17:12 < jal0atWrk> not me, but i'll take a look at it, thanks
+17:12 < Filip_> jal0, did you already download my ram-dumps?
+17:13 < jal0atWrk> not yet
+17:13 < Filip_> just noticed those are no good, uploading the good ones   now
+17:13 < jal0atWrk> have to do it when i get home
+17:13 < jal0atWrk> ok
+17:13 < Baalz> Homepage:    http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html
+17:13 < Baalz> Description: Various utilities dealing with the PCI bus
+17:14 < jal0atWrk> hmm, link dosn't seem to work for me
+17:15 < Baalz> Took it from gentoo description
+17:16 < Filip_> google's cache: http://www.google.nl/search?q=cache:JyUpRUMcsCEC:atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml+pciutils&hl=nl&ie=UTF-8
+17:16 < jal0atWrk> google is a great thing :)
+17:17 < Baalz> I think the url is good but that the site is down
+17:17 < Baalz> Freshmeat gives the same url
+17:23 < Baalz> I was wondering about something: is there a way we could add a shell history in the images so we can type commands like "uname -a" or "ls /dev" without typing them or the shell is too basic?
+17:25 < jal0atWrk> sure, it can be done, although the problem is time, although if you want to jump in and do it yourself, you more than welcome.
+17:25 < Filip_> jal0, my ramdump  is at http://www.linux4.be/download/dumps/log_bin.zip
+17:25 < jal0atWrk> ok, thanks
+17:27 < Baalz> Well I am pretty occupied and I dont even have the toolchain yet but I could make a list of fun commands to include next time you guys make an image after I finish de Dummies howto...
+17:29 < jal0atWrk> http://members.hyperlink.net.au/~chart/pci.htm  <-- good link on pci bus
+17:29 < Filip_> jal0, do you think that the CAK2007 is only used for touchscreen ?
+17:30 < Baalz> Anyway I do not want to complicate your lives it was more a theorical question :)
+17:30 < Filip_> it's 48pins
+17:30 < jal0atWrk> so far yes. 
+17:30 < Filip_> Baalz, all suggestions are welcome
+17:30 < jal0atWrk> that's why i believe it a pci device
+17:33 < jal0atWrk> some of the lines go to the EPSON chip also, so it maybe the pci controller for the lcd controller also
+17:34 < jal0atWrk> or vice-versa
+17:41 < jal0atWrk> the pci program from the like above may prove useful, its in pascal, so it would have to be converted to C, but because the BE300 runs in kernel mode, we can access hardware directly ( like DOS ). So converting it to run under WindowsCE should be possible.
+17:43 < jal0atWrk> anyone know of someone with so good experience a pascal that would be willing to convert the sources to straight C that would run in DOS??
+17:44 < jal0atWrk> or even C++ would be better
+17:44 < Baalz> Nope :(
+17:45 < jal0atWrk> may i'll post a request at one of the fourms when i get home. Maybe some there could help
+17:45 < jal0atWrk> may=maybe
+17:47 < Filip_> might be a good idea to  convert to C  and  try  on a 'normal' pc first, to see if nothing  broke in the conversion
+17:48 < jal0atWrk> yeap, that is the plan, going to post a help wanted on the BE-Central fourm (Hackers Den)
+17:48 < Filip_> I programmed in Modula-2 about 10 years ago (Modula-2 was  the successor of pascal, but never succesfull)
+17:48 < Filip_> problem  is finding  time ....
+17:48 < jal0atWrk> so would you have the time, or should i post the "Call to Arms"
+17:49 < Filip_> doesn't hurt to  get more people aboard
+17:50 < jal0atWrk> o'well, going to have to wait untill i get home to post. can
+17:51 < jal0atWrk> can't remember my darn password
+17:52 < jal0atWrk> hmm, nevermind, i automagicaly logged in :)
+18:10 < jal0atWrk> http://www.be-central.be/modules.php?op=modload&name=phpBB_14&file=index&action=viewtopic&topic=1597&
+18:10 < jal0atWrk> just posted it
+18:10 < jal0atWrk> sound ok filip?
+18:11 < Filip_> great
+18:11 < Filip_> now see  how many  people will react
+18:12 < jal0atWrk> or how many SERIOUS people react
+18:12 < Filip_> indeed
+18:14 < jal0atWrk> should i post it to one of the other fourms also?
+18:15 < Filip_> why  not  ?  Goo's  and Another
+18:15 < jal0atWrk> ok, have to do it when i get home though, dont have those passwords here at work
+18:16 < Filip_> reading those PCI  pages...
+18:16 < Filip_> so PCI  vendor ID's are  only two bytes, correct ?
+18:17 < jal0atWrk> yeap
+18:17 < Filip_> a  bit short to use as a  signature to look for
+18:17 < Filip_> 1265=Casio
+18:18 < jal0atWrk> yeah, i use to have a prog the did it, but i lost it when my harddrive crashed
+18:18 < jal0atWrk> or maybe 6512
+18:18 < jal0atWrk> due to byte-swapping ??
+18:19 < Filip_> CHKPCI.PAS  includes  some assembler ...
+18:20 < jal0atWrk> yeah, looks like some byte manipulation code
+18:25 < jal0atWrk> it also look as though chkpci is used to validate the pcidevs.txt file, which is not too crucial (this prog can be left as it is and the validations can be done on the pc, before copying to the PDA)
+18:25 < Filip_> indeed
+18:27 < Filip_> going  to  get some sleep,  a long day ahead
+18:27 < jal0atWrk> later
+18:28 < Filip_> happy  year-ending to all  !
+18:28 < jal0atWrk> you too filip
+18:28 -!- Filip_ [~Filip@212.212-136-217.adsl.skynet.be] has left #Linux4BE []
+18:29 < jal0atWrk> later everyone, time to get back to work (dinner time is over).
+18:30 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has quit []
+18:53 -!- Baalz is now known as BaalAWF
+21:37 -!- another [~eirc@ppp-209-87-245-135.storm.ca] has joined #Linux4BE
+21:38 < another> hi?
+21:47 -!- another [~eirc@ppp-209-87-245-135.storm.ca] has quit ["Today is a good day to chat."]
+--- Log closed Tue Dec 31 00:00:30 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

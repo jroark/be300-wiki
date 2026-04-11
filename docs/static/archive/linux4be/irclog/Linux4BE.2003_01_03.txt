@@ -1,0 +1,315 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_03.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_03.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Jan 03 00:00:52 2003
+10:29 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+10:30 < andrey> hi guys
+10:35 < jal0> hey andrey
+10:39 < andrey> just found out you're reversing touch.dll. I sent you e-mail with what I have on it.
+10:39 < jal0> yeah looking at it now. thanks
+10:40 < jal0> your using IDA correct?
+10:40 < andrey> And wanted to ask, you're talking about pascal PCI programs. What exactly do you want - there are several programs there.
+10:40 < jal0> the pci utility 
+10:41 < andrey> No I'm not using IDA - just my own disassembler. Maybe I should try IDA...
+10:42 < jal0> the pci utility should allow us to get alot more info on how the hardware is hook up
+10:42 < jal0> you going to be here for a while, have to step out for about 10-15 mins
+10:43 < andrey> I just came to work :-)
+10:43 < jal0> ic, be back if a few.
+10:59 < jal0> ik ib
+11:00 < jal0> 'your own dissembler'.... you wrote it yourself? 
+11:02 < andrey> yes, very simple one. it's easy because mips has exactly one work per command (inlike intel)
+11:02 < andrey> I didn't find any disasm (it was before filip told about IDA)
+11:05 < jal0> cool, dont have much MIPS experience so doing that sort of thing is a little over my head at current
+11:06 < andrey> me too. that's why I did it - to understand what mips looks like.
+11:08 < jal0> btw, i've used a mingw-crosscompiler i setup to dissassemble mips code, but never implemented the startup libraries so you cant cross-compile ( at least more than the basic "hello world" GUI program.
+11:09 < jal0> one day when i get more time i plan on putting up the howto, for people without a mips dissasembler.
+11:10 < jal0> did you get my PM ?
+11:11 < jal0> so you know PASCAL ?
+11:17 < andrey> I used to use it long time ago. Not enough to use it but probably enough to understand. I hope...
+11:17 < andrey> what is PM?
+11:18 < andrey> I mean not enough to write something now...
+11:18 < jal0> private message
+11:19 < jal0> well if you like asm, it's got alot of inline asm code in it
+11:22 < andrey> yes I got it. I tought about it after putting the message. :-(
+11:22 < andrey> How to send PM?
+11:23 < jal0> what are you using for your irc client
+11:24 < andrey> just irc from linux4.be machine. My fw doesn't allow irc.
+11:25 < andrey> plain command-line.
+11:25 < jal0> hmm.. not sure, im using mirc, all i have to do is double click on the nick.
+11:28 < andrey> jal0, did you get PM?
+11:28 < jal0> know of any good info on the PE file structure for CE, other than pehdr.h in the windows ce sources ?
+11:28 < jal0> yeah
+11:29 < andrey> its /msg <name> <message>
+11:30 < andrey> PE stands for "portable" so it should be the same as for i86
+11:31 < jal0> yeah, but they use a "lite" version internally. What's that all about?
+11:31 < jal0> maybe just what gets loaded?
+11:32 < andrey> most probably
+11:36 < andrey> btw log didn't store my message with "<" and ">"
+11:37 < jal0> do you know where in the CE sources it states that KPAGE is always located at phyical address 0, or the first page?
+11:37 < jal0> yeah, only channel messages, not command i would think
+11:38 < jal0> hmm <testing testing>
+11:38 < jal0> cool, learned something new
+11:39 < jal0> <tes1> < test 2 > <<test 3>> < < test 4 > >
+11:40 < andrey> but did store my message starting with "btw". funny...
+11:40 < jal0> looks like no space between open '< ' and close ' >'
+11:40 < jal0> take a look at my test line
+11:40 < andrey> yes, I see
+11:41 < jal0> '<' test '>'
+11:41 < jal0> and looks like <
+11:42 < jal0> look like quote nullify the effect also
+11:43 < andrey> yes. did filip write logger himself?
+11:43 < jal0> not sure?
+11:48 < jal0> http://www.pocketpccity.com/software/hpc/MIPS-dissassembler-and-PE-dumper-1999-09-16-ce-hpc.html
+11:49 < jal0> have you tried this program
+11:50 < jal0> hey that you :)
+11:51 < jal0> price $39 dollars eh.
+11:51 < andrey> there is a constant KPAGE_PHYS in mem_mips.h
+11:51 < andrey> for the disassembler?
+11:51 < jal0> yeah
+11:55 < jal0> wow, you wrote this program back in 1999?
+11:55 < andrey> maybe I should sell mine also :-))
+11:56 < andrey> Ok, have to go. be back in an hour or so...
+11:56 < andrey> me? it's not me. I've never managed to bring the program to a sellable state.
+11:56 < jal0> later, nick talking to you
+11:57 < jal0> same first name
+11:57 < jal0> opps
+11:57 < jal0> MIPSDIS v0.95  Copyright (C) 1998-99  Andrey Cherezov  ac@delosoft.com
+11:57 < jal0> later
+11:58 < andrey> I know what you're talking about. It's written on forth and yes I tried it.
+11:58 < andrey> ok, realyy have to go. cu
+11:58 < jal0> :)
+11:58 < jal0> later
+12:07 -!- jal0 is now known as jal0_wrkn
+13:26 -!- andrey [~andrey@ns2.onkelinx.com] has quit ["Leaving"]
+13:26 -!- andrey [~andrey@ns2.onkelinx.com] has joined #Linux4be
+13:27 < andrey> back again...
+15:02 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+15:13 -!- Filip_ [~Filip@87.97-136-217.adsl.skynet.be] has joined #Linux4BE
+15:13 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit [Read error: 104 (Connection reset by peer)]
+15:52 -!- andrey [~andrey@ns2.onkelinx.com] has left #Linux4be []
+16:02 -!- jal0atWrk [~jal0_wrkn@208.33.58.220] has joined #linux4be
+16:03 < jal0atWrk> hey people
+16:05 < Filip_> hi jal0
+16:06 < jal0atWrk> hey been talking to andrey, he did some work on the touch.dll
+16:06 < Filip_> great
+16:06 < jal0atWrk> does he have access to CVS?
+16:06 < Filip_> he's got an account  on the server, so he should
+16:07 < jal0atWrk> he emailed me the code, but maybe setting up a tree for revered CE code would be good
+16:07 < jal0atWrk> i can forward the files to you, it has some memory/register info in it
+16:08 < Filip_> please do
+16:08 < Filip_> not sure about cvs; maybe a 'members only one' (have to double check legal implications on having reversed code publicly  available on the server)
+16:09 < jal0atWrk> file is on its way
+16:09 < Filip_> thx
+16:09 < jal0atWrk> were could one find out such things?
+16:10 < Filip_> my lawyer does
+16:11 < jal0atWrk> i would think, due to the fact that code itself has not been copied, it shouldn
+16:11 < jal0atWrk> should be ok
+16:13  * Filip_ is looking at the code
+16:14 < jal0atWrk> i also had a volunteer  
+16:15 < jal0atWrk> for the pci conversion
+16:15 < Filip_> I also had a message from Harpo about Goo wanting to help
+16:16 < jal0atWrk> that would be outstanding, he would probably know alot about how things works
+16:17 < Filip_> indeed, I think he's got a very good understanding of the CE side of things
+16:17 < jal0atWrk> i just sent you another email
+16:18 < jal0atWrk> has the code i'm using to dump ram, its an assimilation of my own and some info andrey sent me
+16:19 < jal0atWrk> the RAM dump of yours didn't seem to be vaild
+16:20 < Filip_> did you talk to andrey about how he did all this ?  did he create  some tools to automate the process 
+16:20 < Filip_> like extracting PE info etc
+16:20 < jal0atWrk> he is using a disassemble he wrote himself
+16:20 < Filip_> but before you get to that, you need to have  the entry points etc
+16:20 < jal0atWrk> have you seen his modules.c code?
+16:21 < Filip_> no
+16:21 < jal0atWrk> i send it to you, hang on
+16:23 < jal0atWrk> it should work with the RAM dump prog i sent eairier
+16:24 < jal0atWrk> it's on it's way
+16:24 < Filip_> got it
+16:24 < Filip_> thx
+16:25 < jal0atWrk> so have you talked to Goo at all, or just Harpo?
+16:25 < Filip_> Harpo for now,  but I was just leaving a message for Goo
+16:27 < Filip_> did you ever use the MS dev tools for CE with your BE for debugging ?
+16:27 < Filip_> usig activesync ?
+16:27 < jal0atWrk> EVC?
+16:27 < Filip_> EVC or PB
+16:28 < Filip_> did you use  serial, usb  or network ?
+16:28 < jal0atWrk> i have used EVC, it's extremly slow, even over USB. Havent tried PB yet
+16:29 < Filip_> that's  why  Ii was trying  to use network, but can't get it to work
+16:29 < jal0atWrk> http://columns.pocketnow.com/content.cgi?db=periodicals&id=14
+16:29 < jal0atWrk> have you seen this ?
+16:30 < jal0atWrk> i though activesync was, at heart, some network protocal
+16:32 < Filip_> I want ot use my wireless nic instead of serial/usb, but can't get it to work. I know it does work  on other CE  devices
+16:33 < Filip_> seen the name of the defines in that article ?
+16:33 < jal0atWrk> hmm, i thought i say a howto on that from one of the fourms
+16:33 < Filip_> CASIO_KJ_BRIGHTNESS_SETTING 0x0A00098C
+16:33 < Filip_> CASIO_KJ_CONTRAST_SETTING 0x0A00099C
+16:33 < Filip_> KJ : same prefix
+16:33 < jal0atWrk> what does the KJ stand for?
+16:34 < Filip_> no clue; but it's also used in andrey's code
+16:34 < Filip_> I wonder where the writer of this article got that info (he doesn't tell it)
+16:35 < jal0atWrk> not sure, but look interesting, i tried some of the samples, but with no luck getting them to work
+16:36 < jal0atWrk> The physical memory access is only good for address above 0x1fffffff
+16:37 < jal0atWrk> so i could get it to read RAM
+16:37 < Filip_> brb
+16:37 < jal0atWrk> ok
+16:39  * Filip_  is back
+16:41 < jal0atWrk> so work still hectic?
+16:42 < Filip_> unfortunately it is ....
+16:44 < Filip_> looking at tch_ddsi.c
+16:47 < Filip_> it touches a lot tof registers  at poweron
+16:48 < jal0atWrk> tof?
+16:48 < Filip_> a lot of 
+16:49 < jal0atWrk> ic :)
+16:49 < Filip_> power-off  only one
+16:50 < jal0atWrk> are those internal vr4131 registers or i/o registers
+16:50 < jal0atWrk> don't have my handy mem map around
+16:51 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+16:51 < jal0atWrk> hey andrey
+16:51 < andrey> hey
+16:51 < Filip_> actually adresses on the companion (0xaa0003xx)
+16:51 < Filip_> hi  andrey
+16:51 < andrey> I think it's because at power-on you need to set things up.
+16:52 < Filip_> I was just looking at your touchpanel code
+16:52 < andrey> I was reading logs :-)
+16:53 < andrey> But than in July I could not understand how it works. :-(
+16:53 < jal0atWrk> July?
+16:54 < Filip_> going to try and map it to the  sample tpanel code in  platform builder
+16:54 < andrey> I tried to reverse touch.dll in july but gave up.
+16:54 < Filip_> andrey, did you try one of the recent kernels  ?
+16:55 < andrey> I think I tried one about month ago. 
+16:56 < jal0atWrk> andrey: know what the KJ stands for in you code?
+16:56 < Filip_> the  one with buttons working  ? 
+16:58 < andrey> jal0: no, filip: probably not. I don't remember I tried to push anything.
+16:59 < Filip_> did you see antagonizt's  pictures: http://www.linux4.be/~jroark/images/index.html
+17:00 < andrey> As for Kj - when I tried to look into cdm.dll I found these funny names like "KjPiu", "KjGpio", etc.
+17:00 < Filip_> it looks like Kj is the name of Casio's companion chip
+17:02 < andrey> I think I put that old code to linux4.be long time ago.
+17:03 < andrey> Most probably it is.
+17:06 < andrey> Does it mean that Casio uses the same chip in all machines? 
+17:06 < andrey> This guy in the article was talking about EM500, E125, etc
+17:07 < jal0atWrk> i think that the EM500 has the same touchpanel controller, i saw a couple of pictures on the net of it taken apart
+17:08 < Filip_> probably an evolution of the same chip
+17:09 < jal0atWrk> I think the 'K' is a pseudo name for "controller" and the 'J' is for Japan
+17:09 < jal0atWrk> i've seen reference to K in some of the CASIO doc on part numbers
+17:10 < jal0atWrk> not CASIO, i mean NEC
+17:18 < andrey> Wow, I didn't see these pictures before. How did it work - using serial console or just buttons?
+17:18 < jal0atWrk> buttons
+17:19 < jal0atWrk> i wonder how hard it would be to create a mouse driver that uses the arrow key ?
+17:20 < jal0atWrk> we could get some nice GUI demos done then
+17:22 < jal0atWrk> well, going to dinner, talk to you all later
+17:22 < Filip_> cu
+17:23 -!- jal0atWrk [~jal0_wrkn@208.33.58.220] has quit []
+17:36 < andrey> cu
+17:36 < andrey> Lokks like I'm late. Just had to take care of somthing...
+18:01 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+18:23 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit []
+18:50 < andrey> ok, time to go home. cu later
+18:50 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+19:09 -!- Filip__ [~Filip@87.97-136-217.adsl.skynet.be] has joined #Linux4BE
+19:09 -!- Filip_ [~Filip@87.97-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+20:05 -!- Filip__ [~Filip@87.97-136-217.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+21:47 -!- WebGuest5180 [~eirc@208.205.19.54] has joined #Linux4BE
+21:48 < WebGuest5180> Any one home?
+23:57 -!- WebGuest5180 [~eirc@208.205.19.54] has quit [Read error: 60 (Operation timed out)]
+--- Log closed Sat Jan 04 00:00:19 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

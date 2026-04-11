@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_06.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_06.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Mar 06 00:00:20 2003
+00:01 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+00:13 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+03:42 -!- Netsplit over, joins: jal0_logger, Baalz
+03:55 -!- Netsplit leguin.freenode.net <-> irc.freenode.net quits: Baalz, jal0_logger
+03:55 -!- Netsplit over, joins: jal0_logger, Baalz
+08:42 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+08:43 < mouse> hi2all
+10:15 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+10:15 < andrey> hi everyone!
+10:18 < mouse> andrey: hi
+10:21 < andrey> hi mouse! how are you? how is the new release?
+10:27 < mouse> andrey: fine, thanks. Release if ok ;-) read more at http://www.altlinux.ru{org|com}
+10:27  * mouse is away: va a casa...
+10:57 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+17:35 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+18:57 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+20:16  * jal0 is around
+20:23 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+20:32 < jal0> hey antagonizt
+20:32 < antagonizt> hi jal0
+20:33 < jal0> have you heard anything from filip?
+20:33 < antagonizt> not in long while
+20:34 < jal0> i emailed him a couple of day ago and still no reply
+20:34 < antagonizt> must be on vacation
+20:35 < jal0> i cant believe he wouldn't of mentioned it, and the last i heard his job had him working alot of hours
+20:35 < jal0> i'm thinking of doing a backup of the be-300 site, just incase it dissapears.
+20:35 < antagonizt> hope everything is ok...
+20:36 < jal0> me too
+22:41 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+23:59  * jal0 looks around
+--- Log closed Fri Mar 07 00:00:45 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

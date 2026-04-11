@@ -1,0 +1,293 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_07.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_07.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Dec 07 00:00:57 2002
+00:21 < jal0> so, antagonizt whacha working on?
+00:35 < antagonizt> jal0, d-pad mouse driver
+00:35 < antagonizt> sort of
+00:35 < jal0> cool, just finished mapping out the nand chip
+00:36 < jal0> going to map a little more, then update my docs
+00:37 < antagonizt> neat, anything that will help us write a NAND driver?
+00:37 < jal0> btw, i leaning toward the unknow being some ASIC chip
+00:37 < jal0> eventually, yeap
+00:38 < antagonizt> ASIC? async IC?
+00:38 < jal0> nope, check the NEC website, their custom chips, similar to dsp i guess you could say
+00:39 < jal0> their built with macro functions which ARE documented
+00:39 < antagonizt> cool
+01:25 < jal0> antagonizt: do you remember what CN3 ( http://www.linux4.be/~jal0/top_bot_HIRES.jpg ) was connected to?
+01:36 < antagonizt> the lcd?
+01:36 < antagonizt> not sure
+01:37 < jal0> ok, i'll ask filip later
+01:38 < antagonizt> from the russian pics it looks like it was connected to CN1 on the LCD board
+01:38 < antagonizt> http://www.linux4.be/~jroark/images/LCD_bot.jpg
+01:38 < antagonizt> http://www.linux4.be/~jroark/images/Board_bot.jpg
+01:39 < jal0> can tell for sure, cn3 on the mainboard bottom
+01:39 < jal0> can=cant
+01:39 < antagonizt> do you have a be around?
+01:40 < jal0> yeah, but not apart
+02:28 < jal0> antagonizt: still awake ?
+02:28 < jal0> just updated my page with the new data
+02:32 < antagonizt> cool i'll check it out
+02:35 < antagonizt> is this something casio could get upset about?
+02:35 < jal0> dont think so
+02:35 < antagonizt> what with the dmca and all...
+02:36 < jal0> dmca?
+02:37 < antagonizt> digital millenium copyright act
+02:37 < antagonizt> notorious for it's use to stop RE projects
+02:38 < jal0> nah, at least in the USA, reverse engineering a product for personal use, so long as you own it, is not illegal, it falls under the 'Fair Use' clause of the copyright laws
+02:40 < jal0> besides, as you can see, to completly RE this thing would take for ever, we just need to do enough for we can get basic fuctionaliy going. The rest we can do with software snooping
+02:41 < antagonizt> well then i guess i should stop production of all those BE clones i've been working so hard on... :)
+02:41 < jal0> hehe :-)
+02:41 < jal0> me too
+02:42 < jal0> so any luck so far with your driver?
+02:43 < antagonizt> baahhh... can't the timer and wait queue funcs to do what i think they should...
+02:43 < antagonizt> can't get
+02:44 < antagonizt> if i knew the irq the buttons used it would be pretty simple
+02:45 < jal0> have you looked at the vr4131 manual... i believe there are only 3 external irq lines on the chip, just wipe out the vectors for them.
+02:48 < jal0> what do you mean by irq?
+02:48 < antagonizt> the interrupt generated by pressing the button
+02:48 < antagonizt> s
+02:49 < antagonizt> i'm not sure i understand the hardware aspect of it all
+02:49 < jal0> yeah, but what are you looking for?
+02:49 < antagonizt> a number
+02:49 < antagonizt> that i plug into the request_irq function :)
+02:51 < jal0> i dont think the irq code works at all, your probably going to have to do it the hard way, by finding the interrupt mask register bit which coorisponds to the irq line(irq0,irq1,irq2) for external devices.
+02:52 < jal0> this has nothing to do with the kernel because the irq code does not work in the kernel
+02:52 < antagonizt> i thought all the vr4131 processor specific code was already written?
+02:53 < antagonizt> you think it's broken?
+02:53 < jal0> at least with the irq stuff specifice to the be300, yes, but broken is not the word, it just has to be initialized properly
+02:54 < antagonizt> hmmm i guess i need to do some reading
+02:55 < jal0> due to the fact that buttons are external devices, the stock vr4131 has no way of knowing how to handle them, you have to configure it specific to the device in which it's being used
+02:57 < jal0> i believe the functionaliy it there, it just has to be set up
+03:01 < antagonizt> hmmm i thought all available irq lines were auto magically set up...
+03:03 < jal0> maybe internal once, but not external, how would they know where the external device was located on the bus?
+03:03 < jal0> once=ones
+03:04 < antagonizt> GPIO stands for general purpose input output right?
+03:04 < jal0> yeap
+03:05 < antagonizt> wouldn't external devices use the PGIO interrupts?
+03:05 < antagonizt> GIO rather
+03:05 < antagonizt> gpio
+03:05 < jal0> when an irq is signaled, the cpu looks up the vector for a handling function. This handling function purpose is to query external devices to determin if they were the source of the interrupt. in order for this to happen the address of the external device has to be known
+03:06 < antagonizt> i thought that is what the request_irq function does? 
+03:06 < jal0> GPIO are just that general pupose input/output, not irq lines
+03:07 < antagonizt> there are 32 GPIO irqs defined in include/asm/vr4122/vr4122.h
+03:08 < jal0> i'll have to look at the irq code in the kernel, i havn't got much experience with linux kernal hacking.
+03:08 < jal0> hang on let me take a look at something
+03:13 < jal0> ugg, going to take more that a couple of minutes to digest the irq code in the kernel.
+03:14 < antagonizt> yeah it's pretty complex
+03:14 < jal0> btw, have you checked out 0xAF000080 -> 0xAF0000BA, that should be were all the ICU registers are located.
+03:15 < antagonizt> i haven't...
+03:15 < antagonizt> ICU = interrupt control unit?
+03:15 < jal0> yeah
+03:16 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+03:16 < jal0> what connector is used to connect the keys to the main board? i'll start mapping out the i/o lines for them.
+03:17 < antagonizt> so many three letter acronyms... hard to keep track of
+03:17 < jal0> :)
+03:17 < antagonizt> not sure... one of the smaller ones i imagine...
+03:18 < antagonizt> i fi had to guess i would say CN1
+03:18 < metalac> good evening gents
+03:19 < jal0> hey metalac
+03:19 < antagonizt> evening! it's 3:19 a.m.
+03:19 < jal0> :)
+03:19 < metalac> it's 12:19 here :)
+03:20 < metalac> i'm assuming english language doesn't have a greeting for this time of day/night, since nobody is supposed to be greeting anyone at this hour, people are expected to be asleep :)
+03:21 < jal0> hmm, never though about it, but no, no word that i can think of
+03:22 < metalac> i mean they always teach you those basic 3 nothing more
+03:22 < metalac> maybe a slang here and there, but nothing past 9:00 :)
+03:26 < jal0> i would say ... morning(12:01AM->11:59)... afternoon(12:00PM->dusk) .... evening(dusk->sunset) .... night(sunset->11:59PM) ... :)
+03:27 < jal0> so for antagonizt and me it would be 'morning'
+03:27 < metalac> but good night is more of a departing saying, rather than the one you say when you meet someone
+03:28 < jal0> thats good-buy ;)
+03:29 < jal0> but in greetings, use 'evening' in place of night
+03:30 < metalac> i guess we should take this disscusion to #esl or something :)
+03:30 < jal0> :)
+03:32 < jal0> antagonizt: http://www.linux.org/docs/ldp/howto/KernelAnalysis-HOWTO-12.html
+03:35 < antagonizt> thanks
+03:35 < jal0> not much there though :)
+03:48 < antagonizt> does that "article" suggest that there is a general function that is called on every interrupt which in turn calls a function, if any, that is associated with that irq?
+03:49 < jal0> yeap
+03:49 < antagonizt> so shouldn't i be able to add a printk inside that general func that spits out the irq # for all unhandled irqs
+03:49 < antagonizt> ?
+03:49 < jal0> handles housekeeping stuff like updating the timer and stuff
+03:49 < antagonizt> so i can find the button irq this way... no?
+03:50 < jal0> probably can stick a printk there, but not sure if it can tell you all the irq numbers, but then again it never hurts to try
+03:51 < jal0>  heres another good reference -> http://www.xml.com/ldd/chapter/book/pdf/ch09.pdf
+03:52 < antagonizt> yeah i have that book it's very usefull
+03:54 < jal0> is there any way to access /proc/interrupts ?
+03:54 < jal0> or has that even been setup in our kernel?
+04:00 < jal0> well time for bet folk.. later
+04:00 -!- jal0 is now known as jal0_Zzz
+04:10 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+04:23 -!- antagonizt is now known as antagonizt[zZz]
+05:38 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: someguy
+05:43 -!- Netsplit over, joins: someguy
+06:29 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: someguy
+06:29 -!- Netsplit over, joins: someguy
+15:00 -!- sinfonian [~bshirclif@twhou-213-162.ev1.net] has joined #linux4be
+15:00 < sinfonian> whats going on guys?
+15:23 -!- bshircliffe [~bshirclif@twhou-213-62.ev1.net] has joined #linux4be
+15:23 -!- sinfonian [~bshirclif@twhou-213-162.ev1.net] has quit [Read error: 54 (Connection reset by peer)]
+15:51 -!- antagonizt[zZz] is now known as antagonizt
+15:51 -!- bshircliffe [~bshirclif@twhou-213-62.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+15:52 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+15:58 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+16:15 -!- jal0_Zzz is now known as jal0
+18:09 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+18:09 < nykkto> any one home?
+18:10 < jal0> hey nykkto
+18:10 < nykkto> hey!
+18:10 < nykkto> :)
+18:10 < jal0> have you check out my schematic of the be300 main board yet?
+18:11 < nykkto> uh, nope did not see that yet, saw the pic though, WOW BIG!
+18:12 < jal0> getting ready to do another update with some more pin mappings
+18:14 < nykkto> I have slack ware installing, but I think I don't have enough / because I only used 512, then I started it, then I read the how to :(
+18:14 < jal0> not enough what?
+18:15 < nykkto> oh, 512 MB for the HD root :(
+18:17 < jal0> hmm, a little small for root
+18:18 < nykkto> yah, I am used to True64, and Solaris, I have never played with slack, and was in a hurry, so I fif a full install, oops way too big for that :(
+18:21 < antagonizt> should be fine if /usr is on a seperate larger partition
+18:21 < antagonizt> :)
+18:22 -!- wolphie [~wolphie@pearlart.hu] has joined #Linux4BE
+18:22 < wolphie> hi
+18:22 < nykkto> heh, I chose /home lol 3gb for it *shrugs*
+18:23 < jal0> latest mappings --> http://www.linux4.be/~jal0/be300-main-board.pdf
+18:25 < antagonizt> hi wolphie
+18:25 < jal0> hey wolphie
+18:25 < wolphie> antagonizt jal0 hi
+18:28 < wolphie> any good news about the linux4be project ? :)
+18:29 < jal0> not much, pretty much just hunting around trying to get some type of input working
+18:29 < antagonizt> we are still here... that's pretty good news :)
+18:29 < nykkto> jal0 waaaay cool man
+18:29 < jal0> thanks
+18:29 < jal0> it's just the very beginning, lots more pins to map
+18:30 < jal0> antagonizt: any luck with the irq's yet?
+18:30 < antagonizt> haven't played with it today really
+18:31 < wolphie> something about the custom chip (4173?) ?
+18:31 < jal0> well, we know its NOT a 4173
+18:32 < jal0> it looks like a custom ASIC chip
+18:37 < wolphie> hmm it will make harder developing driver for sound, etc
+18:38 < antagonizt> i think sound is the last priority right now...
+18:39 < nykkto> I think we need too get a spy over in cassio land :P
+18:41 < jal0> not really, its just a matter of determining what macro functions are built into the device and how the chip is mapped to the cpu.
+18:42 < jal0> most of the macro functions are documented, just have to figure out which ones were used
+20:14 < jal0> ok, another update to the schematic added some gpio pins and data bus pins
+20:31 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+21:05 < antagonizt> hmmm... jal0 did you ever work on the serial driver?
+21:05 < jal0> not yet wanted to map some of the addr/data lines first
+21:06 < jal0> why
+21:06 < antagonizt> i was looking at some of the interrupt code and found the interrupt i was using (found it in the RE CE code) is defined as a software interrupt
+21:06 < antagonizt> #define VR4122_IRQ_SOFT      19
+21:06 < jal0> irq you were using in the serial driver?
+21:07 < antagonizt> trying to use... it never worked
+21:09 < jal0> i dont think all of the register address for the serial driver are correct, so setting the IMR will not have the effect expected. have you looked at my lastest updates? it may help to explain why
+21:09 < antagonizt> update to what?
+21:10 < jal0> be300 schematic
+21:10 < jal0> the address lines and how they are connected to the unknown chip
+21:11 < antagonizt> what should i be looking for?
+21:11 < jal0> btw, if you want an into what an ASIC chip is about --> http://www.nec.de/_PDF/13821e10.pdf
+21:11 < jal0> do you see how the address lines are connected?
+21:13 < antagonizt> the add* lines?
+21:13 < jal0> yeap
+21:13 < jal0> so the companion chip does not see the address the same way at the cpu
+21:16 < jal0> so reading from say address xxxx xxxx xxx5, the companion may see xxxx xxxx xxxx xx1D
+21:16 < jal0> but that just a guess, i have to figure out what the address lines on the companion chip are to be sure
+21:18 < jal0> but what you can tell is that address xxx4,xxx8, and xxxC all reference the same memory location on the companion chip
+21:19 < jal0> due to the fact that add4 and add3 are shorted
+21:19 < jal0> is this making any sense to you ?
+21:20 < antagonizt> not really...
+21:20 < jal0> ;)
+21:21 < jal0> you have any experience with microprocessor design?
+21:21 < antagonizt> not on this high of a level... 
+21:21 < jal0> that would explain it :). Once i know for sure what the conversion is i can start fixing the serial driver.
+21:22 < antagonizt> i made a very simple mips processor about 2 years ago
+21:22 < antagonizt> in altera
+21:23 < antagonizt> the add pins are used to access memory?
+21:24 < jal0> it actually very simple. just think of it in binary. if 0000 1000 is output on add1->add8, then due to the way add4 and add3 are shorted, the companion would see 0001 1100.
+21:26 < jal0> whats altera
+21:27 < antagonizt> vhdl design software
+21:27 < jal0> yes add pins are for accessing memory
+21:27 < jal0> data* for data
+21:28 < jal0> at this level, the kernal sources dont help, you need to have the datasheets
+21:29 < jal0> did you check out the link on the ASIC devices?
+21:29 < jal0> that's what i believe the companion chip is
+21:30 < antagonizt> cool
+21:31 < jal0> now i just have to find which macro is used for the serial communications core, and things should start falling into place
+21:32 < jal0> http://www.be-central.be/modules.php?op=modload&name=phpBB_14&file=index&action=viewtopic&topic=543&3
+21:33 < jal0> for a bit on nestalgia(sp??)
+21:55 < antagonizt> nostalgia
+21:55 < jal0> ;)
+--- Log closed Sun Dec 08 00:00:24 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

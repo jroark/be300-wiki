@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_05_14.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_05_14.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed May 14 00:00:12 2003
+06:37 -!- Netsplit niven.freenode.net <-> irc.freenode.net quits: antagonizt
+06:37 -!- Netsplit over, joins: antagonizt
+06:45 -!- mouse [~mouse@194.67.87.71] has joined #linux4be
+06:46  * mouse is back (gone 00:00:33)
+07:36 -!- mouse [~mouse@194.67.87.71] has quit [Read error: 104 (Connection reset by peer)]
+11:54 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit ["BitchX: TASTES GREAT! LESS FILLING! TASTES GREAT! LESS FILLING!"]
+14:49 -!- Netsplit niven.freenode.net <-> irc.freenode.net quits: BaalAW, PsycoXul, jal0, jal0_logger
+14:56 -!- Netsplit over, joins: PsycoXul, BaalAW, jal0_logger, jal0
+17:14 -!- DanielW [DanielW@ACB124BB.ipt.aol.com] has joined #linux4BE
+17:14 < DanielW> hi
+17:18 < DanielW> has the project been stopped?
+17:19 < PsycoXul> it just seems to be going really slow
+17:24 < DanielW> oh
+17:25 < DanielW> i would like to have a linux pda but i do not have that money for the big ones
+17:25 < PsycoXul> yeah
+17:27 < DanielW> in the moment i do not have a casio be 300 but i am thinging of buy one
+17:42 < DanielW> mhh, linux4be and the casio E-125G or works it only with the be 300?
+17:42 < PsycoXul> no idea
+18:15 -!- DanielW [DanielW@ACB124BB.ipt.aol.com] has quit []
+19:09 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+20:20 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+21:12 -!- Netsplit niven.freenode.net <-> irc.freenode.net quits: BaalAW, PsycoXul
+21:17 -!- Netsplit over, joins: BaalAW, PsycoXul
+21:31 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+--- Log closed Thu May 15 00:00:37 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

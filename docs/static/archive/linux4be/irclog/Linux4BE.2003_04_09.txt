@@ -1,0 +1,159 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_09.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_09.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Apr 09 00:00:01 2003
+--- Log closed Wed Apr 09 00:34:24 2003
+--- Log opened Wed Apr 09 00:34:31 2003
+00:34 !irc.freenode.net *** Looking up your hostname...
+00:34 !irc.freenode.net *** Checking ident
+00:34 !irc.freenode.net *** No identd (auth) response
+00:34 !irc.freenode.net *** Found your hostname
+--- Log closed Wed Apr 09 00:40:05 2003
+--- Log opened Wed Apr 09 03:42:00 2003
+03:42  * mouse is back (gone 13:33:18)
+14:16 -!- antagonizt [~johnbot@ip-64-139-40-162.dsl.sjc.megapath.net] has joined #Linux4BE
+14:41 -!- antagonizt [~johnbot@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["Client Exiting"]
+14:57  * mouse is away: fue a casa...
+18:46 -!- nykkto [~nykkto@66.33.46.16] has joined #linux4be
+18:46 < nykkto> sigh - logger mania
+18:47 -!- nykkto [~nykkto@66.33.46.16] has left #linux4be []
+18:56 -!- nykkto [~nykkto@66.33.46.16] has joined #linux4be
+19:23 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: nykkto, jal0_logger
+19:24 -!- Netsplit over, joins: nykkto, jal0_logger
+19:25 < nykkto> hic
+20:02 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:18 < nykkto> hi
+20:18 < jal0> hey nykkto
+20:18 < nykkto> hows things?
+20:19 < jal0> been playing with a new toy... a dvd burner
+20:19 < nykkto> ooher, and you have been burning movies n stuff for me right?
+20:20 < jal0> been learning how to 'back-up' my own..... there is a ton of info on the subject
+20:20 < nykkto> cool :) that is a good thing !
+20:21 < jal0> also trying to get further in my CE hacking efforts
+20:23 < nykkto> yah, I have been dragged off into the "real world" more than I would like to have been
+20:24 < jal0> i here you 
+20:25 < nykkto> So how is you little computer room doing at home?
+20:25 < jal0> ?.. not sure what you mean
+20:25 < nykkto> well I remember you had a ton of stuff in the basement, and I thought you had a room to work in at home
+20:26 < jal0> yeah, the stuff is still in the basement... havn
+20:26 < jal0> havn't had time to look at it lately
+20:27 < nykkto> ahh, I get to have cable internet access soon, and I ahave to move in 3 months I think ACK!
+20:27 < jal0> yeap, moving does indeed suck
+20:28 < nykkto> 3rd floor no elevator :(
+20:30 < nykkto> not like the horror of your last move - across the street was it?
+20:30 < jal0> two house over ;P
+20:31 < jal0> but it still sucked :)
+20:31 < nykkto> yep, and that was only half a move!
+20:42 < nykkto> so you guys are settled in now I assume
+20:42 < jal0> yeap
+20:43 < nykkto> lol- I have 3 different chats going at the same time, I am doing well to keep up :)
+20:43 < jal0> :)
+20:44 < nykkto> So other than the CF updates any more progress made?
+20:44 < jal0> not that i know of
+20:48 < jal0> bbl
+20:48 -!- jal0 is now known as jal0_away
+22:07 -!- nykkto [~nykkto@66.33.46.16] has left #linux4be []
+--- Log closed Thu Apr 10 00:00:33 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

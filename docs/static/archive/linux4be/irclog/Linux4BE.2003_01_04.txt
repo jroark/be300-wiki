@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_04.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_04.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Jan 04 00:00:19 2003
+00:04 -!- jal0_wrkn is now known as jal0
+03:14 -!- jal0 is now known as jal0_zzz
+03:35 -!- wew [wew@d220-155.RES.UMontreal.CA] has joined #linux4be
+03:35 -!- wew [wew@d220-155.RES.UMontreal.CA] has left #linux4be []
+06:02 -!- \malex\ [abeyn@shiny.fatelectrons.org] has joined #linux4be
+06:02 < \malex\> morning
+06:04 < \malex\> has anyone tried doing this with an E-125?
+06:34 -!- \malex\ [abeyn@shiny.fatelectrons.org] has quit [Read error: 110 (Connection timed out)]
+07:34 -!- \malex\ [abeyn@shiny.fatelectrons.org] has joined #linux4be
+08:19 < \malex\> anyone around? is there a kernel image around with the ramdisk already created? my dsl is misbehaving, and i dont look forward to downloading 30+megs to compile my own :)
+08:25 < Baalz> Yes there is
+08:26 < Baalz> http://linux4.be/dummies/index2.php
+08:26 < Baalz> Look there
+08:42 -!- \malex\ [abeyn@shiny.fatelectrons.org] has quit [Read error: 110 (Connection timed out)]
+09:45 -!- themaw [~marc@p5085DAA1.dip.t-dialin.net] has joined #linux4be
+09:46 < themaw> hi there!
+10:18 < themaw> has anyone successfully compiled a running ncurses-app for the be ?
+11:18 -!- themaw_ [~marc@p5085D389.dip.t-dialin.net] has joined #linux4be
+11:31 -!- themaw [~marc@p5085DAA1.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+11:34 -!- themaw_ is now known as themaw
+12:36 -!- jal0_zzz is now known as jal0
+14:52 -!- themaw_ [~marc@pD9E5CDA0.dip.t-dialin.net] has joined #linux4be
+15:10 -!- themaw [~marc@p5085D389.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+15:17 -!- themaw__ [~marc@pD9548A95.dip.t-dialin.net] has joined #linux4be
+15:34 -!- themaw_ [~marc@pD9E5CDA0.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+15:34 -!- themaw_ [~marc@p5085D5D9.dip.t-dialin.net] has joined #linux4be
+15:42 -!- themaw__ [~marc@pD9548A95.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+15:45 -!- themaw__ [~marc@pD9E5CBB3.dip.t-dialin.net] has joined #linux4be
+16:03 -!- themaw_ [~marc@p5085D5D9.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+17:07 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:07 < nykkto> zzzzz every one!
+17:35 < nykkto> Ahh notes for posterity :)
+17:59 -!- themaw__ [~marc@pD9E5CBB3.dip.t-dialin.net] has quit [".. fallen asleep .."]
+18:15 < nykkto> lol mr sleepy head
+19:16 < Baalz> Hi everyone!
+19:24 < Baalz> I have finished the page we could put in the dummies section...
+19:25 < Baalz> You can view it in a webpage here: http://www.megaoctet.net/~baal/index.php?action=howto&howto=linux4be
+19:26 < Baalz> The raw text is there: http://www.megaoctet.net/~baal/linux4be.txt
+19:34 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+20:20 -!- Baalz is now known as BaalZzZ
+20:36 -!- \malex\ [abeyn@shiny.fatelectrons.org] has joined #linux4be
+22:09 < jal0> hi malex
+22:10 < \malex\> hello
+22:10 < jal0> u just lurking? or you got some questions
+22:11 < \malex\> i'm building the toolchain now, i'm gonna try stuffing it on my E-125
+22:11 < jal0> stuffing what?
+22:11 < \malex\> i found a couple of kernels on linux4.be with ramdisks, but i couldnt for the heck of me figure outhow to get serial to work, so i'll try recompiling
+22:11 < \malex\> linux
+22:11 < \malex\> :)
+22:12 < jal0> dont think they'll work for the E-125, there for the BE-300
+22:12 < \malex\> well, i got it to display the bouncing demo thing
+22:12 < \malex\> input and serial isnt working tho
+22:13 < \malex\> but thats why i'm making the toolchain
+22:13 < \malex\> so yeah, fornow i'm just lurking for tips :)
+22:13 < jal0> ic, serial/input is BE-300 specific so it probably wont work 'out-of-box'
+22:14 < \malex\> ah
+22:14 < jal0> your using an older image from filip?
+22:14 < \malex\> my endgoal is to run some palm emu on it :)
+22:15 < jal0> ic, don't know anything about the E-125, only the BE-300
+22:15 < jal0> you should talk to filip, he has one
+22:16 < \malex\> i used the one listed on kernel.php, and ~jroark/files/vmlinux-pgui-demo
+22:16 < \malex\> both ran, but without serial/input
+22:16 < jal0> E-125... that have a vr4131 in it?
+22:16 < \malex\> i think its vr4122
+22:17 < \malex\> i cant see the kernel messages well enough to tell
+22:17 < \malex\> yes, 150mhz vr4122 according to google
+22:18 < jal0> i'm surprised it works at all, the images are for the BE-300 with a vr4131 micro
+22:18 < \malex\> i guess they are similar enough, the two chips, that the kernel boots
+22:18 < \malex\> yeah i know :)
+22:18 < \malex\> hmm, i should try the e-100 kernel, that has vr4121
+22:19 < jal0> so you going to start porting linux to the e-125?
+22:19 < \malex\> i hope i dont have to do too much actual porting :)
+22:19 < jal0> good luck ;)
+22:19 < \malex\> heh, i hope Debian/mipsel would work 
+22:19 < \malex\> the userland anyhow
+22:20 < jal0> are there already e-125 linux distro's out there?
+22:20 < \malex\> not that i found
+22:21 < \malex\> but Debian/mipsel is far along, and it might work without recompiling
+22:22 < jal0> for the micro maybe, but the external hardware is pda specific. You might get things to boot, but everything else(hardware drivers and such) you most likely will have to write yourself.
+22:23 < \malex\> yeah, but i might get really lucky :)
+22:24 < \malex\> i've seen some mentions on the net that linux has been run on the e-125, as has netbsd, so it might not be too bad
+22:24 < \malex\> now i gotta figure out why libc doesnt build tho
+22:24 < jal0> what platform?
+22:24 < \malex\> crosscompiling from i386-linux to mipsel-linux
+22:24 < \malex\> i get  ../sysdeps/unix/syscall.S:28: Error: absolute expression required `li'
+22:25 < jal0> you using a precompiled toolchain?
+22:25 < \malex\> nah, i'm recompilng everything
+22:25 < \malex\> coz i forgot about the timesys bits :)
+22:25 < jal0> have you seen my page?
+22:25 < \malex\> i might have, who are you? :)
+22:26 < jal0> http://www.linux4.be/~jal0
+22:26 < \malex\> ah no
+22:26 < jal0> one of the linux4be developers
+22:26 < \malex\> well dang, i'll get that then, ty 
+22:27 < jal0> ty?
+22:27 < \malex\> oh sorry, thank you :)
+22:27 < jal0> np ;)
+22:29 < jal0> the toolchain should buit without a hitch if you use the included build script, i've tested it on a couple of systems. or you can just opt to get the prebuit one
+22:29 < \malex\> i'll get the prebuilt one for now
+22:29 < \malex\> or rather getting
+22:29 < jal0> ok
+22:29 < \malex\> but thanks
+22:30 < \malex\> heh the whole reason i'm doing this is because there are no palm emulators for wince that i found :)
+22:31 < jal0> i saw one a while back when search the net, but it escapes me as to where
+22:31 < \malex\> i think thats the one they took offline 2 months ago :)
+22:32 < jal0> i think it also required that you actually owned a palm, so you could download the bootrom from it.
+22:33 < \malex\> yeah, i have a palm3xe, but i dropped it and it doesnt turn on anymore :(
+22:34 < jal0> well, time for me to turn in for the night, if you have any problems with the toolchain, i'm usually here or you can email me.... later
+22:34 < \malex\> thanks
+22:34 < jal0> np
+22:34 -!- jal0 is now known as jal0_Zzz
+--- Log closed Sun Jan 05 00:00:46 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

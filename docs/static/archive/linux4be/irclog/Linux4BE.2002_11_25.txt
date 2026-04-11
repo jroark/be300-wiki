@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_25.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_25.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Nov 25 00:00:28 2002
+00:42 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+00:48 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+10:19 -!- echoalia [~echoalia@third.bitsense.net] has joined #linux4be
+12:27 -!- sinfonian [~bshirclif@np-dsl-216-12-216-52.ev1.net] has joined #linux4be
+12:31 -!- sinfonian [~bshirclif@np-dsl-216-12-216-52.ev1.net] has left #linux4be []
+14:07 -!- Smigma [~mparrish@67.98.150.196] has joined #Linux4BE
+14:08 -!- Smigma [~mparrish@67.98.150.196] has quit [Client Quit]
+14:15 -!- someguy_bbl [~matt@psyche.eggs.net] has joined #linux4be
+14:15 -!- someguy_bbl is now known as someguy
+14:47 -!- jal0atWrk [~jal0_wrkn@208.33.58.215] has joined #linux4be
+14:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.215] has quit [Client Quit]
+14:56 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+14:58 < hewhew> any good news?? =]
+15:37 -!- Filip [~Filip@166.212-136-217.adsl.skynet.be] has joined #Linux4BE
+15:37 < hewhew> hi!#%
+15:38 < Filip> wrong keyboard layout ?
+15:38 < Filip> fingers swapped position ?
+15:38 < Filip> or just angry ?
+15:38 < Filip> or all of the above
+15:40 < antagonizt> hey filip
+15:40 < Filip> hi antagonizt
+15:41 < Filip> I see jal0 made some progress on his monitor 
+15:42 < hewhew> any good news?? =]
+15:42 < Filip> made me think of a minimal, NAND  based bootloader
+15:42 < Filip> something like agenda's pmon
+15:43 < hewhew> <-- sleep deprived
+15:43 < antagonizt> that would be nice to have
+15:44 < Filip> and much safer than reflashing the OS each time: a minimal bootloader, which loads the kernel and is able to update  the kernel
+15:44 < Filip> we would still rflash os, but not  the bootloader
+15:44 < antagonizt> just need a NAND driver...
+15:49 < antagonizt> did you read the logs... about how jal0 was having strange restart issues?
+15:50 < Filip> yep, similar to the lockup problems I had with bootloader 
+15:50 < Filip> when reading certain memory regions, the be just locked-up
+16:18 -!- Filip_ [~Filip@247.50-200-80.adsl.skynet.be] has joined #Linux4BE
+16:18 -!- Filip [~Filip@166.212-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+17:10 < Filip_> antagonizt ? 
+17:10 < Filip_> was it you asking about the switch next to the cf slot ?
+17:11 < Filip_> think I know why it's there: Casio sells a pcmcia adapter for the CF slot, and found this in the headers:  #define PCMCIA_JACK_DETECT
+17:25 < antagonizt> cool... that makes sense
+17:25 < Filip_> also found some more regs
+17:25 < Filip_> 0xaa000980  BlgReg_BASE ,size 0x68 (Casio SDK, buzzer.h)  
+17:25 < Filip_> 0xaa001128  CmmReg_BASE ,size 0x04 (Casio SDK, buzzer.h)  
+17:26 < Filip_> added both to my memory map
+17:26 < antagonizt> for the buzzer? right?
+17:27 < Filip_> well, there in buzzer.h  , but Cmm and Blg don't ring a bell (or buzzer)  for me
+17:27 < Filip_> maybe just try to poke some data into those
+18:00 -!- jal0atWrk [~jal0_wrkn@208.33.58.197] has joined #linux4be
+18:02 < Filip_> hi jal0
+18:03 < jal0atWrk> hey filip
+18:04 < Filip_> seen you progress, and your problem
+18:04 < Filip_> looks similar to the lock-ups I was experiencing with the bootloader
+18:04 < Filip_> always froze at certain adressess, never found out why. 
+18:04 < jal0atWrk> yes strange, still havnt figured it out
+18:05 < Filip_> maybe triggering some kind of interupt, which is not handled ?
+18:05 < jal0atWrk> actually it dosnt freeze, the program just restarts like its first being ran
+18:06 < jal0atWrk> which is strange because the code is in a while(1) loop
+18:07 < jal0atWrk> did you still plan on sending me that pcb?
+18:07 < Filip_> could it be there is a peripheral ic  at that location, and notices being read, generating an interrupt ?
+18:07 < Filip_> yes, could you mail/pm me a shipping address?
+18:08 < jal0atWrk> maybe, but the program should return to where it left off not restart
+18:08 < jal0atWrk> and all i'm doing is reading from the address
+18:08 < jal0atWrk> yeap
+18:09 < jal0atWrk> really would help getting a mapping of the bus layout
+18:10 < Filip_> I  was browsing the SDK headers once  more, and added two addresses from buzzer.h to the memorymap
+18:11 < jal0atWrk> have you tried getting buzzer to work?
+18:11 < Filip_> I also read some documentation on writing device drivers for windows ce today, and it looks like touchpanel code has to be in a separate DLL (and not liniked in with the kernel)
+18:12 < jal0atWrk> hmm, got a link?
+18:12 < Filip_> no, might try poking some data into these adresses and if it does something
+18:12 < Filip_> this is one of them http://www.embedded.com/story/OEG20010618S0083
+18:13 < Filip_> Native drivers are built as dynamic-link libraries, with two exceptions: the battery and the LED drivers are built as static libraries (linked with the GWES module when a CE image is built) because of their small size. Native drivers are always loaded at boot time. 
+18:13 < jal0atWrk> so that static lib should be included with the be300 sdk?
+18:13 < Filip_> which is good: a dedicated dll for touchscreen means less code to look at
+18:14 < Filip_> not sure if casio included it (it's not supposed to contain user-calable code)
+18:15 < Filip_> (I couldn't find it)
+18:16 < jal0atWrk> yes, but you should be able to create 3rd party drivers, without kernel code. if the buzzer requires the use of a static lib, it should be included. i look for it when i get home.
+18:17 < Filip_> no, you are supposed to use the higher-level sound api's, not drive the underlying hardware directly
+18:17 < jal0atWrk> they do not support 3rd party drivers?
+18:17 < Filip_> well, there is a buzzer.libi
+18:18 < Filip_> libi
+18:18 < Filip_> =lib
+18:18 < jal0atWrk> whats the size?
+18:18 < Filip_> contains 7 entries, 4 of around 40 bytes, 
+18:19 < Filip_> 250,277 and491 bytes
+18:19 < jal0atWrk> so its not just an import lib
+18:19 < jal0atWrk> contains actual code
+18:20 < Filip_> hmm, loads external lib's  (which IDA can't find)
+18:20 < jal0atWrk> what libs?
+18:21 < jal0atWrk> may be form PB, that i have and can look for
+18:21 < jal0atWrk> form=from
+18:24 < Filip_> looking atit with hexeditor, itdoesn't seem to do anything, looks like a simple import lib
+18:24 < Filip_> goinig to re-inistall my evc tomorrow
+18:30 < Filip_> http://www.woodmann.com/fravia/nchanta_Abusing%20Microsoft%20EVT2.htm
+18:40 < Filip_> going to get some sleep now,  cu later
+18:41 -!- Filip_ [~Filip@247.50-200-80.adsl.skynet.be] has left #Linux4BE []
+19:07 -!- sinfonian [~bshirclif@twhou-207-218-201-118.ev1.net] has joined #linux4be
+19:07 < sinfonian> hola.. whats up?
+19:08 < antagonizt> not much
+19:08 < sinfonian> any progress this weekend?  
+19:08 < sinfonian> hey did you see the thing I posted on be-central?
+19:11 < antagonizt> yeah it looked nice
+19:11 < sinfonian> ok good
+19:12 < sinfonian> any progress on the touchscreen or serial input?
+19:12 < antagonizt> nothing major
+19:15 -!- jal0atWrk [~jal0_wrkn@208.33.58.197] has quit [Read error: 60 (Operation timed out)]
+19:31 -!- sinfonian [~bshirclif@twhou-207-218-201-118.ev1.net] has left #linux4be []
+--- Log closed Tue Nov 26 00:00:54 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

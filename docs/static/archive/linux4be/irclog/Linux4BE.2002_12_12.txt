@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_12.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_12.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Dec 12 00:00:11 2002
+03:29 -!- sinfonian [~bshirclif@np-dsl-216-12-217-194.ev1.net] has joined #linux4be
+03:31 -!- sinfonian [~bshirclif@np-dsl-216-12-217-194.ev1.net] has left #linux4be []
+09:34 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt, jal0, jal0_logger
+09:35 -!- Netsplit over, joins: jal0, antagonizt, jal0_logger
+12:11 -!- sinfonian [~bshirclif@twhou-215-160.ev1.net] has joined #linux4be
+12:12 < sinfonian> hello 
+12:12 < jal0> hey sinfonian
+12:13 < sinfonian> hey whats going on around here?
+12:14 < jal0> not much on my end lately, busy with work :(
+12:14 < sinfonian> ok
+12:16 -!- themaw [~chatzilla@pD9548871.dip.t-dialin.net] has joined #linux4be
+12:16 < themaw> Hi there!
+12:17 < sinfonian> hi
+12:18 < themaw> how are you ?
+12:20 < sinfonian> im good thanks for asking
+12:21 < themaw> fine.
+12:21 < themaw> Well, seems like everyone's having a busy time at the moment. The log of yesterday was very short. ;)
+12:24 < themaw> ok, gotta go.
+12:24 < themaw> cu
+12:24 -!- themaw [~chatzilla@pD9548871.dip.t-dialin.net] has quit ["ChatZilla 0.8.9 [Mozilla rv:1.1/20020826]"]
+13:09 -!- sinfonian [~bshirclif@twhou-215-160.ev1.net] has left #linux4be []
+16:04 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+16:05 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit [Client Quit]
+16:08 -!- Filip [~Filip@139.102-136-217.adsl.skynet.be] has joined #Linux4BE
+16:08 < Filip> hi all
+16:08 < antagonizt> hi filip
+16:09 < Filip> any news ?
+16:10 < antagonizt> not that i know of
+16:26 < antagonizt> trying to build TinyX...
+16:26 < antagonizt> it has an odd make system
+16:26 < Filip> it's part of  X , correct ?
+16:26 < antagonizt> yes
+16:27 < antagonizt> it's not set up in any easy way to cross compile...
+16:28 < antagonizt> even if i can build it... i don't think we can test it without at least a fake mouse driver
+16:28 < antagonizt> X usually croaks without a valid kb and mouse...
+16:31 < Filip> can't you just tell it to use a serial mouse (SIU)?
+16:31 < antagonizt> it probes
+16:31 < antagonizt> iirc
+16:43 < antagonizt> brb
+17:05  * antagonizt is back
+17:52 < antagonizt> grrr... picogui is frustrating
+17:52 < Filip> why ?
+17:53 < antagonizt> the kb drivers load... but the terminal prog exits immediately after loading wihtout any error
+17:53 < antagonizt> and if i "type" anything the server crashes 
+17:54 < antagonizt> it says CLIENT ERROR unexpected response type or something
+17:54 < Filip> maybe becausee there is no mouse ?
+17:54 < Filip> how  does a window get focus ?
+17:54 < antagonizt> the FAQ says it doesn't need a mouse...
+17:54 < antagonizt> not sure
+17:55 < antagonizt> but if i hit up, down, right, left, or tab it crashes
+17:55 < antagonizt> enter and space do nothing
+17:55 < antagonizt> and any other alpha numeric crashes it
+17:55 < Filip> strange
+17:56 < antagonizt> the scanning kb driver shouldn't be doing anything unusual...
+18:16 -!- Filip [~Filip@139.102-136-217.adsl.skynet.be] has left #Linux4BE []
+18:31 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has joined #linux4be
+18:41 < antagonizt> hey jal0 how's it going?
+18:41 < jal0atWrk> hey, waiting for my new be300 to arrive
+18:42 < antagonizt> cool
+18:42 < jal0atWrk> not really new, got it on ebay for about $30
+18:42 < jal0atWrk> the display is broken
+18:43 < antagonizt> broken how?
+18:44 < jal0atWrk> http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&category=3733&item=1943618529&rd=1
+18:45 < jal0atWrk> going to use it for hardware hacking
+18:45 < antagonizt> wonder what happened to it?
+18:46 < antagonizt> kinda looks like water damage...
+18:46 < jal0atWrk> not sure, the guy whos selling it didn't seem to know either
+18:47 < jal0atWrk> going to work on getting a boot monitor in NAND and i dont want to use my good one
+18:48 < antagonizt> yeah NAND work is going to be tricky
+18:50 < jal0atWrk> so you working on anything
+18:50 < antagonizt> trying to get picogui to behave
+18:50 < antagonizt> i also tried to build Tiny X
+18:51 < jal0atWrk> how did it go?
+18:51 < antagonizt> it compiled but i couldn't install it
+18:51 < jal0atWrk> ?
+18:51 < antagonizt> make install failed
+18:51 < jal0atWrk> what kind of errors
+18:51 < antagonizt> i'm not sure what all i need
+18:51 < antagonizt> it tried to find some lib and -lXext
+18:52 < antagonizt> remove the and
+18:52 < antagonizt> the make system is tricky i probably did something wrong
+18:53 < jal0atWrk> have you tried to do a native build?
+18:53 < antagonizt> i have in the past...
+18:54 < antagonizt> it isn't set up very well for cross compiling... some of the bins need to be native and some don't etc
+18:54 < antagonizt> it has a tricky config setup
+18:56 < jal0atWrk> talked to filip latey
+18:56 < antagonizt> he was here briefely today
+18:56 < antagonizt> seems busy
+20:56 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has quit [Read error: 54 (Connection reset by peer)]
+22:45 < antagonizt> jal0, are you around?
+22:49 < antagonizt> i got X working... but i'm not sure how to run a window manager?
+22:49 < antagonizt> check it out: http://www.linux4.be/~jroark/images/
+23:57 < antagonizt> anyway... hopefully you'll read the logs
+23:58 < antagonizt> i couldn't get the proper libs built so i couldn't set up a proper dev environment to build any window managers...
+23:58 < antagonizt> it's tricky
+23:58 -!- antagonizt is now known as antagonizt[zZz]
+--- Log closed Fri Dec 13 00:00:38 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

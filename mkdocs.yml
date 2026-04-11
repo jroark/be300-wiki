@@ -1,0 +1,103 @@
+site_name: BE-300 Wiki
+site_description: Casio Cassiopeia BE-300 hardware, software, and emulator documentation
+site_url: https://wiki.linux4be.com
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - def_list
+
+nav:
+  - Home: index.md
+  - Hardware:
+    - hardware/index.md
+    - NEC VR4131 CPU: hardware/vr4131.md
+    - NEC VRC4173 Companion Chip: hardware/vrc4173.md
+    - Memory Map: hardware/memory-map.md
+    - Register Reference: hardware/registers.md
+    - Interrupts: hardware/interrupts.md
+    - NAND Flash: hardware/nand.md
+    - Serial Port: hardware/serial.md
+    - Framebuffer: hardware/framebuffer.md
+    - Touchscreen: hardware/touchscreen.md
+    - CompactFlash: hardware/cf-socket.md
+    - GPIO & Buttons: hardware/gpio.md
+    - Board Photos: hardware/board-photos.md
+  - Windows CE:
+    - wince/index.md
+    - Boot ROM: wince/boot-rom.md
+    - SPL / Kloader: wince/spl.md
+    - ROM-SPL Handoff: wince/rom-spl-handoff.md
+    - NK.exe Cold Boot: wince/nk-cold-boot.md
+    - NAND Layout: wince/nand-layout.md
+    - Restore Images: wince/restore-images.md
+    - PPSH Debug Interface: wince/ppsh.md
+    - Flash Tools: wince/flash-tools.md
+    - Hibernate & Resume: wince/resume-ctx.md
+  - Linux4.BE:
+    - linux4be/index.md
+    - Getting Started: linux4be/getting-started.md
+    - Bootloader: linux4be/bootloader.md
+    - Kernel: linux4be/kernel.md
+    - Ramdisk: linux4be/ramdisk.md
+    - Toolchain: linux4be/toolchain.md
+    - GUI Frameworks: linux4be/gui.md
+    - Downloads: linux4be/downloads.md
+    - Blog Archive: linux4be/blog-archive.md
+    - Community: linux4be/community.md
+  - Emulator:
+    - emulator/index.md
+    - Architecture: emulator/architecture.md
+    - Building: emulator/building.md
+    - Running: emulator/running.md
+    - Source Layout: emulator/source-layout.md
+    - GXemul Integration: emulator/gxemul.md
+    - BEDiag Tool: emulator/bediag.md
+    - Analysis Tools: emulator/tools.md
+  - Reference:
+    - reference/index.md
+    - Datasheets: reference/datasheets.md
+    - Ground Truth Data: reference/ground-truth.md
+    - NK.exe Memory Layout: reference/nk-memory-layout.md
+    - Glossary: reference/glossary.md

@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_15.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_15.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Apr 15 00:00:46 2003
+01:54 -!- nykkto [~Nobody@c-24-245-35-129.mn.client2.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+04:05 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 110 (Connection timed out)]
+10:24 -!- Sp4wN [~phillk675@12-224-64-207.client.attbi.com] has joined #linux4be
+10:51 -!- Sp4wN [~phillk675@12-224-64-207.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+14:11 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: antagonizt, PsycoXul, jal0_logger
+14:11 -!- Netsplit over, joins: PsycoXul
+14:12 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has joined #linux4be
+14:12 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+20:29 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+21:59 < antagonizt> hey jal0, what is the latest?
+22:02  * jal0 is around
+22:02 < jal0> hey antagonizt
+22:03 < antagonizt> hi jal0
+22:03 < jal0> been doing some home improvements
+22:03 < antagonizt> nice... like what?
+22:03 < jal0> replacing windows
+22:04 < antagonizt> something happen to your windows?
+22:04 < jal0> got 9 more left
+22:04 < jal0> no, there just very only and drafty
+22:04 < jal0> very only=very old
+22:05 < jal0> so have you done anything latly with the linux4be project?
+22:06 < antagonizt> nope
+22:06 < antagonizt> not since working on X
+22:06 < antagonizt> but it looks like things are getting closer
+22:06 < antagonizt> slowly but surely
+22:08 < antagonizt> talked to filip at all recently?
+22:08 < antagonizt> he seems very busy
+22:08 < jal0> getting pretty far with the reverse engineering things. i have asm code for the serial driver that im looking at now
+22:08 < antagonizt> neat... could you put that somewhere i could look as well?
+22:09 < jal0> nope, he hasn't been around.. i shot him an email though just to make sure he was still alive :)
+22:09 < jal0> sure hang on i upload it now
+22:12 < jal0> you know how to allow a directory to be viewed on the linux4be website?
+22:12 < jal0> with a browser?
+22:13 < antagonizt> mmm nope... maybe .htaccess file?
+22:14 < jal0> the code is under ~jal0/serial_driver/
+22:15 < jal0> whats instresting is that there are ALOT of references to the vr4131 siu register in it. 
+22:16 < antagonizt> where did this code come from?
+22:16 < jal0> i created it
+22:16 < antagonizt> yeah the decompiled serial driver also had references to the vr4131 siu
+22:16 < jal0> with some of the tools in my cek.zip package
+22:17 < antagonizt> it was able to act as a driver for either the vr4131 or the companion
+22:17 < antagonizt> a flag to most of the funcs decided
+22:18 < jal0> what serial driver are you talking about? the one CE one?
+22:18 < antagonizt> the decompiled code on the linux4.be server
+22:18 < jal0> yeah, the one from andrey
+22:19 < antagonizt> right
+22:20 < jal0> me an andrey have been collaborating alot lately on creating tools/utilities to aid in our reverse engineering efforts.
+22:22 < jal0> the results of which are contained in my CEK.zip package. I also set up a fourm for disscussing this sort of thing, but alas not many people seem intrested in this sort of stuff.
+22:23 < jal0> were you able to access the serial_driver/ dir on linux4.be that i just setup?
+22:23 < antagonizt> yeah the be community is more interested in hacking the registry and replacing the shell
+22:23 < antagonizt> nope
+22:23 < antagonizt> access denied
+22:23 < jal0> try typing the full path
+22:24 < antagonizt> ?
+22:24 < antagonizt> from a shell or in the browser?
+22:24 < jal0> shell
+22:24 < antagonizt> haven't tried just yet
+22:25 < antagonizt> yeah i can see it
+22:28 < jal0> have you done much re'ing of assembly?
+22:28 < antagonizt> nope
+22:31 < jal0> :(, the code i just uploaded is just from the HWInit function of the CE serial driver. It's going to take some time to go through it all.
+22:32 < antagonizt> just the serial initialization routines?
+22:32 < jal0> yeap
+22:32 < antagonizt> yikes
+22:33 < jal0> and all the fuctions that it calls
+22:33 < jal0> and the fuctions they call...
+22:33 < jal0> etc ..
+22:34 < jal0> for some reference to the vr4131's siu registers take a look at Serial_Func0056C018.txt
+22:35 < antagonizt> what is the base and offset for the siu?
+22:36 < jal0> 0xaf000800
+22:38 < jal0> sorry it's 0x0F00 0800
+22:42 < jal0> ok, time for me to get to bed. i've been working day's lately and get up now around 5:30AM. Ugg.. it's taking some time to get use to :/
+22:42 < antagonizt> night then
+22:43 < jal0> later
+22:43 < antagonizt> ttyl
+22:43 -!- jal0 is now known as jal0_Zzz
+23:04 -!- antagonizt [~jroark@ip-64-139-40-162.dsl.sjc.megapath.net] has quit ["[BX] Check out the sexy BitchX pr0n at http://127.0.0.1/bx-pron.html"]
+--- Log closed Wed Apr 16 00:00:15 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

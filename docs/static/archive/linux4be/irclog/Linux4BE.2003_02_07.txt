@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_07.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_07.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Feb 07 00:00:00 2003
+00:04 -!- The_Evil_Monkey [~beef@wa-longview6a-98.lgvwwa.adelphia.net] has joined #linux4be
+00:06 < The_Evil_Monkey> Hi everyone, I downloaded the linux dist off your dummies section and whenever I try to get to the root of the ram disk I get an error saying permission denied...is there a reason?
+00:15 < The_Evil_Monkey> does the distribution include the ram disk installed or do I have to install it myself? the dummies section was not very clear on that. And I sure am a dummie
+00:33 -!- The_Evil_Monkey [~beef@wa-longview6a-98.lgvwwa.adelphia.net] has quit []
+--- Log closed Fri Feb 07 01:48:39 2003
+--- Log opened Fri Feb 07 01:48:40 2003
+01:48 !irc.freenode.net *** Looking up your hostname...
+01:48 !irc.freenode.net *** Checking ident
+01:48 !irc.freenode.net *** No identd (auth) response
+01:48 !irc.freenode.net *** Found your hostname
+--- Log closed Fri Feb 07 01:54:03 2003
+--- Log opened Fri Feb 07 02:01:15 2003
+02:01 !irc.freenode.net *** Looking up your hostname...
+02:01 !irc.freenode.net *** Checking ident
+02:01 !irc.freenode.net *** Found your hostname
+02:01 !irc.freenode.net *** No identd (auth) response
+--- Log closed Fri Feb 07 02:07:03 2003
+--- Log opened Fri Feb 07 14:13:18 2003
+14:13 -!- Mouse [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+14:14 -!- Mouse [~mouse@IREX-GW-2.radio-msu.net] has quit [Client Quit]
+19:57 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+19:57 -!- jal0_logger [jal0_logge@12.243.94.89] has quit [Read error: 54 (Connection reset by peer)]
+20:39 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit []
+20:45 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:45 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+22:05 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+22:12 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit []
+22:45 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+23:11 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+23:15 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Sat Feb 08 00:00:26 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

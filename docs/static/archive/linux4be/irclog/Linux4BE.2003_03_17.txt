@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_17.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_17.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Mar 17 00:00:47 2003
+00:56 -!- antagonizt [~johnbot@adsl-67-65-161-215.dsl.hstntx.swbell.net] has joined #Linux4BE
+01:00 -!- antagonizt [~johnbot@adsl-67-65-161-215.dsl.hstntx.swbell.net] has quit [Client Quit]
+02:09 -!- souterrain [~souterrai@pool-141-149-123-16.pghk.east.verizon.net] has quit [Remote closed the connection]
+02:16 -!- souterrain [~souterrai@pool-141-149-109-151.pghk.east.verizon.net] has joined #Linux4BE
+03:05 -!- souterra1n [~souterrai@pool-141-149-109-125.pghk.east.verizon.net] has joined #Linux4BE
+03:22 -!- souterrain [~souterrai@pool-141-149-109-151.pghk.east.verizon.net] has quit [Read error: 110 (Connection timed out)]
+03:38 -!- souterrain [~souterrai@pool-141-149-109-112.pghk.east.verizon.net] has joined #Linux4BE
+03:39 -!- souterra1n [~souterrai@pool-141-149-109-125.pghk.east.verizon.net] has quit [Read error: 110 (Connection timed out)]
+08:26  * mouse is back (gone 20:12:40)
+12:03 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+12:12 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+12:31  * mouse is away: fue a casa...
+17:25 -!- PsycoXul [psyco@adsl-63-205-41-2.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+17:39 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+17:40 < jal0atWrk> anyone around?
+17:42 -!- souterrain [~souterrai@pool-141-149-109-112.pghk.east.verizon.net] has quit [Read error: 110 (Connection timed out)]
+18:03 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit []
+18:17 -!- PsycoXul [psyco@adsl-63-205-42-187.dsl.lsan03.pacbell.net] has joined #linux4be
+19:12 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+19:20 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+21:07 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+21:07 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+21:07 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+21:07 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Tue Mar 18 00:00:14 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

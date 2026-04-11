@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_28.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_28.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Dec 28 00:00:08 2002
+03:08 -!- another [~another@ppp-209-87-245-135.storm.ca] has joined #linux4be
+03:08 -!- another [~another@ppp-209-87-245-135.storm.ca] has quit [Client Quit]
+11:06 -!- jal0_zzz is now known as jal0
+14:04 -!- wew [~eirc@ppp-209-87-245-135.storm.ca] has joined #Linux4BE
+14:18 -!- wew [~eirc@ppp-209-87-245-135.storm.ca] has quit ["Today is a good day to chat."]
+14:19 -!- WebGuest6612 [~eirc@ppp-209-87-245-135.storm.ca] has joined #Linux4BE
+14:56 -!- WebGuest6612 [~eirc@ppp-209-87-245-135.storm.ca] has quit ["Today is a good day to chat."]
+15:40 -!- Filip [~Filip@153.198-136-217.adsl.skynet.be] has joined #Linux4BE
+15:40 < Filip> jal0 ?
+17:24 < Filip> jal0, I took my E100 apart, but there is no  CASIO CAK2007
+17:25 < Filip> it's the same type of touchscreen (4  wires, manufacurer is ALPS)
+17:26 < Filip> I tried to take a picture of the PCB (poor quality): 
+17:29 < Filip> http://www.linux4.be/download/E100.JPG
+18:37 -!- Filip [~Filip@153.198-136-217.adsl.skynet.be] has left #Linux4BE []
+20:49 < jal0> filip(for the logs): yeah, it looks as though the best bet is to RE the drivers from CE, which is what i'm doing now, i tried enlisting the help of a few 'software crackers', but most of them were unable to help me. So i guess i'm on my own. The first objects is actually to find a way to copy the dll to the pc, which is what i'm working on now.
+22:50 -!- another [~another@ppp-209-87-245-135.storm.ca] has joined #linux4be
+22:55 < another> sky are blue, sea are green
+23:29 -!- another [~another@ppp-209-87-245-135.storm.ca] has quit ["BitchX-1.0c19 -- just do it."]
+--- Log closed Sun Dec 29 00:00:35 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

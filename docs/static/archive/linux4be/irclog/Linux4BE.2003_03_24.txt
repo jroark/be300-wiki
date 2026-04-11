@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_24.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_24.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Mar 24 00:00:49 2003
+06:45  * mouse is back (gone 20:22:13)
+09:04 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["reinstall system to new HDD..."]
+10:34 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+10:40 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+10:48 < andrey> hey mouse
+10:49 < mouse> andrey: hi
+10:50 < andrey> how is it going?
+10:51 < mouse> fine
+10:53 < andrey> when are you back to serial driver? ;-)
+10:56 < mouse> serial driver??
+10:57 < andrey> I mean touch %-)
+10:59 < andrey> Didn't have enough sleep today, so I'm a little absracted...
+11:02 < mouse> :)
+11:02 < mouse> don't know, I have a lot of work :((((
+11:02 < andrey> ic :-(
+11:03 < andrey> preparing new release?
+11:03 < mouse> no, projects
+11:11 < andrey> ic. I have a lot to do myself. :-((
+12:24  * mouse is away: fue a casa...
+13:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.208] has joined #linux4be
+13:25  * jal0atWrk looks around
+13:45 < jal0atWrk> andrey: you here?
+14:31 < andrey> hey jal0
+14:31 -!- jal0atWrk [~jal0_wrkn@208.33.58.208] has quit [Read error: 104 (Connection reset by peer)]
+14:32 < andrey> was out to launch, forgot to tell about it. :-(
+14:33 < andrey> I mean, lunch :-)
+14:52 -!- jal0atWrk [~jal0_wrkn@208.33.58.152] has joined #linux4be
+14:52  * jal0atWrk look around
+14:53 < jal0atWrk> hey andrey
+15:00 < andrey> hey jal0
+15:00 < jal0atWrk> hey
+15:01 < andrey> finally we've met :-)
+15:01 < jal0atWrk> :).... and oh yeah,thanks for the email.
+15:01 < jal0atWrk> it makes since
+15:01 < andrey> sure :-)
+15:02 < jal0atWrk> now i have to figure out the code that handle the exceptions 
+15:02 < jal0atWrk> btw, did you try out the v2p utility i sent in the email?
+15:02 < andrey> I was trying to remember how it's work but still not sure
+15:02 < jal0atWrk> trying to remember, or trying to figure it out?
+15:03 < andrey> yes, I tried. Nice thing, easy to use, the only problem I've found is that if I specify memory dump using path (..\RAM\Memory.dmp) it cannot find it.
+15:04 < andrey> If I copy Memory.dmp to the same directory, everything is fine.
+15:04 < jal0atWrk> hmm, the path is just passed along to fopen as is.
+15:05 < jal0atWrk> i put the sources in the cek.zip tonight
+15:06 < andrey> I tried to remember. I looked into this before and one of the tools I've written was SysAPI.c that lists all registered servers.
+15:06 < andrey> I copied it to my home dir.
+15:07 < jal0atWrk> yeah, i was looking at this, none of the .out files listed a RegisterDevice call though so i'll have to do some hunting
+15:07 < andrey> Good. I'll have a look.
+15:08 < andrey> This address is converted into server id and entry number within this server
+15:09 < andrey> But I'm still unsure how exactly
+15:09 < jal0atWrk> do you know what the system service handler routine is called?
+15:11 < jal0atWrk> found a good reference to this stuff, although its for NT -> http://www.sysinternals.com/ntw2k/info/ntdll.shtml
+15:12 < andrey> When processing system call through exception? ObjectCall
+15:13 < jal0atWrk> yes
+15:14 < andrey> it's in coreos/nk/kernel/objdisp.c
+15:14 < jal0atWrk> cool, thanks
+15:16 < andrey> In NT it can be different. CE uses microkernel approach, does NT uses it also?
+15:17 < jal0atWrk> yes, but with mutilple API set front-ends
+15:17 < jal0atWrk> NT is a "modified microkernel" architecture..... from the link above
+15:18 < jal0atWrk> Instead of supporting one basic operating system API, NT implements several.
+15:20 < jal0atWrk> hopefully once we can fully rip open CE, all will become clear ;)
+15:21 < jal0atWrk> it makes things easier being able to work on memory dumps
+15:30 < andrey> Yes, that's why I made it. It's always easier to use statick information :-)
+15:30 < andrey> static :-)
+15:31 < jal0atWrk> ok, thanks for pointing me in the right direction :), have to get back to work now...
+15:31 < jal0atWrk> talk to you later
+15:31 < andrey> thanks to the link :-)
+15:31 < andrey> later
+15:31 < andrey> for the link
+15:31 < andrey> :-)
+15:32 < jal0atWrk> :)
+15:32 -!- jal0atWrk [~jal0_wrkn@208.33.58.152] has quit []
+16:16 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+18:20 -!- jal0_zzz is now known as jal0
+19:06 < PsycoXul> woo
+19:06 < PsycoXul> got my working be-300 now
+21:37  * jal0 sees that PsycoXul will be busy with his new BE300
+21:38 < PsycoXul> heh
+21:38 < PsycoXul> it's charging atm
+21:38  * jal0 sees that PsycoXul will SOON be busy with his new BE300
+21:38 < jal0> ;)
+21:38 < PsycoXul> so anything somebody can contribute who's not a hardware hax0r or hardcore coder? heh
+21:39 < PsycoXul> i really can't wait to have linux on this thing be usable
+21:40 < PsycoXul> the casio stuff sucks and expod is mediocre at best, especialy if you don't wanna fork out for more software
+21:40 < jal0> you could try out gold for us and see that our linux4dummies still work in gold
+21:40 < PsycoXul> heh
+21:41 < jal0> so was your be300 replaced or repaired?
+21:41 < PsycoXul> same serial # so i guess repaired...
+21:42 < jal0> you should of marked it somehow, serial numbers are usually reproduced to match the original one that was purchased. so you cant go by that alone
+21:42 < PsycoXul> ah
+21:43 < PsycoXul> well in that case i'd guess it's new
+21:43 < PsycoXul> heh
+21:43 < PsycoXul> it did come with a CF cover
+21:43 < jal0> all the better
+21:43 < PsycoXul> which i didn't send with it
+21:43 < PsycoXul> so now i've got 2 of the most useless thing it comes with :p
+21:43 < jal0> :)
+22:54 < jal0> night all
+22:54 -!- jal0 is now known as jal0_zzz
+22:59 < PsycoXul> night
+23:10 < PsycoXul> cool i think the screen on this unit is more even and consistent.. at least seems that way so far
+23:10 < PsycoXul> got linux running on it now
+23:10 < PsycoXul> sweeet
+23:12 < PsycoXul> though it just restarted while i was typing ls
+23:12 < PsycoXul> heh
+23:12 < PsycoXul> "du to an OS problem, processing could not continue." etc
+23:15 < PsycoXul> now it just seems to lock up at 0% "Preparing and executing kernel..." :/
+23:23  * PsycoXul restores the last backup he made before it died
+23:34 < PsycoXul> gah, advertisements, and still no expod6 free download...
+23:35  * PsycoXul sticks with 5.1 till linux is usable
+--- Log closed Tue Mar 25 00:00:16 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

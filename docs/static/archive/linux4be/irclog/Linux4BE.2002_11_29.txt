@@ -1,0 +1,399 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_29.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_29.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Nov 29 00:00:23 2002
+00:36 -!- antagonizt is now known as antagonizt[zZz]
+00:37 < antagonizt[zZz]> night folks
+02:34 -!- sinfonian [~bshirclif@twhou-212-214.ev1.net] has joined #linux4be
+02:34 < sinfonian> hello...  Filip .. thanks for fixing the server if you did that
+02:38 < sinfonian> I see you did.. thanks
+02:40 < sinfonian> BTW Filip.. Wolfman wanted to know all the ip addresses you are blocking so he can block them.. and he has a list of blocked DOSers too
+02:54 < sinfonian> Filip.. can you tell how much bandwidth these DOS attacks are wasting?  I dont want you to go over the limit.. 30gig a month right?
+02:54 < jal0> filip is not here
+02:55 < sinfonian> but he reads the logs
+02:55 < jal0> his logger dosnt seem to be active either
+02:55 < sinfonian> the one on his site is
+02:55 < jal0> or... is beweb_logger his logger now?
+02:55 < sinfonian> yea thats it
+02:55 < jal0> ic
+02:56 < sinfonian> comes in handy
+02:56 < jal0> ;) that why i have one always running
+02:56 < sinfonian> it spits out each days irc messages.. even these right now... in real time with a ease to read timestamp too... nice php script
+02:56 < jal0> cool
+02:57 < sinfonian> so anything new?
+02:58 < jal0> working on updating my howto/sdk page and creating a serial monitor prog
+03:02 < sinfonian> serial monitor prog... how is that different then say .. damn whats the name of that program I use in linux for that...  
+03:03 < jal0> its a standalone app that run by itself, no a user prog or kernel driver.
+03:03 < sinfonian> I see
+03:18 < sinfonian> well filip is around on my website.. 
+03:19 < jal0> be-central
+03:19 < jal0> ?
+03:19 < sinfonian> yea
+03:21 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+03:21 < Filip> hi Brian
+03:21 < jal0> hey filip
+03:21 < sinfonian> hi
+03:21 < Filip> hi jal0
+03:22 < Filip> I might get disconnected often, having broadcast attacks at our office again (we're having to much bandwith)
+03:22 < jal0> hey havn't had a chance to get to the monitor yet, i'm still working on updating my page. My wife wouldn't let me look at the computer today, wanted me to be more sociable with the guest.
+03:22 < sinfonian> well I am about to head to bed..
+03:23 < jal0> later sinfonian
+03:23 < sinfonian> anything I should know filip.. 
+03:23 < sinfonian> I saw the casiovince thing
+03:23 < sinfonian> want to e-mail him?
+03:23 < Filip> gone drop him  a mail to see if he can help
+03:24 < sinfonian> help out how?
+03:24 < Filip> brian, seen the message on how to page me ?
+03:24 < sinfonian> how to page you?  like with a pager?
+03:27 < sinfonian> I will BRB
+03:30 -!- rohit [~rohit@202.54.13.34] has joined #linux4be
+03:31 < Filip> jal0: did you read yesterday's log ?
+03:32 < jal0> not sure,about what?
+03:32 < Filip> his disapearing posts at Goo's
+03:32 < jal0> antagonizt?
+03:33 < Filip> yep, antagonizt posted a polite, informative reply with a link to Wolf's forum to someone's question
+03:34 < Filip> it got automatically changed (groom-family became grim-family) and 20 minutes after i had seen his message, that message was deleted...
+03:34 < jal0> yeah reading it now. i dont get it, what was the big issue with it
+03:35 < jal0> you were looking for me?
+03:35 < Filip> you're apparently no longer allowed to refer to 'the other side'
+03:35 < jal0> childish, it is
+03:35 < Filip> and they just delete your post if you do so: no explanation, no nothing
+03:36 < Filip> yes, and makes me wonder how often they modify and/or delete posts... makes me think twice before using those forums
+03:36 < Filip> just wanted to check if you got any further with the monitor, but you already answered that one for me ;-)
+03:37 < Filip> picked up another  used 6GB harddisk for my notebook only for PB
+03:37 < Filip> installed Win2K, eVC and IDAPro on it, now I'm waiting for my other CD's .....
+03:38 < jal0> sorry too many email from people.. its not alot to add dump functionality, just need the time
+03:38 < Filip> no prob at all, still a lot of toher things to do
+03:38 < jal0> how long till you get it
+03:38 < Filip> looks like a lot of people are interested in Linux for their BE's 
+03:39 < Filip> expect it anyday, was posted in the Netherlands yesterday. Might arrive later today or early next week.
+03:39 < jal0> too bad not many want to actually help :0
+03:39 -!- rohit [~rohit@202.54.13.34] has left #linux4be ["Client Exiting"]
+03:40 < jal0> waiting sucks, cant wait to get that pcb, then some real info will be revealed :)
+03:40 < Filip> might change once we get some kind of input working (touchscreen, serial or USB)
+03:41 < Filip> I think more people feel comfortable with userland code, and not kernel/hardware hacking
+03:42 < Filip> statistics for this month:
+03:42 < jal0> yeah, i cant wait for the "why this dosn't work" or "could you get this working" from the masses :/
+03:42 < Filip> 2,373 unique visitors came to the site, as determined by the number of unique IP addresses.  
+03:42 < Filip> The web site received 4,143 visits. A typical visitor examined 8.78 distinct files before leaving the site. A typical visit lasted for 7.30 minutes. The longest visit lasted for 219 minutes. 
+03:43 < jal0> 219 minutes wow. didn't know there was that much to read :)
+03:49 -!- sinfonian [~bshirclif@twhou-212-214.ev1.net] has quit [Read error: 113 (No route to host)]
+04:01 < Filip> looking at : mod_dosevasive is an evasive maneuvers module for Apache to provide evasive
+04:01 < Filip> action in the event of an HTTP DoS attack. 
+04:02 < jal0> what do these attacks do, just eat up bandwidth?
+04:02 < jal0> Denial Of Servic right?
+04:02 < jal0> Servic=Service
+04:04 < Filip> bandwith is not the issue (got plenty, it's on mutliple burstable connections) , it's RAM
+04:04 < Filip> be-central uses a lot of PHP/mysql code
+04:04 < jal0> ic
+04:04 < Filip> and when hitting the server with a huge amount of requests, it starts swapping
+04:05 < Filip> already tuned apache for having less active processes
+04:05 < jal0> and people do this because.....?
+04:05 < Filip> but that mod_dosevasive looks exactly like what we need
+04:05 < Filip> script kiddies.... 
+04:07 < jal0> :\
+04:09 < jal0> btw, the timesys links are broken on the tools page. the new link is  http://www.timesys.com/index.cfm?hdr=sdk_header.cfm&bdy=sdk_searchresults.cfm
+04:15 < Filip> thanks, just fixed it
+04:15 < jal0> np
+04:27 < jal0> i think i'm going to pull an all-nigher... weird, not sleepy at all :)
+04:27 < jal0> nigher=nighter... well maybe a little tired ;)
+10:47 -!- sinfonian [~bshirclif@twhou-209-155.ev1.net] has joined #linux4be
+10:50 < Filip> hi again Brian
+10:50 < sinfonian> hi
+10:50 < sinfonian> just came in to check on things
+10:50 < sinfonian> have to leave in 10 minutes
+10:50 < Filip> ok
+10:50 < sinfonian> anything new?
+10:51 < Filip> no, not really. installed an additional tool to reduce DOS
+10:51 < sinfonian> what does it do?
+10:51 < sinfonian> nm
+10:51 < sinfonian> just got your post
+10:52 < sinfonian> wow.. looks like just the mod we needed
+10:57 < sinfonian> filip were you going to e-mail casiovince or me?
+10:57 < Filip> going to ask him a couple of questions first
+10:57 < sinfonian> ok
+10:58 < sinfonian> what kind of questions?
+10:59 < sinfonian> damn  I got to go.. talk to you guys later.. bye
+10:59 -!- sinfonian [~bshirclif@twhou-209-155.ev1.net] has left #linux4be []
+11:29 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+11:29 -!- Filip [~Filip@193.190.11.247] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+12:03 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit ["Client Exiting"]
+13:28 -!- antagonizt[zZz] is now known as antagonizt
+13:50 < jal0> hey antagonizt
+13:50 < jal0> get enough sleep :)
+14:02 < antagonizt> sure did...
+14:18 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+14:24 < hewhew> hi!@?
+14:32 < antagonizt> hello hewhew
+14:34 < hewhew> hows progress?
+14:34 < hewhew> =)
+14:35 < antagonizt> nothing major...
+14:39 < hewhew> ok
+14:44 -!- Filip [~Filip@208.250-136-217.adsl.skynet.be] has joined #Linux4BE
+14:44 < antagonizt> hello filip...
+14:45 < Filip> hi antagonizt
+14:45 < antagonizt> take care of those DOSing script kiddies?
+14:46 < Filip> installed mod_dosevasive  today
+14:46 < antagonizt> what does that do?
+14:47 < antagonizt> keep too many connections from the same ip?
+14:47 < Filip> A module for Apache 1.3 giving Apache the ability to fend off request-based DoS 
+14:47 < Filip> attacks conserving your system resources and bandwidth. This new tool maintains 
+14:47 < Filip> an internal table of IP addresses and URLs and will deny repeated requests for t 
+14:47 < Filip> he same URL from the same IP address, blacklisting the address for 10-seconds pe 
+14:47 < Filip> r extraneous request.
+14:47 < antagonizt> cool
+14:48 < Filip> I already had protsentry installed for 6 months or so to lock-out people doing portscans
+14:48 < Filip> =portsentry
+14:48 < hewhew> you want a mirror?
+14:48 < Filip> but the recent attacks used a valid http requests, but massive amounts for the same pages with no-cache headers
+14:49 < Filip> mirror is not easy at all for b-central, since it's completely database driven.
+14:49 < Filip> each page is generated at request time from scripts and database data
+14:49 < hewhew> heh ok
+14:50 < Filip> that's also why it's prettymemory and cpu intensive
+14:50 < antagonizt> we just need to make sure not to get a story on slashdot...
+14:50 < hewhew> here they dont mind if i keep uploads beneath 700 megs/day
+14:51 < Filip> slashdot should not be a problem for linux4.be, it would be for be-central
+14:52 < Filip> it's a matter of minutes to replace dynamic content with static copies of it, and the complete site can run from memory
+14:53 < hewhew> anyway my box: netbsd box(1.6) used as a gateway.. always up, p-333 mhz amd, almost 200 megs of ram or so..
+14:55 < Filip> maybe configure it as a revrse proxy for us
+14:55 < Filip> reverse
+14:57 < hewhew> thats one of the problems i ahve with it..., i have not time to tinker with it... you want to use it... ill give you the root password
+14:58 < Filip> has it got a static IP ?
+14:58 < hewhew> nope.. its dhcp but the expiry time is like 1 week
+14:59 < Filip> dhcp is no problem, questions is : does it force ip rotation or do you keep same ip as long as the box keeps running
+15:01 < hewhew> im not sure.. but i ahve a friend who had the same ip for 2 months now
+15:01 < hewhew> but hes not on the same switch.. but it should be the same thing
+15:03 -!- Filip [~Filip@208.250-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:04 -!- Filip [~Filip@129.55-200-80.adsl.skynet.be] has joined #Linux4BE
+15:09 < Filip> hewhew, a good article on this topic: http://www.engelschall.com/pw/wt/loadbalance/article.html
+15:09 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit [Read error: 104 (Connection reset by peer)]
+15:11 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+15:11 < hewhew> <hewhew> im not sure.. but i ahve a friend who had the same ip for 2 months now
+15:11 < hewhew> <hewhew> but hes not on the same switch.. but it should be the same thing
+15:11 < Filip> hewhew, a good article on this topic: http://www.engelschall.com/pw/wt/loadbalance/article.html 
+15:12 < hewhew> ok
+16:57 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+16:57 < nykkto> la de da
+16:59 < Filip> hi nykkto
+16:59 < nykkto> hi ya
+17:00 < nykkto> I see you are breaking things again :)
+17:38 < nykkto> Filip I think the posting thing on eXpod, may have been explained, there is a post saying they were hacked, and someone changed a setting from badtext>nicetext to nicetext>badtext  so soooso
+17:39 < nykkto> lag
+17:39 < nykkto> 4:45 CST
+17:40 < nykkto> .quit
+17:40 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+17:52 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:52 < nykkto> weird
+17:52 < nykkto> any one else on?
+17:54 < Filip> half
+17:54 < nykkto> heh
+17:55 < nykkto> for oh about 10 minutes I had SERIOUS LAG!
+17:55 < nykkto> I don't know if it was just me, but the site did not seem to be using much of the CPU
+17:56 < nykkto> Also, did the page thing work?
+17:57 < Filip> it blocked at least one attackless than an hour ao
+17:57 < Filip> ago
+17:58 < nykkto> this was about 15 minutes ago
+18:16 < hewhew> alcohol makes you durnk
+18:30 < nykkto> wow
+18:42 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+18:48 -!- sinfonian [~bshirclif@twhou-207-218-202-173.ev1.net] has joined #linux4be
+18:49 < Filip> hi brian
+18:49 < sinfonian> hi
+18:49 < sinfonian> anything new today?
+18:50 < Filip> reversing ;-)
+18:50 < sinfonian> the actual ardware?
+18:50 < sinfonian> like trace routing
+18:52 < Filip> no, software; 
+18:52 < Filip> jal0 is taking care of the hardware: much better skilled and equiped than I am
+18:53 < Filip> I'm currently creating mappings of most dll
+18:55 < sinfonian> ok
+18:56 < Filip> boring
+18:56 < jal0> hey guys
+18:56 < Filip> hi jal0
+18:57 < jal0> or girls (have to be politicaly correct) :)
+18:57 < hewhew> theres no reglementation on engineering in the states right?
+18:57 < jal0> ? 
+18:57 < jal0> have another drink :)
+18:57 < hewhew> heh nha.. i have to study
+18:57 < hewhew> ;P
+18:58 < hewhew> in canada.. they have rings.. and they need to spend a nightmarish 4 years that usually ends up being 6 years
+18:58 < hewhew> in a univ. program approved by the gov/association
+18:58 < hewhew> m$ engineering thing
+18:58 < jal0> ic
+18:58 < hewhew> mcse
+18:59 < sinfonian> engineering in the states takes forever too
+18:59 < hewhew> wont be allowed to be called that in canada
+18:59 < sinfonian> yea technically it is illegal in the states as well
+18:59 < hewhew> ok
+18:59 < sinfonian> but only Canada has done anything about it
+18:59 < sinfonian> Like the company I work for is Ready Engneering
+19:00 < hewhew> and the thing with the rings is a trademark of can. eng.
+19:00 < sinfonian> but our US branch is Ready Technologies since we dont have any PEs here 
+19:02 < hewhew> i feel like wednesday
+19:03 < hewhew> filip: anything interesting with my box?
+19:05 < Filip> hewhew: didn't yet start to with it; just looked around to see what was available
+19:05 < Filip> might have a look next week (at the office)
+19:05 < hewhew> ok neat
+19:06 < hewhew> the only uptime i had was caused by my gf's foot on the off switch
+19:06 < hewhew> erm downtime
+19:08 < hewhew> blew its sangria night
+19:10 < Filip> creating a table with all dll's/ordinals/offsets
+19:10 < Filip> http://www.linux4.be/hackers/dll.html
+19:13 < sinfonian> what is clb?
+19:14 < sinfonian> nm
+19:15 < sinfonian> these are the only casio specific dlls
+19:16 < Filip> haen't finished yet, started with the ones that looked most interesting
+19:16 < sinfonian> ok
+19:16 < jal0> curious, do you thing the addresses of the functions may differ between different installs, say like casio original, xpod, etc..  xpod i know implements some of there features by hacking the dll's of the core system
+19:17 < jal0> thing=think
+19:17 < sinfonian> so whats up with MS sending you a platform builder.. how will that help you?
+19:17 < Filip> don't think so: i generate these from the libs in the sdk
+19:18 < Filip> will be different between ce.net en ce300
+19:19 < jal0> ok
+19:21 < Filip> PB containssample code and skeleton drivers
+19:21 < Filip> going to recompile skeletons, and the decompile those
+19:22 -!- bshircliffe [~bshirclif@twhou-207-218-202-173.ev1.net] has joined #linux4be
+19:22 -!- bshircliffe [~bshirclif@twhou-207-218-202-173.ev1.net] has left #linux4be []
+19:22 < Filip> compare decompiled versions with decompiled casio ones
+19:22 < jal0> sounds good
+19:22 < Filip> should make it a lot faster to decode the casio ones, because they're probably based on the skeletons
+19:23 < Filip> it also contains all the #defines
+19:24 < sinfonian> now my question is how are you going to pull out the drivers from the BE-300?  mem dump?
+19:24 < Filip> yep, memdump. did it before
+19:25 < sinfonian> ok
+19:25 < Filip> and with the tools included in evC, you can find the base addresses of each running dll
+19:25 < Filip> and in fact, they're the same all the time, even after hard-resets
+19:25 < sinfonian> wow
+19:25 < jal0> i was working on that, just not enough time. i'm working on a way to dump a loaded dll to a file and fixup the relocations.
+19:25 < Filip> it's normal, because they get loaded in the exact same order after each reboot
+19:27 < jal0> that way you could them convert the dll to a static lib and link it with code locally.
+19:28 < jal0> the process is similar to unpacking dlls
+19:28 < jal0> which have some form of protection mechinism
+19:28 < Filip> the html above with the functions, ordinals and offsets is produced from an excel where i've imported the results of dumpbin *.lib
+19:30 < antagonizt> have you guys every played with rec or dcc?
+19:30 < antagonizt> they are decompilers for c code
+19:30 < Filip> no, I haven't. do they handle mips ?
+19:30 < antagonizt> i think rec even does r3000 mips
+19:31 < antagonizt> http://www.backerstreet.com/rec/rec.htm
+19:33 < jal0> hmm, nice page
+19:33 < Filip> looks interesting, going to give it a try
+19:39 -!- Sp4wN [~administr@12-224-77-188.client.attbi.com] has joined #linux4be
+19:39 -!- Sp4wN [~administr@12-224-77-188.client.attbi.com] has left #linux4be ["Client Exiting"]
+19:42 < Filip> results look good on an i386 exe, but cyace doesn't look good at all
+19:44 < antagonizt> you can define regions and symbols with a config file
+19:44 < Filip> was reading the manual now
+19:46 < antagonizt> i imagine when combined with the info you have gathered from debugging and pb you could get some pretty easy to read c code from it
+19:50 < Filip> indeed
+19:53 < Filip> going too get some sleep, talk to you later 
+19:53 < sinfonian> k good night
+19:53 < antagonizt> good night
+19:53 < sinfonian> I am leaving too
+19:53 < sinfonian> ciao
+19:54 -!- Filip [~Filip@129.55-200-80.adsl.skynet.be] has left #Linux4BE []
+19:54 -!- sinfonian [~bshirclif@twhou-207-218-202-173.ev1.net] has left #linux4be []
+22:15 -!- Den_Beiren [~me@159.121-136-217.adsl.skynet.be] has joined #linux4be
+22:16 -!- Den_Beiren [~me@159.121-136-217.adsl.skynet.be] has quit [Client Quit]
+--- Log closed Sat Nov 30 00:00:51 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,269 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_06_07.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_06_07.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Jun 07 00:00:13 2003
+01:13 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+01:54 < antagonizt> quit
+01:54 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit ["leaving"]
+07:19 -!- prk [~konversat@81-172-59-254.usuarios.retecal.es] has joined #linux4be
+07:19 < prk> hi!
+07:35 < prk> jal0: are you there?
+08:40 -!- Netsplit kornbluth.freenode.net <-> irc.freenode.net quits: prk
+08:41 -!- Netsplit over, joins: prk
+08:56 -!- prk is now known as prk_away
+11:06 < jal0> hey prk, sorry, must of missed you
+11:16 -!- prk_away is now known as prk
+11:16 < prk> hi jal0!
+11:16 < jal0> hey prk
+11:16 < jal0> how things going
+11:17 < prk> I wanted you to ask a question
+11:17 < jal0> ok shoot, i try my best ;)
+11:18 < prk> I have been looking the execptions code for vr41xx
+11:19 < prk> and I have seen that the cvs (linux-mips.org) 2.4 version uses a generic r4000 exception vector for the tlb refill one
+11:19 < jal0> yeap
+11:20 < prk> that is doing something like:
+11:20 < prk> mtc0    k1, CP0_ENTRYLO1
+11:20 < prk> b 1f
+11:21 < prk> tlbwr
+11:21 < prk> 1: nop
+11:21 < prk> eret
+11:22 < prk> and my vr manual says that I need 2 instructions betwen a mtc0 and tlbwr (coprocesor hazard)
+11:23 < prk> I don't have much idea about mips assembler... but i feel that this except vector doesnt do that, right?
+11:23 < jal0> hang on let me grap my manual
+11:26 < jal0> ok, you question is?
+11:27 < prk> is that code doing 2 instructions betwen mtc0 and tlbwr?
+11:28 < jal0> nope.
+11:29 < jal0> whats the instuction before the mtc0
+11:29 < jal0> the # of required instruction is based on the operation being done
+11:31 < prk> is a slr to adapt some register contents to the cp0 entrylo and entryhi
+11:34 < prk> following the manual, the number of instructions needed are computed with (destination hazard)-(source hazard+1)
+11:34 < jal0> but those instruction are the count before the next mtc0 and mfc0 not the tlbwr
+11:36 < prk> I don't know :)
+11:37 < jal0> p. 421 of the Vr4100 Series Arch. manual
+11:39 < prk> ...reading...
+11:43 < prk> ok, now I have to see what is my source and what is my destination :)
+11:46 < prk> mtc0 is the "destination" instruction with 5 nr of cycles
+11:47 < prk> better, the destination is the CP0_entryLO1
+11:48 < prk> and I use tlbrwr, with cp0_entrylo1 as source
+11:48 < prk> with 2 nr of cycles
+11:48 < jal0> 2 instruction must follow tlbrwr
+11:50 < prk> and 2 ahead too?
+11:51 < prk> I mean, I'm computing the number of instructions betwen mtc0 and tlbwr
+11:51 < jal0> it would seem, but not sure what the 'b 1f' is
+11:52 < jal0> that looks like a asm macro not an instruction
+11:52 < prk> branch 1 foward. the next 1:
+11:54 < jal0> so the two instructions requirement is made, the branch,and the nop, while the tlbwr is que'ed in the instruction pipeline
+11:55 < jal0> and is executed 3rd
+11:56 < prk> I don't know what i can call a "instruction" with the delay slots in mips :)
+11:59 < jal0> yeah that was new to me also, i mainly work with simpler mcu's at work
+11:59 < prk> I tought that when theres a jump or a branch the processor begins to execute the next instruction, just in case that the branch don't "jump"
+12:01 < jal0> dosn't execute it unless there is 'no' jump. if there is, then the instruction is flushed.
+12:02 < jal0> btw: don't take what i say here as hard fact, i'm just learning this stuff also :)
+12:02 < prk> I don't get it
+12:03 < prk> oh, wait
+12:04 < jal0> A good book for introduction to the mips arch. is 'See Mips RUN' it has been invaluable duing my work with the linux4BE.
+12:06 < prk> it is a "hard" branch so, it doesn't have sense to execute the "next" instruction, so it begin execution of the nop instruction... so we have 2 instructions before tlbwr
+12:07 < prk> no, because then the tlbrw doesn't execute at all
+12:07 < prk> conclusion: I need "see mips run"
+12:08 < jal0> i wonder what instruction the assembler will produce for the 'b 1f'?
+12:09 < jal0> you on a linux or windows box?
+12:10 < prk> just looking at the disasembled code
+12:10 < prk> it is simply a branch to the location of the nop
+12:11 < prk> 800022c4:       10000001        b       800022cc <except_vec0_r4000+0x4c> 
+12:11 < prk> 800022c8:       42000006        tlbwr 
+12:11 < prk> 800022cc:       00000000        nop 
+12:12 < prk> 800022d0:       42000018        eret 
+12:15 < jal0> beq s,t,p
+12:15 < prk> and i feel that we have the same betwen tlbrw and eret :(
+12:16 < jal0> so the tlbrw is executed before the branch
+12:18 < prk> you say that 10000001 is beq?
+12:18 < jal0> yeap
+12:19 < jal0> beq 0,0,1
+12:20 < jal0> or beq zero,zero,0x01
+12:21 < prk> aha
+12:22 < jal0> of course you could try replacing the 'b 1f' instruction with it and decompiling again to verify
+12:27 < prk> how I put the 0 register in assembly, "zero" is defined?
+12:28 < jal0> i believe, or just put 0 directly
+12:29 < jal0> in your dism, do a grep, maybe its used somewhere else
+12:30 < prk> #define zero $0
+12:30 < jal0> ahaa
+12:31 < prk> just the same
+12:31 < prk> what you said
+12:31 < jal0> :)
+12:32 < jal0> i'm pretty good with coverting machine code. i wrote a dissembler for mips ;)
+12:33 < prk> but i don't get how much instructions "are" executed "betwen"
+12:33 < prk> sure it was a good work :)
+12:34 < jal0> have you tried asking on #mipslinux
+12:34 < prk> yea, but it seems the gurus are on holidays :)
+12:34 < jal0> ;) ... figures
+12:36 < prk> wait a moment
+12:36 < prk> i haven't looked at the linux-vr.org code
+12:39 < prk> guess what?
+12:39 < jal0> ?
+12:40 < prk> they put 2 nops!
+12:40 < jal0> i guess that the answer then ;)
+12:41 < prk> and no branch
+12:41 < prk> two after and two before
+12:45 < prk> maybe I have to use the linux-vr one
+12:45 < jal0> maybe, have you looked at the linux4be one?
+12:45 < prk> nope
+12:46 < prk> running to cvs!
+12:48 < prk> ops, no head.S and no tlbex-r4k.S
+12:50 < jal0> maybe thats why we havn't got exception working yet.. dohh. This line of stuff is not really my specialty.
+12:50 < prk> after all, it doesnt even matter if it works :)
+12:52 < prk> what is the code base of linux4be?
+12:52 < jal0> stock mips kerenl with modification
+12:52 < jal0> as we find them
+12:54 < prk> I'm begining to think that linux-vr.org has more to show me!
+12:54 < jal0> maybe
+12:55 < jal0> then again it should, it has already has your PDA support
+12:56 < prk> yea
+12:56 < prk> thats right
+12:59 < prk> I was just thinking that the project was a bit outdated
+13:00 < jal0> us too, thats why we 'went it alone'.
+13:00 < prk> have you tried to get in contact with them?
+13:01 < jal0> no me personally, but other on our team have... no response :(
+13:02 < prk> :( maybe they are all too busy
+13:03 < prk> thats the problem with this kind of thins, when you get tired, you leave, and that's all
+13:04 < jal0> could be, finding time is hard... real life is such a distraction :)
+13:05 < prk> what real life, we are all in matrix! ;D
+13:06 < jal0> real life is life as you preceive it
+13:09 < prk> and how things going with that project...
+13:09 < jal0> slow, many other things have priority right now :(
+13:10 < prk> I just have seen something that caught my atention... what is "CEK.zip"?
+13:10 < jal0> some windows CE hacking code that i have been doing
+13:10 < prk> and what it does?
+13:12 < jal0> they are tools used to reversing engineering windows CE code. mainly used to aquire info from CE that we can use for linux. like register used for some of the hardware devices. there is also my mips dissembler in there
+13:13 < prk> oh, good to know that
+13:13 < prk> are them wince 3 expecific?
+13:13 < jal0> pretty much, as that is the only one that i have
+13:15 < prk> I have to look at it in detail
+13:15 < jal0> yeap, its pretty rough, thrown together pretty quickly
+13:16 < jal0> but if you have question, just let me know
+13:16 < jal0> if not here, then there is  a fourms section to linux4be that i started that you can post on.
+13:17 < jal0> entitled "CE Kernel Tools
+13:18 < prk> I have seen that you are using cyace too
+13:19 < jal0> yeap
+13:19 < prk> did you made any modifications?
+13:19 < jal0> yeap, check out cvs
+13:19 < jal0> its in there also
+13:21 < prk> ok, i'll do it
+13:22 < prk> I think that the problem is that casio doesnt make specs avalaible...
+13:23 < jal0> yeap
+13:25 < prk> I don't know why! I think I'm gonna send a couple of mails :)
+13:26 < jal0> have to go for a few, be back in a few if your still around
+13:26 -!- jal0 is now known as jal0_bbiaf
+13:26 < prk> ok :)
+13:27 < jal0_bbiaf> later
+14:24 < prk> see you, i left the computer on
+14:24 -!- prk is now known as prk_gone
+15:22 -!- jal0_bbiaf is now known as jal0
+16:12 -!- High_Voltz [1000@209-240-23-51.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+16:31 < High_Voltz> Should I use uClibc instead of glibc?
+18:38 -!- High_Voltz [1000@209-240-23-51.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+19:32 < prk_gone> good night!
+19:33 -!- prk_gone [~konversat@81-172-59-254.usuarios.retecal.es] has left #linux4be ["bye"]
+--- Log closed Sun Jun 08 00:00:37 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

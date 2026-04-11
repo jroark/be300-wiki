@@ -1,0 +1,431 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2004_09_01.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<script type="text/javascript"><!--
+google_ad_client = "pub-8401084254797071";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel ="4966654158";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2004_09_01.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Sep 01 00:00:24 2004
+02:14 -!- Filip_BE [~Filip@193.190.11.184] has joined #linux4BE
+03:58 <+mouse> Filip_BE: hi
+04:07 < Filip_BE> hi mouse
+04:14 < Filip_BE> My kernel is back to early hanging, if it panics, it's with Kernel panic: Exception vector 1 called 
+04:15 < Filip_BE> Going to read my 'See MIPS run' book once more
+04:17 <+mouse> ok
+05:04 -!- paparent [~paparent@223-81-252-216-dsl.enter-net.com] has joined #linux4be
+06:18 -!- paparent [~paparent@223-81-252-216-dsl.enter-net.com] has quit ["Leaving"]
+08:15 -!- FilipBE [~Filip@193.190.11.184] has joined #linux4BE
+08:34 -!- Filip_BE [~Filip@193.190.11.184] has quit [Read error: 110 (Connection timed out)]
+09:27 -!- FilipBE [~Filip@193.190.11.184] has quit [Read error: 110 (Connection timed out)]
+09:51 -!- seiichi [~sch@YahooBB219017080120.bbtec.net] has joined #linux4be
+09:54 -!- seiichi [~sch@YahooBB219017080120.bbtec.net] has quit [Client Quit]
+13:26 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has joined #linux4be
+13:42 <+Artsucks> Hi everyone!
+13:43 <+Artsucks> If someone could tell me the url for the last kernel I would give it a try
+13:45 -!- mode/#linux4BE [+v paparent] by ChanServ
+13:47 <+Artsucks> bbl, if someone can paste the url I would apreciate
+14:52 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has quit ["Leaving"]
+15:37 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has joined #linux4be
+15:41 -!- Filip_BE [~Filip@172.103-136-217.adsl.skynet.be] has joined #linux4BE
+15:42 < Filip_BE> hi folks
+16:07 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has quit ["Leaving"]
+17:10 < Filip_BE> Today I recieved an email from Seiichi with two paches that should fix a couple of cache bugs for the VR4131 rev. 1.2 (which is in the BE300). 
+17:10 < Filip_BE> see http://www.linux4.be/pivot/index.php for more info (including patches, and pre-compiled kernel)
+17:44 <+Artsucks> Filip_BE, Is this only for serial console? It does not boot here
+17:46 < Filip_BE> Artsucks: indeed, only serial
+17:46 <+Artsucks> Oh :(
+17:46 < Filip_BE> you could hunt for a cheap one on ebay: the ones for most older Casio's work
+17:47 < Filip_BE> I have a spare serial cradle (from an E100) from ebay 
+17:48 <+Artsucks> I dont have a cc
+17:50 <+Artsucks> Does this allow you tu use your keyboard with you be and can it be made with radio-shack parts?
+17:51 < Filip_BE> you can use a simple terminal program to get a 'normal' console and use the PC's keyboard
+17:51 <+Artsucks> You use something like minicom or what?
+17:51 < Filip_BE> DIY: http://forum.linux4.be/~jal0/ 
+17:52 < Filip_BE> I use Tera Term
+17:52 < Filip_BE> on windows, minicom should work fine
+17:53 <+Artsucks> These schemas are really too complicated for me!
+17:53 <+Artsucks> I use linux
+17:53 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has joined #linux4be
+17:53 < Filip_BE> minicom should be ok
+17:53 < Filip_BE> hi paparent 
+17:54 <+Artsucks> Hi paparent 
+17:54 < paparent> hi
+17:55 <+Artsucks> btw is this a 2.4 or 2.6 kernel?
+17:56 < Filip_BE> Artsucks: you should try to buy one, they can be found really cheap (can't build your own for that price)
+17:56 < Filip_BE> 2.6Linux version 2.6.8.1 (filip@build.linux4.be) (gcc version 2.96-sdelinuxmips-
+17:56 < Filip_BE> 040127) #6 Wed Sep 1 15:35:10 CEST 2004
+17:56 <+Artsucks> :)
+17:57 < Filip_BE> and it's easy to cut&paste from a console ;-)
+17:57 <+Artsucks> Just to type it is worth it I am sure
+17:58 <+Artsucks> If I had a cc I would buy one but I dont want to ask someone to buy it for me in case there would be problems
+17:59 <+Artsucks> Is it possible to use paypal without a cc?
+17:59 < Filip_BE> no PDA store around ?
+17:59 <+Artsucks> The place I bought it is a big computer store and they never had the accessoriesa
+18:00 < Filip_BE> not in europe
+18:00 <+Artsucks> I have never seen a PDA-only store
+18:01 <+Artsucks> Anyone wants a gmail account here?
+18:02 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has quit ["Leaving"]
+18:03 < Filip_BE> I 'm interested if you have a spare one
+18:03 <+Artsucks> Where do you want me to send the invite?
+18:03 < Filip_BE> filip@linux4.be please
+18:05 <+Artsucks> Sent...
+18:05 < Filip_BE> thx
+18:06 -!- mode/#linux4BE [+o Filip_BE] by ChanServ
+18:07 <@Filip_BE> btw: you know Spirou  ?
+18:08 <+Artsucks> The guy from bandes-dessinées?
+18:09 <@Filip_BE> yep, same name as you
+18:09 <@Filip_BE> he's got the .com
+18:10 <+Artsucks> LOL A frien of yours? I was talking about this Spirou: http://www.bdcentral.com/Spirou/
+18:11 <+Artsucks> Probably where the guy from artsucks.com took his name
+18:11 <@Filip_BE> I don't know him personally, but I like his comics
+18:12 <+Artsucks> Ok
+18:12 <+Artsucks> This is funny
+18:13 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has joined #linux4be
+18:13 <+Artsucks> I never checked for .net and .com since I wanted .org
+18:14 <+Artsucks> And never verified if they existed
+18:15 <+Artsucks> You know Jeremiah?
+18:15 <+Artsucks> I am pretty sure the author is from Belgium
+18:16 <@Filip_BE> doesn't ring a bell
+18:16 <@Filip_BE> brb
+18:19 <+Artsucks> Yeah he is from Belgium
+18:19 <+Artsucks> Herman Huppen est né le 17 juillet 1938 à Bévercé, un petit village belge de la région des Fagnes, dans les Ardennes, entre la frontière allemande et la ville de Liège.
+18:20 <@Filip_BE> Liège is a 30min. drive from my place
+18:20 <+Artsucks> It is a post-apocalyptic series of comic-books
+18:21 <+Artsucks> http://www.hermannhuppen.com/intro_jeremiah.php3
+18:22  * Filip_BE wants to get some sleep , it's 1:20 and needs to get up at 6:30. But waiting for one last kernel compilation with yet another patch to complete....
+18:23 <+Artsucks> Do you think some day we will be able to compile the kernel natively with a cluster of BEs? ;)
+18:24 <@Filip_BE> sure, even on a single BE. but it will take ages to complete
+18:24 <@Filip_BE> compile finished
+18:24 <+Artsucks> :)
+18:26 <@Filip_BE> same problem :-(
+18:27 <+Artsucks> :(
+18:27 <@Filip_BE> it's crashing in arch/mips/kernel/genex.S
+18:28 <@Filip_BE> going to compare the code in there with the 2.4 stable one
+18:28 <+Artsucks> I am going to buy food and beer, bbl.
+18:29 <+Artsucks> Good night if you are not there when I come back...
+18:30 <@Filip_BE> cu tomorrow
+18:30 -!- Filip_BE [~Filip@172.103-136-217.adsl.skynet.be] has quit ["Leaving"]
+18:52 <+Artsucks> re
+18:54 < paparent> re
+18:54 < paparent> Tu es francais ?
+18:54 <+Artsucks> Bien francophone mais pas de France et toi?
+18:54 < paparent> pareil :) je suis au Qu�bec ... toi?
+18:55 <+Artsucks> Montréal! :)
+18:55 < paparent> lollll
+18:55 < paparent> :)
+18:55 < paparent> Sorel, tu connais?
+18:55 <+Artsucks> Toi aussi? :)
+18:55 <+Artsucks> Ben j'y suis jamais allé
+18:55 < paparent> bin, Sorel-Tracy maintenant ..
+18:55 < paparent> ahah c cool!
+18:56 <+Artsucks> Ton nom sonnait francophone mais ton hostname sonne étatsunien
+18:56 <+Artsucks> Alors j'avais pas posé de questions
+18:56 < paparent> hehe ok
+18:56 <+Artsucks> Ça fait longtemps que tu as un BE-300?
+18:57 -!- mode/#linux4BE [+v paparent] by ChanServ
+18:57 <+paparent> hm, non, bin, c�tait a mon p�re et il me l'a pr�ter, faut que je m'habitut avec pour l'�cole :D
+18:57 <+paparent> hehe
+18:57 <+Artsucks> Quelle distro tu utilise?
+18:57 <+Artsucks> Ah ok!
+18:58 <+paparent> gentoo
+18:58 <+paparent> toi
+18:58 <+Artsucks> Tu roule avec le winCE qui vient avec?
+18:58 <+Artsucks> Gentoo aussi, sur amd64
+18:58 <+paparent> nah.. Viksit (ou kekchose dememe) m'a proposer Bee
+18:58 <+paparent> et je l'aime bien
+18:58 <+Artsucks> Je l'ai pas encore essayé mais je compte le faire bientot
+18:59 <+Artsucks> Je suis sur xpod, l'ancêtre de Bee
+18:59 <+paparent> ah ok
+18:59 <+paparent> connais pas vraiment,, je suis newbie disons! 
+19:00 <+Artsucks> J'ai un site pro-open-source avec des amis: http://www.megaoctet.net mais c'est très calme parce que tout les admins on a des blondes...
+19:00 <+paparent> hehe ok :)
+19:01 <+Artsucks> Tu en avais déja entendu parler?
+19:01 <+paparent> nop
+19:01 <+paparent> disons que je recherche plutot en anglais :)
+19:01 <+paparent> linux = English! hehe
+19:02 <+Artsucks> Linux is international selon moi mais tk, c'est le fun de débattre de certaines news avec du monde de la même place souvent...
+19:03 <+paparent> Mwais, c'est cool te connaitre ;) as-tu msn ?
+19:03 <+Artsucks> Sur Meg@ ça devient jamais un débat pro ou anti gun... :)
+19:03 <+paparent> I've currently ported bash(1.08) and gcc(1.40) .. LOL :D
+19:03 <+Artsucks> J'en ai deux mais j'utilise pas msn
+19:04 <+paparent> ah ok... icq ?
+19:04 <+Artsucks> Nothing big like GNU :)
+19:04 <+paparent> :P
+19:05 <+Artsucks> Pas en ce moment, j'ai eu mon amd64 il y a pas longtemps et je dois récupérer mes fichiers sur les vielles partitions mais j'ai pas pris le temps encore alors je suis 0 IM pour le moment
+19:05 <+paparent> jvais te laisser mon email pour jaser p-e quelque fois :)
+19:05 <+paparent> mon tout nouveau email !! paparent@gmail.com
+19:05 <+paparent> :D
+19:05 <+paparent> ok
+19:06 <+Artsucks> J'allais te demander si tu voulais un gmail! :)
+19:06 <+Artsucks> moi: baal@megaoctet.net
+19:06 <+Artsucks> Tu travailles en info?
+19:10 <+Artsucks> Damn j'ai du lag
+19:10 <+Artsucks> En fait mon net a peut-être déja lâché
+19:11 <+paparent> non
+19:11 <+paparent> c moi qui est pas vite
+19:11 <+paparent> lol, tu en a un toi aussi ?!
+19:11 <+Artsucks> Mon lag-o-meter dans xchat était au max
+19:11 <+Artsucks> Oui tantot j'en ai offert juste avant que tu quit
+19:12 <+Artsucks> <Artsucks> Anyone wants a gmail account here?
+19:12 <+Artsucks> <-- paparent has quit ("Leaving")
+19:12 <+paparent> heh ok :)
+19:12 <+Artsucks> À 19:02
+19:12 <+paparent> il me reste 4 invites :D
+19:12 <+Artsucks> Tu travailles en info?
+19:13 <+paparent> hm, j'�tudie en info
+19:13 <+paparent> mais... dison que je perds mon tempss!! mais je vais chercher les papiers
+19:13 <+Artsucks> J'en ai données au mois 30 à date et là j'en ai aussi 4 :)
+19:13 <+Artsucks> OK
+19:13 <+paparent> donner 30 ??
+19:13 <+paparent> c'est 6 messemble
+19:14 <+Artsucks> Pas 30 de la shot
+19:14 <+paparent> dans x-chat ... comment mettre UTF8 ?? (ca me fatique pomal la!! hihi)
+19:14 <+Artsucks> Mais j'en donne et j'en recois d'autres depuis environ 10 jours
+19:14 <+paparent> ok, on peut en recevoir d'autre par la suite .. :S ahh
+19:15 <+Artsucks> Va dans Xchat > Server List
+19:15 <+Artsucks> Pis pour le serveur freenode tu met UTF-8
+19:15 <+paparent> ok
+19:15 <+paparent> :)
+19:16 <+paparent> alors je gage que moi aussi jva envoyer en utf8 ... ���
+19:16 <+Artsucks> Je vois tes accents
+19:16 <+Artsucks> Mais je les ai vus sur plein de monde pas en utf-8
+19:16 <+Artsucks> Ils voyaient pas les miens
+19:16 <+paparent> ok
+19:17 <+paparent> fait en donc..
+19:17 <+Artsucks> ééééààààüüü
+19:17 <+paparent> marche pas...
+19:17 <+paparent> faut surement que je reconnecte
+19:17 <+Artsucks> D'habithude il faut restarter xchat messemble
+19:17 <+paparent> ok... réessaye ;)
+19:17 <+Artsucks> ééééààààüüü
+19:17 <+paparent> :D
+19:18 <+paparent> sa marche
+19:18 <+paparent> . /charset utf8
+19:18 <+paparent> cool ton site! des news en francais..
+19:19 <+paparent> tu utilises quoi comme WM ?
+19:20 <+Artsucks> openbox3 en attendant E17, et toi?
+19:20 <+paparent> fvwm2
+19:20 <+paparent> :)
+19:20 <+Artsucks> Avec crystal?
+19:20 <+paparent> nop
+19:21 <+paparent> jai prix des confs d'un peu tlm
+19:21 <+paparent> mais bon, c'est tres simple pour l'instant.. mais je vais p-e m'Y mettre un moment donné
+19:21 <+paparent> pour l'instant c'est ok..
+19:21 <+paparent> j'utilise aussi un dual-dislay :) c'Est cool
+19:21 <+paparent> différente conf pour les 2 écrans
+19:21 <+Artsucks> Ça fait clongtemps que tu utilise Linux?
+19:22 <+paparent> hmmmm je crois depuis 98
+19:22 <+paparent> j'était jeune ds le temps! 
+19:22 <+Artsucks> T'as quel âge au juste? Moi 25!
+19:22 <+Artsucks> brb je vais nourrir mon chat avant qu'il me bouffe! :)
+19:22 <+paparent> j'ai apprit ca car on avait une programmeur ds  notre cie et j'aime toucher a tout. alors j'ai installer redhat 5.2 sur mon ordi ;)
+19:22 <+paparent> 18 ;)
+19:25 <+Artsucks> T'as essayé linux sur ton BE à date?
+19:28 <+paparent> oauis
+19:28 <+paparent> mais juste la version précompiler....
+19:28 <+paparent> j'ai pas réussis a me faire un toolchain
+19:28 <+paparent> et kek1 m'a envoyer le sien.. mais j'ai pas regarder encore
+19:29 <+Artsucks> As-tu un serial cable?
+19:30 <+paparent> nah
+19:35 <+Artsucks> Entout cas c'est pas tout les soirs qu'on rencontre un penguouin du québec qui utilise gentoo!
+19:36 <+Artsucks> Tu savais qu'il y a des gentoo au Québec?
+19:36 <+paparent> nah po vraiment..
+19:36 <+paparent> je connais pas grand meme... meme pas des pengpouin :D
+19:38 <+paparent> http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
+19:39 <+Artsucks> Ouais je connais l'existance mais je compte pas l'utiliser...
+19:39 <+Artsucks> C'est pas cool pour gmail!
+19:39 <+paparent> lol ! 
+19:39 <+paparent> mais.. libgmail à l'air cool par contre!
+19:41 <+Artsucks> J'ai le livre google hacks de Oreilley ici :)
+19:42 <+paparent> Ah .. c'est quoi au juste!?!?
+19:42 <+Artsucks> Ben ça explique comment utiliser google au max
+19:43 <+Artsucks> Toutes les différentes query pis des exemples de scripts pour les exploiter encore mieux...
+19:43 <+paparent> ahem Kewl ! 
+19:44 <+paparent> depuis quand tu a virer pengouin toi !?
+19:44 <+Artsucks> Il y a des extraits gratuits sur le site de oreilley
+19:44 <+Artsucks> 6 ans et demi
+19:45 <+Artsucks> Parce que je détestait windows
+19:46 <+Artsucks> J'avais peu d'expérience avec les ordis à l'époque, genre 6 mois de windows
+19:46 <+Artsucks> Pis je travaille pas en in fo
+19:47 <+paparent> oki
+19:47 <+paparent> ok good
+19:49 <+Artsucks> T'es un dual-booter ou un pure-jihad-tux-adept? ;)
+19:49 <+paparent> hmmmmm dual, mais j'utilise jamais (ou presque) l'autre
+19:49 <+paparent> les seul fois c'est quand j'ai installer Bee :D
+19:50 <+Artsucks> Héhé ça se comprend! :)
+19:54 <+Artsucks> mouse and ze if you want a gmail account tell me...
+19:55 <+paparent> utilises-tu synce pour uploader des fichier a ton BE?
+19:56 <+Artsucks> Je l'ai déja utilisé pour l'essayer mais j'utilise mon lecteur de cartes CF maintenant...
+19:56 <+paparent> ah ok
+19:56 <+paparent> c'est compliquer tk ..... :S :S
+19:57 <+Artsucks> Pas tant que ça
+19:57 <+paparent> bah, quand je fais synce-serial-start, il faut que je démarre ActiveSync tout de suite car sinon ca marche pas ...
+19:57 <+Artsucks> Si tu rush check /var/log/messages ça pourrait t'aider...
+20:07 <+paparent> qu'est-ce que tu fais au juste (quel tache) tu as dans l4be
+20:20 <+Artsucks> Bah j'ai fait le dummies howto...
+20:21 <+Artsucks> Scuse pour le délai je suis allé au dep sans avertir
+20:22 <+paparent> ah oki :)
+20:23 <+Artsucks> C'est ce que tu as utilisé pour booter linux sur ton BE?
+20:23 <+paparent> hm quoi ?
+20:24 <+Artsucks> http://linux4.be/dummies/index.php
+20:25 <+paparent> ah oui
+20:26 <+Artsucks> C'était moi ça... :)
+20:27 <+paparent> dummies?
+20:28 <+Artsucks> C'est juste une figure de style...
+20:37 <+Artsucks> paparent, ton nom de famille est-ce que c'est parent par hasard?
+20:40 <+paparent> mwaus
+20:40 <+paparent> :)
+20:40 <+paparent> P A Parent :)
+20:40 <+paparent> il te manques que quelque lettres! 
+20:40 <+Artsucks> Pierre-André Parent?
+20:41 <+paparent> lolllll ?????
+20:41 <+Artsucks> Paul-André?
+20:41 <+paparent> comment t'as faite?
+20:41 <+Artsucks> C'est Pierre-André?
+20:41 <+paparent> ouais.. bin: "Pier André"
+20:41 <+Artsucks> Héhé :)
+20:42 <+paparent> comment t'as faite?
+20:42 <+Artsucks> Ben j'ai dit la Combinaison de P-A que j'ai vu le plus souvent...
+20:42 <+Artsucks> Statistiques j'imagine...
+20:43 <+paparent> pierre-andré.. tu as déja vu sa ?? 
+20:43 <+paparent> c'est tres rare
+20:43 <+Artsucks> C'est mon travail de trouver des choses comme çqa...
+20:43 <+paparent> dans mon entourage, j'en connais aucun
+20:43 <+paparent> et j'en ai rencontrer ~4-5 dans toute ma vie! lol
+20:44 <+Artsucks> Je peux voir des milliers de prénoms dans une journée dont une bonne partie que tu verra jamais... :)
+20:44 <+paparent> lol ok, tu travailles ou?
+20:45 <+Artsucks> Ben je fais des recherches, j'ai pas vraiment de où...
+20:45 <+Artsucks> Je travaille là ou l'information est! :)
+20:46 <+paparent> ahem ok
+20:47 <+Artsucks> Je suis généalogiste, je retrace des gens par leur liens familiaux...
+20:47 <+paparent> ahhh ok :) cool
+20:48 <+Artsucks> Tu connais tes ancêtres?
+20:49 <+paparent> ahem oui.. Pierre Parent
+20:49 <+paparent> parant * ;)
+20:49 <+paparent> et sont père: André Parant ;) (mais n'est pas traverser je crois)
+20:49 <+Artsucks> Je peux retracer tes ancêtre Parents jusqu'au premier arrivé en Amérique et de même pour ta mère par exemple
+20:50 <+paparent> ok
+20:50 <+Artsucks> parent ou parant?
+20:50 <+paparent> je crois que ca la changer au cour des années
+20:51 <+paparent> mon pere a un gros livre de la famille des parent..
+20:51 <+paparent> tout le monde est la je crois !
+20:51 <+Artsucks> Fils de André Parant et Marie Coudré?
+20:51 <+paparent> et a la 2e de couverture, il y a sa ligné
+20:52 <+paparent> hmmm, je c pas pour Marie coudré ... je c pas par coeur
+20:52 <+Artsucks> Tk this is what I do... :)
+20:52 <+paparent> :P
+20:53 <+paparent> j'demanderai a mon pere demain
+20:53 <+Artsucks> Si c'est la famille que je crois j'ai peut-être plus d'infos que vous en avez... :)
+20:54 <+Artsucks> Ça me ferait plaisir de vous la transcrire... :)
+20:54 <+paparent> :P
+20:54 <+paparent> mwais :
+20:55 <+paparent> je sais que dans la ligner il y a un Henri
+20:55 <+paparent> et mon grand-pere paternelle (André Parent), est décédé quand ma mère était enseinte
+20:56 <+Artsucks> J'ai pas toute les lignée de tout le monde ici mais j'ai des livres très complets sur les ancêtres...
+20:56 <+paparent> ah ok
+20:56 <+Artsucks> +premiers
+20:57 <+Artsucks> Et il y a juste un Pierre Parent
+20:58 <+paparent> ah ok
+20:58 <+Artsucks> Ce sont des livres que j'ai recu d'une tante religieuse et que j'avais jamais vu avant
+20:58 <+paparent> oh cool
+20:58 <+Artsucks> L'église est bien documentée!
+20:58 <+paparent> oauis c sa... on parle du meme pierre
+20:58 <+paparent> Voir portrait de Pierre Parent. PIERRE 2 PARENT, fils d’ANDRÉ PARANT et de MARIE
+20:58 <+paparent> COUDRAY est né entre 1610 et 1626 possiblement à MORTAGNE SUR GIRONDE
+20:59 <+paparent> http://www.afpa.qc.ca/souches/pierre1.html
+20:59 <+paparent> afpa.qc.ca (un si qu'on a faite!) moi et mes parents (bin pere et mere! lol)
+20:59 <+Artsucks> Ce que j'ai est beaucoup plus précis...
+21:00 <+Artsucks> Mais il est trop tard pour le tapper
+21:00 <+paparent> :P
+21:00 <+paparent> tu a mon gmail alors :) et ne te soucis pas de l'espace ;) hihi
+21:00 <+paparent> tu regarderas le site, c'est cool quand meme
+21:04 <+paparent> bon! je vais te laisser :) il est temps de me coucher, école demain :(
+21:04 <+paparent> Bye!! :) content de te connaitre!!
+21:05 -!- paparent [~paparent@106-81-252-216-dsl.enter-net.com] has quit ["Leaving"]
+21:07 <+Artsucks> Bonne Nuit
+21:07 <+Artsucks> Moi aussi je fly
+21:07 <+Artsucks> Ben je vais regarder un film en fait
+--- Log closed Thu Sep 02 00:00:39 2004
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,251 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #DDD;
+}
+
+body, p, html, table, td {
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+
+
+
+#centercolumn {
+	border: 0px solid #666666;
+	margin-left: 201px;
+	margin-right: 201px;
+	padding: 10px 4px;
+}
+
+#header {
+	border-top: 2px solid #182746;
+	border-bottom: 2px solid #182746;
+	background: #314E8C;
+	padding: 8px;
+}
+
+#leftcolumn {
+	left: 0px;
+	position: absolute;
+	width: 180px;
+	margin-top: 4px;
+}
+
+#rightcolumn {
+	position: absolute;
+	right: 0px;
+	width: 200px;
+	margin-top: 4px;
+}
+
+#leftcolumn, #leftcolumn p, #rightcolumn, #rightcolumn p { 
+	font-size: 11px;
+	line-height: 16px;
+}
+
+
+#footer {
+	border: 1px solid #00f;
+	clear: both;
+}
+
+.block {
+	margin:6px 6px 12px 6px;
+	padding: 4px;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+
+.block H3 {
+	background: #A7B6C9;
+	color: #26344C;
+	margin: -4px -4px 4px -4px;
+	padding: 4px;
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+}
+
+.block P {
+	margin: 0px;
+}
+
+.content {
+	padding: 4px;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+.entrycontent {
+	padding: 12px;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+
+.content p {
+	margin: 4px 2px 4px 2px;
+}
+
+
+H1 {
+	font-size: 16px;
+	margin: 4px;
+	color: #FFF;
+		display: inline;
+}
+
+
+H2 {
+	font-size: 13px;
+	border-bottom:1px dashed #999;
+	margin:0px;
+	padding: 2px;
+	color: #26344C
+}
+
+H3 {
+	font-size: 13px;
+}
+
+H4 {
+	font-size: 14px;
+	margin: 4px;
+	color: #FFF;
+	display: inline;
+	font-style: italic;
+}
+
+.date {
+	color: #666;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	font-weight: normal;
+	float: right;
+}
+
+.date_linkdump {
+	color: #666;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	font-weight: normal;
+	float: right;
+}
+
+.entryfooter {
+	color: #666;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight: normal;
+	text-align:right;
+	margin: 0px;
+	padding: 6px 0px;
+	clear: both;
+}
+
+.entryfooter_linkdump {
+	color: #666;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	font-weight: normal;
+	text-align:right;
+	margin: 0px;
+	padding: 6px 0px;
+	border-bottom: 1px dashed #666;
+}
+
+.entryfooter A, .date A, .entryfooter_linkdump A, .date_linkdump A {
+	text-decoration: none;
+	font-weight: bold;
+	color: #5C6B8E;
+}
+
+
+.entryfooter a:hover, .date a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #5C6B8E;
+}
+
+
+a {
+ color: #253A69;
+}
+
+.prevnext_links {
+	float: right;
+	color: #FFF;
+}
+
+H1 A, .prevnext_links A {
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+H1 A:hover, .prevnext_links A:hover {
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+
+/* these styles are for the search boxes */
+.searchbox { 
+	width: 10em; 
+	font-size: 10px;
+}
+
+.searchbutton {
+	border: 1px solid #000;
+	font-size: 10px;
+}
+
+
+/* these styles are for the calendar widget */
+.calendar { 
+	padding: 1px 5px;
+	margin: 0px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-size: 11px;
+}
+
+
+.calendarHeader { 
+	font-weight: bold; 
+	color: #000;                   
+	background: #DDD;
+	margin:0px;
+	padding: 2px 5px;
+		font-size: 11px;
+}
+
+.calendartoday { 
+	background-color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+	
+table.calendar {
+/* only the calendar has a line, not the individual cells */
+	border: 1px solid #000;
+	padding:0px;
+	width: 175px;
+}
+
+.calendarHeader A, .calendar A {
+	font-weight: bold; 
+	color: #253A69;
+	text-decoration: none;
+}
+/* end of the calendar styles */

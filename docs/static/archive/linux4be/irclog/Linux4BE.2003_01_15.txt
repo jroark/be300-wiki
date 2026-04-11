@@ -1,0 +1,369 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_15.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_15.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Jan 15 00:00:15 2003
+02:33 -!- Guest30699 [~bshirclif@twhou-212-122.ev1.net] has joined #linux4be
+02:33 -!- Guest30699 is now known as sinfonian
+02:33 < sinfonian> damn I finally found this damn channel
+02:37 < sinfonian> and no one is here!!!
+02:38 < sinfonian> There has been no activity in here for a few days... was just trying to get the ball rolling again like it did last week, I thought the touchscreen would be about done by now :D
+02:44 < PsycoXul> hmm
+02:44 < sinfonian> hey whats up?
+02:45 < PsycoXul> not much
+02:48 < sinfonian> been working on the touchscreen?
+02:48 < PsycoXul> hah
+02:48 < PsycoXul> i'm no developer
+02:49 < PsycoXul> i'm still trying to figure out how to get a today screen that tells me shit :p
+02:49 < sinfonian> lol.. ok
+02:50 < PsycoXul> is casio's PIM the only decent set of PIM crap that you can get for free on this thing? heh
+02:51 < PsycoXul> i can't wait for linux to be fully functional on this thing
+02:51 < PsycoXul> i can't stand windows heh
+02:52 < PsycoXul> i tried a qt embedded emulator demo thing once and that shit was pretty sweet
+02:53 < sinfonian> yea it is
+02:53 < sinfonian> and the PIM is useless.. I tried using it for a month and gave up it sucked so bad
+02:53 < sinfonian> I use to have a palm that I liked
+02:53 < PsycoXul> the casio PIM you mean?
+02:54 < sinfonian> and the PIM for a palm is great.. but tahts about it...  The Casio PIM is just horrible 
+02:54 < PsycoXul> heh
+02:54 < PsycoXul> yeah
+02:54 < PsycoXul> i don't even have any pda experience, but the casio pim to me feels kinda sluggish and segregated
+02:54 < sinfonian> the PIM for qt is really nice
+02:55 < PsycoXul> like it's all more seperate than it should be
+02:55 < PsycoXul> or something, i dunno... heh
+02:55 < sinfonian> and hopefully we can get it working with windows too.. but I bet you will have to use either the cf card and a reader or a serial cable
+02:55 < PsycoXul> why?
+02:55 < sinfonian> why what?
+02:56 < PsycoXul> why will you have to use the cf card and a reador or a serial cable?
+02:56 < PsycoXul> heh
+02:56 < sinfonian> because it will be too hard to get the usb thing worked 
+02:57 < PsycoXul> oh i think i see what you mean
+02:57 < PsycoXul> i dunno, there's not even drivers for the nand disk or cf card yet
+02:57 < PsycoXul> i don't see why usb would be much more of a problem
+02:58 < sinfonian> well we wont care about the nand disk
+02:58 < PsycoXul> heh
+02:58 < PsycoXul> why not?
+02:59 < sinfonian> well because it is so small and we will keep everything in ramdisk and cf card
+02:59 < PsycoXul> hmm
+02:59 < PsycoXul> i don't get it
+02:59 < sinfonian> we might want to figure out how to mount the nand disk so we can replace the locked part of it with real windows ce  :D
+03:00 < PsycoXul> is the 16mb of internal storage not the 'nand disk'? heh i dunno much about this stuff
+03:00 < sinfonian> yea but 4.5 megs of that 16 is locked away with a compressed ramdisk of the casio version of wince
+03:00 < PsycoXul> ok
+03:01 < PsycoXul> well the way i see it, i'd rather use it than a ramdisk, being so ram limited as we are already
+03:01 < sinfonian> then that 4.5 megs of compressed nand disk takes up like 12 megs of the 16megs of ram 
+03:02 < PsycoXul> huh?
+03:02 < sinfonian> leaving only 4 megs for programs to run in ram
+03:02 < sinfonian> thats the 4meg limit
+03:02 < PsycoXul> is that limit specific to the version of wince on there, or is linux somehow subjected to it too?
+03:02 < PsycoXul> heh
+03:02 < sinfonian> let me check something in linux for the be...
+03:03 < sinfonian> only wince.. let me see what the ramdisk footprint is for linux.
+03:03 < PsycoXul> once linux is fully functional on there, i doubt i'd even wanna use wince on it again
+03:04 < PsycoXul> there may be a few wince apps that don't have linux equivs that'd run on there
+03:04 < PsycoXul> but i think they're probably very few, and probably not really worth it either heh
+03:05 < sinfonian> maybe.. but there are tons of linux apps that wince couldnt dream of doing
+03:05 < PsycoXul> yeah
+03:05 < PsycoXul> and it'll be nice to be able to write shit and port shit and cross-compile it myself
+03:06 < sinfonian> ok.. I think I got it...  it says total used is..   crap.. I cant tell cause of the stupid console
+03:06 < PsycoXul> heh
+03:06 < sinfonian> its either 5.9 megs or 7.6
+03:06 < PsycoXul> how big of a flash card do you need for linux on it?
+03:06 < PsycoXul> right now i mean
+03:06 < sinfonian> 3 megs
+03:06 < PsycoXul> i don't imagine there's anything to take up mad space
+03:06 < PsycoXul> hehe
+03:07 < PsycoXul> ok good
+03:07 < PsycoXul> cause i only got an 8mb that i can use all the time right now
+03:07 < sinfonian> thats just the kernel with a ramdisk
+03:07 < sinfonian> but with more apps and all that it will be at least 32 -64 I would think
+03:07 < PsycoXul> anything under 256mb doesn't seem like it's worth buying, but $70 for 256mb of storage seems like a rip heh
+03:08 < sinfonian> well I am going to try out media player 9.. I hope its worth this wait
+03:08 < PsycoXul> MouseLRN compiled SDL for it...
+03:08 < PsycoXul> i wonder how long till somebody does mplayer :p
+03:09 < sinfonian> sdl?
+03:09 < PsycoXul> yeah, you know, that thing loki used to port all their games with
+03:09 < PsycoXul> and that a bunch of games, and other such multimedia type stuff use for graphics and audio etc
+03:09 < PsycoXul> sometimes audio anyway
+03:10 < PsycoXul> i wonder if gimp'll run it
+03:10 < PsycoXul> i guess if you have a big storage enough storage card to have plenty of swap space, you could run anything that doesn't need floating point eh? heh
+03:11 < sinfonian> it wont use swap space..
+03:11 < PsycoXul> and probably stuff with floating point to some degree, i would imagine, if we get FP emu anyway
+03:11 < PsycoXul> sinfonian: why not?
+03:11 < sinfonian> and floating point will be emulated in the kernel
+03:11 < PsycoXul> being able to would be a good thing i think
+03:12 < sinfonian> swap space isnt practical with a cf card... too slow and a cf card has a limited lifespan and cant handle the read and writes for swap spac
+03:12 < PsycoXul> really?
+03:12 < PsycoXul> CF cards are slower than HD's?
+03:13 < PsycoXul> and how's it's lifespan and r/w handling so limited?
+03:13 < sinfonian> well some are slower
+03:14 < sinfonian> and the mean failure rate is 100,000 read write cycles
+03:14 < sinfonian> so for every 1,000 write cycles there is a 1% chance of faliure in that cell
+03:15 < PsycoXul> for as much as they cost for so little space, and their being so unpractical as mass storage... seems kinda odd, all they're good for is writing stuff, reading it, deleting it, over and over... seems like a hell of a ripoff if they're not even really good at that heh
+03:15 < PsycoXul> heh
+03:15 < sinfonian> and if one cell goes bad a whole chunk will go bad.. like 512k or so
+03:15 < PsycoXul> damn
+03:15 < sinfonian> well they are fine for cammeras and PDA storage.. just not intense read and write stuff
+03:16 < PsycoXul> microdrives any better? or they just too power hungry?
+03:16 < sinfonian> it isnt like ram really  more like a floppy with out the mechanics
+03:16 < sinfonian> I think they are way worse
+03:16 < sinfonian> they are too delicate
+03:16 < sinfonian> break easy
+03:16 < PsycoXul> heh
+03:17 < PsycoXul> well damnit
+03:17 < PsycoXul> heh
+03:18 < sinfonian> lots of problems with them getting bumped around and the head scratching the disks
+03:18 < PsycoXul> yeah i can imagine
+03:24 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+03:25 < PsycoXul> but it seems to me like even if we did have swap on a CF card
+03:25 < PsycoXul> with these devices and their uses and capabilities
+03:25 < PsycoXul> it doesn't seem like it would be getting hit a lot and thrashed or anything
+03:25 < PsycoXul> just a little extra space to use on the occasion when you need it
+03:25 < MouseLRN> PsycoXul hi
+03:25 < PsycoXul> hello MouseLRN 
+03:26 < sinfonian> hey Mouse....
+03:26 < sinfonian> so whats new?
+03:26 < MouseLRN> sinfonian re
+03:27 < MouseLRN> I publiced regstat for linux (something like tpanel for Windoze) with small instruction. Get it: http://lrn.ru/~mouse/be300/regstat.tar.gz
+03:27 < PsycoXul> whats that do?
+03:27 < PsycoXul> i dunno what tpanel is either
+03:27 < PsycoXul> heh
+03:28 < MouseLRN> PsycoXul shows X/Y's pair changing in real time.
+03:28 < PsycoXul> i see
+03:28 < PsycoXul> so touchscreen support is indeed progressing?
+03:28 < MouseLRN> and control reg stat
+03:29 < PsycoXul> sinfonian came around rather worried about it heh
+03:29 < MouseLRN> yes
+03:30 -!- MouseLRN [~mouse@info.ru] has quit ["My damn controlling terminal disappeared!"]
+03:42 < sinfonian> Damn I really had some questins for him
+03:53 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+03:54 < sinfonian> hi Filip
+04:09 < Filip> hi brian
+04:09 < Filip> how are you ?
+04:11 < sinfonian> my computer is freakin out
+04:13 < sinfonian> damn win media player 9
+04:13 < Filip> what's it doing ? (or not doing)
+04:13 < Filip> why did you  upgrade ? <b>if it ain't broke, don't fix it</b>
+04:15 < sinfonian> it just did it on its own I think
+04:33 < sinfonian> so filip what is new in the project
+04:35 < sinfonian> im going to sleep now.. but go ahead and tell me what is new and is CF card going to be supported soon?
+04:36 < Filip> i've been extremely busy at the office lately, so no real progress from my side. mouse did a good job on touchscreen 
+04:37 < sinfonian> yea thats what I have been reading
+04:38 < sinfonian> so once touch then gui?
+04:38 < sinfonian> or are we missing a step?
+04:50 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: Filip, Baalz, PsycoXul, sinfonian, jal0_logger, someguy_
+04:52 -!- Netsplit over, joins: Filip, sinfonian, Baalz, PsycoXul, someguy_, jal0_logger
+05:01 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+05:02 < Filip> hi MouseLRN
+05:02 < MouseLRN> Filip hi
+05:03 < MouseLRN> I've updated regstat. It's more useable now.
+05:08 < MouseLRN> anybody can test it? and mail me any comments. Today (later) I try to write 'calibration' program (fork from regstat), which after calibration will display real X and Y
+05:10 < Filip> can't test now (i'm in the office, BE is at home), but I can try it later today (probably around 9PM, it's now 11:15 AM)
+05:10 < Filip> unless you're really desperate
+05:10 < MouseLRN> ok
+05:11 < Filip> I supose it's at your homepage ?
+05:11 < MouseLRN> yes. File name is regstat.tar.gz
+05:23 -!- MouseLRN [~mouse@info.ru] has quit ["BitchX-1.0c17 -- just do it."]
+05:30 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+05:35 < MouseLRN> some intresting fact from Qtopia project - they read touchpanel status in cycle: qwsmouse_qws.cppp:readMouseData
+05:41 -!- MouseLRN [~mouse@info.ru] has quit ["My damn controlling terminal disappeared!"]
+05:48 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+05:50 < MouseLRN> may be touchscreen doesn't do interrupt? may be we not needs interrupt for now?
+06:15 -!- MouseLRN [~mouse@info.ru] has quit ["see later"]
+11:32 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+11:33 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+13:46 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+13:46 -!- sinfonian [~bshirclif@twhou-212-122.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+13:47 < MouseLRN> hi 2 all
+14:10 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Gary Coleman uses BitchX. Whatchoo talkin bout foo?"]
+15:19 -!- Filip_ [~Filip@240.212-136-217.adsl.skynet.be] has joined #linux4be
+15:20 < Filip_> hi all
+15:34 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+15:35 < MouseLRN> Filip_ hi
+15:35 < Filip_> hi mouse
+15:37 < MouseLRN> I have progress with calibration program ;-)
+15:38 < Filip_> haven't had time to test yet, will do so in an hour or two
+15:38 < MouseLRN> I publiced libSDL (static & shared) without any debug info. And I updated SDL-patch
+15:38 < Filip_> own program for calibratioin, or modified an existing ?
+15:39 < MouseLRN> in hour or two I release alpha version of calibration program ;-)
+15:39 < MouseLRN> ?
+15:39 < MouseLRN> 'an existing' - ?
+15:40 < Filip_> from vr-linux, or ipaq or so
+15:42 < MouseLRN> they have calibration program?
+15:43 < Filip_> vr-linux had, I supose ipaq as well (butnever looked at it)
+15:46 < MouseLRN> one moment...
+15:47 < Filip_> http://www.ltc.com/linux-mips/tpanel.html
+15:52 < MouseLRN> I see it in source code for tpanel
+15:54 < MouseLRN> Did you know how to do backup image by ActiveSync? This can do PC Connect, but in XPod it won't work ;-(
+15:55 < Filip_> sorry, never did a backup in XPod
+15:56 < MouseLRN> what shell do you use?
+15:56 < Filip_> xpod, but never do a backup
+15:56 < Filip_> there is nothing on my be, just use it for hacking 
+16:18 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Get your free warez from ftp://127.0.0.1!"]
+16:24 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+16:25 < MouseLRN> Filip_ are you still there?
+16:25 < Filip_> half
+16:27 -!- sinfonian [~bshirclif@np-dsl-216-12-217-235.ev1.net] has joined #linux4be
+16:28 < MouseLRN> I updated regstat tool.Now it contains sdlregstat which is tool for calibration, but now it works a half ;-)
+16:28 < MouseLRN> sinfonian re
+16:29 < MouseLRN> note, that sdlregstat needs SDL. You can also find it on my homepage at lrn.ru
+16:31 < sinfonian> hi.. 
+16:31 < sinfonian> ok guys anything new?  Im about to go to work
+16:32 < sinfonian> hey mouse how do you use the sdlregstat tool in linux if you cant access the cf card
+16:32 < sinfonian> how do you run it... is it a new linux image?
+16:34 < sinfonian> I will take my answer off the air  :P  I'll read the logs later for your answer
+16:34 < sinfonian> bye
+16:34 -!- sinfonian [~bshirclif@np-dsl-216-12-217-235.ev1.net] has quit []
+16:35 < MouseLRN> sinfonian I put it into ramdisk. libSDL about 280kb
+16:35 -!- jal0atWrk [~jal0_wrkn@208.33.58.215] has joined #linux4be
+16:35 < MouseLRN> jal0atWrk hi
+16:35 < jal0atWrk> hey mouse
+16:36 < jal0atWrk> hows the touchscreen stuff going?
+16:36 < MouseLRN> in progress. Now I writing calibration program running within libSDL. I updated it at my homepage
+16:38 < jal0atWrk> sound cool, if i can every get some time, i'll take a look at it. things have been extremly busy for me lately :(
+16:39 < MouseLRN> ok
+16:41 < MouseLRN> jal0atWrk do you know how to backup all data from XPod? Within Xpod PC Connect works incorrect - it can transmit only 1600K ;-(
+16:42 < jal0atWrk> no, dont use the BE except for hack, have you tried posting the question to expod.net fourm?
+16:43 < MouseLRN> no =)
+16:45 < PsycoXul> MouseLRN: i have the same problem
+16:46 < PsycoXul> MouseLRN: i've just been backing up to a CF card
+16:46 < MouseLRN> PsycoXul complete image of NAND and other stuff?
+16:47 < PsycoXul> i dunno
+16:47 < PsycoXul> it's the same size as the backup i made through pc connect before installing expod
+16:48 < PsycoXul> and as the expod image
+16:48 < PsycoXul> actualy 64 bytes bigger
+16:49 < PsycoXul> -rwxr-xr-x    1 root     root     12567040 Jan 10 21:40 BACKUP20030110A.bin*
+16:49 < PsycoXul> -rwxr-xr-x    1 root     root     12567104 Jan 13 20:46 Backup.dat*
+16:49 < MouseLRN> PsycoXul what differ?
+16:50 < PsycoXul> but thats not as big as the pc connect backup last time claimed it had to go... it was saying like 24mb...
+16:50 < MouseLRN> Oh, I have the same result ;-)
+16:51 < MouseLRN> The biggest backup from my BE is about 12Mb, which done by PC Connect
+16:51 < PsycoXul> any way to backup via activesync?
+16:52 < PsycoXul> pc connect's rather flakey in general, it seems
+16:52 < MouseLRN> no, I didn't find
+16:57 < MouseLRN> did anybody know why windoze calibration progrma do animation between taps? answer - they delaying to 'reinitialize' hardware...
+16:58 < jal0atWrk> what do you mean by animation?
+17:00 < PsycoXul> MouseLRN: you mean how the target slides between the calibration points?
+17:00 < MouseLRN> cursor movement
+17:08 -!- MouseLRN [~mouse@info.ru] has quit ["going to update regstat tools"]
+17:15 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:16 < MouseLRN> I have been updated
+17:17 -!- jal0atWrk [~jal0_wrkn@208.33.58.215] has quit []
+17:42 -!- MouseLRN [~mouse@info.ru] has quit ["BitchX: its not for the tabkey impaired!"]
+--- Log closed Wed Jan 15 18:13:20 2003
+--- Log opened Wed Jan 15 18:13:22 2003
+18:13 !irc.freenode.net *** Looking up your hostname...
+18:13 !irc.freenode.net *** Checking ident
+18:13 !irc.freenode.net *** Found your hostname
+18:13 !irc.freenode.net *** No identd (auth) response
+--- Log closed Wed Jan 15 18:19:34 2003
+--- Log opened Wed Jan 15 18:20:00 2003
+18:20 -!- Filip_ [~Filip@240.212-136-217.adsl.skynet.be] has quit [Read error: 60 (Operation timed out)]
+18:37 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+18:45 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit []
+18:50 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+20:01 -!- sou [donk@bursa.ipartner.com.pl] has joined #linux4be
+20:02 -!- sou [donk@bursa.ipartner.com.pl] has left #linux4be []
+--- Log closed Thu Jan 16 00:00:41 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

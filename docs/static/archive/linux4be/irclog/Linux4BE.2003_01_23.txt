@@ -1,0 +1,321 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_23.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_23.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Jan 23 00:00:46 2003
+02:37 -!- mouse [~mouse@194.67.87.71] has joined #Linux4BE
+02:53 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+02:53  * Filip looks around to see if someone is awake ....
+02:54 < PsycoXul> probably not
+02:54 < Filip> wow ... a phantom
+02:55 < PsycoXul> thats right, i'm phantastic
+02:55 < Filip> :-))
+02:55 < Filip> brb, going to make some coffee ....
+02:59 < mouse> Filip: hi
+03:01 < mouse> PsycoXul: good day or... good morning ;-)
+03:01 < PsycoXul> it's midnight here heh
+03:02 < mouse> ;-)
+03:31 < Filip> hi mouse
+03:43 < mouse> Filip: re
+03:44 < mouse> Last night I updated regstat driver - now it produces lesser noise
+03:44 < mouse> did you try CF patch?
+03:50 < Filip> I tried CF patch a couple of days ago, bt didn't really look at the code (no time yet)
+03:50 < Filip> have you got an updated image around ?
+03:55 < mouse> no, but I can do it
+04:12 < Filip> I'll have another look at the interrupt handling one of the comming days.  Going to try and configure the cascading interrupt from Seiichi and see if I can fin da way to determine where to dispatch for the different functions of the companion chip
+04:13 < Filip> it looks like there is only one interrupt source for the companion chip, and we need to determine the exact source (serial, buttons, touchscreen, cf, ...) and dispatch accordingly.
+04:15 < Filip> http://linux.junsun.net/porting-howto/porting-howto.html , chapter 8
+04:19 < mouse> very intresting
+04:41 -!- sinfonian [~bshirclif@207.218.223.228] has joined #linux4be
+04:41 < Filip> hi Brian
+04:42 < sinfonian> hello
+04:43 < sinfonian> trying to get trillian to use freenode..
+04:43 < sinfonian> so anything new happen lately?
+04:44 < Filip> that's what I use most of the time
+04:45 -!- bshircliffe [~bshirclif@207.218.223.228] has joined #linux4be
+04:45 < bshircliffe> alright
+04:45 < bshircliffe> I got it working now :D
+04:46 < Filip> hmm, split personality ? 
+04:46 < Filip> me seeing double ?
+04:46 < bshircliffe> yea
+04:47 < bshircliffe> so any new progress?
+04:48 < Filip> you should try mouse's image: GUI with touchscreen working and buttons
+04:48 < Filip> (it's not completed yet, but gives an idea on where we are now)
+04:48 < bshircliffe> wow.. the gui is working?
+04:48 < Filip> no 
+04:48 < Filip> only partially
+04:49 < bshircliffe> what is working?
+04:49 < Filip> display is no problem, touchscreen is
+04:49 < Filip> still figuring out the details
+04:49 -!- sinfonian [~bshirclif@207.218.223.228] has quit []
+04:49 < Filip> mouse: about your last update to regstat : does it use some of QT code for filtering, or another trick ?
+04:50 < bshircliffe> I knew QT has its own tpanel code
+04:50 < bshircliffe> cause it has a similar calibration scheme that wince uses
+04:50 < Filip> it has some interesting code for filtering out 'noise' 
+04:51 < bshircliffe> great
+04:58 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+04:59 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+05:00 < mouse> no, I use other values for initializing registers. See 'driver' code
+05:00 < bshircliffe> hi mouse
+05:00 < Filip> ok
+05:00 < mouse> bshircliffe: re
+05:00 < bshircliffe> I just saw your email asking me how to get qtopia on the be-300
+05:01 < bshircliffe> re:  I made that image up :D
+05:01 < Filip> how did you get those new values  ? 
+05:01 < mouse> experimentalt
+05:03 < mouse> bshircliffe: how?
+05:03 < bshircliffe> gimp
+05:04 < mouse> ;P
+06:22 -!- Filip [Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+06:31 -!- bshircliffe [~bshirclif@207.218.223.228] has quit [Read error: 60 (Operation timed out)]
+06:45 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: PsycoXul, jal0_logger
+06:45 -!- Netsplit over, joins: PsycoXul, jal0_logger
+06:46 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: PsycoXul, jal0_logger, mouse
+06:47 -!- Netsplit over, joins: jal0_logger, PsycoXul, mouse
+12:58 -!- themaw [~marc@pD9E5C379.dip.t-dialin.net] has joined #linux4be
+12:58 < themaw> Hi guys!
+12:58 < mouse> themaw: hi
+12:58 < themaw> hi mouse, let me first congratulate you for the great work :) i tried it last night ..
+12:59 < mouse> ;-) thanks and don't forget congrat to andrey - hi helped me %)
+12:59 < themaw> well .. except that the software-reset didn't work afterwards .. have you experienced something like this, too ?
+13:00 < themaw> ok, i'll do :)
+13:00 < themaw> hmm .. you used his disasm'ed code ?
+13:01 < mouse> yes, some parts
+13:02 < themaw> cool :) when i looked at it it was like crypto to me ;)
+13:04 < mouse> 'it' - disasmed code?
+13:04 < themaw> yep ..
+13:05 < themaw> not the one for the touchscreen, but that one for nanddisk, serial etc
+13:12 < mouse> ? what do you mean
+13:17 < themaw> oh sorry ..
+13:17 < themaw> i just took another look at the code and saw it was wince-code ..
+13:18 < BaalzAW> Hi
+13:18 -!- BaalzAW is now known as Baalz
+13:19 < Baalz> mouse: whent I start sdlregtest I get a message saying :"Coudldn't initialize SDL: Unable to open mouse"
+13:20 < Baalz> Do you have an idea of what is causing this?
+13:20 < Baalz> I use the image from your homepage
+13:23 < mouse> Baalz: hi
+13:24 < mouse> read http://linux4.be/~mouse/ ;-) or simple, run: 'a' from shell
+13:25 < mouse> themaw: %)
+13:26 < Baalz> Thanks mouse
+13:30 < mouse> thanks to andrey - he got disasmed & converted to C code,which used touch screen regs ;-)
+13:32 < Baalz> How do we change color in the paint program?
+13:33 < mouse> click to top of bottom bar
+13:34 < mouse> (toolbar ;-))
+13:34 < mouse> under color lines
+13:34 < Baalz> Great
+13:35 < mouse> but sometimes it segfault...
+13:35 < Baalz> I am going to update the dummies packages soon I feel
+13:35 < Baalz> Yes
+13:35 < Baalz> When we try to draw too close t the border it seems
+13:36 < Baalz> Only the botom border do this
+13:37 < mouse> I know. Top, left & right border from time to time gets negative result
+13:45 < Baalz> mouse: what is the temperature outside where you live?
+13:45 < Baalz> Here it is -20
+13:46 < mouse> I think, -5..-10
+13:46 < Baalz> Ok
+13:54 < mouse> Now, I'll go to home. May be we'll talk today later
+13:54 < Baalz> Ok see you later mouse
+13:55 < mouse> bb
+13:55 -!- mouse [~mouse@194.67.87.71] has left #Linux4BE ["va a casa..."]
+13:56 < themaw> what does "casa" mean ? 
+13:57 < Baalz> house in spanish
+13:58 < Baalz> Where are you from themaw?
+13:58 < themaw> ah .. thanks :) i understood the "va a" due to my knowledge of frensh ..
+13:58 < themaw> Germany .. near Stuttgart ..
+13:58 < Baalz> Tu parle bien francais?
+13:59 < Baalz> I am a french canadian from montreal :)
+14:00 < themaw> Je l'ai appris (?) a l'ecole, mais j'aime parler anglais mieux :)
+14:00 < Baalz> Hehe Ok :)
+14:01 < themaw> I did frensh as second foreign language at school, and the last time i had frensh class was 2 1/2 years ago :)
+14:02 < Baalz> Ok
+14:02 < themaw> Canada .. i always wanted to travel there but didn't have the chance yet.
+14:02 < Baalz> The first foreign language was english?
+14:02 < Baalz> Don't come in the winter :)
+14:02 < Baalz> Its too cold :)
+14:03 < themaw> Yes, english is the first foreign language at most german schools (only the ones very close to the border to france teach frensh at first)
+14:04 < Baalz> Can you explain something to me about german?
+14:04 < themaw> Sure, just ask.
+14:06 < Baalz> In cryptonomicon a guy present Allan Turing to another guy saying: "This is Allan Türing" then says: "The u does not require an ulumut"
+14:06 < Baalz> What is the ulumut used for and how does it affect the sound
+14:07 < themaw> ok, you mean the "umlaut" i think. The dots on the vocals.
+14:07 < Baalz> Yeah
+14:07 < themaw> It does affect the sound .. let me think of an example.
+14:08 < themaw> the Ü (u-umlaut) is like in frensh "rue"
+14:09 < Baalz> So the joke is the fact that the name wasn't pronouced the correct way right?
+14:09 < themaw> That's it.
+14:10 < themaw> Many people, especially those coming from eastern countries have problems with the umlauts i recognized ..
+14:10 < Baalz> Thanks
+14:11 < Baalz> I see
+14:11 < Baalz> Have you read this book?
+14:12 < themaw> The german "U" is most often pronounced like in "to" .. or "ou" .. but with a little different sound ..
+14:12 < themaw> not yet .. to be hornest, i didn't even hear from it ;)
+14:12 < themaw> Though i know who Turing was ..
+14:12 < Baalz> It's a very good geek book
+14:13 < Baalz> A little hard for me to understand but very funny
+14:14 < themaw> Ok, than it's even harder for me to understand ;)
+14:14 < themaw> Last book i read in english was "Just for fun" ..
+14:14 < themaw> .. which was quite fun reading.
+14:14 < Baalz> I heard good thigs about it too!
+14:16 < Baalz> I have to leave for a moment, I might see you later...
+14:16 < Baalz> Ciao
+14:16 -!- Baalz is now known as BaalzAw
+14:16 < themaw> ok, cu later ..
+16:08 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+16:15 < themaw> re mouse
+16:17 < MouseLRN> themaw hi
+16:27 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has quit [Remote closed the connection]
+16:48 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+16:48 < Chewie> Hi
+17:04 -!- themaw [~marc@pD9E5C379.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+17:32 -!- Filip_ [~Filip@212.100-136-217.adsl.skynet.be] has joined #linux4be
+17:34 -!- Filip_ is now known as Filip
+17:34 < Filip> hi Chewie
+17:35 < Chewie> Hi Filip
+17:35 < Chewie> How's the work going?
+17:38 < Filip> almost no spare time :-(
+17:41 < Chewie> I see
+17:42 < Chewie> However, the thing is advancing as I can see at the logs :)
+17:43 < Filip> indeed, luckily I'm not the only one on this project
+17:44 < Chewie> Yup
+17:45 < Chewie> It's very multicultural. in fact :)
+17:54 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+17:55 < Filip> hi MouseLRN
+17:55 -!- MouseLRN is now known as mouse
+17:55 < mouse> Filip hi
+17:57 < Chewie> Hi
+17:57 < mouse> Chewie hi
+18:13 -!- mouse [~mouse@IREX-GW-2.radio-msu.net] has quit ["My damn controlling terminal disappeared!"]
+18:24 < Filip> talk to you later ....
+18:28 -!- antagonizt [~johnbot@tnt1-123.ghg.net] has joined #Linux4BE
+18:28 < Filip> hey antagonizt, was just about to go to bed....
+18:29 < Filip> long time no see
+18:29 < antagonizt> yeah things have been kinda rough for me lately
+18:29 < antagonizt> my girlfriend and i split so i moved back to houston
+18:29 < antagonizt> been busy moving and trying to sort out my life
+18:30 < Filip> I see...
+18:30 < antagonizt> looks like you guys have been making alot of progress...
+18:31 < Filip> getting closer
+18:32 < Filip> still so many things to explore, and so little time
+18:33 < antagonizt> it looks like there are some really sharp new people helping out...
+18:34 < antagonizt> with the touch panel almost working and the CF progress
+18:36 < Filip> and from all parts of the world... mouse is from Russia (touchscreen), and Seiichi from Japan (CF)
+18:37 < Filip> still looking for someone in Australia to do the sound, and someone in Africa for the power-management   ;-)
+18:38 < antagonizt> :)
+18:40 < Filip> going to get some sleep now, has been another busy week so far.... talk to you soon !
+18:40 < antagonizt> later
+18:40 -!- Filip [~Filip@212.100-136-217.adsl.skynet.be] has quit [Read error: 54 (Connection reset by peer)]
+19:06 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+19:08 -!- antagonizt [~johnbot@tnt1-123.ghg.net] has quit ["Client Exiting"]
+19:15 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit []
+19:18 -!- Chewie [~chewie@the-geek.org] has quit ["Aplicación Saliendo"]
+20:55 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+21:15 -!- jal0 is now known as jal0_away
+22:01 -!- Unslinger [~icechat@12-246-39-132.client.attbi.com] has joined #linux4be
+22:02 -!- Unslinger [~icechat@12-246-39-132.client.attbi.com] has quit [Client Quit]
+23:47 -!- WebGuest5728 [~eirc@208.205.19.122] has joined #Linux4BE
+23:48 < WebGuest5728> I anybody out there?
+23:48 -!- WebGuest5728 is now known as nykkto
+23:48  * nykkto grovels for attention
+--- Log closed Fri Jan 24 00:00:13 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,139 @@
+<4>Linux version 2.6.8.1 (filip@build.linux4.be) (gcc version 2.96-sdelinuxmips-040127) #18 Fri Sep 3 14:30:51 CEST 2004
+<4>CPU revision is: 00000c80
+<6>PClock: 165888000Hz
+<6>VTClock: 82944000Hz
+<6>TClock: 41472000Hz
+<4>Determined physical RAM map:
+<4> memory: 00fff000 @ 00000000 (usable)
+<4>Initial ramdisk at: 0x801fc000 (307200 bytes)
+<7>On node 0 totalpages: 4095
+<7>  DMA zone: 4095 pages, LIFO batch:1
+<7>  Normal zone: 0 pages, LIFO batch:1
+<7>  HighMem zone: 0 pages, LIFO batch:1
+<4>Built 1 zonelists
+<4>Kernel command line:
+<4>Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.
+<4>Primary data cache 16kB 2-way, linesize 16 bytes.
+<4>PID hash table entries: 64 (order 6: 512 bytes)
+<4>Using 0.033 MHz high precision timer.
+Linux versionbuild.linux4.be)96-sdelinuxmips-<4>CPU revision is: 00000c80
+PClock: 165888000Hz
+VTClock: 82944000Hz
+TClock: 41472000Hz
+Determined physical RAM map:
+ memory: 00fff000 @ 00000000 (usable)
+Initial ramdisk at: 0x801fc000 (307200 bytes)
+Built 1 zonelists
+Kernel command line:
+Primary instruction cache 16kB, physically tagged, 2-way, linesize 16 bytes.
+Primary data cache 16kB 2-way, linesize 16 bytes.
+PID hash table entries: 64 (order 6: 512 bytes)
+Using 0.033 MHz high precision timer.
+<4>Console: colour dummy device 80x25
+Console: colour dummy device 80x25
+<4>Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+<4>Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+<6>Memory: 13384k/16380k available (1723k kernel code, 2976k reserved, 608k data, 100k init, 0k highmem)
+Memory: 13384k/16380k available (1723k kernel code, 2976k reserved, 608k data, 100k init, 0k highmem)
+<4>Calibrating delay loop... Calibrating delay loop... 65.53 BogoMIPS
+65.53 BogoMIPS
+<4>Mount-cache hash table entries: 512 (order: 0, 4096 bytes)
+Mount-cache hash table entries: 512 (order: 0, 4096 bytes)
+<4>Checking for 'wait' instruction... Checking for 'wait' instruction...  unavailable.
+ unavailable.
+<6>checking if image is initramfs...checking if image is initramfs...it isn't (no cpio magic); looks like an initrd
+it isn't (no cpio magic); looks like an initrd
+<6>Freeing initrd memory: 300k freed
+Freeing initrd memory: 300k freed
+<6>NET: Registered protocol family 16
+NET: Registered protocol family 16
+<4>Can't analyze prologue code at 801ad2b8
+Can't analyze prologue code at 801ad2b8
+<6>fb0: Simple frame buffer device, using 160K of video memory
+fb0: Simple frame buffer device, using 160K of video memory
+<4>Console: switching to colour frame buffer device 60x53
+Console: switching to colour frame buffer device 60x53
+<4>Casio Cassiopeia BE-300 Serial Driver version 0.01
+Casio Cassiopeia BE-300 Serial Driver version 0.01
+<4>ttyS0 at 0xAA008680 (irq = 19) is a NEC D89041F1001 UART
+ttyS0 at 0xAA008680 (irq = 19) is a NEC D89041F1001 UART
+<4>RAMDISK driver initialized: 16 RAM disks of 4096K size 1024 blocksize
+RAMDISK driver initialized: 16 RAM disks of 4096K size 1024 blocksize
+<6>PPP generic driver version 2.4.2
+PPP generic driver version 2.4.2
+<6>PPP Deflate Compression module registered
+PPP Deflate Compression module registered
+<6>PPP BSD Compression module registered
+PPP BSD Compression module registered
+<6>NFTL driver: nftlcore.c $Revision: 1.96 $, nftlmount.c $Revision: 1.36 $
+NFTL driver: nftlcore.c $Revision: 1.96 $, nftlmount.c $Revision: 1.36 $
+<4>Using anticipatory io scheduler
+Using anticipatory io scheduler
+<6>NET: Registered protocol family 2
+NET: Registered protocol family 2
+<6>IP: routing cache hash table of 512 buckets, 4Kbytes
+IP: routing cache hash table of 512 buckets, 4Kbytes
+<6>TCP: Hash tables configured (established 512 bind 512)
+TCP: Hash tables configured (established 512 bind 512)
+<6>NET: Registered protocol family 1
+NET: Registered protocol family 1
+<6>NET: Registered protocol family 17
+NET: Registered protocol family 17
+<5>RAMDISK: Compressed image found at block 0
+RAMDISK: Compressed image found at block 0
+<4>VFS: Mounted root (ext2 filesystem) readonly.
+VFS: Mounted root (ext2 filesystem) readonly.
+<6>Freeing unused kernel memory: 100k freed
+Freeing unused kernel memory: 100k freed
+<4>* open *
+* open *
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: unable to open an initial console.
+Warning: unable to open an initial console.
+<4>Warning: dev (ttyS-1) tty->count(2) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(2) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(2) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(2) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: dev (ttyS-1) tty->count(3) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(3) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(3) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(3) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: dev (ttyS-1) tty->count(4) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(4) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(4) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(4) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: dev (ttyS-1) tty->count(5) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(5) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(5) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(5) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: dev (ttyS-1) tty->count(6) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(6) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(6) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(6) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Warning: dev (ttyS-1) tty->count(7) != #fd's(1) in tty_open
+Warning: dev (ttyS-1) tty->count(7) != #fd's(1) in tty_open
+<4>* open *
+* open *
+<4>Warning: dev (ttyS-1) tty->count(7) != #fd's(1) in release_dev
+Warning: dev (ttyS-1) tty->count(7) != #fd's(1) in release_dev
+<7>release_dev: bad idx when trying to free (ttyS-1)
+<4>Algorithmics/MIPS FPU Emulator v1.5
+Algorithmics/MIPS FPU Emulator v1.5
+

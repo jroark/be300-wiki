@@ -1,0 +1,280 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_11.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_11.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Mar 11 00:00:29 2003
+00:12 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+08:40  * mouse is back (gone 17:37:31)
+09:30  * mouse is away: gotta work
+10:23 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+10:27 < mouse> jal0 hi
+10:27 < jal0> hey mouse
+10:27 < jal0> how's it going
+10:30 < mouse> jal0 I have a lot of work ;-(( at end of march, I'll return to develop touchpanel...
+10:31 < jal0> ok
+10:32 < jal0> i feel your pain :)
+10:36 < mouse> ;-)
+11:00 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+11:00 < andrey> hi guys!
+11:05 < mouse> andrey: hi
+11:06 < andrey> how is it going?
+11:06 < andrey> Still a lot of work?
+11:07 < mouse> aga
+11:07 < andrey> :-)
+11:09 < andrey> Do you know how interrupts are processed? I was trying to look into it. I'm curiuos whether I can change GIU interrupt processing.
+11:09 < jal0> hey andrey
+11:10 < jal0> how interrupts are processed... in linux or CE?
+11:11 < andrey> hi jal0
+11:11 < andrey> in linux. I see that there are 32 interrupts reserved for GIU. And this number is hardcoded in at least two files.
+11:12 < jal0> yeap, but you can have more by chaining them
+11:12 < andrey> But in BE there are more than 32. Unless one irq is assigned to all cascading interrupts...
+11:13 < andrey> but how to distinguish them?
+11:14 < jal0> normally it's done by asking each prepherial device "was it you".
+11:15 < jal0> this asking is done in priority manner
+11:15 < jal0> where high devices get asked first
+11:16 < andrey> ic. 
+11:18 < jal0> normally the device has more than one interrupt source, so once it is know that that device was the source of the intterupt, a more percise handler is called which uses registers on the external device to determine the exact nature of the interrupt
+11:19 < andrey> I just noticed giu_cascade irqaction in the source code and I thought it's irqs 40-71 for first level and maybe 72-whatever for second, etc...
+11:20 < jal0> not sure what you mean... where in the sources are you looking
+11:20 < andrey> linux kernel
+11:21 < andrey> ok, maybe I need to understand it better :-)
+11:22 < jal0> there was  a real good link on the web, that explained how irq's work in linux. i'll try to find it again, as it was lost when my harddrive crashed. I really suck at trying to explain things :(
+11:23 < jal0> btw, did you get my standalone dissembler to compile
+11:23 < andrey> I mean for BE-200 GIU_IRQ_0 is cascading. Does it mean that all second level interrupts have the same IRQ number?
+11:23 < andrey> Yes, I compiled it today. And it works! :-)
+11:23 < jal0> i think so
+11:25 < andrey> Don't worry, it's not you (about explaining things) I always jump into conclusions instead of thinking little bit more :-)
+11:25 < jal0> each GUI_IRQ_XX is for an external device, the external device may have more that one interrupt source. example is a uart, most signal interrupts when data has been received and when tx-buffer is empty and several others. but the external uart only has on irq line that goes back to the cpu
+11:26 < jal0> has on irq = has one irg
+11:26 < jal0> irg= irq
+11:26 < jal0> ugg... :)
+11:27 < jal0> so the uart has a status register which you can look at to determine the exact interrupt that was signaled
+11:28 < jal0> have you got a uart datasheet around?
+11:28 < andrey> I mean not several interrupts for the same device, but several devices on the same interrupt
+11:29 < andrey> no, I don't. why?
+11:30 < jal0> its the same principle, except the external device it an irq controller
+11:33 < jal0> say GUI_IRQ_01 is attached to an irq controller, that controller has 8 input sources which eight external devices are attached to. if any of those devices cause an interrupt, the GUI_IRQ_01 is signalled. in the handler routine, the cpu reads the status register of the irq handler to determine which device signalled the interrupt. then another handler reads the registers on the external device to determine the exact source
+11:33 < jal0> and so one for the depth of the chain
+11:34 < jal0> and so one= and so on
+11:35 < andrey> You mean that if touch panel and buttons share the same primary interrupt both controller should know how to read status register and determine whether it's their device?
+11:37 < jal0> yes, it means that there is a status register somewhere that will tell you wich device actually caused the interrupt. then the device itself has a register that will tell you what the exact cause of the interrupt on the device was
+11:38 < andrey> ic.
+11:39 < jal0> if two devices share the same interrupt, then its two levels of registers you have to read in order to determine the exact cause of the interrupt
+11:40 < jal0> another good source of general info on irq handling would be any tutorial on the pc, the hardware is the same, onle the code is different
+11:40 < jal0> but to understand the code, you really have to understand the hardware first
+11:40 < andrey> I understand that. I was just wondering who reads these registers. Is it common interrupts processing code or each device driver reads it again in its turn.
+11:42 < andrey> When I started to learn PC there was no such thing as "interrupt sharing", it was "interrupt conflict" :-))
+11:42 < jal0> usually there is a common irq handler for each level of irq casqading which is used to determine the actual device, then a specific handler for each device
+11:42 < jal0> :)
+11:44 < andrey> Than this common handler should either know which driver is interested in which bit (or value) in status register ot should generate another interrupt signal that driver should subscribe to
+11:44 < andrey> Than = then (?)
+11:44 < jal0> the commone irq handlers are managed by the OS, where as the specific handler is part of the device driver and registers with the OS so it 'know how to find it'
+11:45 < jal0> hmm, say that again
+11:45 < jal0> only one interrupt is ever generated
+11:45 < andrey> Again, suppose we have irq0 that is shared between touch screen and keyboard.
+11:46 < andrey> There is common handler that knows how to read some status register to distinguish it.
+11:47 < andrey> What does this handler do after that? Does it call either touch driver or keyboard driver based on status register value?
+11:47 < jal0> yes, and in that case there is an external controller that holds the register for this 
+11:48 < jal0> the keyboard and touchscreen are inputs to this controller and are not connected to the cpu. when irq0 is signalled, the cpu reads the status register on the irq controller which usually is a bit mask of the devices it receives input from.
+11:49 < jal0> this determines what device actually signalled the interrupt
+11:49 < jal0> then the device driver for that  device is called to handle it
+11:51 < andrey> So if I write touch panel driver I should not only register for irq0 (or even not to register at all) but also tell this controller that my bit in status register is 0? Or is it kind of hardcoded in this controller?
+11:51 < jal0> usually the device driver reads registers from the device to determine the exact cause of the irq because the device can have more than one source of interrupt. but the irq controller only know 'something' happend, not exactly what
+11:52 < andrey> Ok, I think I'm lost. Probably it's better to read something about it than ask you to explain obvious things.
+11:52 < jal0> it's hardwired in the controller, unless of course we have a programmable irq controller. but untill we have all the interrupts mapped out, it would probably be best to use the mappings set by the CE
+11:53 < jal0> so in effect, treat is as being hardwired
+11:55 < andrey> Ok, let's talk about real life than. :-) In BE-300 GIU_IRQ_0 is shared. You need to read [AA000004]. If bit 0 is set then it's PCMCIA.
+11:55 < jal0> the problem is not in creating the drivers for the touchpanel, it's in creating the driver for the controller. unless you know all the devices that attach to it, it's going to be hard to write any code that dosn't break linux during boot.
+11:55 < jal0> ok
+11:56 < andrey> If it's 1 then it's buttons and if it's bit 9 it's touch panel.
+11:56 < jal0> so thats the register in the controller
+11:57 < andrey> Where in the kernel code should I put this knowledge - in some commone code or in each device driver?
+11:57 < jal0> in a common irq handler
+11:58 < andrey> Ok. How this common handler knows that if bit 1 is set it should call keyboard driver?
+11:58 < jal0> the irq handler should not have to know anything about WHAT is causing the interrupt, only WHO to call when it does
+11:58 < jal0> the keyboard driver should register with it during boot
+11:59 < andrey> And tell the controller that "I'm interesting in bit 1"?
+11:59 < jal0> keep and array of functions that reperesent the bit locations in the controller register
+12:00 < jal0> the driver puts it's init function there when registering.
+12:00 < andrey> So controller will call all three driver in hope of one of them "accepts" the interrupt?
+12:00 < jal0> yeap
+12:01 < andrey> Ok, now I understand. I hope... :-)
+12:02 < jal0> the function should only read another register on the device to see if it was the source of the interrupt, if not it moves to the next one down the line, as so on until all devices have been asked
+12:02 < jal0> this array is also set up so high priority interrupts sources get looked at first
+12:03 < andrey> But then I don't understand what's the purpose of defining GIUINT_CASCADE_IRQ in linux code. Because it assumes special processing for this particular IRQ.
+12:03 < jal0> i'm not sure, i'd have to look at the code
+12:04 < andrey> Well, it's little bit messy. :-) There are functions that are never called. Al least I didn't find... :-)
+12:07 < jal0> what i was talking about above you should mostly not have to do, the common code is already written. This is where the real problem is. If you enable the irq handling mechinism in the linux kernel, then you have to have in place handlers for the core devices, otherwise, the kernel will not boot
+12:08 < jal0> right now, most of the irq handling is done from code, setup from CE
+12:09 < jal0> once you hook in the linux irq handling code, that code goes away. stuff like handling the watchdog, timers, etc. is handled though code setup from CE
+12:12 < andrey> But for now (if I understand it right) we just need to register touch panel driver for giu_irq_0 and add to this driver some code for reading and analyzing register AA000004
+12:15 < jal0> i recommend this, find where in CE the drivers are registered, then overwrite this 'slot' with your own handler function pointer
+12:16 < jal0> i don't think you can fully enable irq handling in linux without setting up core system irq's
+12:17 < jal0> hence the 2-minute reset issue we had a while back
+12:18 < andrey> Why are you laking about CE? linux kernel has it's own interrupt handling, doesn't it?
+12:18 < jal0> yes, but its not 'Really' being used
+12:18 < jal0> unless, things have changed since the last time i looked at the code
+12:19 < andrey> We use CE initialization code but after the kernel is loaded I doubt that CE "sees" a single interrupt.
+12:19 < jal0> which was a while ago, so maybe i should revisit it
+12:20 < jal0> the irq vector table is a hardcoded memory location that the cpu jumps to when it recieves an interrupt
+12:20 < jal0> its not software controlled
+12:20 < jal0> so unless you overwrite this jump to address, the cpu WILL try and execute code located there
+12:21 < jal0> the last i looked, this 'jump-to' address was still populated with CE default code
+12:21 < jal0> the OS does NOT see irq's, it the cpu
+12:22 < jal0> hmm, did that make any sense ?-)
+12:23 < jal0> let me grab my data books and i'll give you a reference to looks at
+12:24 < andrey> But all CPU does is jump to 80000180. And this handler is populated with the except_vec3_r4000 handler (see arch/mips/kernel/traps.c)
+12:27 < jal0> hmm, looking for 80000180 in the data books... remember the page?
+12:27 < andrey> What book?
+12:28 < jal0> vr series manual
+12:28 < andrey> Vr4131 user's manual, page 86
+12:29 < andrey> vr series architecture, page 75
+12:31 < jal0> ok, indeed. NMI's have seperate vector
+12:31 < jal0> so irq handling for device should indeed be possible
+12:33 < jal0> " register touch panel driver for giu_irq_0 and add to this driver some code for reading and analyzing register AA000004 " <--- yes
+12:34 < andrey> It's good that we don't need to change existing code. :-)
+12:34 < jal0> sorry, i work with different micro's at my job, and sometime confuse them :)
+12:35 < jal0> i tried a while back to get rid of the '2-minute' reset problem by overwriting the NMI code, i couldn't get it to work and everything seemed to break
+12:37 < jal0> ok, time for me to go to work now. so i know, you are going to be working on the touch panel code?
+12:38 < andrey> ic. btw while looking into iterrupt processing I noticed several registers CE put some values into on each timer tick. Maybe it can resolve th reboot issue.
+12:39 < andrey> I was thinking about it but I'm afraid mouse will have time for it earlier than I understand how linux drivers work :-)
+12:39 < jal0> it's something to look into, but now that i'm using expod, that issue seemed to go away so i havn't look into it any further
+12:40 < andrey> Maybe we'll return to if when (if) we decide to bypass CE initialization code.
+12:40 < jal0> i know what you mean, this is my first go at linux kernel hack also. 
+12:40 < andrey> :-)
+12:41 < jal0> but for the most part, the hardest thing is being able to follow the code. i've be using redhat's 'Sourcer' code browser and it has helped alot.
+12:42 < jal0> ok, anyway talk to you later
+12:43 -!- jal0 is now known as jal0_wrkn
+12:43 < mouse> andrey: =)
+12:45 < andrey> jal0 later
+12:57 < andrey> ok, I have to go too...
+12:57 < andrey> mouse, see you...
+12:58 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+13:12 < mouse> andrey bb
+13:48  * mouse is away: va a casa...
+--- Log closed Tue Mar 11 18:35:33 2003
+--- Log opened Tue Mar 11 18:35:38 2003
+18:35 !irc.freenode.net *** Looking up your hostname...
+18:35 !irc.freenode.net *** Checking ident
+18:35 !irc.freenode.net *** No identd (auth) response
+18:35 !irc.freenode.net *** Couldn't look up your hostname
+--- Log closed Tue Mar 11 18:41:49 2003
+--- Log opened Tue Mar 11 18:41:58 2003
+18:41 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+18:42 < Chewie> Hi
+19:01 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: Baalz, jal0_wrkn
+19:14 -!- Netsplit over, joins: Baalz
+19:20 < Chewie> Did you know that you can run ELKS under PocketDOS (which runs under BE)?
+19:44 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+20:21 -!- jal0_wrkn [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:21 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit [Read error: 104 (Connection reset by peer)]
+20:44 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has joined #linux4be
+21:00 -!- Chewie [~chewie@the-geek.org] has left #linux4be ["Aplicación Saliendo"]
+22:47 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has quit [Read error: 54 (Connection reset by peer)]
+23:23 -!- pcwhiz [~pcwhiz@174-129.175-24.bham.rr.com] has joined #linux4be
+23:23 -!- pcwhiz [~pcwhiz@174-129.175-24.bham.rr.com] has quit [Client Quit]
+23:29 -!- jal0_wrkn is now known as jal0
+23:29  * jal0 is here
+--- Log closed Wed Mar 12 00:00:55 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

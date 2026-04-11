@@ -1,0 +1,142 @@
+# notes for building qt-embedded & opie against uClibc 0.9.16 for the 
+# Casio Cassiopeia BE-300 PDA and the linux4.be project
+# see http://www.linux4.be for more info
+# I have no idea if any of this is correct I was unable to test it...
+# the final binaries are too large to fit in a ramdisk the BE can handle
+# and as of 12/03/2002 the kernel does not support the cf slot or NAND
+# "Kernel panic: Out of memory and no killable processes..."
+#
+# Author: John Roark <jroark@linux4.be>
+# Date: 12/03/2002
+#
+
+#
+# *** JPEG6B NOTES ***
+#
+CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld AR2=mipsel-uclibc-ranlib \
+AR="mipsel-uclibc-ar rc" ./configure --enable-shared \
+--build=i686-pc-linux-gnu --host=mipsel-linux \
+--prefix=/home/johnbot/be300/distro/rootfs
+
+make
+make install
+ 
+#
+# *** QT-EMBEDDED 2.3.4 NOTES ***
+#
+ 
+tar xzvf qt-embedded-2.3.4-snapshot-20021130.tar.gz
+cd qt-2.3.4-snapshot-20021130/
+export QTDIR=`pwd`
+cd ..
+
+# opie needs to be checked out for the patches against qt-embedded
+# NOTE: password is anoncvs
+cvs -d:pserver:anoncvs@cvs.handhelds.org:/cvs login
+# NOTE: 12/03/2002
+cvs -d:pserver:anoncvs@cvs.handhelds.org:/cvs co opie
+
+cd opie
+export OPIEDIR=`pwd`
+# Now we obtain the Opie-specific configuration for Qt.
+cp $OPIEDIR/qt/qconfig*.h $QTDIR/src/tools
+# apply the patches to qt
+cd $QTDIR; cat $OPIEDIR/qt/qte234-for-opie091-*.patch | patch -p0
+
+# qt needs a bin uic compiled for the build machine
+cp /usr/lib/qt-embedded-2.3.2/bin/uic $QTDIR/bin/
+
+# since we are using the -system-jpeg flag we need to have libjpeg-6b
+# built for the be against uClibc 0.9.16 before building qt-embedded
+# we also need to pass the include dir and lib dir of the cross built 
+# libjpeg-6b 
+./configure -qconfig qpe -depths 4,16 -xplatform linux-mips-g++ -no-qvfb \
+-system-jpeg -vnc -no-xft -I/home/johnbot/be300/distro/rootfs/include \
+-L/home/johnbot/be300/distro/rootfs/lib
+
+# qt-embedded's configure doesn't take command line environment overides
+# and overriding them with make breaks the comp process
+# so we have to edit $QTDIR/src/Makefile and replace mipsel-linux- with
+# mipsel-uclibc- about 4 or 5 occurances 
+make
+
+#
+# *** E2FSPROGS 1.32 NOTES ***
+#
+tar xzvf e2fsprogs-1.32.tar.gz
+cd e2fsprogs-1.32
+mkdir build
+cd build
+
+./configure --prefix=/home/johnbot/be300/distro/rootfs  --enable-elf-shlibs \
+--build=i686-pc-linux-gnu --host=mipsel-linux --with-cc=mipsel-uclibc-gcc \
+--with-linker=mipsel-uclibc-ld
+
+make 
+make install
+
+#
+# *** PAM 0.77 ***
+#
+./configure --prefix=/home/johnbot/be300/distro/rootfs \
+--build=i686-pc-linux-gnu --host=mipsel-linux
+
+# edit Make.Rules and change CC, LD, LD_D, LD_L, RANLIB, & STRIP 
+# to the mipsel-uclibc- tools 
+# and make sure to set HAVE_LIBCRYPT=yes
+
+# edit modules/pam_unix/yppasswd_xdr.c
+# & modules/pam_unix/pam_unix_passwd.c
+# change includes 
+#
+/*
+#include <rpcsvc/yp_prot.h>
+#include <rpcsvc/ypclnt.h>
+*/
+#include <rpc/svc.h>
+#include <rpc/svc_auth.h>
+#include <rpc/xdr.h>
+
+make 
+
+# make install requires some hacking... since we are not installing on a real
+# system ldconfig can not be called so we have to edit the Makefiles in the
+# various lib dirs libpam, libpamc, libpam_misc and remove refereces to
+# $(LDCONFIG)
+# we also need to edit the top level Make.Rules because the use of $(FAKEROOT)
+# is inconsistant. change FAKEROOT= to FAKEROOT=${prefix}
+# this causes another problem... some things are installed doublely deep into
+# the prefix dir... for example if --prefix=/home/johnbot/tmp then some files
+# are installed in $prefix and others are installed in $prefix/$prefix just
+# move the files in $prefix/$prefix to $prefix (mv $prefix/$prefix $prefix)
+make install
+
+#
+# *** OPIE CVS NOTES ***
+#
+./configure -xplatform mips
+
+# lots of stuff does not compile
+# some is fixable some not just skip stuff for now
+# most of multimedia apps will not work cause i couldn't get xinelib
+# to build...
+# there is a time struct error that can be hacked with constants
+# in noncore/mail/libmail/miscfunctions.cpp
+# mainly we need the stuff in core/launcher and libopie built
+# core/launcher/launcherview.cpp needs 
+# #include <qstdlib> changed to #include <stdlib.h>
+# 
+# copy all the libs and includes from jpeg6b, e2fsprogs, & PAM to 
+# $QTDIR/lib and $QTDIR/include so opie can find them
+make SYSCONF_CC=mipsel-uclibc-gcc SYSCONF_LINK=mipsel-uclibc-gcc \
+SYSCONF_LINK_SHLIB=mipsel-uclibc-gcc SYSCONF_AR="mipsel-uclibc-ar cqs" \ 
+SYSCONF_CXX=mipsel-uclibc-g++ QMAKE_CC=mipsel-uclibc-gcc \
+QMAKE_CXX=mipsel-uclibc-g++ QMAKE_LINK=mipsel-uclibc-g++ \
+QMAKE_LINK_SHLIB=mipsel-uclibc-g++ SYSCONF_LIBS=-ljpeg
+
+# to install make sure to have at least these files
+# http://info.brooks.edu/~ggilbert/opie-taskbar
+# http://info.brooks.edu/~ggilbert/qt-embedded
+# http://info.brooks.edu/~ggilbert/opie-base
+# and add /etc/init.d/qpe start to /etc/init.d/rcS
+#

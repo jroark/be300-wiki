@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_23.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_23.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Feb 23 00:00:26 2003
+--- Day changed Sun Feb 23 2003
+00:00 < jal0_logger> no, not really an install script either. some of the machines already have windows 2000 on them.
+00:01 < nykkto> OK I have no clear understaning of what you are attempting to do then.
+00:01 < jal0_logger> also, about half of the machines are shared by all users in our department. on those machines i dont want to have to setup a profile for every person in our department.
+00:02 < nykkto> ugly
+00:02 < jal0_logger> yeap
+00:03 < nykkto> so some boxes are not win 2 k either?
+00:03 < jal0_logger> currently, everyone logs in under a common username, but the problem is that there is not way of knowing who actually logged in unless i set up profiles for each user. what i'm need is a way of copying the profiles to each machine
+00:03 < jal0_logger> no, but we plan on upgrading those systems
+00:04 < nykkto> Ok you are really talking about roaming profiles.  if you dont have a win2k server you have a hard time doing it, though you still can do it off of novewll
+00:05 < nykkto> 2 methods
+00:05 < jal0_logger> problem is that not all the machines have novell
+00:05 < nykkto> 1 is run each users users space from the novell server
+00:05 < nykkto> ??? what
+00:05 < nykkto> are they all networked?
+00:06 < jal0_logger> yea,
+00:06 < jal0_logger> only the machines in our offices are connected to novell
+00:07 < jal0_logger> the other have of the machies are used on the manufacturing floor to test product. these are not
+00:08 < nykkto> ok if you don't have a central place for all of the workstations to log in to you are fucked - since you cna't be consistant then
+00:08 < jal0_logger> exactly ?
+00:08 < jal0_logger> ? = :)
+00:09 < nykkto> so get an old POS box load linux, and samba, and take it from there
+00:10 < jal0_logger> i want to and almost convinced my manager to allow me to. the problem was support... like i would only be the one that could administrate it.  good for me (job security), but bad for the company
+00:11 < nykkto> either that or add more users to the Novel box
+00:11 < nykkto> Or a win 2 k server
+00:11 < nykkto> give em a linux book, ok now youhave 2 admins
+00:12 < jal0_logger> hmm, it would be easy if there was a way to just copy a local copy of the profiles to each machine.
+00:12 < nykkto> ok you have 1 profile?
+00:12 < nykkto> 1 generic login?
+00:13 < jal0_logger> yeah...
+00:13 < nykkto> do you want to know who loggs in where and when?
+00:14 < jal0_logger> yeah, but unless i each user logs in as a different user name, there's no way to track it, usless i mount camera by the machies.
+00:14 < nykkto> yep, exactly
+00:14 < jal0_logger> ;-}
+00:15 < nykkto> So tell them here are the options $$ to novel  $$ to M$ or some time, a book for the NIS dept, and and old computer
+00:15 < nykkto> does the company have any Unix?
+00:15 < jal0_logger> so back to the original question, is there a way to copy a set of profiles?
+00:16 < nykkto> lol - a set of user profiles yes though are you looking for the profile file or the entire user config?
+00:16 < jal0_logger> uh, kinda, an old VAX system with AS-400 system
+00:16 < jal0_logger> but i dont want to touch that
+00:16 < nykkto> ack, I c - that is only kinda
+00:17 < nykkto> lol - no reason you should
+00:18 < jal0_logger> i wish i could just copy the password file and presto.. it works... but i dont put much faith in that method :-(
+00:18 < nykkto> lol - yah since there is no passwd file in winders
+00:19 < jal0_logger> i figured as much
+00:19 < nykkto> basically you are screwed ATM
+00:19 < jal0_logger> in 98, there was one. i believe
+00:21 < nykkto> well the profile thinagain - though there can be more to it than that, go dig in the win2kpro site 
+00:21 < jal0_logger> yeap, there looking around now :)
+00:23 < nykkto> the resource kit is where to look for the tools
+00:28 < jal0_logger> none of the free tools seem to address my issues :(
+00:29 < nykkto> humm brb
+00:29 < jal0_logger> ok
+00:32 < nykkto> http://www.microsoft.com/windows2000/techinfo/reskit/dpg/default.asp
+00:33 < nykkto> go to chapter 23
+00:33 < nykkto> I gave you the "book" link rather than trapping you in the chapter
+00:36 < jal0> check out this link -> http://www.winbookcorp.com/_technote/WBTA09000815.htm
+00:39 < jal0_logger> not sure if that will work though
+00:40 < nykkto> it should lol - I gotta run my relief is coming soon.  I might be on from home for a bit though
+00:40 < jal0_logger> too bad there is no "Copy profile from" option.
+00:40 < jal0_logger> ok, thanks for your help
+00:40 < nykkto> np c ya
+00:40 -!- nykkto [~eirc@208.205.19.205] has quit ["Today is a good day to chat."]
+01:17 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+01:23 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+01:42 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+02:13 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Mon Feb 24 00:00:59 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

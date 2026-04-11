@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_11.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_11.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Jan 11 00:00:28 2003
+02:16 -!- PsycoXul [psyco@adsl-63-205-42-138.dsl.lsan03.pacbell.net] has quit ["reboot for audio, yay!"]
+02:20 -!- PsycoXul [psyco@adsl-63-205-40-78.dsl.lsan03.pacbell.net] has joined #linux4be
+02:48 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+02:49 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+03:41 -!- brian__ [~brian@twhou-207-218-233-112.ev1.net] has joined #linux4be
+03:41 < brian__> hello.. anyone awake?
+03:55 < brian__> well someone let me know what the linux program is that lets me connect through the com port so I can capture all the serial stuff on my be.. I am blanking out.
+04:02 < brian__> minicom... we should have that posted somewhere on the website incase anyone doesnt know or cant reember
+04:03 -!- brian__ [~brian@twhou-207-218-233-112.ev1.net] has quit ["Client Exiting"]
+10:57 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+13:55 -!- brian__ [~brian@twhou-215-149.ev1.net] has joined #linux4be
+13:56 < brian__> hello??
+14:05 -!- brian__ [~brian@twhou-215-149.ev1.net] has quit ["Client Exiting"]
+14:45 < Baalz> Hi everyone
+15:29 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:22 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+22:11 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+22:12 < Baalz> Hi metalac!
+22:12 < metalac> hello
+22:53 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+--- Log closed Sun Jan 12 00:00:55 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

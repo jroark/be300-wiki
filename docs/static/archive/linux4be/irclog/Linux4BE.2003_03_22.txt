@@ -1,0 +1,140 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_22.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_22.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Mar 22 00:00:58 2003
+02:01 < amdzZzz>  /nick amd
+02:01 -!- amdzZzz is now known as amd
+02:01 < amd> hrm... weird...
+05:28 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+05:46 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+06:30 -!- amd [~amd@80-235-77-8.tt.ee] has quit [Remote closed the connection]
+06:57 -!- amd [~amd@80-235-77-8.tt.ee] has joined #linux4be
+07:23 < amd> anyone alive?
+07:23 < PsycoXul> heh
+07:27 < amd> do you know gcc flags you need to use when crosscompiling for be
+07:28 < PsycoXul> no
+07:29 < amd> hrm..
+10:15 < amd> whee... i finnaly got be-300
+10:15 < amd> *finally
+10:20 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+10:39 < amd> hrm...
+10:40 < jal0> hello amd
+10:41 < amd> i have be-300, but no cf card ;(
+10:42 < jal0> ic
+10:49 < amd> hm... this is getting interesting...
+10:54 < amd> seems like russians have devoted whole www.be300.ru site for these machines...
+10:55 < jal0> yeap, too bad i dont speek russian :(
+10:57  * jal0 has to step away for a while, and will be back later
+10:57 -!- jal0 is now known as jal0_away
+10:57  * amd can read russian
+10:58 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+13:24 -!- jal0_away is now known as jal0
+13:24  * jal0 is back
+19:17 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+19:25 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+20:13 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+20:13 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Sun Mar 23 00:00:24 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

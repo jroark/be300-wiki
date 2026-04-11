@@ -1,0 +1,286 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_22.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_22.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Feb 22 00:00:08 2003
+00:06 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+16:51 -!- baal_ [~Baal@24.200.98.185] has joined #linux4be
+16:51 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+16:58 -!- WebGuest4876 [~eirc@208.205.19.205] has joined #Linux4BE
+17:09 -!- WebGuest4876 is now known as nykkto
+17:10 < nykkto> any one home?
+17:15 < nykkto> Guess not ATM 
+17:48 < jal0> hi nykkto
+17:50  * jal0 has to step out for a few and will be back later
+17:51 -!- jal0 is now known as jal0_bbl
+17:56 < nykkto> lol - missed damn - I am hanging in yahoo chat linux, ....
+18:35 < nykkto> sigh
+19:17 < nykkto> la la
+19:38  * jal0_bbl is back
+19:38 -!- jal0_bbl is now known as jal0
+19:42 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+19:42 < jal0_logger> test
+19:43 < jal0_logger> test
+19:45 < jal0_logger> test
+19:45 < jal0_logger> test
+19:45 < jal0_logger> test
+19:45 < jal0_logger> test
+20:32 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+20:46 < jal0> hi antagonizt
+20:47 < antagonizt> hey jal0
+20:48 < jal0> so hows things, you settled in yet?
+20:48 < antagonizt> not really
+20:48 < antagonizt> the job market is horrible
+20:48 < jal0> what kind of job you looking for?
+20:49 < antagonizt> software engineer
+20:49 < antagonizt> maybe tech support/admin
+20:50 < jal0> cool
+20:55 < jal0> you ever though of going the 'shareware' route?
+20:57 < antagonizt> i would if i had some good shareware ideas
+20:57 < antagonizt> i wrote an instant messenger a while ago...
+20:59 < jal0> hmm, maybe it would be better to stay away from ideas that micro$oft has similar products of.
+20:59 < jal0> there is just no way to compete
+21:01 < jal0> so what happed to your messenger?
+21:01 < antagonizt> nothing
+21:02 < antagonizt> i never finished it
+21:02 < antagonizt> it's on sourceforge
+21:02 < antagonizt> http://sourceforge.net/projects/babel-im
+21:02 < jal0> kind of hard to make money on opensouce projects
+21:03 < antagonizt> more for my own education and fun than profit
+21:05 < jal0> ic, if my job ever allowed me the time, i alway wanted to create a cross-platfore IDE, the core program would be opensource and i would created custom plugin's as shareware componets
+21:06 < jal0> it would targeted at embedded development
+21:09 < antagonizt> what kind of plug-ins?
+21:10 < jal0> addons, like a cvs interface, and other tools usefule in project development
+21:10 < jal0> compatibility components, like support for common compiler project files
+21:11 < jal0> added languge support options
+21:11 < jal0> etc...
+21:12 < antagonizt> sounds nice
+21:12 < antagonizt> what would you use to make it cross platform?
+21:12 < jal0> kind of in the spirt of programs like photoshop where the core application is great, but what makes it better is the number of 3rd party plugins/filter that are availiable
+21:13 < jal0> was working on porting the FOX GUI library to windows CE, before i got involved with the linux4be project.
+21:14 < jal0> it's cross platform and licensed under LGPL, so it can be used in propritary applications
+21:15 < jal0> i managed to get some simple application to compile under the mips port of gcc which ran under windows CE.
+21:19 < jal0> the embedded market is taking off. if i can create an application based on an alternative compiler for windowsCE, i believe i would have a substantial market. i don't believe there are any fully function ports of gcc which support windowsCE
+21:23 < jal0> it would be a great deal of work, so progress has been slower that slow. i also lost a great deal of data when my harddrive crashed. 
+21:53 < nykkto> woot! ppl are her!
+21:55 < nykkto> sigh
+22:35 < nykkto> la de da
+22:46  * jal0 is around
+22:52 < nykkto> Jalo is a square
+23:04 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+23:04 < nykkto> lol saw teh screen move, and it was antagnoizt going *poof*
+23:08 < jal0> hey nykkto, sorry been in and out for a while here ;)
+23:08 < nykkto> lol :P
+23:09 < jal0> normally when there is a message, the application flashes, but i can't seem to get it to work
+23:10 < nykkto> lol - I thought you could do any thing
+23:11 < jal0> i am willing to try anything, although, the success of such things is never a given :-|
+23:12 < jal0> a square ehh :-?
+23:12 < nykkto> lol
+23:12 < nykkto> well you said around 
+23:13 < jal0> :)
+23:13 < nykkto> so how have things been?
+23:14 < jal0> busy at work mostly, but i have found a little time to do some CE hacking.
+23:14 < nykkto> Oh, someone should make a way of getting out of the forum and back to the web site without having to  edit the url
+23:14 < jal0> ?
+23:15 < nykkto> the forum on linux4.be
+23:15 < jal0> you cant just open a new browser windows
+23:15 < nykkto> lol - not what I usually do is all
+23:15 < jal0> ic
+23:17 < nykkto> lol 3 chat windows :)
+23:17 < nykkto> good, that you ahve done some CE work, not like I ahve been able to , thought I do have slackware on my PC at home as of last night
+23:18 < jal0_logger> going to use my logger for chatting, my hacking is taking up my other monitor
+23:18 < nykkto> lol - I C
+23:20 < nykkto> I have been messig with my iPAQ and 802.11b networking, and being paid for it :)
+23:20 < jal0_logger> so you just lurking around?
+23:20 < nykkto>   I need to get out my BE and see if I can make WiFi work with it next
+23:20 < nykkto> I am at work right now, I ahve been studying linux :)
+23:21 < jal0_logger> ic, cool
+23:21 < nykkto> I want to get through all the training I can, so I can add to my resume~
+23:22 < jal0_logger> what field are you in?
+23:22 < nykkto> lol - system admin
+23:22 < nykkto> computer generallist
+23:22 < nykkto> phone systems
+23:22 < nykkto> ORACLE
+23:22 < nykkto> SQL
+23:22 < nykkto> linux
+23:22 < nykkto> NT
+23:22 < nykkto> 2000
+23:22 < nykkto> SQL server
+23:22 < nykkto> Citrix
+23:22 < nykkto> JAVA - some 
+23:23 < nykkto> user support
+23:23 < nykkto> networking
+23:23  * nykkto giggles
+23:23 < nykkto> hard to be less specific
+23:23 < jal0_logger> ic, you now how to push a user profile to a set of client machines under windows 2000 pro?
+23:24 < nykkto> are you talking roaming profiles, or just pushing a standard profile to all machines?
+23:24 < jal0_logger> standard profiles.
+23:25 < nykkto> sure it's easy use a login script from the server(s) to push it
+23:26 < jal0_logger> hmm, kinda of new to sys admin, i've managed to convince my manager that our department workgroup needs our own server. if we had 2000 server, i could just set up a domain and thing would be simple
+23:27 < nykkto> yep, it helps, since you can losk shit down
+23:28 < nykkto> what do ppl run there for windows?
+23:29 < jal0_logger> any pointer to setting up the login script you were talking about. I've undertaken a department-wide rollout of windows 2000 pro and dont want to have to setup local profiles for each machine (around 25)
+23:30 < jal0_logger> office, MSVC++, Cadence, Allegro, etc...
+23:30 < nykkto> OK I have not done this yet, but all you have to do is make a profile and test it then after you set up the server force it to download when they log in to the server, and viola there you are
+23:31 < jal0_logger> the profile is setup on the server or the client
+23:31 < nykkto> Also you likly want to create a couple of different profiles,  1 for idiots, 1 for managers 1 for smart ppl with a bit more rights to help when you are not around
+23:32 < jal0_logger> yeap, thats already in place
+23:32 < jal0_logger> what i'm not sure about is the part after setting up the profile
+23:33 < nykkto> ok you know where it belongs right?
+23:33 < jal0_logger> know where what belongs?
+23:33 < nykkto> the profile file
+23:34 < jal0_logger> no, didn't know it was an individual file. what's it called?
+23:35 < nykkto> ack I forget, prolly user.profile.  you can find it in the help win2k help is not bad
+23:35 < jal0_logger> on msdn? i'll check now
+23:35 < nykkto> no the system help
+23:37 < nykkto> The systemroot\Profiles\user name folder
+23:37 < nykkto> look there ;)
+23:38 < jal0_logger> it just has a directory with the user name, no file
+23:39 < nykkto> do you have your explorer window set to show all files?
+23:39 < jal0_logger> yeap, that the first thing i do after installing any windows version :)
+23:40 < jal0_logger> by systemroot, you meant c:\WINNT?
+23:40 < nykkto> humm, lemme look
+23:41 < jal0_logger> that what the SystemRoot environment variable is set to
+23:43 < nykkto> C:\Documents and Settings\username\Local Settings\Application Data\Microsoft\Windows
+23:44 < jal0_logger> the UsrClass.dat file?
+23:44 < nykkto> I think so
+23:45 < nykkto> been quite a while since I messed with that stuff
+23:45 < nykkto> when are you needing to do this?
+23:45 < jal0_logger> monday if possible
+23:46 < jal0_logger> have any web links
+23:46 < nykkto> I'd look in the win 2k resource pak
+23:46 < nykkto> brb
+23:46 < jal0_logger> ok
+23:46 < jal0_logger> thanks
+23:47 < nykkto> http://www.microsoft.com/windows2000/techinfo/reskit/default.asp
+23:47 < nykkto> http://www.microsoft.com/windows2000/server/
+23:47 < jal0_logger> hmm, not running the server version of 2000
+23:48 < nykkto> lol - I hang with the linux ppl, so I end up doing windows support - lol what irony
+23:48 < jal0_logger> :)
+23:48 < nykkto> um, how are you going to have a domain without a sever?
+23:49 < nykkto> OK next best way - what email client do you use?
+23:49 < jal0_logger> no, thats the problem i cant use a domain, otherwise this would be easy, i was trying to figure out how to do this using a workgroup
+23:49 < jal0_logger> novel
+23:49 < nykkto> ACK - are you logging into a novell server?
+23:49 < jal0_logger> yeap
+23:50 < nykkto> lol - then it is too easy
+23:50 < jal0_logger> ?
+23:50 -!- baal_ [~Baal@24.200.98.185] has quit [Read error: 54 (Connection reset by peer)]
+23:50 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+23:50 < nykkto> figure out who gets what profile, and then add it to their novel login script (group em dont do it individually)
+23:51 < nykkto> lol - do you know novel?
+23:51 < jal0_logger> no, i have no access to the server, it's controlled by our NIS department
+23:51 < nykkto> no problem, what you do is this:
+23:53 < nykkto> create a file that lists the members of the group/groups, and the file(s) they are supposed to get, and where the file resides to they can copy it to the server and add the groupings
+23:53 < nykkto> basically you spoon feed the NIS guys what you need done, so they don't have to think
+23:55 < nykkto> since all that they are doing is addin a group or 2 with the members already laid out for them, there should be no problem.  though they might even give you limited access to maintain your group ie. the leaf your group is on.  you can do that in 4.0 +
+23:56 < nykkto> whew - I must have bored you ;)
+23:58 < nykkto> the failsafe is to create a batch file that copies it to their pc, and email it to them :p
+23:58 < jal0_logger> hmm, not sure if you understand our setup.... our department has its own workgoup.. i added basically a client to this workgroup which acks as out department's file server/print server/ and soon to be implemented cvs server.  it's not an actual server, rather a psedo-serever for out department only. what i'm looking to do is find an easy way to rollout windows2000 in out department and not have to set up each and every profile on our
+23:58 < nykkto> um - ok so you are attemping to install the OS to each computer is what you are telling me?
+23:59 < jal0_logger> yes
+23:59 < nykkto> lol - ok profile = user restrictions you are wanting to create an automated install script
+23:59 < nykkto> are all the PCs the same hardware ?
+--- Log closed Sun Feb 23 00:00:25 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

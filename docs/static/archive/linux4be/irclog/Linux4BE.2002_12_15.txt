@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_15.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_15.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Dec 15 00:00:08 2002
+--- Day changed Sun Dec 15 2002
+00:00 < jal0> and to cutout some other stuff like busybox, (is this possible... having no terminal, but boot straight to X or whatever gui?)
+00:00 < antagonizt> busybox is 400k or something
+00:01 < antagonizt> and you need it for xterm or whatever
+00:01 < antagonizt> oh i couldn't get xterm cause i didn't have libtermcap
+00:01 < jal0> ic
+00:50 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+11:50 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+14:23 -!- Filip [~Filip@254.56-200-80.adsl.skynet.be] has joined #Linux4BE
+14:31 < antagonizt> hey filip
+14:32 < antagonizt> do you know how i add a new lib path to the system... ld.so.conf? do i need ldconfig or something?
+14:33 < Filip> hi antagonizt
+14:34 < jal0> LIBRARY_PATH environment variable?
+14:34 < Filip> if you put th lib in in /lib or /usr/lib, you don't need to change anything
+14:34 < Filip> if you want a new dir (like for X)
+14:34 < antagonizt> X has some paths compiled in
+14:34 < antagonizt> i can change them but i'd have to go against my better sense :)
+14:36 < Filip> just add them to /etc/ld.so.conf
+14:36 < antagonizt> don't i also need ldd or ldconfig?
+14:36 < antagonizt> a shared library loader?
+14:38 < Filip> not sure, but don't think so
+14:39 < Filip> looks like you do neec to run ldconfig after adding one
+14:39 < Filip> neec=need
+16:21 < antagonizt> how's the irq probing going?
+16:23 < Filip> no success yet: setup looks ok, but getting no raction
+16:26 -!- wolphie [~wolphie@pearlart.hu] has joined #linux4be
+16:26 < wolphie> hi
+16:26 < Filip> hi wolphie
+16:26 < jal0> hey wolphie
+16:26 < antagonizt> hello wolphie
+16:26 < wolphie> Filip, jal0, antagonizt hi
+16:28 < wolphie> no more be300 in hungary :(
+16:28 < jal0> ?
+16:29 < wolphie> only 1 company left dealing with be300 but very high price
+16:29 < Filip> they've never been  sold  in Belgium, just import them
+16:30 < wolphie> i wanted to buy for my girlfriend, but i can't find any company or online shop shipping to hungary
+16:31 < Filip> I got someone in US to buy me  one at local store (Sams), and ship it to me
+16:31 < Filip> I paid him upfront  using  paypall
+16:32 < jal0> ebay also has them at pretty good prices 
+16:33 < Filip> a lot of people on eebay don't want to ship internationally
+17:11 -!- Filip_ [~Filip@240.100-136-217.adsl.skynet.be] has joined #Linux4BE
+17:19 -!- Filip [~Filip@254.56-200-80.adsl.skynet.be] has quit [Read error: 60 (Operation timed out)]
+18:17 < jal0> antagonizt: got any good links on mips assembly language programming?
+18:25 < Filip_> jal0, did you see these ; http://www.mips.com/publications/yamon_software.html
+18:25 < antagonizt> hmmm... i have a pdf on MIPSPro assembly here: http://www.linux4.be/~jroark/files/MIPSPro_Ass._Lang_Vol2.pdf
+18:27 < jal0> cool, i check it out... i ordered the book "See Mips Run" the other day, but dont want to wait ;)
+18:28 < jal0> the pdf look like just what i need, thanks
+18:30 < antagonizt> np
+19:10 < Filip_> bbl folks
+19:11 < antagonizt> cu
+19:13 -!- Filip_ [~Filip@240.100-136-217.adsl.skynet.be] has left #Linux4BE []
+23:53 < jal0> night all
+23:53 -!- jal0 is now known as jal0_Zzz
+--- Log closed Mon Dec 16 00:00:58 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

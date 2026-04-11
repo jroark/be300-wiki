@@ -1,0 +1,27 @@
+body { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000}
+.bodytext { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000}
+.code { font-family: Courier; font-size: 10px; color: #333333}
+.menu {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #990000; width: 100%}
+.title { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; color: #990000; font-weight: bold}
+.subtitle { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #990000; font-weight: bold}
+.date { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #555555;  }
+.footer { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #555555; width: 100% }
+A  {
+        color :#6F6F6F;
+        text-decoration: none;
+}
+
+A:Visited  {
+        color : #8F8F8F;
+}
+
+A:Active  {
+        color : #bbbbbb;
+}
+
+A:Hover  {
+        color : #D34D0F;
+}
+td {
+                font-family: Verdana,Arial, Helvetica; font-size: 11; color: #990000; 
+}

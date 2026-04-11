@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Jan 30 00:00:51 2003
+02:57 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+02:59  * Filip looks around
+03:00  * PsycoXul hangs loosly on a pole waving gently in the breeze
+03:02  * Filip waves back
+03:02 < PsycoXul> hehe
+03:04 < Filip> hi, how are you
+03:05 < PsycoXul> high, how are you? heh
+03:06 < Filip> work is slowly getting back to its normal pace, so starting to get some spare time again
+03:08 < PsycoXul> cool
+03:40 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+03:40 -!- Filip [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+03:40 -!- Filip_ is now known as Filip
+04:13 -!- mouse__ [~mouse@62.118.252.71] has joined #linux4BE
+04:14 -!- mouse__ [~mouse@62.118.252.71] has quit [Client Quit]
+04:43 -!- mouse [~mouse@194.67.87.71] has joined #linux4be
+06:00  * mouse is away: have dinner
+06:42  * mouse is back (gone 00:41:54)
+07:38 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Baalz, jal0_logger, mouse
+08:51 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+08:51 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+08:51 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+08:58 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_away, Baalz, jal0_logger, mouse
+08:58 -!- Netsplit over, joins: jal0_logger, Baalz, mouse, jal0_away
+10:25 -!- Filip [Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+10:41 -!- WebGuest4177 [~eirc@v153.isternet.sk] has joined #Linux4BE
+10:45 -!- WebGuest4177 [~eirc@v153.isternet.sk] has quit [Client Quit]
+13:24 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+23:05 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit []
+23:11 -!- jal0_logger [jal0_logge@12.243.94.89] has joined #linux4be
+23:59 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit []
+--- Log closed Fri Jan 31 00:00:17 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

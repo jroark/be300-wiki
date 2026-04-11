@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_20.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_20.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Feb 20 03:18:21 2003
+03:18 !irc.freenode.net *** Looking up your hostname...
+03:18 !irc.freenode.net *** Checking ident
+03:18 !irc.freenode.net *** Found your hostname
+03:18 !irc.freenode.net *** No identd (auth) response
+--- Log closed Thu Feb 20 03:24:20 2003
+--- Log opened Thu Feb 20 04:58:17 2003
+04:58 -!- Joe_Seeder [~js@c3-134.icpnet.pl] has joined #linux4be
+05:06 -!- PsycoXul [psyco@adsl-63-205-43-20.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+05:48 < Joe_Seeder> hi
+05:49 < Joe_Seeder> is someone working on driver for /soundcard/ ?
+08:22 -!- Joe_Seeder [~js@c3-134.icpnet.pl] has quit [Read error: 104 (Connection reset by peer)]
+10:21 -!- PsycoXul [psyco@adsl-63-205-42-247.dsl.lsan03.pacbell.net] has joined #linux4be
+12:18 -!- themaw [~marc@p5085D1C3.dip.t-dialin.net] has joined #linux4be
+12:19 < themaw> hi guys..
+13:48 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+13:51 < qwertyuiop> anyone around?
+13:54 < qwertyuiop> I have managed to get a toolchain setup for myself, kernel compiled and booting, uClibc and Busybox compiled.  Now when I try to use my ramdisk that I've created (kernel recompiled with it) it hangs at " Topic is '*** CVS Updated with Compact flash patches from Seiichi SATO <ssato@sh.rim.or.jp> ***'
+13:54 < qwertyuiop> *** Set by ChanServ on Mon Jan 20 12:00:11
+13:54 < qwertyuiop> doh!
+13:55 < qwertyuiop> I have managed to get a toolchain setup for myself, kernel compiled and booting, uClibc and Busybox compiled.  Now when I try to use my ramdisk that I've created (kernel recompiled with it) it hangs at "Freeing initrd memory: 60K" and never mounts the file system.  If I take the same kernel config and compile it against the ramdisk on linux4be it is able to mount the file system and load ash etc...
+13:56 < qwertyuiop> any ideas to what I'm missing in my ramdisk?
+13:56 < qwertyuiop> I followed jroark tutorial on the ramdisk
+13:59 < qwertyuiop> I know my tool chain works, I've been able to compile my own programs and put on the provided ramdisk with no probs.
+14:38 -!- antagonizt [~chatzilla@64-243-69-172.ghg.net] has joined #Linux4BE
+14:41 < qwertyuiop> doh, using the busybox provided in the original ramdisk allows it to run init and startup ash... just noticed that it was mounting the filesystem.... just not starting init
+14:46 < qwertyuiop> hhmm in uClibc it has a config option for fpu on cpu... does the be have a fpu?
+14:47 < antagonizt> there is a fpu emu in the kernel
+14:49 < qwertyuiop> so should I disable fpu in uClibc?
+14:49 < antagonizt> no
+14:50 < themaw> Hi antagonizt!
+14:50 < antagonizt> hello themaw
+14:50 < themaw> long time no see, how are you ?
+14:51 < antagonizt> i'm doing alright... had to move across the country
+14:51 < themaw> what reason ? the job ?
+14:53 < antagonizt> no...
+14:54 < antagonizt> the girlfriend that i followed to boston and i broke up
+15:04 < themaw> Oh, ok.
+15:21 < themaw> has anyone seen Filip lately ?
+15:51 -!- antagonizt [~chatzilla@64-243-69-172.ghg.net] has quit ["ChatZilla 0.8.11 [Mozilla rv:1.2.1/20021130]"]
+17:09 -!- themaw [~marc@p5085D1C3.dip.t-dialin.net] has quit [Remote closed the connection]
+17:16 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Read error: 110 (Connection timed out)]
+18:47 -!- jal0_away is now known as jal0
+18:50 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+18:50 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+18:57 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+19:50 < jal0> hi qwertyuiop
+20:00 < qwertyuiop> howdy
+20:04 < qwertyuiop> brb
+20:04 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit []
+20:08 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+20:15 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+20:15 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+20:45 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+20:45 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+21:15 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+21:15 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+21:45 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+21:46 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+22:16 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+22:16 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+22:46 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+22:46 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+23:16 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+23:16 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+23:46 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has quit [Remote closed the connection]
+23:46 -!- qwertyuiop [~dffff@183-241.SPEEDe.golden.net] has joined #linux4be
+--- Log closed Fri Feb 21 00:00:42 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: memory.php,v 1.1.1.1 2002/07/05 20:51:43 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/memory.php,v $">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+<title>Linux4.BE :: Hackers :: Memory configuration on the BE-300</title>
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="../hackers/index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/books.php.html">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/faq.php.html">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/bootloader.php.html">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/toolchain.php.html">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/kernel.php.html">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/ramdisk.php.html">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/hardware.php.html">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/memorymap.php.html">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="../irclog/index.php.html">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/cvs.php.html">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: Memory configuration on the BE-300</span>
+  </p><p><span class="bodytext">
+
+In the BE-300 there is 16MB RAM, 16MB Flash ROM (NAND), and 16KB Masked ROM (not 100% sure about this size, and it might be a read-only part of the NAND).
+<P>Please note the difference between NAND Flash ROM and NAND Disk:
+<br>The NAND Flash ROM is a 16MB Flash ROM chip, the NAND Disk is the 12MB FAT16 partition (and a part of the 16MB NAND Flash ROM) 
+<p>16MB NAND Flash ROM = 4MB compressed NK.EXE(=CE kernel+core DLL's)+12MB Nand Disk (FAT16) 
+<br>The 4MB is the compressed NK.EXE (looks like casio proprietary compression) 
+ and is uncompressed into memory when you see the blue progress bar after a hard reset. It's the small ROM that contains the code to copy and uncompress, and probably has a bootloader integrated aswell (to reflash the NAND). 
+<br>In most ROM based CE devices, the CE kernel is executed (XIP, eXecute In Place) directly from the ROM, but the NAND Flash is too slow for this approach.
+<br>So after a hard reset, when you see the blue progress bar, the 4MB compressed NK.EXE is copied into RAM (probably about 7MB used ?), and the CE kernel is always running from RAM. 
+<br> The OS needs some additional RAM to work, leaving probably about 8-9MB of free RAM (for userspace applications). 
+<p> The CE kernel in the BE is configured to start killing processes that use more than 4MB, to protect the system from crashing and it works quite well: it's rather hard to crash a be (compared to some other systems). 
+<p>So there <b>IS</b> 16MB RAM and 16MB Flash ROM on the BE, it's just not fully available to the user.
+<p>
+<span class='subtitle'>backup images</span> 
+<p>
+The 12MB backup files are just plain FAT16 dumps; you can read them with winimage or mount them trough loopback if you are on Linux.
+<p>The 16MB files are a little different: 
+<br>About 4MB for the compressed NK.EXE, followed by the FAT16 Nand Disk.
+<br>The compressed NK.EXE is a memory image that get's uncompressed into RAM when you see the blue progress bar, it is the CE kernel, together with some core DLL's etc. 
+<br>The format of the NK.exe is badly documented (in the platform builder doc's) but the compression on top off it is even worse since it seems to be casio proprietary, and not documented. 
+<p>
+I hope this clarifies a bit, feel free to contact me with questions/remarks.
+<p>
+<a href="mailto:Filip@Linux4.BE">Filip@Linux4.BE</a>
+
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/07/05 20:51:43 $</span>
+  </p>
+</td>
+</tr>
+</table>
+
+
+</html>
+

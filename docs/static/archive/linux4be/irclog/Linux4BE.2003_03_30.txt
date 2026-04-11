@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Mar 30 00:00:26 2003
+02:52 -!- PsycoXul_ [psyco@adsl-63-205-42-136.dsl.lsan03.pacbell.net] has joined #linux4be
+02:55 -!- PsycoXul [psyco@adsl-63-205-47-208.dsl.lsan03.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+05:24  * mouse is back (gone 39:25:16)
+10:33 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+10:51 -!- jal0 [~not@12.243.94.89] has quit [Read error: 110 (Connection timed out)]
+11:20 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+11:20 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+11:25 < mouse> jal0 hi
+11:25 < jal0> hey mouse
+11:26 < jal0> have you had any time to look at the touch screen drivers anymore?
+11:27 < mouse> now, I have time and today evening I'll look at it...
+11:27 < mouse> jal0 what with GUI IRQs?
+11:28 < jal0> i finally figured out how to trace system calls so soon i'll be able to dump the asm code for the CE drivers
+11:29 < jal0> tracing the driver code should be able to determine the IRQ's associated with all the devices
+11:30 < jal0> in addition to all the registers... i'm getting real close ;)
+11:32 < mouse> :) cool
+11:53 < jal0> hey... i just uploaded some of the outputs from my CEK utilities the links are at http://www.linux4.be/~jal0
+11:53 < jal0> if you intrested, that is ;)
+12:22 < mouse> ok
+12:25  * mouse is away: fue a casa...
+12:25 < jal0> later mouse
+12:26 < mouse> bb
+13:00 -!- PsycoXul_ is now known as PsycoXul
+13:53  * jal0 announces "An UPDATED CEK.zip has been uploaded to the linux4be site" ... See http://www.linux4.be/~jal0 for details.
+17:28 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+17:46 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+22:35 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+22:35 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Mon Mar 31 00:00:52 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

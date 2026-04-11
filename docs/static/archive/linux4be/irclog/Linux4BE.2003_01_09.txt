@@ -1,0 +1,459 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_09.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_09.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Jan 09 00:00:35 2003
+00:32 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+00:49 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has quit [Remote closed the connection]
+03:18 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+03:20 < MouseLRN> quit
+03:20 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+03:20 -!- Filip_ [~Filip@193.190.11.250] has joined #linux4be
+03:21 < Filip_> morning
+03:22 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+03:23 < MouseLRN> Filip_ hi
+03:23 < Filip_> hi MouseLRN, no sleep for you ?
+03:24 < Filip_> justreading the logs
+03:24 < Filip_> about wirting to Casio:
+03:25 < Filip_> I've had several rather long e-mail conversations with casio Japan people
+03:25 < MouseLRN> and... ?
+03:25 < Filip_> mainly from the business side (product manager & marketing)
+03:26 < Filip_> conversation was constructive, but they wanted a business case (prove that in the long run they're going to get money out of it)
+03:26 < Filip_> I also had the impression they  do not want to hurt the MS relationship (It looks like they had a very good deal , cheap OS license, from MS)
+03:27 < MouseLRN> heh
+03:27 < Filip_> so in the end they did not want to actively participate. I also had a couple of 'off-the-record' conversation with technical people involved in the project (working in-directly for Casio)
+03:28 < Filip_> but those were not able to provide usefull info
+03:28 < Filip_> BTW: they can't put PPC on the BE. 
+03:29 < MouseLRN> why?
+03:29 < Filip_> MS requires a number of additional capabilities for PPC (like PPC devices MUST have IrDA), microphone and a couple of others (this is marketing requirement, not technical)
+03:30 < Filip_> but Casio wanted cheap entry, so that's why they took CE (CE license is very cheap compared to PPC as well), and they left out additional, less used functions like IrDA
+03:31 < MouseLRN> I see
+03:32 < Filip_> congrats for finding the touch reset register !
+03:32 < Filip_> next hurdle is finding the correct IRQ's for touch and serial
+03:33 < MouseLRN> Also I find how to do 'soft' reset (without clearing X,Y's regs)
+03:33 < MouseLRN> thanks
+03:34 < Filip_> is it a bitmask at 0xaa000300  ?
+03:35 < MouseLRN> yes, some sequence which needed to be wrote into four different regs, started from 0xaa000300
+03:41 < MouseLRN> heh, 0xaa000304 | 0x1d00, then 0xaa000304 | 0x00ff will do 'soft' reset ;-)
+03:42 < MouseLRN> 0xaa000304 -> * 0xaa000304 %)
+03:43 -!- MouseLRN [~mouse@info.ru] has quit ["Read error: 69 (Excessive tongue)"]
+05:24 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4BE
+05:50 -!- Filip__ [~Filip@193.190.11.250] has joined #linux4be
+05:51 < Filip__> MouseLRN ?
+05:57 < MouseLRN> Filip__ can you say email of Casio developers?
+06:02 < Filip__> no Casio  people , but people that worked as sub-contractors for casio (and i promised them to keep it confidential, they are undr nda)
+06:04 < Filip__> main Casio contact was with Tetsuji Makino
+06:04 < MouseLRN> email?
+06:06 < Filip__> pm_soft@cassiopeia.jp
+06:06 < Filip__> but note that the english of those people is rather bad
+06:08 -!- Filip_ [~Filip@193.190.11.250] has quit [Read error: 110 (Connection timed out)]
+06:32  * Filip__ is going to reboot, be back in 10 minutes
+06:32 -!- Filip__ [~Filip@193.190.11.250] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+07:41 < jal0> morning all
+07:41 < jal0> at least for me
+07:42 < MouseLRN> jal0 hi
+07:42 < jal0> hey mouse, tried you prog. pretty cool
+07:45 < jal0> well,just stoped in to read the logs... off to work for another long day.... later
+07:45 -!- jal0 is now known as jal0_wrkn
+08:11 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has left #linux4BE ["I'll be back"]
+09:14 < Baalz> There is this article that looks interesting if someone is interested: http://www.linuxdevices.com/articles/AT6809432297.html
+09:36 -!- Filip_ [Filip@193.190.11.250] has joined #linux4be
+11:14 -!- Filip__ [Filip@193.190.11.250] has joined #linux4be
+11:17 -!- Filip___ [Filip@193.190.11.245] has joined #linux4be
+11:23 -!- Filip_ [Filip@193.190.11.250] has quit [Read error: 60 (Operation timed out)]
+11:25 -!- Filip__ [Filip@193.190.11.250] has quit [Read error: 60 (Operation timed out)]
+11:42 -!- Filip___ [Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+11:43 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+11:48 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+12:12 -!- jal0atWrk [~jal0_wrkn@208.33.58.153] has joined #linux4be
+13:32 -!- someguy_ [~matt@psyche.eggs.net] has joined #linux4be
+13:32 -!- jal0atWrk [~jal0_wrkn@208.33.58.153] has quit [Read error: 104 (Connection reset by peer)]
+13:32 -!- jal0atWrk [~jal0_wrkn@208.33.58.95] has joined #linux4be
+14:52 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+15:07 -!- Filip__ [~Filip@60.61-200-80.adsl.skynet.be] has joined #linux4be
+15:09 < Filip__> hi folks
+15:10 -!- jal0atWrk [~jal0_wrkn@208.33.58.95] has quit [Read error: 113 (No route to host)]
+15:10 -!- jal0atWrk [~jal0_wrkn@208.33.58.148] has joined #linux4be
+15:11 < Filip__> jal0atWrk ?
+15:11 < PsycoXul> heh
+15:11 < Filip__> hi PsycoXul
+15:11 < PsycoXul> hello
+15:32 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+15:33 < Filip__> hi andrey
+15:33 < andrey> hi everybody
+15:33 < andrey> Filip, do we still have the problem with be being restarted after couple of minutes?
+15:34 < Filip__> not if you're using xpod
+15:35 < andrey> I'm looking into wince exception handling and found three registers (0xAA00..)
+15:35 < andrey> CE writes 1 to these registers every millisecond.
+15:36 < Filip__> interesting ....
+15:36 < andrey> AA00112C, AA001120, AA001B20
+15:51 -!- jal0atWrk [~jal0_wrkn@208.33.58.148] has quit [Read error: 113 (No route to host)]
+15:54 < Filip__> brb
+16:11 -!- jal0atWrk [~jal0_wrkn@208.33.58.223] has joined #linux4be
+16:13 < Baalz> Hi everyone! :)
+16:13 < Filip__> hi Baalz
+16:13 < jal0atWrk> hey baalz, filip, everyone
+16:17 < Baalz> Hey if anyone has the time I would be interested in knowing how many bogomips your BEs do. cat /proc/cpuinfo will tell...
+16:19 < Baalz> Mine is 110.45
+16:20 < Baalz> My frien has 104.85
+16:32 < andrey> hi baalz. I still don't run linux on my be... ;-(
+16:32 -!- jal0atWrk [~jal0_wrkn@208.33.58.223] has quit [Read error: 104 (Connection reset by peer)]
+16:33 < Baalz> Ok
+16:33 < Baalz> Thanks anyway :)
+16:34 < Filip__> Baalz, I'll try  it later  on and post result here
+16:34 < Baalz> I tought making an average would be interesting
+16:34 < Baalz> Thanks Filip :)
+16:34 < PsycoXul> i'll tell you after i get mine
+16:34 < PsycoXul> it's supposed to be delivered tomorrow
+16:35 < Baalz> Nice PsycoXul
+16:35 < Baalz> You live in the US PsycoXul?
+16:37 < PsycoXul> yeah
+16:38 -!- sinfonian [~bshirclif@twhou-212-250.ev1.net] has joined #linux4be
+16:38 < Filip__> hey Brian
+16:38 < Filip__> long time  no see
+16:44 < sinfonian> hi
+16:45 < sinfonian>  whats been going on guys?
+16:48 < sinfonian> so is the serial driver working yet?
+16:50 < Filip__> no, but touchscreen is making progress thanks  to MouseLRN and andrey
+16:52 < sinfonian> great...  how much progress what can you do now with it?
+16:52 < sinfonian> so if we get the touchscreen working we can just use a onscreen console?
+16:53 < Filip__> you can already use console now with the hardware buttons
+16:54 < sinfonian> what do you mean.. with hardware buttons.. the buttons on the BE?  I meant a keyboard
+16:55 < Filip__> buttons on the be, scroll to alphabet ; do ls, uname etc
+16:55 < sinfonian> wow
+16:55 < sinfonian> im impressed
+17:00 < Baalz> sinfonian: You should try it you would be even more impressed :)
+17:01 < sinfonian> I will
+17:01 < Filip__> it's easy, just follow Baalz's howto
+17:01 < sinfonian> ok
+17:02 < sinfonian> let me go download it real quick
+17:02 < Filip__> look in the 'dummies' section
+17:03 < sinfonian> im looking at the keyboard driver...   I know we got serial output working.. but what about input?
+17:04 < Baalz> http://linux4.be/dummies/index.php
+17:05 < sinfonian> im downloading and reading it now.. looking at the keypad functions..
+17:09 < Baalz> Noticed yesterday that Rocket + Ok does not work here, am I alone?
+17:14 < antagonizt> Baalz, i've never had that problem 
+17:14 < antagonizt> check your version
+17:14 < antagonizt> the code is pretty straight forward
+17:16 < antagonizt> my BE gets 110.18 BogoMIPS
+17:17 < Baalz> I use the kernel image Filip sent me but here Rocket + Ok makes enter, not a space...
+17:17 < Baalz> Thanks for your bogomips :)
+17:23 < Baalz> The average bogomips for a BE is 108.49333 for the moment with 3 persons :)
+17:33 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:34 < MouseLRN> hi2all
+17:34 < Baalz> Hi MouseLRN!
+17:35 < Filip__> Hi MouseLRN
+17:35 < MouseLRN> Baalz hi
+17:35 < MouseLRN> Filip__ re
+17:39 < andrey> Hi MouseLRN
+17:43 < MouseLRN> andrey hi
+17:43 < MouseLRN> Filip__ or tgz
+17:48 < MouseLRN> now, I trying to scan proper IRQ for tpanel...
+17:53 < andrey> how do you do it?
+17:55 < MouseLRN> request_irq(irq, handler, SA_SHIRQ, ...) and in handler print some infos. It's wrong way?
+17:56 < MouseLRN> ho use 12 IRQ ?
+17:56 < MouseLRN> ho -> who
+17:57 < MouseLRN> sorry, 16 IRQ?
+17:58 < andrey> maybe right, just interested...
+17:59 < MouseLRN> ;-)
+18:00 < MouseLRN> who use 19 IRQ?
+18:02 < MouseLRN> hey!
+18:02 < MouseLRN> peoples...
+18:02 < sinfonian> hello
+18:03 < MouseLRN> sinfonian hi
+18:07 < andrey> I dont use :-)
+18:12 < MouseLRN> ;-)
+18:12 < Filip__> MouseLRN, I'll prepr the tgz  for tomorrow morning (GMT+1), ok ? 
+18:16 < MouseLRN> Oh, 19 = 0x13 ;) it's owned by serial_be300...
+18:17 < sinfonian> oh man this is so wierd...  
+18:17 < sinfonian> damn we are so so so close to getting this thing usable...  
+18:23 -!- jal0_wrkn is now known as jal0
+18:23 < jal0> hey all
+18:24 < MouseLRN> jal0 hi
+18:25 < sinfonian> guys.. picogui stops loading at preparing and executing kernel
+18:25 < jal0> hey mouse
+18:26 < sinfonian> the serial one doesnt either
+18:27 < MouseLRN> sinfonian what shell you use? WinCE, Xpod or?
+18:27 < sinfonian> xpod I guess
+18:28 < sinfonian> yea xpod
+18:28 < Baalz> Use the latest eXpod
+18:28 < sinfonian> ok
+18:28 < sinfonian> lol.. where do I get that?  :P
+18:28 < PsycoXul> expod.net
+18:28 < sinfonian> can you believe people ask me that everyday
+18:28 < MouseLRN> sinfonian try to poweroff, then insert CF card, and load linux - on fabriced WinCE it works
+18:29 < PsycoXul> 5.1 is latest public, 6.0 is available to donators i guess
+18:29 < PsycoXul> heh
+18:29 < Baalz> Last public one is ok
+18:29 < sinfonian> damn now I need someone to write up something about 6.0
+18:31 < sinfonian> do you guys know if I need to delete the programs on my cf card for them to work with expod?
+18:31 < Baalz> You probably dont
+18:32 < sinfonian> ok good
+18:32 < MouseLRN> heh, what is 43 IRQ? (0x2b)
+18:32 < sinfonian> dont tell anyone but I cant stand this website  :P
+18:32 < MouseLRN> i try to handle it - cool result
+18:33 < sinfonian> I dont see a link anywhere for downloads other then just applications
+18:33 < PsycoXul> sinfonian: yeah it's kinda funky... it's there on the right side
+18:33 < sinfonian> ok
+18:33 < PsycoXul> it's a button
+18:33 < PsycoXul> "Download Now!"
+18:34 < sinfonian> ok
+18:34 < sinfonian> oh on the home page?
+18:34 < PsycoXul> yeah
+18:34 < sinfonian> so I have to download another patch after this /
+18:34 < sinfonian> ?
+18:34 < PsycoXul> there's like 4 things on the right side, login, expod, installs, and current release
+18:35 < PsycoXul> yeah 5.1, thats under the Installs panel
+18:35 < PsycoXul> but i dunno if thats necessary for whatever you're doing
+18:35 < PsycoXul> i don't even have my be yet 
+18:35 < PsycoXul> heh
+18:35 < sinfonian> these guys use to give me shit for not reviewing or aknowleding expod...    Filip.. how many expod xpod, epod versions have there been...  like 1 every week...
+18:36 < PsycoXul> i just like to get into things before i get into them :p
+18:36 < PsycoXul> hah yeah everybody seems to be confused about that
+18:36 < sinfonian> well I will do a little write up about this gold shit
+18:36 < PsycoXul> do you get a bunch of garbage on the expod.net front page in the main area that says "Main Index"?
+18:37 < Baalz> Yes
+18:37 < Baalz> It's unreadable here
+18:37 < PsycoXul> weird
+18:37 < Baalz>  â€¹
+18:37 < sinfonian> yea me too
+18:38 < sinfonian> looks like an e-mail that is displaying characters instead of a picture
+18:39 < Baalz> sinfonian: I have a website with friens and I really understand your point: we do this for free and people act as if we were owing them something...
+18:41 < Baalz> People rarely see what we've done: they only see what is missing
+18:41 < sinfonian> yea... well I just got burned out on doing it.. so I try to get other people to do all the work...  I am not a great writer or anything but I have a hard time trusting people to write news for my site.
+18:42 -!- Filip__ [~Filip@60.61-200-80.adsl.skynet.be] has quit [Read error: 110 (Connection timed out)]
+18:42 < PsycoXul> there doesn't seem to be any good graphics manipulation software for the BE... 
+18:43 < PsycoXul> i don't suppose there's any chance of gimp ever running on it? hehe
+18:43 < sinfonian> filip and I use to joke that when cbutters was releasing all these new versions of epod.. that by this time next year the versions will be in the 100s
+18:43 < sinfonian> picogimp  :P
+18:43 < Baalz> BTW, this (french) site is http://www.megaoctet.net if anyone cares and my home page can be found at http://www.megaoctet.net/~baal/ ...
+18:43 < sinfonian> no but I hear the latest version of x-eyes will  :P
+18:43 < PsycoXul> heh :p
+18:43 < Baalz> LOL
+18:44 < PsycoXul> how do you use x-eyes with a stylus?
+18:44 < sinfonian> good point
+18:44 < Baalz> Well I guess you just have to keep the stylus on the touchscreen and it works :)
+18:44 < PsycoXul> hehe
+18:45 < MouseLRN> ;-)
+18:45 < sinfonian> I use to have a cdrom that loaded up linux on the dreamcast
+18:45 < sinfonian> and all it really did was xeyes and an analog clock
+18:45 < PsycoXul> heh
+18:45 < Baalz> We should add a feature so xeyes look up when we lift the stylus ;)
+18:45 < PsycoXul> it can do more than that
+18:45 < sinfonian> it can now
+18:46 < sinfonian> but it was hot shit when I downlaoded it... 
+18:46 < PsycoXul> i knew some people in #linuxwarez on efnet that got a DC when they lowered the price, just to run linux on it
+18:46 < sinfonian> yea... I had the DC keyboard and it worked well..
+18:46 < PsycoXul> i think they played some games on it, and used mplayer
+18:46 < sinfonian> console.. and all that.. if I had the ethernet card for it I could maybe use it for a ftp server or something
+18:46 < Baalz> I'd buy an xbox if I didn't need a modchip so M$ would lose money...
+18:47 < sinfonian> the latest xboxs are modchip proof now right?
+18:47 < PsycoXul> heh
+18:47 < PsycoXul> modchip proof? heh
+18:47 < PsycoXul> is that anything like how the original xbox's were linux proof? :p
+18:48 < Baalz> All that has been done can be undone: modchip-proof does not exist :)
+18:49 < sinfonian> about a few months ago the xboxs were being made that made the old modchips not work
+18:49 < sinfonian> so been waiting for the new modchips
+18:51 < Baalz> Hey, I dont want to create a debate but, vi or emacs?
+18:51 < Baalz> vi here :)
+18:52 < sinfonian> VI
+18:52 < sinfonian> hate emacs
+18:52 < Baalz> Let's just say what we prefer without arguing :)
+18:53 < MouseLRN> I like emacs, hate vi
+18:54 < sinfonian> lol.. na I dont hate emacs...  i actually been using KATE alot.
+18:54 < sinfonian> for scripting and all that
+18:56 < MouseLRN> anybody know how may use those IRQ's: 43,44,48,45,46,52,56,57 (decimal) ?
+18:57 < sinfonian> ok.. getting too technical here.. got to get ready 
+18:57 < Baalz> Héhé :)
+18:58 < Baalz> Sorry in french we say héhé
+18:58 < Baalz> 's/HéHé/Hehe/'
+18:58 < Baalz> :)
+18:59 < PsycoXul> vim
+18:59 < PsycoXul> heh
+18:59 < PsycoXul> i don't know vi well enough :p i have a hard time worknig in vim without my .vimrc
+18:59 < MouseLRN> people!
+19:00 < PsycoXul> MouseLRN: where?!
+19:01 < PsycoXul> No pages were found containing "picogimp".
+19:01 < PsycoXul> :/ 
+19:01 < PsycoXul> heh
+19:02 < MouseLRN> BE
+19:02 < Baalz> What?
+19:08 < MouseLRN> I have been already scaned IRQ's from 11 (dec) upto 61
+19:20 < PsycoXul> any pda's have a more tablet-like touchscreen? i.e. with non-contact motion detection and pressure-sensitivity?
+19:21 < MouseLRN> don't know
+19:22 < Baalz> Me neither... :(
+19:22 < PsycoXul> heh
+19:22 < PsycoXul> i was just curious
+19:22 < PsycoXul> seems like there would be
+19:22 < PsycoXul> i'm suprised by the lack of good graphics software for these things
+19:23 < PsycoXul> seems like a little digital screen to paint on that fits in your pocket would be much loved by a lot of artists...
+19:23 < Baalz> Imagine using your BE as a drawing tablet :)
+19:23 < PsycoXul> with all the features of good digital image programs that is
+19:23 < Baalz> Yes it would! :)
+19:24 < PsycoXul> not like most of the pocket paint programs i've found with 1 level of undo if you're lucky and screen-limited resolution
+19:26 < PsycoXul> what i think would be cool is a vector drawing program, with standard tools plus freehand, and the ability to use 'bitmap objects' that're like a pre-defined process with it's paramaters being set and stored in vector format... 
+19:26 < PsycoXul> or something along those lines
+19:26 < PsycoXul> heh
+19:26 < Baalz> I used Xpod's paint.exe to make plans of the appartments I was visiting last july but scrolling to draw also really sucks also...
+19:27 < PsycoXul> scrolling's not bad if you only have to do it when you want to.. i.e. if you can both zoom and pan easily
+19:27 < Baalz> Yeah no zoom in paint.exe... :(
+19:28 < PsycoXul> but even with that, you can't really do big bitmap work and except to have much undo capabilities or anything on a device so ram-limited
+19:28 < PsycoXul> thats why i think a robust vector-based thing would be ideal
+19:29 < Baalz> I would like to render a povray drawing on my BE :)
+19:29 < PsycoXul> low-memory, scalable, and powerful.. it's like perfect for a small screen pocket device heh
+19:30 < PsycoXul> hehe yeah that'd be cool
+19:30 < PsycoXul> i wonder if povray could run on linux for the be
+19:30 < sinfonian> hey talking about painting programs there is one called mobilepencil for wince that is really nice
+19:30 < Baalz> Why not?
+19:30 < PsycoXul> it probably uses floating point for stuff, doesn't it? will we have complete FP emulation?
+19:31 < Baalz> PsycoXul: I dont know about floating points...
+19:31 < PsycoXul> thats the only possible problem i can think of...
+19:31 < Baalz> I dont work in computers...
+19:31 < PsycoXul> there is a raytracer program i found for the BE somewhere
+19:33 < PsycoXul> Baalz: hey i don't even work :p
+19:33 < Baalz> Hehe
+19:33 < PsycoXul> http://www.rit.edu/~ogs3958/be300/
+19:33 < sinfonian> well guys... talk to you all later.. take care
+19:33 < PsycoXul> YASRT
+19:34 < Baalz> See ya sinfonian
+19:34 < PsycoXul> sinfonian: bye
+19:34 < MouseLRN> sinfonian bb
+19:34 -!- sinfonian [~bshirclif@twhou-212-250.ev1.net] has left #linux4be []
+19:35 < Baalz> PsycoXul: I am no programmer nor hardware guru...
+19:36 < PsycoXul> i only know enough C to do simple stuff and hack other people's software... some copy/paste coding hehe
+19:36 < PsycoXul> and only have a basic understanding of hardware stuff
+19:36 < PsycoXul> if you get a chance to try that raytracer before i do, lemme know how it is
+19:38 < Baalz> I am not going to learn another raytracer just for the be: this would confuse my povray knowledge ;)
+19:39 < PsycoXul> heh
+19:39 < Baalz> I'd prefer to make povray work :)
+19:39 < PsycoXul> so compile povray for wince
+19:39 < MouseLRN> ;-)
+19:40 < PsycoXul> i swear microsoft really did something right with that
+19:40 < PsycoXul> 'wince' seems like the perfect name for an M$ product
+19:42 < PsycoXul> hey
+19:42 < PsycoXul> these yasrt example images aren't bad
+19:42 < PsycoXul> in fact there's a few somewhat impressive ones of plants
+19:44 < PsycoXul> hmm
+19:44 < PsycoXul> Baalz: this thing's language is really similar to povray
+19:45 < Baalz> I'll take a look!
+19:45 < MouseLRN> bye 2 all.
+19:45 < Baalz> Ciao Mouse!
+19:45 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Tabardation - the inability to master use of the <Tab> key. See: retardation; Headcase."]
+19:46 < Baalz> I'm gonna be occupied for some time...
+19:46 < PsycoXul> a few obvious differences, but it's not like something you have to re-learn entirely
+19:46 < PsycoXul> the biggest difference i see is the surface directive
+19:46 -!- Baalz is now known as BaalAFK
+19:46 < PsycoXul> it seems the surface of an object is defined by an individual statement that comes before the object's statement
+19:47 < BaalAFK> A little bit of sed-fu may port my existings drawings :)
+19:47 < PsycoXul> possibly
+19:47 < PsycoXul> it'd be a bit of work though
+19:48 < BaalAFK> Thanks for the infos PsycoXul, I'll see you later...
+19:48 < PsycoXul> ok
+19:48 < PsycoXul> lemme know about your adventures hehe
+19:49 < PsycoXul> whee and i thought my archos jukebox was fun... but man a BE can keep you occupied for a looong time, if you have enough storage and battery life hehe
+19:57 < PsycoXul> there seems to be a slightly newer version on yasrt.org for mips pocketpc
+21:16 < andrey> ok, I'm leaving. bye guys!
+21:17 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+--- Log closed Fri Jan 10 00:00:02 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

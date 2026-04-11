@@ -1,0 +1,475 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_08.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_08.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Dec 08 00:00:24 2002
+00:21 -!- beastieb [~mabell@200.188.224.255] has joined #linux4be
+00:29 < antagonizt> hello beastieb
+00:29 < beastieb> hello antagonizt
+00:29 < beastieb> have you tried using linux in old cassiopeias?
+00:30 < antagonizt> i don't own any old cassiopeias
+00:30 < jal0> i believe filip has
+00:31 < antagonizt> there are projects out there for the E-1xx series
+00:31 < beastieb> and have he tried installing linux in it?
+00:31 < jal0> you would have to ask him, i think so
+00:31 < beastieb> jal0: what's his nick?
+00:32 < jal0> filip, but i havn't seen him around lately
+00:32 < jal0> filip_,filip__
+00:33 < jal0> why
+00:37 < jal0> antagoinzt: just ordered the NEC ASIC CD with all their doc's on it... it should be useful in determining exactly what type of chip the companion is
+00:44 < antagonizt> coolness...
+01:37 -!- WebGuest2226 [~eirc@ppp-209-87-245-28.storm.ca] has joined #Linux4BE
+01:37 < WebGuest2226> hmm yea
+01:38 < jal0> hewhew?
+01:38 < WebGuest2226> yea
+01:38 < WebGuest2226> sup?
+01:38 < jal0> hi :)
+01:38 < WebGuest2226> hi =)
+01:39 < jal0> so hows life :)
+01:39 < WebGuest2226> parents are getting divorced
+01:40 < WebGuest2226> u?
+01:40 < jal0> mapping out the mainboard
+01:40 < WebGuest2226> neat
+01:40 < jal0> have you seen the schematic so far?
+01:40 < WebGuest2226> nope....
+01:41 < WebGuest2226> let me open a new window to check it out
+01:41 < jal0> http://www.linux4.be/~jal0/be300-main-board.pdf
+01:42 < WebGuest2226> neat
+01:42 < jal0> thanks
+01:42 < WebGuest2226> casio might not like that heh =)
+01:43 < jal0> why, unless i can figure out what the companion chip is most of the info is useless anyway
+01:44 < jal0> no idea of the actual pin functions on the companion
+01:44 < WebGuest2226> ok
+01:44 < WebGuest2226> the 1001 one?
+01:44 < jal0> yeap
+01:45 < WebGuest2226> yea.. its scary
+01:45 < jal0> belive it is some form of ASIC device
+01:46 < WebGuest2226> yea.. those are a b!tch
+01:48 < WebGuest2226> that thing has so much pins
+01:48 < jal0> 303 to be exact
+01:48 < WebGuest2226> ouch
+01:49 < WebGuest2226> folks at casio know how to have a good time
+01:50 < jal0> that they do :)
+01:50 < WebGuest2226> anyway im off to bed
+01:50 < WebGuest2226> good luck
+01:50 < jal0> later
+01:50 < WebGuest2226> ill be around..
+01:50 -!- WebGuest2226 [~eirc@ppp-209-87-245-28.storm.ca] has quit ["Today is a good day to chat."]
+02:11 -!- beastieb [~mabell@200.188.224.255] has quit [Read error: 54 (Connection reset by peer)]
+02:22 -!- antagonizt is now known as antagonizt[zZz]
+03:13 -!- jal0 is now known as jal0_ZzZ
+03:20 -!- metalac [~root@12-228-100-37.client.attbi.com] has joined #linux4be
+03:20 -!- metalac [~root@12-228-100-37.client.attbi.com] has left #linux4be ["Client Exiting"]
+08:52 -!- themaw [~marc@pD9548405.dip.t-dialin.net] has joined #linux4be
+08:53 < themaw> hi guys!
+08:54 < themaw> why am i always joining this channel while everyone's asleep ?! ;)
+09:28 < wolphie> hi
+09:28 < wolphie> i'm not sleeping :)
+09:28 < wolphie> it's 15:28 now here :)
+09:41 < themaw> well, here same time :)
+09:56 < themaw> sometimes my be won't boot the linux kernel .. hm ..
+10:13 < themaw> and after a reboot it works again .. 
+10:26 < wolphie> hmm
+10:27 < wolphie> some initialization problem ?
+10:28 < themaw> could be .. but i think it's a problem of the bootloader ..
+10:49 < themaw> ahh .. my escape key works :)
+10:50 < wolphie> :)
+10:51 < themaw> coooool!!!!!!!!
+10:51 < themaw> i just activated the busybox console on my be-300 the first time :)
+10:52 < themaw> (by pressing ok -> enter)
+10:53 < wolphie> cool
+10:53 < wolphie> hmm, my boss ringing my phone again, he thinks i'll work on weekend :]
+10:53 < themaw> yeah, sure .. ;)
+10:57 < themaw> ok .. the scanning keyboard driver with the buttons works !
+11:00 < themaw> now ncurses for the be would be great ;)
+11:01 < themaw> uhh .. it's 4 mb ..
+11:10 < wolphie> the source ?
+11:11 < themaw> yes ..
+11:13 < wolphie> the binary with uclibc is under 300k i think
+11:17 < themaw> hmm .. let's try if it compiles with uclibc ..
+11:35 < themaw> ok, i was wrong: 800k source, 4 mb binary on local hard disk ..
+11:38 < themaw> it's 600k
+11:38 < themaw> the binary with uclibc 
+11:42 < themaw> how do i create a .so from a .a ?
+11:43 < wolphie> it's big
+11:45 < wolphie> are you compiling with cygwin
+11:45 < wolphie> ?
+11:45 < themaw> no, gcc on linux
+11:48 < themaw> but i get undefined references as the making goes on ..
+12:02 < themaw> hmmmm ..
+12:04 -!- jal0_ZzZ is now known as jal0
+12:05 < jal0> themaw: you trying to compile uclibc under cygwin?
+12:05 < themaw> hi jal0
+12:05 < themaw> no, i try to compile ncurses with uclibc under linux
+12:05 < themaw> i wrote a simple keyboard driver for the buttons which works quite well :)
+12:06 < jal0> you using my prebuilt toolchain, or did you build your own?
+12:06 < themaw> i built my own ..
+12:06 < themaw> ..that might be the problem ;)
+12:07 < jal0> what undefined references? you might want to try compiling them with glibc first.
+12:08 < themaw> well .. i got a ncurses.a file now, but the making process stops afterwards ..
+12:08 < themaw> isn't there a command for creating a .so-file from a .a-file ?
+12:08 < jal0> static->dll ?
+12:08 < themaw> yep ..
+12:08 < jal0> why do you need the dll?
+12:08 < themaw> don't know ;)
+12:09 < jal0> if your going to be running from the console, you'll only have one ncuses app running at a time anyway
+12:10 < jal0> ncuses=ncurses
+12:10 < jal0> haved you tried dlltool?
+12:11 < themaw> no.. what is it ?
+12:11 < jal0> dll wrapping
+12:11 < themaw> hmm .. don't have it installed yet .. 
+12:11 < jal0> but you should be able to give the ncurses make an option to compile as a dll though
+12:12 < jal0> just a guess, but maybe -DSHARED
+12:13 < jal0> you should check the INSTALL file for make options or the makefile itself
+12:17 < wolphie> ./configure --with-shared
+12:20 < themaw> ok
+12:22 < themaw> ah .. now ..
+13:58 < themaw> btw, where is filip today ?
+13:59 < jal0> havn't seen him lately
+14:16 < themaw> do you know whether the pg-bootdisk should react on keystrokes (up,down,left,right,ok,esc) in any way ?
+14:16 < themaw> i'm testing my keyboard driver with picogui, and it doesn't react ..
+14:17 < jal0> pg-bootdisk?
+14:17 < themaw> picogui
+14:17 < themaw> the ramdisk ..
+14:17 < themaw> sorry, didn't mean boot- but ramdisk ..
+14:17 < jal0> so your asking if the ramdisk should react on keystrokes?
+14:18 < themaw> no ..
+14:18 < themaw> i mean the picogui as configured on the picogui-ramdisk .. i got a pre-built ramdisk with picogui on it ..
+14:19 < themaw> and i've written a little driver today that used the buttons at the bottom of the cassiopeia as keyboard and testet it with busybox ..
+14:19 < jal0> not sure you have to ask antagonizt. i believe he created it.
+14:19 < themaw> ok ..
+14:19 < themaw> wasn't sure if it was you or him .
+14:24 -!- antagonizt[zZz] is now known as antagonizt
+14:25 < antagonizt> themaw: iirc the picogui ramdisk has no input drivers built in...
+14:26 < jal0> hi antagonizt
+14:26 < antagonizt> hi jal0
+14:26 < themaw> ah .. okay .. hi antagonizt :)
+14:26 < jal0> long nap ic ;)
+14:26 < antagonizt> themaw: i wrote a tutorial here: http://www.linux4.be/~jroark/howto/picogui.html
+14:27 < antagonizt> themaw: where is your driver? could i take a look at it?
+14:28 < themaw> can i clean it up a bit before ?
+14:28 < themaw> it's based on the scan_keyb-Driver ..
+14:28 < antagonizt> sure
+14:32 < themaw> it's very simple right now .. 
+14:32 < antagonizt> i imagine... there are only 4 buttons :)
+14:34 < themaw> i ment the structure ;)
+14:34 < themaw> a t9-like input would be imaginable, but i think the effort of getting the touchscreen to work are less .. ;)
+14:35 < themaw> http://www.linux4.be/~themaw/scan_be300.c
+14:37 < themaw> hm .. no lock with building pg here, antagonizt. Some issue with m4
+14:37 < antagonizt> what distro are you using?
+14:37 < themaw> suse 7.3
+14:38 < themaw> (+8.0 on my laptop)
+14:38 < antagonizt> m4 --version
+14:38 < antagonizt> GNU m4 1.4.1
+14:38 < antagonizt> on my RH 7.3
+14:38 < themaw> GNU m4 1.4o
+14:39 < themaw> autoconf-2.13-349
+14:39 < themaw> automake-1.4_p5-67
+14:40 < antagonizt> Autoconf version 2.13
+14:40 < antagonizt> automake (GNU automake) 1.4-p5
+14:40 < antagonizt> what step is breaking?
+14:41 < themaw> i sent you the output .. got it ?
+14:42 < antagonizt> yes
+14:42 -!- sinfonian [~bshirclif@twhou-207-218-200-61.ev1.net] has joined #linux4be
+14:42 < antagonizt> odd
+14:42 < sinfonian> hi
+14:43 < themaw> hi sinfonian
+14:43 < themaw> i often have these problems when trying to build recent versions of programs ..
+14:44 < sinfonian> be back.. computer is freakin out
+14:44 < themaw> windoze ? ;)
+14:44 < sinfonian> nm  it was my wireless mouse
+14:45 < antagonizt> themaw: tried just removing that reference?
+14:45 < antagonizt> it only occurs once
+14:45 < themaw> now i get other undefined macros .. AC_ENABLE_SHARED, AC_DISABLE_STATIC and similar ones ..
+14:46 < antagonizt> themaw: did you find that the timer went off when you thought it should... jiffies + HZ should be once a second
+14:47 < antagonizt> so HZ/40 should be 40 times a second
+14:47 < themaw> i tried 20 times a second and noticed that it didn't work in every case fine so i increased speed ..
+14:48 < themaw> but i still wondered why 20 times a second isn't enough ..
+14:48 < themaw> it's every 50 ms ..
+14:48 < antagonizt> i don't think HZ is the correct value for our be
+14:48 < antagonizt> it's a constant in include/linux/timex.h iirc
+14:49 < themaw> now tell me what iirc means :)
+14:49 < antagonizt> if i remember correctly
+14:49 < themaw> ok
+14:50 < themaw> HZ is defined in asm/param.h
+14:50 < themaw> (as 100)
+14:51 < themaw> HZ/40 isn't even a correct integer value ;-)
+14:54 < themaw> could you send me your compiled pg-archive ? 
+14:54 < antagonizt> the bins?
+14:55 < antagonizt> or the step after ./autogen.sh
+14:55 < antagonizt> if you want the bins i need to rebuild it with standard input drivers built in
+14:55 < themaw> the binaries .. 
+14:59 < themaw> you can also send me the archive without the binaries .. but a Makefile would be nice :)
+15:06 < antagonizt> http://www.linux4.be/~jroark/files/picogui.tar.bz2 [2.6M]
+15:06 < antagonizt> 2.4M
+15:07 < themaw> thanks!
+15:08 < antagonizt> np
+15:10 < antagonizt> themaw: key1 & key2 are bitmasked with the various buttons that live at each address
+15:11 < antagonizt> you check for the mask not if they are equal...
+15:11 < antagonizt> should
+15:12 < themaw> you are right ..
+15:12 < themaw> this is the next step.
+15:17 < sinfonian> so whats going on?  
+15:17 < sinfonian> what the status of the project.. any more improvements?
+15:19 < antagonizt> have you seen jal0's latest HW RE diagrams... and themaw has written a scanning btn keyboard driver
+15:19 < sinfonian> cool
+15:19 < sinfonian> I saw the hi res pictures
+15:19 < antagonizt> themaw where did you call the init func for your driver? 
+15:20 < antagonizt> and where did you link it in?
+15:20 < themaw> similar to the scan_keyb .. but wait ..
+15:21 < themaw> from drivers/char/Makefile:
+15:21 < themaw> ifeq ($(ARCH),mips)
+15:21 < themaw>   KEYBD    = scan_be300.o
+15:21 < themaw>   KEYMAP   = defkeymap.o
+15:21 < themaw> endif
+15:21 < themaw> (line 45ff)
+15:22 < themaw> and the rest is a very dirty hack: i didn't include anything in Configure.help or the config-files. It's a replacement for the dummy driver:
+15:22 < themaw> ifeq ($(CONFIG_DUMMY_KEYB),y)
+15:22 < themaw>   KEYBD = scan_be300.o
+15:22 < themaw> endif
+15:22 < themaw> (line 139-141)
+15:23 < themaw> that's it. 
+15:23 < antagonizt> so where is the init func called?
+15:25 < themaw> in keyboard.c, line 936
+15:28 -!- Den_Beiren [~me@150.5-201-80.adsl.skynet.be] has joined #linux4be
+15:32 < antagonizt> themaw: have you considered useing the D-pad as a way to scroll through the alphabet... ok and esc would what they normally do, but rocket would be like shift?
+15:33 < antagonizt> might be more work than it's worth... 
+15:38 < sinfonian> ok guys.. keep up the great work
+15:38 < sinfonian> Ill be back later
+15:38 < jal0> later
+15:39 -!- sinfonian [~bshirclif@twhou-207-218-200-61.ev1.net] has left #linux4be []
+15:40 < themaw> Antagonizt, i thought of that .. but I think it's not quite easy to write such a driver with a graphical interface based on framebuffer, i think.
+15:41 < themaw> Oh .. i'm getting tired .. i use wrong grammatical constructions ;)
+15:41 < themaw> ahh! .. i mean gramatical wrong constructions .. 
+15:42 < themaw> Antagonizt, don't you think it will be easier getting the touchscreen to work ?
+15:42 < antagonizt> not without interrupts
+15:44 < antagonizt> jal0: do you think the ASIC has an ICU of it's own?
+15:45 < jal0> not sure
+15:46 < antagonizt> themaw: Sie sprechen englisches besseres, als ich Deutsches spreche.
+15:47 < jal0> hopfully the ASIC CD that i ordered will give some more clues to what mega macro libraries was used in the companion chip
+15:48 < antagonizt> jal0: what if we pretend to be interested in ordering an ASIC from NEC that has the exact same specs as the one in the be?
+15:48 < themaw> :-)
+15:48 < themaw> but not too bad .. where did you learn it ?
+15:48 < jal0> not sure of the specs though, that what i need the CD for
+15:49 < antagonizt> i took a course several years ago...
+15:50 < themaw> ah .. fine :)
+15:50 < antagonizt> and my father lived in Leipzig
+15:50 < antagonizt> for a year and a half
+15:50 < themaw> so that's why! ok .. I know very few americans who can speak german.
+15:51 < antagonizt> oh i couldn't cary on a conversation or anything
+15:51 < antagonizt> just pick up a few sayings and words
+15:53 < antagonizt> how's the picogui build going?
+15:53 < themaw> seems to be ready :) wait .. it's in a somewhere hidden xterm ..
+15:53 < themaw> yeah .. ready ..
+15:54 < themaw> i included the [*] tty keyboard driver (framebuffer, other terminals)
+15:55 < antagonizt> hmmm i would have thought it was a rawmode driver
+15:56 < themaw> hmm .. should work as well !
+15:57 < themaw> i think it's just one layer above
+16:07 -!- beastieb [~beastieb@dl-dtg-fln-C8B0B172.p001.terra.com.br] has joined #linux4be
+16:08 < antagonizt> hello beastieb
+16:08 < antagonizt> brb
+16:09 -!- antagonizt is now known as antagonizt[brb]
+16:09 < beastieb> hi
+16:11 < beastieb> couldn't you configure you server to use index.php as a index file?
+16:11 < beastieb> so that it gets dillo friendly?
+16:13 < themaw> antagonizt, i'll give up for tonight .. now something's wrong with the pgserver-executable .. "no such file or directory"
+16:16 < beastieb> does cassiopeia have a keyboard?
+16:19 < themaw> no .. but 8 buttons, of which 4 are arrows ;)
+16:20 -!- Den_Beiren [~me@150.5-201-80.adsl.skynet.be] has quit ["BorgIRC 2.5.0169 - by: STING - http://www.borgirc.net"]
+16:21 < beastieb> so how do you type things?
+16:21 < themaw> currently not at all.
+16:21 < beastieb> throught serial?
+16:22 < themaw> we work on serial .. and touchscreen ..
+16:23 < beastieb> how much is a cassipeia model
+16:23 < beastieb> the cheapest one?
+16:24 -!- Filip2 [~Filip@97.98-136-217.adsl.skynet.be] has joined #linux4be
+16:24  * Filip2 is reading the logs now ...
+16:24 < jal0> hey filip
+16:25 < Filip2> hi jal0
+16:25 < jal0> let me know when your done reading the logs :)
+16:26 < themaw> good evening filip !
+16:27 < Filip2> jal0, still looking for the connecor for the buttons ?
+16:27 < Filip2> hi marc
+16:27 < jal0> yeap, actually any info any of the connectors would be useful, as i dont have my be apart
+16:28 < Filip2> i wrote them down when I took it appart, I'll check it in a moment
+16:29 < jal0> ok
+16:32 < themaw> beastieb: i got mine for 140 us$ ..
+16:33 -!- antagonizt[brb] is now known as antagonizt
+16:33  * antagonizt is back
+16:33 < antagonizt> hello filip
+16:34 < antagonizt> beastieb: you can find them on ebay for around $100
+16:37 < Filip2> buttons=cn2
+16:37 < Filip2> hi antagonizt
+16:37 < Filip2> touchscreen=cn300
+16:39 < Filip2> jal0: add3 and add4 shorted ??
+16:39 < Filip2> that does explain why multpile locations change each time
+16:39 < jal0> yeap
+16:40 < Filip2> but why would one do this ?
+16:40 < jal0> i just finished mappping out RAM, will be updating the schematic shortly
+16:40 < Filip2> I supose the color codes on the IC's pins are linked to the function
+16:41 < jal0> not sure in this case, but the addresses may be being used as external chip selects
+16:41 < jal0> yeah, in most cases
+16:43 < Filip2> do you think there will be details about the macro functions on the nec cd ?
+16:43 < jal0> its mainly so i can keep track of what area of the chip services external devices, helps in mapping unknown pins.
+16:43 < jal0> yeah, it contains all the lastes info and docs on there ASIC devices and macro libraries
+16:44 < beastieb> jal0: are you jroark?
+16:44 < jal0> no
+16:44 < jal0> jroark is antagonizt
+16:44 < antagonizt> beastieb: that would be me
+16:44 < beastieb> antagonizt: ow
+16:45 < antagonizt> ow?
+16:45 < jal0> its just a matter of determining what mega macro libraries they implemented in the device
+16:46 < Filip2> do they also provide reference code (like CE or linux drivers) for these macro's ?
+16:46 < Filip2> marc: I see you activated console
+16:48 < beastieb> antagonizt: s/ow/ok/y
+16:48 < beastieb> how do you put the ramdisk into the cassiopeia?
+16:48 < antagonizt> it links with the kernel
+16:48 < beastieb> thruought flash burning?
+16:48 < jal0> the macro libraries a like plug-in modules, for instances they have on that  models a standard UART device. So i dont belive they need to include code. These devices can be uses for other things that embedded micros also
+16:49 < antagonizt> no, we have been using a CE app boot loader and a compact flash card
+16:49 < Filip2> so those macro's are very likely to be exacted clones of well known devices ? (like uart, sound, usb,)
+16:50 < beastieb> antagonizt: so you transfer the kernel using the serial?
+16:51 < antagonizt> you place the kernel, bootloader, and config file on a compact flash card
+16:54 < jal0> filip: one can only wish :)
+16:58 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: someguy
+16:58 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: wolphie
+17:02 -!- Netsplit over, joins: someguy
+17:02 < jal0> bbl people
+17:02 -!- jal0 is now known as jal0_away
+17:02 < jal0_away> filip: could you email me the info on the connectors?
+17:02 < jal0_away> or just post it here and i read the logs
+17:05 < Filip2> ok, cn2=buttons, cn300=touchscreen, I'll have to search around for the others
+17:27 < themaw> Yes, Filip, i wrote a little yet incomplete but useable keyboard driver for the buttons and activated the console with it ..
+17:39 -!- beastieb [~beastieb@dl-dtg-fln-C8B0B172.p001.terra.com.br] has quit ["back later"]
+18:15 -!- Filip2 [~Filip@97.98-136-217.adsl.skynet.be] has left #linux4be []
+18:32 -!- themaw [~marc@pD9548405.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+20:14 -!- jal0_away is now known as jal0
+20:54 -!- sinfonian [~bshirclif@twhou-212-16.ev1.net] has joined #linux4be
+20:59 < antagonizt> jal0, how is the HW RE going?
+21:00 < jal0> ugg, starting to get complex, but good, i have finished both RAM's now
+21:01 < jal0> need to finish labeling some wires then i'm going to update my web page
+21:02 < jal0> it really sucks not knowing the pin functions on the companion chip
+21:02 < sinfonian> so whats this about an ASIC CD?
+21:02 < jal0> any luck with the irq's ?
+21:03 < jal0> just some documentation from NEC that will hopefully contain the info we need about the companion chip
+21:03 < jal0> they said it should arrive within a few days
+21:04 < antagonizt> nope nothing i tried worked
+21:04 < sinfonian> just general info about their gate arrays or will it list the secret model numbers?
+21:04 < jal0> not sure, have to find out when i get it.
+21:05 < sinfonian> ok
+21:47 < jal0> hey guys, just uploaded the latest schematic, it's yummy ;)
+21:56 < antagonizt> coolness
+21:56 < jal0> thanks
+21:57 < jal0> my eyes hurt %-|
+21:57 -!- sinfonian [~bshirclif@twhou-212-16.ev1.net] has quit [Read error: 113 (No route to host)]
+21:58 < jal0> so what's with this keyboard driver?
+21:58 < antagonizt> pretty basic... not very usefull at this point
+21:58 < antagonizt> it has potential
+21:59 < jal0> ok, going to start concentrating on irq's now, mapping as needed. I think that the next big hurdle we need to get over.
+21:59 < antagonizt> agreed
+22:00 < antagonizt> good thing you know about that stuff
+22:00 < jal0> gernerally speaking yes, but never works with mips before, but it cant be too different
+22:01 < jal0> works=worked
+--- Log closed Mon Dec 09 00:00:50 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

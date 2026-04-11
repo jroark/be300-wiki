@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_12.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_12.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Jan 12 00:00:55 2003
+02:28 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+02:29 < Chewie> Hi
+02:38 -!- Chewie [~chewie@the-geek.org] has quit ["Aplicación Saliendo"]
+06:24 -!- AlphaZeta [Blah@h68-147-111-244.cg.shawcable.net] has joined #linux4be
+06:24 < AlphaZeta> Hey, how's everyone doing?
+06:28 < AlphaZeta> Holy, been a while since the topic was updated, eh?
+10:22 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+10:47 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:48 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+10:48 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:52 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+10:52 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:53 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+11:18 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+13:40 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+13:44 < MouseLRN> anybody?
+13:44 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+13:58 -!- AlphaZeta [Blah@h68-147-111-244.cg.shawcable.net] has quit [Read error: 110 (Connection timed out)]
+14:02 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+14:03 < Chewie> Hi
+14:35 -!- Filip [~Filip@213.50-200-80.adsl.skynet.be] has joined #linux4be
+14:36  * Filip looks around to see if anybody is alive
+14:36  * Chewie is
+14:36 < Filip> Hi Chewie
+14:37 < Chewie> Hi
+14:37 < Chewie> Seems we are the only ones
+14:37 < Chewie> Those seem very away
+14:38 < Filip> indeed, but it's still early
+14:38 < Chewie> How is the work going?
+14:39 < Chewie> I think you're about to get the touchpad working
+14:39 < Filip> making progress but it takes time without doc's
+14:40 < Chewie> I was thinking about purchasing a BE-300, till I saw your site
+14:40 < Chewie> Now I'm convinced :-)
+14:40 < Filip> great
+14:41 < Filip> any linux and/or  pda experience ?
+14:41 < Chewie> It's really cheap at Amazon
+14:41 < Chewie> No PDA
+14:41 < Filip> where do you live ?
+14:41 < Chewie> But I'm a Linux user
+14:41 < Chewie> In Spain
+14:42 < Chewie> Though... do you think it's a good idea to have a BE if you use Linux as your only desktop?
+14:43 < Filip> http://www.linux4.be/~themaw/linux2be.html
+14:44 < Chewie> Yeah, I saw it
+14:44 < Filip> Spain, so we're in the same timezone
+14:44 < Chewie> I was wondering if that is really usable as an everyday use
+14:44 < Filip> looking at amazon.com ?
+14:44 < Chewie> Yup, .be is Belgium i guess
+14:45 < Filip> I only use it for hacking Linux on it
+14:45 < Filip> indeed, Belgium
+14:47 < jal0> hi people
+14:47 < Filip> hi jal0
+14:48 < Chewie> Hi jal0
+14:48 < jal0> hi filip, chewie
+14:51 < jal0> so filip, anything new, been real busy lately, have had much time to keep up with things
+14:51 < jal0> have=havn't
+14:53 < Filip> I've been pretty busy as well, but it looks like Mouse has been doing a good job on touchscreen
+14:53 < Filip> I'll hopefully have a couple of spare nights this week to have a closer look.
+14:53 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+14:54 < Filip> hi MouseLRN, was just talking about your progress
+14:54 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+14:54 < jal0> yes, i have read that in the logs, outstanding, couldn't make out if he could actually convert the register values to X/Y's
+14:54 < jal0> hey mouse
+14:55 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+14:56 < MouseLRN> hi2all
+14:56 < Filip> hi MouseLRN
+14:58 < MouseLRN> today I run SDL test programs on my BE under Linux, include testsprite - it's nice =)
+14:58 < jal0> mouse: have you been able to figure out the X/Y's yet for the touchscreen?
+14:58 < MouseLRN> but, we have trouble with int-handler.S with "FPU"
+14:59 < jal0> SDL?
+14:59 < MouseLRN> yes
+14:59 < Filip> simple direct media layer ?
+14:59 < MouseLRN> I compile it with fbcon. yes it is.
+15:00 < MouseLRN> Without mouse, but it handle keyb
+15:01 < MouseLRN> why this: printf("%f\n", (double)100/3); will raise Bus error? or something like this?
+15:01 < Filip> floating point math
+15:02 < Filip> BE doesn't contain FPU, so needs to be  done in soft
+15:02 < MouseLRN> I can put my patch for SDL 1.2.3 to my homepage.
+15:02 < MouseLRN> MIPS without FPU? only CPU?
+15:06 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Silly wabbit, BitchX is for kids!"]
+15:06 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+15:07 < MouseLRN> jal0 what did you ask me about touchscreen?
+15:09 < MouseLRN> anybody?
+15:10 < Filip> we wondere if you're able to determine x/y
+15:11 -!- Chewie [~chewie@the-geek.org] has quit [Excess Flood]
+15:12 < jal0> hi mouse, sorry steped out for some coffee. yes i was wondering if you have been able to correlate the register values to actuall X/Y's
+15:12 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+15:13 < Chewie> ups
+15:13 < Chewie> Hi again
+15:13 < jal0> wb , Chewie
+15:15 < jal0> mouse: you there?
+15:15 < MouseLRN> yes
+15:19 < MouseLRN> at present, I don't understand why in windoze second pair of X/Y's is zero. (This demonstrait my program - tpanel)
+15:21 < jal0> ic
+15:32 < MouseLRN> hmm, Xreal = (Xreg & 0xf) - looks good, but it need to test (I working on it)
+15:36 < MouseLRN> jal0 can you run tpanel now?
+15:37 < MouseLRN> I'll need to test one thing.
+15:42 < jal0> yes
+15:43 < jal0> can i use the same one as a downloaded a couple of days ago, or has there been code changes
+15:43 < MouseLRN> no, I didn't update it.
+15:45 < MouseLRN> can you touch "bottom buttons", when tpanel running? or it's impossible?
+15:45 < jal0> ok, its running now
+15:45 < jal0> yes
+15:45 < MouseLRN> it may loose focus and you may not see regs status.
+15:46 < jal0> it still works when it loosed focus
+15:46 < jal0> start button, and other stuff works fine
+15:46 < MouseLRN> and what value of X/Y's pair, when you touch "bottom buttons"?
+15:46 < jal0> and the register value are still updated
+15:47 < jal0> changes, depending on the location of the touch
+15:47 < jal0> just as if i was touching inside the panel itself
+15:58 < MouseLRN> just a minute
+15:58 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] Beefcake! BEEFCAKE!"]
+15:59 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+16:07 < jal0> hey mouse: anything else?
+16:08 < MouseLRN> no, thanks. I trying to calculate...
+16:08 < MouseLRN> trying, trying, ...
+16:08 < Baalz> Hi everyone
+16:13 < MouseLRN> Baalz hi
+16:14 < Baalz> How are you MouseLRN?
+16:18 < MouseLRN> Baalz fine, thanks
+16:34 -!- Chewie [~chewie@the-geek.org] has quit [Excess Flood]
+16:35 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+16:50 < MouseLRN> by2all. I have a little progress today.I need to write realtime update reg program for linux.
+16:50 < Baalz> Goodbye MouseLRN
+16:51 < MouseLRN> anybody needs a patch for SDL,which allow to run SDL-programs on BE under linux?
+16:51 < Baalz> It would be nice
+16:54 < MouseLRN> ok, wait
+17:03 -!- MouseLRN [~mouse@info.ru] has quit ["I'll be back in 5 minutes"]
+17:05 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:05 < Baalz> re
+17:06 < MouseLRN> Baalz check SDL patch at http://lrn.ru/be300/ named SDL-be.diff.gz
+17:06 < MouseLRN> it for SDL v1.2.3
+17:07 < Baalz> Ok thanks ans I am sure some other persons are going to be happy to get it too!
+17:07 < Baalz> Oups
+17:07 < PsycoXul> nice
+17:07 < Baalz> I get not found here
+17:08 < MouseLRN> sorry, http://lrn.ru/~mouse/be300 ;-)
+17:09 < Baalz> Thank you very much :)
+17:10 < MouseLRN> and note that if you wish to run test program, you need comment any floating point operations, otherwise it will cause bus error
+17:11 < MouseLRN> for example: printf("%f bla-bla-bla\n", (double)(10*1000)/357);
+17:20 < MouseLRN> run configure: CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld STRIP=mipsel-uclibc-strip ./configure --prefix=/usr --host=mipsel-linux --without-x --enable-video-fbcon --disable-video-directfb --disable-audio --disable-cdrom
+17:23 -!- MouseLRN [~mouse@info.ru] has quit ["[BX] "I did not have sexual relations with that client, BitchX.""]
+17:27 -!- Filip [~Filip@213.50-200-80.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+17:28 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:30 < MouseLRN> and I put already compiled library for uClibc here: http://lrn.ru/~mouse/be300/libSDL-1.2.so.0.0.3.gz
+17:31 < MouseLRN> but it with some debug info
+17:31 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+17:52 -!- Chewie [~chewie@the-geek.org] has quit [Read error: 104 (Connection reset by peer)]
+--- Log closed Mon Jan 13 00:00:22 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

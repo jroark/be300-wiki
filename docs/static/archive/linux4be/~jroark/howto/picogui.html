@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>Building PicoGUI for the BE-300</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="howto.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border="0" cellspacing="2" cellpadding="2" align="center" width="80%">
+  <tr> 
+    <td class="title" align="left" valign="top">Introduction</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="24">In this howto I will 
+      walk you through the process of building PicoGUI for the Casio Cassiopeia 
+      BE-300 pda. This is intended to be a follow up tutorial to the uClibc/BusyBox 
+      ramdisk tutorial <a href="ramdisk.html">here</a>. Please visit <a href="../../">http://www.linux4.be</a> 
+      for more information on linux for the BE. Suggestions and questions can 
+      be directed to me at <a href="mailto:jroark@linux4.be">jroark@linux4.be</a>.</td>
+  </tr>
+  <tr> 
+    <td class="title" valign="top" align="left" height="18">First preparation</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="120"> 
+      <p>First create a working directory and an install directory, export the path, and check 
+        out a local copy of PicoGUI from CVS.</p>
+      <pre>mkdir picogui
+cd picogui
+mkdir pgui_install
+export PGUIPATH=`pwd`
+cvs -d:pserver:anonymous@cvs.pgui.sourceforge.net:/cvsroot/pgui login</pre>
+      <p>Just hit enter when prompted for a password. Then check out the appropriate 
+        modules:</p>
+      <pre>cvs -z3 -d:pserver:anonymous@cvs.pgui.sourceforge.net:/cvsroot/pgui co pgserver
+cvs -z3 -d:pserver:anonymous@cvs.pgui.sourceforge.net:/cvsroot/pgui co cli_c
+cvs -z3 -d:pserver:anonymous@cvs.pgui.sourceforge.net:/cvsroot/pgui co apps
+cvs -z3 -d:pserver:anonymous@cvs.pgui.sourceforge.net:/cvsroot/pgui co res_c</pre>
+      <p>Your directory should look something like this when you are finished.</p>
+      <pre>total 20k
+4.0k drwxrwxr-x    5 johnbot  johnbot      4.0k Dec  1 14:22 ./
+4.0k drwxrwxr-x    3 johnbot  johnbot      4.0k Dec  1 00:27 ../
+4.0k drwxrwxr-x   70 johnbot  johnbot      4.0k Dec  1 14:22 apps/
+4.0k drwxrwxr-x    8 johnbot  johnbot      4.0k Dec  1 14:22 cli_c/
+4.0k drwxrwxr-x   25 johnbot  johnbot      4.0k Dec  1 00:58 pgserver/
+4.0k drwxrwxr-x    2 johnbot  johnbot      4.0k Dec  1 14:28 pgui_install/
+4.0k drwxrwxr-x    6 johnbot  johnbot      4.0k Dec  1 16:48 res_c/</pre>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title" align="left" valign="top">Building pgserver</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="2"> 
+      <p>Pgserver is the PicoGUI server. First change into the pgserver src directory and run autogen.sh to create the configure script.</p>
+      <pre>cd $PGUIPATH/pgserver
+./autogen.sh</pre>
+	  <p>Now run configure with the proper flags. (make sure to have the mipsel-uclibc- 
+        toolchain in your PATH)</p>
+<pre>CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld STRIP=mipsel-uclibc-strip \
+./configure --host=mipsel-linux --build=`./config.guess` \
+--prefix=$PGUIPATH/pgui_install</pre>
+<p>Next we need to configure the options for PicoGUI. Luckily PicoGUI comes with a very simple menu based config system very similar to the kernel's <i>make menuconfig</i>. In order to use this you must have curses or ncurses installed.</p>
+<pre>make menuconfig</pre>
+<p>Most of the defualts are fine. You should uncheck all the options under 
+the "Debug" menu, uncheck everything except "Linux framebuffer device" under 
+the "Video Drivers" menu, uncheck all the options under "Input Drivers" 
+(eventually there will be an option for the BE touchscreen if we decide to 
+use PicoGUI), uncheck everything except "Linear framebuffer @ 4bpp" & @ 16bpp 
+under "Video Base Libraries", and uncheck "JPEG: lossy compression (needs 
+libjpeg)" and "PNG: portable network graphic (needs libpng)" from the "File 
+Formats" menu. Select "Exit" and save your configuration. Here is my <a 
+href="profile.user">profile.user</a> for reference. Now run make and install.
+</p>
+<pre>make
+make install</pre> 
+<p>After it builds and installs your <i>$PGUIPATH/pgui_install</i> directory 
+should look something like this.</p>
+<pre>total 20k
+4.0k drwxrwxr-x    5 johnbot  johnbot      4.0k Dec  1 14:58 ./
+4.0k drwxrwxr-x    6 johnbot  johnbot      4.0k Dec  1 14:28 ../
+4.0k drwxrwxr-x    2 johnbot  johnbot      4.0k Dec  1 14:58 bin/
+4.0k drwxrwxr-x    4 johnbot  johnbot      4.0k Dec  1 14:58 include/
+4.0k drwxrwxr-x    2 johnbot  johnbot      4.0k Dec  1 14:58 lib/</pre>
+<!-- <p>Even though we didn't select any debug options we should still strip the 
+binaries that we just built. To do this we cd into 
+<i>$PGUIPATH/pgui_install/bin</i> and strip pgserver and cd into 
+<i>$PGUIPATH/pgui_install/lib</i> and strip the libs. This saves us about 30k
+from pgserver and around 150k from the libs</p>
+<pre>cd $PGUIPATH/pgui_install/bin
+mipsel-uclibc-strip pgserver
+cd $PGUIPATH/pgui_install/lib
+mipsel-uclibc-strip libpgserver.a</pre> -->
+<p>Now that we have the PicoGUI server and libraries we can build the client C 
+library.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title" align="left" valign="top" height="2">Building cli_c</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="2"> 
+      <p>Cli_c is the client C library and is needed to build any C apps for 
+PicoGUI. First cd into the cli_c directory and run autogen.sh to build the 
+configure script.</p>
+<pre>cd $PGUIPATH/cli_c
+./autogen.sh</pre>
+<p>Now run configure with the proper flags.</p>
+<pre>CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld STRIP=mipsel-uclibc-strip \
+./configure --prefix=$PGUIPATH/pgui_install --host=mipsel-linux \
+--build=`./config.guess` --with-extra-ipath=$PGUIPATH/pgui_install/include \
+--with-pgserver=$PGUIPATH/pgserver</pre>
+<p>Next we need to build the client c lib and install it.</p>
+<pre>make
+make install</pre>
+<p>With the client C library built we need to build the res_c library before 
+building the included apps.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title" align="left" valign="top">Building res_c</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="2"> 
+      <p>To build and install res_c cd into the res_c directory and run 
+autogen.sh.</p>
+<pre>cd $PGUIPATH/res_c
+./autogen.sh</pre>
+<p>Now that the configure script has been created run configure.</p>
+<pre>CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld STRIP=mipsel-uclibc-strip \
+./configure --prefix=$PGUIPATH/pgui_install --host=mipsel-linux \
+--build=`./config.guess` --with-pgserver=$PGUIPATH/pgserver</pre>
+<p>Next we build and install the res_c library.</p>
+<pre>make
+make install</pre>
+<p>We now have everything we need to build the included apps.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title" align="left" valign="top" height="6">Building apps</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="2"> 
+      <p>Change directories to apps and run autogen.sh to build the proper 
+configure script.</p>
+<pre>cd $PGUIPATH/apps
+./autogen.sh</pre>
+<p>Next run configure.</p>
+<pre>CC=mipsel-uclibc-gcc LD=mipsel-uclibc-ld STRIP=mipsel-uclibc-strip \
+./configure --prefix=$PGUIPATH/pgui_install --host=mipsel-linux \
+--build=`./config.guess` --with-pgserver=$PGUIPATH/pgserver</pre>
+<p>Now run make and install.</p>
+<pre>make LDFLAGS=-L$PGUIPATH/pgui_install/lib \
+CFLAGS=-I$PGUIPATH/pgui_install/include
+make install</pre>
+<p><b>Note</b>: at the time of this writing (12/01/2002) I was unable to build 
+some of the apps in 
+$PGUIPATH/apps/pgl. I just removed the directory pgl from the list of SUBDIRS & 
+DIST_SUBDIRS in the top level Makefile.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title" align="left" valign="top">Installing PicoGUI and the apps</td>
+  </tr>
+  <tr> 
+    <td class="text" align="left" valign="top" height="2"> 
+      <p>To install PicoGUI and the sample apps mount the ramdisk that you made
+in the last <a href="ramdisk.html">tutorial</a>, copy the
+shared libraries to &lt;ramdisk&gt;/lib, the binaries to 
+&lt;ramdisk&gt;/usr/bin, and the contents of $PGUIPATH/pgui_install/share to 
+&lt;ramdisk&gt;/usr/share.</p>
+<pre>mount -t ext2 -o loop initrd ramdisk
+cd ramdisk
+cp -dp $PGUIPATH/pgui_install/lib/*.so* lib
+cp -dp $PGUIPATH/pgui_install/bin/* usr/bin
+cp -Rdp $PGUIPATH/pgui_install/share/* usr/share</pre>
+<p>You will also need to create the file &lt;ramdisk&gt;/etc/pgserver.conf. 
+This is the PicoGUI server config file.</p>
+<pre>cat > etc/pgserver.conf << "EOF"
+> [pgserver]
+> width = 320
+> height = 256
+> depth = 16
+> mode = 320x256x16
+> session = /usr/bin/pgstartup
+> video = fbdev
+>
+> [video-fbdev]
+> device = /dev/fb
+> EOF</pre>
+<p>Most of those lines are self explanitory. The line that starts with session 
+tells PicoGUI what executable to start. This can be any executable or shell 
+script. In this example it tells PicoGUI to start <i>/usr/bin/pgstartup</i> 
+which is just a simple shell script that starts several PicoGUI apps, below is 
+an example.</p>
+<pre>cat > usr/bin/pgstartup << "EOF"
+> #!/bin/sh
+>
+> /usr/bin/pgboard /usr/share/pgboard/us_qwerty_scalable_color.kb &
+> /usr/bin/omnibar &
+> /usr/bin/canvastst &
+> EOF
+chmod 755 usr/bin/pgstartup</pre>
+<p>In this example, our shell script starts pgboard (a touchscreen keyboard 
+app), omnibar (a simple control bar), and canvastst (a screensaver like gfx 
+test). We could start any application that we want to start with PicoGUI by 
+simply adding it to the shell script.</p>
+<p>If you want pgserver to start on boot (you probably do since there is no 
+way to start it after boot right now) you have to add the line /usr/bin/pgserver
+to the end of your &lt;ramdisk&gt;/etc/init.d/rcS file.</p>
+<p>Once you are done customizing your ramdisk unmount it, gzip it, copy it to 
+the ramdisk dir, and rebuild your kernel.</p>
+<pre>cd ..
+umount ramdisk
+gzip -9 initrd
+cp initrd.gz ../path/to/your/kernel/linux/arch/mips/ramdisk/ramdisk.gz</pre>
+<p>Make sure to include TCP/IP networking in your kernel.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td class="title">Post install notes</td>
+  </tr>
+  <tr> 
+    <td class="text" height="2">
+      <p>If everything goes well you should have a ramdisk with PicoGUI and 
+the sample apps on it.</p>
+    </td>
+  </tr>
+  <tr>
+  <td class="text">Last modified on 12/01/2002 18:36:04</td>
+  </tr>
+</table>
+</body>
+</html>

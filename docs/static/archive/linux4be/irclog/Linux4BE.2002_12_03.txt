@@ -1,0 +1,431 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_03.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_03.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Dec 03 00:00:11 2002
+00:27 -!- lmlong [~BE-Centra@dsl-b2-172.sisna.com] has joined #linux4be
+00:28 < lmlong> hi
+00:28 < jal0> hello
+00:28 < lmlong> anybody tell me where I can find the instructions to pc connect sync my be with outlook?
+00:29 < jal0> sorry, have no clue
+00:30 < lmlong> anybody else?
+00:30 < antagonizt> we mostly just hack linux here... not really windows software experts... sorry
+00:31 < jal0> hi antagonizt
+00:31 < antagonizt> hey jal0 how goes the struggle?
+00:31 < lmlong> nobody in  the #be-300 room so I thought I would come here 
+00:32 < lmlong> thanks anyway 
+00:32 -!- lmlong [~BE-Centra@dsl-b2-172.sisna.com] has quit ["Leaving"]
+00:32 < jal0> antagonizt: working on the win32 ramdisk/uclibc/busybox howto
+00:34 < jal0> you know, we have been getting more and more "how to use my be300 here?" type questions. Don't mind the occasional few, i hope as this project get more attention, people don't start thinking this as a be300 Windows Support Site :)
+00:34 < antagonizt> yeah not sure why people assume we know stuff like that...
+00:34 < antagonizt> i think a lot of people really don't understand what linux is
+00:35 < jal0> yeah i get that by reading some of the fourms also
+00:37 < antagonizt> of course these are the same people that don't really understand what wince is for that matter
+00:38 < jal0> yeap, just another mp3 player ;)
+00:38 < antagonizt> i think with any project with a popular piece of hardware these types of things are bound to happen
+00:39 < jal0> i know, it dosn't bother me all that much, but occasionally this channel gets visitor who think that for some strange reason they have the right to linux on the be300, and its us who are holding them back... but then again maybe i'm just ranting ;)
+00:40 < antagonizt> definetely there are those types... they get a little over eager
+00:42 < jal0> i was thinking that maybe we should set up the beweb_logger to also serve as a kind of "what up" bot. with triggers that people can use to find status of certain things that are happening.
+00:42 < antagonizt> but luckely very little of my motivation (and i believe most of ours') is to please the masses
+00:42 < antagonizt> that could be nice
+00:42 < antagonizt> a FAQ bot
+00:42 < jal0> exactly
+00:43 < jal0> been trying to figure out a way to have some form of message that triggers every say 5 minutes with a list of triggers, but not sure how to do it
+00:45 < jal0> well time for bed, talk to you later
+00:45 < antagonizt> night
+00:45 -!- jal0 is now known as jal0_Zzz
+01:15 < hewhew> hi
+02:00 < hewhew> hi?
+02:00 < antagonizt> what's up hewew?
+02:01 < hewhew> are you good with circuit analysis?
+02:01 < antagonizt> nope
+02:01 < hewhew> blew
+02:01 < antagonizt> that's more jal0's alley
+02:01 < hewhew> yea.. but hes technically unconscious
+02:01 < antagonizt> yeah it's late
+02:01 < antagonizt> 2:00 a.m. EST
+02:01 < hewhew> yea..
+02:02 < hewhew> i have to give it in a 9
+02:02 < hewhew> i still have 7 hours
+02:02 < antagonizt> you an EE student?
+02:02 < hewhew> yea
+02:02 < antagonizt> i majored in CS... we only had to take one EE course
+02:02 < hewhew> heh lucky you
+02:02 < hewhew> in ee you cant simulate stuff you do in homework
+02:03 < hewhew> =(
+03:02 -!- antagonizt is now known as antagonizt[zZz]
+03:04 -!- antagonizt[zZz] is now known as antagonizt
+03:05 -!- antagonizt is now known as antagonizt[zZz]
+06:40 < hewhew> hmmm
+06:40 < hewhew> 6h40am
+08:02 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+08:20 -!- jal0_Zzz [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+09:16 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+09:17 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has left #linux4be []
+09:32 < hewhew> done
+09:32 < hewhew> 9h31pm
+09:32 < hewhew> am
+09:41 < hewhew> i feel like a superhero
+09:42  * hewhew zzzzzzzzzzzzzzzzzzzzz
+10:40 -!- antagonizt[zZz] is now known as antagonizt
+11:37 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+11:38 -!- jal0_Zzz [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+11:57 -!- jal0_Zzz is now known as jal0
+12:48 -!- jal0 is now known as jal0_wrkn
+14:57 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has joined #linux4be
+15:05 < antagonizt> hello Filip
+15:05 < Filip> hi antagonizt
+15:06 < antagonizt> i've been playing around with opie... it's a huge pain
+15:06 < Filip> why ?
+15:07 < antagonizt> hard to build... lots of dependancies
+15:07 < Filip> a lot of dependencies ?
+15:07 < Filip> no way  of bulding a  bare minimum, and add options afterwards  ?
+15:07 < antagonizt> qt-embedded, e2fsprogs, jpeg6b, PAM, xinelib...
+15:07 < antagonizt> not from their docs
+15:08 < antagonizt> oh yeah and it uses tmake...
+15:08 < antagonizt> and doesn't like to link against uClibc
+15:09 < antagonizt> i built qt-embedded and libopie... against uClibc and they are around 5mb total
+15:09 < antagonizt> i can't imagine how large they are against glibc
+15:10 < Filip> maybe  ask someone what the typical size of an install is
+15:31 < antagonizt> so how goes the PB experiment?
+15:32 < Filip> installing it on my  'CE' disk now, it's at 94%
+15:33 < Filip> had some trouble deciding which  processor support to install ...
+15:33 < Filip> mips r4000, 41xxx,r3000 ....
+15:34 < Filip> still not sure , so installing support for all 3 now
+15:35 < Filip> it installs a huge amount of pdb files
+15:37 < Filip> antagonizt, are you still working on opie ?
+15:37 < antagonizt> yep
+15:39 < antagonizt> why?
+15:40 < antagonizt> looks like those sizes are normal...
+15:40 < Filip> won't fit in a ramdisk , so need to get cF or NAND support working first
+15:41 < Filip> my PB install wants me to reboot, be back in 5minutes
+15:41 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has left #linux4be []
+15:49 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has joined #linux4be
+15:49 < Filip> back
+15:54 < antagonizt> so why won't it fit in a ramdisk?
+15:54 < antagonizt> can't we make a an 8mb ramdisk?
+15:54 < Filip> memory limit.
+15:54 < Filip> say 4MB ramdisk
+15:55 < Filip> 4MB+kernel, will be loaded into ram by bootloader
+15:55 < antagonizt> the ramdisk is already at 4mb
+15:55 < Filip> needs  4MB for uncompressing ramdisk on top of that
+15:57 < Filip> I think about 5MB is max for the moment
+16:08 < antagonizt> well no worries i can't seem to build enough of it anyway
+16:08 < antagonizt> :)
+16:13 < antagonizt> well that size limit crosses qtopia and opie off of our UI options list... libqte is 5.4MB on its own and is required by both qtopia and opie
+16:13 < antagonizt> for the moment
+16:13 < Filip> well, that is for ramdisk useage
+16:14 < Filip> but even from NAND or flash, that looks like a lot of runtime memory is going to be used 
+16:19 < antagonizt> 9MB of shared libs... for qt and opie
+16:19 < antagonizt> stripped
+16:19 < antagonizt> cd ..
+16:19 < antagonizt> ls
+16:19 < antagonizt> oops
+16:19 < Filip> for 16MN ram
+16:19 < Filip> MB
+16:19 < antagonizt> that does not include any apps
+16:19 < antagonizt> or themes fonts etc
+16:20 < Filip> should check the memory usage  of an opie or qtopia on other pda's
+16:20 < antagonizt> people in the opie channel recommended i upgrade my compiler from 3.0.1 to 3.2.x that would save a meg or so
+16:21 < Filip> not sure, depends on processor
+16:22 < Filip> and mips tends to produce 30-40% lager binaries
+16:22 < Filip> larger
+16:22 < antagonizt> 1.6M    libqpe.so.1.5.0
+16:22 < antagonizt> 888K    libopie.so.1.0.0
+16:22 < antagonizt> 3.7M    libqte.so.2.3.4
+16:22 < antagonizt> thats arm
+16:22 < antagonizt> 1.5M    libqpe.so.1.5.0
+16:22 < antagonizt> 808K    libopie.so.1.0.0
+16:22 < antagonizt> 4.3M    libqte.so.2.3.4
+16:22 < antagonizt> x86
+16:22 < antagonizt> 1.8M libqpe.so.1.5.0
+16:22 < antagonizt> 1.1M libopie.so.1.0.0
+16:22 < antagonizt> 5.4M libqte.so.2.3.4
+16:22 < antagonizt> mips
+16:23 < antagonizt> i can't believe the zaurus has all the qtopia stuff and glibc and fits in what 20MB or 32MB?
+16:24 < antagonizt> with room to spare for extra apps and stuff
+16:24 < Filip> but how much of that shared lib is actually used at runtime  ?
+16:24  * hewhew wakes up
+16:26 < antagonizt> i guess we won't know untill we try it...
+16:26 < hewhew> hmm i had my last meal 18 hours ago
+16:26 < antagonizt> morning hewhew
+16:26 < hewhew> heh 
+16:26 < hewhew> morning
+16:26 < hewhew> 4h20pm
+16:26 < antagonizt> just naping then?
+16:27 < hewhew> well a 10h-4h20 nap
+16:27 < Filip> hi hewhew
+16:28 < Filip> spent the night on your ee stuff ?
+16:28 < hewhew> yea.. 
+16:29 < hewhew> i had nightmares.. today, i thought i was in parallel with a inductor that had a initial condition that didnt like me
+16:36 < Filip> but you won ?
+16:37 < hewhew> heh
+16:37 < hewhew> dunno
+17:15 < antagonizt> filip, the kernel booted with a 14mb ramdisk with opie on it...
+17:16 < Filip> 14MB  ???
+17:16 < hewhew> cool
+17:16 < antagonizt> it paniced of course with "attempt to access beyond end of device"
+17:16 < Filip> did it work ?
+17:16 < antagonizt> but the loader did not stop it from booting
+17:16 < antagonizt> i used eXpod min mode to boot
+17:16 < Filip> did you increase ramdisk size ?
+17:16 < antagonizt> oops
+17:17 < Filip> ramdisk is set to 4MB in kernel config (if my memory is still intact)
+17:17 < hewhew> you got a gui?
+17:18 < antagonizt> rebuilding
+17:18 < antagonizt> hewhew PicoGUI already works fine... i'm just trying to get opie to work
+17:18 < Filip> so you fixed dependencies
+17:18 < hewhew> what@!$
+17:18 < hewhew> thats so great
+17:19 < antagonizt> filip, i talked to the guys in #opie and they told me the absolute minimum i needed for opie to work
+17:19 < antagonizt> still over 10MB of stuff
+17:20 < antagonizt> but yes i hacked together a version of opie that would compile against uClibc
+17:20 < antagonizt> not sure i didn't break something along the way though
+17:20 < Filip> if you get it booting, try to autostart  an app like 'top' 
+17:22 < antagonizt> i hope the left over two megs is enough for the kernel...
+17:24 < hewhew> we just need drivers for every device now?
+17:25 < antagonizt> NAND would be nice
+17:29 < antagonizt> uhhhg... "Kernel panic: Out of memory and no killable processes..."
+17:29 < antagonizt> so much for that
+17:30 < Filip> at what  point ?
+17:30 < antagonizt> right after "RAMDISK: Compressed image found at block 0"
+17:30 < Filip> trying to allocate  memory for decompressing it
+17:38 < Filip> jal0 ?
+17:45 < Filip> jal0 (you'll probably read the log)
+17:46 < Filip> I had trouble increasing the serial speed for the monitor; had to do it in CE prior to booting the monitor (115200 baud)
+17:47 < Filip> looks like the setspeed function in the serial code  is not working, kept going at 9K6 (like it was set in the bootloader, lib\debug.c )
+17:57 < antagonizt> have you looked at void be300_set_baud(int baud) in the "serial driver"
+17:57 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+17:57 < jal0atWrk> hey people, how goes the struggle
+17:58 < Filip> hi  jal0 , just left a message  for you
+17:58 < jal0atWrk> email?
+17:58 < Filip> (in the log above)
+17:58 < jal0atWrk> ic, have to read it when i get home
+17:58 < Filip> <Filip> I had trouble increasing the serial speed for the monitor; had to do it in CE prior to booting the monitor (115200 baud)  
+17:58 < Filip> <Filip> looks like the setspeed function in the serial code  is not working, kept going at 9K6 (like it was set in the bootloader, lib\debug.c ) 
+17:58 < jal0atWrk> hmm, i'll take a look at it
+17:59 < Filip> 115200 is a lot faster  whn dumping large regions
+18:00 < Filip> looking at some 'common mips regions' defined in platform builder
+18:01 < jal0atWrk> yeah, i dont think the register locations are correct. i tried looking at those locations in the monitor and nothing matched up. i think the reason it works in the kernel is that the bootloader actually is setting things up
+18:02 < jal0atWrk> talking about the serial registers
+18:03 < jal0atWrk> i'm going to try the standard serial reg locations next
+18:03 < jal0atWrk> the ones specified in the vr4131 manual
+18:04 < Filip> watch  out poking into 'random'  areas, might get strange  results
+18:04 < jal0atWrk> the 'x'
+18:05 < jal0atWrk> do you want to put the monitor into cvs?
+18:06 < jal0atWrk> i think its going to be very useful once i can map out the physical bus layout
+18:06 < Filip> have I got the latest   code, or is it on the server ?
+18:06 < Filip> I'm dumping the 16MB physical ram now (that's why I wanted the higher speed)
+18:06 < jal0atWrk> havn't done anything since i sent you it, been working on the cygwin hosted ramdisk howto
+18:07 < Filip> ok
+18:07 < jal0atWrk> had to make some patches to uclibc sources to get things to compile
+18:08 < jal0atWrk> brb going to heat up my dinner
+18:14 < Filip> monitor is in cvs now , in linux/bemon
+18:14 < Filip> http://www.linux4.be/cgi-bin/cvsweb.cgi/linux/
+18:17 < jal0atWrk> b
+18:17 < jal0atWrk> cool
+18:21 < jal0atWrk> have you made any changes?
+18:21 < Filip> I checked in your version
+18:22 < jal0atWrk> ok, btw have you thought about comparing the 16M dump form the monitor to the previous dumps
+18:24 < Filip> that's one of the reasons i'm dumping ram again
+18:24 < Filip> using uncached hardware adresses (kseg1)
+18:25 < jal0atWrk> ic
+18:25 < Filip> previous dump was done within CE
+18:36 < Filip> going to bed, talk to you later folks
+18:36 -!- Filip [~Filip@59.56-200-80.adsl.skynet.be] has left #linux4be []
+18:54 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit [Read error: 113 (No route to host)]
+19:25 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has joined #linux4be
+21:25 -!- jal0atWrk [~jal0_wrkn@208.33.58.202] has quit [Read error: 54 (Connection reset by peer)]
+21:57 -!- metalac [staff@staffpc3.uwired.washington.edu] has joined #linux4be
+22:56 -!- jal0_wrkn is now known as jal0
+22:56 < metalac> oh so someone is alive :)
+22:56 < jal0> hey metalac
+22:57 < metalac> so i see antagonizst is hard at work with the gui
+22:57 < metalac> seems a rather large build though
+22:57 < jal0> large?
+22:58 < metalac> 10mb or so, didn't he say?
+22:59 < jal0> reading the logs now
+23:00 < metalac> oh :)
+23:01 < antagonizt> yeah the minimal opie install had to be on a 13MB ramdisk...
+23:01 < antagonizt> way to large for our 16MB BE
+23:02 < metalac> i wonder how they do it on some other pdas
+23:02 < metalac> i mean there are plenty of them with 16mb
+23:03 < antagonizt> well the zaurus is the only pda with qtopia 
+23:04 < antagonizt> the PicoGUI ramdisks i made were only 4MB and not even full
+23:04 < antagonizt> and they had PicoGUI and every app that came with PicoGUI
+23:04 < metalac> that seems nicer
+23:04 < antagonizt> a pim e-mail clock calander several keyboards and games and some demo apps
+23:04 < jal0> hi antagonizt
+23:04 < antagonizt> the opie ramdisk only had the manager and libs
+23:05 < antagonizt> no apps at all
+23:05 < antagonizt> hey jal0
+23:05 < metalac> is the picogui your using for pda or the desktop devices?
+23:05 < antagonizt> not specific...
+23:06 < metalac> oh ok
+23:06 < antagonizt> it can be used for either
+23:06 < metalac> i'm trying to find pda screenshots now
+23:06 < antagonizt> same with qtopia or opie... if you wanted to it could be your UI on your desktop...
+23:06 < antagonizt> there are a bunch at the qtopia and opie sites
+23:07 < antagonizt> http://www.linux4.be/~jroark/links.html
+23:07 < antagonizt> those are my bookmarks...
+23:07 < jal0> have you tried tiny X yet?
+23:07 < antagonizt> Linux PDAs->User Interfaces
+23:08 < antagonizt> not yet
+23:08 < metalac> yeah but picogui has like 100 pages of screenshots on their site, but i did find few.
+23:09 < antagonizt> it took forever to build opie and all of it's dependancies
+23:09 < metalac> i found some and it looks good
+23:09 < antagonizt> of opie?
+23:10 < metalac> picogui
+23:10 < metalac> i loveeeeee their mascot :)
+23:10 < antagonizt> yeah it looks nice.. but there is no web browser
+23:11 < jal0> Matchbox ---> designed to be small in terms of binary size (approx. 50 KB), have few dependencies (only xlib), use minimal system resources, and be extremely flexible.
+23:11 < antagonizt> i don't even know where to get Tiny X?
+23:11 < antagonizt> does it ship with XFree86?
+23:11 < jal0> yeap
+23:11 < jal0> http://www.pps.jussieu.fr/~jch/software/kdrive.html
+23:12 < jal0> info on tiny X --> http://www.linuxdevices.com/links/LK6129039469.html
+23:13 < jal0> lives in programs/Xserver/hw/kdrive
+23:13 < antagonizt> that might be a good option
+23:13 < antagonizt> lots of apps for X
+23:15 < antagonizt> how's the monitor going?
+23:15 < jal0> going to try it eventually, but lots of other things to do first. btw, i setup my boch's emulator to emulate the condition of the BE interms of memory that is. eveything i plan on intalling to the BE i will try first on the BE. its going to be my 'emulator'. only drawback is its not a mips emulator
+23:16 < antagonizt> what do you mean? in terms of memory? like 16MB or disk and 16MB of ram?
+23:16 < jal0> monitor... havn't looked at it since the version i sent filip. its in cvs now under linux/bemon. want to release my info on cygwin ramdisks first
+23:16 < antagonizt> s/or/of
+23:17 < jal0> 16M RAM, 32M disk
+23:17 < antagonizt> your BE had 32MB of NAND? ;)
+23:17 < antagonizt> s/had/has
+23:17 < jal0> CF
+23:18 < antagonizt> i wonder how hard a NAND driver would be to write...
+23:18 < antagonizt> ?
+23:19 < jal0> NAND emulator.. hmm going to look around to see if there is such a thing.
+23:21 < jal0> i kinda like the path this projects has lead me in. probably going to start porting boch's to emulate a mips platforms eventually.
+23:23 < jal0> going to emulate NAND and another drive in bochs
+23:23 < antagonizt> i bet the generic nand driver would work if we could find the IO addr and couple of the regs..
+23:24 < jal0> yea, things will hopefully start coming together once i get the BE300 pcb
+23:24 < metalac> wow, how you geting that? somebody broke theirs??
+23:24 < jal0> filip is sending me a broken one
+23:25 < metalac> cool
+23:25 < metalac> they are geting dirt cheap now
+23:25 < metalac> almost cheat to break them on purpose :)
+23:25 < metalac> *cheap
+23:25 < jal0> maybe we should post a request of broken BE's on some of the message boards or fourms
+23:26 < metalac> yeah i'm sure you'd find some
+23:33 < jal0> http://www.handhelds.org/handhelds-faq/handhelds-faq.html
+23:33 < jal0> this would be nice to have for the BE
+23:34 < metalac> hopefully soon :)
+23:35 < antagonizt> yeah especially if were written by someone that worked for casio :) ... that one was written by a jamey.hicks@compaq.com
+23:35 < jal0> :)
+23:36 < antagonizt> i didn't know compaq supported linux on the ipaq... even enough to let one of their employees work on the project :)
+23:37 < metalac> maybe he volunteered
+23:37 < metalac> i guess they can't stop them right?
+23:37 < antagonizt> if he did any serious work on the ipaq they can... he probably had to sign an nda
+23:38 < metalac> but if he is say working in their non pda dept. he can i guess
+23:39 < metalac> although i think compaq is big enough of a name in pc industry and esspecially pda industry to do whatever they please pretty much
+23:39 < metalac> remember when ipaq got released?  it was the craziest thing ever
+23:43 < antagonizt> yeah the ipaq is a nice machine... a little pricy though
+23:44 < antagonizt> but that should change with the new dells and viewsonics etc...
+23:44 < antagonizt> the new dells are almost as cheap as the BEs
+--- Log closed Wed Dec 04 00:00:37 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

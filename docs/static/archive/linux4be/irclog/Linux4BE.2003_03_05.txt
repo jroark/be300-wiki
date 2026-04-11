@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_05.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_05.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Mar 05 00:00:54 2003
+04:27 -!- bshircliffe [~bshirclif@cs2417586-171.houston.rr.com] has joined #linux4be
+04:33 < bshircliffe> Hello is anyone there? 
+06:19 -!- bshircliffe [~bshirclif@cs2417586-171.houston.rr.com] has left #linux4be []
+11:20 -!- souterrain [~cc4ca630@webiest.jcy1.informationwave.net] has joined #linux4be
+11:21 < souterrain> anyone around?
+11:44 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+11:45 < andrey> hi everyone
+12:01 < souterrain> hi
+12:02 < souterrain> still there?
+12:49 -!- souterrain [~cc4ca630@webiest.jcy1.informationwave.net] has quit ["www.webiest.com (EOF)"]
+13:21 < andrey> sorry, had to leave for a while...
+13:45 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+18:46 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has joined #linux4be
+19:04 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+19:05 < andrey> hi
+19:06 < jal0atWrk> hey
+19:06 < jal0atWrk> how goes things, i had a look at your code, if fact it's in front of me right now :)
+19:07 < andrey> ok, I was just typing this question :-)
+19:07 < andrey> did you find anything useful?
+19:07 < jal0atWrk> it looks like you were going in a different direction than me, most of it i havn't even had a chance to look into, so its definitly useful
+19:08 < jal0atWrk> i saw references to the API list, but never tried dumping that info
+19:09 < andrey> yes I'm usually jumping back and fourth. :-) When I'm stuck in one place I try to look somewhere else.
+19:09 < jal0atWrk> the suff on the nand disk and reboot, we can wrap like i did with CacheSync.
+19:10 < andrey> This is how CE works. It's kind of microkernel. Small kernel is started first and than user-mode processes that register APIs
+19:11 < andrey> Or create dummy dlls to get .lib files to link with.
+19:11 < jal0atWrk> yeah, that would work also
+19:12 < andrey> did you email Filip?
+19:12 < jal0atWrk> we can stick you dism along side the one i'm using or should we just use one of them?
+19:12 < jal0atWrk> yes no reply
+19:12 < jal0atWrk> hope the server dosn't go done :(
+19:13 < jal0atWrk> done=down
+19:13 < andrey> I hope so. Maybe he's just busy...
+19:14 < andrey> we can put both disasms together or even merge them. But I'm not sure anyone is going to use it...
+19:14 < jal0atWrk> do you have much experience with cvs?
+19:15 < andrey> using - yes, administrating - no
+19:16 < jal0atWrk> me too, but i don't think real administrating will be necessary if we just import a new module to the linux4be cvs server
+19:16 < jal0atWrk> everything is already configured
+19:16 < jal0atWrk> :)
+19:17 < andrey> easily :-) if we have write access
+19:17 < jal0atWrk> btw, i found some bugs in the code i posted to my site, a few more references to headers that i relocated
+19:17 < jal0atWrk> i believe we do
+19:18 < andrey> did you put a new version?
+19:18 < jal0atWrk> i will tonight. i also added some more info on exception tables and the code to dump them, took a bit of figuring out though
+19:18 < andrey> and do you know where are these CF patches? Are they in cvs?
+19:19 < jal0atWrk> yes
+19:19 < jal0atWrk> see channel topic :P
+19:20 < andrey> it's scrolled up already 
+19:20 < jal0atWrk> ahh,you at a terminal then?
+19:20 < jal0atWrk> or should i say console mode
+19:21 < andrey> I just want to compare CF registers with those I found in loader code that check for ethernel or parallel loader.
+19:21 < andrey> yes, this port is closed here, so I ssh to linux4.be and start irc from there.
+19:22 < jal0atWrk> ic then you cant use the html cvs feature of linux4.be
+19:22 < andrey> why? http is open :-)
+19:23 < jal0atWrk> huh?
+19:25 < andrey> what was it? I see your "huh" on the web log but not in my client
+19:26 < jal0atWrk> what was what, not sure what were talking about now :\
+19:27 < jal0atWrk> the huh was because i didn't understand your "http is open" statement
+19:27 < andrey> I don't see your messages in the client window, only in weblog. let me restart the client
+19:27 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+19:28 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+19:28 < jal0atWrk> you see me now
+19:28 < andrey> btw do you know your cvs password?
+19:29 < jal0atWrk> yeah its the same one you use to log in to the server with
+19:29 < andrey> I said I cannot use irc from here because irc port (6667 or whatever) is closed. But http port is open so I can brouse cvs with my browser.
+19:30 < jal0atWrk> ic
+19:30 < andrey> name - yes, but not the password. Is can be different
+19:31 < jal0atWrk> not sure but i can check
+19:31 < andrey> unless Filip copied it to cvspasswd
+19:32 < jal0atWrk> there is also an option in CVSROOT/config to use local authorizations
+19:34 < jal0atWrk> yeap it works
+19:34 < andrey> I didn't know
+19:34 < andrey> ok, good
+19:36 < andrey> Yes, I can do it even from my machine here :-)
+19:36 < andrey> I've just added test.txt to test directory
+19:36 < jal0atWrk> so lets set a date, say by this sunday to do the first import
+19:37 < andrey> what about structure?
+19:38 < jal0atWrk> did you like how i had my code setup? everything in its own place
+19:38 < jal0atWrk> i like the idea of keeping library type code seperate from end user code that uses it
+19:39 < andrey> I adree. Let's follow it
+19:41 < jal0atWrk> ok, so did you take a look at how i implements the system functions like the virtual2physical function?
+19:41 < jal0atWrk> its only implemented once and can be used the same from both win32 code and native BE300 code
+19:42 < jal0atWrk> on the BE300 is access physical ram, and on the PC it uses memory mapped binary dump file
+19:43 < andrey> where is it? in xkernel.cpp
+19:43 < jal0atWrk> yeap
+19:44 < jal0atWrk> i was thinking that we create the library so it could be compiled on both platforms. We would have to #ifdef some of the coredll functions though.
+19:45 < jal0atWrk> and replace them with dummy functions or have them compiled out.
+19:45 < jal0atWrk> it would be almost like creating a virtual BE300 on the PC, but only a static representation
+19:47 < andrey> Actually I was thinking about creating a virtual BE300 (simulator) but it's too many unknown things...
+19:47 < jal0atWrk> me too :) was going to port bochs to support mips
+19:48 < andrey> Oops, I have to go. My wife took the car and now I have a chance to get home earlier. :-) I'll connect from there.
+19:48 < jal0atWrk> ok later
+19:48 < andrey> see you...
+19:48 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+19:50  * jal0atWrk has to get back to work
+19:51 < jal0atWrk> later Gandalf i know your watching :)
+19:51 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has quit []
+22:08 -!- andrey [~mr_hyro@ool-43554215.dyn.optonline.net] has joined #linux4be
+22:23 -!- andrey [~mr_hyro@ool-43554215.dyn.optonline.net] has left #linux4be []
+--- Log closed Thu Mar 06 00:00:20 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

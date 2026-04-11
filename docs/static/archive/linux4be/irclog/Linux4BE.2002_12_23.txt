@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_23.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_23.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Dec 23 00:00:52 2002
+01:24 -!- antagonizt [~chatzilla@64-243-69-163.ghg.net] has joined #linux4be
+01:25 < antagonizt> hi folks
+01:27 -!- antagonizt [~chatzilla@64-243-69-163.ghg.net] has quit [Client Quit]
+03:45 -!- jal0 is now known as jal0_Zzz
+07:23 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+09:49 -!- BaalzAFK [~baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 54 (Connection reset by peer)]
+10:35 -!- jal0_Zzz is now known as jal0
+10:36 < Filip_> hi jal0, long time no see
+10:36 < jal0> hey filip
+10:36 < jal0> been pretty busy latley
+10:38 < Filip_> year-ending  ==  trying to finish a lot of projects
+10:39 < jal0> been doing some hardware tracing, found that the CASIO CAK2007 is the touch screen digitizer / decoder. And that the touch screen itself is a 4-wire resistive touch panel
+10:40 < Filip_> CAK2007=  ADC ?
+10:40 < jal0> i have about half of the pins traced so far, still not sure if its serial or usb, as those are the two most common types
+10:41 < jal0> yeah, in a way
+10:42 < jal0> http://www.kyocera.com/kicc/lcd/notes/touchpanels.htm   <--- has some links on the technoloy behind the touch-panels
+10:42 < Filip_> so what would go into the companion (or cpu?)  ,  serial/usb data or just two 16bit values, one  for  x and one for y
+10:42 < Filip_> brb
+10:42 < jal0> serial/usb
+10:42 < jal0> me too have to take the wife to work
+10:55 < jal0> back
+10:57 < jal0> you there?
+11:14 < jal0> filip: the touch screen controller is connected to the companion. figures, what would be useful if i had a reference board that used the CASIO CAK2007 directly. The EM500 look like it does. Otherwise it's going to be hard to determine the functions of the ic.
+11:18 -!- Filip_ [~Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+11:18 -!- Filip_ [~Filip@193.190.11.245] has joined #Linux4BE
+11:19 -!- Filip_ [~Filip@193.190.11.245] has left #Linux4BE []
+12:17 < jal0> filp: if you read the logs, i would like to know any of the info you have gotten on the touch-screen so far. you can either email me or post a link here ( i'll see it in the logs).
+12:18 -!- jal0 is now known as jal0_wrkn
+13:17 -!- WebGuest7144 [~eirc@190.Red-80-59-77.pooles.rima-tde.net] has joined #Linux4BE
+13:17 -!- someguy [~some@psyche.eggs.net] has quit [Read error: 104 (Connection reset by peer)]
+13:19 -!- WebGuest7144 [~eirc@190.Red-80-59-77.pooles.rima-tde.net] has quit [Client Quit]
+13:24 -!- WebGuest7939 [~eirc@190.Red-80-59-77.pooles.rima-tde.net] has joined #Linux4BE
+13:26 -!- WebGuest7939 [~eirc@190.Red-80-59-77.pooles.rima-tde.net] has quit [Client Quit]
+14:19 -!- jal0atWrk [~jal0_wrkn@208.33.58.223] has joined #linux4be
+14:19 -!- jal0atWrk [~jal0_wrkn@208.33.58.223] has quit [Client Quit]
+14:46 -!- jal0atWrk [~jal0_wrkn@208.33.58.212] has joined #linux4be
+14:46 -!- jal0atWrk [~jal0_wrkn@208.33.58.212] has quit [Client Quit]
+16:30 -!- jal0atWrk [~jal0_wrkn@208.33.58.228] has joined #linux4be
+16:30 -!- jal0atWrk [~jal0_wrkn@208.33.58.228] has left #linux4be []
+17:35 -!- Filip_ [~Filip@66.96-136-217.adsl.skynet.be] has joined #Linux4BE
+17:36 -!- Filip__ [~Filip@66.96-136-217.adsl.skynet.be] has joined #Linux4BE
+17:36 -!- Filip_ [~Filip@66.96-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+17:49 -!- Filip_ [~Filip@66.96-136-217.adsl.skynet.be] has joined #Linux4BE
+17:49 -!- Filip__ [~Filip@66.96-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+17:50 -!- Filip__ [~Filip@66.96-136-217.adsl.skynet.be] has joined #Linux4BE
+17:50 -!- Filip_ [~Filip@66.96-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+17:51 -!- Filip__ [~Filip@66.96-136-217.adsl.skynet.be] has left #Linux4BE []
+18:02 -!- Filip___ [~Filip@66.96-136-217.adsl.skynet.be] has joined #Linux4BE
+18:06 -!- someguy [~some@psyche.eggs.net] has joined #linux4be
+18:06 -!- Filip___ [~Filip@66.96-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+18:09 -!- Filip___ [~Filip@19.102-136-217.adsl.skynet.be] has joined #Linux4BE
+18:09 -!- Filip___ [~Filip@19.102-136-217.adsl.skynet.be] has left #Linux4BE []
+18:29 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+19:52 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit [Read error: 104 (Connection reset by peer)]
+23:18 -!- jal0_wrkn is now known as jal0
+--- Log closed Tue Dec 24 00:00:21 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

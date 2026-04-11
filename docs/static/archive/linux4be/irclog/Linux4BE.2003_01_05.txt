@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_05.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_05.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sun Jan 05 00:00:46 2003
+02:17 -!- PsycoXul [psyco@adsl-63-205-42-138.dsl.lsan03.pacbell.net] has joined #linux4be
+02:51 -!- jal0_Zzz is now known as jal0
+07:05 -!- BaalZzZ is now known as Baalz
+08:07 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+08:07 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+08:07 -!- baal_ is now known as Baalz
+13:28 -!- Mous [~mouse@ppp148-36.dialup.mtu-net.ru] has joined #linux4BE
+13:29 < Mous> hi2all
+13:29 -!- Mous is now known as MouseLRN
+13:29 < MouseLRN> anybody alive?
+13:29 < Baalz> Hi MouseLRN
+13:30 < MouseLRN> Baalz: hi
+13:31 < MouseLRN> Can any body tell me, why Cassiopeia BE-300 after boot linux, restart in two minutes?
+13:31 < MouseLRN> How to fix it?
+13:31 < Baalz> Are you sure you have a recent kernel?
+13:31 < MouseLRN> From CVS
+13:32 < MouseLRN> and how to mount CF card as root drive?
+13:33 < Baalz> You can't do that yet
+13:34 < MouseLRN> ;-(
+13:35 < MouseLRN> from http://forum.linux4.be/phpBB2/viewtopic.php?t=24  filip sad: "... once we have a working CF and/or NAND driver for the linux kernel, we can mount a root-filesystem from CF or NAND and no longer need the ramdisk in the kernel image."
+13:35 < Baalz> Yes that is right
+13:35 < Baalz> For now the ramdisk is inside the kernel
+13:36 < MouseLRN> I know ;-)
+13:37 < MouseLRN> But what about: "we can mount a root-filesystem from CF"? while booting, kernel mount ramdisk, not a CF
+13:38 < Baalz> This is only when the driver is gonna work
+13:38 < MouseLRN> I want to run opie or qtopia on my BE, but it very large (about 25-30Mb)
+13:39 < Baalz> The touchscreen does not work yet so you cant really use a GUI
+13:43 -!- MouseLRN [~mouse@ppp148-36.dialup.mtu-net.ru] has quit [Read error: 54 (Connection reset by peer)]
+13:57 -!- MouseLRN [~mouse@ppp147-158.dialup.mtu-net.ru] has joined #linux4BE
+13:58 < MouseLRN> Baalz: did I miss anything?
+13:59 < jal0> MouseLRN: you still having issues with rebooting?
+14:01 < MouseLRN> yes
+14:02 < jal0> udate to expod 5.1 and it will go away, this is a know issue
+14:02 < jal0> we don't know enough about how the interrupts work yet so were not sure how to disable it. it has to be done on the CE side currently.
+14:03 < jal0> with expod 5.1, this "feature" is not enabled by default
+14:03 < MouseLRN> what about expod5.0? Now, I running WinCE 3.0 - standard BE windoze
+14:03 < jal0> 5.0 should be ok also
+14:05 < MouseLRN> ok ;-) can you tell my anything about status of work on CF support as root-drive?
+14:06 < MouseLRN> sorry for my bad english %)
+14:06 < jal0> none currently, we are working on getting core functions to work first. the major thing now it touchscreen
+14:07 < MouseLRN> and how progress running?
+14:08 < jal0> slow, alot of distraction from less important things (like our real jobs) :)
+14:10 -!- mouse_ [~mouse@ppp159-3.dialup.mtu-net.ru] has joined #linux4BE
+14:11 < mouse_> damned connection ;-(((
+14:15 < PsycoXul> heh
+14:16 < mouse_> PsycoXul: hi
+14:16 < PsycoXul> hello
+14:17 -!- MouseLRN [~mouse@ppp147-158.dialup.mtu-net.ru] has quit [Read error: 104 (Connection reset by peer)]
+14:18 -!- mouse_ is now known as MouseLRN
+14:19 < MouseLRN> what maximal size of ramdisk can I use? Now, I using 8Mb, can I use 10Mb? ;-)
+14:20 < PsycoXul> so how far along is the touchscreen support? what needs to be done next for it? heh
+14:21 < jal0> mouseLRN: not sure, it depends on what the overall size of the kernel image is (16MB i would assume to be the largest)
+14:22 < jal0> PsycoXul: were working on that now. it hard to say how its going though because we still have no idea exactly how the hardware is implemented.
+14:22 < PsycoXul> heh
+14:23 < PsycoXul> fun
+14:23 < jal0> we have found a few register location that seem to respond to touchscreen, though how they are used is still somewhat of a mistery
+14:23 < jal0> ;)
+14:26 -!- mouse_ [~mouse@ppp150-54.dialup.mtu-net.ru] has joined #linux4BE
+14:26 < PsycoXul> my be-300's scheduled for delivery on the 10th
+14:27 < PsycoXul> exactly how do you interact with the device running linux currently?
+14:27 < jal0> the buttons
+14:27 < PsycoXul> oh the buttons work?
+14:28 < mouse_> yes
+14:28 < PsycoXul> heh
+14:28 < jal0> yes,  a simple driver has been implemented to allow terminal input
+14:28 < PsycoXul> cool
+14:28 < mouse_> But I found how to interact in source of scan_be300
+14:28 < mouse_> ;-)
+14:29 < mouse_> You must use RocketBtn + UP,DOWN,LEFT,RIGHT and OK button for char input
+14:33 -!- mouse_ [~mouse@ppp150-54.dialup.mtu-net.ru] has left #linux4BE ["÷ÙÛÅÌ ÉÚ XChat"]
+14:33 -!- mouse_ [~mouse@ppp150-54.dialup.mtu-net.ru] has joined #linux4BE
+14:38 < PsycoXul> what do you use to look at the registers etc?
+14:40 < jal0> memory dumps
+14:41 < PsycoXul> heh
+14:41 -!- MouseLRN [~mouse@ppp159-3.dialup.mtu-net.ru] has quit [Read error: 104 (Connection reset by peer)]
+14:41 < PsycoXul> is that the most elegant solution available?
+14:41 < PsycoXul> heh
+14:41 < jal0> currently
+14:43 < jal0> is 'heh' more like 'eh'(questioning) or 'hehe'(laughing) or what?
+14:44 < PsycoXul> like hehe
+14:44 < PsycoXul> i say heh a lot
+14:44 < PsycoXul> heh
+14:44 < PsycoXul> :p
+14:44 < jal0> ic
+14:44 < PsycoXul> anyway
+14:44 < PsycoXul> seems like there should be some code and utils from other pda linux projects that would make things easier?
+14:45 < jal0> if you find any let us know
+14:45 < jal0> heh
+14:45 < jal0> :p
+14:45 < PsycoXul> hehe
+14:46 -!- mouse_ is now known as MouseLRN
+14:46 < MouseLRN> did you see linux-vr project?
+14:47 < jal0> the problem people dont understand is that pda's are not like desktops, with the desktop system, the hardware interfaces have , to some extent, been standarized. This is not the case with PDA's, almost everything is different in hardware. So even all the drivers must be re-written.
+14:49 < jal0> porting linux to a pda is not like installing linux on desktop systems. alot of code has to be customized. what make this hard is that there is practically NO documentation.
+14:51 < PsycoXul> hey at least you got a kernel to start with
+14:51 < PsycoXul> the rockbox project for archos mp3 players had to write everything from scratch :p
+14:51 < MouseLRN> bye 2 all, I'll have exam tomorrow.
+14:51 < jal0> no, we had to make customizations to that also.
+14:52 < jal0> later mouse
+14:52 < PsycoXul> but yeah i can see there's a lot involved
+14:52 < MouseLRN> bb
+14:52 -!- MouseLRN [~mouse@ppp150-54.dialup.mtu-net.ru] has left #linux4BE ["÷ÙÛÅÌ ÉÚ XChat"]
+14:54 < jal0> be back in about 30-mins, have to take care of some things
+14:55 -!- jal0 is now known as jal0_bbiaf
+15:59 -!- jal0_bbiaf is now known as jal0
+16:22 < Baalz> jal0 I have finished the howto for the dummies section, you want to take a look at it?
+16:22 < jal0> i saw it eairlier, looks good
+16:23 < Baalz> Ok
+16:23 < jal0> you should email filip, so he can update the linux4be site
+16:25 < Baalz> I think I'll wait to see him here
+16:25 < jal0> ok
+21:10 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+22:05 -!- \malex\ [abeyn@shiny.fatelectrons.org] has left #linux4be []
+22:20 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+23:25 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+23:41 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has left #linux4be ["Client Exiting"]
+--- Log closed Mon Jan 06 00:00:14 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

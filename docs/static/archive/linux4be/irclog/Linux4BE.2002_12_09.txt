@@ -1,0 +1,569 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_09.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_09.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Dec 09 00:00:50 2002
+01:18 < jal0> night antagonizt
+01:18 < antagonizt> i hacked themaw's scanning keyboard driver and you can now type anything...
+01:18 < antagonizt> good night
+01:19 < jal0> cool, i'll have to check it out tomorrow. is it in cvs?
+01:19 < antagonizt> should be part of the main kernel tree?
+01:19 < jal0> ok, night
+01:19 < antagonizt> i'll add it along with the config options
+01:19 < antagonizt> cu
+01:20 -!- jal0 is now known as jal0_zzz
+01:30 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+01:45 -!- sinfonian [~bshirclif@198.64.160.122] has joined #linux4be
+01:50 -!- sinfonian [~bshirclif@198.64.160.122] has left #linux4be []
+01:58 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+03:03 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+03:03 < antagonizt> morning filip
+03:03 < Filip> hi antagonizt
+03:03 < Filip> still working on buttons ?
+03:03 -!- jal0_zzz is now known as jal0
+03:03 < antagonizt> yes
+03:03 < jal0> morning
+03:04 < Filip> hi jal0
+03:04 < antagonizt> i hacked themaw's driver and made it fully functional
+03:04 < Filip> looking at your updated board layout
+03:04 < antagonizt> i wasn't sure if should but i put it in cvs anyway
+03:04 < antagonizt> you can type all any character
+03:05 < Filip> glad I mailed the PCB to you, I could never do this with my current knowledge
+03:05 < jal0> things are starting to fit together, just need to get more info on the companion chip
+03:05 < jal0> :)
+03:05 < Filip> how do you type ? some sort of alfa ringbuffer ?
+03:05 < antagonizt> ok = enter
+03:05 < Filip> so ytou can do an 'ls -l' 
+03:05 < antagonizt> esc = tab
+03:06 < antagonizt> pwr = reset
+03:06 < antagonizt> rckt = sudo shift
+03:06 < antagonizt> if you hold down rocket the up and down keys let you scroll through every alpha numeric char
+03:06 < Filip> time to add some short aliases to that ramdisk ;-)
+03:07 < Filip> so rocket=shift
+03:07 < antagonizt> not really
+03:07 < antagonizt> just a way to get extra func out of the keys
+03:07 < antagonizt> if rocket is not down the arrow keys behave the normal way
+03:07 < antagonizt> just send the directional keycodes
+03:08 < antagonizt> but with rocket down it scrolls through the alpha numeric list
+03:09 < jal0> well, time for bed... this time for real ;) talk to you guys later
+03:09 -!- jal0 is now known as jal0_Zzz
+03:09 < antagonizt> cu
+03:11 < antagonizt> really the driver should just be a standard misc char driver that you can read a byte from that has a mask of the down buttons and a userspace daemon process should then be the keyboard app
+03:12 < antagonizt> but without interrupts it's kinda difficult
+03:15 < Filip>  antagonizt, you should check it into cvs. I can see some use for this kind of input even later on (single-hand use)
+03:15 < antagonizt> it's in
+03:15 < Filip> ok
+03:16 < antagonizt> i forgot a couple scan-codes... i'm updating now
+03:17 < Filip> in the field, when doing a lot of simple input  this could be much faster than using a stylus
+03:17 < antagonizt> i have tab, enter, ctrl-c, backspace... what else is commonly used that should be a two key combo?
+03:17 < antagonizt> two or one rather
+03:17 < Filip> i'll check some more for the interrupts, but it looks like the ones used in CE are all 'virtual' interrutps, ie just numbers used by CE and not  related to the hardware interupts
+03:18 < Filip> it's some kind of abstraction layer between various different hardware solutions and a single codebase
+03:18 < Filip> like serial is always irq 4 to the driver/application, no matter what hardware is underneath
+03:19 < antagonizt> weird.. the serial CE code led me to believe the serial interrupt was 19 wich the vr4122 header says is a software interrupt...
+03:20 < Filip> were exactly did you get that number ?
+03:20 < antagonizt> the RE CE c code
+03:21 < Filip> only during the initialsiation of the low-level drivr the real hardware interrupt is used exactly once: to add it to the mapping table. all the other code uses the virtual interrupt
+03:21 < antagonizt> odd
+03:21 < Filip> MapIrq2SysIntr
+03:21 < antagonizt> do you think the companion has its own ICU?
+03:21 < Filip> is the function used to map a real IRQ to a CE System interrupt
+03:22 < Filip> with my knowledge of IRQ's I think it must be chained to the main cpu if it has it's own
+03:22 < Filip> g_Intr2SysintrMap[Irq]
+03:22 < Filip> g_Sysintr2IntrMap[SysIntr]
+03:23 < antagonizt> could you write a fake CE driver that translates IRQs then?
+03:25 < Filip> If I could find out where those arrays are ..... they live in the core kernel, for which there is no lib file.
+03:25 < Filip> and public API's provide only one-way mapping: you can add to it, but not read from it :-(
+03:26 < Filip> and even them I'm not sure it will hlep a lot: as I understand, there will be one 'master' interrupt for the companion, which is connected to the cpu
+03:27 < Filip> when you get an interrupt from it, the interrupt handler will need to check with the companion what function raised the interrupt
+03:27 < Filip> I'm thinking of creating some very basic test program (not even a full kernel) doing the following:
+03:27 < Filip> clear all interupt vecotrs 
+03:28 < Filip> (no serial code, since it also uses interrupts)
+03:28 < Filip> use some kind of simple' framebuffer output
+03:28 < Filip> watch the interrupts on the cpu while pressing buttons, touchscreen, insert/remove CF, connect/disconnect serial cable
+03:29 < Filip> I expect all of these to trigger the same interrupt
+03:29 < Filip> and then there probably is a mask somewhere on the companion telling what function triggered the interrupt
+03:29 < antagonizt> yeah... it looks like jun sun updated his mips porting how-to... there is now some info on interrupts
+03:29 < Filip> so you can dispatch to the correct  driver
+03:30 < Filip> does this make sense ?
+03:30 < antagonizt> we will need to cascade the interrupts, right?
+03:30 < antagonizt> yeah... not that i'm an expert
+03:32 < Filip> still learning on mips/irq's as well .....
+03:33 < Filip> reading jun sun's
+03:34 < Filip> hmm 'is typically an assembly code '
+03:34 < Filip> think c code will do as well to start with, no ? once it's working we can optimise it
+03:39 < Filip> since it looks like our 'super companion' chip is handling all/most of the i/o , we'll probably have only one external irq source
+03:40 < Filip> going to re-read the cpu's manual (or at least the chapters about interupts)
+03:41 < antagonizt> have fun... like reading a lawbook :)
+03:42 < Filip> wll, i start to understand better how those interrupts are working, so I hope that part of the manual now makes more sense to me than it did whe, I first read it
+03:43 < Filip> where you actually able to do a 'ls /' or something like that with your input driver ?
+03:43 < antagonizt> yeah
+03:43 < antagonizt> did all kinds of things with it
+03:43 < Filip> great, so it looks like kernel is pretty stable
+03:44 < Filip> no single panic ?
+03:45 < antagonizt> not with uname, ls, df, ps, or starting pgserver
+03:46 < Filip> so I guess we should stick with current kernel sources for the time being
+03:46 < antagonizt> or cd
+03:46 < Filip> can you use input with pg ?
+03:46 < antagonizt> yeah
+03:46 < antagonizt> something is missing...
+03:46 < antagonizt> in the dev dir i think... psudoterminal entries or something
+03:46 < antagonizt> can't start pterm
+03:47 < Filip> maybe just a missing device file. is mknod on the ramdisk ?
+03:47 < antagonizt> but i want to write a pgui app that traslates the keycodes up/down/left/right and enter into mouse movements and clicks
+03:48 < antagonizt> prolly... i created what i thought it needed but no luck
+03:48 < antagonizt> ptya0-f and ttya0-f
+03:48 < Filip> and /dev/pts/0 /dev/pts/1
+03:48 < antagonizt> hmmm...
+03:48 < antagonizt> thought that was created dynamically?
+03:48 < antagonizt> or at least mounted?
+03:49 < Filip> maybe /dev/pts/ needs to be present ?
+03:49 < Filip> (just the empty dir)
+03:49 < antagonizt> i'll give it a try
+03:51 < antagonizt> The entries in /dev/pts/ are created on the fly by a virtual            x   
+03:51 < antagonizt>   x file system;
+03:52 < Filip> does it also create the directory if it does not exist ?
+03:52 < antagonizt> create the dir then mount it at boot
+03:53 < antagonizt> mount -t devpts none /dev/pts
+03:53 < antagonizt> i think?
+03:53 < antagonizt> and i need /dev/ptmx device file
+03:53 < Filip> http://www.x86-64.org/cgi-bin/cvsweb.cgi/crossbuild/scripts/mkdevices?rev=1.5&content-type=text/x-cvsweb-markup
+03:54 < antagonizt> yeah just that every dev entry takes up 1k on my filesystem... so i wanted to make only what i needed
+03:57 < Filip> maybe try to create them all, just to see if it solves you problem
+04:21 < antagonizt> well i don't get an error any more but no terminal?
+04:24 < antagonizt> bah guis are for whimps anyways! :)
+04:24 < Filip> is the window acitve ?
+04:24 < Filip> no terminal: no windows showing, or no input in the window
+04:25 < antagonizt> it looks like no terminal is even there... 
+04:25 < antagonizt> you should give it a try... it's very odd behavior... hard to describe
+04:27 < antagonizt> http://www.linux4.be/~jroark/files/vmlinux.bz2
+04:27 < Filip> ok
+04:27 < antagonizt> plus it is fun to type with only 8 buttons
+04:27 < Filip> any specific init= ?
+04:27 < antagonizt> nope
+04:28 < antagonizt> well make sure not to use serial as the primary console
+04:30 < Filip> any idea on how small we could get a gdb binary ?
+04:30  * Filip is booting the kernel now
+04:31 < antagonizt> to run on the BE?
+04:31 < Filip> need to enter 'pgserver' ?
+04:31 < antagonizt> yeah
+04:32 < Filip> gdb on the BE, could be usefull to hack around
+04:32 < antagonizt> what are it's deps?
+04:32 < Filip> pretty fast to enter commands 
+04:32 < Filip> feels like a cellphone ( without T9)
+04:32 < antagonizt> it has some issues but it works alright
+04:34 < Filip> hmm
+04:34 < Filip> does pgsrver create a logifle ?
+04:35 < antagonizt> i don't know... i didn't build any debug stuff into it
+04:41 < antagonizt> i might be loading the wrong driver... i wasn't sure if i should use the rawmode tty kybd driver or the reqular tty keyboard driver?
+04:48 < Filip> can't use both ?
+04:48 < antagonizt> i included both and told picogui to load whatever it could
+04:48 < antagonizt> so i don't know which one it uses 
+04:49 < antagonizt> they both trie and open tty
+04:49 < antagonizt> /dev/tty
+04:49 < antagonizt> rather
+04:49 < antagonizt> try
+04:54 < antagonizt> what type of enclosure was the ram in our be in?
+04:55 < antagonizt> bpga
+04:55 < antagonizt> ?
+04:58 < Filip> not sure
+04:59 < Filip> there was glue on top of it 
+04:59 < Filip> never seen that before
+04:59 < Filip> jal0 had to us a knife to remove that glue (it did not even melt)
+05:00 < Filip> doesn't look like it's upgradeable
+05:00 < antagonizt> weird... maybe it is some kind of conductive adhesive
+05:00 < antagonizt> to disipate heat?
+05:00 < Filip> non-conductive probably
+05:00 < Filip> don't expect ram to produce a lot of heat, does it ?
+05:01 < antagonizt> no idea
+05:01 < Filip> there was also some strange piece of black plastic on top of it
+05:11 < antagonizt> it's pretty cool to see how far this project has come :)
+05:12 < Filip> thanks to the excellent support of casio ;-)
+05:12 < Filip> i'm convinced we can get all functions working,
+05:13 < Filip> only NAND scares me a bit
+05:13 < antagonizt> yeah with jal0 hacking the hardware... if he is right about that ASIC idea should be pretty easy
+05:13 < Filip> (I already lost one BE because of a corrupt nand)
+05:14 < Filip> easy is maybe not the correct word 
+05:15 < antagonizt> make life a lot simpler
+05:15 < Filip> I wonder if Casio is going to react one day or keep the sillence forever
+05:15 < antagonizt> hae they ever said anything about eXpod redistributing all their IP and software?
+05:16 < antagonizt> that, to me, sounds like a bigger threat
+05:16 < Filip> i've been checking some resources lately, and it seems that all we're doing till know is perfectly legal 
+05:16 < Filip> (at least here in europe)
+05:16 < antagonizt> doesn't mean Casio can't threaten us anyway
+05:17 < Filip> that's not going to stop me, as long as my lawyer tells me there is no problem
+05:18 < Filip> btw, who do you think is the IP owner of the companion: Casio or nec ?
+05:18 < Filip> if they only used those macor's,  i would think neC
+05:22 < antagonizt> prolly NEC
+05:22 < antagonizt> if that is indeed what was done
+05:26 < Filip> even better: I didn't sign a license or anything with NEC ....
+05:39 < antagonizt> brb
+05:39 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+05:42 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+11:08 -!- jal0_Zzz is now known as jal0
+11:09 < Filip> morning  jal0
+11:09 < jal0> hey filip
+11:10 < jal0> looks like antagonizt was up all night ;) Thats dedication!
+11:10 < Filip> his button driver is really cool, did  you try it ?
+11:11 < jal0> not yet going to tonight when i get home from work
+11:12 < jal0> i'm pretty much going to start focusing on interrupts now, most of the major devices have been mapped.
+11:12 < jal0> i continue mapping as needed though
+11:13 < Filip> did you read the  log ? my little conversation with antagonizt about interrupts
+11:14 < jal0> made a bid on ebay for a broken be300, says everything works except the display. need to get a be300 that i can hack up, with the chips still intact
+11:14 < Filip> how do you do the mapping ? with a continuity checker ?
+11:14 < jal0> yeah
+11:14 < jal0> pretty much, and a magnifying glass ;)
+11:14 < Filip> does it make sense ? only one interrupt used on  the  cpu for the companion ?
+11:15 < Filip> so when the cpu get's an interrupt from the companion, we need to check the source of it on hte companion and call the  corresponding handler
+11:16 < jal0> dont think so, due to the way the ASIC is created, each module would have its own irq, besides almost all the GPIO lines can be configured as interrupt sources.
+11:17 < Filip> ok, I see; so I need to make a test progie to configure all cpio's ar interrupt source, and then just loop 
+11:17 < Filip> cpio=gpio
+11:17 < Filip> ar=as 
+11:17 < jal0> yeap
+11:18 < Filip> create a dummy interrupt handler that just prints the source (or a colored block on the screen) when an interrupt is raised
+11:18 < Filip> want to avoid using a full kernel and serial
+11:18 < Filip> just a really simple test proggie like the serial ones, eventually making different colored blocks on the screen for each interrupt
+11:18 < jal0> planned on writing a bit of code that did nothing but return the status of the GIUINTSTATH and GIUINTSTATL registers
+11:19 < jal0> those would show the stat of the GPIO interrupts
+11:20 < Filip> well, if you're right about the ASIC using different irq sources for each device it would even be better for writing  the interupt code: no chained interrupts
+11:21 < jal0> well actually there is a sort of chaining, have you looked at the ICU chaper in the vr4131 manual?
+11:21 < Filip> not yet, planned on doing dso tonight
+11:22 < jal0> ICU core only recieved interrupt signals from irq[3:0] (level 2) signals.
+11:23 < jal0> we will still have to query the external device to determine the source of the interrupt
+11:23 < Filip> does this mean you know you got an interrupt from GPIO, but no way  to tell which one ?
+11:23 < jal0> as far as the cpu is conserned, each module of the ASIC is seen as an independent chip
+11:24 < jal0> have to do some experimenting to determine the soure of each GPIO interrupt
+11:24 < jal0> that or RE some CE code
+11:25 < Filip> I'll also have a look at the known working linux kernel sources for some of the vr4131 reference boards
+11:25 < jal0> have you looked at any of the ASIC docs?
+11:25 < Filip> some kindof product sheet (not really technical), and that looks great
+11:26 < Filip> looks like our BE's contain some state-of the art chips
+11:26 < jal0> i ordered their lastest developers CD, shoud get it in a few days
+11:26 < Filip> you can just stuff all the different  IO components in  one single chip
+11:27 < jal0> i'm also curious to know what the internal cpu's SIU is being used for. probably a debug port of some kind
+11:27 < Filip> including usb, serial, irda, ....
+11:27 < jal0> yeap, they even have cpu cores 
+11:27 < Filip> maybe the two 'nc' on the connector that *are* connected
+11:28 < Filip> you didn't trace ethe siu lines of the cpu  yet ?
+11:28 < Filip> and dsiu 
+11:28 < jal0> no i mean the lines from the cpu themselves, they seem to be connected to something, but i havn't been able to figure out what exactly
+11:29 < Filip> maybe CF slot (don't think all lines are used in a normal cf)
+11:29 < jal0> cf is a serial device?
+11:29 < Filip> are those huge rectangular pads at the top-left connected to something ?
+11:30 < Filip> CF can be used for a lot of different things, including serial
+11:30 < jal0> with the letters A B C D ?
+11:30 < Filip> yep
+11:30 < jal0> all connect to ground
+11:31 < Filip> so those are not testpads
+11:31 < jal0> nope
+11:31 < Filip> just board revision ID's or so
+11:32 < jal0> no way to tell for sure, but thats a good guess
+11:32 < Filip> got to pick up the kids, be back later (in 3 hours or  so)
+11:32 < jal0> ok later
+11:32 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+12:43  * antagonizt is around
+12:43 < jal0> hi antagonizt
+12:43 < antagonizt> hello jal0
+12:44 < jal0> well time for me to get to work, talk to you later
+12:44 < antagonizt> later
+12:45 -!- jal0 is now known as jal0_wrkn
+13:48 -!- themaw [~marc@p5085D745.dip.t-dialin.net] has joined #linux4be
+13:49 < themaw> antagonizt, are you there ?
+13:49 < antagonizt> yes
+13:49 < themaw> i'd really like to see the hack you did :) where can i get it ?
+13:49 < antagonizt> cvs
+13:50 < antagonizt> and there is a kernel with the driver and ramdisk here: http://www.linux4.be/~jroark/files/vmlinux.bz2
+13:51 < themaw> oh, fine ..
+13:52 < antagonizt> if you just want to look at the code here is the web cvs link: http://www.linux4.be/cgi-bin/cvsweb.cgi/~checkout~/linux/kernel/drivers/char/scan_be300.c?rev=1.2&content-type=text/plain
+13:54 < themaw> good job done !
+13:55 < antagonizt> thanks
+13:58 < themaw> but wait .. why did you take out the checking of the old value ? don't you get repeated keystrokes ?
+13:59 < antagonizt> i turned the timing down... it is harder to scroll through the array if you have to keep taping
+13:59 < themaw> i see .. hmm ..
+13:59 < antagonizt> give it a try... it's not perfect... but mostly tolerable
+13:59 < themaw> i'll try it .. :)
+14:00 < themaw> where are input preferences made ? like keyboard repeat rate ?
+14:00 < antagonizt> there aren't any
+14:01 < themaw> yes, not in the driver, i know. But in a usual linux system ..
+14:01 < antagonizt> ideally the driver should just be a standard misc char device that you can read a byte with the button mask and a userland daemon that does the keyboard emulation
+14:01 < antagonizt> but that is tough without interrupts
+14:02 < antagonizt> not sure
+14:03 < themaw> kbdrate sets it.
+14:03 < themaw> now let's figure out what it does ..
+14:05 < themaw> i would change the driver a bit, at the moment we always do "set,unset" for every key .. but we could change this.. Once the repeat rate for the keyboard works.
+14:10 < antagonizt> i was unable to get PicoGUI to work properly with it?
+14:10 < antagonizt> i only tried one thing
+14:10 < themaw> you were ?
+14:10 < themaw> but why ?
+14:10 < antagonizt> not sure
+14:10 < antagonizt> ?
+14:11 < antagonizt> hard to describe...
+14:11 < antagonizt> try out that kernel that i posted... when it boots type pgserver 
+14:12 < antagonizt> there should be a pterm (pgui's terminal prog) but it never displays and then if you type anything it messes up the display
+14:12 < themaw> ok, i'll have a try ..
+14:13 < themaw> uhh, it's cold in here ..
+14:14 < themaw> .. copying .. 
+14:15 < themaw> .. booting ..
+14:19 < themaw> hmm .. i will get a frozen thumb like this ;)
+14:19 < themaw> but you're right .. anything messes up ..
+14:19 < antagonizt> ?
+14:19 < antagonizt> with pgui?
+14:19 < themaw> yes ..
+14:20 < themaw> hmm .. i don't like the mapping like this .. up should be one character before and down one after ..
+14:22 < antagonizt> yeah it would be nice to have it configurable... just did what was intuitive to me
+14:23 < themaw> ok :) either this way, or we make a survey ;)
+14:24 < antagonizt> well hopefully tpanel and a real button driver can be written soon...
+14:34 < themaw> i hope so too ..
+14:35 < themaw> hmm .. does picogui have a log ?
+14:38 < antagonizt> not sure
+15:18 -!- Filip2 [~Filip@124.96-136-217.adsl.skynet.be] has joined #linux4be
+15:18 < Filip2> hi all
+15:20 < antagonizt> hey filip
+15:21 < themaw> hi filip !
+15:46 < antagonizt> anybody know the fbset command for rotating the display or if it can be done?
+15:51 < themaw> noe clue, sorry.
+15:52 < Filip2> not sure at all if sfb supports it
+15:52 < antagonizt> wasn't sure if it was a picogui func or a fb func
+15:52 < antagonizt> pgui says it supports it
+15:52 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+15:53 < Filip2> hi hewhew
+15:53 < hewhew> hi
+15:53 < hewhew> sup
+15:57 < themaw> Filip, have you completed your scans of the memory ?
+15:58 < Filip2> not really, several locations lock-up, so it's a slow process
+16:00 < themaw> oh, ok ..
+16:00 < Filip2> I'm looking at interupts now
+16:00 < themaw> i just played a little with the tp-adresses you found out ..
+16:01 < themaw> and the only logical consequence for me is that there is another region with voltages from the touchpanel ..
+16:02 < Filip2> indeed, those adress look like pen up/down registers to me
+16:03 < Filip2> at first I tought it might have been some kind of serial data, but a closer look ruled that out
+16:04 < Filip2> there will probably be a second range with x and y values from an ADC
+16:04 < themaw> i don't think there will be x- and y-values ..
+16:04 < themaw> that would kill any possibility of calibrating ..
+16:05 < Filip2> almost sure it will be somewhere between 0xaa000000 and 0xaf000000
+16:05 < Filip2> well, x / y or voltage: at least some kind of linear data
+16:06 < themaw> right
+16:06 < Filip2> there are a lot of addresses that react on CF in/out
+16:07 < Filip2> http://www.linux4.be/hackers/memorymap.php contains most of the known areas
+16:07 < themaw> sure .. cf is VERY similar to pcmcia !
+16:08 < themaw> .. a pcmcia/cf-converter doesn't need a IC as far as i know ..
+16:08 < Filip2> you're familiar with pcmcia ?
+16:08 < Filip2> indeed, I use a pcmcia/cf adapater all the time, and it's completely passive
+16:09 < themaw> no, but we have an open source linux driver for it, right ?
+16:10 < Filip2> never looked at it (not yet)
+16:10 < themaw> ok
+16:13 < Filip2> so many interesting stuff, so little time
+16:17 < themaw> i know, i know :)
+16:21 < themaw> power supplies with huge trafos are nice if you got cold feet :)
+16:23 < hewhew> hmmmmm
+16:23 < hewhew> high voltage or.. ?
+16:23 < Filip2> cold winters
+16:25 < hewhew> its only -6C here
+16:26 < Filip2> I hope 'here' refers to outside, and not in your room ;-)
+16:27 < hewhew> well... i cant close my window since i got a rj-45 in the way..
+16:33 < themaw> you got the rj45-plug right in your window ?
+16:34 < hewhew> nah i hooked up my gf on my lan
+16:35 < themaw> so tell her to come to you and cut off the cable :) 
+16:35 < Filip2> good excus to make her move-in at your place: i want to close the window ;-)
+16:36 < themaw> or .. if she doesn't want: install a wireless lan !
+16:36 < hewhew> heh
+16:36 < hewhew> <-- low budget student
+16:38 < themaw> so you can save money when your gf moves in, right ? :) only one rent to pay .. hehe
+16:38 < hewhew> well.. my room is exactly 9 square meters
+16:42 < themaw> ok 
+16:43 < antagonizt> filip, i wrote a PicoGUI ramdisk followup tutorial a while back... mind if i update the front page post with a note?
+16:43 < Filip2> please do, and maybe include a short overall update as well
+16:55 < hewhew> a screenshot!#% please!@#%
+16:56 < antagonizt> screenshot?
+16:56 < Filip2> a screenshot of the be playing a divx ?  or a screenshot of the be running staroffice ?
+16:57 < antagonizt> why not both at the same time?
+16:57 < Filip2> and another session running visual studio in wine
+16:58 < themaw> what about kde 3.0 on the be ? shouldn't there be a screenshot ?
+17:02 < hewhew> heh
+17:03 < antagonizt> how is this:
+17:03 < antagonizt> The Linux4.BE gang has been hard at work. Jal0 has been hacking the BE hardware, mapping out the physical layout of the main board, creating schematics, and working on a monitor program (in CVS). Filip has made several discoveries while scanning various memory locations. Thanks to Filip's discoveries and help from themaw (Marc), I was able to write a simple scanning button driven keyboard driver (in CVS). Now you can activate the
+17:03 < antagonizt> type to your heart's content. As always, there is still lots to be done.
+17:03 < antagonizt> am i missing anything?
+17:04 < Filip2> help is always welcome, even if not (yet) an experienced hacker ?
+17:04 < themaw> good text.
+17:05 < Filip2> approved by the board ;-)
+17:08 < antagonizt> ok... it's up
+17:18 < themaw> does the future look like this ? http://www.linux4.be/~themaw/kde-be-faked.jpg
+17:18 < themaw> :-)
+17:21 < Filip2> you forgot  the casio (c)
+17:21 < themaw> ;)
+17:29 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+17:29 < Filip2> hi jal0
+17:30 < jal0atWrk> hows it going filip
+17:30 < Filip2> reading vr manuals and kernel sourcecode
+17:31 < Filip2> looks pretty straightforward
+17:39 < jal0atWrk> cool, not easy reading though :)
+17:40 < jal0atWrk> especially the stuff on the ICU
+17:42 < jal0atWrk> so have you played with the gpio register?
+17:43 < Filip2> not yet
+17:58 < themaw> ok guys .. i'm to bed.
+17:58 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit [Read error: 104 (Connection reset by peer)]
+17:58 < antagonizt> cu
+17:59 < themaw> ciao!
+17:59 -!- themaw [~marc@p5085D745.dip.t-dialin.net] has quit ["ZzZ"]
+18:00 -!- jal0atWrk [~jal0_wrkn@208.33.58.220] has joined #linux4be
+18:01 -!- jal0atWrk [~jal0_wrkn@208.33.58.220] has quit [Client Quit]
+18:22 < Filip2> bedtime for me, talk to you later
+18:23 < antagonizt> night
+18:23 -!- Filip2 [~Filip@124.96-136-217.adsl.skynet.be] has left #linux4be []
+--- Log closed Mon Dec 09 18:29:22 2002
+--- Log opened Mon Dec 09 18:29:28 2002
+18:29 !irc.freenode.net *** Looking up your hostname...
+18:29 !irc.freenode.net *** Checking ident
+18:29 !irc.freenode.net *** Found your hostname
+18:29 !irc.freenode.net *** No identd (auth) response
+--- Log closed Mon Dec 09 18:35:11 2002
+--- Log opened Mon Dec 09 18:57:27 2002
+18:57 < antagonizt> for filip mipsel-uclibc gdb for the BE: 3.5M gdb*   40k gdbserver*  1.2M run*
+18:59 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+20:57 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+20:58 < jal0atWrk> antagonizt: you there?
+20:59 < antagonizt> ues
+20:59 < antagonizt> yes
+20:59 < jal0atWrk> you know what happend to www.expod.net ?
+20:59 < antagonizt> nope? what?
+20:59 < jal0atWrk> http://www.expod.net/  
+20:59 < jal0atWrk> seems like it got shut down
+20:59 < antagonizt> forgot to pay his bill?
+21:00 < jal0atWrk> something about abuse
+21:01 < jal0atWrk> so anything new?
+21:01 < antagonizt> not really
+21:01 < antagonizt> did you play with the "keyboard" driver?
+21:02 < jal0atWrk> not yet, going to when i get home tonight
+21:02 < antagonizt> weird about expod.net
+21:02 < antagonizt> i wonder if goo is busted?
+21:02 < jal0atWrk> you have a prebuilt image?
+21:02 < antagonizt> http://www.linux4.be/~jroark/files/vmlinux.bz2
+21:02 < jal0atWrk> surprized no one has mentioned it in the other fourms
+21:03 < antagonizt> there was some drama a day or two ago... probably not related
+21:03 < jal0atWrk> what section of the fourm?
+21:04 < antagonizt> the guy who wrote Bexpander said expod was nothing but a bunch of ms dlls
+21:04 < jal0atWrk> dohh :/
+21:04 < antagonizt> wich is true... but i guess he said it with atitude or something
+21:06 < jal0atWrk> so whacha working on now? 
+21:06 < antagonizt> nothing really... i built gdb for the BE...
+21:06 < antagonizt> it's too large to be practical
+21:06 < antagonizt> it fits in a 7.5M ramdisk 
+21:06 < jal0atWrk> debug symbols?
+21:06 < antagonizt> but can't be loaded into ram
+21:07 < antagonizt> i striped it
+21:07 < antagonizt> 7.7M unstripped and 3.5M stripped
+21:07 < jal0atWrk> wow, where the extra size from? i remember my initial build were in the area of about 5megs
+21:08 < antagonizt> gdbserver is only 40k... that could be usefull if we get the serial working
+21:08 < jal0atWrk> yeah, need to figure out those darn interrupts
+21:11 < jal0atWrk> well, back to work, talk to you when i get home if your still around
+21:11 < antagonizt> cu
+21:12 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit []
+23:05 -!- jal0_wrkn is now known as jal0
+23:22 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt
+23:23 -!- Netsplit over, joins: antagonizt
+23:56 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt
+23:57 -!- Netsplit over, joins: antagonizt
+--- Log closed Tue Dec 10 00:00:18 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

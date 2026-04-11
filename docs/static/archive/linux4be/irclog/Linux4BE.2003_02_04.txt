@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_04.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_04.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Feb 04 00:00:04 2003
+03:27 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+03:30 -!- Filip_ is now known as Filip
+09:30 -!- Filip [Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+09:30 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+10:41 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+10:41 < Filip> hi andrey
+10:41 < andrey> hi filip
+10:41 < Filip> how arer you
+10:42 < andrey> not bad. Mostly busy though
+10:42 < andrey> yourself?
+10:42 < Filip> sounds familiar...been too busy  as well lately
+10:43 < Filip> I noticed you did some more reversing lately
+10:43 < andrey> yes. on touch and interrupts in general
+10:44 < andrey> I saw you were talking about distinguishing interrupts from different sources and decided to look into it.
+10:45 < andrey> I put some info into Interrupt.txt in my homedir.
+10:46 < Filip> brb  , phone call
+10:46 < andrey> Interrupts.txt
+10:53  * Filip back
+10:54 < Filip> noticed there where files modified in your homedir looking at the daily backup log
+10:54 < andrey> :-)
+10:54 < andrey> Did you look into it?
+10:55 < Filip> just a quick look, not yet into details
+10:59 < andrey> Look like if it's giu_irq_0 (lowest bit in GIUINTLREG(AF000088)) BE reads AA000004 to determine the source of the interrupt.
+--- Log opened Tue Feb 04 14:05:06 2003
+14:05 !irc.freenode.net *** Looking up your hostname...
+14:05 !irc.freenode.net *** Checking ident
+14:05 !irc.freenode.net *** No identd (auth) response
+14:05 !irc.freenode.net *** Found your hostname
+--- Log closed Tue Feb 04 14:11:05 2003
+--- Log opened Tue Feb 04 17:03:50 2003
+17:03 -!- Filip [~Filip@245.55-200-80.adsl.skynet.be] has joined #linux4be
+17:14 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has joined #linux4be
+17:14 < jal0atWrk> filip?
+17:15 < Filip> hi jal0
+17:15 < jal0atWrk> hey
+17:15 < jal0atWrk> was the server down eairlier?
+17:15 < Filip> yep, had a crash  :-(
+17:15 < jal0atWrk> ahh, that why i couldnt log on
+17:15 < Filip> had to have it  reboot, fsck took some time
+17:15 < jal0atWrk> any clues why?
+17:16 < Filip> no, diidn't notice anything special.  I was logged in when it happened
+17:17 < jal0atWrk> so how goes things on the linux4be side?
+17:17 < Filip> lost connection, did some traceroutes to see if it was not a network problem, then asked  the folks in the datacenter to have a look
+17:17 < Filip> it was frozen, so he reset the box.  
+17:17 < jal0atWrk> ic, was wondering how you did a remote reset, if the server crashed :)
+17:18 < Filip> well, I'm finally getting some spare time again so going to look at andrey's fresh reversed interrupt code
+17:19 < Filip> 3 minutes after I opened the ticket, the server was booting. but the fsck took longer than I expected
+17:19 < jal0atWrk> not me :(, pretty much only real time i have is on the weekends for now
+17:20 < jal0atWrk> our company is going into the OEM business, and i'm trying to set the whole process up. more difficult than i though it would be
+17:21 < Filip> trying to get a share of the white label market ?
+17:22 < jal0atWrk> not home PC's, rather netowrk fire stations, complete with the PC and OS pre-installed and configured
+17:22 < jal0atWrk> netowrk = network
+17:23 < jal0atWrk> system go for around $80,0000
+17:24 < jal0atWrk> we use to out-source the PC, then just stick our label on it, now we doing it all.
+17:25 < jal0atWrk> so have you looked at andrey's code yet?
+17:26 < Filip> no, I was looking at the srver logs to see if I could find anything abnormal
+17:52 -!- jal0atWrk2 [~jal0_wrkn@208.33.58.192] has joined #linux4be
+17:54 -!- jal0atWrk [~jal0_wrkn@208.33.58.199] has quit [Read error: 54 (Connection reset by peer)]
+17:55 < jal0atWrk2> we'll dinners over, got to get back to work, talk to you later filip
+17:56 -!- jal0atWrk2 [~jal0_wrkn@208.33.58.192] has quit [Client Quit]
+18:08 -!- Filip [~Filip@245.55-200-80.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+21:25 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+21:25 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Client Quit]
+--- Log closed Wed Feb 05 00:00:16 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

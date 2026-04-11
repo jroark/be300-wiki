@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_29.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_29.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Jan 29 00:00:24 2003
+02:49 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+02:50  * Filip looks around 
+03:08 -!- antagonizt [~johnbot@tnt1-71.ghg.net] has joined #Linux4BE
+03:09  * antagonizt looks around
+03:14 < Filip> morning antagonizt
+03:14 < antagonizt> very early morning
+03:14 < antagonizt> how are things going?
+03:15 < antagonizt> i want to start helping out again but i'm still not settled in here in houston
+03:15 < Filip> still rather busy, but it's slowly calming down a bit
+03:15 < Filip> Brian (sinfonian)is also living in Houston
+03:16 < antagonizt> ahh maybe he has a scoop on the job market here?
+03:20 < Filip> I've looked a bit into the IRQ stuff again , and it looks like it's cacscasded from the one used the CF/ATA patch
+03:21 < antagonizt> so we need a low level dispatcher function?
+03:22 < Filip> Brian should indeed now his way around 
+03:23 < Filip> yes, a low level dispatcher, and need to find a way to decide determine the source of the interrupt
+03:23 < antagonizt> haven't found a flags reg or some such thing?
+03:23 < Filip> I think it's also the reason why the CF patch gives all these unexpected interrupt messages
+03:24 < Filip> it's trying to handle interrupts which are triggered by touchscreen/buttons/....
+03:25 < antagonizt> makes sense
+03:25 < Filip> that's next on my list: see if i can find a way  to determine the exact source...
+03:28 < Filip> so you're looking for a job now ?
+03:28 < antagonizt> do the msgs show up specifically when btns are pressed?
+03:30 < Filip> I had them show up both on touchscreen and button activity, and when serial is attached they keep coming
+03:31 < Filip> probably because the error message is going out over serial, triggering a new interrupt, giving another error, .... creating a loop
+04:09 < antagonizt> good night
+04:09 -!- antagonizt [~johnbot@tnt1-71.ghg.net] has quit ["Client Exiting"]
+08:45 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Filip, jal0_away, Baalz, PsycoXul, jal0_logger
+08:45 -!- Netsplit over, joins: jal0_away
+08:49 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+08:49 -!- PsycoXul [psyco@adsl-63-205-40-227.dsl.lsan03.pacbell.net] has joined #linux4be
+08:49 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+08:49 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+08:49 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Filip, Baalz, jal0_away, PsycoXul, jal0_logger
+08:50 -!- Netsplit over, joins: jal0_logger, Baalz, PsycoXul, Filip, jal0_away
+11:16 -!- Filip [Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+11:50 -!- Den_Beire [~me@165.151-136-217.adsl.skynet.be] has joined #linux4be
+12:02 -!- Den_Beire [~me@165.151-136-217.adsl.skynet.be] has quit ["BorgIRC 2.5.0169 - by: STING - http://www.borgirc.net"]
+18:35 -!- SeederGOD [1001@c8-16.icpnet.pl] has joined #linux4be
+18:35 < SeederGOD> not many of yo
+18:35 < SeederGOD> not many of you
+18:36 < Baalz> Hi SeederGOD
+18:36 < SeederGOD> Baalz: hi
+18:37 < SeederGOD> how ya doin ?
+18:37 < Baalz> Sorry for no update but I met problems with my own website recently
+18:38 < SeederGOD> thats not a problem i have much work and i've no time to play with that 
+18:38 < Baalz> Hehe
+18:39 < Baalz> Anyway I have to go, we still have big problems...
+18:39 < SeederGOD> ok, in a week or two i'll be back
+18:39 < Baalz> See you...
+18:39 < SeederGOD> CU
+18:39 -!- SeederGOD [1001@c8-16.icpnet.pl] has left #linux4be ["cieniasy jestescie"]
+18:56 -!- MattLSU [MattLSU@139.84.178.44] has joined #linux4be
+19:23 -!- MattLSU [MattLSU@139.84.178.44] has left #linux4be []
+19:51 -!- PsycoXuul [psyco@adsl-67-123-40-112.dsl.lsan03.pacbell.net] has joined #linux4be
+19:55 -!- PsycoXul [psyco@adsl-63-205-40-227.dsl.lsan03.pacbell.net] has quit [Read error: 110 (Connection timed out)]
+19:55 -!- PsycoXuul is now known as PsycoXul
+20:22 -!- PsycoXul [psyco@adsl-67-123-40-112.dsl.lsan03.pacbell.net] has quit ["hardware stuff"]
+21:01 -!- PsycoXul [psyco@adsl-63-205-42-250.dsl.lsan03.pacbell.net] has joined #linux4be
+--- Log closed Thu Jan 30 00:00:51 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

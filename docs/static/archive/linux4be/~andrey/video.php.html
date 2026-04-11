@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <title>Linux4.BE :: Andrey's page :: Hardware :: Video Memory</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#336699" vlink="#336699" alink="#336699">
+  <center>
+  <a href="../" >
+    <img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+    <br>Back to the Linux4BE Homepage
+  </a>
+</center>
+
+  <table width="100%">
+    <tr>
+      <td width="15%" valign="top"/>
+      <td valign="top">
+        <p class="subtitle"><br>&nbsp;&nbsp;&nbsp;&nbsp;BE-300 Hardware :: Video Memory</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="15%" valign="top">
+        <br>
+        <a href="index.php.html">Start page<a><br>
+<a href="hardware.php.html">Hardware<a><br>
+  <a href="video.php.html">&nbsp;&nbsp;Video memory<a><br>
+  <a href="interrupts.php.html">&nbsp;&nbsp;Interrupts<a><br>
+  <a href="serial.php.html">&nbsp;&nbsp;Serial port<a><br>
+  <a href="touch.php.html">&nbsp;&nbsp;Touch screen<a><br>
+  <a href="socket.php.html">&nbsp;&nbsp;CF socket<a><br>
+
+      </td>
+      <td valign="top">
+        <p><span class="bodytext">
+          <br>BE-300 video memory starts from address 0xAA200000. Each pixel is represented
+          by two bytes. Bits 15-11 are responsible for red color, bits 10-5 are responsible
+          for green color, and bits 4-0 are responsible for blue color. Each line takes 512
+          bytes of memory (though only 240 * 2 = 480 bytes are really used). So if you want
+          to change the 5th pixel in 7th row (both are zero-based) you will need to use memory
+          at<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;0xAA200000 + 7 * 512 + 5 * 2 = 0xAA200E0A
+          &nbsp;&nbsp;&nbsp;&nbsp;(and 0xAA200E0B)
+        </p>
+      </td>
+    </tr>
+</body>
+
+</html>

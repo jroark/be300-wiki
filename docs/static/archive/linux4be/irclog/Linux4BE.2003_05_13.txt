@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_05_13.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_05_13.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue May 13 00:00:48 2003
+06:27 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+06:36 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+07:44  * mouse is back (gone 70:03:59)
+07:59 -!- mouse [~mouse@194.67.87.71] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+08:13 -!- mouse [~mouse@194.67.87.71] has joined #linux4be
+09:29 < baal_> Hi mouse
+09:29 -!- baal_ is now known as Baalz
+09:29 < mouse> Baalz: hi
+09:30 < Baalz> How is it going with your company?
+09:32 < Baalz> Still working for a company who makes a Linux distro for embedded things?
+09:34 < mouse> my company doesn't make a Linux distro for embedded things :))) only for PC =)))
+09:35 < Baalz> Ok I tought you were working on embedded things...
+09:36 < Baalz> Sorry if my english sucks but it is 09:36 ans I have not been to bed yet...
+09:38 < Baalz> I have been very occupied lately, anything new with the touchscreen?
+09:38 < Baalz> I did not follow what was happening here for a long time...
+09:39 < mouse> I didn't have a lot of time :((( Now I have a hard work :((( and soon I'll pass the exams in the University =(((
+09:40 < Baalz> Don't be sad, I would like to be able to pay for University courses but I do not have the money... :(
+09:42 < Baalz> The worst is that my grand-mother is full of cash but I do not want to sue her so I am waiting for her to die to get an education...
+09:43  * Baalz would love to be in University...
+09:44 < Baalz> I guess I should not be talking like that about my grand-mother but she is a bitch anyway...
+09:45 < Baalz> She always hated me and I always hated her for as long as I can remember...
+09:46 < Baalz> What time is it in Russia now?
+09:46 < mouse> 17.48
+09:46 < Baalz> LOL, It is almost the end of the day for you...
+09:47 < mouse> no, I'll work till 22.00 :)
+09:47 < Baalz> :(
+09:48 < Baalz> Then I am going to go sleeping before you probably...
+09:49 < Baalz> Can I ask you a racist question mouse?
+09:49 < Baalz> Why do russians are so good hackers?
+09:51 < Baalz> I asked before you answered because you might ha think it was a real racis question... ;)
+09:51 < Baalz> -ha+have
+09:55 < mouse> Baalz: I don't know :)))))) Sorry, for my delaying... I'm working now :)
+09:55 < Baalz> Seriously, it seems to me that all people I meat from Russia are all good for reverse-engenering and I wonder what makes this. Is school very hard in Russia?
+09:56 < Baalz> Here in Canada school sucks
+09:56 < Baalz> We don't learn anything... :(
+09:57 < Baalz> (Well we learn a lot compared to USA but it is still not much...)
+09:58 < mouse> in comparation with USA schools - yes :))) but today young generation is degradating :((( they are VERY stupid =(((((
+09:58 < mouse> and lazying :)
+09:58 < Baalz> Me too after skipping a night of sleep! ;)
+09:58 < mouse> =)))))))
+09:59 < Baalz> Last time I did that I was probably 16 years old...
+09:59 < Baalz> I am sorry for all the dum questions...
+10:00 < mouse> how old are you? 16
+10:00 < Baalz> 24
+10:00 < mouse> :) I'm 19 :)))))
+10:00 < Baalz> LOL!
+10:01 < Baalz> You are great!
+10:01 < Baalz> I tought you were older then me...
+10:01 < mouse> =) I know people, who in my age was smartter than me :)
+10:02 < mouse> :)))0
+10:02 < Baalz> You live on your own?
+10:02 < mouse> alone?
+10:02 < mouse> or.. what do you mean?
+10:03 < Baalz> When I was 19 I did not want to touch computers because I was affraid...
+10:03 < Baalz> You live with your parents?
+10:04 < mouse> :)) I work with computer from 11... Yes, I live with my parents
+10:05 < Baalz> At 11 I was beating geeks, I guess I did not assume my geekness...
+10:05 < Baalz> ;)
+10:06 < Baalz> mouse: you have a photo online?
+10:07 < mouse> yes, http://lrn.ru/~mouse/photo  2 years old
+10:07 < mouse> ago
+10:08 < Baalz> If you want to see me you can check my false webcam there: http://www.megaoctet.net/~baal/index.php?action=webcam
+10:09 < Baalz> You don't look at all like I tought...
+10:10 < mouse> :)
+10:10 < Baalz> I was imaginating you as a big killer guy... ;)
+10:12 < mouse> =))))
+10:13 < Baalz> Here is a recent picture of me and my cat: http://www.megaoctet.net/~baal/Baal2.jpg
+10:14 < Baalz> As a matter of fact this picture is not so new since I have shaved my goatie for tree weeks now...
+10:17 < Baalz> Damn! I can't find my cigarettes
+10:17 < Baalz> I should stop smoking anyway but not now...
+10:21 < Baalz> Still loading my picture? ;)
+10:22 < Baalz> I got someone to beleive that my cat was a lynx the other day... :)
+10:23 < Baalz> What Window Manager/Desktop Environment do you use Mouse?
+10:25 < mouse> yes, still :(
+10:25 < mouse> I use IceWM
+10:26 < Baalz> Nice, I like IceWM
+10:27 < Baalz> But I use Enlightenmen...
+10:28 < Baalz> You are on a 56k modem?
+10:30 < mouse> no, I'm on LAN, but for 5 days it's laggy :(((]
+10:33 < Baalz> What causes the lag?
+10:37 < mouse> don't know :(
+10:38 < Baalz> Probably file-sharers... :(
+10:39 < mouse> no, we think, that somebody shrink us whereever after our gateway... :(
+10:40 < Baalz> So, what do you think about my cat?
+10:40 < Baalz> Do you have a cat?
+10:41  * Baalz knows it is the best looking you have seen in your life! ;)
+10:41 < Baalz> +cat ;)
+10:43 < mouse> Yes, I have :)
+10:43 < mouse> it's still loading... :(
+10:44 < Baalz> :(
+10:45  * Baalz has the best cat in the world...
+10:46 < Baalz> You have a pet?
+10:48  * Baalz has 6 fish 4 schrimps a cat and a mouse...
+10:50 < Baalz> LOL, A mouse...
+10:50 < Baalz> I have my own coder... ;)
+10:52 < Baalz> Sériously, my mouse is a bich so I will not call her mouse...
+10:53 < Baalz> She shits in my hands everytime I take her in my ands...
+10:53 < Baalz> hands
+10:55  * Baalz is getting sleepy
+10:56 < mouse> =)))
+10:56 < mouse> sorry, for my away
+10:57 < Baalz> It's all right, I know you are working...
+10:57 < mouse> :)
+10:58 < mouse> I also have a 9 fish... once, I had a rat and a snake :)
+11:00 < Baalz> I would like to have a snake but the temperature is not stable enough here
+11:01 < Baalz> It goes from minus 40 to 40C here...
+11:01 < mouse> ...=(
+11:02 < Baalz> I guess the weather is similar for you...
+11:03 < Baalz> How cold does it get in the winter?
+11:03 < mouse> No, we doesn't have a temperature less than minus 20-25C in Moscow.
+11:04 < Baalz> You live in moscow?
+11:04 < mouse> yes
+11:05 < Baalz> Héhé then you know what cold weather is... :)
+11:06 < mouse> ?? %)
+11:06 < Baalz> The people in USA is crying at - 10...
+11:06 < mouse> =))))
+11:08 < mouse> Once I was in USA... 2 years ago
+11:09 < Baalz> Knowing you more was really nice but now I am going in a bar because I do not feel like ending the night right now...
+11:10 < Baalz> You were in USA for fun or buisness?
+11:12  * Baalz is leaving...
+11:12 < mouse> I was on Intel ISEF (International Science and Engeneering Fair)
+11:12 < Baalz> Have a nice day mouse and a nice night also...
+11:12 < mouse> you too!
+11:13 < Baalz> Thanks!
+11:13 -!- Baalz is now known as BaalAW
+11:13 < mouse> :)
+11:51 -!- BaalAW [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Excess Flood]
+11:51 -!- BaalAW [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+13:39  * mouse is away: fue a casa...
+13:51 -!- BEConfused [~its_me@67-64-50-242.ded.swbell.net] has joined #linux4be
+13:51 < BEConfused> anyone home?
+13:58 -!- antagonizt_WRK [~jroark@adsl-64-164-133-51.dsl.snfc21.pacbell.net] has joined #Linux4BE
+13:59 < BEConfused> hey
+14:04 < antagonizt_WRK> hello
+14:04 < BEConfused> how goes it
+14:06 < antagonizt_WRK> just hanging out at work... you?
+14:06 < BEConfused> same, just wondering if anyone has an update on the project
+14:07 < antagonizt_WRK> i don't think there are any major updates...
+14:07 < BEConfused> oh ok
+14:08 < BEConfused> is it still being worked on much?
+14:08 < antagonizt_WRK> as far as i know
+14:08 < BEConfused> cool, thanks
+14:08 < antagonizt_WRK> i haven't had much time lately... but i guess others have been...
+14:08 < BEConfused> I know how that goes
+14:09 < BEConfused> later, thanks for the info ;)
+14:09 -!- BEConfused [~its_me@67-64-50-242.ded.swbell.net] has left #linux4be []
+--- Log closed Tue May 13 15:43:10 2003
+--- Log opened Tue May 13 15:48:13 2003
+15:48 !irc.freenode.net *** Looking up your hostname...
+15:48 !irc.freenode.net *** Checking ident
+15:48 !irc.freenode.net *** Found your hostname
+15:48 !irc.freenode.net *** No identd (auth) response
+--- Log closed Tue May 13 15:54:04 2003
+--- Log opened Tue May 13 15:55:11 2003
+15:55 -lilo(levin@lilo.staff.freenode)- [Global Notice] Hi all.  Apologies for the difficulties.  We appear to have found a new way to misconfigure a server.  We've adjusted our operational procedures accordingly.  Thanks for your patience.
+--- Log closed Tue May 13 16:01:04 2003
+--- Log opened Tue May 13 19:21:36 2003
+19:21 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+19:21 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:39 -!- Netsplit niven.freenode.net <-> irc.freenode.net quits: BaalAW, antagonizt, PsycoXul, jal0, jal0_logger
+20:40 -!- Netsplit over, joins: jal0, jal0_logger, antagonizt, BaalAW, PsycoXul
+23:42 -!- inpro [~MC@CPE000005abcdef-CM013359905235.cpe.net.cable.rogers.com] has joined #linux4BE
+23:43 < inpro> hey, I have a general Be-300 question, If I get a CompactFlash card, can I allocate some of it for use as RAM ? Swap ? etc
+23:52 -!- inpro [~MC@CPE000005abcdef-CM013359905235.cpe.net.cable.rogers.com] has quit [Read error: 104 (Connection reset by peer)]
+--- Log closed Wed May 14 00:00:12 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

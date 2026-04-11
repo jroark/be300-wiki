@@ -1,0 +1,137 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_02_10.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_02_10.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Feb 10 00:00:19 2003
+02:26 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has quit []
+05:38 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_logger
+05:38 -!- Netsplit over, joins: jal0_logger
+05:58 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+11:17 -!- jal0_away [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+11:24 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+11:25 -!- jal0_away is now known as jal0
+11:26 < jal0> hey everyone
+11:27 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+11:33 < mouse> jal0 hi
+11:33 < jal0> hey mouse hows the touch driver comming along 
+11:34 < mouse> jal0 I'm very busy now, we are preparing our distrib to release
+11:35 < jal0> ?
+11:49 < mouse> go to http://www.altlinux.org/ and read news 'Beta version of ALT Linux Master 2.2 released'.
+11:50 < mouse> within 2-3 days we must prepare distrib for printing
+11:56 < jal0> ic, cool
+12:47 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+12:51 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+15:04  * mouse is away: go home
+19:10 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Baalz, jal0, jal0_logger, mouse
+19:11 -!- Netsplit over, joins: mouse, jal0, jal0_logger, Baalz
+19:13 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: jal0_logger, mouse
+19:13 -!- Netsplit over, joins: mouse, jal0_logger
+21:36 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has joined #linux4be
+22:11 < PsycoXul> ugh my be's completely crapped out now
+22:11 < PsycoXul> the 2-step reset won't even work
+22:11 < PsycoXul> it just gets stuck on "Starting..." no matter what
+22:29 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has quit [Read error: 113 (No route to host)]
+22:36 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+--- Log closed Tue Feb 11 00:00:46 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+<TITLE>web/web/hackers/hardware.php - diff - 1.1.1.1</TITLE></HEAD>
+<BODY BGCOLOR="#eeeeee">
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#9999ee"><tr valign=bottom><td><a href="/cgi-bin/cvsweb.cgi/web/web/hackers/hardware.php?sortby=date#rev1.1.1.1"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></a> <b>Return to <A HREF="/cgi-bin/cvsweb.cgi/web/web/hackers/hardware.php?sortby=date#rev1.1.1.1">hardware.php</A>
+ CVS log</b> <IMG SRC="/icons/text.gif" ALT="[TXT]" BORDER="0" WIDTH="20" HEIGHT="22"></td><td align=right><IMG SRC="/icons/dir.gif" ALT="[DIR]" BORDER="0" WIDTH="20" HEIGHT="22"> <b>Up to  <a href="/cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="/cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="/cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="/cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b></td></tr></table><h3 align=center>Diff for /web/web/hackers/hardware.php between version  and </h3>
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+<tr bgcolor="#ffffff">
+<th width="50%" valign=TOP>version </th>
+<th width="50%" valign=TOP>version </th>
+<tr><td colspan=2>&nbsp;</td></tr><tr bgcolor="#cccccc" ><td colspan=2 align=center><b>- No viewable Change -</b></td></tr></table><br><hr noshade width="100%">
+<table border=0><tr><td><table border=1><tr><td>Legend:<br><table border=0 cellspacing=0 cellpadding=1>
+<tr><td align=center bgcolor="#ff9999">Removed from v.</td><td bgcolor="#cccccc">&nbsp;</td></tr><tr bgcolor="#99ff99"><td align=center colspan=2>changed lines</td></tr><tr><td bgcolor="#cccccc">&nbsp;</td><td align=center bgcolor="#ccccff">Added in v.</td></tr></table></td></tr></table>
+<td><FORM METHOD="GET" ACTION="/cgi-bin/cvsweb.cgi/web/web/hackers/hardware.php.diff">
+<INPUT TYPE=HIDDEN NAME="sortby" VALUE="date">
+<INPUT TYPE=HIDDEN NAME="r1" VALUE="1.1">
+<INPUT TYPE=HIDDEN NAME="r2" VALUE="1.1.1.1">
+<SELECT NAME="f" onchange="submit()">
+<OPTION VALUE=h SELECTED>Colored Diff<OPTION VALUE=H>Long Colored Diff<OPTION VALUE=u>Unidiff<OPTION VALUE=c>Context Diff</SELECT><INPUT TYPE=SUBMIT VALUE="Show">
+</FORM>
+</td></tr></table>

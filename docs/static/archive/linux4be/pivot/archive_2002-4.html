@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Serial trace during factory restore</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/l4blog" type="text/css">
+<script type="text/javascript" src="pivot/extra/functions.js"></script>
+
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#336699" vlink="#336699" alink="#336699">
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="0" cellpadding="8" id="maintable">
+  <tr> 
+    <td bgcolor="#FFFFFF" valign="top"> 
+
+<!-- content for archive starts here -->
+
+<p>Go to <a href='archive_2002-3.html'>2002-3</a>  Go to <a href='archive_2002-5.html'>2002-5</a> </p>
+		
+<h6>01.04.02</h6>
+<h3>Dumper: dump memory to files</h3>
+<p>I have some code to dump areas of physical memory onto CF (it uses an ini file to specify the range, blocksize etc) and I usually put into an autorun folder: some areas of memory generate exceptions, so it coninues after a reboot. Dumper (source and exe) are now in the CVS. I'll be posting my findings over the next couple of days (after I've collected al my post-it's and double checked the info).</p>
+<div align=right> 
+        <p><a href="entry_blog-12.html">#</a> | 15.32 | Filip | <a 
+            href="entry_blog-12.html#comm" title="nakumvijay">Only one comment</a></p>
+</div>
+
+
+<h6>23.04.02</h6>
+<h3>Just got my Cassiopeia E100</h3>
+<p>I received the E100 that I bought on ebay last week: this will (hopefully) help me in finding out why CyaCE and pbsdboot do not work on the BE (both of them are running fine on the E100). The first problem is Microsoft's eVC : it seems not capable of building applications for Windows CE 2.xx (that's what the E100 is running), and I don't feel like giving another USD 200 to MS.</p>
+<div align=right> 
+        <p><a href="entry_blog-13.html">#</a> | 14.15 | Filip | <a 
+            href="entry_blog-13.html#comm" title="Andrey">Only one comment</a></p>
+</div>
+
+
+<h6>24.04.02</h6>
+<h3>Comparing devices...</h3>
+<p>I'm now able to compile and run my test programs for both E100 and BE300. Already found at least one difference between both devices, still have to run several tests.</p>
+<div align=right> 
+        <p><a href="entry_blog-14.html">#</a> | 17.37 | Filip | <a 
+            href="entry_blog-14.html#comm" title="">No comments yet</a></p>
+</div>
+
+
+<h6>29.04.02</h6>
+<h3>CE Expert needed</h3>
+<p><DIV>I'm looking for a windows CE expert to help me fix the bootloader code...</DIV><br />
+<br />
+<DIV>I have some trouble using VirtualAlloc/VirtualCopy on the BE-300. Most of the time executing a VirtualCopy (after a succesfull VirtualAlloc) just hangs the BE: no error code, it just does not return from the function call.</DIV><br />
+<DIV>The exact same code runs perfectly on a Cassiopeia E-100 and other WinCE based devices.</DIV><br />
+<DIV>I'm trying to address physical memory (basically just scanning the complete addressable range for a 'magic' number), and I think it happens when I'm trying to look at memory blocks that do not exist, are in ROM or have some kind of lock on it. But how can I check before calling the VirtualCopy if it will return or not ?? On other devices, calling this function with a bad/locked range returns an error, which is OK (my code handles this situation) but freezing the unit till a reset is no good (can't tackle this in my code).</DIV><br />
+<br />
+<DIV>Any known workaround for this ?</DIV><br />
+<br />
+<DIV>Anybody knows if it is possible to intercept the 'watchdog-timer' which resets the BE if a program hangs the BE, and to specify a smaller timeout ? This way I could set a small timer (e.g. 10 seconds)before calling VirtualCopy and if the call does not return, I can recover and continue with the next block.</DIV></p>
+<div align=right> 
+        <p><a href="entry_blog-15.html">#</a> | 06.15 | Filip | <a 
+            href="entry_blog-15.html#comm" title="">No comments yet</a></p>
+</div>
+
+
+
+
+<!-- content for archive stops here -->
+
+
+    </td >
+    <td bgcolor="#880000" width="160" id="rightcolumn" valign="top"> 
+
+      <p> <span class="titleright">home</span><br>
+	<a href="index.html">front page</a>
+	</p>
+
+      <p> <span class="titleright">archives</span><br>
+
+<!-- include the file with links to the archives -->
+
+<a href='archive_2002-1.html'>01 Jan - 31 Jan 2002 </a><br>
+<a href='archive_2002-2.html'>01 Feb - 28 Feb 2002 </a><br>
+<a href='archive_2002-3.html'>01 Mar - 31 Mar 2002 </a><br>
+<a href='archive_2002-4.html'>01 Apr - 30 Apr 2002 </a><br>
+<a href='archive_2002-5.html'>01 May - 31 May 2002 </a><br>
+<a href='archive_2002-6.html'>01 Jun - 30 Jun 2002 </a><br>
+<a href='archive_2002-7.html'>01 Jul - 31 Jul 2002 </a><br>
+<a href='archive_2002-11.html'>01 Nov - 30 Nov 2002 </a><br>
+
+
+      </p>
+      <p> <span class="titleright">links</span><br>
+
+<!-- include the file with links to other websites -->
+
+<a href="http://www.be-central.be/" title="BE-Central" target="_blank">BE-Central</a><br>
+<a href="http://www.groom-family.com/phpBB2/" title="Another BE-300 Forum" target="_blank">Another BE-300 Forum</a><br>
+<a href="http://www.expod.net/" title="eXPod" target="_blank">Goo's eXPod</a><br>
+<p>
+<a href="http://www.mijnkopthee.nl/pivot/" title="pivot" target="_blank">Pivot</a><br>
+
+
+
+      </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<!-- Created with Pivot 0.9.2 public beta -->

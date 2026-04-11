@@ -1,0 +1,256 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.2 2003/01/07 16:06:45 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/dummies/index.php,v $">
+<title>Linux4.BE :: Dummies</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Dummies</span>
+</td></tr>
+<tr><td>
+<a href="index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td>&nbsp;</tr>
+<tr><td>
+<a href="faq.php.html">FAQ</a>
+</td></tr>
+</table>
+</td>
+<td>
+  <P>
+  <span class="subtitle">Dummies :: Overview</span>
+</p><p>
+  <span class="date">Contributed by Baal (<a href="mailto:baal@megaoctet.net">baal@megaoctet.net</a>)
+</span><br>
+  <br><span class="bodytext">
+<!-- Begining linux4be.php -->
+<div align="left">
+<h4>Screenshots:</h4>
+<p>
+<a href="../~jroark/images/be-boot01.jpeg" target="blank"><img src="../~jroark/images/thumbs/be-boot01-thumb.jpeg" alt="screenshot1" border="0"></a>
+<a href="../~jroark/images/be-uname.jpeg" target="blank"><img src="../~jroark/images/thumbs/be-uname-thumb.jpeg" alt="screenshot2" border="0"></a>
+<a href="../~jroark/images/pg-kb-ob-vt-01.jpeg" target="blank"><img src="../~jroark/images/thumbs/pg-kb-ob-vt-01-thumb.jpeg" alt="screenshot3" border="0"></a>
+<br>
+More screenshots can be found 
+<a href="../~jroark/images/">here</a>.
+</p>
+<h4>Before we start:</h4>
+<p>
+Linux can now boot on a BE-300 but it is still far from being usable as 
+a replacement for whatever is actually running on your BE. I am writing this 
+text with the hope of convincing more hackers to join our project. If you need 
+help using these instructions, please 
+<a href="mailto:baal@megaoctet.net">email</a> 
+me instead of disturbing the gurus. ;)
+</p>
+<h4>Warnings:</h4>
+<p>
+You are installing Linux on your BE <b>at your own risk</b>! The members of 
+the Linux4BE developement team cannot be held liables for any problems 
+occuring from the use of our software. We recommend that you do not install 
+Linux directly on your Nand Disk and that you backup any critical data before 
+installing to your CF card. Now that this has been said, you have to know that 
+CyaCE boots the kernel which includes a ramdisk into RAM and that Linux4BE is 
+not yet able to acces your CF card or Nand Disk, so there is not much risk that 
+it will trash any of your data...
+</p>
+<h4>Downloading the software:</h4>
+<p>
+You can download Linux4BE either as a 
+<a href="../download/dummies/linux4be.tar.gz">tarball</a> 
+or a 
+<a href="../download/dummies/linux4be.zip">zip</a> 
+archive.
+</p>
+<h4>Uncompressing the archive:</h4>
+<p>
+To extract the tarball do the following:
+</p>
+<pre>
+tar -xvzf linux4be.tar.gz
+</pre>
+<p>
+To extract the zip archive do the following:
+</p>
+<pre>
+unzip linux4be.zip
+</pre>
+<p>
+This will create a directory named Linux4BE that you need to copy to your CF 
+card.
+</p>
+<h4>Booting Linux4BE:</h4>
+<p>
+Now that you have the Linux4BE on your CF card, all you have to do is to go in 
+the Linux4BE directory and double-tap Autorun.exe. This will bring up a window 
+asking what kernel configuration you want to load. The default choice, 
+linux4be, will boot Linux, lead you to a command prompt, and let you type 
+commands with the hardware buttons using the driver antagonitz wrote. See 
+<a href="#usingit">using it</a> 
+section for more details...
+</p>
+<p>
+The second choice, picogui, will boot the 
+<a href="http://www.picogui.org" target="blank">PicoGUI</a> 
+which is yet unusable since the touchscreen does not work but still cool to see!
+</p>
+<P>
+The third choice is linux4be-serial which should allow you to use your BE in 
+conjunction with a serial connection but I do not know how this works since I 
+do 
+not own such a cable.
+</p>
+<p>More information on how to configure CyaCE can be found in 
+<a href="#appendix2">Appendix #2</a> 
+but you should not need to do this.
+</p>
+<h4><a name="usingit">Using it:</a></h4>
+<p>
+Typing commands is quite easy, here is how to do it: you input characters by 
+using a combination of the rocket button and the keypad. First, press the ok 
+button so you get a shell prompt. To enter text, press and hold the rocket 
+button and then up or down on the keypad to choose the character you want to 
+input while holding the rocket button. When you have chosen your first 
+character press &quot;rocket + right&quot; on the keypad to move to the next 
+character. Here are the exact mapings for the BE's hardware buttons:
+
+</p>
+<pre>
+ok = enter
+esc = tab
+pwr = ctrl + alt + delete
+up = up
+down = down
+right = right
+left = left
+Rocket + ok = space
+Rocket + esc = backspace
+Rocket + pwr = ctrl + c
+Rocket + up = next alpha numeric char
+Rocket + down = previous alpha numeric char
+Rocket + right = select current alpha numeric and move to next
+Rocket + left = overwrite previous alpha numeric char
+</pre>
+<p>
+I will not go into details about using PicoGUI since it is not yet functional 
+nor will I explain how to use the serial driver since I do not know how to do 
+it.
+</p>
+<h4>What now?</h4>
+<p>
+Well this is all I had to say, happy hacking with your BE300 and do not forget 
+to join our team if you think you could be usefull in anyway... You might also 
+want to check <a href="#appendix1">Appendix #1</a> for how to boot your kernel 
+automatically.
+</p>
+<h4><a name="appendix1">Appendix #1: Booting automatically:</a></h4>
+<p>
+If you want the bootloader to be executed when you insert your CF card then 
+rename the Linux4BE folder as "R4100", then create a folder named "CE" and put 
+the "R4100" folder inside the "CE" folder.
+</p>
+<h4><a name="appendix2">Appendix #2: Configuring CyaCE:</a></h4>
+<p>
+<b>You only need to read this if you want to change the default kernel or add
+your own one!</b>
+</p>
+<p>
+First of all, you have to know that any line beginning with a # is a 
+comment: it is not used by CyaCE. The first important line in cyacfg.txt is 
+the timeout line. It is set to 300 seconds (5 minutes) so you have more time 
+then you need to choose which kernel you want to boot.
+</p>
+<p>
+A CyaCE entry is made of two or three lines:
+</p>
+<ol>
+<li>The first line is used to specify the name of the kernel image you want 
+to boot.
+<li>The second line is used to give a name to the kernel image you want to 
+boot.
+<li>The third line is optional and starts with <i>append=$parameters</i>, if 
+you really need to use this line then you should stop reading the dummies 
+section and make a jump to the 
+<a href="../hackers/index.php.html">hackers</a> 
+part of this site...
+</ol>
+<p>
+The default choice for CyaCE is the first one in the list so if you wanted to 
+use PicoGUI by default you would move the two lines concerning picogui at the 
+beginning of the file. You could also comment the two lines for the kernel with the input driver but that would disable it.
+</p>
+<p>
+If you wanted to add your a new kernel image named new_vmlinux then you would 
+add the following lines in your cyacfg.txt:
+</p>
+<pre>
+image=new_vmlinux
+label=new_kernel
+</pre>
+</div>
+<!-- Ending linux4be.php -->
+
+  </p>
+  <p>
+  <span class="date">Contributed by Baal (<a href="mailto:baal@megaoctet.net">baal@megaoctet.net</a>)</span><br>
+  <span class="date">Last updated on $Date: 2003/01/07 16:06:45 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,475 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_03.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_03.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Mar 03 00:00:03 2003
+02:02 -!- WebGuest9679 [~eirc@d218-98.RES.UMontreal.CA] has joined #linux4be
+02:16 < WebGuest9679> is it dead? c'est mort?
+02:25 -!- WebGuest9679 [~eirc@d218-98.RES.UMontreal.CA] has quit ["Today is a good day to chat."]
+02:39 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+03:37 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+09:39  * mouse is away: ÄÏÍÏÊ
+09:53 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 104 (Connection reset by peer)]
+11:10 -!- jal0_away is now known as jal0
+11:11  * jal0 is around
+12:47 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+19:14 -!- WebGuest4729 [~eirc@65.94.134.192] has joined #Linux4BE
+19:15 -!- WebGuest4729 is now known as Canadian_sniper
+19:15 < Canadian_sniper> Anyone around?
+19:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has joined #linux4be
+19:25 < jal0atWrk> canadian_sniper... you called?
+19:25 < Canadian_sniper> hey! finally
+19:25 < Canadian_sniper> you got a minute?
+19:25 < jal0atWrk> whats up?
+19:25 < jal0atWrk> sure
+19:26 < Canadian_sniper> okay, well, I was working on the hardware irq settings, but my Be is dead(no connection with linux4.be), so, I' done with that, I can' contribute that way
+19:26 < jal0atWrk> ?
+19:26 < Canadian_sniper> so now, I have my own forum, and I want to contribute, so I am devoting a section to linux4.be, and want to know if what I am doing is okay with you guys here
+19:27 < jal0atWrk> whats the address?
+19:27 < Canadian_sniper> www.abfunlimited.zmoz.com/phpBB2
+19:28 < Canadian_sniper> I have not done much yet, but I am working on copying the log files over, is that alright?
+19:29 < jal0atWrk> i dont see why it would be a problem, but you should shoot an email to filip also
+19:29 < Canadian_sniper> okay, although, he hasn' been around lately, too busy with his 9to5 someone said
+19:30 < jal0atWrk> yeah me, hehe
+19:30 < Canadian_sniper> lol, I read the logs everyday
+19:30 < Canadian_sniper> so not much new?
+19:30 < jal0atWrk> at least that was the deal last time i talked to him
+19:30 < Canadian_sniper> any progress with the touch screen registers?
+19:31 < jal0atWrk> not really, i have also been very busy with work, and not had much time to do much
+19:31 < jal0atWrk> i'm at work now :<
+19:32 < Canadian_sniper> ahh, well, that sucks, because I will be buying a new BE in a few weeks maybe, and I do really look forward to getting this working
+19:32 < Canadian_sniper> wow, what time is it where you are?
+19:32 < jal0atWrk> 7:36PM
+19:32 < Canadian_sniper> where are you?
+19:32 < jal0atWrk> east coast USA
+19:33 < Canadian_sniper> ahhh, I see, okay, a late worker I see
+19:33 < jal0atWrk> it's actually a relvoling shift, my situation dictates my hours
+19:34 < jal0atWrk> right now its about 1PM->12PM
+19:34 < Canadian_sniper> alright, well, i'l send an e-mail over to filip, maybe he'l respond, who knows, I get you, I used to be on one of those, sort of, days one week, afternoons next week, then graveyard week after
+19:35 < jal0atWrk> yeap, it depends on when the support is needed, but it's nice because it's flexible
+19:35 < Canadian_sniper> yeah I know what you mean, you must be in tech support or something?
+19:36 < jal0atWrk> kinda of, i'm in test engineering and have to support the manufacturing floor when machines go down.
+19:37 < jal0atWrk> and in the intrem, design new test fixture for newer products
+19:37 < Canadian_sniper> Okay, cool, must be interesting. Let me guess, you just end up browsing the web most of the time?
+19:38 < jal0atWrk> i wish, more like just during my lunch time ( or dinner)
+19:38 < Canadian_sniper> ahhh, so you'e on break now?
+19:38 < jal0atWrk> yeap
+19:39 < jal0atWrk> i ususally check in to see if anyone on the other hemispher is here :)
+19:40 < Canadian_sniper> lol, well, you missed out this time, i' in Montreal, so, better luck next time :)
+19:40 < jal0atWrk> :)
+19:40 < jal0atWrk> your nick gave it away :)
+19:40 < Canadian_sniper> I don' thik you have to worry about finding Filip online anytime soon, he hasn' been on in a while now
+19:41 < Canadian_sniper> right, so, I guess all Canadians live in Montreal now?
+19:41 < Canadian_sniper> well, 10% of them do anyways, so, I guess it would be a lucky guess
+19:41 < jal0atWrk> hehe
+19:41 < Canadian_sniper> :)
+19:42 < jal0atWrk> so how is you fourm different from ABF ?
+19:44 < Canadian_sniper> Well, I am much more lax. On ABF, even the word expod is put as a censor, I have absolutely no censors on at all. At my forum, people are free to speak their mind, say what they want, and, my forum is going to have a major focus on linux4.be, which ABF has nothing anymore
+19:44 < Canadian_sniper> that' just the beginning
+19:45 < jal0atWrk> ic, cool, but i don't think there will be much happening on the linux4.be side of things untill we get a working release. the main linux4.be site has a fourm, but it's not real active
+19:46 < Canadian_sniper> no, that' why i' using mine, with a direct connection with ABF, it has a much greater possible userbase, because more people know about it
+19:47 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+19:47 < Canadian_sniper> Well, things need to get back on track, nobody is doing much work on it again, and what we really need right now is something big to happen, so people can get back to the BE again
+19:47 < jal0atWrk> hey andrey
+19:47 < Canadian_sniper> hey andrey
+19:47 < andrey> hi guys
+19:47 < Canadian_sniper> lol, read your mind
+19:48 < jal0atWrk> andrey: you've done any more CE hacking?
+19:48 < andrey> just noticing you're talking about touch registers :-)
+19:48 < Canadian_sniper> we were
+19:49 < Canadian_sniper> any progress?
+19:49 < Canadian_sniper> on your end I mean?
+19:49 < andrey> yes, touch panel. I think registers are mostly known.
+19:49 < andrey> I put another piece of code to ~andrey directory
+19:49 < Canadian_sniper> very nice, is the touch screen working properly know?
+19:49 < jal0atWrk> how how the irq/exception handing ?
+19:49 < Canadian_sniper> *now
+19:50 < andrey> I think I know how to handle it but don't know how to put it into linux kernel.
+19:50 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has joined #Linux4BE
+19:50 < Canadian_sniper> wow, busy in here tonight
+19:51 < jal0atWrk> andrey, i have alot of hacking related code i would like you to take a look at. Maybe we can combine our efforts.
+19:51 < jal0atWrk> hey antagonizt
+19:51 < antagonizt> hi everybody
+19:51 < Canadian_sniper> hey antagonizt
+19:51 < andrey> hi antagonizt
+19:52 < andrey> I tried to look into linux irq handling but didn't understand it completely. Maybe it takes more time... :-)
+19:53 < Canadian_sniper> yeah, I was looking into it, trying to figure it all out, but it' hard and long
+19:53 < andrey> jal0, do you have it somewhere on linux4.be?
+19:53 < jal0atWrk> i'll put it there tonight, or email you when i get home
+19:54 < andrey> But somebody should understand it after all! :-)
+19:54 < Canadian_sniper> who has been compiling the Kernel so far?
+19:54 < Canadian_sniper> filip does, if he ever comes back
+19:55 < jal0atWrk> i have a good understanding of the basics, it just the initialization stuff that i have to look more into
+19:55 < andrey> the basics of linux kernel?
+19:56 < jal0atWrk> the irq/exception handling part of it
+19:56 < andrey> Maybe you can change it then?
+19:57 < Canadian_sniper> ahh, that is what really needs to be looked into now, if andrey has the registers, the main ones at least, if that can get compiled into the kernel okay, then you can work on getting the rest of the hardware working properly, maybe usb even
+19:57 < jal0atWrk> the hard part is getting it initialized correctly, the way it is now, the linux4be kerenl still depends on the setting that wince had already set up
+19:58 < andrey> sniper, the problem is we need to handle touch interrupts first
+19:58 < jal0atWrk> it's hard to debug irq/exception handling code without kdbg support
+19:58 < Canadian_sniper> yeah but you have to be really sure of what you are doing before you risk stopping the wince kernel to boot up, you could end up with a corrupted nand, like what happened to filip
+19:59 < andrey> jal0 that's true. But we can live with it for a while.
+19:59 < Canadian_sniper> yeah, I know, but it' a step in the right direction
+19:59 < jal0atWrk> cs: no i dont think so
+19:59 < Canadian_sniper> why? isn' that what happened to filip?
+19:59 < jal0atWrk> filips problem is he tried to do a wince restore with a modified backup file with linux on it
+20:00 < jal0atWrk> is = was
+20:00 < andrey> I looked into loader code, it can load CE kernel from ethernet or par. port. But I don't know whether BE can do it. Maybe it works just with their debug boards...
+20:00 < Canadian_sniper> ohh, I get yah, so that is what caused the problem, I guess I didn't read the logs properly
+20:01 < andrey> if we only can dual-boot this thing...
+20:01 < Canadian_sniper> that would be cool, turn it on, dual-boot option Wince or linux, that would be a definite first for ppcs
+20:01 < jal0atWrk> as i understand it, activesynk is just a proprietary form of a network protocol, so i think both is possible
+20:02 < andrey> And we cannot test initialization until we know how to load linux _instead_of_ ce
+20:02 < Canadian_sniper> that' the fun/dangerous part
+20:03 < jal0atWrk> not fully, but we can wipe everything and rewrite it with.
+20:04 < jal0atWrk> with. = .
+20:04 < andrey> rewrite it once. Because if we erase CE we won't have second chance.
+20:05 < Canadian_sniper> What do you mean? Sort of based off of what Filip was trying? Unless I really missed something, how can you erase CE? It is in the flsh, totally unaccesible
+20:05 < jal0atWrk> andrey: how are you diss. the RAM code. do you just copy it out of the ramdump manually, or is it done automatically?
+20:05 < andrey> Loader have the message "Eboot: Ether board is not ready". Does it mean it's separate network card/board?
+20:06 < Canadian_sniper> didn' you use a program to copy the RAM code into a text file?
+20:06 < jal0atWrk> it's probably has something to do with those undocumented pins i found of the serial/usb connector
+20:06 < andrey> manually. Extracted pieces from this 16Meg file.
+20:07 < Canadian_sniper> 16? Are you using the ce.not downgrade?
+20:07 < jal0atWrk> ok, then maybe you'll find my code useful, it attemps to dump every section the module has to a seperate binary file
+20:07 < Canadian_sniper> those could just be there if Casio took the parts from something else, it could serve no purpose on the BEs, although there is that one chip which no one knows it' purpose
+20:08 < andrey> oh, wait... If it's about loader code I just used nandaccess.dll to read from flash. But the loader from CE.NET is exactly same.
+20:08 < jal0atWrk> yeah, but they actually have traced back to the ASIC(or Unknown) chip, so i'm inclined to believe they serve some purpose.
+20:09 < Canadian_sniper> ahh, but are you using it?
+20:09 < jal0atWrk> realastate is a valuable commodity with surface mount components
+20:09 < andrey> using what?
+20:09 < Canadian_sniper> hmmm, we must find out what that chip is for. My BE is dead, so I took it apart and got the numbers off of it, but I could not find a single thing
+20:10 < Canadian_sniper> following the hardware lines
+20:10 < Canadian_sniper> wasn' someone doing a schematic for the BE?
+20:10 < jal0atWrk> andrey: that the undocumented pins are used internally by casio for debugging
+20:10 < jal0atWrk> cs:  yeah me
+20:11 < jal0atWrk> andrey: you can a complete nand dump?
+20:11 < jal0atWrk> can = have
+20:11 < Canadian_sniper> ohh, wow, I seem to know everything ou said or did, just can' remember who said it, I guess it' safe to assume that if I can remember anything, you said it/did it/are doing it lol :)
+20:11 < andrey> jal0, how do you know? Actually they have some knid of debug output but again it can work only with prototype board.
+20:12 < andrey> jal0 I know how to make it. Actually I have part of it.
+20:12 < Canadian_sniper> maybe Casio is so cheap they left us with the prototype/debug board
+20:13 < andrey> it would take valuable space...
+20:13 < andrey> jal0 how many unassigned pins are there?
+20:14 < jal0atWrk> andrey: sorry for the confusion, what i'm trying to say is that the unused pins on the serial/usb connector MAY be used internally by casio for debugging. If they went to the trouble to lay them out on the board, i'm inclined to believe they have a useful purpose.
+20:15 < jal0atWrk> all of the pins on the connector lead back to the ASIC chip, not just the ones we know the function of
+20:15 < Canadian_sniper> what really needs to be discovered is the purpose of that one chip, they put it there for a reason, it could just be there for debug, but why would they go through the trouble of putting it into the board, when they could just leave it out
+20:16 < jal0atWrk> there again it would be useful to have a working kdbg module, i have a spare main board that i could scope out and try to determine there funtion, but i have no way to access them real time
+20:16 < jal0atWrk> cs: i'ts a custom asic, most likely used for glue logic
+20:17 < andrey> looks like it's just companion chip that does everything - touch panel, buttons, nand, maybe debug interface also.
+20:17 < Canadian_sniper> Okay, I figured it was custom, because it is Casio name, not Sony or anything
+20:17 < andrey> or are you talking about something else?
+20:17 < jal0atWrk> without knowing the core, they used to program it with there is now way to determine its functions
+20:18 < Canadian_sniper> ASIC chip, that' what i' talking about
+20:18 < jal0atWrk> andrey: what was at first though to be a companion chip has in fact been identified as a custom ASIC chip
+20:19 < andrey> what's ASIC?
+20:20 < jal0atWrk> a programmerable device
+20:20 < jal0atWrk> i forget the acronym
+20:20 < andrey> ic
+20:21 < Canadian_sniper> I forget it also, i' looking now
+20:21 < andrey> But be doesn't have Vr4173 for touch and other things so maybe this chip is doing it.
+20:22 < jal0atWrk> no, the touch screen/CF card is controlled through the epson chip
+20:22 < Canadian_sniper> hmm, that is still possible, the weird thing is jal0 says it goes to the usb/serial?
+20:22 < Canadian_sniper> okay, so the epson does that, then what on earth does this do?
+20:22 < Canadian_sniper> Application Specific Integrated Circuit
+20:23 < Canadian_sniper> ASIC
+20:23 < jal0atWrk> glue logic and buffering
+20:23 < andrey> What's the difference between "custom" and "programmable"? Is it just was the logic created by Casio guys or by chip manufacturer?
+20:23 < jal0atWrk> you can program with with core devices, like serial controllers
+20:24 < andrey> you mean that theoretically it can be reprogrammed by us?
+20:24 < jal0atWrk> from what i understand, it a calaborating effort. done in multiple steps
+20:24 < Canadian_sniper> theoretically, that depends
+20:25 < Canadian_sniper> if it is like a reprogrammable BIOS, then it probably uses falsh, and then we could possibly reprogram it, but we don' have the tools for that, garaunteed
+20:25 < Canadian_sniper> falsh=flash
+20:25 < jal0atWrk> andrey, no its not programed like that, the developer has software that he uses to creates the needed modules and pin locations, then the info is sent off and the device is built
+20:25 < andrey> ic. So we should use whatewer is already inside. :-)
+20:26 < jal0atWrk> yeap
+20:26 < Canadian_sniper> but we don' know what is inside, we could already be using it
+20:26 < jal0atWrk> we are already using it :)
+20:27 < Canadian_sniper> oh, okay then :)
+20:27 < andrey> :-)
+20:27 < Canadian_sniper> but the question is, what is "it"?
+20:27 < jal0atWrk> an ASIC device :-o
+20:28 < jal0atWrk> :)
+20:28 < Canadian_sniper> LMAO, that's good I think I need more coffee, too many acronyms
+20:29 < Canadian_sniper> actually, maybe I need less coffee:)
+20:29 < andrey> what does COFFEE stand for? %-)
+20:29 < Canadian_sniper> NOOOOOOOOOOO
+20:29 < jal0atWrk> hehe
+20:30 < Canadian_sniper> you know i' getting tired, I am entering the logs into ABF Unlimited, and I go from Feb to Dec to Feb to Jan, wow, this sucks
+20:31 < jal0atWrk> caffine overload for future electical engineers
+20:31 < jal0atWrk> just a though :/
+20:31 < Canadian_sniper> yep, hey, how did you know I was going into engineering?
+20:32 < jal0atWrk> it was a toss up between that or partners in crime with jl malvo
+20:33 < Canadian_sniper> lol, okay, well anyways, it'l probably be comp engineering anyways
+20:33 < jal0atWrk> andrey: an new intresting hacking code?
+20:34 < andrey> not much. just added some to touch.dll
+20:35 < jal0atWrk> btw, i rewrote your dumpping code, and wrapped it in a gui with a staus bar. sometimes i couldn't tell if you code was still dumping, or CE was hung
+20:35 < andrey> it's nice
+20:35 < jal0atWrk> ? you already have it?
+20:36 < Canadian_sniper> wow, tonights log is the largest one since Jan 21 so far
+20:36 < andrey> how is you module splitter doing?
+20:36 < andrey> :-) I mean it's good that you did it. :-)
+20:36 < jal0atWrk> it's coming along, going to need to add code to dump parts of nand though, because not all sections of the dll's get loaded into RAM
+20:37 < andrey> I'm afraid these dlls are not in nand either.
+20:38 < Canadian_sniper> what if you were to right a code to systematically run and dump every file from a default install?
+20:38 < jal0atWrk> but it looks like you may have already worked some of that code out, that's why i think if you start collaborating on a common source code base, things could go alot faster
+20:38 < jal0atWrk> no, not the entire dll, just sections that the windows os loads there on boot
+20:39 < jal0atWrk> only 3 section of the touch.dll get loaded into ram, but some of the references seem to point to NAND space
+20:39 < Canadian_sniper> empty space you mean?
+20:40 < andrey> what do you mean "point to NAND space"?
+20:40 < jal0atWrk> no, NAND address space, mapped by the kerenl. you can see examples in the wince sources like loader.c
+20:41 < andrey> As far as I understand nand-flash is similar to hard-drive rather than ROM
+20:41 < Canadian_sniper> I know what you mean, but what is located at the given addresses?
+20:41 < andrey> you can read/write sectors to/from RAM but cannot access it directly.
+20:41 < jal0atWrk> memory sections of the dll
+20:42 < jal0atWrk> andrey: not sure what you mean
+20:43 < Canadian_sniper> Okay, so they are spread around the Nand, I think Andrey is referring to the comparison between the Kernel registers and an FAT system
+20:43 < jal0atWrk> ?-\
+20:43 < andrey> When you use hard-drive it's usually just one address like small hole. you need to read the whole sector through this hole byte by byte before you can use data.
+20:44 < Canadian_sniper> that' sort of how it works, but remember, a hard drive is physical, flash is digital, so it' instant access
+20:45 < andrey> you cannot execute you program directly from hard drive.
+20:45 < andrey> Sniper: not for this one. I looked into specs.
+20:45 < Canadian_sniper> okay, it is indirect flash, I didn' know that, i guess you are correct then
+20:45 < andrey> flash itself is not mapped into CPU address space
+20:46 < Canadian_sniper> hold on, I am not known as cs anymore, on all forums I am Gandalf
+20:46 -!- Canadian_sniper is now known as Gandalf
+20:46 < jal0atWrk> there should be a 'window' that is
+20:47 < Gandalf> yeah, I get what you are saying
+20:47 < andrey> yes but window size is just one byte. Or one word at maximum. And you can read only 512 bytes at once.
+20:48 < jal0atWrk> which would be just an series of registers as seen by the cpu.
+20:48 < andrey> Exactly.
+20:48 < jal0atWrk> ok, so were talking about the same thing then :)
+20:49 < andrey> :-)
+20:49 < Gandalf> maybe you two are, I' so tried I don' know what i' talking about
+20:49 < jal0atWrk> so your saying that the entire os is loaded though this 1word register at boot?
+20:49 < jal0atWrk> :)
+20:50 < andrey> King of. I think I know the structure of the NAND:
+20:50 < Gandalf> Wow, somehow that doesn' seem right, it has a lot to load, no way can it load all that in only a few seconds at that rate
+20:50 < andrey> 16k header (mostly empty, kinda partition table)
+20:50 < andrey> 64k loader
+20:51 < andrey> 4Meg compressed kernel (I think with all initial dlls pre-loaded)
+20:51 < andrey> 12Meg FAT filesystem
+20:51 < jal0atWrk> i havent looked at it lately, but i believe it is a parallel device... see http://www.linux4.be/~jal0/be300-main-board.pdf
+20:51 < jal0atWrk> not a serial one
+20:52 < jal0atWrk> so it could be mapped to a memory range
+20:52 < andrey> Gandalf, all windowses and linuxes are loaded from the hard drive the same way.
+20:52 < Gandalf> yeah I know, and look at the loading times, big difference
+20:53 < andrey> I think it's parallel in a sence that you load data byte-by-byte rather than bit-by-bit as in serial.
+20:53 < jal0atWrk> actually with the newer disto's of linux, there starting to catch up to windowZ
+20:53 < Gandalf> yeah, my box used Mandrake 8.1, and it was pretty fast
+20:53 < andrey> Flash is much faster and amount of data to load is less.
+20:54 < Gandalf> no I know that, just ignore me for a while, I am not making sense to myself
+20:54 < andrey> And flash is physically closer to RAM in you BE. :-)
+20:55 < Gandalf> Oh yeah, that' for sure
+20:55 < jal0atWrk> andrey: so you think then, that everything is loaded into RAM?
+20:56 < andrey> wow! I didn't see this picture before.
+20:56 < jal0atWrk> ?
+20:56 < Gandalf> ?
+20:57 < andrey> Yes, I think it is.
+20:57 < andrey> Picture - BE300 main board. :-)
+20:57 < jal0atWrk> ok, then i got some more investigating to do :)
+20:57 < Gandalf> Oh, the real thing is much nicer
+20:57 < jal0atWrk> mine, or antagonizt?
+20:58 < Gandalf> This is good, hey, you guys should join my site, I would really like one of you to make a post on the current status of the project, what does ad deosn' work, all that you know
+20:58 < Gandalf> jal0: who is that directed at?
+20:59 < jal0atWrk> andrey
+20:59 < andrey> yours. Is there another one?
+20:59 < jal0atWrk> http://www.linux4.be/~jal0
+21:00 < jal0atWrk> andrey: what are you looking at
+21:01 < andrey> http://www.linux4.be/~jal0/be300-main-board.pdf? This is what I'm looking at
+21:01 < jal0atWrk> ah the schematics ok, btw, i have new additions that i have to make 
+21:02 < jal0atWrk> check again tonight when i post my hacking code. the ones there now have some fatal errors :-\
+21:03 < andrey> ok
+21:04 < Gandalf> Victory!!!! All 98 log files are now on my site, only took me 3 hours:)
+21:04 < jal0atWrk> i forgot to reverse the pinouts from the datasheets so they represent the silkscreen, not the bottom of the chip ... dohh
+21:05 < jal0atWrk> there all fixed in the new schematic, in addition, the wiring of the buttons has been added
+21:06 < andrey> cool! If only we know what's inside these chips...
+21:06 < jal0atWrk> the schematic will come in handy when i build a programmer for the nand device :)
+21:07 < Gandalf> gtg , talk to you guys later
+21:07 < jal0atWrk> thats one of the reasons i need to start hacking the nand access code, so i can copy what in there now
+21:07 -!- Gandalf [~eirc@65.94.134.192] has quit ["Today is a good day to chat."]
+21:07 < jal0atWrk> later... fine then :)
+21:08 < andrey> take care...
+21:08 < andrey> you mean when we put linux in there and it doesn'r work? :-)
+21:08 < jal0atWrk> yeap, i'll be able to reflash the original
+21:09 < jal0atWrk> all the pins to access the nand device have testpads so they can be accessed externally
+21:09 < andrey> I know how to read the entire nand using ce dlls. And almost know how to read it using registers.
+21:09 < jal0atWrk> and i have a space be300 that i will be experimenting on that i bought on ebay
+21:09 < jal0atWrk> space=spare
+21:10 < jal0atWrk> so maybe once you take a look at my code, we can start thinking about setting up the cvs server to hold it
+21:11 < andrey> would be nice. I think Filip has a cvs directory for tools.
+21:12 < jal0atWrk> yeah, we could put it under the CE directory, where some of you code already is located
+21:12 < jal0atWrk> what time is it were you are?
+21:13 < andrey> we can do that. btw I usually copy all my code into my home directory. So unless somebody puts it to svc it's newer...
+21:13 < andrey> Same time as yours. :-)
+21:14 < jal0atWrk> so we should get together sometime when were both availiable and agree upon a structure
+21:15 < jal0atWrk> tomorrow i'll coming to work in the moring so i'll be home at nigh
+21:15 < andrey> sure. just need to decide first what to put in there.
+21:16 < jal0atWrk> all of my code is currently in a compilable state, not much doc's though so maybe we just merge our stuff and commit
+21:17 < andrey> Actually I'm at work now. :-) 
+21:17 < andrey> I can look through my stuff also and choose what might be useful
+21:18 < jal0atWrk> i the dummper gui, a dll loader that i run to load a dll before i dump so i can look at application dlls in memory, a mips dism., and my module dumper
+21:19 < andrey> I can put mips disasm also. And an example of using nandaccess.dll for reading (and possibly writing) nand in absolute sectors
+21:20 < jal0atWrk> btw, you wouldn't off the top of your head know what the exception table e32_unit[4] structure look like would you?
+21:20 < jal0atWrk> cool
+21:20 < jal0atWrk> you have access to msvc?
+21:21 < andrey> no. I don't remember...
+21:21 < andrey> msvc for mips?
+21:21 < jal0atWrk> microsoft visual c++, for windows
+21:21 < andrey> 5.0
+21:22 < jal0atWrk> all of my code has been develop in visual c++, so well have to create some make files for things
+21:22 < jal0atWrk> 5.0 or 6.0
+21:22 < andrey> I usually put everything into one file and then just use "cl file.c" :-)
+21:23 < andrey> But we can create makefiles or even projects.
+21:24 < jal0atWrk> ah, ic.. maybe you'll like how i set things up. everything is sperated
+21:26 < andrey> yes, I like when things are organized, maybe because I rarely do it myself...
+21:26 < jal0atWrk> i also created the module dumper code to be portable so it can be compiled for both msvs and evc, although i havn't actually done it yet. i use memory mapped files on windows and access RAM directly on the BE. the code differeces are hidden away between #ifdef's in the cek module
+21:27 < jal0atWrk> the hardest part with doing things realtime is that there is no console mode for the BE :(
+21:28 < andrey> yes, that's true... That's why I prefer to use memory dump. But it's just a static image...
+21:29 < jal0atWrk> me too, the option is there, but i havn't tried using it yet :)
+21:29 < andrey> And simetime I use small programs that are loaded by CyaCE. I wrote kind of printf and serial output
+21:30 < andrey> Maybe we can create library out of it. I can send you an example and you can decide whether it's useful
+21:31 < jal0atWrk> i started something like that but havn't revisited it in a while... have you seen my BEMON monitor program?
+21:31 < andrey> No. What's that?
+21:32 < jal0atWrk> it's a program that gets loaded by CyaCE and allows you to issue debug commands from a terminal on your pc. like dumpping memory, looking at register, etc...
+21:33 < andrey> That's good. But how do you read from serial port? Are you handling interrupts? Or just check port once in a while?
+21:34 < jal0atWrk> there was a problem with it when accessing certain memory locations, cause the program to restart. 
+21:34 < jal0atWrk> it polled driven
+21:34 < andrey> ic. Are you sure it's certain memory and not just watchdog timeout?
+21:35 < jal0atWrk> yeap i'm sure, the watch dog is a non issue if you running expod
+21:35 < jal0atWrk> it wouldnt freeze, just restart like it was just being ran for the first time
+21:37 < jal0atWrk> i think it has something to do with the exception processing and memory read errors. in windows, the memory read error are handled by windows, but after cyace loads, you have to handle them for you self.
+21:39 < andrey> Yes, I know. I have similar program for playing with touch interrupts. And sometime it catches memory exception with wierd addresses...
+21:39 < andrey> I don't know why.
+21:39 < andrey> Well, looks like I have to go.
+21:40 < jal0atWrk> so were back to trying to figure out the exception/irq handling issue, which is what my CE hacking has been for :)
+21:40 < jal0atWrk> ok, talk to you later, will you be around tomorrow?
+21:41 < jal0atWrk> i put up my code on my web page when i get home tonight, email me if you don't catch me here
+21:41 < andrey> hopefully. If I won't have time to stop by from work I can enter from home in the evening.
+21:41 < jal0atWrk> about what time?
+21:41 < andrey> Sure. See you later...
+21:42 < jal0atWrk> ok bye
+21:42 < andrey> home? don't know yet. maybe after nine.
+21:42 < andrey> bye
+21:42 < jal0atWrk> :) later
+21:42 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+21:43 < jal0atWrk> antagonizt, you sure are quite these days
+21:43 < antagonizt> haven't spent much time hacking in a while
+21:44 < jal0atWrk> ic, but it's cool you still hang around ;)
+21:44 < antagonizt> have to keep up with progress
+21:45 < jal0atWrk> i was kind of waiting for you to make another big discovery that would get things going again :)
+21:46 < antagonizt> i wish... but the irq stuff is complicated
+21:46 < jal0atWrk> you and filip seem to be more on the linux side, where me and andrey seem to be more comfortable on the CE hacking side of things. :)
+21:47 < antagonizt> i am pretty comfortable with linux
+21:47 < jal0atWrk> although i have leared quite a bit about linux since i stated working on this project
+21:48 < jal0atWrk> yeah, the next big stepping stone is the irq/exception handling issue.
+21:50 < jal0atWrk> well, i guess i ought to get back to work, i've taken quite a lenghty dinner break :->
+21:50 < antagonizt> have fun
+21:51 < jal0atWrk> later
+21:51 < antagonizt> later
+21:51 -!- jal0atWrk [~jal0_wrkn@208.33.58.206] has quit []
+23:00 -!- antagonizt [~johnbot@cs2416770-12.houston.rr.com] has quit ["Client Exiting"]
+--- Log closed Tue Mar 04 00:00:28 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

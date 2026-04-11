@@ -1,0 +1,248 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Nov 30 00:00:51 2002
+01:05 -!- antagonizt is now known as antagonizt[zZz]
+02:05 < jal0> night
+03:10 -!- jal0 is now known as jal0_zZZ
+03:16 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+03:54 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+11:00 -!- jal0_zZZ is now known as jal0
+12:04 -!- Den_Beiren [~me@159.121-136-217.adsl.skynet.be] has joined #linux4be
+12:12 < Den_Beiren> hellow,.. does anybody know where you should save an alias, so it loads on every boot? i am using debian
+12:22 -!- Den_Beiren is now known as Den_Beiren[AWAY]
+13:25 -!- Den_Beiren[AWAY] [~me@159.121-136-217.adsl.skynet.be] has quit ["BorgIRC 2.5.0167 - by: STING - http://www.borgirc.net"]
+14:19 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+14:34 -!- Filip [~Filip@129.55-200-80.adsl.skynet.be] has joined #Linux4BE
+15:00 < jal0> hey filip
+15:01 < Filip> hi jal0
+15:01 < jal0> did you get my email?
+15:18 < Filip> (sorry for the delay)
+15:18 < Filip> yep, got your email
+15:19 < Filip> don't worry, I can wait. still got plenty of other things to look  at
+15:19 < jal0> finnaly got the page updated, it also now contains prebuilt binaries for both linux and windows
+15:19 < jal0> for the toolchains
+15:20 < jal0> any features on the monitor you think would be useful ?
+15:21 < Filip> did you ever look at pmon ? maybe you can re-use some code
+15:21 < jal0> ?pmon
+15:21 < jal0> just found it on the web
+15:22 < jal0> i'll take a look at it
+15:22 < Filip> http://www.linux4.be/~jal0/
+15:22 < Filip> [29 January 2002 ] ??
+15:22 < jal0> ? :/
+15:22 < jal0> oops
+15:22 < jal0> should be november
+15:23 < Filip> was getting late ?
+15:23 < jal0> yeap :)
+15:24 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+15:24 < jal0> ok, fixed now
+15:25 < jal0> thanks
+15:26 < nykkto> who is fixed?
+15:26 < jal0> btw, my page no longer is windows/cygwin specific. Its also for linux now
+15:26 < jal0> me
+15:26 < nykkto> No kids for you!
+15:26 < jal0> had a typo on my web :p
+15:26 < nykkto> lol
+15:26 < jal0> web page
+15:27 < jal0> hey nykkto, how goes things
+15:27 < Filip> hi nykkto
+15:27 < nykkto> hey, workin, as usual
+15:27 -!- antagonizt[zZz] is now known as antagonizt
+15:27  * antagonizt say hi to all the people
+15:27 < jal0> good morning antagonizt 
+15:28 < Filip> hi  antagonizt
+15:28 < jal0> nykkto: did you finally get the toolchain set up correctly?
+15:29 < nykkto> well not at home, I have been busy with moving my wife out :(
+15:29 < jal0> ic
+15:30 < nykkto> I have to also get myself a linux version at home , need to dl a good ISO
+15:33 < nykkto> I think I am going to go with slackware :)
+16:16 < nykkto> la da de
+16:41 -!- themaw [~marc@p5085CC72.dip.t-dialin.net] has joined #linux4be
+16:41 < themaw> hi!
+16:41 < Filip> hi marc
+16:42 < themaw> Hi Filip! how's the progress ? :)
+16:42 < Filip> slowly, and  waiting for my PB
+16:43 < themaw> fine. I finally found the one important mistake i made when building my serial cable ..
+16:43 < nykkto> ooops  :?
+16:43 < Filip> pin numbering ?
+16:43 < themaw> now i wonder whether 3,3 V is enough for the max232..
+16:44 < themaw> no .. it was the short between pin 3, 4 and 5 which I didn't recognize in my s/w printout ..
+16:45 < themaw> so it seems like without this short, the connector doesn't even get activated ..
+16:46  * nykkto is not long on shorts :P
+17:07 -!- themaw [~marc@p5085CC72.dip.t-dialin.net] has quit ["Client Exiting"]
+17:07 -!- themaw [~marc@p5085CC72.dip.t-dialin.net] has joined #linux4be
+17:08 < themaw> hmm .. now i hope it'll work ..
+17:17 < themaw> ok .. the search goes on..
+17:17 -!- xTimG [~tim@HSE-Toronto-ppp313037.sympatico.ca] has joined #Linux4BE
+17:17 < xTimG> so, how far along does this get?
+17:17 < xTimG> when it's booting?
+17:18 < Filip> hi xTimG
+17:18 < themaw> hi xTimG
+17:18 < Filip> it does boot a kernel with embedded ramdisk
+17:19 < Filip> no input working (serial & touchscreen), no CF, no NAND, 
+17:19 < xTimG> ah
+17:19 < xTimG> that makes it a bit difficult to use
+17:20 < Filip> indeed
+17:21 < xTimG> I'm thinking of getting a BE soon, because they're about the cheapest PDA available around here, and have decent hardware
+17:21 < xTimG> but, the built in version of Windows CE doesn't seem too nice
+17:22 < themaw> Does anyone have a good knowledge of the max232 ?
+17:23 < Filip> google ;-)
+17:23 < themaw> that's what i already got ..
+17:24 < themaw> but there should be -12V at a pin, and it's -10,? V .. i should also have 5 V input and got only 3,3 ..
+17:24 < themaw> and now i would like to know if the supply voltage is too little ..
+17:27 < jal0> hi themaw
+17:29 < themaw> hi jal0 !
+17:29 < themaw> can you eventually help me ?
+17:29 < jal0> sure, whats up?
+17:31 < themaw> i found the error on my cable today .. it was that i didn't make the short at pin 3-5 .. and now i think everything should be working - but it doesn't ..
+17:32 < jal0> the supply voltage used in the schematic should be 6V, i just realized i didn't make note of it there.
+17:32 < themaw> the max232 has -10.5V at it's -12V pin ..
+17:33 < themaw> 6 V ? where from ?
+17:33 < jal0> what chip are you using?
+17:33 < themaw> i simplified the shematic a bit, because i had no force on/off pin ..
+17:33 < themaw> the max232 ..
+17:33 < themaw> max232cpe
+17:34 < themaw> with 4 Cs with 1 muF each ..
+17:35 < jal0> have you got a terminal prog for the be?
+17:35 < themaw> i call this bad timing: just when you became active here again, a friend called me and said that he would pick me up the next minutes .. :(
+17:35 < jal0> :)
+17:35 < jal0> ok, well talk later then, or just email
+17:36 < jal0> me
+17:36 < themaw> no, i had one but it had a stupid message saying "please register" .. it was when i testet the usb connection ..
+17:37 < jal0> teraterm work good
+17:37 < themaw> ok .. thanks for now !
+17:37 < jal0> :) np
+17:44 < themaw> ok .. i gotta go now ..
+17:44 < themaw> jal0, did you receive the private message ?
+17:44 < themaw> ok .. cu all possibly later on !
+17:45 < jal0> yeap
+17:45 < jal0> jal0@linux4be is ok
+17:45 < jal0> jal0@linux4.be
+17:46 < jal0> later
+17:47 < jal0> http://hp.vector.co.jp/authors/VA002416/ce/tterm_ce.html
+18:43 -!- bshircliffe [~bshirclif@twhou-212-15.ev1.net] has joined #linux4be
+18:45 < antagonizt> hello brian
+18:45 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit [Remote closed the connection]
+18:46 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+18:46 < bshircliffe> hi
+18:47 < nykkto> hi :)
+18:47 < bshircliffe> whats going on
+18:47 < nykkto> not too much, I am actually in yahoo chat right now (different window)
+18:48 < nykkto> thay have made some progress, I believe theya have the ram disk working, now for a user interface :)
+18:48 < bshircliffe> yea
+18:49 < nykkto> so hows things going?
+18:53 < Filip> going to get some sleep folks, talk to you later
+18:53 < nykkto> night
+18:53 < antagonizt> cu filip
+18:53 < jal0> later
+18:53 -!- Filip [~Filip@129.55-200-80.adsl.skynet.be] has left #Linux4BE []
+19:00 -!- themaw [~marc@p5085CC72.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+19:16 -!- bshircliffe [~bshirclif@twhou-212-15.ev1.net] has left #linux4be []
+19:51 < nykkto> yawn
+20:43 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+21:17 -!- bshircliffe [~bshirclif@twhou-207-218-201-166.ev1.net] has joined #linux4be
+21:17 -!- bshircliffe [~bshirclif@twhou-207-218-201-166.ev1.net] has left #linux4be []
+--- Log closed Sun Dec 01 00:00:18 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

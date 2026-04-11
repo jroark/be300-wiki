@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_11.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_11.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Dec 11 00:00:44 2002
+00:14 < jal0> have to reboot bbiab
+00:14 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+00:17 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+01:01 < antagonizt> good night
+01:02 -!- antagonizt is now known as antagonizt[zZz]
+01:02 < jal0> night
+03:27 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+11:04 < jal0> hey filip
+11:07 < Filip> hi jal0
+11:39 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+12:34 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+12:48 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+13:02 -!- jal0 is now known as jal0_away
+14:25 -!- sinfonian [~bshirclif@twhou-207-218-202-110.ev1.net] has joined #linux4be
+14:26 < sinfonian> hello guys
+14:56 -!- sinfonian [~bshirclif@twhou-207-218-202-110.ev1.net] has left #linux4be []
+17:59 -!- jal0atWrk [~jal0_wrkn@208.33.58.195] has joined #linux4be
+18:18 -!- antagonizt[zZz] is now known as antagonizt
+18:18 -!- jal0atWrk [~jal0_wrkn@208.33.58.195] has quit [Read error: 54 (Connection reset by peer)]
+21:59 -!- jal0atWrk [~jal0_wrkn@208.33.58.192] has joined #linux4be
+23:34 -!- jal0_away is now known as jal0
+23:53 -!- jal0atWrk [~jal0_wrkn@208.33.58.192] has quit [Read error: 113 (No route to host)]
+--- Log closed Thu Dec 12 00:00:11 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

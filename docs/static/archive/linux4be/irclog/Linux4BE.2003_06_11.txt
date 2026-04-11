@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_06_11.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_06_11.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Jun 11 00:00:37 2003
+10:36 -!- ElvenLinux [~elven@203-213-102-19-nme-ts7-2600.tpgi.com.au] has joined #linux4be
+10:36 -!- ElvenLinux [~elven@203-213-102-19-nme-ts7-2600.tpgi.com.au] has left #linux4be ["/me pushes the %C0,4 little red button %C.... what does this do ? .... oops"]
+11:47 -!- antagoni1t [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+11:47 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit [Read error: 104 (Connection reset by peer)]
+18:59 -!- High_Voltz [1000@209-240-27-3.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+19:52 -!- High_Voltz [1000@209-240-27-3.tc1.woodsfield.oh.dial.1st.net] has quit [No route to host]
+19:55 -!- High_Voltz [1000@209-240-23-72.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+20:09 -!- highvoltz [1000@209-240-23-1.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+20:19 -!- PsycoXul [psyco@adsl-63-205-40-146.dsl.lsan03.pacbell.net] has quit [Read error: 104 (Connection reset by peer)]
+20:20 -!- PsycoXul [psyco@adsl-67-123-40-96.dsl.lsan03.pacbell.net] has joined #linux4be
+20:27 -!- High_Voltz [1000@209-240-23-72.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 113 (No route to host)]
+21:33 -!- highvoltz [1000@209-240-23-1.tc1.woodsfield.oh.dial.1st.net] has quit [Read error: 60 (Operation timed out)]
+21:39 -!- highvoltz [1000@209-240-23-1.tc1.woodsfield.oh.dial.1st.net] has joined #linux4be
+21:48 -!- highvoltz [1000@209-240-23-1.tc1.woodsfield.oh.dial.1st.net] has quit [Remote closed the connection]
+23:56 -!- PsycoXul_ [psyco@adsl-67-123-43-216.dsl.lsan03.pacbell.net] has joined #linux4be
+23:56 -!- PsycoXul [psyco@adsl-67-123-40-96.dsl.lsan03.pacbell.net] has quit [Read error: 54 (Connection reset by peer)]
+23:56 -!- PsycoXul_ is now known as PsycoXul
+--- Log closed Thu Jun 12 00:00:01 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

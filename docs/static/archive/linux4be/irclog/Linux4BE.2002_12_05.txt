@@ -1,0 +1,490 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_05.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_05.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Dec 05 00:00:03 2002
+03:11 -!- antagonizt is now known as antagonizt[zZz]
+10:13 -!- jal0atWrk [~jal0_wrkn@208.33.58.193] has joined #linux4be
+11:07 -!- someguy [~matt@psyche.eggs.net] has joined #linux4be
+11:07 -!- jal0atWrk [~jal0_wrkn@208.33.58.193] has quit [Read error: 104 (Connection reset by peer)]
+11:36 -!- jal0atWrk [~jal0_wrkn@208.33.58.218] has joined #linux4be
+11:46 -!- jal0atWrk [~jal0_wrkn@208.33.58.218] has quit []
+12:10 -!- jal0atWrk [~jal0_wrkn@208.33.58.211] has joined #linux4be
+12:26 -!- jal0atWrk [~jal0_wrkn@208.33.58.211] has quit []
+12:56 -!- themaw [~marc@pD9548FAE.dip.t-dialin.net] has joined #linux4be
+12:56 < themaw> hi !
+13:24 -!- themaw [~marc@pD9548FAE.dip.t-dialin.net] has quit ["rebooting with another kernel"]
+13:55 -!- antagonizt[zZz] is now known as antagonizt
+14:20 -!- Andreas__ [~chatzilla@dclient80-218-89-70.hispeed.ch] has joined #linux4be
+14:30 -!- Filip [~Filip@117.168-136-217.adsl.skynet.be] has joined #linux4be
+15:07 -!- Filip2 [~Filip@90.48-200-80.adsl.skynet.be] has joined #linux4be
+15:07 -!- Filip [~Filip@117.168-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:12 < antagonizt> hello filip...
+15:13 < Filip2> hi antagonizt
+15:16 < antagonizt> how's the PB hacking going?
+15:16 < Filip2> trying to rebuild a  full CE system now
+15:17 < antagonizt> hehe... are you going to release your own pod ;)
+15:18 < Filip2> no, for comparing binaries with the ones running on the bee
+15:24 < Filip2> no  news on your side ?
+15:24 < antagonizt> nope... been kinda busy
+15:24 < Filip2> don't know of anyone having a ethernet card for the BE ?
+15:25 < Filip2> it looks like the kernel on the be inclused ethernet debugging support
+15:25 < antagonizt> i've got a 802.11b card
+15:25 < Filip2> don't think it's ne2000 compaptible
+15:25 < antagonizt> nope
+15:26 < antagonizt> they are relatively inexpensive on ebay...
+15:27 < antagonizt> well $22.50
+15:28 < Filip2> not  sure how to use it...
+15:40 < Filip2> contains ne2000, dhcp, and ethernet debugging code
+15:52 -!- Andreas__ [~chatzilla@dclient80-218-89-70.hispeed.ch] has quit ["ChatZilla 0.8.9 [Mozilla rv:1.1/20020827]"]
+15:58 -!- sinfonian [~bshirclif@np-dsl-216-12-217-123.ev1.net] has joined #linux4be
+16:00 < Filip2> hi Brian
+16:00 < sinfonian> Hello
+16:00 < sinfonian> how is everyone?
+16:00  * Filip2 is fine
+16:02 < sinfonian> lol.. good
+16:10 -!- antagonizt is now known as antagonizt[bbl]
+16:13 < sinfonian> so anything new with anyone?
+16:13 < Filip2> 'playing'  with platform buildeer
+16:22 -!- jal0atWrk [~jal0_wrkn@208.33.58.131] has joined #linux4be
+16:23 < jal0atWrk> hey everyone, how goes the struggle ;)
+16:26 < Filip2> hi jal0
+16:26 < Filip2> ce  kernel   on BE seems to include  ne2000, dhcp, and ethernet debugging code 
+16:26 < jal0atWrk> hey filip, i just finished removing all the bga components 
+16:26 < jal0atWrk> cool
+16:27 < Filip2> how did it go ?
+16:27 < Filip2> any additional labeling ?
+16:27 < jal0atWrk> pretty easy, with the right tools :). The only hard part was the RAM's.
+16:27 < jal0atWrk> No labeling on the bottom :(
+16:28 < jal0atWrk> going to start mapping the RAM and Serial lines when i get home.
+16:28 < jal0atWrk> did you see the new pics on my web page?
+16:28 < Filip2> yep, how did you make the high-res images ? digicam or scanner ?
+16:29 < jal0atWrk> scanner
+16:29 < Filip2> excellent quality
+16:29 < jal0atWrk> going to do another with the chips removed
+16:29 < jal0atWrk> 600 dpi
+16:31 < jal0atWrk> going to try and locate visible test point for as many lines as i can. that way others can help out 
+16:31 < jal0atWrk> brb
+16:33 < sinfonian> ooh.. I want to see those picts
+16:34 < jal0atWrk> have them in a couple of hours when i get home.  There are some new pics on my page now though
+16:34 < sinfonian> wow.. these really are high resolution
+16:35 < jal0atWrk> yeap, a little big though, kinda of hard to see on normal monitors
+16:36 < sinfonian> not a problem imon 1200x1024 and just a little scrolling.. 
+17:08 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+17:08 -!- jal0atWrk [~jal0_wrkn@208.33.58.131] has quit [Read error: 104 (Connection reset by peer)]
+17:09 < nykkto> la la la la la la laaaaaa
+17:09 < nykkto> :)
+17:09 < Filip2> hi nykkto
+17:10  * nykkto goes ACK a C_L_O_N_E!
+17:10 < nykkto> hiya!
+17:11  * nykkto ponders ko:ln
+17:11 < nykkto> brb  :)
+17:13 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has joined #linux4be
+17:14 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has quit [Client Quit]
+17:27 -!- sinfonian [~bshirclif@np-dsl-216-12-217-123.ev1.net] has quit [Read error: 113 (No route to host)]
+17:28 < nykkto> ahh, I think I scared them off :)
+17:30  * Filip2 is looking for the exit
+17:31 < nykkto> lol
+17:31 < nykkto> so Jal0 took one apart?
+17:32 < Filip2> I mailed him my pcb, he took off the components
+17:32 < nykkto> ahh, I see.  So you had a "bad" one. or are you just couragious?
+17:33 < Filip2> yep, had a bad one (screwed the NAND during one of my experiments)
+17:34 < nykkto> ahh, so can the NAND be fixed by "copying" it after he plays withthe hardware?
+17:34 < Filip2> i'm not counting on it  ... 
+17:34 < nykkto> I did'nt think so, but there IS a chance :)
+17:41 -!- antagonizt[bbl] is now known as antagonizt
+17:41  * antagonizt is back
+17:41 < nykkto> heh
+17:46 < nykkto> so anything interesting?
+17:47 < antagonizt> from me? nope
+17:47 < antagonizt> brb
+17:47 < nykkto> ahh, I am attempting to 
+17:47 < nykkto> ahh ok
+18:04  * antagonizt is back
+18:04 < antagonizt> nykkto: what are you attempting to... ?
+18:05 < nykkto> uhh, think?
+18:05 < nykkto> :)
+18:05 < nykkto> oh, yah, Install slackware, you ever work with it?
+18:05 < antagonizt> about five years ago... 
+18:06 < nykkto> humm, the ISO cd does not seem to boot into an install process, so it is a bit strange
+18:08 < antagonizt> can you still boot from a floppy?
+18:09 < nykkto> um, with slackware, I dunno, I also know I don't have a floppy installed right now.  I am thinking about loading a win98 CD to be able to work with the HD, and attempting that as a work around
+18:10 < antagonizt> can you boot to a rescue shell?
+18:11 < nykkto> I thought I had once, but it will not come up again, that is why  I am thinking of the win98 cd, doubles as an acid test of the CD drive
+18:17 < Filip2> got hardware buttons 
+18:17 < antagonizt> for sure? cool
+18:17 < Filip2> different codes for each  button
+18:18 < Filip2> change at 8 locations, but all 8 identical
+18:19 < antagonizt> weird...
+18:19 < antagonizt> why would it do that?
+18:19 < Filip2> 0xAA00A042 00 > 08 
+18:19 < Filip2> 0xAA00A044 00 > 08
+18:19 < Filip2> 0xAA00A048 00 > 08
+18:19 < Filip2> 0xAA00A04C 00 > 08
+18:19 < Filip2> 0xAA00A050 00 > 08
+18:19 < Filip2> 0xAA00A054 00 > 08
+18:19 < Filip2> 0xAA00A058 00 > 08
+18:19 < Filip2> 0xAA00A05C 00 > 08
+18:19 < Filip2> 0x08=esc
+18:21 < antagonizt> 00 is nothing pressed?
+18:22 < antagonizt> is there an interupt or such?
+18:24 < Filip2> hmm, not all different
+18:24 < Filip2> rocket: 0x10
+18:24 < Filip2> ok:     0x04
+18:24 < Filip2> esc:    0x08
+18:24 < Filip2> power:  0x80
+18:24 < Filip2> left:   0x80
+18:24 < Filip2> right:  0x40
+18:24 < Filip2> up:     0x10
+18:24 < Filip2> down:   0x20
+18:25 < Filip2> ahh, there is....
+18:25 < Filip2> weird
+18:27  * antagonizt is confused
+18:27  * nykkto is also
+18:28 < Filip2> different address change , but same bitmask; copying them exactly now
+18:30 < Filip2> power:  0x80 
+18:30 < Filip2> 0xAA000043 00 > 80 
+18:30 < Filip2> 0xAA000045 00 > 80 
+18:30 < Filip2> 0xAA000049 00 > 80 
+18:30 < Filip2> 0xAA00004D 00 > 80 
+18:30 < Filip2> 0xAA000051 00 > 80 
+18:30 < Filip2> 0xAA000055 00 > 80 
+18:30 < Filip2> 0xAA000059 00 > 80 
+18:30 < Filip2> 0xAA00005D 00 > 80 
+18:30 < Filip2> 0xAA00007E 3C > FC 
+18:30 < Filip2>  
+18:30 < Filip2> left:   0x80 
+18:30 < Filip2> 0xAA000042 00 > 80 
+18:30 < Filip2> 0xAA000044 00 > 80 
+18:30 < Filip2> 0xAA000048 00 > 80 
+18:30 < Filip2> 0xAA00004C 00 > 80 
+18:30 < Filip2> 0xAA000050 00 > 80 
+18:30 < Filip2> 0xAA000054 00 > 80 
+18:30 < Filip2> 0xAA000058 00 > 80 
+18:30 < Filip2> 0xAA00005C 00 > 80 
+18:30 < Filip2> 0xAA00006E 3C > FC
+18:30 < Filip2> (creating full list now)
+18:33 < Filip2> AA000=AA00A
+18:36 < Filip2> http://www.linux4.be/hackers/buttons.txt
+18:37 < nykkto> mmm, buttons :)
+18:40 < antagonizt> so the 9 mem locations change from the first column value to the second value on a press?
+18:40 < Filip2> indeed, 0 means nothing pressed
+18:40 < antagonizt> weird
+18:40 < antagonizt> seems kida wastfull
+18:41 < antagonizt> 1 would be enough for all 8...
+18:41 < Filip2> maybe it does make sense to our hardware guru
+18:41 < antagonizt> any idea about the interupt?
+18:42 < antagonizt> didn't someguy or someone find a mask that changed on a button press... somewhere in the vr4131 space?
+18:42 < antagonizt> one bit...
+18:42 < Filip2> indeed, should search the logs
+18:45 < antagonizt> hmmm pre-log iirc
+18:48 < Filip2> I've got theoldr logs as well (but no timestamps)
+18:50 < nykkto> filip, you have a few time stamps, I'd put some in randomly :P
+18:50 < Filip2> time but no date
+18:50 < nykkto> humm I did that too :P
+18:50 < Filip2> no daily logrotation  at that time
+18:50 < Filip2> ok
+18:50 < nykkto> ahh that IS true :(
+18:51  * nykkto is a twerp
+18:52 < Filip2> VR4122_GIUIOSELL + GIUIOSTATL
+18:52 < Filip2> reported by someguy
+18:53 < Filip2> we can use arrow keys to move pointer around
+18:54 < antagonizt> that would be cool
+18:54 < antagonizt> still have to write a driver
+18:55 < Filip2> that shouldn't be too hard
+19:03 < antagonizt> drivers/char/buttons.c
+19:03 < Filip2> does it support 'mouse emulation' by using arrows ?
+19:06 < antagonizt> not sure...
+19:06 < antagonizt> looks pretty much like a custom char driver
+19:07 < antagonizt> we could write one that essential acts as a 4 btn mouse
+19:07 < antagonizt> might be usefull
+19:08 < Filip2> would at least allow us to play tetris in linux ;-)
+19:09 < antagonizt> now that would be a cool demo
+19:12 < antagonizt> http://www.linux-mag.com/1999-10/gear_01.html
+19:14 < jal0> ugg, finally home
+19:14 < Filip2> snow ?
+19:14 < jal0> 6"
+19:14 < antagonizt> even betterhttp://www.linux-mag.com/cgi-bin/printer.pl?issue=1999-10&article=gear
+19:15 < jal0> http://www.wtnh.com/
+19:15 < jal0> the snow.... 
+19:16 < antagonizt> hmmm it didn't seem too bad here in boston
+19:16 < antagonizt> snowed all day but seemed pretty light
+19:25 < nykkto> snow, hell snow don't stop mutthin where I live :P
+19:26  * nykkto is a Minnesota snob
+19:28 < Filip2> bedtime,talk to you later folks. if anyone decides to take the challenge and write a buttons driver, leave a message  in the logs ;-)
+19:28 < jal0> ok, hi-res photo of be-bottom with bga parts removed -> http://www.linux4.be/~jal0/bot_nochips.jpg
+19:29 < jal0> going to clean off my workbench, pull out the magnifying glass and start mapping thing ;)
+19:29 < antagonizt> pretty cool jal0
+19:30 < Filip2> looks  like a clean job (ram's a little less, but i've seen them before: I wouldn't even attempt to remove those)
+19:31 < Filip2> jal0, seen the butons mapping  ? it's labelled KjCMU Base in source
+19:31  * nykkto goes ooher
+19:32 < Filip2> jal0, maybe add a copyright text to those images ;-)
+19:32 < jal0> the stuff they used to glue the ram chips to the board did not melt when heated. had to take an exacto knife and a drimmel to cut it away before i could remove them from the board
+19:32 < antagonizt> yikes
+19:32 < nykkto> YUK!
+19:32 < Filip2> not really servicable parts.....
+19:33 < jal0> nah, we have been stealing the images from that russian fourm so long, it doesn't seem right :)
+19:33 < nykkto> I wonder if he can solder them back in to fit it in the future :P
+19:33 < Filip2> or putlarger ones in ?
+19:33 < antagonizt> hmmm... and wolfman made it sound like he had someone that was thinking about ram upgrades for the be?
+19:33 < Filip2> jalà, not that they are not allowed to copy, but maybe an original location url
+19:33 < Filip2> nobody seems to remeber where those russian pictures originated from
+19:33 < jal0> nope, its a one way deal, we dont have the re-balling equipment needed to place bga parts at my job.
+19:34 < jal0> i do, i have a link somewhere
+19:34 < nykkto> bga parts?
+19:34 < Filip2> alignment is tricky i suppose
+19:34 < jal0> ball grid array
+19:34 < Filip2> ause you can't see the contacts
+19:34 < Filip2> =because
+19:34 < nykkto> mmm, never heard of them, but I gueess :P
+19:35 < jal0> that the type of packaging the vr4131 and the other chips i removed were packaged in
+19:35 < jal0> there leadless components
+19:35 < nykkto> worse than surface mount components?
+19:35 < nykkto> ack!
+19:35 < jal0> oh yeah
+19:36 < nykkto> is any one running slackware?
+19:36 < Filip2> they are surgace  mount, but the contact (a lot of them) are underneath the package
+19:36 < Filip2> surface
+19:36 < jal0> well for what were doing anyway, the advantage of using them over leadded components is that they do very well with thermal transfering
+19:36 < nykkto> ack, must install in an oven :)
+19:37 < Filip2> don't forget to take the pizza out first ;-)
+19:37 < nykkto> lol, and make sure the egg is cooked all the way through before you do
+19:38 < Filip2> talk to you later
+19:38 < jal0> later filip
+19:38 -!- Filip2 [~Filip@90.48-200-80.adsl.skynet.be] has left #linux4be []
+19:40 < nykkto> dpr jal0 whee
+19:41 < jal0> ?
+19:41 < nykkto> ohh, dpr is on yahoo :)
+19:41 < jal0> dpr?
+19:41 < nykkto> debian_piareate_roberts :)
+19:42 < nykkto> I still have to learn to type :(\
+19:42 < jal0> still have no idea what you are talking about :-/
+19:42 < nykkto> lol 
+19:43  * nykkto hits esc 8dd
+19:43 < jal0> debian_piareate_roberts  jal0 whee... what does that mean ?????
+19:43 < nykkto> dpr - was in the wrong window
+19:43 < jal0> ic
+19:43 < nykkto> jal0 whee - was hey long time no c
+19:44 < jal0> ohhhhhhhh i get it now ;)
+19:44 < nykkto> lol
+19:44 < jal0> well then, hi nykkto
+19:44 < nykkto> I'm good I can explain stupid stuff to smart people :)
+19:45 < jal0> :)
+19:45 < nykkto> so other than causing mass destruction what have you been up to
+19:46 < jal0> too much, working on documenting how to create ramdisks on windows, and re'ing the hardware for the BE.
+19:47 < nykkto> re'ing?
+19:47 < jal0> reverse engineering
+19:48 < nykkto> ooh, college words, no wonder :P
+19:49 < nykkto> I'm working on rabates, a divorce, and my resume, so I can get a job :)
+19:49 < nykkto> s/ra/re
+19:50 < jal0> rebates?
+19:51 < jal0> you returning something?
+19:51 < nykkto> day after thanksgiving sales - lots of rebates
+19:51 < jal0> ic
+19:51 < nykkto> much very cheap, or free after rebates
+19:57 < nykkto> so what OS do you run?
+20:04 < jal0> win2k, linux, minux, and win98
+20:04 < nykkto> humm, which linux, linux linux?
+20:05 < jal0> mandrake
+20:05 < nykkto> mmm, k, I am having a hell of a time with linux right now :(
+20:06 < nykkto> I got gentoo, then slack, I don't have a fast connection from home, so I can't complete the gentoo one, and slack seems to have some sort of issue, so I am stuck for a bit :(
+20:06 < jal0> i'm no expert either, mainly use it to verify my toolchain howtos and some cross-platform applications
+20:07 < nykkto> yah, it's funny, I have to have some time to play with it, I have a new CD drive, so I am going to try that :)
+21:01 -!- metalac [staff@staffpc3.uwired.washington.edu] has joined #linux4be
+21:01 < metalac> hey jal0
+21:01 < jal0> hey metalac
+21:02 < metalac> i need a terminal with ssh support for wince
+21:02 < metalac> you know of any
+21:02 < metalac> or course something free
+21:02 < nykkto> hmm, if I were a metal, I'd probibily be tin or lead :p
+21:02 < metalac> although not for be, but ipaq
+21:02 < metalac> nykkto: i thought you were filling out those rebates :)
+21:03 < jal0> have you tried teraterm
+21:03 < nykkto> I am , but I can see the screen  still :P
+21:03 < antagonizt> PuTTY
+21:03 < metalac> they have for 1.01
+21:03 < metalac> will it work?
+21:04 < jal0> not sure
+21:04 < antagonizt> http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+21:04 < metalac> seems rather old
+21:05 < metalac> antagonizt: can it do ce??
+21:05 < antagonizt> an ssh client for CE?
+21:05 < metalac> ya
+21:05 < antagonizt> haven't seen one
+21:06 < metalac> k
+21:06 < metalac> anyways thnx
+21:06 < metalac> ttyl
+21:06 < metalac> exit
+21:06 -!- metalac [staff@staffpc3.uwired.washington.edu] has quit [Client Quit]
+21:14 -!- someguy [~matt@psyche.eggs.net] has quit ["Terminated with extreme prejudice - dircproxy 1.0.4"]
+21:14 -!- someguy [~some@psyche.eggs.net] has joined #linux4be
+21:36 < antagonizt> jal0, any ideas how i figure out the interupt for the buttons... someguy said he noticed a bit change at VR4122_GIUIOSELL + GIUIOSTATL when ever a button was pressed
+21:36 < jal0> hmm...
+21:37 < jal0> not without knowing what gio pin its attached to. then you could just look it up in the manual
+21:38 < antagonizt> wouldn't it be in the interupt code somewhere?
+21:38 < jal0> btw, the companion chip is DEFINATLY NOT a vr4173, the pins dont patch
+21:38 < antagonizt> good to know
+21:38 < jal0> sure, the problem is finding where
+21:39 < antagonizt> we'd feel pretty silly if it was just a vrc4173 this whole time
+21:39 < jal0> havnt gotten into that side of things yet, but filip has
+21:40 < jal0> nope vr4173 is a 304-pin device
+21:41 < jal0> all ready have 13 pins on the unknown device mapped.. its slow going
+22:03 < nykkto> ping
+22:07 < jal0> Reply from 127.0.0.1: bytes=32 time<10ms TTL=128
+22:08 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+22:08 < jal0> :\
+22:08 < antagonizt> 7 packets transmitted, 0 received, +6 errors, 100% loss, time 6046ms
+22:08 < antagonizt> , pipe 3
+22:09 < jal0> :)
+22:09 < jal0> my eyes hurt
+22:09 < antagonizt> too much squinting at the pcb?
+22:10 < antagonizt> :)
+22:10 < jal0> yeap
+22:10 < jal0> but now i have a reference to start searching for datasheets with
+22:30 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+22:31  * nykkto giggles :)
+22:35 < antagonizt> jal0, what do you think of this idea? what if i create a dummy driver that just requests every available IRQ and gives all available irqs the same handler that just prints out the irq number when triggered
+22:36 < someguy> hello
+22:36 < antagonizt> hi someguy
+22:36 < nykkto> ooh, that is a cool idea :) not that I am a good programmer though ;)
+22:37 < someguy> I was looking at the scan_keyb.c driver
+22:37 < someguy> it looks like it polls
+22:38 < someguy> until the interrupts are figured out, would it be possible to use that to build a keyboard driver that gives us arrow keys, enter and esc?
+22:39 < someguy> http://psyche.eggs.net/be300/
+22:40 < someguy> that is what I used to find the GPIO bit that gets changed when the buttons are pressed
+22:41 < antagonizt> not sure
+22:41 < someguy> it looks like it must be used for every interrupt for the companion chip 
+22:42 < someguy> because almost anything you do changes it
+22:42 < antagonizt> maybe... then should we cascade?
+22:42 < someguy> touchscreen, CF card, buttons
+22:44 < someguy> I don't really know too much about programming at this low level
+22:45 < antagonizt> yeah me neither
+22:45 < someguy> are all the interrupt handlers and stuff cleared out once the kernel boots
+22:45 < antagonizt> not sure
+22:45 < antagonizt> i imagine they are all disabled?
+22:46 < antagonizt> and enabled as drivers are loaded?
+22:46 < someguy> I don't really know much about mips
+22:47 < someguy> but I would think it would not get very far if the CE interrupt handlers were still there I guess
+22:47 < someguy> but I am sure there are other registers and things that are not initialized 
+22:47 < someguy> and are just left in the previous state
+22:49 < antagonizt> well if i write a fake driver that enables all the regs in include/asm/vr4122/vr4122.h and sets the handler to something that just printks the irq # that called it... might work?
+22:50 < jal0> sorry antagonizt was away
+22:50 < antagonizt> np
+22:50 < jal0> reading your question now
+22:51 < jal0> the problem with that idea, is that the display also uses an irq, by remapping ALL irqs, you have no way of knowing whats going on
+22:51 < someguy> don't some of the interrupts need to be cleared before returning once they are called
+22:52 < jal0> yeap
+22:52 < jal0> thats the other problem
+22:52 < antagonizt> cli
+22:52 < jal0> then no irqs will be printed
+22:53 < jal0> if you cli from within the interrupt, only the highest priority interrupt would ever be called
+22:57 < jal0> generaly speaking external interrupt devices are attached to the micro in a wired-or configuration. it is the responsibility of the interrupt handler to ask each device in turn "were you interrupted" if not it continues to the next lower irq source.
+22:58 < jal0> if the device says "yes" then a call is made to the device specific irq handler which figures out what happend being that most external devices have more than one interrupt source
+22:59 < jal0> once determined that specifice irq handler is called which services the device and clears the irq source.
+22:59 < jal0> hope this helps on VERY BASICALY how irq's work
+23:00 < someguy> if I get a chance I may try to get a polling keyb driver going, although I have never written a driver
+23:00 < someguy> and it depends how busy I am at work :)
+23:41 -!- someguy is now known as someguy_zzz
+--- Log closed Fri Dec 06 00:00:30 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_05_07.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_05_07.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed May 07 00:00:27 2003
+00:03 -!- antagonizt is now known as antagonizt_away
+00:56 -!- Sp4wN [~phillk675@12-224-64-207.client.attbi.com] has quit ["Client exiting"]
+02:22 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_ZZZ, mouse
+02:23 -!- Netsplit over, joins: mouse
+02:23 -!- Netsplit over, joins: jal0_ZZZ
+02:24 -!- Netsplit sterling.freenode.net <-> irc.freenode.net quits: jal0_ZZZ
+02:24 -!- Netsplit over, joins: jal0_ZZZ
+10:38  * mouse is back (gone 46:04:11)
+10:38 < mouse> anybody?
+--- Log closed Wed May 07 12:49:58 2003
+--- Log opened Wed May 07 13:11:27 2003
+13:11 !irc.freenode.net *** Looking up your hostname...
+13:11 !irc.freenode.net *** Checking ident
+13:11 !irc.freenode.net *** No identd (auth) response
+13:11 !irc.freenode.net *** Found your hostname
+--- Log closed Wed May 07 13:16:34 2003
+--- Log opened Wed May 07 13:19:46 2003
+13:19 -!- antagonizt_WRK [~jroark@adsl-64-164-133-51.dsl.snfc21.pacbell.net] has joined #Linux4BE
+13:19  * antagonizt_WRK is around
+13:24 < mouse> antagonizt_WRK: hi
+13:31 < antagonizt_WRK> hey mouse
+13:32 < mouse> antagonizt_WRK: how are you?
+13:40 < antagonizt_WRK> i'm ok... you?
+13:45 < mouse> fine.
+13:48 < antagonizt_WRK> are your interupt changes in cvs?
+13:48 < mouse> no
+13:53 < antagonizt_WRK> do you have a diff or anything?
+13:54 < mouse> diff of what? or you mean a program named diff? :)
+13:54 < antagonizt_WRK> of the changes you made?
+13:56 < mouse> all changes what I made is placed in regstat archive
+13:57 < mouse> s/what/that/
+13:57 < mouse> ...kernel "dirty" driver for touchscreen
+14:01 < mouse> but I don't use CompactFlash patch...
+14:01 < antagonizt_WRK> oh...
+14:01 < mouse> what?
+14:01 < antagonizt_WRK> i was unable to get your driver to work properly when using the latest kernel from cvs
+14:01 < antagonizt_WRK> because of the compact flash patch
+14:03 < mouse> :( one trick - when booting from CF, after kernel is initialized, remove CF from slot.
+14:03 < mouse> you must do it quickly!
+14:03 < mouse> =)
+14:13  * mouse is away: fue a casa...
+14:13 < mouse> bb
+16:17 -!- antagonizt_WRK [~jroark@adsl-64-164-133-51.dsl.snfc21.pacbell.net] has quit ["ChatZilla 0.8.23 [Mozilla rv:1.3/20030312]"]
+18:41 -!- antagonizt_away [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has quit ["BitchX: good to the last drop!"]
+18:51 -!- Sp4wN [~phillk675@12-224-64-207.client.attbi.com] has joined #linux4be
+21:54 -!- antagonizt [~jroark@adsl-66-121-133-98.dsl.snfc21.pacbell.net] has joined #Linux4BE
+23:34 -!- Sp4wN [~phillk675@12-224-64-207.client.attbi.com] has quit ["Client exiting"]
+--- Log closed Thu May 08 00:00:45 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

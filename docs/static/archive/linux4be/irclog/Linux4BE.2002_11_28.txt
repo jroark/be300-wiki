@@ -1,0 +1,506 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_28.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_28.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Thu Nov 28 00:00:47 2002
+00:00 < metalac> is it possible to transfer the kernel image to be from a linux box if i use usb to connect to it?
+00:09 < antagonizt> metalac, do you mean through the be's cradle? if so check out this tutorial http://www.linux4.be/~themaw/linux2be.html
+00:11 < metalac> yeah i meant that i saw the howto, but i'm wondering what are the capabilities of it
+00:11 < metalac> i want to copy kernel image and stuff so want to see if it's possible
+00:13 -!- sinfonian [~bshirclif@twhou-207-218-204-45.ev1.net] has joined #linux4be
+00:16 < sinfonian> hello?
+00:37 < antagonizt> hello...
+00:37 < antagonizt> metalac, it should be fine as long as you have enough space
+00:38 < sinfonian> yo
+00:40 < metalac> yeah i got plenty
+00:41 < sinfonian> plenty what?
+00:41 < metalac> one thing i noticed is that if i pull out CF linux will still work
+00:41 < metalac> plenty of space
+00:41 < antagonizt> the kernel boots and loads a ramdisk...
+00:41 < sinfonian> well the bootloader loads everything in ram
+00:41 < metalac> but since it's limited right now i'm not sure if that will be the case in the future
+00:42 < antagonizt> nothing on the cf is being used...
+00:42 < metalac> well i know
+00:42 < sinfonian> I dont even own a cf card
+00:42 < metalac> but will that mean that i could pop the cf out and load the one that has some progs or mp3 on it?
+00:43 < antagonizt> eventually
+00:43 < antagonizt> depends on how you set it up
+00:44 < sinfonian> I bet you will metalac
+00:44 < antagonizt> i hope to be able to flash the entire 16mb of NAND with nothing but linux...
+00:44 < antagonizt> so i can use my WiFi cf card 
+00:44 < antagonizt> 16mb should be more than enough to store everything i want in a linux pda...
+00:45 < sinfonian> woah.. a wifi card?
+00:45 < antagonizt> the ramdisks i've made so far with picogui are only 4mb ramdisks and less than a meg compressed
+00:45 < antagonizt> yeah i bought my BE used with a WiFi cf card for $180
+00:46 < sinfonian> cool
+00:46 < sinfonian> which wifi card
+00:46 < antagonizt> the one casio sells
+00:46 < antagonizt> X8251
+00:46 < antagonizt> Xicomax
+00:46 < sinfonian> ok
+00:47 < antagonizt> if we can get the cf slot and pcmcia working on the BE it should be supported in linux
+00:47 < antagonizt> it is a Prism2.5 chipset based card...
+00:48 < antagonizt> which is supported in linux
+00:48 < sinfonian> ok... and there is a driver for it already?
+00:48 < antagonizt> several
+00:48 < sinfonian> great
+00:48 < antagonizt> it is one of the cards that can be used to sniff as well
+00:48 < sinfonian> sweet
+00:48 < antagonizt> wardriving with the BE
+00:49 < antagonizt> alas i'm ahead of myself... i never even finished the serial driver... 
+00:49 < antagonizt> luckily jal0 is taking a look at the serial stuff now
+00:53 < antagonizt> brian, so how come be-central isn't getting involved in all the forum bickering?
+00:53 < sinfonian> lol... I dont even know about this so called bickering
+00:53 < sinfonian> I dont get involved
+00:53 < sinfonian> I like wolfman and all
+00:54 < sinfonian> but I am so glad I didnt merge my site with his forum
+00:54 < antagonizt> it's a mess
+00:54 < sinfonian> I cant even get to the expod.net site
+00:54 < antagonizt> why is that?
+00:55 < sinfonian> well I want to see what is going on
+00:55 < sinfonian> but cant even get to it
+00:56 < antagonizt> are you locked out?
+00:56 < sinfonian> I dont think so
+00:56 < sinfonian> I saw that expod.com is for sale $400
+00:57 < antagonizt> damn squatters
+01:10 < sinfonian> so guys.. what are you doing for thanksgiving
+01:11 < antagonizt> eating tofurky
+01:11 < sinfonian> ok
+01:12 < antagonizt> and you?
+01:12 < sinfonian> well I have a service tomorrow morning
+01:12 < sinfonian> then driving to and from san antonio
+01:12 < antagonizt> service?
+01:12 < sinfonian> so 7 hours on the road
+01:12 < sinfonian> church
+01:20 < antagonizt> i'm going to sleep...
+01:20 < sinfonian> k
+01:20 < sinfonian> good night
+01:20 -!- antagonizt is now known as antagonizt[zZz]
+01:23 -!- sinfonian [~bshirclif@twhou-207-218-204-45.ev1.net] has left #linux4be []
+02:56 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+04:07 < jal0> hey filip
+04:07 < Filip> hi jal0
+04:07 < Filip> happy thanksgiving 
+04:08 < jal0> thanks :) i guess its an american holiday only :) need some help with a script it you got the time
+04:08 < Filip> indeed, american only, I need to work :-(
+04:09 < Filip> what script ?
+04:09 < jal0> (cd $BINUTILS_BLD; make 2>&1 | tee ../binutils-build.log) || exit
+04:09 < jal0> cant get it to work
+04:09 < jal0> it wont exit
+04:09 < jal0> i believe its because of the tee
+04:10 < jal0> basically, if the make fails i need the script to exit
+04:11 < jal0> i'm using tee because i need the output to make to both go to a file and the screen
+04:11 < Filip> hmm, looks sane at first sight, hold on
+04:12 < jal0> i think the problem is that because tee is the last program in the subexpression, the exit never gets called
+04:14 < Filip> (cd BEMON ; (make 2>&1 || exit) | tee ../log.txt)
+04:15 < Filip> place the exit closer to the make ?
+04:15 < jal0> i try is hand on
+04:16 < jal0> nope, wont work, the exit only exits the subshell
+04:17 < jal0> that why i had to place it outside of the () brackets
+04:18 < Filip> maybe test $? to decide for exit ?
+04:19 < jal0> problem is that when the subshell returns, it returns with the return value from tee, no make
+04:19 < jal0> no=not
+04:19 < Filip> move tee outside
+04:20 < jal0> then the exit will only exit the subshell and not the scrip itself... or maybe i'm not sure what you mean?
+04:21 < Filip> i see
+04:23 < jal0> is there a way to save the return code of a program?
+04:26 < Filip> (make 2>&1;export RC=$?)
+04:27 < jal0> that will only work for subshells, parent shells wont see RC....?
+04:28 < Filip> save the result in a temp file ?
+04:28 < jal0> thats an idea
+04:29 < Filip> maybe as last step in the make process, touch an 'ok' file
+04:29 < Filip> or test if the binary has been made
+04:30 < jal0> i try that.... have to think about it for a while, scripting is not my native language :)
+04:32 < Filip> like all languages, you have to use it a lot 
+04:41 < jal0> (cd $BINUTILS_BLD; make 2>&1 || echo $? > ../tmp) | tee ../binutils-build.log; [ `cat tmp` -eq "0" ] || exit
+04:41 < jal0> ok... this seems to work
+04:42 < jal0> wheww what a line :)
+04:43 < Filip> making some kind of autobuild script for the toolchain ?
+04:44 < jal0> just cleaning the one i have up. never realized it didn't exit on errors and would continue to build 
+04:44 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+04:46 < jal0> been getting alot of emails on problems with the toolchain. and how to use it after its been setup. so i though its a good time to do some updating. besides i had to create relacement scripts for 'install' and 'strip' as they dont recognize .exe extensions
+04:47 < jal0> under cygwin
+04:47 < jal0> i also need to post my ramdisk stuff to keep in synce with antagonizt :)
+04:49 < jal0> i have a feeling the next few days i'm going to be fairly busy, lucky i got the holidays off from work ;)
+04:50 < Filip> my MS present should arrive later today or tomorrow; I hope it will be usefull
+04:50 < jal0> 3.0 ?
+04:50 < Filip> when do you think to work on the monitor (at least the dump command) ?
+04:50 < Filip> yep, PB 3.0
+04:51 < Filip> should make it a lot easier to RE
+04:51 < jal0> i have it done by tonight.
+04:51 < Filip> compile all kind of small snippets of code, dissassemble it again and compare with the dll's on the BE.
+04:51 < jal0> there still is the problem with the unit resetting though after about a minute
+04:51 < Filip> especially skeleton drivers 
+04:52 < Filip> what  shell are you running ?
+04:52 < jal0> sound like fun
+04:52 < jal0> bash
+04:52 < Filip> on BE I mean: casio, expod, ...
+04:52 < jal0> oh.. casio
+04:52 < Filip> install expod, and the reboots are gone
+04:53 < Filip> that's the only reason I installed it
+04:53 < jal0> i wanted to keep as much as possible as default. but i think i'll give it a try... what version are you using.
+04:53 < Filip> it seems that watchdog timer is initialised after boot by some casio extension, which expod does not load
+04:54 < Filip> i'm still usiong an old, never released preview Goo gave me long time ago 
+04:54 < Filip> more than half of the stuff is not working, but it boots the loader and the timer is gone
+04:55 < jal0> when i get around to figuing out the irq's, i should be able to get rid of the problem altogether
+04:55 < Filip> thanksgiving: so I suppose postal service not working neither today ?
+04:56 < jal0> it just a matter of finding what register/mask bit the timer uses and disable it
+04:56 < jal0> nope :(
+04:56 < jal0> i'm soooo excited... :)
+04:56 < Filip> the good thing is that it seams Casio didn't have access to the core CE kernel sources neither
+04:57 < jal0> have you gotten any recent hits from them lately ?
+04:57 < Filip> so all their specific stuff is well separated in different DLL's build using PB3.0
+04:57 < Filip> didn't check lately
+04:58 < jal0> i wonder if they keeps tabs on projects like this
+05:06 < Filip> just looked at the logfiles for the last two weeks:
+05:06 < Filip> looks like they didn't visit us, but they did visit be-central.be on november 19
+05:08 < Filip> and they looked at some expod articles
+05:09 < jal0> i'm surprised they are not more forthcoming with info, having linux on their products would only increase there sales and market base.
+05:09 < jal0> and it costs them nothing
+05:09 < Filip> i tired to convince their product manager of the benefits 
+05:10 < Filip> tried
+05:10 < jal0> :)
+05:10 < Filip> I think they had a very good deal with MS , and are afraid of  harming that relationship
+05:12 < jal0> well, we'll get there without there help :)
+05:13 < Filip> means more fun
+05:13 < jal0> exactly, i love this type of stuff
+05:17 < Filip> looks like casio never posted at be-central
+05:17 < Filip> just checked for their ip in the posts-DB
+05:20 < Filip> 428   CasioVince vzaccardi@casio.com vzaccardi@casio.com   000.gif     Casio Product Manager   
+05:20 < jal0> ?
+05:21 < Filip> user #428 at be-central.be
+05:22 < jal0> ic
+05:22 < Filip> http://www.be-central.be/user.php?op=userinfo&uname=CasioVince
+05:22 < jal0> if [ -e tmp ] then exit .... is this legal ??
+05:23 < jal0> if [ -e tmp ] then exit; fi  or should it be like this
+05:24 < Filip> I would prefer the latter
+05:24 < jal0> syntax error near unexpected token `fi'
+05:24 < Filip> hmm
+05:30 < jal0> ahh...  if [ -e tmp ] ; then exit ; fi
+05:52 < jal0> ok, time to catch a few hours of sleep... i work on getting the 'dump' command working sometime today.
+05:52 < jal0> later
+05:53 -!- jal0 is now known as jal0_Zzz
+05:53 < Filip> cu latr
+06:12 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit ["Client Exiting"]
+06:31 -!- Filip_ [~Filip@193.190.11.247] has joined #Linux4BE
+06:41 -!- Filip__ [~Filip@193.190.11.247] has joined #Linux4BE
+06:41 -!- Filip_ [~Filip@193.190.11.247] has quit [Read error: 54 (Connection reset by peer)]
+06:48 -!- Filip [~Filip@193.190.11.247] has quit [Read error: 110 (Connection timed out)]
+08:01 -!- Filip_ [~Filip@193.190.11.247] has joined #Linux4BE
+08:19 -!- Filip__ [~Filip@193.190.11.247] has quit [Read error: 110 (Connection timed out)]
+08:19 -!- Filip_ [~Filip@193.190.11.247] has quit [Read error: 54 (Connection reset by peer)]
+08:36 -!- Den_Beiren [~me@231.43-200-80.adsl.skynet.be] has joined #linux4be
+08:48 -!- Den_Beiren is now known as Den_Beiren[AWAY]
+08:52 -!- Den_Beiren[AWAY] [~me@231.43-200-80.adsl.skynet.be] has quit ["BorgIRC 2.5.0167 - by: STING - http://www.borgirc.net"]
+--- Log opened Thu Nov 28 10:10:38 2002
+10:10 !irc.freenode.net *** Looking up your hostname...
+10:10 !irc.freenode.net *** Checking ident
+10:10 !irc.freenode.net *** Found your hostname
+--- Log closed Thu Nov 28 10:11:02 2002
+--- Log opened Thu Nov 28 10:11:11 2002
+10:11 !irc.us.freenode.net *** Looking up your hostname...
+10:11 !irc.us.freenode.net *** Checking ident
+10:11 !irc.us.freenode.net *** Found your hostname
+10:11 !irc.us.freenode.net *** No identd (auth) response
+10:11 -!- beweb_lo1ger [~filip@www.linux4.be] has joined #linux4be
+10:16 < beweb_lo1ger> :LOAD
+--- Log closed Thu Nov 28 10:17:10 2002
+10:20 -!- beweb_lo1ger [~filip@www.linux4.be] has quit ["leaving"]
+--- Log opened Thu Nov 28 10:21:19 2002
+10:21 !irc.us.freenode.net *** Looking up your hostname...
+10:21 !irc.us.freenode.net *** Found your hostname, welcome back
+10:21 !irc.us.freenode.net *** Checking ident
+10:21 !irc.us.freenode.net *** No identd (auth) response
+--- Log closed Thu Nov 28 10:23:37 2002
+11:39 -!- themaw [~marc@p5085D288.dip.t-dialin.net] has joined #linux4be
+11:41 -!- Den_Beiren [~me@126.43-200-80.adsl.skynet.be] has joined #linux4be
+11:41 < Den_Beiren> hallo
+11:41 < themaw> hi !
+11:41 < Den_Beiren> is er iemand die mij even zou kunnen helpen?
+11:41 < Den_Beiren> could you help me with write rights?
+11:41 < themaw> to be hornest: i'm not speaking any dutch .. chose german/english/frensh :)
+11:42 < Den_Beiren> ok
+11:42 < Den_Beiren> i am using debian
+11:42 < themaw> So you want to set a file attribute ?
+11:42 < Den_Beiren> and i want a user (denbeiren) 
+11:43 < Den_Beiren> to get write rights in directory /usr.server ,.. and its subdirectories
+11:43 < themaw> Hmm .. i'm using suse, so i'm not so very sure about debian commands.. but should be the same.
+11:43 < themaw> is /usr.server a mount point ?
+11:43 < themaw> or just a subdirectory of / ?
+11:44 < Den_Beiren> it is /usr/server sorry
+11:44 < Den_Beiren> this is a dir
+11:45 < Den_Beiren> it must be something with chown,.. but i can't figure it out
+11:46 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+11:46 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has left #linux4be []
+11:52 < themaw> oh sorry ..
+11:52 < themaw> i had to answer a call ..
+11:52 < themaw> ok ..
+11:53 < themaw> you can "give" the directory to your user with:
+11:54 < themaw> chown -R denbeiren: /usr/server/
+11:56 < themaw> can you tell me, wheather be-300's are already for sale in the netherlands ?
+11:56 < Den_Beiren> will this give write rights to all subdirs as well?
+11:56 < themaw> yes, -R stands for recursive ..
+11:57 < Den_Beiren> ok
+11:57 < Den_Beiren> *be "àà?
+11:57 < Den_Beiren> BE-300's,.. what are these?
+11:57 < themaw> Oh well ,.. you are on the channel "linux4be" - never wondered what that stands for ? :)
+11:58 < Den_Beiren> BE = belgium
+11:58 < Den_Beiren> not netherlands
+11:58 < themaw> Right ..
+11:58 < Den_Beiren> what is a be300 then?
+11:58 < themaw> but .. linux4be wants to bring linux to the CASIO BE-300 .. a pda !
+11:59 < themaw> look at http://www.casio-europe.com/euro/ce/product/fr_be300.html for more :)
+12:00 < Den_Beiren> no idea,.. i would have to check
+12:01 < themaw> The BE-300 is a low-cost PDA, with a color display, 16 MB RAM, 16 MB Flash, 166 Mhz MIPS-CPU ..
+12:04 < Den_Beiren> i own a psion revo,.. i wouldn't know
+12:05 < themaw> ok
+12:05 < themaw> so now you know what this irc channel is about ;)
+12:06 < Den_Beiren> hehe
+12:07 < Den_Beiren> does the chown command apply to directories created afterwards as well?
+12:07 < themaw> no .. directories are always (well, usually) owned by that user-id that created them ..
+12:07 < themaw> as well as files ..
+12:11 < Den_Beiren> i am making a dedicated gameserver on this linuxbox
+12:15 < themaw> ah, ok.
+12:37 < Den_Beiren> damn,... 
+12:37 < Den_Beiren> when you install something,..
+12:37 < Den_Beiren> can't you create directories automatically?
+12:37 < Den_Beiren> or do you have to create them manually
+12:57 < themaw> what kind of directories ?
+12:57 < themaw> i mean .. why should you want to create them automatically ?
+12:57 < themaw> what do you want to save in them that needs to be in a seperate directory ?
+13:07 -!- Den_Beiren [~me@126.43-200-80.adsl.skynet.be] has quit []
+13:46 -!- sinfonian [~bshirclif@twhou-213-45.ev1.net] has joined #linux4be
+13:49 -!- antagonizt[zZz] is now known as antagonizt
+13:49 < antagonizt> hey brian
+13:49 < sinfonian> is filip around?
+13:49 < sinfonian> the server is going nuts
+13:49 < antagonizt> haven't seen him today
+13:49 < sinfonian> I will e-mail him... see if he can fix it
+13:50 < antagonizt> looking at the logs it looks like her was here around 8:20 a.m. EST
+13:50 < antagonizt> odd
+13:50 < antagonizt> another DOS?
+13:50 < sinfonian> perhaps
+13:50 < sinfonian> maybe goo and wolf's minnions
+13:51 < antagonizt> i was logged in via ssh... and i got kicked it slowed down and then timed out
+13:51 < sinfonian> damn... we need filip.. 
+13:51 < antagonizt> DOS attacks are lame
+13:51 < antagonizt> damn script kiddies
+13:52 < sinfonian> so you know another e-mail address for him other then the linux4.be one?
+13:52 < sinfonian> one that he checks
+13:53 < antagonizt> well they are all hosted on the same server...  
+13:53 < antagonizt> so if there is a DOS attack he will have trouble checking it
+13:54 < sinfonian> yea
+13:54 < antagonizt> filip@onkelinx.be i think
+13:54 < sinfonian> thats the same box
+13:55 < sinfonian> 135 gueses on the site
+13:56 < sinfonian> guests
+13:56 < sinfonian> I would think the box could handle that many.. 
+13:57 < sinfonian> what is this about platform builder 3.0 for filip?
+13:57 < antagonizt> i guess he is expecting a delivery from M$ soon
+13:58 < sinfonian> to build a better bootloader or to hack wince and find out the registers and goodies?
+13:58 < antagonizt> RE
+13:58 < sinfonian> I cant log into the server  ssh that is
+13:58 < antagonizt> yeah me neither
+13:59 < sinfonian> got a phone number for filip?  :P
+13:59 < antagonizt> nope
+13:59 < sinfonian> I bet my international calls are like $2.50 a minute
+13:59 < antagonizt> i imagine that if we can't ssh in he can't either
+14:00 < sinfonian> right.. but he could call the company that is hosting.. or e-mail them
+14:00 < sinfonian> and they for sure can fix it
+14:01 < sinfonian> well the server goes nutz every now and then.. I imagine lots of people are busy today anyway..  you know all my servers have always been hacked on holidays
+14:01 < sinfonian> july 4th chirstmas and new years
+14:01 < sinfonian> now thanksgiving
+14:01 < antagonizt> thats lame
+14:01 < antagonizt> people need lives
+14:01 < sinfonian> well only attacked on christmas and new years
+14:13 < sinfonian> ok im out of here
+14:13 < sinfonian> bye
+14:13 -!- sinfonian [~bshirclif@twhou-213-45.ev1.net] has left #linux4be []
+14:45 -!- jal0_Zzz [~not@12-243-94-89.client.attbi.com] has quit []
+15:36 -!- Den_Beiren [~me@126.43-200-80.adsl.skynet.be] has joined #linux4be
+15:37 -!- Den_Beiren [~me@126.43-200-80.adsl.skynet.be] has quit [Client Quit]
+15:49 < themaw> antagonizt, are you there ?
+15:51 -!- Filip2 [~Filip@208.250-136-217.adsl.skynet.be] has joined #linux4be
+15:51 < themaw> good evening filip !
+15:51 < Filip2> hi folks
+15:51 < Filip2> had to lock out some DOS'ers first
+15:52 < themaw> do you know where the attack's roots were ?
+15:52 < antagonizt> themaw, yes i'm around... when i'm not cooking
+15:52 < Filip2> Moscow
+15:52 < Filip2> Moscow19-F4-0-0.RoSprint.net (193.232.88.14)  1
+15:53 < Filip2> and 212.176.48.40
+15:53 < Filip2> dropping all packets from/to those ip's now
+15:53 < themaw> Well .. law-free-zone, hm ?
+15:54 < Filip2> they're probably not using their own machines, but hacked onces
+15:54 < antagonizt> probably someone hacked those boxes...
+15:54 < antagonizt> you should send a notice to root at each of those boxen
+15:55 < Filip2> well I can't now: all packets are dropped ;-)
+15:55 < themaw> hmm .. the last (hacking) attack to my machine also came from russia .. are there so many badly configured servers with a high bandwidth ?
+16:28 < Filip2> next time you logon to th server you'll find instructions on how to page me in case you notice something abnormal
+16:28 < Filip2> (without calling international)
+16:35 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+16:36 < metalac> i see you got troubles with dosers
+16:36 < Filip2> yep,once again
+16:37 < metalac> on what server?
+16:37 < Filip2> portsentry is installed for almost 6 months now, and it locks outr between 5 and 15 portscanners each day
+16:38 < Filip2> but the last weeks i get more and more DOS attackss on httpd and mysql
+16:38 < metalac> i got a server dosed a year ago and i was away, so i had to walk people trough the phone on what to do :)
+16:38 < Filip2> dos was directed to www.be-central.be , but it runs on the same box as www.linux4.be
+16:38 < Filip2> and a couple of my personal domains
+16:38 < metalac> it seems that the winter vacation has started :) school is out :)
+16:45 -!- themaw_ [~marc@p5085D288.dip.t-dialin.net] has joined #linux4be
+16:45 -!- themaw [~marc@p5085D288.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+16:45 < themaw_> hmm .. why do I get a "user defined signal 1" when trying to run regscan via rcS ?
+16:46 < Filip2> access violation, must start it using init= in cyace
+16:47 < Filip2> it's trying to access memory outside it's own process space
+16:47 < themaw_> oh, ok ..
+16:47 < themaw_> thank you!
+17:34 < Filip2> antagonizt ?
+17:35 < antagonizt> yes
+17:35 < Filip2> just saw your post on boo's forum
+17:35 < Filip2> funny how they change groom into grim
+17:37 < Filip2> did anyon see jal0 today ? (that is after 4AM)
+17:38 < antagonizt> i haven't
+17:39 < themaw_> me neither ..
+17:54 < antagonizt> they deleted my post?
+17:55 < Filip2> indeed, it's gone
+17:56 < Filip2> was there 20 minutes ago
+17:58 < antagonizt> they even deleted my original post that prompted that one
+17:59 < antagonizt> i answered someones question under the dev section by pointing them to a thread on wolfman's forum
+17:59 < Filip2> so you're not even allowed to mention the word groom ....
+18:00 < antagonizt> a legitimate response to a valid question... it was discussed on wolf's forum and without explenation or warning my post is deleted? that is pretty lame
+18:01 < Filip2> should I post an 'innocent' question about a missing post ? being hacked ? forum problem ?
+18:01 -!- themaw__ [~marc@pD9E5C696.dip.t-dialin.net] has joined #linux4be
+18:02 < antagonizt> naw don't want to let turn into an expod vs. linux4be thing
+18:03 < antagonizt> they are being pretty hot headed right now
+18:03 < antagonizt> i'll pm goo and be polite...
+18:03 < Filip2> thos are te same people that shouted fire when Steve (brighthand) deleted posts
+18:11 -!- themaw__ [~marc@pD9E5C696.dip.t-dialin.net] has quit ["time to sleep"]
+18:17 -!- themaw_ [~marc@p5085D288.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+18:23 < Filip2> going to bed folks, talk to you later
+18:24 -!- Filip2 [~Filip@208.250-136-217.adsl.skynet.be] has left #linux4be []
+18:27 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has left #Linux4BE ["Client Exiting"]
+18:28 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+18:28 < antagonizt> here is goo's response:
+18:28 < antagonizt> <GooFather> I get nothing by grief from ABF....I am sorry it has to be that way. Same as when I had to my foot down about KCMenuII...I don't want to do these things but it is better than the alternative, trust me...
+18:30 < metalac> what's this war all about??
+18:30 < antagonizt> no clue.. just drama really
+18:31 < metalac> :) like a bunch of women 
+20:38 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+20:43 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+20:43 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit [Client Quit]
+20:54 -!- jal0_Zzz [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+20:54 -!- jal0_Zzz is now known as jal0
+22:30 < antagonizt> looks like be-central and therefore linux4.be is getting DOSed again...
+22:30 < antagonizt> pretty lame
+22:30 < jal0> hey antagonizt
+22:31 < antagonizt> hi jal0
+22:33 < antagonizt> how was your thanksgiving?
+22:34 < jal0> good, still recovering :)
+22:34 < jal0> too much food
+22:42 < jal0> and your?
+22:42 < jal0> yours
+22:43 < antagonizt> very nice... we had some friends over and cooked and ate all day... just got back from a short walk around the neighborhood
+--- Log closed Fri Nov 29 00:00:16 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

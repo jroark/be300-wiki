@@ -1,0 +1,375 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_06.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<div id="header">
+
+<h1><a href="/pivot_new/index.php"><img src="/img/Tux-underground_small.gif" border=0 align=top></a>&nbsp;&nbsp;&nbsp;Linux for the Casio BE-300</h1>
+
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" ><span class='hmenu'>Home</span></a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" ><span class='hmenu'>Forum</span></a>
+</td>
+<td>
+<a href="/dummies/index.php" ><span class='hmenu'>Dummies</span></a>
+</td>
+<td>
+<a href="/developers/index.php" ><span class='hmenu'>Developers</span></a>
+</td>
+<td>
+<a href="/hackers/index.php" ><hh4n class='hmenu'>Hackers</span></a>
+</td>
+<td>
+<a href="/contact/index.php" ><span class='hmenu'>Contact</span></a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td><span class="subtitle">Hackers</span></td></tr>
+<tr><td><a href="/hackers/index.php">overview</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/books.php">some books</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="/hackers/faq.php">FAQ</a></td></tr>
+<tr><td><a href="/hackers/bootloader.php">Bootloader</a></td></tr>
+<tr><td><a href="/hackers/toolchain.php">Toolchain</a></td></tr>
+<tr><td><a href="/hackers/kernel.php">Kernel</a></td></tr>
+<tr><td><a href="/hackers/ramdisk.php">Ramdisk</a></td></tr>
+<tr><td><a href="/hackers/hardware.php">Hardware</a></td></tr>
+<tr><td><a href="/hackers/memorymap.php">MemoryMap</a></td></tr>
+<tr><td><a href="/irclog/index.php">IRC Logs</a></td></tr>
+<tr><td><a href="/hackers/cvs.php">CVS</a></td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_06.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Dec 06 00:00:30 2002
+00:40 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+01:38 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+01:39 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+02:17 < jal0> hmm
+02:18 < jal0> night antagonizt
+02:18 -!- jal0 is now known as jal0_Zzz
+03:26 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+03:28 < antagonizt> morning filip
+03:29 < Filip> hi antagonizt
+03:29 < Filip> reading logifles
+03:30 < Filip> think I'm going to take a closer look at how interrupts are handled in CE now that I've got PB
+03:30 < antagonizt> cool...
+03:31 < antagonizt> can't write a decent mouse/serial/touchpanel etc driver without them :)
+03:31 < Filip> with all (or most ?) of the sources, it should hopefully contain enough information to find them
+03:32 < Filip> and continue to look for touchscreen x/y . The two locations I found before only toggle pen up/down
+03:33 < Filip> so there must be more, maybe in the same area where I found button details (there was also activity when buttons pressed at the known pen up/down locations)
+04:16 < antagonizt> very early stupid mouse driver... try it please http://www.linux4.be/~jroark/files/vmlinux.gz
+04:16 < antagonizt> it only reacts to the D-pad
+04:17 < antagonizt> oh and set init=/bin/mouse
+04:19 < Filip> forgot my BE at home, so will be for tonight 
+04:19 < Filip> so next thing is a working tetris ?
+04:19 < antagonizt> prolly be better by then...
+04:20 < antagonizt> next would be interfacing the "mouse" driver with PicoGUI... iirc it has support for a basic ps2 style mouse
+04:21 < antagonizt> should be able to type with the keyboard app and do whatever comes with PicoGUI
+04:33 < antagonizt> bbl
+04:33 -!- antagonizt is now known as antagonizt[bbl]
+06:14 -!- Filip [~Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+06:15 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+09:46 < someguy_zzz> hello
+09:46 -!- someguy_zzz is now known as someguy
+10:08 < Filip> hi someguy
+10:15 < someguy> hi
+10:16 < someguy> what are you guys running on your be's?  I am running ePodXP
+10:16 < someguy> I seem to have a watchdog timer problem once it boots into linux
+10:17 < Filip> an old unofficial pre-release of epodx 
+10:17 < antagonizt[bbl]> eXpod does not have this problem
+10:17 -!- antagonizt[bbl] is now known as antagonizt
+10:17  * antagonizt is around
+10:17 < someguy> ok, I will load that up
+10:21 < someguy> actually, would you guys mind checking a registry key for me - Localmachine\Drivers\CASIO\Reboot and see what the values are
+10:24  * Filip is digging around for a backup of his registry because he left his be at home
+10:26 < antagonizt> TimeOut: Dword: 10000
+10:26 < antagonizt> Wait: Dword: 1000
+10:26 < someguy> ok, thanks
+10:26 < someguy> guess that is not it
+10:26 < someguy> mine is the same
+10:26 < someguy> guess I will just load epodx
+10:27 < Filip> no, it had to do with not autostarting some process (exe or dll)
+10:28 < Filip> think modmonitor
+10:28 < Filip> killing is not sufficient, cause it has already initialised the timer; need to prevent it from starting
+10:54 < someguy> I rename a registry key and reset, why is it not keeping the setting?
+10:55 < Filip> did youflush the registry
+10:57 < someguy> no
+11:05 < Filip> bbl
+11:05 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+11:28 -!- jal0_Zzz is now known as jal0
+11:28 < jal0> hey guys, a few updates on  my page
+11:29 < jal0> the beginnings of a schematic for the mainboard of the be300 and a hi-res scan of the mainboard-bottom without bga devices
+11:31 < antagonizt> And [Hear] is the reference I will be using in future documentation.
+11:32 < antagonizt> should be: And [Here] is the reference I will be using in future documentation.
+11:32 < jal0> ?
+11:33 < jal0> ok ic
+11:34 < jal0> ok should be fixed now, thanks
+11:41 < antagonizt> np
+12:07 -!- antagonizt is now known as antagonizt[bbl]
+12:51 < someguy> guess I am going to have to load up epodx
+12:51 < someguy> I can't figure out the watchdog timer thing
+14:15 -!- themaw [~marc@pD9E5C9CA.dip.t-dialin.net] has joined #linux4be
+14:15 < themaw> hi !
+14:15 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+14:33 < themaw> heh ? why does the chat-server tell me that i got new mail ?
+14:33 < metalac> maybe someone left a memo or something
+14:35 < themaw> and how can i read it ? 
+14:36 < metalac> do /msg memoserv read
+14:36 < metalac> or do /msg memoserv help
+14:36 < metalac> to see all the options
+14:38 < themaw> You have no recorded memos.
+14:38 < themaw> Well .. ;)
+14:38 < themaw> one option less ;)
+14:46 < themaw> ok, then no messages for me. thanks anyway.
+14:47 < metalac> no prob
+14:59 -!- Filip [~Filip@90.48-200-80.adsl.skynet.be] has joined #linux4be
+15:07 < themaw> good evening filip !
+15:08 -!- sinfonian [~bshirclif@twhou-207-218-200-109.ev1.net] has joined #linux4be
+15:08 < themaw> .. and hi sinfonian!
+15:09 < sinfonian> hi
+15:09 < sinfonian> how is everyone?
+15:09 < Filip> hi folks
+15:09 < themaw> fine
+15:15 < Filip> jal0?
+15:27 -!- wolphie [~wolphie@pearlart.hu] has joined #Linux4Be
+15:27 < wolphie> hi
+15:27 < themaw> hi wolphie
+15:27 < Filip> hi wolphie
+15:28 < wolphie> themaw, Filip hi
+15:41 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit ["Client Exiting"]
+15:45 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has joined #linux4be
+15:45 < jal0atWrk> hey everyone
+15:45 < sinfonian> hey
+15:45 < Filip> hi jal0
+15:46 < Filip> have been looking at the schematic
+15:46 < jal0atWrk> still lots to do
+15:46 < jal0atWrk> plan on mapping out the nand next
+15:46 < Filip> so all pins on connector go to the companion ?
+15:46 < jal0atWrk> yeap, except for the power/grounds
+15:47 < Filip> and where did you get those chip labels (sel3 etc) ?
+15:47 < jal0atWrk> even the ones in the BE-sdk that say nc(not connected)
+15:47 < jal0atWrk> be-sdk
+15:47 < Filip> ok, labels from the serial port
+15:47 < jal0atWrk> driver design gidelines
+15:47 < Filip> NC is supposed to be Not connected, no ?
+15:48 < jal0atWrk> yeap, untill we find out what the chip is going to use known labels
+15:48 < Filip> so why ARE they  connected  ?
+15:48 < jal0atWrk> that's what the the sdk says
+15:48 < Filip> casio  doesn't  want us to know what  they are connected to ?
+15:48 < jal0atWrk> probably some secret function
+15:48 < jal0atWrk> for testing
+15:49 < Filip> did you check the xtal's  ?
+15:50 < jal0atWrk> we should put up some requests for damaged be300's on some of the fourms, once i map out the pins on the nand i want to start thinking about creating some reflash circuit. but for that i dont what to use mine !
+15:50 < jal0atWrk> not yet
+15:51 < jal0atWrk> you got the note about the unknown chip NOT being a vr4173, the pin-out dosn't match
+15:51 < Filip> yep, seen it
+15:51 < Filip> fpga ?
+15:51 < jal0atWrk> it's actually got 1 less pin than the vr4131
+15:51 < Filip> vr4131-1=vr4130 ;-)
+15:51 < jal0atWrk> flat-pack pin grid array
+15:52 < jal0atWrk> packaging type
+15:52 < jal0atWrk> where did you see that?
+15:52 < jal0atWrk> fpga
+15:52 < Filip> hmm, wrong  abbrevaiation, gate array ?
+15:52 < jal0atWrk> the component on the mainboard of the BE are fbga
+15:53 < jal0atWrk> flat-pack ball gird array
+15:53 < Filip> field programable gate array  ?
+15:53 < jal0atWrk> for what device?
+15:53 < Filip> the unkown ? (i'm not an EE, just guessing)
+15:54 < jal0atWrk> ic, its a fpga (flat-pack pin grid array device)
+15:54 < Filip> could they  use a second cpu as companion ?? like a vr4122 ??
+15:54 < jal0atWrk> you started looking at irq's?
+15:55 < jal0atWrk> though about that, maybe, have to look at some datasheets
+15:55 < Filip> yep,  in PB. there is a global array  with irq mappings
+15:55 < Filip> just need to find a way to locate it ....
+15:56 < jal0atWrk> look for data structues in the export sections of some of the dll's
+15:56 < Filip> it's in the core kernel, not in a dll
+15:57 < jal0atWrk> then there should be some mention of the data structures in a import section of some of the low-level drivers
+15:58 < Filip> no, there is an api to add to them, not to read from it
+15:58 < Filip> it's a simple double array
+15:59 < Filip> g_Intr2SysintrMap[Irq]
+15:59 < Filip> g_Sysintr2IntrMap[SysIntr]
+15:59 < jal0atWrk> have you found the interrupt vector table used by the cpu?
+15:59 < Filip> the  only code i could find that reads data  from it lives in core kernel space
+16:00 < jal0atWrk> you should be able to look in the cpu docs and find the irq vector addresses.
+16:00 < jal0atWrk> its hardwired in the cpu
+16:01 < Filip> I think it's in the pb source  as well
+16:01 < jal0atWrk> the cpu receives and interrupt and jump to a predetermined vector which just holds the address of the real function
+16:02 < jal0atWrk> have you read the irq section of the vr4131 manual?
+16:03 < Filip> long time ago
+16:03 < jal0atWrk> it has alot of info you can use to help located the actuall address of the irq functions.
+16:04 < jal0atWrk> from there you can look in the dumps for the actual code
+16:07 < jal0atWrk> so how DID the dump go?
+16:07 < Filip> took some time, and had to redo  some portions (dropped characters)
+16:10 < jal0atWrk> just too much to do, i really need to work on that monitor, i guess it can wait, hopfully once i get a majority of the componets mapped i return to it.
+16:12 < jal0atWrk> btw, we need someone to map out the matrix's for the external components that connect to the BE300 main board though the connector ribbons.
+16:12 < jal0atWrk> this should not be too difficult. they wouldn't have to deal with bga components
+16:13 < jal0atWrk> maybe put up a "request for help" on some of the fourms
+16:25 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+16:25 -!- jal0_logbot [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+16:30 < jal0atWrk> hmm, wonder how that happend?
+16:32 < Filip> the ce I recompiled with PB  includes all the binaries, and looks like  they all run on my be (iexplorer, cpanel, explorer)
+16:34 < jal0atWrk> cool
+16:34 < jal0atWrk> have you tried any driver?
+16:36 < Filip>  recompiled all standard  ones
+16:36 < Filip> going to compare those with the  ones running on be
+16:38 -!- antagonizt[bbl] is now known as antagonizt
+16:38 < antagonizt> hi guys
+16:38 < sinfonian> talk to you later
+16:38 -!- sinfonian [~bshirclif@twhou-207-218-200-109.ev1.net] has left #linux4be []
+16:38 < Filip> hi antagonizt
+16:57 -!- themaw_ [~marc@pD9E5C9CA.dip.t-dialin.net] has joined #linux4be
+16:57 -!- themaw [~marc@pD9E5C9CA.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+16:58 < themaw_> Filip, are you there ?
+16:58 < Filip> yep
+16:58 < themaw_> I just tested your key-mappings..
+16:59 < themaw_> i started with the "right"-key and there, i get a mapping wrong by 1 byte ..
+16:59 < Filip> I hop you  got the same result
+17:00 < Filip> address   or result ?
+17:00 < themaw_> adress !
+17:00 < themaw_> at 0x......43, not 42
+17:00 < themaw_> i noticed it when trying reading a word instead of a byte ..
+17:00 < Filip> let me chck my quick and dirty code ....
+17:01 < themaw_> > key1 = inb(0xAA00A043);
+17:01 < themaw_> works fine here ..
+17:02 < Filip> you might be right, I'll double check it later
+17:03 < themaw_> okay .. i didn't check the others .. but i'll do now!
+17:03 < Filip> good  to  know someone is  double checking my findings ;-)
+17:05 < antagonizt> i made a polling D-pad driver and i read all the directions from 0xAA00A042 without issue?
+17:06 < jal0atWrk> filip: dont think were ever going to know what that unknown device is. NEC dosn't even list a package wit 243 pins --> http://www.necel.com/pkg/en/neccode_e.html
+17:06 < jal0atWrk> opps 223 pins not 243
+17:07 < themaw_> d-pad ?
+17:07 < themaw_> then tell me, why i don't .. 
+17:07 < antagonizt> the direction buttons on the BE... i started to write a non interrupt driven "mouse" driver for it
+17:08 < antagonizt> ?
+17:08 < themaw_> and you have already finished ?
+17:08 < antagonizt> it blocks too much and isn't using the standard ps2 mouse protocol
+17:09 < themaw_> how does it work ? how are you interfacing with any other app ?
+17:09 < antagonizt> here let me gzip it up and upload so you guys can fix my broken code :)
+17:09 < antagonizt> /dev/mouse
+17:09 < antagonizt> i just wrote a simple app that opens dev/mouse and reads in a loop
+17:10 < Filip> jal0atWrk:you did count the #pins correclty did you ?  do you want me to count the again of the pic's ?
+17:11 < jal0atWrk> :)
+17:11 < jal0atWrk> 223 pins on the unknown and 224 on the vr4131
+17:12 < themaw_> ok, antagonizt .. let's see it :)
+17:13 < antagonizt> http://www.linux4.be/~jroark/files/btn_mouse-12062002.tar.gz
+17:14 < antagonizt> it's pretty stupid right now... i had some issues with the interruptible_sleep funcs
+17:15 < antagonizt> kernel panics and such
+17:15 < themaw_> got it
+17:15 < antagonizt> the file mouse.c is the test app
+17:15 < themaw_> i see
+17:18 < themaw_> oh, you only check the first byte ..
+17:18 < jal0atWrk> filip: there is hope yet, i DID miscount the vr4131 has 224 pins, but the unknown has 303 pins which IS listed :)
+17:18 < antagonizt> yep
+17:18 < themaw_> (ok, the first two ;))
+17:18 < themaw_> hmm .. is there a difference between readb and inb ?
+17:19 < antagonizt> #define readb(addr)                (*(volatile unsigned char *)(addr))
+17:19 < Filip> 303 pins ??
+17:19 < jal0atWrk> yeap
+17:19 < Filip> almost their max of 304
+17:19 < antagonizt> static inline unsigned char inb(unsigned long port)
+17:19 < antagonizt> {
+17:19 < antagonizt>         return __ioswab8(*(volatile u8 *)(mips_io_port_base + port));
+17:19 < antagonizt> }
+17:20 < jal0atWrk> scanning for devices with that pin count now
+17:21 < themaw_> what value has mips_io_port_base ? 1 ? ;)
+17:21 -!- themaw_ is now known as themaw
+17:23 < antagonizt> mips_io_port_base = KSEG1;
+17:25 < antagonizt> 0xa0000000
+17:27 < themaw> ah
+17:31 < themaw> ok, now i also got the 'right' adresses ;)
+17:31 < antagonizt> good to know
+17:32 < themaw> well, i thought "inb" would simply be reading from a certain address ..
+17:38 < themaw> hmm .. a different question: Is the mouse driver for future use ? 
+17:38 < antagonizt> naw it was just a hack...
+17:38 < antagonizt> untill we get the correct interrupt it is impractical
+17:39 < themaw> no i meant, what do we want with 2 pointing devices (touchpanel..)
+17:40 < themaw> but right: good for showing :)
+17:41 < antagonizt> we should just make a button driver and then a userland app that translate button movements into mouse commands as a setting
+17:41 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has quit []
+17:41 < antagonizt> but untill we get the interrupts... i thought it might be a way to do more experimenting
+17:42 < antagonizt> or play tetris :)
+17:42 < themaw> sure :)
+17:43 < themaw> why not writing a picogui driver ?
+17:43 < antagonizt> that was the plan
+17:44 < antagonizt> either to make the D-pad use the same protocol as a standard ps2 mouse
+17:44 < antagonizt> or its own special protocol and then write a PicoGUI driver to interface with it
+17:44 < antagonizt> but polling with a timer doesn't seem to work so well
+17:49 < themaw> mhm ..
+17:49 < themaw> i just saw the ps2-picogui driver .. it would be very simple to change it to your protocol..
+17:51 < antagonizt> i agree
+17:52 < Filip> what games are available for picogui ?
+17:52 < antagonizt> checkers
+17:52 < themaw> :)
+17:52 < antagonizt> blackout
+17:52 < antagonizt> battleship
+17:53 < antagonizt> galaxy :)
+17:53 < antagonizt> gridgame
+17:53 < Filip> when was that driver going to be finished ;-)
+17:53 < themaw> is there already a nes emulator for picogui ? ;))
+17:54 < antagonizt> doubt it
+17:54 < themaw> well, enough work to do ;)
+17:54 < themaw> ok ..
+17:55 < antagonizt> connectfour
+18:03 < themaw> eh, antagonizt, you don't map all the other buttons yet, right ? (like ok, esc, power, rocket)
+18:04 < antagonizt> no i was going to emulate a 4 btn mouse
+18:05 < antagonizt> never implemented the non d-pad btns
+18:07 < themaw> ok
+18:10 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has joined #linux4be
+18:18 < themaw> ok, i'm gonna get some sleep now .. cu all!
+18:19 < Filip> cu later
+18:19 < jal0atWrk> later
+18:19 -!- themaw [~marc@pD9E5C9CA.dip.t-dialin.net] has quit ["Client Exiting"]
+18:46 < Filip> going to get some sleep, talk to you later folks
+18:46 < jal0atWrk> later filip
+18:46 -!- Filip [~Filip@90.48-200-80.adsl.skynet.be] has left #linux4be []
+19:07 < wolphie> bye
+19:07 < jal0atWrk> later
+19:07 -!- wolphie [~wolphie@pearlart.hu] has quit ["fighting for peace is fucking for virginity"]
+20:07 -!- jal0atWrk [~jal0_wrkn@208.33.58.205] has quit [Read error: 104 (Connection reset by peer)]
+21:10 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+21:10 -!- jal0 [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+23:39 -!- WebGuest1383 [~eirc@ppp-209-87-245-243.storm.ca] has joined #Linux4BE
+23:40 < WebGuest1383> hi
+23:40 < antagonizt> hello
+23:40 < WebGuest1383> any good news
+23:40 < WebGuest1383> <-- hewhew
+23:40 < antagonizt> nothing major...
+23:40 < WebGuest1383> blew =(
+23:42 -!- WebGuest1383 [~eirc@ppp-209-87-245-243.storm.ca] has quit [Client Quit]
+--- Log closed Sat Dec 07 00:00:57 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,368 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_23.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_23.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Nov 23 00:00:35 2002
+01:30 -!- jal0_wrkn [~not@12-243-94-89.client.attbi.com] has quit []
+01:36 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+02:03 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has quit []
+06:09 -!- themaw [~marc@pD9548736.dip.t-dialin.net] has joined #linux4be
+12:07 -!- echoalia [~echoalia@third.bitsense.net] has quit [Read error: 60 (Operation timed out)]
+12:22 -!- someguy_bbl [~matt@psyche.eggs.net] has quit [Read error: 110 (Connection timed out)]
+13:07 -!- jal0_wrkn [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+13:07 -!- jal0_wrkn is now known as jal0
+13:07 -!- antagonizt[zZz] is now known as antagonizt
+13:07 < antagonizt> hey jal0
+13:08 < jal0> hey antagonizt
+13:08 < jal0> i think im going to work on that serial driver this weekend
+13:08 < antagonizt> cool
+13:09 < antagonizt> did you read the logs... it looks like filip may have found the touchscreen
+13:09 < jal0> i want to get rx and tx working at least even if its not using irq's
+13:09 < jal0> yeap, downloaded his io sample
+13:58 < antagonizt> i don't see any coordinates in the changing values... do you?
+13:59 < jal0> no, but i not sure what the values mean
+14:01 < themaw> jal0, i got a question on your connection sheet ..
+14:02 < jal0> yeah, shoot
+14:02 < themaw> are you sure, that it's pin3 with ground ? because here it seems more like it's pin 2 !
+14:02 < jal0> hang on let me take a look
+14:02 < themaw> i have 3,3 V between pin 2 and 19 .. 
+14:05 < themaw> btw, i only took rxd and txd, not the modem status lines .. the max232 has only 2 in and 2 out (each side)..
+14:06 < jal0> do you have the be300 open?
+14:06 < themaw> no, i didn't open it .. why should i ?
+14:07 < jal0> to check the ground, just make a continuity check between a know components gound and pin 2 of the connector. you should get a short
+14:07 < jal0> oops pin 3
+14:08 < themaw> well, if i measure between pin 2 and 19, i have something beyond 1 V .. which seems too little for the max232 to me ..
+14:08 < themaw> (sorry: pin 3)
+14:09 < themaw> ok, i'll do the tests later on .. i'm invited at a friend's house now .. thanks so far!
+14:09 < jal0> np, i also look at it later today
+14:10 -!- themaw is now known as themaw_bbl
+14:20 -!- sinfonian [~bshirclif@twhou-207-218-200-90.ev1.net] has joined #linux4be
+14:25 < sinfonian> Hello room.. where is everyone?
+14:26 < antagonizt> hey brian...
+14:27 < sinfonian> whats been going on?
+14:27 < antagonizt> looks like filip found the touch panel regs...
+14:28 < antagonizt> still no driver but he found a couple regs that change every time the panel is touched
+14:29 < antagonizt> that and some info that might be usefull for the cf slot
+14:29 < sinfonian> yea 
+14:31 < sinfonian> any more new developments?
+14:32 < antagonizt> more than that?... no
+15:04 -!- sinfonian [~bshirclif@twhou-207-218-200-90.ev1.net] has left #linux4be []
+15:23 -!- Filip_ [~Filip@254.172-136-217.adsl.skynet.be] has joined #Linux4BE
+15:32 < antagonizt> hey filip
+15:33 < Filip_> hi antagonizt
+15:33 < Filip_> no news ?
+15:34 < antagonizt> i played with your io demo...
+15:34 < Filip_> could tpanel be using a serial protocol ?
+15:35 < antagonizt> not sure... those two regs change anywhere from 4-9 times each tap?
+15:36 < Filip_> the serial output i'm using is 9K6, which might be limiting
+15:38 < antagonizt> isn't that the max...
+15:38 < antagonizt> for the be
+15:39 < Filip_> think so
+15:40 < Filip_> but that's pretty slow for doing some realtime analsysis
+15:47 < jal0> looks like the 9600 is hardcoded in the serial code, has anyone tryed changing it?
+15:48 < Filip_> not me. but should be easy to test
+15:48 < jal0> ok i'll try it in a few
+15:49 < jal0> im going to working on the serial driver this weekend, with any luck i'll have tx and rx working
+15:50 < jal0> i feel the need for a monitor type prog. but for that we need both the tx and rx working
+15:50 < Filip_> that would be great
+15:51 < jal0> i plan on implementing a standalone monitor. with basic command for dumping memory regions and modifying register.
+16:04 < jal0> hey, just for some though if the companion chip is indeed some form of 4173 then it should have a BCU, if we can find the base address of this register set(by looking for know address) then we can determine a whole slew of other base addresses.
+16:04 -!- andreas_ [~chatzilla@ool-43532dca.dyn.optonline.net] has quit ["ChatZilla 0.8.9 [Mozilla rv:1.1/20020908]"]
+16:07 < jal0> including the irq status register the piu base address and other info
+16:08 < Filip_> butt how can you find it ? has it got a signature ?
+16:10 < jal0> should have the NEC PCI vendor id of .. hand on let me find it again
+16:10 < Filip_> and how do you get that id ?
+16:11 < jal0> they are standardized as part of the PCI spec
+16:12 < Filip_> and if nec made a cusom4173, would it havesame id or different ?
+16:13 < jal0> http://www.yourvote.com/pci/pciread.asp?sort=fullname
+16:15 < jal0> not sure, thats the problem.. but if we know the base address of some devices allready, we can look for that address stored in some memory location. say its the pcu, the buc has the base address of the pcu at offset 0x10 to 0x13
+16:15 < jal0> buc=BCU
+16:16 < Filip_> the companion chip is labeled by NEC
+16:17 < Filip_> intersting: casio has an id, but no known devices
+16:17 < jal0> are you asking a question or making a statement?
+16:17 < jal0> i would thing that it would be labeled by NEC
+16:17 < jal0> not CASIO
+16:18 < jal0> device id's are normally hardcoded at production time.
+16:19 < jal0> does what i'm saying make any sense to you?
+16:20 < Filip_> ys, it does, was just checking the pcb: the companion is indeed labelled by NEC
+16:21 < jal0> BASE + 0x0A2 = PIU Control register where BASE is the value stored at location BCU_BASE+0x10
+16:21 < jal0> BCU_BASE + 0 should have the VendorId
+16:22 < jal0> BCU_BASE+2 = Device Id
+16:22 < jal0> BCU_BASE+ 4 = PCI command register
+16:22 < jal0> .... etc
+16:23 < jal0> so if we find the BCU we can look up the base address for all the other device it acts as a controller for
+16:26 < jal0> if we know that what a devices base register is already, we can do a form of reverse lookup to find the BCU_BASE+? wich is a register which hold a pointer to the known address
+16:27 < jal0> anyway, just an idea, back to the serial driver now :)
+16:29 < jal0> filip: could you give me the values of X2 and X3 crystals
+16:29 < jal0> they should be right above the campanion chip
+16:30 < Filip_> hold on
+16:33 < Filip_> x2: looks like '1VG' but hardly readable
+16:34 < jal0> do you have your scope handy?
+16:34 < jal0> you should be able to measure them directly
+16:35 -!- sinfonian [~bshirclif@twhou-207-218-200-90.ev1.net] has joined #linux4be
+16:35 < Filip_> how ? 6pins, which to use ?
+16:35 < sinfonian> hey guys I could use osme help
+16:35 < Filip_> hi Brian
+16:35 < sinfonian> I am writting an article and wanted to know where those pictures were and to get some comments about the project
+16:36 < Filip_> where is our PR manager ?
+16:36 < sinfonian> I am your pr manager
+16:36 < sinfonian> :P
+16:37 < sinfonian> think of this as a press release of sorts
+16:40 < Filip_> ok for some press, but please manage expectations: still a long way to go!
+16:41 < sinfonian>  i know
+16:41 < Filip_> jal0, what would these  X2 and X3 tell you ?
+16:42 < jal0> possible input freqs for serial and usb
+16:42 < jal0> for the BRG
+16:44 < Filip_> would having acces to that pcb help you a lot ?
+16:45 < jal0> yeap
+16:49 -!- mkorz [mkorz@lo13.univ.szczecin.pl] has joined #linux4BE
+16:49  * Filip_ is checking shipping prices for a  be->us
+16:50 < jal0> you have a pcb?
+16:50 < Filip_> a pcb with all components, and a f***ed up nand
+16:50 < jal0> ic :)
+16:51 < jal0> hmm, "ic" pun intended :)
+16:52 < Filip_> could drop it into a padded enveloppe and mail it
+16:52 < jal0> your not using it?
+16:53 < Filip_> it's *dead*  (it's from my first be, the one that the local distributor refused to repair)
+16:53 < sinfonian> what do you plan on doing to this be?
+16:54 < jal0> would it be possible to take some very hi res photos of sections of the board, better than what we have now?
+16:54 < antagonizt> i saw someone selling a dead be on wolfmans forum...
+16:55 < Filip_> sent it to silicon heaven ? (and that's not being stuck in an elevator with Pamela Anderson)
+16:55 < Filip_> the pictures we have are already very good quality
+16:55 < jal0> how much?
+16:56 < antagonizt> they didn't say... you have to make an offe
+16:56 < jal0> yes, but some closer up one would be usefull
+16:56 < antagonizt> r
+16:56 < Filip_> the umages are about double size of pcb
+16:57 < sinfonian> hey where is the directory of the pictures and the video
+16:58 < Filip_> http://www.linux4.be/~jroark/images/
+16:58 < sinfonian> ty
+17:00 < Filip_> jal0, it should cost me < 5USD to ship it to you
+17:00 < jal0> ok, i could reinberse you for the shipping
+17:01 < Filip_> you would end-up apying more  to the banks for all kind of fees than 5usd
+17:01 < Filip_> paying
+17:01 < jal0> just mail a $5 bill.
+17:02 < jal0> no too worried if it gets lost
+17:02 < jal0> contact me though email for the details
+17:05 < Filip_> ok
+17:06 < jal0> i could remove the bga parts and check for underside documentation.
+17:07 < Filip_> and take some nice disection pictures ;-)
+17:07 < Filip_> brian, there are also two 'hidden' images on that page
+17:08 < sinfonian> which ones?
+17:08 < Filip_> you should ask the author 
+17:08 < sinfonian> ok
+17:08 < sinfonian> why are they hidden?
+17:09 < Filip_> to avoid people gettiing too excited
+17:09 < sinfonian> ok.. who is jroark?
+17:09 < sinfonian> I am giving him credit.. dont let him get mad if he thinks i am stealing his picts and stuff
+17:10 < Filip_> john  ?
+17:10 < sinfonian> ok
+17:10 < sinfonian> I want to see those picts!!! :D
+17:10 < Filip_> jroark=john=antagonizt
+17:10 < sinfonian> I saw the movie
+17:10 < sinfonian> ahh
+17:10 < sinfonian> I see
+17:11 < sinfonian> ok I will brb
+17:16 < jal0> are we sure the serial uart is on the companion chip and not the cpu?
+17:16 < Filip_> why ?
+17:17 < jal0> i think its the SIU from the CPU
+17:17 < Filip_> it's not living at the  official address
+17:19 < antagonizt> what is under the black piece of plastic... top left next to the mystery chip?
+17:19 < antagonizt> http://www.linux4.be/~jroark/images/Board_bot.jpg
+17:20 < Filip_> two smaller chips
+17:20 < antagonizt> are they light sensitive? why are they covered?
+17:20 < Filip_> looks like thy are glued to the pcb, and have a shiny top
+17:21 < Filip_> jal0, #define NEC41XX_SIU_BASE  (0x0a008680 + 0xa0000000)
+17:22 < jal0> yes, but io space can be programmed
+17:22 < sinfonian> antagonist what are the s4cret pict files?
+17:22 < Filip_> ok
+17:22 < antagonizt> http://www.linux4.be/~jroark/images/pg-kb-ob-vt-01.jpeg
+17:23 < antagonizt> http://www.linux4.be/~jroark/images/pg-kb-ob-vt-02.jpeg
+17:23 < antagonizt> they aren't that secret...
+17:23 < sinfonian> oh yea ive seen them
+17:23 < antagonizt> i just didn't want to post them on a forum or anything...
+17:24 -!- metalac [metalac@ougl-staffmac01.uwired.washington.edu] has joined #linux4be
+17:24 < sinfonian> right
+17:24 < antagonizt> but they are linked on my main page
+17:25 < sinfonian> ok i am going to write an article tonight
+17:25 < sinfonian> antag.. would you mind if i used those picts just as a proof on concept..  I will let everyone know the progress of things.. 
+17:26 < sinfonian> jsut to get them excited.. 
+17:26 < antagonizt> i don't care... what does everyone else think?
+17:26 < metalac> what are we geting excited about?
+17:26 < antagonizt> might be a bit early
+17:27 < sinfonian> yes.. but it might rally alot of support behind you guys
+17:27 < sinfonian> remember the gooathon.. maybe we can raise some $$$ to help out you guys?
+17:27 < sinfonian> for shipping things etc...
+17:27 < Filip_> antagonizt,  the two covered chips are samsungs
+17:27 < sinfonian> replacing screwed up be-300s
+17:28 < Filip_> K4S641633D GL1H
+17:28 < Filip_> or
+17:28 < sinfonian> think about it.. if anyone really objects e-mail me
+17:28 < Filip_> K4S6416330 GL1H
+17:28 < sinfonian> I wont incite a riot or anything.. just use picts like that to show what is possible so far
+17:29 < Filip_> i have no problem with showing progress, as long as you clearly state there still is a long way to go
+17:30 < antagonizt> if filip has no problem i have no problem
+17:30 < Filip_> looks like it's the RAM
+17:31 < sinfonian> will do filip 
+17:31 < sinfonian> shit I go tto go
+17:31 < sinfonian> bye
+17:31 < antagonizt> cu
+17:31 -!- sinfonian [~bshirclif@twhou-207-218-200-90.ev1.net] has quit [Read error: 113 (No route to host)]
+17:32 < Filip_> K4S641633D-GL1H000 2078 Sdram
+17:32 < Filip_> 4x16 , 64M
+17:33 < jal0> ok, im confused, so what we though was the companion chip in actually ram?
+17:34 < antagonizt> well there is another data sheet for the collection... http://www.samsungelectronics.com/semiconductors/DRAM/SDRAM/64M_bit/K4S641633D/ds_K4S641633DG.PDF
+17:34 < antagonizt> no just some other chips on the be...
+17:34 < antagonizt> under a black piece of plastic
+17:34 < Filip_> no, inot companio: close to companion is this black plastic that covers two ram chips
+17:35 < Filip_> there is an unkown NEC labeled bga, same size as cpu
+17:35 < jal0> the D89.... one?
+17:37 < Filip_> indeed, NEC D89041F1001 
+17:37 < Filip_> where would you connect NAND ? to cpu or to companion ?
+17:38 < jal0> depends on the address i would think cpu
+17:39 < Filip_> take a close look at http://www.linux4.be/~jroark/images/Board_bot.jpg
+17:39 < jal0> nand is that ic2
+17:39 < Filip_> NAND is at right side, close to the black plastic piece, IC2
+17:40 < jal0> looks like to the companion
+17:40 < Filip_> it does look like a lot of traces are going to the companion
+17:41 < Filip_> does that make sense to you ?
+17:41 < jal0> yeap, the D89... is probably some form of programmable logic controller not a vr4173
+17:42 < Filip_> btw, that ram seems to be glued to the board, so forget about upgrading ram
+17:42 < jal0> heat gun should work
+17:42 < Filip_> why  that black glue ?
+17:43 -!- mkorz [mkorz@lo13.univ.szczecin.pl] has quit ["mkorz has no reason"]
+17:43 < jal0> not sure
+17:44 < jal0> probably some nonconductive adhesive
+17:46 < antagonizt> any idea what that little switch is? the one on the right directly below the black tape on Board_bot.jpg?
+17:46 < Filip_> cf slot
+17:47 < antagonizt> hmmm none of my cf cards touch that switch...
+17:47 < Filip_> maybe difference between type I and II ?
+17:47 < antagonizt> i've got both
+18:04 < jal0> filip, does you scope measure frequency. if we can determine the frequency of the xtal's we may be able to determine if indeed this unknown labeled chip is some form of 4173
+18:05 < jal0> the specs for the xtal freq's on all of the companion chips are well documented
+18:06 < Filip_> sorry, it doesn't 
+18:07 < Filip_> but i think i've got a multi that does
+18:08 < jal0> the two freqs for 4173 are 9.216kHz and 12.288MHz
+18:21 -!- themaw_bbl [~marc@pD9548736.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+18:23 < Filip_> jal0, looks like that old multi is not very reliable
+18:23 < Filip_> one is out of range
+18:24 < Filip_> other keeps giving different values all the time (with a factor of x1000 )
+18:54 < Filip_> cu later folks
+18:54 < jal0> later filip
+18:54 -!- Filip_ [~Filip@254.172-136-217.adsl.skynet.be] has left #Linux4BE []
+19:05 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has joined #linux4be
+19:16 -!- someguy [someguy@207-5-222-156.metrocast.net] has joined #linux4be
+19:40 -!- themaw [~marc@p5085D915.dip.t-dialin.net] has quit ["Client Exiting"]
+19:40 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 104 (Connection reset by peer)]
+19:52 -!- metalac [metalac@ougl-staffmac01.uwired.washington.edu] has quit []
+19:58 -!- someguy [someguy@207-5-222-156.metrocast.net] has quit [Read error: 110 (Connection timed out)]
+21:26 -!- someguy [someguy@207-5-222-156.metrocast.net] has joined #linux4be
+22:21 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+22:21 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has left #linux4be []
+22:39 -!- someguy [someguy@207-5-222-156.metrocast.net] has quit [Read error: 110 (Connection timed out)]
+23:04 -!- someguy [someguy@207-5-222-156.metrocast.net] has joined #linux4be
+23:04 -!- someguy [someguy@207-5-222-156.metrocast.net] has quit [Client Quit]
+23:52 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+--- Log closed Sun Nov 24 00:00:02 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,339 @@
+<html>
+<head>
+<title>Linux4.BE :: Jalo's Contributions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+
+<style type="text/css">
+	p.code{
+		margin-left : 40px;
+		background-color : Silver;
+		width : 85%;
+	}
+	.comment{
+		margin-left : 20px;
+	}
+	.subtitle{
+		font-size : medium;
+	}
+	.subtitle2{
+		font-size : small;
+	}
+	.subtitle3 {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #990000
+	}
+</style>
+
+<body>
+<center>
+<a href="../pivot/index.html" >
+<img src="../img/linux4be_logo.jpg"
+border="0"
+alt="Back To The Linux4.BE Home Page"
+align="middle">
+<BR>Back to the Linux4BE Homepage
+</a>
+</center>
+
+<P>
+<p class="subtitle">Welcome to my (Jal0) Linux4BE Contributions Page</span>
+</p>
+
+<p class="bodytext">
+Hello, if your here looking for some information in reguards to building the
+mipsel-linux toolchain for the Linux4BE kernel, your in luck! Below you will
+find some of the things I have been working on.
+</p>
+
+<p class="bodytext">
+[30 March 2003 ]<br>
+<span class="comment">
+The following are some of the outputs from the utilities from the
+<a href="CEK.zip" style="color:#BF9F3A" > CEK.zip</a> package.<br>
+<ul style="margin-top:0px;">
+<li style="margin-left:20px;">
+<a href="apis.txt" style="color:#BF9F3A" >apis.txt</a><br>
+</li>
+<li style="margin-left:20px;">
+<a href="procs.txt" style="color:#BF9F3A" >procs.txt</a><br>
+</li>
+<li style="margin-left:20px;">
+<a href="coredll_dll_mods.txt" style="color:#BF9F3A" >coredll_dll_mods.txt</a><br>
+</li>
+<li style="margin-left:20px;">
+<a href="exports.txt" style="color:#BF9F3A" >exports.txt</a><br>
+</li>
+</ul>
+There is also a new fourm topic at the
+<a href="http://forum.linux4.be/phpBB2/" style="color:#BF9F3A" >linux4be fourms</a>
+ entitled "CE Kernel Tools" that will be used to discuss thes utilities.
+</span>
+</p>
+
+<p class="bodytext">
+[04 March 2003 ]<br>
+<span class="comment">
+Updated the BE300 mainboard schematic in the 'Hardware Hacking' section and
+added some of my windows CE Hacking code
+<a href="CEK.zip" style="color:#BF9F3A" >[here]</a><br>
+</span>
+</p>
+
+<p class="bodytext">
+[07 December 2002 ]<br>
+<span class="comment">
+Updated the BE300 mainboard schematic in the 'Hardware Hacking' section and
+added a document showing the pins on the unknow chip that have been mapped
+so far.<br>
+</span>
+</p>
+
+<p class="bodytext">
+[06 December 2002 ]<br>
+<span class="comment">
+Added another scan, and a schematic of the BE-300 main board (Not even close
+to finished).Check out the 'Hardware Hacking' section below.<br>
+</span>
+</p>
+
+<p class="bodytext">
+[04 December 2002 ]<br>
+<span class="comment">
+Started my adventure in mapping out the physical layout of the main circuit board
+of the BE300 (Thanks Filip for the donation (-: ). See the 'Hardware Hacking'
+section below for some pictures and further details.<br>
+</span>
+</p>
+
+<p class="bodytext">
+[29 November 2002 ]<br>
+<span class="comment">
+Well, it's finaly time to update this page. Some of the things that have changed
+are listed below.<br>
+<ul style="margin-top:0px;">
+<li style="margin-left:20px;">
+Downgraded the binutils package to a more stable version. With newer verision of
+bison, the old binutils version would not compile without minor modifications.
+</li>
+<li style="margin-left:20px;">
+Made some major improvements to the toolchain auto-build script. Updating the
+toolchain is now as easy as dumping the tar.gz file under the &lt;sdk_path&gt;/pkgs
+directory and modifying the auto-build scrip to point to the new file. Also if
+for some reason the auto-build script fails, it will resume where it left off.
+Before, it would start all over from the beginning.
+</li>
+<li style="margin-left:20px;">
+The SDK has also seen some improvements. There now are 'install' and 'strip' wrappers
+for use in cygwin. The ones provide in cygwin fail when processing files with .exe
+extensions. Also from this point on, the SDK will hold a verison number.
+</li>
+<li style="margin-left:20px;">
+Fixed a problem with the runtime libraries which contained absolute paths. This caused
+some initial installs to fail (Thanks Andrey for pointing this problem out).</li>
+</ul>
+</span>
+</p>
+
+<p class="subtitle2">
+<b>USB/Serial/Power Adapter Schematic:</b>
+</p>
+<p class="bodytext">
+If you plan on doing any real hacking on the BE300, your going to need a serial
+cable. You can either buy one or build your own. If you decide to build your own,
+the following may prove useful.
+</p>
+<ul style="margin-top:0px;">
+<li style="margin-left:20px;">
+<a href="serial-con.pdf" style="color:#BF9F3A">
+serial-con.pdf (12k)
+</a>
+</li>
+</ul>
+<p class="bodytext">
+You will also need connectors which you can get from
+<a href="http://www.pc-mobile.net/conn.htm" style="color:#BF9F3A">
+ [ www.pc-mobile.net ]
+</a>
+You'll need the Casio E1xx, EM500 - 20-pin (PCC01) ones.
+</p>
+
+<p class="subtitle2">
+<b>Linux4BE SDK:</b>
+</p>
+<p class="bodytext">
+So you want to join in on the fun? Well the first things your going to need are
+the tools used in development. Below I outline 2 methods in which you can obtain
+them.
+</p>
+<p class="subtitle3">
+Option 1: Prebuilt Toolchain
+</p>
+<p class="bodytext">
+This is the easyiest way, just download them here:
+</p>
+<ul style="margin-top:0px;">
+<li style="margin-left:20px;">
+<a href="linux4be-tools-linux-2.4.18-20021129.tar.gz" style="color:#BF9F3A" >
+linux4be-tools-linux-2.4.18-20021129 ((51,504k) - Linux Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="linux4be-tools-win32-2.4.18-20021129.tar.gz" style="color:#BF9F3A" >
+linux4be-tools-win32-2.4.18-20021129 (50,307k) - Win32/Cygwin Environment</a>
+</li>
+</ul>
+<p class="bodytext">
+To install, issue the following from a command shell in a directory of your choice. Note, cygwin
+installs must be done under a cygwin commmand shell, perferably bash, NOT the windows command shell.
+</p>
+<p class="code" >
+bash$ tar xzvf linux4be-tools-&lt;platform&gt;-2.4.18-20021129.tar.gz <br>
+bash$ mv linux4be-tools-&lt;platform&gt;-2.4.18-20021129 xLinux4BE<br>
+</p>
+<p class="bodytext">
+Where &lt;platform&gt is either linux or win32 ( depending on your platform ). To actually use the
+cross-toolchain, you must set your path as follows:
+</p>
+<p class="code" >
+bash$ export PATH=&lt;path-to-xLinux4BE&gt;/bin:$PATH <br>
+</p>
+<p class="bodytext">
+You can also look here
+<a href="http://www.timesys.com/index.cfm?hdr=sdk_header.cfm&bdy=sdk_searchresults.cfm" style="color:#BF9F3A" >
+[TimeSys Linux for MIPS-based NEC VR4122 processor]</a>
+for an alternate toolchain binary package. The instructions for installing it should be availiable there also.
+</p>
+<p class="subtitle3">
+Option 2: Roll Your Own
+</p>
+<p class="bodytext">
+Grab the SDK and unpack it. The location is unimportant. Then grab the rest of the
+files for your particular environment and place them in the &lt;sdk_path&gt;/pkgs
+directory.
+</p>
+<ul style="margin-top:0px;">
+<li style="margin-left:20px;">
+<a href="linux4be_sdk_20021129.tar.gz" style="color:#BF9F3A" >
+linux4be_sdk_20021129.tar.gz (7.16k) - All Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="binutils-2.12.tar.gz" style="color:#BF9F3A" >
+binutils-2.12.tar.gz (12,321k) - All Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="gcc-3.0.4.tar.gz" style="color:#BF9F3A" >
+gcc-3.0.4.tar.gz (18,004k) - All Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="linux4be-2.4.18-20021129.tar.gz" style="color:#BF9F3A" >
+linux4be-2.4.18-20021129.tar.gz (31,177k) - All Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="linux4be-ramdisk.gz" style="color:#BF9F3A" >
+linux4be-ramdisk.gz (1,108k) - All Environments</a>
+</li>
+<li style="margin-left:20px;">
+<a href="linux4be-runtime-2.4.18-20021129.tar.gz" style="color:#BF9F3A" >
+linux4be-runtime-2.4.18-20021129.tar.gz (32,932k) - Win32/Cygwin Environment</a>
+</li>
+<li style="margin-left:20px;">
+<a href="glibc-2.2.4.tar.gz" style="color:#BF9F3A" >
+glibc-2.2.4.tar.gz (16,023k) - Linux Environment</a>
+</li>
+<li style="margin-left:20px;">
+<a href="glibc-linuxthreads-2.2.4.tar.gz" style="color:#BF9F3A" >
+glibc-linuxthreads-2.2.4.tar.gz (215k) - Linux Environment</a>
+</li>
+</ul>
+</p>
+<p class="bodytext">
+Once the needed packages have been downloaded, issue the following commands:
+</p>
+<p class="code" >
+bash$ cd &lt;sdk_path&gt;<br>
+bash$ ./scripts/dotoolchain</span>
+</p>
+<p class="bodytext">
+And thats it. Depending on your hardware and environment, it could take
+anywhere from 1-4 hours to compile. On a 233MHz machine running Mandrake
+Linux it took about 2 1/2 hours. The toolchain will be installed at ~/toolchains/xLinux4BE.
+</p>
+<p class="bodytext">
+BTW, if you want, you can
+<a href="mailto:jal0@Linux4.BE" style="color:#BF9F3A" >
+email </a>
+me the time/space requirements for your system and i post
+them here. It may help other with similar setups.
+</p>
+<p class="bodytext">
+Now if you really like doing things the hard way you can bypass running the script above and
+instead follow this
+<a href="RollYourOwn.txt" style="color:#BF9F3A" >
+<b>HOWTO</b></a>
+. Note: A local copy of this is provided in the SDK.
+</p>
+
+<p class="subtitle2">
+<b>Hardware Hacking:</b>
+</p>
+<p class="bodytext">
+I finally have in my posession the main circuit board of the BE300. Here I will start
+adding information on the physical layout/mappings of the hardware. For now I have
+some new hi-res photos of the
+<a href="top.jpg" style="color:#BF9F3A" >
+<b>[Top]</b></a>
+and
+<a href="bot.jpg" style="color:#BF9F3A" >
+<b>[Bottom]</b></a>
+of the main circuit board.
+<a href="top_bot_HIRES.jpg" style="color:#BF9F3A" >
+<b>[Here] </b></a>
+they are a bit smaller. And
+<a href="top_bot.jpg" style="color:#BF9F3A" >
+<b>[Here] </b></a>
+is the reference I will be using in future documentation.
+</p>
+
+<p class="bodytext">
+<a href="bot_nochips.jpg" style="color:#BF9F3A" >
+<b>[Here] </b></a>
+is a scan with the bga components removed from the main board.<br><br>
+<a href="be300-main-board.pdf" style="color:#BF9F3A" >
+<b>[Here] </b></a>
+is a very unfinished schematic of the BE-300 main board. I will be adding to
+this as i map out more of the pins.<br>
+</p>
+
+<p class="bodytext">
+<a href="p303-p244_used.pdf" style="color:#BF9F3A" >
+<b>[Here] </b></a>
+are the pins on the NEC D89041f1001 and NEC VR4131 that have been mapped so far.<br>
+</p>
+
+<p class="subtitle2">
+<b>Other Things Of Note:</b>
+</p>
+
+<p class="bodytext">
+Some more info will follow which will explain the process for creating ramdisks, compiling the
+kernel and updating and maintaing the sdk.
+</p>
+
+<p class="bodytext">
+Wondering how you can help? I need someone to determine the minimum install requirements for
+Windows Cygwin installs.
+<a href="mailto:jal0@Linux4.BE" style="color:#BF9F3A" >
+Email </a>
+me if your intrested.
+</p>
+
+<p style="text-align:right;">
+<br><br>
+Last updated on 2003/03/04
+</p>
+
+</body>
+
+</html>

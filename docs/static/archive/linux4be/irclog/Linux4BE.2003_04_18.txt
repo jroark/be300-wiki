@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_04_18.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_04_18.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Apr 18 00:00:16 2003
+--- Log closed Fri Apr 18 00:27:33 2003
+--- Log opened Fri Apr 18 00:27:36 2003
+00:27 !irc.freenode.net *** Looking up your hostname...
+00:27 !irc.freenode.net *** Checking ident
+00:27 !irc.freenode.net *** No identd (auth) response
+00:27 !irc.freenode.net *** Found your hostname
+--- Log closed Fri Apr 18 00:33:17 2003
+--- Log opened Fri Apr 18 00:35:32 2003
+00:35 -lilo(levin@lilo.staff.freenode)- [Global Notice] Okay, folks, last one of the night.  No users will be dumped, other than possibly from flood; it's just going to be a big netsplit.  Apologies in advance, and please bear with us through this last event.  Thanks.
+--- Log closed Fri Apr 18 00:41:17 2003
+--- Log opened Fri Apr 18 00:42:03 2003
+00:42 -!- Netsplit over, joins: jal0
+11:51 -!- sato_ [~sch@YahooBB219017080026.bbtec.net] has joined #linux4BE
+11:52 -!- sato_ [~sch@YahooBB219017080026.bbtec.net] has quit [Client Quit]
+13:27 -!- sato_ [~sch@YahooBB219017080026.bbtec.net] has joined #linux4BE
+13:27 -!- sato_ [~sch@YahooBB219017080026.bbtec.net] has left #linux4BE ["Client exiting"]
+16:56 -!- nykkto [~nykkto@66.33.46.16] has joined #linux4be
+16:57 < nykkto> J me say J me say J me say Jal0!  Jal0 come and be wanna go hoooome!
+17:09 -!- nykkto [~nykkto@66.33.46.16] has left #linux4be []
+23:44 < jal0> :)
+--- Log closed Sat Apr 19 00:00:42 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

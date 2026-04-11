@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_06_30.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_06_30.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Jun 30 00:00:21 2003
+03:35 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+03:35 < mouse> anybody here?
+04:04 -!- beweb_logger [~filip@www.linux4.be] has joined #linux4BE
+04:04 -!- beweb_logger [~filip@www.linux4.be] has quit [Remote closed the connection]
+04:08 -!- Filip_ [~filip@www.linux4.be] has joined #Linux4BE
+04:08 < mouse> Filip_: hi
+04:12 -!- Filip [~filip@www.linux4.be] has joined #linux4be
+04:12 < Filip> Mouse ?
+04:16 < mouse> I upload to linux4.be new tools collection: binutils 2.14.90, gcc 3.2.1, glibc 2.2.6
+04:17 < mouse> And I have some progress with cascade IRQs...may be you know about it, may be not
+04:26 < Filip> what's the advantage  of the  new tools ?
+04:28 < mouse> new version
+04:30 < Filip> I once looked at the cascading IRQ stuff, know how it's supposed  to work,but never got to the point of  trying to implement it
+04:31 < mouse> When you booting from CF cascade IRQs will work (If you remove it immediately after loading kernel in WinCE, it won't).
+04:32 -!- Flupke [~Filip@193.190.11.181] has joined #Linux4bE
+04:33 < Flupke> you mean  you have to leave the  CF card in  ? 
+04:33 -!- Filip [~filip@www.linux4.be] has quit [Remote closed the connection]
+04:33 < mouse> at address 0xa0000004 or 0xaa000004 (I don't remember) you can find interrupt cause bit.
+04:34 -!- Flupke is now known as Filip
+04:36 < Filip> and it doesn't work if you didn't boot from CF , or remove it while booting ?
+04:36 < mouse> f.e. HW keys pressing will generate interrupt and set third bit at 0xa0000004 or 0xaa000004 address, touchscreen will set 10-bit
+04:36 < mouse> yes
+04:37 < Filip> hmm
+04:37 < mouse> why - I don't know... I haven't a lot of time to find cause... I found it working yesterday evening...
+04:38 < Filip> looks like  the  a problem with the initialisation of the  interupt code
+04:38 < Filip> the bootloader is supposed  to be clearing all interrupts
+04:39 < Filip> but maybe when  you boot from CF and leave it in,  it is not able to clear the interrupt
+04:39 < mouse> when CF is detected, some interrupts is calling
+04:47 < Filip> mouse, is your code online somewhere ?
+04:49 < mouse> no, but now I do some routines for keyborard and touchscreen handling...
+04:59 < mouse> today evening,I think,I
+04:59 < mouse> I'll upload something to linux4.be
+05:05 < Filip> great
+05:13 < mouse> :)
+08:00 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 104 (Connection reset by peer)]
+09:00 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4be
+09:28 -!- Filip [~Filip@193.190.11.181] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+10:21 -!- Filip [~Filip@193.190.11.181] has joined #linux4be
+10:23 < mouse> http://linux4.be/~mouse/kbd.tar.bz2 kbd handling by interrupt
+10:26 < Filip> any  pre-compiled image  available  ?
+10:28 < mouse> yes...
+10:29 < mouse> http://linux4.be/~mouse/vmlinux-kbd.bz2
+10:30 < mouse> remember, that for proper running you must stay CF card in slot after boot.
+10:30 < Filip> thx
+10:31 < mouse> this handle only keyboard, touch screen handle will be later
+10:31 < Filip> i'll try both, to check the  difference
+10:32 < mouse> I have one trouble - when you hold button (rocket) and pressing 'cursor' button, changes are displaing after all buttons are released
+10:32 < mouse> :(
+10:36 < Filip> queued
+10:36 < Filip> so no 'key-repeat'
+10:37 < mouse> ?
+10:40 < Filip> you can't keep a key pressed to get multpile characters
+11:02 -!- Filip [~Filip@193.190.11.181] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+11:08  * mouse is away: fue a casa...
+17:20 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Filip_
+17:20 -!- Netsplit over, joins: Filip_
+17:24 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: Filip_
+17:29 -!- Netsplit over, joins: Filip_
+18:09 -!- Mouse[home] [~mouse@IREX-GW-2.radio-msu.net] has joined #linux4be
+18:10 -!- Mouse[home] [~mouse@IREX-GW-2.radio-msu.net] has quit [Client Quit]
+19:49  * jal0 is around
+21:25 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 110 (Connection timed out)]
+--- Log closed Tue Jul 01 00:00:46 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,467 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_08.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_08.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Jan 08 00:00:08 2003
+02:58 -!- Filip [~Filip@193.190.11.245] has joined #linux4be
+--- Log closed Wed Jan 08 03:19:03 2003
+--- Log opened Wed Jan 08 03:19:05 2003
+03:19 !irc.freenode.net *** Looking up your hostname...
+03:19 !irc.freenode.net *** Checking ident
+03:19 !irc.freenode.net *** No identd (auth) response
+03:19 !irc.freenode.net *** Found your hostname
+--- Log closed Wed Jan 08 03:24:12 2003
+--- Log opened Wed Jan 08 04:23:27 2003
+04:23 -!- Filip_ [~Filip@193.190.11.245] has joined #linux4be
+04:31 -!- Filip [~Filip@193.190.11.245] has quit [Read error: 104 (Connection reset by peer)]
+06:55 -!- Filip_ [~Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+07:59 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4BE
+07:59 < MouseLRN> hi2all
+09:27 < MouseLRN> anybody alive?
+11:19 -!- someguy [~some@psyche.eggs.net] has quit [Read error: 104 (Connection reset by peer)]
+12:30 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has joined #linux4be
+12:31 < MouseLRN> hi jal0atWrk
+12:32 < jal0atWrk> hey mouse
+12:32 < jal0atWrk> so whats the LRN
+12:36 < MouseLRN> LinuxRuNet - lrn.ru (on Russian)
+12:36 < jal0atWrk> ic
+12:38 < MouseLRN> I wrote today my first win app ;-) (which show some address). In win content of X,Y's and some state addrs is differ,then in linux.
+12:39 < jal0atWrk> cool, you should post you code, so others who want to learn about how to access physical memory has examples
+12:42 < jal0atWrk> so has any sence been made out of the touchscreen memory locations?
+12:45 < MouseLRN> ?
+12:46 < jal0atWrk> has it been determined how to compute the X/Y's of the touchpanel?
+12:47 < MouseLRN> in linux - I suppose, but in Win (maybe calibrated tpanel) - don't
+12:50 < jal0atWrk> ic
+12:51 < MouseLRN> "ic" - ?
+12:52 < jal0atWrk> "i see" ;p
+12:52 < jal0atWrk> or i understand
+12:53 < MouseLRN> ;-)
+12:53 < MouseLRN> http://lrn.ru/~mouse/be300/
+12:55 < jal0atWrk> cool
+12:55 < jal0atWrk> well have to get back to work, later
+12:56 -!- jal0atWrk [~jal0_wrkn@208.33.58.214] has quit []
+12:58 < MouseLRN> and I uploaded precompiled binary - it works in Xpod
+13:36  * MouseLRN is away: go home
+15:30 -!- Filip_ [~Filip@209.98-136-217.adsl.skynet.be] has joined #linux4be
+15:30 < Filip_> hi all
+15:31 < PsycoXul> hello
+15:40 -!- PsycoXul [psyco@adsl-63-205-42-138.dsl.lsan03.pacbell.net] has quit ["Reconnecting"]
+15:40 -!- PsycoXul [psyco@adsl-63-205-42-138.dsl.lsan03.pacbell.net] has joined #linux4be
+16:02 < antagonizt> hey filip
+16:03 -!- MouseLRN_ [~mouse@info.ru] has joined #linux4BE
+16:04 < MouseLRN_> hi2all
+16:05 < Filip_> hi antagonizt
+16:05 < Filip_> hi MouseLRN_
+16:06 < MouseLRN_> Filip_ re
+16:09 < MouseLRN_> did you have following problem: when I restart my PDA (PowerBtn in linux) it going to cycle restart
+16:22 < MouseLRN_> I'll be later
+16:22 -!- MouseLRN_ [~mouse@info.ru] has quit ["[BX] We drink more beers than Norm on Cheers!"]
+16:49 -!- jal0atWrk [~jal0_wrkn@208.33.58.140] has joined #linux4be
+16:51 < Baalz> Hi everyone
+16:52 < jal0atWrk> hey Baalz
+16:52 < Baalz> How are you jal0?
+16:53 < jal0atWrk> been kinda busy at work lately ):
+16:53 < jal0atWrk> and you?
+16:54 < Baalz> Not much happening here...
+16:54 < Baalz> Just got back from work...
+16:55 < Baalz> You work in computers?
+16:55 < jal0atWrk> yeap, and embedded applications
+16:56 < jal0atWrk> You?
+16:56 < Baalz> I am a genealogist(finding ancestries and everything...)
+16:56 < jal0atWrk> "Raiders Of The Last Ark" kinda things?
+16:56 < jal0atWrk> Last=Lost
+16:57 -!- MouseLRN_ [~mouse@info.ru] has joined #linux4BE
+16:57 < Baalz> Nope, more like family trees
+16:58 < MouseLRN_> anybody?
+16:58 < Baalz> Much of my work is to find closest relatives to people who left money but no known family
+16:59 < jal0atWrk> cool, i've been meaning to create a family tree, but never seem to have the time
+16:59 < Baalz> But I also do familiy trees for people in Quebec
+16:59 < Baalz> Finding heirs brings more money :)
+17:00 < jal0atWrk> hi mouse
+17:00 < Baalz> Hi MouseLRN
+17:00 < jal0atWrk> self employed?
+17:01 < MouseLRN_> jal0atWrk I've been update my tpanel program - now, it show regs status in Real time. Try it: http://lrn.ru/~mouse/be300/
+17:01 < Baalz> Well, kind of, but 90% of the I do is for the same  lawyer...
+17:01 < jal0atWrk> mouse, this is a WinCE prog correct?
+17:02 < MouseLRN_> what does you mean? this program for WinCe
+17:03 < jal0atWrk> mouse: is this a native Windows CE program or one ment to be ran under linux
+17:03 < MouseLRN_> for WinCE.
+17:03 < jal0atWrk> ok, i'm at work now, i'll give it a try when i get home tonight
+17:04 < MouseLRN_> ok
+17:04 < Baalz> There has been a lot of action here these days... :)
+17:05 < jal0atWrk> seem the closer we get to having a working system the more people seem intrested in help out... which is a good thing, we need all the help we can get
+17:06 < Baalz> Yep :)
+17:06 < MouseLRN_> I have the following problem: when I restart linux in PDA, it's going to cycle restart until reset is pressed
+17:06 < MouseLRN_> why?
+17:07 < jal0atWrk> not sure, never seen that problem before, try a different image and see if the results are the same
+17:07 < jal0atWrk> what shell are you running on the BE300
+17:08 < MouseLRN_> busybox. Maybe I setup some register before (when I experimentated with regs)
+17:09 < jal0atWrk> no, i mean the Window CE shell, eXpod? Casio Original? kcmenu?
+17:12 < MouseLRN_> eXpod
+17:13 < jal0atWrk> me also, so the problem may be within linux
+17:14 < MouseLRN_> some stranges: may linux and windows address space be differ?
+17:15 < MouseLRN_> yesterday all was fine
+17:15 < Filip_> MouseLRN, how do you access memory in CE ? 
+17:15 < jal0atWrk> not sure what you mean
+17:16 < jal0atWrk> What address are you trying to access
+17:17 < Filip_> http://cvs.linux4.be/cgi-bin/cvsweb.cgi/ce/InspectorTux/videomem.cpp?rev=1.2&content-type=text/x-cvsweb-markup
+17:17 < MouseLRN_> if I access in WinCE by: *(DWORD *)(0xaa000000) and in Linux: *__preg16(KSEG1ADDR(0x0a000000)) - will I get the same HW address?
+17:17 < Filip_> that's how I access memory in CE
+17:17 < Filip_> ahh, no good
+17:18 < Filip_> you have to use VirtualAlloc and  VirtualCopy
+17:18 < MouseLRN_> Filip_ all be fine, if I can see it now - my internet running in one terminal via minicom ;-)
+17:18 < Filip_> addr=0xaa00000;
+17:19 < MouseLRN_> VirtualAlloc - in Win?
+17:19 < Filip_>        lpv = VirtualAlloc(0, size, MEM_RESERVE, PAGE_NOACCESS);  
+17:19 < Filip_>         bRet = VirtualCopy(lpv, (LPVOID)(addr >> 8), size, PAGE_READWRITE | PAGE_NOCACHE | PAGE_PHYSICAL); 
+17:19 < Filip_>  
+17:19 < jal0atWrk> filip: not sure if you know this, but this will only allow you access to physical memory address > 512MB, so you can use this method to access RAM.
+17:19 < jal0atWrk> sorry you CANT use this to address RAM
+17:19 < Filip_> that's how I found videomemory
+17:20 < Filip_> not for RAM, but for peripherals
+17:20 < MouseLRN_> Filip_ no, in Win I only try to read value from address.
+17:20 < jal0atWrk> yes, ok, ic now what your talking about
+17:20 < jal0atWrk> mouse... what address
+17:21 < MouseLRN_> 0xaa000000 or 0xaa000300 or something else
+17:21 < Filip_> touchpanel, at 0xaa000300 and up
+17:24 < MouseLRN_> Filip_ see http://lrn.ru/~mouse/be300/memory lower 0xaa000300 some regs is changed after touch, but it may be something else.
+17:25 < MouseLRN_> I think, that I'll need to write realtime program, that shows regs status for linux
+17:26 < Filip_> MouseLRN, take a look at the CE video test code:
+17:27 < Filip_> http://cvs.linux4.be/cgi-bin/cvsweb.cgi/ce/InspectorTux/videomem.cpp?rev=1.2&content-type=text/x-cvsweb-markup
+17:27 < Filip_> itit's pretty straightforward and uses  VirtualAlloc and VirtualCopy
+17:28 < MouseLRN_> Filip_ now I can't see ;-(
+17:28 < Filip_> ??
+17:29 < MouseLRN_> my internet running in
+17:29 < MouseLRN_>             one terminal via minicom
+17:29 -!- andrey [~andrey@ns2.onkelinx.com] has joined #linux4be
+17:29 < Filip_> ah, shall I mail it ?
+17:29 < jal0atWrk> hi andrey
+17:29 < andrey> hi everybody
+17:29 < Filip_> hi andrey
+17:30 < MouseLRN_> andrey hi
+17:30 < jal0atWrk> andrey: do you have the CE3.0 source code from from PB, or the downloaded exe distribution from microsoft?
+17:31 < andrey> mouse, I have a small program that is run by CyaCE _instead_of_ linux kenel
+17:31 < andrey> I can try to add register monitoring to it.
+17:31 < MouseLRN_> Filip_ ;-) to view it (cvs or email) I'll need to leave IRC
+17:31 < andrey> jal0: from microsoft. are they different?
+17:32 < jal0atWrk> alot of the #defines are not in the mirosoft distro... like the KernelInfo[] index values... 
+17:33 < andrey> as far as I unserstand, ms distro contains only PRIVATE directory
+17:33 < jal0atWrk> if you even know what i'm talking about.. i dont have the source with me so i cant give you an example :(
+17:34 < MouseLRN_> andrey ok
+17:34 < andrey> I have CE.NET (4.0) tree, I hope it matches.
+17:34 < andrey> mouse, what registers do you need?
+17:35 < jal0atWrk> the list of all loaded modules is contained in the Kernel Data Section (Kernel info is one of the structures in the section)
+17:35 < Filip_> MouseLRN:
+17:35 < Filip_> LPVOID lpv;  
+17:35 < Filip_> BOOL bRet;  
+17:35 < Filip_> unsigned short *vbuff; 
+17:35 < Filip_> unsigned long size;  
+17:35 < Filip_> long addr;  
+17:35 < Filip_>  
+17:35 < Filip_> size=0x1000;  
+17:35 < Filip_> addr=0x0aa00000;  
+17:35 < Filip_> lpv = VirtualAlloc(0, size, MEM_RESERVE, PAGE_NOACCESS);  
+17:35 < Filip_> bRet = VirtualCopy(lpv, (LPVOID)(addr >> 8), size, PAGE_READWRITE | PAGE_NOCACHE | PAGE_PHYSICAL); 
+17:35 < Filip_> vbuff = (unsigned short *)lpv;  
+17:35 < Filip_>  
+17:35 < Filip_> tmp =  vbuff[300]; 
+17:35 < Filip_>  
+17:36 < Filip_> VirtualFree(lpv,0,MEM_RELEASE);  
+17:37 < Filip_> jal0, I have PB 3.0, but it's on my other harddrive
+17:37 < jal0atWrk> the KernelInfo[] array hold pointers to misc. data structures (one being a list of all loaded modules in the system). the index in KernelInfo[] for a pointer to this list is given as a macro , of which i cannot find where it is defined
+17:37 < MouseLRN_> andrey 0xaa000300 -> 0xaa000360
+17:38 < jal0atWrk> filip: would it be possible for you to zip up the *.c *.cpp *.h *.s files. The one for PB4.1 was only about 13Megs zipped?
+17:38 < Filip_> yes, but not today. my  other harddisk is in the office
+17:39 < jal0atWrk> <the one that ms allows you to download is missing alot>
+17:39 < MouseLRN_> Filip_ (addr >> 8) - ?
+17:39 < jal0atWrk> <ok i can wait, thanks>
+17:39 < andrey> mouse, I'll try
+17:39 < Filip_> I think I've read somwhere it's about 30% of the code
+17:40 < Filip_> that's how it is in the manual (MS devnet)
+17:40 < jal0atWrk> alot less than that, the biniaries take up most of the space... at least with PB4.1 anyway
+17:40 < andrey> jal0, I remember discovering some indexes by comparing disassembilng code to CE source
+17:40 < Filip_> no, I mean CE 'public released source' is only about 30% of the full sourcetree
+17:41 < Filip_> so a lot is missing
+17:41 < jal0atWrk> ic, yes it's missing alot :( and the 4.1 code has alot of differences in it.
+17:42 < Filip_> and one single additional byte in a struct blows it all
+17:42 < jal0atWrk> yeap, that seem to be alot of the problems i'm having with my code
+17:45 < MouseLRN_> Filip_ for what did you do this: addr >> 8 ?
+17:46 < Filip_> MouseLRN:  it's documented that way
+17:47 < andrey> It works! I print registers AA000300 and AA000304 and see how they change when I touch the screen.
+17:49 < Filip_> MouseLRN: http://msdn.microsoft.com/library/default.asp?url=/library/en-us/wceoem/htm/_wcepb_virtualcopy.asp
+17:49 < Filip_> there is an example using it:
+17:49 < Filip_> VirtualCopy(
+17:49 < Filip_>   pvDest, (void *)(0x64000000/256), 128*1024,   
+17:49 < Filip_>   PAGE_READWRITE | PAGE_PHYSICAL | PAGE_NOCACHE);
+17:50 < MouseLRN_> andrey and what values do you have at 0xaa000300 before touch and after?
+17:51 < andrey> just a second - I'm adding more registers...
+17:51 < jal0atWrk> mouse: right shifting by 8 is the same as dividing by 256... but you may already know this
+17:52 < MouseLRN_> jal0atWrk I know it, but for what?
+17:56 < jal0atWrk> it has to do with how VirtualCopy translates physical address.. i working on the details know with some code at home. 
+17:56 < Filip_> Drivers or applications that run in user mode must use this function, because user-mode threads do not have permission to access physical memory directly. 
+17:56 < Filip_>  
+17:56 < Filip_> This function ensures that the operating system maps a virtual address to the specific physical address of the registers or frame buffer it needs to read or write. Before the thread calls VirtualCopy, it must first obtain a virtual address by calling VirtualAlloc. VirtualAlloc and VirtualCopy must be called at the beginning of every device driver thread or application that must access peripheral registers 
+17:57 < andrey> mouse: first value is 0x1304 and after that 3704 when touched and 3304 when not
+17:57 < MouseLRN_> I have the same values in Win and linux ;-)
+17:58 < andrey> Filip: theoretically, yes, but BE is always in kernel mode
+17:58 < MouseLRN_> What about 0xaa000320(24,28,2c) and 0xaa000350(54,58,5c)?
+17:59 < andrey> mouse, do you know how to reset it back to 1304?
+17:59 < Filip_> indeed, but in CE all memory is mapped
+18:00 < andrey> oops, they all changed and don't want to go back :-(
+18:00 < MouseLRN_> no ;-( I want to try reset by writew(0x1304,0xaa000300) - will it safety?
+18:01 < Filip_> MouseLRN: found why >>8 :
+18:01 < Filip_> LPVOID lpvSrc Page Frame Number of the physical memory address being requested for mapping 
+18:01 < MouseLRN_> andrey I know - try to reset all yesterday evening
+18:01 < andrey> 320: 87F4, 324: 87D3, 328: 84B6
+18:01 < Filip_> it is a page  number 
+18:01 < Filip_> The second parameter needs some explanation. The Page Frame Number is a page index. You can get a page aligned address by means of multiplying the page index by 256. VirtualCopy requires you to pass a Page Frame Number so you must pass as the second parameter a page aligned address divided by 256.
+18:02 < andrey> I don't know about safety. Most probably you won't burm hardware but who knows...
+18:02 < andrey> I mean "burn"
+18:02 < jal0atWrk> the only reason you need to use VirtualXXXX functions on the BE (instead of just accessing though cached and uncashed sections) are if you have to deal with kernel data structures (where address are given as virtual address). incidently that what i am doing to create a function that dumps kernel data structues realtime.
+18:02 < Filip_> andrey:  make sure you have a camera around in case it does something unexpected ;-)
+18:03 < andrey> I'm still at work... :-)
+18:03 < MouseLRN_> andrey yes, that right. after touch (after, IMHO, handling) 8yyy -> 0yyy
+18:03 < Filip_> jal0 check this: http://www.pocketnow.com/cgi-bin/directory/content.cgi?db=periodicals&id=14
+18:04 < jal0atWrk> yes, i posted that like a couple of day ago here :p
+18:04 < andrey> and AA00031C is switching between 0 and 7 when I touch the screen
+18:05 < Filip_> ok
+18:05 < andrey> btw when I restarted my programs the values in AA000320, etc are different
+18:06 < Filip_> If I remember right, the videoram could only be accessed using this virtualcopy trick, and not directly
+18:06 < MouseLRN_> now, I'll try to direct write in linux to 0xaa000300 ;-)
+18:06 < MouseLRN_> using writew()
+18:07 < Filip_> andrey: your reverse touchpanel code (poweron) does write some registers as well, maybe try those
+18:07 < jal0atWrk> filip: what was the base address of video ram?
+18:07 < Filip_> they're probably safe
+18:08 < Filip_> videoram=0x0a200000
+18:08 < jal0atWrk> so 0xaa200000 dosn't work?
+18:08 < andrey> I'll try. I just thought mouse might know
+18:08 < Filip_> http://www.linux4.be/hackers/memorymap.php
+18:09 < Filip_> that contains all known locations so far
+18:09 < jal0atWrk> yes thats where i just got the 0xaa200000 address from, so you saying write to it directly didn't work?
+18:09 < andrey> Should work directly
+18:10 < Filip_> I my  memory is still intact (I wrote that code about a year ago)
+18:10 < Filip_> in linux it does, I think CE doesn't
+18:11 < jal0atWrk> ic
+18:11 < Filip_> I think it gave some kind of protection fault
+18:12 < Filip_> I also had to use the VIrtualc
+18:12 < Filip_> stuff to get the bootloader working
+18:12 < jal0atWrk> actually i remember that address for my monitor prog. that area always caused it to restart.
+18:12 < Filip_> the original version just 'brute forced' scanned the complete memory range looking for a magic signature
+18:13 < Filip_> but it locked up and crashes on the BE at several locations, while it seems to work on almost all of the other CE devices
+18:14 < jal0atWrk> yes, i remember you request for an experienced WinCE hacker :) back then
+18:14 < Filip_> and that was just *reading* from thos locations, not even writing
+18:14 < MouseLRN_> Filip_ oh, yesterday I have the same problem ;-)
+18:15 < Filip_> using Virtual* never gave me those problems
+18:15 < MouseLRN_> Filip_  same problem in linux....
+18:15 < MouseLRN_> how to resolve it
+18:16 < MouseLRN_> ?
+18:16 < Filip_> jal0, you once mentioned something about address lines being shorted  (or something like that)
+18:17 < Filip_> could it be related ?
+18:18 < jal0atWrk> i think more likely that WindowsCE uses DMA channel for video access, so we you tried to read from that address, it caused a tlb miss which in its handler probably saw the created a BUS ERROR... hence the protection fault.  But thats just my guess
+18:19 < MouseLRN_> when I tryed to read from 0x0a000300 kernel was fault ;-(
+18:19 < jal0atWrk> ... probably saw that and ...
+18:20 < MouseLRN_> but from 0x0a000300 I can read proper value, but I can't write to it.
+18:21 < jal0atWrk> mouse: yes, believe it or not, i think the irqs are not disabled properly before linux boots, so when and interrupt occurs( like a tlb miss),the windows code is still there trying to run... which causes the fault... again, only my guess
+18:21 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 110 (Connection timed out)]
+18:21 < MouseLRN_> jal0atWrk ;-)
+18:25 < jal0atWrk> i also think that the serial registers are wrong, what were actully using is the buffer address used to store RX and TX data from the Windows Serial Driver interrupt handles (which are still enabled). The reasoning behind this is that ONLY the RX and TX registers seem to be valid. trying to set any of the other registers has no effect. 
+18:25 < jal0atWrk> i also think that the serial registers are wrong, what were actully using is the buffer address used to store RX and TX data from the Windows Serial Driver interrupt handles (which are still enabled). The reasoning behind this is that ONLY the RX and TX registers seem to be valid. trying to set any of the other registers has no effect. You can see this in the fact that you have to configure the serial port in windows prior to starting linux to change 
+18:25 < jal0atWrk> opps
+18:27 < jal0atWrk> andrey: does this make any sence to you... as you were the one to hack the serial driver?
+18:31 < jal0atWrk> anyway, these are just my uncorroborated ramblings :)
+18:32 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+18:35 < MouseLRN_> Baalz hi
+18:37 < Baalz> Re
+18:38 < Baalz> I feel like there is something wrong with this chan
+18:38 < Baalz> I always lose my connection
+18:38 < MouseLRN_> anybody know how I can communicate with BE via USB?
+18:39 < MouseLRN_> from linux...
+18:39 < Baalz> I saw a post from a guy who said he did it with synce.sourceforge.net
+18:40 < Filip_> http://www.linux4.be/~themaw/
+18:40 < Filip_> Linux2BE - Connecting your BE-300 (CE) to your Linux Box using USB
+18:40 < Baalz> It was with the serial driver but they also have a usb one
+18:41 < MouseLRN_> can I use a USB instead serial console to interact with linux?
+18:42 < andrey> Well, I just found which registers CE uses, but it definitely might be congigured somewere
+18:42 < MouseLRN_> andrey what does it do?
+18:43 < andrey> Actually this is what I'm afraid of: we use some registers now but don't know whether they are hardwired or configured
+18:43 < andrey> what does what?
+18:43 < Baalz> Filip_: Is there a link to this howto on the website?
+18:43 < andrey> And if we're planning to replace CE...
+18:44 < Filip_> http://www.linux4.be/~themaw/ 
+18:44 < Baalz> Maybe I should try to write something for the developpers section too...
+18:44 < Filip_> http://www.linux4.be/~themaw/linux2be.html
+18:44 < Filip_> always welcome
+18:45 < Baalz> I mean: no pages link to this on the website right?
+18:45 < Filip_> I'm going to get some sleep...
+18:45 < Filip_> Baalz: not sure
+18:45 < MouseLRN_> andrey you mean, that WinCE run handleing interrupts, while we use some registers?
+18:45 < Filip_> should probably add it to the faq's
+18:45 < Baalz> Have a good night :)
+18:45 < MouseLRN_> andrey "run" -> "continue" ;-)
+18:46 < MouseLRN_> Baalz ;-)
+18:46 < andrey> mouse it's true also.
+18:46 -!- Filip_ [~Filip@209.98-136-217.adsl.skynet.be] has left #linux4be []
+18:47 < andrey> But what I mean is that it's possible that AA000300 is touch-panel register just because it was configured this way somewere in CE startup code.
+18:48 < andrey> And if we replace CE completely it will not be configured at all.
+18:49 < MouseLRN_> andrey avoid our hard work if it's true ;-(
+18:50 < MouseLRN_> did anybody try to write email to NEC or Casio developers?
+18:52 < andrey> AFAIK they don't respond
+18:52 < Baalz> I dont think Casio likes to see people working on something better that they can provide :)
+18:53 < Baalz> The BE-300 is a nice machine with an OS that suckz...
+18:54 < Baalz> They could make it a real pocketPC but they would sell les of the more expensive models.
+18:55 < andrey> It's funny but when I looked into WinCE kernel it's not that bad. :-))
+18:58 < MouseLRN_> ;-)
+18:59 < MouseLRN_> when it's small - it's not too bad, but if source code over million lines... ;-) linux apps is buggy too - fact, kernel drivers too
+19:02 < MouseLRN_> OH, Y-E-E-S!!! I reset X,Y's pair to zero and 0xaa000300 reg to 0x400 ;-)
+19:02 < MouseLRN_> Let's I try it one more time... please wait
+19:03 < MouseLRN_> andrey can you paste yesterday code?
+19:03 < andrey> That's why I liked it - it's kinda microkernel: all drivers are separate dlls (like touch.dll :-))
+19:04 < andrey> filesystem is separate user-space aplication, etc...
+19:05 < MouseLRN_> It's works, but I'll need to reinitialize touchpanel control reg (0xaa000300), andrey!
+19:05 < andrey> what yesterday's code?
+19:05 < MouseLRN_> that you disasm'ed
+19:06 < MouseLRN_> see yesterday IRC log
+19:06 < andrey>     ptr = (DWORD *) (g_RegistersMap + 0x1118);
+19:06 < andrey>     if ((*ptr & 0x0001) == 0) *ptr |= 0x0001;
+19:06 < andrey>     
+19:06 < andrey>     ptr = (DWORD *) (g_RegistersMap + 0x03C8);
+19:06 < andrey>     if ((*ptr & 0x0003) == 0) *ptr |= 0x0003;
+19:06 < andrey>     ptr = (DWORD *) (g_RegistersMap + 0x0300);
+19:06 < andrey>     *ptr |= 0x0001;                                   // reset?
+19:06 < andrey>     while (*ptr & 0x0001);
+19:06 < andrey>     * (DWORD *) (g_RegistersMap + 0x0308) = 1500;     // sample rate?
+19:06 < andrey>     * (DWORD *) (g_RegistersMap + 0x030C) = 200;      // voltage stabilization time?
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0310) = 0x0032;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0318) = 0x0001;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0008;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0020;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x00C0;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) |= 0x0300;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) &= ~0x0020;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0300) |= 0x0004;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0304) |= 0x1D00;
+19:07 < andrey>     * (DWORD *) (g_RegistersMap + 0x0304) |= 0x00FF;
+19:07 < andrey> this one?
+19:08 < MouseLRN_> yes
+19:14 < MouseLRN_> YEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSS!!!! It works ;-))))
+19:14 < andrey> What works? :-)
+19:15 < MouseLRN_> touchpanel reset - now we can write routines for handle touches ;-)
+19:17 < MouseLRN_> I think that this 0xaa000300 --> addresss is "owned" by HW
+19:17 < andrey> What about interrupts? You are not going to check registers in a loop, are you? :-)
+19:19 < andrey> What did you do for reset?
+19:20 < MouseLRN_> yes, I simple 'cat' proc file, which displays status. But we can find necessary IRQ. Now I'm going to sleep
+19:20 < MouseLRN_> I can upload it to my homepage. Please wait...
+19:20 -!- MouseLRN_ [~mouse@info.ru] has quit ["[BX] He-Man uses BitchX. *HE HAS THE POOWWEEEEEEEEEERRRRRRRR!!!!!*"]
+19:21 < andrey> Have a good night!
+19:21 < jal0atWrk> later andrey
+19:22 -!- MouseLRN_ [~mouse@info.ru] has joined #linux4BE
+19:22 -!- andrey [~andrey@ns2.onkelinx.com] has left #linux4be []
+19:23 < MouseLRN_> now you can get it here: http://lrn.ru/~mouse/be300/giuinfo.c  in get_giuinfo()
+19:24 < MouseLRN_> by2all, see tomorrow
+19:25 < jal0atWrk> later mouse
+19:25 < MouseLRN_> bb
+19:26 -!- MouseLRN_ [~mouse@info.ru] has quit [Client Quit]
+20:22 -!- jal0atWrk [~jal0_wrkn@208.33.58.140] has quit [Read error: 113 (No route to host)]
+--- Log closed Thu Jan 09 00:00:35 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

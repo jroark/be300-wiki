@@ -1,0 +1,447 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_20.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="../img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="../img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="../pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="../dummies/index.php.html" >Dummies</a>
+</td>
+<td>
+<a href="../developers/index.php.html" >Developers</a>
+</td>
+<td>
+<a href="../hackers/index.php.html" >Hackers</a>
+</td>
+<td>
+<a href="../contact/index.php.html" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="../hackers/index.php.html">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/books.php.html">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="../hackers/faq.php.html">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/bootloader.php.html">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/toolchain.php.html">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/kernel.php.html">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/ramdisk.php.html">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/hardware.php.html">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/memorymap.php.html">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="../irclog/index.php.html">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="../hackers/cvs.php.html">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_20.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Nov 20 06:58:21 2002
+06:58 !irc.freenode.net *** Looking up your hostname...
+06:58 !irc.freenode.net *** Found your hostname, welcome back
+06:58 !irc.freenode.net *** Checking ident
+06:58 !irc.freenode.net *** No identd (auth) response
+--- Log opened Wed Nov 20 07:01:16 2002
+07:01 !irc.freenode.net *** Looking up your hostname...
+07:01 !irc.freenode.net *** Found your hostname, welcome back
+07:01 !irc.freenode.net *** Checking ident
+07:01 !irc.freenode.net *** No identd (auth) response
+--- Log closed Wed Nov 20 07:07:15 2002
+--- Log opened Wed Nov 20 07:07:16 2002
+07:07 < nykkto> :)
+07:45 < Filip> antagonizt ?
+07:46 < antagonizt> yes
+07:48 < Filip> did you test vr4131SIU / DSIU ?
+07:48 < antagonizt> tried to...
+07:48 < Filip>  /msg ChanServ HELP SET
+07:48 < Filip> but no luck ?
+07:49 < antagonizt> yeah no luck
+07:49 < nykkto> awww
+07:49  * nykkto wants to get lucky
+07:49 < Filip> touchpanel has only 4 wires attached to it
+07:49 < nykkto> oops, err um well
+07:49 < antagonizt> would you take a look at the app I used and let me know if i made any stupid mistakes: http://www.linux4.be/~jroark/files/serial_poll.c
+07:50 < antagonizt> that and i'm not all that sure about the serial driver...
+07:51 < Filip> code looks ok at first glance
+07:51 < Filip> 3  options : keep peeking around and hope we're lucky soon
+07:52 < Filip> or hardware reverse engineering, tracing the cn300 connector to wherever it leads
+07:52 < Filip> or software reverse engineering, looking at the CE drivers
+07:52 < Filip> or all of the above
+07:53 < antagonizt> the hardware tracing is all up to you...
+07:54 -!- mode/#linux4BE [+o Filip] by ChanServ
+07:54 < antagonizt> if you want to sacrifice your older BE...
+07:54 <@Filip> yeah, problem is i'm not an electronics expert, and don't really have the correct equipement for it
+07:55 < antagonizt> is andrey up for some more RE?
+07:56 <@Filip> not sure
+07:56 <@Filip> I'll check with him, but it's a very slow process; Did anyone saw the article on slashdot a couple of days ago about reversing windows trojans on linux ?
+07:57 < antagonizt> yeah looked neat...
+07:57 < nykkto> do you have a recerse compile tool?
+07:57 < nykkto> s/ece/eve/
+07:57 < nykkto> heh, we should put in a request out on the boards for a dead one, and see what we get
+07:57 <@Filip> I did not read the details, but did it contain info that could help us ?
+07:58 <@Filip> yep, we have access to IDA Pro
+07:58 <@Filip> brb
+07:58 < antagonizt> main use for linux instead of win32 was to avoid contaminating your system
+07:59 <@Filip> but what tools did they use ? gcc ?
+07:59 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+08:00 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+08:27 < antagonizt> the site the article is on appears to be offline...
+08:30 < Filip> but the second comment on slashdot contained the full text of the article, just read iti
+08:30 < Filip> http://developers.slashdot.org/article.pl?sid=02/11/16/1925246&mode=thread&tid=156
+08:31 < Filip> or better http://developers.slashdot.org/comments.pl?sid=45244&threshold=1&commentsort=0&tid=156&mode=thread&cid=4686951
+09:23 < nykkto> ?me yawns
+09:23 < nykkto> heh
+09:47 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has joined #linux4be
+10:38 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["ChatZilla 0.8.10 [Mozilla rv:1.2a/20020910]"]
+10:56 < jal0> morning all
+10:56 < Filip> morning jal0_logger
+10:57 < jal0> hey found a nice little function in the pb source code called find4173()
+10:57 < jal0> it uses HalGetBusData to locate the chip on the pci bus
+10:58 < jal0> and HalTranslateBusAddress to locate it in the mem map
+10:59 < Filip> so you're converting it to linux now ?
+10:59 < jal0> going to see if i can get it to run under win32 to spit out info on the bus
+11:00 < jal0> it look very simple, can you accept dcc
+11:02 < Filip> dcc ok
+11:02 < jal0> her it comes
+11:04 < jal0> awaiting reply
+11:04 < Filip> failed, could you mail it to me ?
+11:04 < jal0> yeap
+11:04 < Filip> thx
+11:05 < Filip> I have to pick up the kids in a minute, I'll take a look at it in a couple of hours
+11:05 < jal0> ok later
+11:07 < jal0> it on its way
+11:08 < Filip> bbl
+11:08 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+12:30 -!- sinfonian [~bshirclif@twhou-212-29.ev1.net] has joined #linux4be
+12:30 < sinfonian> Hola
+12:30 < jal0> hey sinfonian
+12:32 -!- jal0 is now known as jal0_wrkn
+12:32 < sinfonian> whats going on?
+12:32 < jal0_wrkn> not much getting ready to go to work
+12:33 < jal0_wrkn> as for the linux4be project, it looks like the next big step is getting touchscreen to work
+12:33 < jal0_wrkn> ok, got to go now, later
+12:33 < sinfonian> woah
+12:33 < sinfonian> touchsceen???  already???
+12:34 < jal0_wrkn> yeap
+12:34 < sinfonian> does it boot up alright?
+12:34 < jal0_wrkn> yeah check out http://www.linux4.be/~jroark/images/index.html
+12:34 < jal0_wrkn> some boot pics
+12:35 < sinfonian> OMG
+12:35 < jal0_wrkn> :) ... well i really have to go now, later
+12:35 < sinfonian> oh this is too cool
+12:36 < sinfonian> I havnt touched my be in like 4 months
+12:37 < sinfonian> I LOVE YOU GUYS!!!!
+12:37 < sinfonian> :D
+12:47 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+12:48 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit [Remote closed the connection]
+12:48 < antagonizt> hey people
+12:49 < sinfonian> hey
+12:58 < antagonizt> brian, long time no see
+12:58 < sinfonian> I know
+12:58 < sinfonian> damn I am flipping out over this linux booting stuff
+12:59 < sinfonian> someone tell me more
+12:59 < sinfonian> I see the pictures
+12:59 < antagonizt> did you look at the pictures i took with my crappy webcam?
+12:59 < antagonizt> ok
+12:59 < sinfonian> yea
+12:59 < antagonizt> try this one http://www.linux4.be/~jroark/images/pg-kb-ob-vt-01.jpeg
+12:59 < sinfonian> yea thats great
+12:59 < antagonizt> i also built a kernel that boots up to that if you want to try it...
+13:00 < sinfonian> HOLY MOLY THAT UIS SWERET
+13:00 < sinfonian> yes I do
+13:00 < antagonizt> http://www.linux4.be/~jroark/
+13:00 < antagonizt> there are two... the later is more interesting
+13:02 < sinfonian> ok
+13:02 < sinfonian> which later?
+13:02 < antagonizt> still alot to do... but we are getting closer
+13:02 < antagonizt> the newer one...
+13:02 < antagonizt> http://www.linux4.be/~jroark/files/vmlinux-pgui-demo
+13:03 < sinfonian> ok
+13:03 < sinfonian> I guess I need a cf card for it though?
+13:06 < antagonizt> it should work from the be's main mem
+13:08 < antagonizt> just place the loader kernel and cyacecfg.txt in the same dir...
+13:12 < sinfonian> damn  it just saved that as a txt file?
+13:20 < antagonizt> try this http://www.linux4.be/~jroark/files/Linux4BE.zip
+13:20 < sinfonian> ok
+13:25 < sinfonian> alright now I need to go dig up my old be-300 and crade :P
+14:26 < sinfonian> damn that is a cool video
+14:30 < antagonizt> were you able to boot the kernel?
+14:31 < sinfonian> havnt tried yet
+14:31 < sinfonian> I had to go take care of mty tirre
+14:31 < sinfonian> I went out to get my BE300 from the car
+14:31 < sinfonian> and found a flat tire
+14:31 < antagonizt> that sux
+14:31 < sinfonian> so got that taken care of now
+14:37 < sinfonian> ok guys... so whats the next step?  touch screen someone said?  
+14:37 < sinfonian> can you get a console?
+14:38 < antagonizt> serial is still incomplete
+14:38 < antagonizt> probably 20% done
+14:39 < antagonizt> filip is focusing on finding the touch screen regs...
+14:40 < antagonizt> so no console yet
+14:41 < sinfonian> so what will the serial do?  just take input?
+14:41 < antagonizt> you mean what does it do now?
+14:41 < sinfonian> yea
+14:42 < antagonizt> it only outputs
+14:42 < sinfonian> ok
+14:42 < sinfonian> anyone working on the serial?
+14:42 < antagonizt> i was...
+14:42 < sinfonian> if no one is intrested me and my brother might take it over after school
+14:43 < sinfonian> he is too busy writting protcalls for some stupid EE project
+14:43 < antagonizt> i think jal0 said he has some experience with serial stuff... but feel free to take a look and fix whatever you can
+14:44 < sinfonian> ok we will in a few weeks.. like after dec 15 or so
+14:49 -!- marc [~marc@pD9E5CF85.dip.t-dialin.net] has joined #linux4be
+14:50 < marc> Hi everyone !
+14:50 < antagonizt> hello marc
+14:50 < marc> I finally managed to connect my BE-300 to my linux-laptop via usb :-) yeah!
+14:50 < antagonizt> coolness
+14:51 < marc> now i wonder where the fault on my workstation was .. but anyways .. it works :)
+14:51 < sinfonian> hello
+14:53 < marc> so, how's the progress ? any news concerning the input-methods ?
+14:54 < antagonizt> looked at the possibility of the touchscreen being connected to one of the vr4131 uarts...
+14:54 < antagonizt> no luck so far
+14:55 < sinfonian> well you know which registers the touchscreen uses?
+14:55 < marc> ok ..
+14:55 < antagonizt> no we are searching for them...
+14:55 < someguy> I think we need to come up with a plan
+14:56 < marc> Doesn't someone want to hire at casio ?! ;-)
+14:56 < antagonizt> i think filip is going to sacrifice his old broken be and do some hardware tracing
+14:56 < someguy> marc: that is a good idea :)
+14:56 < antagonizt> and we are thinking about some more RE on the casio stuff
+14:57 < someguy> where would I start on that
+14:57 < someguy> do they have a touchscreen driver in CE?
+14:57 < antagonizt> there is a mem dump around somewhere... you should ask filip when he is around...
+14:57 < someguy> ok
+14:57 < sinfonian> you know what?
+14:58 < antagonizt> well i would hope they have one in CE ;)
+14:58 < antagonizt> what?
+14:58 < sinfonian> what harm could there be in asking the casio people just for that register?   you know I thought we already knew which one it was?
+14:58 < marc> How is Reverse engeneering done ?
+14:58 < marc> (i know, it's a dumb question, but i wouldn't have a clue where to start)
+14:59 < sinfonian> well its hard to answer
+14:59 < someguy> can I dump the mem myself?
+14:59 < sinfonian> it is basically taking a finished product and figureing out everything about it
+14:59 < antagonizt> filip wrote a utility that dumps the ram of a running be to cf... it's in cvs iirc
+14:59 < sinfonian> the greatest example I think is the story of the first compaq computer or IMB clone
+14:59 < marc> Right, basically i understand this. Like with samba, but in this case it sounds like de-assambling to me ..
+15:00 < antagonizt> disassemble from a mem dump...
+15:00 < antagonizt> since the be loads the drivers and nk.exe from flash to ram at boot
+15:00 < someguy> oh yeah
+15:01 < antagonizt> i played with it a long while ago... but it was very confusing and messy
+15:01 < marc> OK, next thing to learn is assembler ;-) 
+15:01 < sinfonian> well marc the main problem is that casio used a very customized sister chip to the vr4131
+15:01 < antagonizt> mips assem is relatively simple...
+15:01 < sinfonian> so all the registers are different
+15:02 < antagonizt> not too many instructions and lots of general purpose regs
+15:02 < antagonizt> i believe none of them are special purpose... but there are conventions
+15:03 < marc> and you are sure that you will find the touchscreen's data somewhere on the registers of the vr4131 ?
+15:03 < antagonizt> no
+15:04 < marc> For me the whole thing sounds a bit like: Microsoft sold the WinCE licenses for the be-devices for some small money but restricted casio to open any spec for the be .. ;)
+15:04 < sinfonian> I dont think so
+15:04 < sinfonian> I dont think it is M$ doing
+15:05 < sinfonian> I think casio knew that their BS os sucked dick.. and they knew that linux or some toher os would work better... and they didnt want us to confuse their end users
+15:06 < marc> but Casio ? maybe .. it's just because i've heard of a very cheap deal with the Windoze-licensing ..
+15:07 < sinfonian> I heard something similar
+15:08 < marc> Does someone know if the Point-To-Point-Adress of a PPP(d)-Dialup is also the Gateway-Adress ?
+15:10 < antagonizt> brb
+15:10 -!- antagonizt is now known as antagonizt[brb]
+15:19 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+15:19 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit [Client Quit]
+15:20 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+15:20 < sinfonian> what is the program that runs the light show with a keyboard.. is thtat some form of QT?
+15:27 -!- antagonizt[brb] is now known as antagonizt
+15:27  * antagonizt is back
+15:28 < antagonizt> brian, that ramdisk has picogui on it...
+15:28 < antagonizt> and the animation is just a test app...
+15:28 < antagonizt> it is actually running three apps... a keyboard a toolbar and that test app
+15:28 < antagonizt> oooh linux multi-tasking
+15:29 < marc> ok, finally i can ping my pda on my local network. Fine :) I'll write a doku some time ;)
+15:29 < antagonizt> that will be usefull
+15:30 < marc> but i'll better do that tomorrow. I have to get up at 3:30 am to bring my parents to the airport .. uhh..
+15:31 < sinfonian> has anyone looked at QT?
+15:31 < sinfonian> QTopia
+15:31 < marc> not more then seen some screenshots ;)
+15:31 < antagonizt> yeah... it's a pain to build
+15:31 < sinfonian> it has some sourcecode for a touchscreen somewhere
+15:32 < antagonizt> we need a driver first
+15:32 < sinfonian> well I know it takes a while
+15:32 < sinfonian> ok
+15:32 -!- Filip [~Filip@221.245-136-217.adsl.skynet.be] has joined #Linux4BE
+15:32 < marc> good evening Filip !
+15:32 < Filip> hi folks
+15:32 < Filip> hey brian
+15:32 < Filip> long time no see !
+15:32 < antagonizt> that is why i chose picogui to play with... much simpler than qtopia or opie
+15:32 < antagonizt> hey filip
+15:33 < sinfonian> hi filip
+15:34 < Filip> is your business taking of ?
+15:34 < sinfonian> na  its on the back burner while I am in training for this other job
+15:38 -!- jal0atWrk [~jal0_wrkn@208.33.58.134] has joined #linux4be
+15:39 < jal0atWrk> hey filip, did you have a chance to look at that code?
+15:40 < Filip> jal0, it looks pretty straight forward
+15:41 < antagonizt> i just had a weird boot... http://www.linux4.be/~jroark/files/weird-boot.txt
+15:42 < jal0atWrk> yeap, going to lookup info on those Hal* functions
+15:43 < jal0atWrk> then generalize the function to display info on all devices on bus
+15:44 < jal0atWrk> antagonizt: you running some kind of emulator?
+15:44 < antagonizt> emulator for what?
+15:44 < jal0atWrk> Algorithmics/MIPS FPU Emulator v1.5
+15:45 < jal0atWrk> in the boot log
+15:45 < antagonizt> the be has no fpu...
+15:45 < jal0atWrk> ic, missed the fpu part
+15:46 < antagonizt> the kernel had cache errors and paniced... yet continued to boot?
+15:46 < antagonizt> <0>Kernel panic: Can't handle the cache error!
+15:48 < Filip> it didn't continue: it rebooted
+15:48 < Filip> starts again with cpu revision
+15:49 < Filip> at that point no kernel memory has been freed yet, and early in boot process
+15:49 < antagonizt> weird
+15:49 < antagonizt> maybe we do have cache issues?
+15:59 < marc> Filip, since you log all this, can it be re-read somewhere ?
+16:05 < echoalia> marc, would you mine sharing how you got your BE to connect to your linux laptop?
+16:06 < Filip> marc, yes: http://www.linux4.be/irclog/index.php
+16:06 < Filip> it contains timestamps, and it is supposed to rotate daily
+16:06 < Filip> (starting today)
+16:14 < someguy> jal, you still there?
+16:14 < jal0atWrk> yeap
+16:14 < someguy> you have the sdk right?
+16:14 < jal0atWrk> yeap
+16:14 < marc> echoalia: sorry, i was at my laptop hacking my usb config :)
+16:14 < someguy> I installed mine, and I am trying to get the remote debugging going
+16:14 < someguy> wondering it you tried it at all
+16:15 < marc> echoalia: I gotta go to bed now, cuz i have to get up at 3:30 am, but i'll be back tomorrow.
+16:15 < marc> And Filip, thanks !!
+16:15 < jal0atWrk> yeah, whats the problem
+16:15 < someguy> it is asking me to copy some files over there and run cemgrc.exe
+16:15 < someguy> with a bunch of options
+16:15 < someguy> I can't find the files it wants over there
+16:16 < jal0atWrk> you have activesync active
+16:16 < someguy> yeah, and connected
+16:16 < jal0atWrk> it should copy the files over automatically
+16:16 < someguy> do I have to get it from casio?
+16:16 < someguy> I am using the standard MSDN embedded tools
+16:16 < jal0atWrk> do you have the BE300 SDK
+16:17 < someguy> no
+16:17 < jal0atWrk> you need that
+16:17 < someguy> ok
+16:17 < jal0atWrk> and you have to set the target device to CASIO BE300
+16:18 < someguy> ok
+16:18 < jal0atWrk> what version of evc do you have?
+16:18 < someguy> 4.0
+16:18 < jal0atWrk> did you upgrade the BE to CE.net
+16:19 < someguy> no
+16:19 < marc> bye guys!
+16:19 -!- marc [~marc@pD9E5CF85.dip.t-dialin.net] has left #linux4be []
+16:19 < jal0atWrk> later marc
+16:19 < someguy> later
+16:19 < jal0atWrk> ok, make sure you get the right SDK
+16:19 < someguy> ok
+16:20 < jal0atWrk> there is one for CE3.0/4.0 and a newer one for CE.net
+16:20 < someguy> ok
+16:20 < someguy> do I have to install ce.net
+16:20 < jal0atWrk> no
+16:20 < jal0atWrk> dont
+16:20 < someguy> that is what I thought
+16:20 < someguy> I saw some complaints about it somewhere
+16:21 < sinfonian> ok guys... how are you looking for the registers for the touchscreen?
+16:21 < jal0atWrk> all of our development is based on having the original OS on the BE not CE.net so if you upgrade things may work differently
+16:22 < sinfonian> brb
+16:24 < someguy> ok
+16:24 -!- sinfonian [~bshirclif@twhou-212-29.ev1.net] has quit [Read error: 104 (Connection reset by peer)]
+16:50 -!- sinfonian [~bshirclif@twhou-210-83.ev1.net] has joined #linux4be
+16:56 -!- jal0atWrk [~jal0_wrkn@208.33.58.134] has quit [Read error: 113 (No route to host)]
+17:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.216] has joined #linux4be
+17:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.216] has quit [Client Quit]
+17:28 -!- sinfonian [~bshirclif@twhou-210-83.ev1.net] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+18:07 < hewhew> filip: did you put that warning "all messages are logged" because of my explicit... late at night?
+18:07 < Filip> no, just  because i'm making the logs avaiilable now on the web
+18:08 < Filip> several people (including me) have talked about somethings that  are 'sensitive'   in the past
+18:09 < hewhew> heh
+18:09 < Filip> i just want to say: even if you're only two in here, more people can  see it later
+18:10 < hewhew> if you do a search of my nick... youll get either stupid or not appropriet stuff... ;)
+18:11 < Filip> anyway, if someone realizes too late he said something in here that he better didn't, several people can remove if from the log ;-)
+18:11 < hewhew> heh
+18:11 < hewhew> like if i say 'what about a dot matrix printer for toilet paper' ?
+18:12 < Filip> is  that an insult for the printer or for thee paper ?
+18:12 < hewhew> dunno had that idea today.. would be cool to have paterns on toilet paper
+18:12 < hewhew> or smiley faces
+18:14 < hewhew> or thought of the day
+18:15 < hewhew> anyway... courses...bbl
+18:15 < Filip> cu
+18:29 -!- Filip [~Filip@221.245-136-217.adsl.skynet.be] has left #Linux4BE []
+18:44 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+19:51 -!- Sp4wN [~administr@12-224-64-207.client.attbi.com] has quit [Remote closed the connection]
+19:51 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit [Read error: 54 (Connection reset by peer)]
+20:15 -!- andreas_ [~chatzilla@ool-43532dca.dyn.optonline.net] has joined #linux4be
+22:25 -!- Netsplit calvino.freenode.net <-> irc.freenode.net quits: echoalia, jal0_wrkn
+22:29 -!- blitzed [~blitz@Toronto-HSE-ppp3657893.sympatico.ca] has joined #Linux4BE
+22:59 -!- antagonizt is now known as antagonizt[zZz]
+23:11 -!- blitzed [~blitz@Toronto-HSE-ppp3657893.sympatico.ca] has quit ["Client Exiting"]
+23:43 -!- jal0_wrkn [~not@12-243-94-89.client.attbi.com] has joined #linux4be
+23:43 -!- jal0_wrkn is now known as jal0
+--- Log closed Thu Nov 21 00:00:33 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

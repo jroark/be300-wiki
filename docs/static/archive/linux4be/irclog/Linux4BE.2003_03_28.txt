@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_28.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_28.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Mar 28 00:00:35 2003
+02:38 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 110 (Connection timed out)]
+07:42 -!- mouse [~mouse@194.67.87.71] has joined #linux4be
+07:49  * mouse is away: fue a casa...
+07:55 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+07:57 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+13:59  * mouse is away: fue a casa...
+17:45 -!- andrey [~andrey@66.33.46.16] has joined #linux4be
+18:25 < jal0> hey andrey
+18:42 < andrey> hey jal0
+18:43 < jal0> what new?
+18:45 < andrey> not much. downloaded new cek.zip but didn't have time to look into it yet :-(
+18:45 < andrey> How's you dumper?
+18:46 < jal0> ic, i'm still having trouble wich coverting the exception address to api/method indexes
+18:47 < andrey> What kind of trouble?
+18:48 < jal0> well the info you gave me in the email dosn't seem to match whats in sprofile.c. The method index for RegisterDevice() is 29
+18:49 < jal0> in the email you have it at 2
+18:52 < jal0> that 0x29
+18:52 < andrey> Indeed... But if you look into method itself it looks very similar
+18:53 < jal0> so maybe casio moved the methods around?
+18:53 < andrey> don't think so. Besides if you look into coreos/device/lib/device.c it is 2
+18:55 < jal0> hmm, that it does..
+18:56 < andrey> Did you find out how is this MethodToName used?
+18:57 < jal0> have been trying, but the indexes dont seem to match up
+18:59 < andrey> I mean is it called from anywhere?
+19:00 < jal0> not that i could find, i havn't checked the 4.0 source yet though
+19:01 < andrey> Maybe it's just different index?
+19:02 < jal0> for example to get "FS_RegisterDevice" it would have to be called like this MethodToName(29, "W32A");
+19:02 < jal0> maybe a different index, but why i wonder
+19:03 < andrey> They are unpredictable... :-)
+19:03 < andrey> I think you can check yourself looking for CreateAPISet calls
+19:04 < andrey> And number 0 is DevProcNotify, which is not in sprofile.c at all.
+19:09 < jal0> hmm cant seem to find a call to CreateAPISet for "W32A"
+19:11 < andrey> me, too
+19:12 < andrey> Maybe some API sets are just predefined
+19:13 < jal0> i did notice that the method indexes are encoded different depending on if the function uses an implicit handle or not
+19:14 < andrey> either positive or negative?
+19:14 < jal0> #define METHOD_CALL(mid)        (FIRST_METHOD + (mid)*APICALL_SCALE)
+19:14 < jal0> #define IMPLICIT_CALL(hid, mid) (FIRST_METHOD - ((hid)<<HANDLE_SHIFT | (mid))*APICALL_SCALE)
+19:15 < jal0> these are apperantly the two types of calls that can be made with Native API's
+19:17 < andrey> handle ID and method ID?
+19:17 < jal0> i think, but still not sure at this point :(
+19:18 < andrey> probably first macro is for in-kernel methods and second one is for registered servers
+19:18 < jal0>  * method index for handle based APIs or a handle index and method
+19:18 < jal0>  * index pair for an implicit handle API call.
+19:18 < jal0>  */
+19:18 < jal0> in psyscall.h
+19:20 < andrey> yes, I see
+19:20 < jal0> actually there is alot of good stuff in that file that i'm only now beginning to understand ;)
+19:22 < andrey> Now we have a chance to understand how CE works! :-)
+19:22 < jal0> :)
+19:28 < jal0> have to go pick up the wife... i email you if i have any REAL progress ;)
+19:28 < andrey> And I'm waiting for my wife to pick me up :-))
+19:28 < andrey> See you...
+19:28 < jal0> lol :) ... later
+19:29 -!- jal0 is now known as jal0_bbl
+19:29 -!- andrey [~andrey@66.33.46.16] has left #linux4be []
+--- Log closed Sat Mar 29 00:00:00 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

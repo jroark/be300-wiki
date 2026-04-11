@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_10.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_10.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Jan 10 00:00:02 2003
+03:13 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+05:30 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+05:48 -!- Filip__ [Filip@193.190.11.245] has joined #linux4be
+05:48 -!- Filip [Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+05:57 -!- Filip_ [Filip@193.190.11.245] has quit [Read error: 60 (Operation timed out)]
+06:15 -!- Filip__ [Filip@193.190.11.245] has quit [Read error: 110 (Connection timed out)]
+08:33 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+10:25 -!- BaalAFK [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit ["I like core dumps"]
+10:33 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:47 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit ["I like core dumps"]
+10:49 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+10:56 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+11:02 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+11:02 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+12:41 -!- jal0atWrk [~jal0_wrkn@208.33.58.159] has joined #linux4be
+12:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.159] has quit []
+13:07 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: jal0
+13:08 -!- Netsplit over, joins: jal0
+--- Log closed Fri Jan 10 13:32:21 2003
+--- Log opened Fri Jan 10 13:32:23 2003
+13:32 !irc.freenode.net *** Looking up your hostname...
+13:32 !irc.freenode.net *** Checking ident
+13:32 !irc.freenode.net *** Found your hostname
+13:32 !irc.freenode.net *** No identd (auth) response
+--- Log closed Fri Jan 10 13:38:17 2003
+--- Log opened Fri Jan 10 14:24:27 2003
+14:24 < PsycoXul> http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=1949629081
+14:26 < PsycoXul> oh damn, some bad feedback though
+15:13 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+15:15 -!- MouseLRN [~mouse@info.ru] has quit [Client Quit]
+17:14 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+17:14 -!- baal_ [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Client Quit]
+17:23 < PsycoXul> anybody bother to figure out what audio chipset this thing has yet?
+17:24 < PsycoXul> i should be getting my unit any time now...
+18:03 < PsycoXul> got it
+18:03 < PsycoXul> heh
+18:03 < PsycoXul> does it flat-out refuse to work untill it's charged for a while or what?
+18:03 < PsycoXul> i tried turning it on with the adapter plugged in, but it did nothing... even holding on and hitting reset like the poster says heh
+18:33 < PsycoXul> woo it works
+18:33 < PsycoXul> heh
+--- Log closed Sat Jan 11 00:00:28 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

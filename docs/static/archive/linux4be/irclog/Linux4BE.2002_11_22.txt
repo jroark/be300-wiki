@@ -1,0 +1,537 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_11_22.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_11_22.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Fri Nov 22 00:00:59 2002
+00:55 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+02:45 -!- sinfonian [~bshirclif@twhou-207-218-233-60.ev1.net] has joined #linux4be
+03:05 -!- sinfonian [~bshirclif@twhou-207-218-233-60.ev1.net] has left #linux4be []
+04:04 -!- Filip [~Filip@193.190.11.247] has joined #Linux4BE
+05:03 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+05:03 < Filip> hi nykkto
+05:04 < nykkto> hi
+05:04 < nykkto> wow 3 users on the box at the same time!
+05:06 < Filip> writing HTML
+05:06 < nykkto> ahh, say on the log files could you edit your script to note teh timezone used?
+05:11 < Filip> it's on the webpage, all times are EST
+05:21 < Filip> http://www.linux4.be/hackers/memorymap.php
+05:26 < nykkto> ahh
+05:27 < nykkto> yep, I missed it when I went and looksed the 1st time
+05:28 < nykkto> filip - do you use vi - emacs - pico ...?
+05:33 < Filip> vi
+05:33 < nykkto> odd, I seem to have broke my command line vi.  (set -o vi) is not working for me.  I have NO idea why
+05:35 < Filip> what shell are you using ?
+05:36 < nykkto> um I think GNU sh 1.14.7
+05:36 < nykkto> or bash :)
+05:45  * nykkto peers into the inky black
+06:14 < nykkto> w
+06:14 < nykkto> hahah
+06:16 < Filip> ??
+06:16 < nykkto> humm, where were we?
+06:17 < Filip> where ? in BE !   ;-)
+06:17 < nykkto> The last I knew my command line editing was broke - via vi
+06:17 < nykkto> ?me giggles
+06:17 < nykkto> ack
+06:18 < Filip> type 'set'
+06:19  * nykkto goes -set -o vi - has been set
+06:19 < Filip> echo $SHELL
+06:19 < nykkto> ahh
+06:19 < nykkto> bash
+06:19 < Filip> hmm, I'm using bas as well, and set -o vi does work
+06:19 < Filip> bash
+06:19 < nykkto> ahh, something changed ::)
+06:20 < nykkto> just a sec
+06:20 < nykkto> brb
+06:20 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+06:22 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+06:23 < nykkto> shows up when I do set -o 
+06:23 < nykkto> just beeps when I do esc k
+06:24 < Filip> no file permission problems on your history file ?
+06:25 < nykkto> not that I know of I get a listing when I type histoy
+06:26 < Filip> ok
+06:26 < nykkto> I know it used to work, but it just stopped one day
+06:26 < nykkto> wEiRd
+06:27 < Filip> you didn't alias vi  ?
+06:27 < Filip> 'which vi'
+06:27 < Filip> alias
+06:27 < nykkto> w
+06:27 < nykkto> humm
+06:27 < nykkto> alias
+06:28 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+06:29 -!- nykkto [~nykkto@ns2.onkelinx.com] has joined #linux4be
+06:30 < nykkto> no idea, no alias, which =/etc/vi
+07:17 < Filip> wich=/etc/vi  ????
+07:42 < nykkto> humm
+07:42 < nykkto> brain cramp - /bin/vi
+07:52 < Filip> ok
+07:52 < nykkto> weird huh?
+07:56 -!- fati [~fati@3e70dbcb.adsl.enternet.hu] has joined #linux4be
+07:56 < fati> hi guys!
+07:57 < Filip> hi fati
+07:57 < Filip> hungary ?
+07:57 < nykkto> thirsty?
+07:57  * nykkto giggles
+07:57 < fati> could somebody explain me how far the linux4be project got?
+07:57 < fati> yes
+07:57 < fati> from hungary
+07:57 < fati> ;)
+07:57 < fati> actually I am not hunger anymore
+07:57 < fati> I have just had breakfast
+07:58 < Filip> I've just had a piza 
+07:58 < Filip> 14:00 overhere
+07:58 < fati> same here
+07:58 < nykkto> 07:00 here, thining about breakfast
+07:58 < Filip> 14:00 == breakfast ??
+07:58 < fati> :)
+07:58 < fati> I am an owl
+07:59 < fati> Working at night, sleeping at day
+07:59 < fati> so guys
+08:00 < fati> is there any working kernel/sg. I can upload on my be?
+08:01 < nykkto> not yet
+08:01 < fati> nykkto: it's a pitty
+08:01 < fati> what is missing?
+08:02 < fati> what if I want to join the development?
+08:02 < nykkto> um, to the best of my understanding there are some memory issues, and then the user interface has to be worked on.  that kind of thing.
+08:03 < nykkto> I think it still has a kernel panic durring the boot process
+08:03 < Filip> well, there is a kernel available that boots
+08:03 < Filip> but there is no input working, so you can stare at it 
+08:03 < fati> shit
+08:03 < Filip> kernel panics are all gone now, and got some gui starting
+08:03 < nykkto> fati - so you gonna help?
+08:04 < fati> I have downloaded something from the wwebsite
+08:04 < fati> but it does not do anything
+08:04 < fati> I see the penguin
+08:04 < Filip> we are currently reverse engineering (hardware and software) in order to find hardware buttons and touchscreen
+08:04 < fati> then it stops
+08:04 < Filip> there is a version that shows something like this:
+08:06 < Filip> http://www.linux4.be/~jroark/images/pg-kb-ob-vt-02.jpeg
+08:06 < fati> wow :)
+08:06 < Filip> if you want to join, you're always welcome
+08:07 < Filip> just let me know what you're good at (or movivated to become good at)
+08:07 < fati> I would like to
+08:07 < Filip> kernel hacking , assembler, userspace app's, X , .... you name it
+08:07 < Filip> documentation, packaging, PR
+08:08 < nykkto> I think I am going to become a tester
+08:08 < fati> well I am not a hacker, but I am not afraid working
+08:08 < Filip> please do not (yet) spread that screenshot above, we do not want to create false expectations: there is still a long way to go !
+08:08 < fati> I can experiment
+08:09 < fati> of course
+08:09 < fati> if you can give me the tools to work with
+08:09 < Filip> we have no input yet, no compact-flash driver, no finished serial driver, no sound, no USB, ....
+08:09 < fati> I can help
+08:09 < Filip> all you need is a linux box and http://www.linux4.be/
+08:10 < Filip> it should contain all you need to get started
+08:10 < Filip> well, actually a win32 box should do as well
+08:10 < Filip> (thanks to jal0)
+08:10 < fati> I have got a linux box
+08:11 < Filip> first you need the toolchain: http://www.linux4.be/hackers/toolchain.php
+08:11 < fati> what is that?
+08:11 < Filip> then the kernel sources http://www.linux4.be/hackers/kernel.php
+08:11 < Filip> and a ramdisk http://www.linux4.be/~jroark/howto/ramdisk.html
+08:12 < fati> what is the toolchain good for?
+08:12 < Filip> toolchain is compiler etc to cross-compile the mips kernel for the be on an i386 system
+08:12 < fati> ok 
+08:12 < fati> ic
+08:13 < Filip> and of course the bootloader, if you want to actually boot  the kernel on your BE http://www.linux4.be/hackers/bootloader.php
+08:14 < fati> I have downloaded the bootloader and the kernel
+08:14 < fati> but the kernel does not load, just flashing
+08:14 < fati> I mean the cursor is flashing under the image
+08:15 < fati> do I need a newer kernel?
+08:16 < Filip> yep, means you've got an old kernel or wrong cyaCE config file
+08:17 < fati> where can I get it?
+08:20 < nykkto> bbl
+08:21 -!- nykkto [~nykkto@ns2.onkelinx.com] has quit ["Leaving"]
+08:21 < fati> Filip?
+08:21 < Filip> yes ?
+08:21 < fati> where can I get the proper kernel?
+08:22 < fati> and the good cyaCe config?
+08:23  * Filip looks around on the server for a stable, recent version
+08:25 < Filip> ok, try this one http://www.linux4.be/~jroark/files/Linux4BE.zip
+08:34 < fati> cool
+08:34 < fati> I see my Be booting linux :)
+08:34 < fati> though it's quite far from it
+08:35 < fati> so you are reverse engineering the touch screen now
+08:35 < Filip> that's what we are trying to do .....
+08:36 < fati> how the hell? :)
+08:36 < fati> are there any sources?
+08:36 < fati> is there any documentation?
+08:41 < fati> are you just probing? 
+08:42 < fati> be is a black box at the very first look for me...
+08:44 < fati> also what about the kernel sources? what I downloaded is the compiled version..
+08:51 < Filip> kernel sources are at http://www.linux4.be/hackers/kernel.php
+09:05 -!- antagonizt[zZz] is now known as antagonizt
+09:05 < antagonizt> morning all
+09:05 < Filip> morning antagonizt
+09:06 < antagonizt> filip i saw you memorymap
+09:06 < antagonizt> looks nice
+09:07 < Filip> it's a start
+09:08 < Filip> should also allow us to more easily group the diifferent (hardware) components and their functions
+09:20 -!- someguy_bbl is now known as someguy
+09:21 < Filip> US is waking up
+09:22 < someguy> hi filip
+09:22 < Filip> hi someguy
+09:22 < someguy> how is the RE going?
+09:23 < Filip> i'm at work, so didn't do a lot yet; i started documenting all known addresses at http://www.linux4.be/hackers/memorymap.php 
+09:23 < someguy> wow
+09:25 < someguy> is that the real PIU base? or a place holder?
+09:25 < Filip> that's from the reversed CE code, not tested
+09:26 < someguy> oh
+09:26 < someguy> I did check the 0x9FC addresses at the top to see if the buttons did anything to them, I didn't see anything
+09:27 < Filip> there is also a 'something' base at  0xaa001000 , but it's not labelled
+09:27 < Filip> how did you test ?
+09:27 < someguy> if I write a program to scan the addresses, is there any danger of reading the wrong spot (will it lock it up)?
+09:28 < Filip> not really
+09:28 < Filip> if you don't change the values, you should be pretty safe
+09:28 < someguy> I was using the same method I used to look at the GIU on the VR4131
+09:28 < someguy> with the giuinfo hack
+09:28 < Filip> testing in CE, linux kernel or linux userspace
+09:28 < someguy> linux kernel mostly
+09:28 < Filip> ok
+09:29 < Filip> did you get anything to respond yet ? did you try a known working address (like serial receive)
+09:29 < someguy> no, I don't have a serial cable
+09:30 < someguy> there is that one bit on the GIU on the VR that changes
+09:30 < someguy> that I am thinking they must use to cascade the interrupts from the companion chip
+09:30 < someguy> because many things change the value
+10:00 < Filip> I'll try with a testprogram directly loaded from the bootloader tonight
+10:01 < Filip> without kernel or anything else loaded
+10:01 < someguy> that's a good idea
+10:13 < someguy> what is ScCmcu and Vic/CommMode?
+10:15 < Filip> those are the labels from the reverse ce code
+10:16 < Filip> cmcu is probably clockmask control unit
+10:16 < Filip> not sure what th 'sc' prefix stands for
+10:18 < someguy> ok
+10:18 < someguy> thanks
+10:18 < Filip> the only 100% sutre thing inthere is the vr4131 stuff; that's officialy documented
+10:18 < Filip> (gonna add this as a comment to that page)
+10:24  * Filip added a disclaimer to that page
+10:59 -!- jal0_ZzZ is now known as jal0
+11:02 < Filip> morning jal0
+11:07 < jal0> morning filip: had to get some coffee
+11:09 < jal0> got the find4173() function working... it couldnt find it. i did a general scan, and the HalGetBusData returned nothing on the bus. oh well, it was a good thought. besides msdn says that all of the halx functions are depreciated and should not be used.
+11:11 < antagonizt> morningjal0... could be usefull for other projects (not directly)... you should put it out there...
+11:12 < jal0> ok i'll set up a link on my page.
+11:14 < Filip> so there is no 4173 inside the BE 
+11:16 < jal0> not sure, the Halx function retured 0 for all pci addresses, which means either their is no devices on the pci bus or that the drivers do not support those functions.
+11:16 < Filip> jal0, if you've got some spare time, could you also look at CF code ? maybe there is similar code to look for CF adapters
+11:16 < jal0> ok
+11:17 < Filip> jal0, did you read my questions/remarks in yesterday's log regarding  EE design ?
+11:17 < jal0> ? not sure, what was it
+11:17 < Filip> the silkscreen labels being grouped in 3 ranges
+11:17 < Filip> starting at 1 for cpu etc
+11:17 < Filip> >200 for power
+11:18 < jal0> not sure what you mean/want to know
+11:18 < Filip> >300 for touchpanel, earphone, ...
+11:18 < Filip> well, you as an ee, how do you label your components ? by logical group of functions/devices ?
+11:19 < Filip> why would the designed of the be start  numbring certain parts starting at 1, others at 200 and 300 ?
+11:19 < jal0> usually just start at 1 and increment as you go, 
+11:20 < Filip> and the numbering scheme is for almost all components: connectors, ics  , .... 
+11:20 < jal0> no, never skip number
+11:20 < Filip> could it be cpu and core stuff is in >0 , power >200 and i/o >300 ?
+11:21 < Filip> like different teams worked on sub-systems independantly ? or re-used exsiting blocks ?
+11:22 < jal0> usually the number indicates the train of though of the engineer. ie you start with the design of the power supply, so all the components related to the power supply will be sequentially grouped.
+11:22 < Filip> hardware buttons are in >0 (same as cpu)
+11:25 < Filip> so it might provide some hints on where to look for certain functions (like we know where video lives, other functions from the same group are more likely to use the same chip)
+11:26 < jal0> sad to say, that in most cases, the engineer is not the one who does the actualy layout. usually layout is a department all to its own. the engineer will publish requirements that the layout guys must follow, other than that the numbering scheme is usually in no coherent order execept maybee that components sometime are sequentially groups around functional bounds
+11:30 < Filip> bbl folks
+11:30 < antagonizt> cu
+11:30 < jal0> ok later,
+11:30 < jal0> i look into cf
+11:31 < Filip> that would be great, thx
+11:31 -!- Filip [~Filip@193.190.11.247] has left #Linux4BE []
+11:32 < jal0> antagonizt: what was the physical address of the serial port used in the kernel driver?
+11:32 < someguy> jal, I have been poking around on the memory map that filip made and I saw some changes in the 0xAA001000 area
+11:33 < someguy> when I messed with the CF card
+11:33 < antagonizt> i was using 0xAA008680 as the base... that allowed me to use the standard defined offsets in serial_reg.h
+11:34 < jal0> that was aquired from re'd code correct?
+11:34 < jal0> thanks someguy
+11:34 < antagonizt> yes
+11:38 < someguy> I find it interesting that the two 0xAB registers on that list line up with the registers on the VR4121
+11:41 < jal0> not really, engineers usually try to reuse designs as much as possible. So the memory map should be similar to older products using the 4121.
+11:52 < jal0> has anyone look for 0x1033 at around 0xaa000000 ?
+11:53 < antagonizt> nope
+11:54 < jal0> if the chip is a 4173, then 0x1033 should be present at its base address which is the VendorId for NEC
+11:58 -!- themaw [~marc@p5085CB57.dip.t-dialin.net] has joined #linux4be
+11:59 < themaw> hi guys!
+11:59 < someguy> hi
+12:00 < someguy> wouldn't the PCI stuff need to be up and running to get the 4173 going?
+12:02 < themaw> ha! i finally got my connectors today :) but i didn't suppose them to be sent from china ;)
+12:04 < antagonizt> themaw, building a serial cable?
+12:04 < themaw> yep, going to do that .. !
+12:05 < antagonizt> cool
+12:05 < themaw> But I first need a level adjuster for the serial port .. like the max23xx jal0 used ..
+12:07 < jal0> max232's should be somewhat common.
+12:08 < themaw> You used an max3243/So .. is it somehow special ?
+12:08 < jal0> nope, just what i had laying around
+12:08 < themaw> I'm not sure if i have a max232 lying around unused .. but i'll search for it :)
+12:09 < jal0> what ever one you find, check the datasheet for it for the capcitor values
+12:09 < jal0> they sometimes differ
+12:22 < themaw> ok :) thanks ... first i have to find one :)
+12:42 < themaw> hmm .. i don't have one here .. 
+12:44 < themaw> (at least if i don't want to disassemble an old mainboard)
+12:46 < themaw> are you sure, the adjustment is needed ?
+12:52 < jal0> what adjustment
+12:53 < themaw> well the level adjustment .. why else do you need the max232 ?
+12:53 < themaw> btw, how is the devel state of the serial device ? 
+12:54 < jal0> you can try, depends on your serial port in the pc. ttl level do not always work for serial communications.
+12:54 < jal0> besides, the max232 also offers some line protection
+12:54 < themaw> ok .. i just called a friend of mine, he'll look if he has one ..
+12:55 < jal0> their fairly easy to find. and pretty cheap
+12:57 < themaw> i know .. but we don't have a local store for things like that .. the next is "Conrad" which is 50 km away in Stuttgart ..
+12:59 < jal0> go to go to work now,later all
+12:59 -!- jal0 is now known as jal0_wrkn
+13:00 < themaw> fine! 
+13:00 < jal0_wrkn> :)
+13:00 < jal0_wrkn> you can order them online
+13:00 < themaw> .. yes, and wait another 3 days for them to arrive ;-)
+13:01 < themaw> a friend told me that he always requests testing-examples at maxim ;)
+13:01 < jal0_wrkn> other than that i dont know what to tell you, you can try doing without it, but its not gareented to work and you risk damaging the BE300 if any line spikes occur
+13:01 < jal0_wrkn> anyway, i really have to go, good luck
+13:02 < themaw> thank you .. !
+13:03 < jal0_wrkn> np
+13:22 < themaw> ok .. i'll be away for the rest of the evening .. visiting a friend (and getting a rs232)
+13:22 < themaw> Cu all ! good look !
+13:23 -!- themaw is now known as themaw_bbl
+14:10 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+14:43 -!- fati [~fati@3e70dbcb.adsl.enternet.hu] has left #linux4be []
+15:00 -!- antagonizt is now known as antagonizt[bbl]
+15:21 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+15:22 -!- Filip [~Filip@122.172-136-217.adsl.skynet.be] has joined #Linux4BE
+16:14 -!- antagonizt[bbl] is now known as antagonizt
+16:15  * antagonizt is around
+17:12 < Filip> some more info:
+17:13 -!- sinfonian [~bshirclif@twhou-212-143.ev1.net] has joined #linux4be
+17:13 < Filip> removing CF:
+17:13 < Filip>  @0xAA00102C old:04 new:0C @0xAA001030 old:04 new:0C @0xAA001034 old:04 new:0C @ 
+17:13 < Filip> 0xAA001038 old:04 new:0C @0xAA00103C old:04 new:0C @0xAA001044 old:30 new:70 @0x 
+17:13 < Filip> AA00104C old:30 new:70 @0xAA001064 old:04 new:0C @0xAA001068 old:04 new:0C @0xAA 
+17:13 < Filip> 00106C old:04 new:0C @0xAA001070 old:04 new:0C @0xAA001074 old:04 new:0C @0xAA00 
+17:13 < Filip> 1078 old:04 new:0C @0xAA00107C old:04 new:0C @0xAA0010A8 old:04 new:0C @0xAA0010 
+17:13 < Filip> AC old:04 new:0C @0xAA0010B0 old:04 new:0C @0xAA0010B4 old:04 new:0C @0xAA0010B8 
+17:13 < Filip>  old:04 new:0C @0xAA0010BC old:04 new:0C @0xAA0010E8 old:04 new:0C @0xAA0010EC o 
+17:13 < Filip> ld:04 new:0C @0xAA0010F0 old:04 new:0C @0xAA0010F4 old:04 new:0C @0xAA0010F8 old 
+17:13 < Filip> :04 new:0C @0xAA0010FC old:04 new:0C @0xAA001000 old:04 new:0C @0xAA001008 old:0 
+17:14 < Filip> 4 new:0C @0xAA001014 old:04 new:0C @0xAA001018 old:04 new:0C @0xAA00101C old:04 
+17:14 < Filip> new:0C @0xAA001020 old:04 new:0C @0xAA001024 old:04 new:0C @0xAA001028 old:04 ne 
+17:14 < Filip> w:0C
+17:14 < Filip> insert CF:
+17:14 < Filip>  @0xAA001008 old:0C new:04 @0xAA001014 old:0C new:04 @0xAA001018 old:0C new:04 @ 
+17:14 < Filip> 0xAA00101C old:0C new:04 @0xAA001020 old:0C new:04 @0xAA001024 old:0C new:04 @0x 
+17:14 < Filip> AA001028 old:0C new:04 @0xAA00102C old:0C new:04 @0xAA001030 old:0C new:04 @0xAA 
+17:14 < Filip> 001034 old:0C new:04 @0xAA001038 old:0C new:04 @0xAA00103C old:0C new:04 @0xAA00 
+17:14 < Filip> 1044 old:70 new:30 @0xAA00104C old:70 new:30 @0xAA001064 old:0C new:04 @0xAA0010 
+17:14 < Filip> 68 old:0C new:04 @0xAA00106C old:0C new:04 @0xAA001070 old:0C new:04 @0xAA001074 
+17:14 < Filip>  old:0C new:04 @0xAA001078 old:0C new:04 @0xAA00107C old:0C new:04 @0xAA0010A8 o 
+17:14 < Filip> ld:0C new:04 @0xAA0010AC old:0C new:04 @0xAA0010B0 old:0C new:04 @0xAA0010B4 old 
+17:14 < Filip> :0C new:04 @0xAA0010B8 old:0C new:04 @0xAA0010BC old:0C new:04 @0xAA0010E8 old:0 
+17:14 < Filip> C new:04 @0xAA0010EC old:0C new:04 @0xAA0010F0 old:0C new:04 @0xAA0010F4 old:0C 
+17:14 < Filip> new:04 @0xAA0010F8 old:0C new:04 @0xAA0010FC old:0C new:04 @0xAA001000 old:0C ne 
+17:14 < Filip> w:04
+17:14 < Filip> hi brian
+17:21 -!- someguy is now known as someguy_bbl
+17:30 < sinfonian> hi
+17:30 < Filip> hey
+17:30 < sinfonian> whats all that stuff?
+17:31 < Filip> addresses changing  on compact flash memory insertion and removal
+17:31 < sinfonian> hmmm
+17:33 < Filip> still scanning for more
+17:49 < antagonizt> filip, did you get these values from within linux? or from a standalone test app?
+17:49 < Filip> standalone, launched by cyace
+17:50 < Filip> only 13kb compiled, using the test serial code for output
+17:50 < antagonizt> neat
+17:50 < Filip> there is also a lot activity at @0xAA0000?? when you hit a hardware button
+17:51 < Filip> it's very ugly code, but it works
+17:51 < Filip> it's in /home/be300/old_linux/testcode/io
+17:54 < Filip> same range at @0xAA0000?? has also got activity when ataching serial cable
+17:55 < sinfonian> wow.. so this program will give you the memory address or register when events happen?
+17:56 < Filip> for the portion it's watching, currently two areas of each 255 bytes
+17:59 < Filip> found touchpanel !!
+17:59 < Filip> @0xAA0003??
+18:01 < Filip> @0xAA000301 and @0xAA00031C
+18:04 < sinfonian> woah.. you the man
+18:04 < antagonizt> very cool
+18:04 < sinfonian> that is a very very handy program.. where did you get it?
+18:04 < Filip> well, driver is not ready yet ;-)
+18:04 < Filip> but it's a start
+18:05 < Filip> going to take a close look at @0xAA000301 and @0xAA00031C 
+18:05 < Filip> to see if I can deduce some kind of x/y coordinates out of it
+18:06 < sinfonian> my website's guest counter is going nutz
+18:06 < Filip> ??
+18:07 < sinfonian> its like up to 1900
+18:07 < Filip> not s ure if it's the counter .... the machine is getting a lot of hits, might be some kind of attack
+18:07 < sinfonian> yea I think youa re right
+18:08 < sinfonian> its says 12150 hits today
+18:08 < sinfonian> its usually around 6000
+18:09 < Filip> I noticed the systemload being abnormally high earlier today
+18:09 < antagonizt> damn script kiddies
+18:10 < sinfonian> we could block the ip
+18:10 < Filip> we've been boradcast floaded in the office this week as well
+18:10 < Filip> broadcast
+18:10 < Filip> we're on the giganet (internet2) , and it seems that huge amount of bandwith is atracting a lot of hackers
+18:11 < Filip> had to install aditional hardware to cope with it
+18:11 < sinfonian> hmm
+18:11 < Filip> faster switches with packet filtering, for dropping packets comming from a dozen of ip's
+18:11 < Filip> $30.000
+18:11 < sinfonian> laksjd67
+18:11 < sinfonian> woops
+18:12 < Filip> luckily it' s not my budget
+18:12 < sinfonian> guess i will change my password :P
+18:12 < sinfonian> ok
+18:13 < Filip> more than 9000 hits on be-central from one single ip
+18:13 < sinfonian> yea
+18:14 < sinfonian> did you install webalizer?
+18:14 < Filip> hmm, usage is on it, not sure about webalizer
+18:14 < sinfonian> 68.16.40.57?
+18:14 < Filip> [root@ns httpd]# grep 195.29.161.70 access_log|wc
+18:14 < Filip>    9020  135838 2771958
+18:14 < Filip> [root@ns httpd]#
+18:14 < Filip> gonna lock him out now
+18:14 < sinfonian> hmmm...  can you 
+18:14 < sinfonian> ok
+18:20 < Filip> Chain PSDROP (2 references)
+18:20 < Filip> target     prot opt source               destination
+18:20 < Filip> DROP       all  --  fwcp.ht.hr           anywhere
+18:21 < Filip> and load immdiately drops
+18:21 < Filip> now see if he's not going to move to the next ip....
+18:21 < sinfonian> filip.. did you block that ip address?
+18:21 < Filip> yep
+18:21 < sinfonian> sweet
+18:21 < sinfonian> thank you very much
+18:21 < Filip> he's blocked till next reboot of the machine
+18:22 < sinfonian> ok
+18:22 < Filip> (last reboot was 267 days ago)
+18:22 < sinfonian> lol... wow
+18:22 < sinfonian> over a year uptime.. impressive
+18:22 < Filip> still 100 days to go for a year 
+18:23 < sinfonian> woops
+18:23 < Filip> ok, now back to BE hacking
+18:23 < sinfonian> lol
+18:25 < sinfonian> I really do know there are 365.25 days in a year.  
+18:25 < Filip> not if you're using a chinese calendar ;-)
+18:27 < sinfonian> riiight
+18:27 -!- sinfonian [~bshirclif@twhou-212-143.ev1.net] has left #linux4be []
+18:36 -!- themaw_bbl is now known as themaw
+18:36 < themaw> back again :)
+18:36 < themaw> still there, Filip ?
+18:37 < themaw> anyhow, if you read this: gratulations on finding out all that stuff!
+18:39 < Filip> thx
+19:10 -!- bshircliffe [~bshirclif@twhou-215-96.ev1.net] has joined #linux4be
+19:11 < Filip> bedtime for me, cu later folks
+19:11 < bshircliffe> wit
+19:11 < bshircliffe> did I miss anything?
+19:12 < Filip> not really, going to finih
+19:12 < Filip> continue probing tomorrow
+19:12 < bshircliffe> alright well you take care filip..
+19:12 < Filip> take care
+19:13 -!- Filip [~Filip@122.172-136-217.adsl.skynet.be] has left #Linux4BE []
+19:38 -!- themaw [~marc@p5085CB57.dip.t-dialin.net] has quit [Remote closed the connection]
+19:46 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has joined #linux4be
+20:32 -!- jal0atWrk [~jal0_wrkn@208.33.58.201] has quit []
+20:40 -!- bshircliffe [~bshirclif@twhou-215-96.ev1.net] has quit [Read error: 113 (No route to host)]
+21:27 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+21:28 -!- antagonizt is now known as antagonizt[zZz]
+22:30 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has joined #linux4be
+22:30 -!- metalac [~metalac@12-228-100-37.client.attbi.com] has left #linux4be []
+22:31 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+--- Log closed Sat Nov 23 00:00:35 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

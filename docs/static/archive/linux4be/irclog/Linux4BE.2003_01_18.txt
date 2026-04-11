@@ -1,0 +1,224 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_18.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_18.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Sat Jan 18 00:00:34 2003
+01:08 -!- Zorbit [Zorbit@d141-147-28.home.cgocable.net] has joined #Linux4BE
+01:10 < Zorbit> Anyone know where I can buy an Inverter for the BE-300 CMD500TT10-C1 Display? Or how to possibly repair the one I have?
+01:28 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Read error: 104 (Connection reset by peer)]
+01:28 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+01:34 < Zorbit> Anyone know where I can buy an Inverter for the BE-300 CMD500TT10-C1 Display? Or how to possibly repair the one I have?
+02:41 -!- Zorbit [Zorbit@d141-147-28.home.cgocable.net] has quit []
+14:54 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:11 -!- Filip_ is now known as Filip
+15:16 -!- Filip changed the topic of #linux4be to: !! CF slot partially working !! Seiichi SATO <ssato@sh.rim.or.jp> mailed me a patch, it can be found on the server at: /home/be300/linux/cfpatch
+15:17 < Filip> anybody awake ?
+15:17 < Filip> !! CF slot partially working !! Seiichi SATO <ssato@sh.rim.or.jp> mailed me a patch, it can be found on the server at: /home/be300/linux/cfpatch
+15:39 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:39 -!- Filip [~Filip@53.245-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:45 -!- Filip__ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:45 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:48 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:48 -!- Filip__ [~Filip@53.245-136-217.adsl.skynet.be] has quit [Read error: 104 (Connection reset by peer)]
+15:48 -!- Filip_ is now known as Filip
+15:49 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:49 -!- Filip [~Filip@53.245-136-217.adsl.skynet.be] has quit [Read error: 54 (Connection reset by peer)]
+15:49 -!- Filip_ [~Filip@53.245-136-217.adsl.skynet.be] has left #linux4be []
+15:51 -!- Filip__ [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+15:51 -!- Filip__ [~Filip@53.245-136-217.adsl.skynet.be] has quit [Remote closed the connection]
+16:58 -!- MouseLRN [~mouse@info.ru] has joined #linux4BE
+17:08 < MouseLRN> anybody?
+17:23 < MouseLRN> anybody tryied the CF patch?
+17:40 -!- Filip [~Filip@53.245-136-217.adsl.skynet.be] has joined #linux4be
+17:40 < MouseLRN> Filip hi
+17:40 < Filip> hi MouseLRN
+17:40 < MouseLRN> how are you?
+17:41 < Filip> seen the CF  message ?
+17:41 < MouseLRN> yes, but not test yet. Did you?
+17:41 < MouseLRN> test it
+17:41 < Filip> no, no time yet. 
+17:41 < Filip> but did you lookk at  the readme (actually the email)
+17:41 < Filip> it includes a bootlog
+17:42 < MouseLRN> oh, I stopped read at 'regards' ;-) I do it from ssh. But now I can read it fully
+17:42 < Filip> <6>Uniform Multi-Platform E-IDE driver Revision: 6.31 
+17:42 < Filip> <4>ide: Assuming 50MHz system bus speed for PIO modes; override with idebus=xx 
+17:42 < Filip> <4>hdc: SanDisk SDCFB-64, ATA DISK drive 
+17:42 < Filip> <4>ide1 at 0x170-0x177,0x376 on irq 40 
+17:42 < Filip> <6>hdc: 125440 sectors (64 MB) w/1KiB Cache, CHS=490/8/32 
+17:42 < Filip> <6>Partition check: 
+17:42 < Filip> <6> hdc: hdc1 hdc2 
+17:42 < Filip> <7>VFS: Disk change detected on device ide1(22,2) 
+17:42 < Filip> <6> hdc: hdc1 hdc2 
+17:45 < MouseLRN> yes, I saw it
+17:46 < Filip> looks pretty good
+17:47 < MouseLRN> I almost done XY translation ;-)
+17:48 < Filip> great, getting closer to a full  version with touchscreen and CF
+17:50 < MouseLRN> ;-)
+17:51 < MouseLRN> wait a minute
+17:55 < MouseLRN> Check new version at http://linux4.be/~mouse/
+17:56 < Filip> ce or linux  ?
+17:56 < MouseLRN> linux
+17:56 < MouseLRN> 19 Jan...
+17:58 < Filip> need to reboot to get it onto my be
+17:59 < MouseLRN> ok
+18:03 < MouseLRN> anything looks goods, but from time to time values has big delta. For example: I'm touching the same area and values changing a bit, but sometimes it gets values, which delta is over 30 pixels
+18:05 < MouseLRN> In two minutes I'll update regstat one more times. (changing in sdlregstat)
+18:06 < Filip> maybe  there is a bit that  indicates if the value is useable or  not  ?
+18:08 < MouseLRN> I mean 'a bit' <-> 'a few' 
+18:08 < MouseLRN> ;-)
+18:08 < Filip> yes, but maybe there is some address that indicates if the value  is valid or not 
+18:10 < MouseLRN> I sorted this values, before calculate real X,Y, but I uses control reg.
+18:11 < MouseLRN> Try sdlregstat when you'll boot BE. It's funny (Use the newest [2.05 Jan 2003] regstat).
+18:12 < Baalz> Hi everyone
+18:12 < MouseLRN> Baalz hi
+18:13 < Baalz> MouseLRN: Can you send me your latest kernel image?
+18:14 < MouseLRN> Baalz now, I can't, because now I'm using modem-connection ;-(
+18:15 < Baalz> Ok
+18:15 < Baalz> Thanks anyway :)
+18:15 < Filip> hi Baalz
+18:15 < MouseLRN> If you want, I can send it in monday
+18:15 < Baalz> That woud be great
+18:15 < MouseLRN> ok
+18:16 < Filip> maybe we should set-up a build-system on the server
+18:16 < Baalz> My dcc is set to auto-accept downloads
+18:16 < Filip> like it build every night the latest from cvs
+18:16 < Baalz> That woulds be great
+18:16 < MouseLRN> ;-)
+18:17 < Baalz> Cause cross compiling a kernel is beyond my abilities I think
+18:17 < Filip> all tools are installed on the server, just type make
+18:17 < Baalz> on the cvs?
+18:17 < Baalz> I dont know how this work
+18:18 < Filip> no,   when you login on ssh
+18:18 < Baalz> I dont have an account
+18:18 < Filip> and there is a good script from jal0 that should install the full system
+18:19 < MouseLRN> It works, It works, It works ;-) translation of X/Y works, but it needs to calibrate 'start' and 'end' values.
+18:20 < Filip> great
+18:22 < MouseLRN> wait a minute, I'll update regstat (some minor fixes in delay)
+18:24 < Baalz> Filip I dont find this script and I dont have an account on the server. Sorry to take your time.
+18:25 < Filip> http://www.linux4.be/~jal0/index.html
+18:25 < Filip> check the SDK section
+18:25 < Baalz> Thanks
+18:25 < MouseLRN> updated
+18:28 < Baalz> We should add a link to this on the site instead of the one that point to the company where we have to register
+18:31 < jal0> hey people
+18:31 < Baalz> Hi jal0
+18:32 < jal0> hi, saw the stuff about CF and mouse's touchscreen work, looks like were getting closer
+18:32 < Filip> hi jal0
+18:32 < jal0> hey filip
+18:32 < MouseLRN> jal0 hi
+18:33 < jal0> so filip: have you had any time to look into the irq issue?
+18:35 < Filip> no, sorry, not yet
+18:37 < jal0> i was thinking, how hard would you think it would be to implement a serail-mouse driver?
+18:40 < MouseLRN> anybody know - works BlueTooth CF adapter in BE? (I read that was trouble with it)
+18:47 < MouseLRN> ?
+18:47 < MouseLRN> I'll go to sleep...
+18:48 < Baalz> Have a good night
+18:48 < MouseLRN> by2all
+18:48 < Filip> cu
+18:48 -!- MouseLRN [~mouse@info.ru] has quit ["BitchX: now with 38 percent fewer calories!"]
+20:28 -!- Baalz is now known as BaalzAw
+20:36 -!- Filip [~Filip@53.245-136-217.adsl.skynet.be] has quit [Read error: 60 (Operation timed out)]
+23:34 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+--- Log closed Sun Jan 19 00:00:00 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

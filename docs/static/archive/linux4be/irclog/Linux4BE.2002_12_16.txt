@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_16.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_16.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Mon Dec 16 00:00:58 2002
+03:18 < wolphie> bye
+03:18 -!- wolphie [~wolphie@pearlart.hu] has quit ["fighting for peace is fucking for virginity"]
+10:07 -!- Filip [~Filip@193.190.11.245] has joined #Linux4BE
+10:33 -!- Filip [~Filip@193.190.11.245] has left #Linux4BE []
+10:42 -!- jal0_Zzz is now known as jal0_Wrkn
+11:34 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt, jal0_Wrkn
+11:35 -!- Netsplit over, joins: jal0_Wrkn, antagonizt
+12:24 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: antagonizt, jal0_Wrkn
+12:24 -!- Netsplit over, joins: jal0_Wrkn, antagonizt
+16:34 -!- WebGuest6462 [~eirc@adsl213120.vnet.hu] has joined #Linux4BE
+16:36 -!- WebGuest6462 [~eirc@adsl213120.vnet.hu] has quit [Client Quit]
+16:40 -!- WebGuest9997 [~eirc@adsl213120.vnet.hu] has joined #Linux4BE
+16:41 -!- WebGuest9997 [~eirc@adsl213120.vnet.hu] has quit [Client Quit]
+17:37 -!- Filip [~Filip@153.99-136-217.adsl.skynet.be] has joined #Linux4BE
+17:38 < antagonizt> hi filip
+17:38 < Filip> hi antagonizt
+17:58 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has joined #linux4be
+17:59 < Filip> hi jal0
+17:59 < jal0atWrk> hey folks
+17:59 < jal0atWrk> whats new?
+18:00 < Filip> rather busy at work these days
+18:01 < Filip> played with the interrupt code in the kernel a bit yesterday and today
+18:02 < jal0atWrk> interrupts... you playing to understand or for a specific purpose?
+18:02 < Filip> the code looks pretty clean
+18:03 < Filip> so I added a lot of  debug it
+18:03 < Filip> init seems to be ok, but looks like none gets triggered
+18:03 < jal0atWrk> ic, im working it from the other angle (asm)
+18:04 < Filip> part of kernel interrupt code is in assembler
+18:04 < Filip> that code is working on 4131 eval boards, so it should be healthy
+18:05 < jal0atWrk> you should look at setting up a timer, it would be easier to play with that interrupt, it dosn't require external input
+18:06 < Filip> did hardware tracing learn anything about interrupts ?
+18:06 < Filip> like certain pins  not connected, so definitely not an interrupt source
+18:07 < jal0atWrk> not really, only that i need to figure out the pin function on the ASIC chip
+18:09 -!- jal0_hmm [~jal0_wrkn@208.33.58.194] has joined #linux4be
+18:09 -!- jal0atWrk [~jal0_wrkn@208.33.58.194] has quit [Read error: 104 (Connection reset by peer)]
+18:09 < jal0_hmm> hmm
+18:10 < jal0_hmm> pretty much all of the GPIO pins are being used for something, whether its an interrupt source or not can be determined by reading their associated registers
+18:12 < jal0_hmm> i'll be able to get more info on them when i get my 'reference' (broken) BE300.
+18:13 < Filip> using a scope ?
+18:13 < jal0_hmm> yeap
+18:13 < jal0_hmm> i'll be able to monitor them realtime
+18:14 < Filip> in case you need spare parts, I still have some
+18:15 < jal0_hmm> the only thing that is broken on the one i'm getting is the display, which really isn't needed because i'm going to be running everything over serial
+18:21 < jal0_hmm> talk to you all later, time to get back to work, later
+18:21 < antagonizt> cu
+18:21 -!- jal0_hmm [~jal0_wrkn@208.33.58.194] has quit []
+18:22 < Filip> I'm going to get some sleep, long day tomorrow
+18:22 < Filip> cu
+18:22 -!- Filip [~Filip@153.99-136-217.adsl.skynet.be] has left #Linux4BE []
+21:12 -!- jal0_Wrkn is now known as jal0
+21:15 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit []
+22:25 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+23:20 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 54 (Connection reset by peer)]
+23:21 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Tue Dec 17 00:00:25 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

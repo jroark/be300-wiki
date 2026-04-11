@@ -1,0 +1,811 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="top" href="index.php.html" title="" />
+<link rel="search" href="search.php.html" title="" />
+<link rel="help" href="faq.php.html" title="" />
+<link rel="author" href="memberlist.php.html" title="" />
+
+<title>Linux4.BE :: Memberlist</title>
+<!-- link rel="stylesheet" href="templates/subRed/subRed.css" type="text/css" -->
+<style type="text/css">
+<!--
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+
+  NOTE: These CSS definitions are stored within the main page body so that you can use the phpBB2
+  theme administration centre. When you have finalised your style you could cut the final CSS code
+  and place it in an external file, deleting this section to save bandwidth.
+*/
+
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+	background-color: #fffcfc;
+	scrollbar-face-color: #f7eeee;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #f7eeee;
+	scrollbar-3dlight-color: #F5E9E9;
+	scrollbar-arrow-color:  #800000;
+	scrollbar-track-color: #fbf5f5;
+	scrollbar-darkshadow-color: #cc9999;
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #800000; }
+a:hover		{ text-decoration: underline; color : #DD6900; }
+hr	{ height: 0px; border: solid #F5E9E9 0px; border-top-width: 1px;}
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #cc9999 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 2px #BC8F8F solid; }
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #fbf5f5; }
+td.row2	{ background-color: #f7eeee; }
+td.row3	{ background-color: #F5E9E9; }
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(templates/subRed/images/subRed/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #FFB572; font-size: 11px; font-weight : bold;
+	background-color: #800000; height: 25px;
+	background-image: url(templates/subRed/images/subRed/cellpic3.gif);
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-image: url(templates/subRed/images/subRed/cellpic1.gif);
+			background-color:#F5E9E9; border: #FFFFFF; border-style: solid; height: 28px;
+}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #F5E9E9; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 12px; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle	{
+	font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #000000;
+}
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall { color : #000000; }
+a.gen,a.genmed,a.gensmall { color: #800000; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #DD6900; text-decoration: underline; }
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 11px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #800000;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #800000}
+a.cattitle		{ text-decoration: none; color : #800000; }
+a.cattitle:hover{ text-decoration: underline; }
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #800000; }
+a.forumlink 	{ text-decoration: none; color : #800000; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 11px; color : #000000;}
+a.nav			{ text-decoration: none; color : #800000; }
+a.nav:hover		{ text-decoration: underline; }
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2	{ font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #800000; }
+a.topictitle:visited { text-decoration: none; color : #b00000; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 11px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 10px; color : #000000; }
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px; line-height: 18px}
+a.postlink:link	{ text-decoration: none; color : #800000 }
+a.postlink:visited { text-decoration: none; color : #b00000; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #800000;
+	background-color: #FAFAFA; border: #F5E9E9; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #F5E9E9; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+/* Form elements */
+input,textarea, select {
+	color : #000000;
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #fbf5f5;
+	color : #000000;
+	font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #f7eeee; border-style: none; }
+
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import function) */
+@import url("templates/subRed/formIE.css");
+-->
+</style>
+</head>
+<body bgcolor="#fffcfc" text="#000000" link="#800000" vlink="#b00000">
+
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+	<tr>
+		<td class="bodyline"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td><a href="index.php.html"><img src="../img/linux4be_logo.jpg" border="0" alt="Linux4.BE Forum Index" vspace="1" /></a></td>
+				<td align="center" width="100%" valign="middle"><span class="maintitle">Linux4.BE</span><br /><span class="gen">Linux for the Casio BE-300 / BE-500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <style>#forumbbot {display:none;}</style><div id=forumbbot><a href=\'http://www.elite-charms.com/\'>italian charms</a></div><br />&nbsp; </span>
+				<table cellspacing="0" cellpadding="2" border="0">
+					<tr>
+						<td align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="faq.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_faq.gif" width="12" height="13" border="0" alt="FAQ" hspace="3" />FAQ</a></span><span class="mainmenu">&nbsp; &nbsp;<a href="search.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_search.gif" width="12" height="13" border="0" alt="Search" hspace="3" />Search</a>&nbsp; &nbsp;<a href="memberlist.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_members.gif" width="12" height="13" border="0" alt="Memberlist" hspace="3" />Memberlist</a>&nbsp; &nbsp;<a href="groupcp.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_groups.gif" width="12" height="13" border="0" alt="Usergroups" hspace="3" />Usergroups</a>&nbsp;
+						&nbsp;<a href="profile.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_register.gif" width="12" height="13" border="0" alt="Register" hspace="3" />Register</a></span>&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="profile.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_profile.gif" width="12" height="13" border="0" alt="Profile" hspace="3" />Profile</a>&nbsp; &nbsp;<a href="privmsg.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_message.gif" width="12" height="13" border="0" alt="Login to check your private messages" hspace="3" />Login to check your private messages</a>&nbsp; &nbsp;<a href="login.php.html" class="mainmenu"><img src="templates/subRed/images/icon_mini_login.gif" width="12" height="13" border="0" alt="Login" hspace="3" />Login</a>&nbsp;</span></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+
+		<br />
+
+
+<form method="post" action="memberlist.php?sid=5913901a4644c9cb0d93f56d2a0473bb">
+  <table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
+	<tr>
+	  <td align="left"><span class="nav"><a href="index.php.html" class="nav">Linux4.BE Forum Index</a></span></td>
+	  <td align="right" nowrap="nowrap"><span class="genmed">Select sort method:&nbsp;<select name="mode"><option value="joindate">Joined Date</option><option value="username">Username</option><option value="location">Location</option><option value="posts">Total posts</option><option value="email">Email</option><option value="website">Website</option><option value="topten">Top Ten Posters</option></select>&nbsp;&nbsp;Order&nbsp;<select name="order"><option value="ASC" selected="selected">Ascending</option><option value="DESC">Descending</option></select>&nbsp;&nbsp;
+		<input type="submit" name="submit" value="Sort" class="liteoption" />
+		</span></td>
+	</tr>
+  </table>
+  <table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+	<tr>
+	  <th height="25" class="thCornerL" nowrap="nowrap">#</th>
+	  <th class="thTop" nowrap="nowrap">&nbsp;</th>
+	  <th class="thTop" nowrap="nowrap">Username</th>
+	  <th class="thTop" nowrap="nowrap">Email</th>
+	  <th class="thTop" nowrap="nowrap">Location</th>
+	  <th class="thTop" nowrap="nowrap">Joined</th>
+	  <th class="thTop" nowrap="nowrap">Posts</th>
+	  <th class="thCornerR" nowrap="nowrap">Website</th>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;1&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">filip</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;<a href="mailto:filip@linux4.BE"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Hasselt, Belgium</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">20 Aug 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">19</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="http://www.Linux4.BE/" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;2&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">Juxta</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;<a href="mailto:juxta@fin.ods.org"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Toronto</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">22 Aug 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="http://fin.ods.org" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;3&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">chriswalla</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Ottawa, Canada</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">24 Aug 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;4&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">seeder</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Poland,Poznan</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">26 Aug 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="http://www.blackue.net" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;5&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">Smigma</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Richmond, VA.</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">28 Aug 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;6&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">jal0</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">East Cost, USA</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">30 Aug 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">51</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="../~jal0" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;7&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">antagonizt</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">San Francisco, CA</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">03 Sep 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">20</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="../~jroark" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;8&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">winwiz88</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;<a href="mailto:winwiz88@aol.com"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Panama City Beach, FL</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">04 Sep 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;9&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">ToqQrrl</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">09 Sep 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;10&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">mutexmutant</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">01 Oct 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;11&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">acestes</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">las vegas</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">01 Oct 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;12&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">grube300</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Austria</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">08 Oct 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">6</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;13&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">Samuel</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;<a href="mailto:wasupwithuman@msn.com"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">15 Oct 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">2</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;14&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">nykkto</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;<a href="mailto:nykkto@linux4.be"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Minneapolis, MN</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">18 Oct 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">5</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;15&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">wolfman</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">28 Oct 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;16&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">BlueKnight</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">29 Oct 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;17&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">blitz</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;<a href="mailto:blitzed@sympatico.ca"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Near Toronto Eh</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">03 Nov 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;18&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">Matthias</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">18 Nov 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;19&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">toddlr</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Wyckoff, NJ, USA</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">23 Nov 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;20&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">Mizar</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Ottawa, Ontario, Canada</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">26 Nov 2002</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;21&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">ExBite</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">17 Dec 2002</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;22&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">rhk</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">13 Jan 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="http://www.newimage.com/~rhk" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;23&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">serial</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">15 Jan 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">5</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;24&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">zorbit</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">17 Jan 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;25&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">softbluejazz</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Newburgh, NY</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">17 Jan 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;26&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">sharadmittal</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">20 Jan 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">7</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;27&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">hendyzero2</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;<a href="mailto:hendyzero2@yahoo.com"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">05 Feb 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">2</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;28&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">canadian_sniper</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;<a href="mailto:canadian_sniper@msn.com"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">06 Feb 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">4</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;29&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">michaldemin</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">18 Feb 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">3</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;30&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">yuray</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Russia, Moscow region</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">18 Feb 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">2</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;31&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">Darkgundam</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">08 Mar 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;32&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">The Evil Monkey</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">18 Mar 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;33&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">atlas500</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">21 Mar 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;34&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">amd</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">Estonia</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">25 Mar 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="http://amd-core.tk" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;35&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">beefboy</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;<a href="mailto:tylerdurden@theteebox.com"><img src="templates/subRed/images/lang_english/icon_email.gif" alt="Send email" title="Send email" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Fort Collins, CO</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">12 Apr 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;36&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">fldp</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">18 Apr 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">2</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;37&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">yaoxing</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Singapore</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">13 May 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;38&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">terranagent2493</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">23 May 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;39&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">nikhil</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">India</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">10 Jun 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">6</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;40&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">jma</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">13 Jun 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;41&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">pete</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">weiler-la-tour</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">05 Jul 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;42&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">olzkid</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">15 Jul 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;43&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">AnalogxXx</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">30 Jul 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;44&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">duneo</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">27 Aug 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;45&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">Andrey</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Piscataway, NJ, USA</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">19 Sep 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">11</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="../~andrey" target="_userwww"><img src="templates/subRed/images/lang_english/icon_www.gif" alt="Visit posters website" title="Visit posters website" border="0" /></a>&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;46&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">redmasq</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">01 Oct 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;47&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">Shawn</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">07 Oct 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;48&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">l_houben</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">The Netherlands</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">08 Oct 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row1" align="center"><span class="gen">&nbsp;49&nbsp;</span></td>
+	  <td class="row1" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row1" align="center"><span class="gen"><a href="profile.php.html" class="gen">blaxnake</a></span></td>
+	  <td class="row1" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">Aarschot</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gensmall">12 Oct 2003</span></td>
+	  <td class="row1" align="center" valign="middle"><span class="gen">1</span></td>
+	  <td class="row1" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="row2" align="center"><span class="gen">&nbsp;50&nbsp;</span></td>
+	  <td class="row2" align="center">&nbsp;<a href="privmsg.php.html"><img src="templates/subRed/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>&nbsp;</td>
+	  <td class="row2" align="center"><span class="gen"><a href="profile.php.html" class="gen">MrApples</a></span></td>
+	  <td class="row2" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">&nbsp;</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gensmall">27 Oct 2003</span></td>
+	  <td class="row2" align="center" valign="middle"><span class="gen">0</span></td>
+	  <td class="row2" align="center">&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+	  <td class="catbottom" colspan="8" height="28">&nbsp;</td>
+	</tr>
+  </table>
+  <table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
+	<tr>
+	  <td align="right" valign="top"></td>
+	</tr>
+  </table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+	<td><span class="nav">Page <b>1</b> of <b>4</b></span></td>
+	<td align="right"><span class="gensmall">All times are GMT - 4 Hours</span><br /><span class="nav">Goto page <b>1</b>, <a href="memberlist.php.html">2</a>, <a href="memberlist.php.html">3</a>, <a href="memberlist.php.html">4</a>&nbsp;&nbsp;<a href="memberlist.php.html">Next</a>&nbsp;</span></td>
+  </tr>
+</table></form>
+
+<table width="100%" cellspacing="2" border="0" align="center">
+  <tr>
+	<td valign="top" align="right">
+<form method="get" name="jumpbox" action="viewforum.php?sid=5913901a4644c9cb0d93f56d2a0473bb" onSubmit="if(document.jumpbox.f.value == -1){return false;}"><table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:&nbsp;<select name="f" onChange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }"><option value="-1">Select a forum</option><option value="-1">&nbsp;</option><option value="-1">End-users</option><option value="-1">----------------</option><option value="1">FAQ</option><option value="2">General</option><option value="3">Requests</option><option value="-1">&nbsp;</option><option value="-1">Developers</option><option value="-1">----------------</option><option value="4">FAQ</option><option value="5">General</option><option value="6">Toolchain</option><option value="7">Kernel</option><option value="8">CE Kernel Tools</option></select><input type="hidden" name="sid" value="sid=5913901a4644c9cb0d93f56d2a0473bb" />&nbsp;<input type="submit" value="Go" class="liteoption" /></span></td>
+	</tr>
+</table></form>
+
+</td>
+  </tr>
+</table>
+
+
+<div align="center"><span class="copyright"><br /><br />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB 2.0. If you cannot (for good
+	reason) retain the full copyright we request you at least leave in place the
+	Powered by phpBB 2.0.2 line, with phpBB linked to www.phpbb.com. If you refuse
+	to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2002
+// -->
+Powered by <a href="http://www.php.htmlbb.com/" target="_phpbb" class="copyright">phpBB</a> 2.0.2 &copy; 2001 phpBB Group<br /></span></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_21.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_21.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Jan 21 00:00:54 2003
+02:18 -!- MattLSU [MattLSU@139.84.178.44] has joined #linux4be
+02:18 < MattLSU> hi
+02:24 < MattLSU> Anyone here?
+02:24 -!- MattLSU [MattLSU@139.84.178.44] has quit []
+02:47 -!- Filip [Filip@193.190.11.245] has joined #linux4be
+04:08 -!- MattLSU [MattLSU@139.84.178.44] has joined #linux4be
+04:08 < MattLSU> Hi.
+04:08 < MattLSU> Hi Filip, it's Matt.  The fella from the e-mail about helping out....
+04:12 < Filip> Hi Matt
+04:12 < MattLSU> Hey, how are ya?
+04:12 < Filip> must be late atyou side
+04:12 < Filip> at your
+04:12 < MattLSU> ehh, just a bit:-)
+04:12 < MattLSU> pullin somewhat of an all nighter
+04:13 < MattLSU> but hey, for us college kids, that's nothi;-)
+04:14 -!- PsycoXul [psyco@adsl-63-205-40-78.dsl.lsan03.pacbell.net] has quit [Read error: 104 (Connection reset by peer)]
+04:14 < Filip> what are you studying ?
+04:14 -!- PsycoXul [psyco@adsl-63-205-40-238.dsl.lsan03.pacbell.net] has joined #linux4be
+04:16 < MattLSU> writin' a few papers
+04:16 < MattLSU> some a couple philosophy
+04:16 < MattLSU> one history
+04:16 < MattLSU> it's not like they're "due" incredibly soon
+04:16 < MattLSU> like tomorrow
+04:16 < MattLSU> but i just want to get them done
+04:17 < MattLSU> that way i can look over them again in the coming days
+04:17 < MattLSU> ya know?
+04:19 < Filip> what's the deadline ? may ?
+04:20 < MattLSU> next week
+04:20 < MattLSU> but i wanna try to get them in by the end of this week
+04:21 < MattLSU> wanna write one of them for me?-)
+04:23 < Filip> sure ;-)
+04:24 < MattLSU> so how are you?
+04:27 < Filip> pretty busy,unfortunately
+04:28 < Filip> haven't had a lot of time to spent on this project the last couple of months
+04:30 < MattLSU> i know that feeling
+04:30 < MattLSU> it's seems like there's so many things that i "want" to do
+04:30 < MattLSU> but because of time
+04:30 < MattLSU> and other commitments
+04:31 < MattLSU> i can't
+04:31 < MattLSU> or at least i haven't been able to 'yet'
+04:39 < MattLSU> so hey, real quick
+04:39 < MattLSU> while i have this on my mind
+04:40 < MattLSU> 100 bucks for a  be-300 and 32 meg card
+04:40 < MattLSU> 6 month warranty left on the be
+04:40 < MattLSU> 100 bucks flat, shipped, everything
+04:40 < MattLSU> good deal?
+04:41 < Filip> not bad,
+04:44 < MattLSU> or should i opt for a new one?
+04:45 < MattLSU> i can't find anything less than 120-130 online
+04:45 < MattLSU> most 130
+04:45 < Filip> SAMS club is usually cheap
+04:45 < MattLSU> yeah, only problem is i can't readily get to one
+04:46 < MattLSU> and u can't order 'em online from them
+04:46 < MattLSU> my parents are sams club members
+04:46 < MattLSU> but i'm from baltimore
+04:46 < MattLSU> i go to school in philly
+04:46 < MattLSU> so that's a little rough
+04:50 < MattLSU> but yeah, i've heard sam's has good prices
+04:51 < MattLSU> specifically, i think i heard 97-100
+04:57 < MattLSU> is that about how much you paid/pay for them?
+04:58 < Filip> i live in Belgium, and they are not available here
+04:58 < Filip> haveto order abroad
+04:58 < Filip> my last one came from a SAMS, paid $120 all in 
+05:00 < MattLSU> gotcha
+05:01 < MattLSU> how many have u gone thru over time?
+05:02 < Filip> two, first one is now disassembled
+05:02 < Filip> (the pictures are on the weeb)
+05:02 < MattLSU> i see
+05:03 < MattLSU> so what do you do, have someone buy it here for you, and then ship it overseas?
+05:03 < MattLSU> or will sams ship overseas?
+05:08 -!- PsycoXul [psyco@adsl-63-205-40-238.dsl.lsan03.pacbell.net] has quit [Read error: 60 (Operation timed out)]
+05:10 -!- PsycoXul [psyco@adsl-63-205-40-238.dsl.lsan03.pacbell.net] has joined #linux4be
+05:13 < Filip> I got someone to buy it for me, and ship it ot belgium
+07:25 -!- WebGuest3804 [~eirc@212.141.177.244] has joined #Linux4BE
+07:28 -!- WebGuest3804 [~eirc@212.141.177.244] has quit [Client Quit]
+07:35 -!- WebGuest7967 [~eirc@217.220.98.96] has joined #Linux4BE
+07:35 < Filip> Hi webguest
+07:38 -!- WebGuest7967 [~eirc@217.220.98.96] has quit [Client Quit]
+08:15 -!- MattLSU [MattLSU@139.84.178.44] has left #linux4be []
+08:26 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4BE
+08:30 < MouseLRN> why? obj-y    := prom.o setup.o ide-be300.o in Makefile, may be obj-$(CONFIG_IDE) = ide-be300.o ?
+08:35 < Filip> indeed
+08:38 -!- WebGuest0223 [~eirc@212.141.177.244] has joined #Linux4BE
+08:42 -!- WebGuest7845 [~eirc@212.141.177.244] has joined #Linux4BE
+08:42 < Filip> so, how's topuch going ?
+08:42 < Filip> touch
+08:43 < Filip> did you see the patch for void vr41xx_clear_giuint(u8 pin) ?
+08:43 < Filip>   
+08:44 -!- WebGuest7845 [~eirc@212.141.177.244] has quit [Client Quit]
+08:44 -!- WebGuest0223 [~eirc@212.141.177.244] has quit ["Today is a good day to chat."]
+08:46 < MouseLRN> yes, I saw vr41xx_clear_giuint...
+08:47 < MouseLRN> yesterday, I sad that I need more dissasmed info, especially from touch.dll
+08:48 < MouseLRN> did you see my test program - sdlregtest ?
+08:50 < MouseLRN> I downloaded last vmlinux image from linux4.be (/home/be300/linux/linux_) and it's says that:
+08:51 < MouseLRN> ide1: unexpected interrupt, status=0x00, count=xxxxxxx
+08:52 < Filip> what filesize for that kernel ?
+08:52 < Filip> you canfind the autobuild ones at  http://www.linux4.be/download/kernel/autobuild/
+08:52 < MouseLRN> -rwxr-xr-x    1 mouse    mouse     1209043 ñÎ× 21 16:38 vmlinux
+08:53 < Filip> use the first one from that list (vmlinux_200301201807.gz 755.801 KB )
+08:53 < Filip> that one did detect my  different CF cards
+08:54 < MouseLRN> what about my test program?
+08:54 < Filip> <4>hdc: SanDisk SDCFB-64, ATA DISK drive  
+08:54 < Filip> <4>ide1 at 0x170-0x177,0x376 on irq 40
+08:54 < Filip> <6>hdc: 125440 sectors (64 MB) w/1KiB Cache, CHS=490/8/32
+08:54 < Filip> <6>Partition check:
+08:54 < Filip> <6> hdc: hdc1
+08:54 < Filip> but when I remove the cF card, it starts  complaining about lost interrupt
+08:55 < Filip> your test program: have to make a new ramdisk first , should have time to do so tonight
+08:56 < Filip> that is in 6 hours from now
+08:56 < MouseLRN> I can upload my working image ;-)
+08:56 < Filip> please do , that will save me some time
+08:56 < Filip> you can put it into 
+08:57 < MouseLRN> your vmlinux_200301201807.gz works with my CF card, what did you do????
+08:57 < Filip>   /home/sites/www.linux4.be/web/download
+08:57 < Filip> what do you mean with 'it works with your cF card ?'
+08:58 < Filip> apply the patch for vr41xx_clear_giuint..
+08:58 < Filip> and the contributed CF patches 
+08:58 < MouseLRN> This mean, that my CF Card (CF NCP 64Mb) is works (partition check is done)
+08:59 < MouseLRN> and it will work?
+08:59 < Filip> I took the latest snapshot from sourceforge's linux-mips 
+08:59 < Filip> (that one includes the vr41xx_clear_giuint patch
+08:59 < Filip> applied our cvs over it and recompiled
+09:00 < Filip> not sure, that's why I was planning to make a new ramdisk 
+09:00 < Filip> ifwe can get both touchscreen and cf to work in the comming days/weeks, we're ready for a first 'official' release :-)
+09:01 < MouseLRN> ;-)
+09:02 < Filip> when I insert my wireless CF card (ambicom), I get the interrupt lost message about once a second, and the led on the card seems to flicker at the same time the mesage is  displayed
+09:04 < Filip> are you getting stable x/y pairs in Linux ?
+09:04 < Filip> if so, we could make a polling touchscreen driver to start with
+09:07 < MouseLRN> sometime. I don't know, with which proper values must be initialized touchscreen ;-( and now, I have problem. You can see it by using my vmlinux (/home/mouse/vmlinux_sdlregtest)
+09:08 < Filip> haven't got my BE with me, it's at home (I should be back home in 3 hours, I can give it a quick try then)
+09:11 < MouseLRN> ok, I'll go out within 1-2 hour, and get back  6 hours
+09:11 < MouseLRN> after...
+09:13 < Filip> I'm also mailing Seiichi, to see how he found the CF settings, maybe he knows the touchscreen IRQ or other settings
+09:14 < MouseLRN> ok, it would be nice
+09:25 < MouseLRN> after clear_giuint patch my scan_be doesn't work ;-(
+09:25 < Filip> ????
+09:26 < Filip> it was a very simple patch:
+09:26 < Filip> void vr41xx_clear_giuint(u8 pin) 
+09:26 < Filip>  { 
+09:26 < Filip>         if (pin < 16) 
+09:26 < Filip> -               write_giuint(GIUINTSTATL, (u16)1 << pin); 
+09:26 < Filip> +               write_giuint((u16)1 << pin, GIUINTSTATL); 
+09:26 < Filip>         else
+09:26 < Filip> -               write_giuint(GIUINTSTATH, (u16)1 << (pin - 16));
+09:26 < Filip> +               write_giuint((u16)1 << (pin - 16), GIUINTSTATH);
+09:26 < Filip>  }
+09:26 < Filip>  
+09:28 < MouseLRN> reverse: "+" == "-"
+09:28 < MouseLRN> sorry, I saw at not modified code ;-)
+09:38 < MouseLRN> hmm, after card initialization, scan_be doesn't work, but if I remove my CF before ide initialization, scan_be will work
+09:39 < Filip> maybe he's touching same registers .....
+09:45 < MouseLRN> hmm, after card initialization, in scan_kbd set1(set2) = readb(@addr) always read zero values
+09:47 < MouseLRN> ;-(
+09:59 < MouseLRN> I will be later, bye
+09:59 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has quit ["ÕÛÅÌ... ÎÏ ÏÂÅÝÁÌ ×ÅÒÎÕÔØÓÑ"]
+10:39 -!- MattLSU [MattLSU@139.84.178.44] has joined #linux4be
+11:32 -!- Filip [Filip@193.190.11.245] has left #linux4be []
+15:05 -!- Filip_ [~Filip@51.168-136-217.adsl.skynet.be] has joined #linux4be
+15:12 -!- sinfonian [~bshirclif@twhou-213-56.ev1.net] has joined #linux4be
+15:12 < Filip_> hi brian
+15:12 < sinfonian> hey guys I cant talk for long... Just wanted you to know I am keeping up with the logs
+15:12 < sinfonian> and I am really proud of you
+15:12 < Filip_> getting real close now
+15:13 -!- someguy_ [~matt@psyche.eggs.net] has quit [Read error: 60 (Operation timed out)]
+15:14 < sinfonian> yea it is great
+15:14 < sinfonian> I will brb  got to get ready for work 
+15:14 < sinfonian> got to be ther in 45 min
+15:14 < Filip_> how' s work going ?
+15:15 -!- Filip_ is now known as filip
+15:43 < sinfonian> work is alright
+15:43 < sinfonian> waiting tables isnt like my life long career though
+15:43 < sinfonian> Im going to start teaching piano again for some more income
+15:43 < sinfonian> anyway i got to run
+15:43 < sinfonian> talk to you all later... 
+15:44 -!- sinfonian [~bshirclif@twhou-213-56.ev1.net] has quit []
+16:16 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+16:17 < filip> hi mouse
+16:17 < MouseLRN> filip hi, I returned ;-)
+16:18 < filip> your testproggie works  great
+16:18 < filip> x/y looks  stable & reliable as long as you   keep stylus  down
+16:19 < filip> when doing pen up/down it gets  fuzzy, but that's normal 
+16:19 < filip> there must be one bit in one of those registers  that indicates if the value is OK to use or not.
+16:20 < filip> just  need to find that bit
+16:20 < MouseLRN> yes, but if you going from y ~ 0 to y ~ 320, Y-value will be less, than must be ;-(
+16:20 < filip> I also got a reply Seiichi already
+16:20 < filip> not sure I understand you
+16:22 < filip> from Seiichi:
+16:22 < MouseLRN> when you touch the screen, control reg equal to 3704, when you stopped to touch, control reg will be 3304 - in theory, but in practice after touching control reg set to 3704 and wont change to 3304 ;-(
+16:22 < filip> BTW, I said that IRQ for BE's pcmcia controller is 40 (GPIO 0). It would 
+16:22 < filip> be wrong. I tried to find IRQ for BE's key in the same way. When I pushed
+16:22 < filip> the key, the register changes to 0x109. Maybe, GPIO 0 is shared IRQ or
+16:22 < filip> cascade interrupt line...
+16:22 < MouseLRN> which register?
+16:23 < filip> GIUINTSTATL register changes from 0x0108 to 0x0109.
+16:24 < MouseLRN> to run sdlregstat you can do the following in shell: 'a' (without parameters), or if you want to run regstat (console app), run: 'a a'.
+16:24 < filip> looks like that's  the main IRQ  for all peripherals, and you need to check the source with the companion and dispatch  accordingly
+16:25 < filip> I just entered 'regstat'
+16:25 < MouseLRN> what about sdlregstat?
+16:25 < MouseLRN> can I use USB instead SERIAL connection?
+16:27 < MouseLRN> I think, that for PCMCIA slot we need to use CardBus manager or something similar (in future). What do you think?
+16:30 < MouseLRN> hmm, may be, if we touch the screen, GIUINTSTATL register changes to some values?
+16:31 < MouseLRN> when did you last saw andrey?
+16:31 < filip> last week ?
+16:32 < MouseLRN> after?
+16:35 < filip> bbl
+16:36 < MouseLRN> ?
+16:37 < filip> bbl=be back later
+16:38 < BaalzAw> Hi
+16:38 < BaalzAw> MouseLRN: can you send me your last kernel?
+16:38 -!- BaalzAw is now known as Baalz
+16:40 < MouseLRN> filip ok
+16:40 < MouseLRN> Baalz do you have ssh to linux4.be?
+16:40 < Baalz> Nope
+16:40 < Baalz> You are on dialup?
+16:41 < MouseLRN> one minute... Today I uploaded my kernel to linux4.be ;-)
+16:41 < Baalz> Maybe you could mv it to public_html
+16:43 < MouseLRN> check it at http://linux4.be/~mouse/
+16:43 < Baalz> Thamk you very much :)
+16:44 < MouseLRN> your welcome %)
+16:45 < Baalz> Is CF card support included in this?
+16:46 < Baalz> Damn I have to leave for about an hour, maybe I se you later...
+16:46 < MouseLRN> no, because it blocked scan_be
+16:46 < Baalz> Ok
+16:46 < MouseLRN> s/blocked/blocks/
+16:46 < Baalz> See you later
+16:46 < MouseLRN> ok
+16:46 < Baalz> And thanks for your good work :)
+16:48 < MattLSU> man, i tell ya
+16:48 < MattLSU> it gets me so excited to hear about all of this stuff
+16:49 < MattLSU> i think i'm going to go ahead and order my BE
+16:49 < MattLSU> $100 flat, including shipping-----used, 6 mo warranty plus 32 meg CF card
+16:49 < MattLSU> think that's a decent deal?
+16:50 < MouseLRN> Baalz ;-)
+16:55 < MouseLRN> MattLSU I don't know, sorry (I'm from foreign contry)
+16:57 < MattLSU> no prob:-)
+16:57 < MattLSU> sorry
+16:57 < MattLSU> hehehe
+17:03 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has quit ["I'll be later"]
+17:21 < PsycoXul> MattLSU: i just payed $114 w/ shipping for mine earlier this month
+17:21 < PsycoXul> MattLSU: it was NIB but didn't come with a flash card, just a nylon case
+17:28 < filip> Baalz ?
+17:39 < Baalz> Hi filip and everyone else :)
+17:40 < filip> hi Baalz
+17:40 < Baalz> MattLSU: This seems to be a very good deal
+17:40 < Baalz> I bought a 32MB CF card for 50$ 2 days ago for testing
+17:41 < filip> 50 US ?? that's expensive !!
+17:41 < filip> I bought an additional 128MB (brand new) for the sameprice overhere
+17:42 -!- Chewie [~chewie@the-geek.org] has joined #linux4be
+17:42 < Chewie> Hi
+17:43 < Baalz> 50$ Canadian
+17:43 < Baalz> Hi chewie
+17:43 < Baalz> THis is about 35$ US
+17:43 < MattLSU> gotcha
+17:43 < MattLSU> yeah, i was gonna say....a 32 meg cf here you can get for around 20
+17:44 < Chewie> 100$ is a great deal
+17:44 < filip> hi Chewie
+17:44 < Chewie> Hi
+17:50 < MattLSU> how's the battery life on be?
+17:50 < MattLSU> not so much in terms of charge
+17:50 < MattLSU> but in terms of longevity
+17:50 < Chewie> 4 hours of usage aprox, I've read (I don't have one yet)
+17:52 < filip> dp
+17:52 < filip> depends
+17:52 < filip> (brightness, type of CF card used etc)
+17:52 < MattLSU> right
+17:52 < MattLSU> but in terms of age
+17:52 < Chewie> I guess it's not the same playing a DivX that reeding a txt :)
+17:52 < MattLSU> i guess would be a better way of putting it
+17:52 < Chewie> s/reeding/reading
+17:52 < MattLSU> :-)
+17:53 < filip> indeed
+17:53 < MattLSU> any estimates/experience with age of batteries?
+17:53 < MattLSU> how long they last
+17:53 < MattLSU> approx charges i guess
+17:53 < Chewie> filip: Does the brand of the CF affects sensibly to the battery usage?
+17:54 < filip> not the brand, but the type: 
+17:54 < Chewie> ¿CF I or II?
+17:54 < filip> if  it's just cF memory (ATA)  it's almost nothing
+17:54 < filip> but a microdrive drains a lot
+17:54 < filip> and y
+17:54 < Chewie> Ah, sure, it has movile parts
+17:54 -!- Baalz is now known as BaalzAW
+17:54 < filip> my WiFi card is ok
+17:55 < filip> notice a little  faster drain, but not a lot
+17:56 < MattLSU> can you use any CF-->pcmcia adapter on the BE?
+17:56 < MattLSU> any brand that is
+17:57 < filip> not sure, never tried
+17:58 < Chewie> filip: So, if you don't use the wifi card, how much does it last?
+17:58 < MattLSU> when you use a cf to pcmcia adapter, where do you get drivers for CE?
+17:58 < MattLSU> like say i wanted to use a pcmcia wifi card
+17:58 < MattLSU> instead of a cf
+18:00 < filip> Chewie: not sure,  never used it in 'normal' conditions
+18:01 < filip> I'm mostly using it with serial cable running (for linux debug output)
+18:01 < filip> about 4 hours or so
+18:01 < filip> not sure about price for a cf<->pcmcia adapter, but I bought my AmbiCom   CF WiFi for about USD60
+18:02 < filip> on eBay
+18:03 < MattLSU> yah
+18:03 < MattLSU> http://www.overstock.com/cgi-bin/d2.cgi?PAGE=PROFRAME&PROD_ID=62748
+18:04 < MattLSU> saw that
+18:04 < MattLSU> checked some prices on ebay
+18:04 < MattLSU> someone had one on there
+18:04 < MattLSU> like 24-25 dollars
+18:04 < MattLSU> with like 6 days left i think
+18:04 < MattLSU> well
+18:04 < MattLSU> i've gotta run to class
+18:04 < MattLSU> i'll bbl folks
+18:04 < MattLSU> thx!
+18:04 < Chewie> Ciao MattLSU
+18:07 < filip> cu
+18:09 -!- Den_Beiren [~me@200.2-201-80.adsl.skynet.be] has joined #linux4be
+18:09  * filip is going to get some sleep....ZZZzzzZZzzZZZzzzZZZ
+18:10 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+18:10 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has quit [Client Quit]
+18:12 < filip> short messgae for Mouse: sdlregstat is cool; jusut need to get the 'noise' out when doing pen up/down
+18:12 < filip> jusut=just
+18:12 < filip> off to bed now, talk to you later folks ....
+18:12 -!- filip [~Filip@51.168-136-217.adsl.skynet.be] has left #linux4be []
+18:15 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has joined #Linux4BE
+18:15 -!- Den_Beiren [~me@200.2-201-80.adsl.skynet.be] has left #linux4be []
+18:16 < Chewie> <filip> short messgae for Mouse: sdlregstat is cool; jusut need to get the 'noise' out when doing pen up/down
+18:17 < MouseLRN> Chewie thanks for message ;-)
+18:17 < Chewie> No prob, though I think you'd have read it from the logs :)
+18:18 < MouseLRN> 'noise' present in WinCE too. Tpanel for WinCE shows it. I think, that we need to use only pendown state
+18:18 < MouseLRN> I haven't time to do it
+18:27 < MouseLRN> I'll go to sleep, by 2 all
+18:27 -!- MouseLRN [~mouse@IREX-GW-2.radio-msu.net] has quit ["localtime is 02:27am"]
+20:33 -!- Chewie [~chewie@the-geek.org] has quit [Read error: 110 (Connection timed out)]
+21:15 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: PsycoXul, BaalzAW
+21:16 -!- Netsplit over, joins: BaalzAW, PsycoXul
+--- Log closed Wed Jan 22 00:00:21 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

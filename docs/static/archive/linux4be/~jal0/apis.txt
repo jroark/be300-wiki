@@ -1,0 +1,1074 @@
+KInfoTable[KINX_APISETS]: 80668C20 (00668C20)
+---------------------------------------------
+API Set 00: 80075670 (00075670)
+  acName: Wn32    disp: DISPATCH_I_KPSL        type: SH_WIN32             
+  cMethods: 165    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 800753D8 (000753D8)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 80096034 (00096034)    dwSig: 00000000
+    pfnMethod0001: 8009603C (0009603C)    dwSig: 00000000
+    pfnMethod0002: 8009AAD0 (0009AAD0)    dwSig: 00000000
+    pfnMethod0003: 80097844 (00097844)    dwSig: 00000000
+    pfnMethod0004: 80097F44 (00097F44)    dwSig: 00000000
+    pfnMethod0005: 800985AC (000985AC)    dwSig: 00000000
+    pfnMethod0006: 80098800 (00098800)    dwSig: 00000000
+    pfnMethod0007: 80098564 (00098564)    dwSig: 00000000
+    pfnMethod0008: 800931D8 (000931D8)    dwSig: 00000000
+    pfnMethod0009: 80092FF0 (00092FF0)    dwSig: 00000000
+    pfnMethod000A: 80092F84 (00092F84)    dwSig: 00000000
+    pfnMethod000B: 80093220 (00093220)    dwSig: 00000000
+    pfnMethod000C: 8009333C (0009333C)    dwSig: 00000000
+    pfnMethod000D: 800A7C30 (000A7C30)    dwSig: 00000000
+    pfnMethod000E: 8007B670 (0007B670)    dwSig: 00000000
+    pfnMethod000F: 8007FE40 (0007FE40)    dwSig: 00000000
+    pfnMethod0010: 8008127C (0008127C)    dwSig: 00000000
+    pfnMethod0011: 800A1E30 (000A1E30)    dwSig: 00000000
+    pfnMethod0012: 800A1C20 (000A1C20)    dwSig: 00000000
+    pfnMethod0013: 800A19B4 (000A19B4)    dwSig: 00000000
+    pfnMethod0014: 800A18B4 (000A18B4)    dwSig: 00000000
+    pfnMethod0015: 800A1D54 (000A1D54)    dwSig: 00000000
+    pfnMethod0016: 800801C4 (000801C4)    dwSig: 00000000
+    pfnMethod0017: 8007B8F8 (0007B8F8)    dwSig: 00000000
+    pfnMethod0018: 8008AE98 (0008AE98)    dwSig: 00000000
+    pfnMethod0019: 8009D4D4 (0009D4D4)    dwSig: 00000000
+    pfnMethod001A: 8009CEB0 (0009CEB0)    dwSig: 00000000
+    pfnMethod001B: 8009D238 (0009D238)    dwSig: 00000000
+    pfnMethod001C: 800A7E48 (000A7E48)    dwSig: 00000000
+    pfnMethod001D: 800A7FE8 (000A7FE8)    dwSig: 00000000
+    pfnMethod001E: 800932C4 (000932C4)    dwSig: 00000000
+    pfnMethod001F: 8009CE38 (0009CE38)    dwSig: 00000000
+    pfnMethod0020: 8009B950 (0009B950)    dwSig: 00000000
+    pfnMethod0021: 8009BDA0 (0009BDA0)    dwSig: 00000000
+    pfnMethod0022: 8007EA74 (0007EA74)    dwSig: 00000000
+    pfnMethod0023: 800A4978 (000A4978)    dwSig: 00000000
+    pfnMethod0024: 800A4978 (000A4978)    dwSig: 00000000
+    pfnMethod0025: 800A4978 (000A4978)    dwSig: 00000000
+    pfnMethod0026: 800A28DC (000A28DC)    dwSig: 00000000
+    pfnMethod0027: 800A274C (000A274C)    dwSig: 00000000
+    pfnMethod0028: 80096050 (00096050)    dwSig: 00000000
+    pfnMethod0029: 800A4970 (000A4970)    dwSig: 00000000
+    pfnMethod002A: 8008AE98 (0008AE98)    dwSig: 00000000
+    pfnMethod002B: 800868A8 (000868A8)    dwSig: 00000000
+    pfnMethod002C: 80086884 (00086884)    dwSig: 00000000
+    pfnMethod002D: 80080F74 (00080F74)    dwSig: 00000000
+    pfnMethod002E: 800933D4 (000933D4)    dwSig: 00000000
+    pfnMethod002F: 800A2318 (000A2318)    dwSig: 00000000
+    pfnMethod0030: 800A3764 (000A3764)    dwSig: 00000000
+    pfnMethod0031: 800A3A3C (000A3A3C)    dwSig: 00000000
+    pfnMethod0032: 800A3CF4 (000A3CF4)    dwSig: 00000000
+    pfnMethod0033: 800A3E84 (000A3E84)    dwSig: 00000000
+    pfnMethod0034: 80081AD0 (00081AD0)    dwSig: 00000000
+    pfnMethod0035: 8008690C (0008690C)    dwSig: 00000000
+    pfnMethod0036: 80088CCC (00088CCC)    dwSig: 00000000
+    pfnMethod0037: 8007B86C (0007B86C)    dwSig: 00000000
+    pfnMethod0038: 800882E4 (000882E4)    dwSig: 00000000
+    pfnMethod0039: 80088000 (00088000)    dwSig: 00000000
+    pfnMethod003A: 8008831C (0008831C)    dwSig: 00000000
+    pfnMethod003B: 80081000 (00081000)    dwSig: 00000000
+    pfnMethod003C: 80081120 (00081120)    dwSig: 00000000
+    pfnMethod003D: 800810AC (000810AC)    dwSig: 00000000
+    pfnMethod003E: 800811A0 (000811A0)    dwSig: 00000000
+    pfnMethod003F: 80080FC4 (00080FC4)    dwSig: 00000000
+    pfnMethod0040: 80080FA8 (00080FA8)    dwSig: 00000000
+    pfnMethod0041: 80088AC4 (00088AC4)    dwSig: 00000000
+    pfnMethod0042: 80088A68 (00088A68)    dwSig: 00000000
+    pfnMethod0043: 80080EB8 (00080EB8)    dwSig: 00000000
+    pfnMethod0044: 80080DC8 (00080DC8)    dwSig: 00000000
+    pfnMethod0045: 80080EF8 (00080EF8)    dwSig: 00000000
+    pfnMethod0046: 80089A64 (00089A64)    dwSig: 00000000
+    pfnMethod0047: 80088984 (00088984)    dwSig: 00000000
+    pfnMethod0048: 8007FDCC (0007FDCC)    dwSig: 00000000
+    pfnMethod0049: 8007FDC0 (0007FDC0)    dwSig: 00000000
+    pfnMethod004B: 8007FD98 (0007FD98)    dwSig: 00000000
+    pfnMethod004C: 8007FD6C (0007FD6C)    dwSig: 00000000
+    pfnMethod004D: 800948A8 (000948A8)    dwSig: 00000000
+    pfnMethod004E: 800884BC (000884BC)    dwSig: 00000000
+    pfnMethod004F: 80096070 (00096070)    dwSig: 00000000
+    pfnMethod0050: 80089AAC (00089AAC)    dwSig: 00000000
+    pfnMethod0051: 8007FFF0 (0007FFF0)    dwSig: 00000000
+    pfnMethod0052: 80088E28 (00088E28)    dwSig: 00000000
+    pfnMethod0053: 8008AEA0 (0008AEA0)    dwSig: 00000000
+    pfnMethod0054: 8008AEB4 (0008AEB4)    dwSig: 00000000
+    pfnMethod0055: 80080E9C (00080E9C)    dwSig: 00000000
+    pfnMethod0056: 80080E5C (00080E5C)    dwSig: 00000000
+    pfnMethod0057: 800858AC (000858AC)    dwSig: 00000000
+    pfnMethod0058: 8007FD60 (0007FD60)    dwSig: 00000000
+    pfnMethod0059: 8007FD54 (0007FD54)    dwSig: 00000000
+    pfnMethod005A: 80080EC8 (00080EC8)    dwSig: 00000000
+    pfnMethod005B: 80088CAC (00088CAC)    dwSig: 00000000
+    pfnMethod005C: 80099ED8 (00099ED8)    dwSig: 00000000
+    pfnMethod005D: 8009AA5C (0009AA5C)    dwSig: 00000000
+    pfnMethod005E: 80093040 (00093040)    dwSig: 00000000
+    pfnMethod005F: 8009F764 (0009F764)    dwSig: 00000000
+    pfnMethod0060: 8009EB44 (0009EB44)    dwSig: 00000000
+    pfnMethod0061: 8009EC94 (0009EC94)    dwSig: 00000000
+    pfnMethod0062: 8009F618 (0009F618)    dwSig: 00000000
+    pfnMethod0063: 800A84A8 (000A84A8)    dwSig: 00000000
+    pfnMethod0064: 8009BC98 (0009BC98)    dwSig: 00000000
+    pfnMethod0065: 800A1E24 (000A1E24)    dwSig: 00000000
+    pfnMethod0066: 80080D38 (00080D38)    dwSig: 00000000
+    pfnMethod0067: 80080F98 (00080F98)    dwSig: 00000000
+    pfnMethod0068: 80096094 (00096094)    dwSig: 00000000
+    pfnMethod0069: 800A3444 (000A3444)    dwSig: 00000000
+    pfnMethod006A: 800A3550 (000A3550)    dwSig: 00000000
+    pfnMethod006B: 800A3580 (000A3580)    dwSig: 00000000
+    pfnMethod006C: 800961EC (000961EC)    dwSig: 00000000
+    pfnMethod006D: 80096244 (00096244)    dwSig: 00000000
+    pfnMethod006E: 800962A0 (000962A0)    dwSig: 00000000
+    pfnMethod006F: 800962FC (000962FC)    dwSig: 00000000
+    pfnMethod0070: 8009AC20 (0009AC20)    dwSig: 00000000
+    pfnMethod0071: FFFFFFFF (1FFFFFFF)    dwSig: 00000000
+    pfnMethod0072: 8008B8EC (0008B8EC)    dwSig: 00000000
+    pfnMethod0073: 80080E20 (00080E20)    dwSig: 00000000
+    pfnMethod0074: 80087308 (00087308)    dwSig: 00000000
+    pfnMethod0075: 80087234 (00087234)    dwSig: 00000000
+    pfnMethod0076: 8008750C (0008750C)    dwSig: 00000000
+    pfnMethod0077: 8007F8B0 (0007F8B0)    dwSig: 00000000
+    pfnMethod0078: 8007F688 (0007F688)    dwSig: 00000000
+    pfnMethod0079: 8007F008 (0007F008)    dwSig: 00000000
+    pfnMethod007A: 8009478C (0009478C)    dwSig: 00000000
+    pfnMethod007B: 8008AE98 (0008AE98)    dwSig: 00000000
+    pfnMethod007C: 8007EF1C (0007EF1C)    dwSig: 00000000
+    pfnMethod007D: 8007EAAC (0007EAAC)    dwSig: 00000000
+    pfnMethod007E: 8007ECAC (0007ECAC)    dwSig: 00000000
+    pfnMethod007F: 8007EC68 (0007EC68)    dwSig: 00000000
+    pfnMethod0080: 8009CD00 (0009CD00)    dwSig: 00000000
+    pfnMethod0081: 80088628 (00088628)    dwSig: 00000000
+    pfnMethod0082: 800886E0 (000886E0)    dwSig: 00000000
+    pfnMethod0083: 80093088 (00093088)    dwSig: 00000000
+    pfnMethod0084: 8009634C (0009634C)    dwSig: 00000000
+    pfnMethod0085: 8007EE0C (0007EE0C)    dwSig: 00000000
+    pfnMethod0086: 8007ECF0 (0007ECF0)    dwSig: 00000000
+    pfnMethod0087: 8007EC30 (0007EC30)    dwSig: 00000000
+    pfnMethod0088: 8007EBD8 (0007EBD8)    dwSig: 00000000
+    pfnMethod0089: 800963A8 (000963A8)    dwSig: 00000000
+    pfnMethod008A: 80098F94 (00098F94)    dwSig: 00000000
+    pfnMethod008B: 800991E8 (000991E8)    dwSig: 00000000
+    pfnMethod008F: 8009ED3C (0009ED3C)    dwSig: 00000000
+    pfnMethod0090: 800909DC (000909DC)    dwSig: 00000000
+    pfnMethod0091: 80080EA8 (00080EA8)    dwSig: 00000000
+    pfnMethod0092: 80092FCC (00092FCC)    dwSig: 00000000
+    pfnMethod0093: 80089CEC (00089CEC)    dwSig: 00000000
+    pfnMethod0094: 80093160 (00093160)    dwSig: 00000000
+    pfnMethod0095: FFFFFFFE (1FFFFFFE)    dwSig: 00000000
+    pfnMethod0096: 8009B47C (0009B47C)    dwSig: 00000000
+    pfnMethod0097: 8009B50C (0009B50C)    dwSig: 00000000
+    pfnMethod0098: 8007FCD0 (0007FCD0)    dwSig: 00000000
+    pfnMethod0099: 8007EA68 (0007EA68)    dwSig: 00000000
+    pfnMethod009A: 8009962C (0009962C)    dwSig: 00000000
+    pfnMethod009B: 80099698 (00099698)    dwSig: 00000000
+    pfnMethod009E: 800A2304 (000A2304)    dwSig: 00000000
+    pfnMethod009F: 800812D4 (000812D4)    dwSig: 00000000
+    pfnMethod00A0: 8009CA38 (0009CA38)    dwSig: 00000000
+    pfnMethod00A1: 8009C984 (0009C984)    dwSig: 00000000
+    pfnMethod00A2: 8009C878 (0009C878)    dwSig: 00000000
+    pfnMethod00A3: 8007C434 (0007C434)    dwSig: 00000000
+
+API Set 01: 80074C38 (00074C38)
+  acName: THRD    disp: DISPATCH_KERNEL_PSL    type: SH_CURTHREAD         
+  cMethods: 014    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80074BA8 (00074BA8)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8008ADA4 (0008ADA4)    dwSig: 00000000
+    pfnMethod0002: 8008AD28 (0008AD28)    dwSig: 00000000
+    pfnMethod0003: 8008ACEC (0008ACEC)    dwSig: 00000000
+    pfnMethod0004: 8008AC2C (0008AC2C)    dwSig: 00000000
+    pfnMethod0005: 8008ABB4 (0008ABB4)    dwSig: 00000000
+    pfnMethod0006: 8007FD28 (0007FD28)    dwSig: 00000000
+    pfnMethod0007: 8008AB4C (0008AB4C)    dwSig: 00000000
+    pfnMethod0008: 8008AAE4 (0008AAE4)    dwSig: 00000000
+    pfnMethod0009: 8008AA3C (0008AA3C)    dwSig: 00000000
+    pfnMethod000A: 8008AA00 (0008AA00)    dwSig: 00000000
+    pfnMethod000B: 8008A95C (0008A95C)    dwSig: 00000000
+    pfnMethod000C: 8008A924 (0008A924)    dwSig: 00000000
+    pfnMethod000D: 8008A8A8 (0008A8A8)    dwSig: 00000000
+
+API Set 02: 80074C50 (00074C50)
+  acName: PROC    disp: DISPATCH_KERNEL_PSL    type: SH_CURPROC           
+  cMethods: 009    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80074BE0 (00074BE0)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8008A86C (0008A86C)    dwSig: 00000000
+    pfnMethod0002: 80088AFC (00088AFC)    dwSig: 00000000
+    pfnMethod0003: 8007FCFC (0007FCFC)    dwSig: 00000000
+    pfnMethod0005: 8007FCB0 (0007FCB0)    dwSig: 00000000
+    pfnMethod0006: 8007FBA4 (0007FBA4)    dwSig: 00000000
+    pfnMethod0007: 8007F918 (0007F918)    dwSig: 00000000
+    pfnMethod0008: 8008A544 (0008A544)    dwSig: 00000000
+
+API Set 03: 00000000 (00000000)
+
+API Set 04: 80074C68 (00074C68)
+  acName: EVNT    disp: DISPATCH_KERNEL_PSL    type: HT_EVENT             
+  cMethods: 004    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80074C08 (00074C08)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8008A3D4 (0008A3D4)    dwSig: 00000000
+    pfnMethod0002: 8008130C (0008130C)    dwSig: 00000000
+    pfnMethod0003: 8008A394 (0008A394)    dwSig: 00000000
+
+API Set 05: 80074C80 (00074C80)
+  acName: MUTX    disp: DISPATCH_KERNEL_PSL    type: HT_MUTEX             
+  cMethods: 003    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80074C18 (00074C18)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8008A250 (0008A250)    dwSig: 00000000
+    pfnMethod0002: 8008A1B8 (0008A1B8)    dwSig: 00000000
+
+API Set 06: 800758B8 (000758B8)
+  acName: APIS    disp: DISPATCH_KERNEL_PSL    type: HT_APISET            
+  cMethods: 005    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 800758A0 (000758A0)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 80099998 (00099998)    dwSig: 00000000
+    pfnMethod0001: 8009603C (0009603C)    dwSig: 00000000
+    pfnMethod0002: 80099A30 (00099A30)    dwSig: 00000000
+    pfnMethod0003: 80099BEC (00099BEC)    dwSig: 00000000
+    pfnMethod0004: 80099C88 (00099C88)    dwSig: 00000000
+
+API Set 07: 80075688 (00075688)
+  acName: FILE    disp: DISPATCH_KERNEL        type: HT_FILE              
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 08: 800756A0 (000756A0)
+  acName: FIND    disp: DISPATCH_KERNEL        type: HT_FIND              
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 09: 800756B8 (000756B8)
+  acName: DFIL    disp: DISPATCH_KERNEL        type: HT_DBFILE            
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 0A: 800756D0 (000756D0)
+  acName: DFND    disp: DISPATCH_KERNEL        type: HT_DBFIND            
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 0B: 800756E8 (000756E8)
+  acName: SKT     disp: DISPATCH_KERNEL        type: HT_SOCKET            
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 0C: 00000000 (00000000)
+
+API Set 0D: 80074C98 (00074C98)
+  acName: SEMP    disp: DISPATCH_KERNEL_PSL    type: HT_SEMAPHORE         
+  cMethods: 003    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80074C28 (00074C28)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8008A098 (0008A098)    dwSig: 00000000
+    pfnMethod0002: 80089F98 (00089F98)    dwSig: 00000000
+
+API Set 0E: 80075A40 (00075A40)
+  acName: FMAP    disp: DISPATCH_KERNEL_PSL    type: HT_FSMAP             
+  cMethods: 003    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 80075A30 (00075A30)    pdwSig: 00000000 (00000000)
+    pfnMethod0000: 8009D88C (0009D88C)    dwSig: 00000000
+    pfnMethod0002: 8009D8E8 (0009D8E8)    dwSig: 00000000
+
+API Set 0F: 80075700 (00075700)
+  acName: ENUM    disp: DISPATCH_KERNEL        type: HT_WNETENUM          
+  cMethods: 000    pServer:                 00000000 (00000000)
+                  dwVMBase: 00000000
+  ppfnMethods: 00000000 (00000000)    pdwSig: 00000000 (00000000)
+
+API Set 10: 80EF1F4C (00EF1F4C)
+  acName: GDI     disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 117    pServer: gwes.exe        80669AF0 (00669AF0)
+                  dwVMBase: 08000000
+  ppfnMethods: 000B38A0 (00F178A0)    pdwSig: 00011F20 (0014CF20)
+    pfnMethod0000: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod0001: 000B0F04 (001EBF04)    dwSig: 00000000
+    pfnMethod0002: 000564C8 (001914C8)    dwSig: 00000001
+    pfnMethod0003: 00035EA0 (00170EA0)    dwSig: 00000000
+    pfnMethod0004: 00051234 (0018C234)    dwSig: 00000000
+    pfnMethod0005: 00039DE8 (00174DE8)    dwSig: 00000000
+    pfnMethod0006: 0005CAA0 (00197AA0)    dwSig: 00000001
+    pfnMethod0007: 00039BBC (00174BBC)    dwSig: 00000050
+    pfnMethod0008: 00039880 (00174880)    dwSig: 00000001
+    pfnMethod0009: 00039518 (00174518)    dwSig: 00000001
+    pfnMethod000A: 00039710 (00174710)    dwSig: 00000001
+    pfnMethod000B: 000393D8 (001743D8)    dwSig: 00000000
+    pfnMethod000C: 0003928C (0017428C)    dwSig: 00000000
+    pfnMethod000D: 000391B0 (001741B0)    dwSig: 00000000
+    pfnMethod000E: 000482D8 (001832D8)    dwSig: 00000004
+    pfnMethod000F: 00047C60 (00182C60)    dwSig: 00000004
+    pfnMethod0010: 0005CCE0 (00197CE0)    dwSig: 00000044
+    pfnMethod0011: 0005DF2C (00198F2C)    dwSig: 00000000
+    pfnMethod0012: 00056100 (00191100)    dwSig: 00000004
+    pfnMethod0013: 000563C0 (001913C0)    dwSig: 00000004
+    pfnMethod0014: 000510CC (0018C0CC)    dwSig: 00000000
+    pfnMethod0015: 000557A8 (001907A8)    dwSig: 00004500
+    pfnMethod0016: 00046F7C (00181F7C)    dwSig: 00000004
+    pfnMethod0017: 000B0F04 (001EBF04)    dwSig: 00000000
+    pfnMethod0018: 000390E8 (001740E8)    dwSig: 00000000
+    pfnMethod0019: 00039020 (00174020)    dwSig: 00000000
+    pfnMethod001A: 00050D24 (0018BD24)    dwSig: 00000000
+    pfnMethod001B: 00038EB0 (00173EB0)    dwSig: 00000000
+    pfnMethod001C: 00038C1C (00173C1C)    dwSig: 00000000
+    pfnMethod001D: 0005E390 (00199390)    dwSig: 00000000
+    pfnMethod001E: 00038B30 (00173B30)    dwSig: 00000010
+    pfnMethod001F: 000382F0 (001732F0)    dwSig: 00000000
+    pfnMethod0020: 00047484 (00182484)    dwSig: 00000000
+    pfnMethod0021: 00050B48 (0018BB48)    dwSig: 00000010
+    pfnMethod0022: 000509E4 (0018B9E4)    dwSig: 00000004
+    pfnMethod0023: 000389D0 (001739D0)    dwSig: 00000000
+    pfnMethod0024: 000601DC (0019B1DC)    dwSig: 00000000
+    pfnMethod0025: 00038908 (00173908)    dwSig: 00000000
+    pfnMethod0026: 000551B0 (001901B0)    dwSig: 00001504
+    pfnMethod0027: 00055020 (00190020)    dwSig: 00000010
+    pfnMethod0028: 00054E58 (0018FE58)    dwSig: 00000004
+    pfnMethod0029: 0005FAB0 (0019AAB0)    dwSig: 00000000
+    pfnMethod002A: 000507AC (0018B7AC)    dwSig: 00000000
+    pfnMethod002B: 000605C8 (0019B5C8)    dwSig: 00000004
+    pfnMethod002C: 00060210 (0019B210)    dwSig: 00000004
+    pfnMethod002D: 000506AC (0018B6AC)    dwSig: 00000000
+    pfnMethod002E: 00046988 (00181988)    dwSig: 00000000
+    pfnMethod002F: 00050530 (0018B530)    dwSig: 00000004
+    pfnMethod0030: 00054D68 (0018FD68)    dwSig: 00000001
+    pfnMethod0031: 00061190 (0019C190)    dwSig: 00000000
+    pfnMethod0032: 00061390 (0019C390)    dwSig: 00000000
+    pfnMethod0033: 00060F24 (0019BF24)    dwSig: 00000000
+    pfnMethod0034: 000385F0 (001735F0)    dwSig: 00000000
+    pfnMethod0035: 0003860C (0017360C)    dwSig: 00000000
+    pfnMethod0036: 0003815C (0017315C)    dwSig: 00000000
+    pfnMethod0037: 00038058 (00173058)    dwSig: 00000000
+    pfnMethod0038: 0005C7E0 (001977E0)    dwSig: 00000040
+    pfnMethod0039: 000471DC (001821DC)    dwSig: 00000000
+    pfnMethod003A: 00037F34 (00172F34)    dwSig: 00000000
+    pfnMethod003B: 0005F6C8 (0019A6C8)    dwSig: 00000000
+    pfnMethod003C: 0004AAF8 (00185AF8)    dwSig: 00000100
+    pfnMethod003D: 0004A7C8 (001857C8)    dwSig: 00000000
+    pfnMethod003E: 0005C6E4 (001976E4)    dwSig: 00000000
+    pfnMethod003F: 000508AC (0018B8AC)    dwSig: 00000000
+    pfnMethod0040: 00050ED8 (0018BED8)    dwSig: 00000004
+    pfnMethod0041: 00054C50 (0018FC50)    dwSig: 00000000
+    pfnMethod0042: 000566D0 (001916D0)    dwSig: 00000000
+    pfnMethod0043: 000B0F04 (001EBF04)    dwSig: 00000000
+    pfnMethod0044: 000B0F04 (001EBF04)    dwSig: 00000054
+    pfnMethod0045: 000B0F04 (001EBF04)    dwSig: 00000000
+    pfnMethod0046: 000B0F04 (001EBF04)    dwSig: 00000010
+    pfnMethod0047: 0005ED88 (00199D88)    dwSig: 00000001
+    pfnMethod0048: 0005EC00 (00199C00)    dwSig: 00000000
+    pfnMethod0049: 0005EA58 (00199A58)    dwSig: 00000000
+    pfnMethod004A: 0005E8B8 (001998B8)    dwSig: 00000040
+    pfnMethod004B: 0005E678 (00199678)    dwSig: 00000040
+    pfnMethod004C: 0005E468 (00199468)    dwSig: 00000040
+    pfnMethod004D: 0005E268 (00199268)    dwSig: 00000000
+    pfnMethod004E: 0005C90C (0019790C)    dwSig: 00000000
+    pfnMethod004F: 000B0F0C (001EBF0C)    dwSig: 00000004
+    pfnMethod0050: 000B0F0C (001EBF0C)    dwSig: 00000000
+    pfnMethod0051: 000B0F0C (001EBF0C)    dwSig: 00000000
+    pfnMethod0052: 000B0F0C (001EBF0C)    dwSig: 00000000
+    pfnMethod0053: 000B0F0C (001EBF0C)    dwSig: 00000000
+    pfnMethod0054: 000B0F0C (001EBF0C)    dwSig: 00000004
+    pfnMethod0055: 00060A0C (0019BA0C)    dwSig: 00000055
+    pfnMethod0056: 00051200 (0018C200)    dwSig: 00000000
+    pfnMethod0057: 00047710 (00182710)    dwSig: 00000000
+    pfnMethod0058: 00046E6C (00181E6C)    dwSig: 00000000
+    pfnMethod0059: 00050178 (0018B178)    dwSig: 00000000
+    pfnMethod005A: 00050398 (0018B398)    dwSig: 00000004
+    pfnMethod005B: 0005C93C (0019793C)    dwSig: 00000000
+    pfnMethod005C: 000618B4 (0019C8B4)    dwSig: 00000011
+    pfnMethod005D: 00037E08 (00172E08)    dwSig: 00000040
+    pfnMethod005E: 0005F2B0 (0019A2B0)    dwSig: 00000000
+    pfnMethod005F: 00049240 (00184240)    dwSig: 00000000
+    pfnMethod0060: 00061B90 (0019CB90)    dwSig: 00000004
+    pfnMethod0061: 00061D80 (0019CD80)    dwSig: 00000440
+    pfnMethod0062: 0001FF40 (0015AF40)    dwSig: 00000004
+    pfnMethod0063: 0001FE9C (0015AE9C)    dwSig: 00000000
+    pfnMethod0064: 00043814 (0017E814)    dwSig: 00000001
+    pfnMethod0065: 000353D8 (001703D8)    dwSig: 00000004
+    pfnMethod0066: 000355C0 (001705C0)    dwSig: 00000014
+    pfnMethod0067: 00035564 (00170564)    dwSig: 00000000
+    pfnMethod0068: 000352BC (001702BC)    dwSig: 00000001
+    pfnMethod0069: 00035494 (00170494)    dwSig: 00000001
+    pfnMethod006A: 000350B0 (001700B0)    dwSig: 00000011
+    pfnMethod006B: 00035048 (00170048)    dwSig: 00000050
+    pfnMethod006C: 00034FFC (0016FFFC)    dwSig: 00000004
+    pfnMethod006D: 0001D89C (0015889C)    dwSig: 00000000
+    pfnMethod006E: 00019EC8 (00154EC8)    dwSig: 00000001
+    pfnMethod006F: 00019E7C (00154E7C)    dwSig: 00000000
+    pfnMethod0070: 00035108 (00170108)    dwSig: 00000005
+    pfnMethod0071: 000418F4 (0017C8F4)    dwSig: 00000000
+    pfnMethod0072: 00026720 (00161720)    dwSig: 00000000
+    pfnMethod0073: 00026558 (00161558)    dwSig: 00000000
+    pfnMethod0074: 00053540 (0018E540)    dwSig: 00000000
+
+API Set 11: 80EC2FC8 (00EC2FC8)
+  acName: USER    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 256    pServer: gwes.exe        80669AF0 (00669AF0)
+                  dwVMBase: 08000000
+  ppfnMethods: 000B34A0 (00F174A0)    pdwSig: 00011B20 (0014CB20)
+    pfnMethod0000: 0001683C (0015183C)    dwSig: 00000000
+    pfnMethod0001: 000288A8 (001638A8)    dwSig: 00000004
+    pfnMethod0002: 00028E44 (00163E44)    dwSig: 00000005
+    pfnMethod0003: 00028C84 (00163C84)    dwSig: 00000001
+    pfnMethod0004: 00019594 (00154594)    dwSig: 00000014
+    pfnMethod0005: 00026DB4 (00161DB4)    dwSig: 00000000
+    pfnMethod0006: 00026B74 (00161B74)    dwSig: 00000000
+    pfnMethod0007: 00026910 (00161910)    dwSig: 00000000
+    pfnMethod0008: 00026438 (00161438)    dwSig: 00000001
+    pfnMethod0009: 000246E4 (0015F6E4)    dwSig: 00000001
+    pfnMethod000A: 00026A7C (00161A7C)    dwSig: 00000001
+    pfnMethod000B: 00043EB4 (0017EEB4)    dwSig: 00000000
+    pfnMethod000C: 00044060 (0017F060)    dwSig: 00000000
+    pfnMethod000D: 000440FC (0017F0FC)    dwSig: 00000000
+    pfnMethod000E: 0001AB08 (00155B08)    dwSig: 00000000
+    pfnMethod000F: 0001E6AC (001596AC)    dwSig: 00000004
+    pfnMethod0010: 0001DA9C (00158A9C)    dwSig: 00000004
+    pfnMethod0011: 0001E02C (0015902C)    dwSig: 00000004
+    pfnMethod0012: 0001EBCC (00159BCC)    dwSig: 00000000
+    pfnMethod0013: 00018D14 (00153D14)    dwSig: 00000000
+    pfnMethod0014: 0003E938 (00179938)    dwSig: 00000000
+    pfnMethod0015: 0003BAD8 (00176AD8)    dwSig: 00000014
+    pfnMethod0016: 0003BB3C (00176B3C)    dwSig: 00000000
+    pfnMethod0017: 0003DCF8 (00178CF8)    dwSig: 00000010
+    pfnMethod0018: 0003F1CC (0017A1CC)    dwSig: 00000000
+    pfnMethod0019: 000325D8 (0016D5D8)    dwSig: 00000000
+    pfnMethod001A: 000325AC (0016D5AC)    dwSig: 00000000
+    pfnMethod001B: 0003DE88 (00178E88)    dwSig: 00000000
+    pfnMethod001C: 0003D4E0 (001784E0)    dwSig: 00000001
+    pfnMethod001D: 0003E748 (00179748)    dwSig: 00000000
+    pfnMethod001E: 000421A4 (0017D1A4)    dwSig: 00000002
+    pfnMethod001F: 0001E594 (00159594)    dwSig: 00000008
+    pfnMethod0020: 0001E7A0 (001597A0)    dwSig: 00000004
+    pfnMethod0021: 0001BC84 (00156C84)    dwSig: 00000004
+    pfnMethod0022: 0001D5EC (001585EC)    dwSig: 00000004
+    pfnMethod0023: 0001D6B4 (001586B4)    dwSig: 00000004
+    pfnMethod0024: 0006202C (0019D02C)    dwSig: 00000000
+    pfnMethod0025: 00061EAC (0019CEAC)    dwSig: 00000000
+    pfnMethod0026: 0001E300 (00159300)    dwSig: 00000004
+    pfnMethod0027: 0001E234 (00159234)    dwSig: 00000004
+    pfnMethod0028: 000442F8 (0017F2F8)    dwSig: 00000000
+    pfnMethod0029: 00044168 (0017F168)    dwSig: 00000000
+    pfnMethod002A: 0004F878 (0018A878)    dwSig: 00000000
+    pfnMethod002B: 0001D028 (00158028)    dwSig: 00000000
+    pfnMethod002C: 0001D0DC (001580DC)    dwSig: 00000000
+    pfnMethod002D: 00045CC0 (00180CC0)    dwSig: 00000000
+    pfnMethod002E: 0001DB88 (00158B88)    dwSig: 00000000
+    pfnMethod002F: 0001DF08 (00158F08)    dwSig: 00000000
+    pfnMethod0030: 0001E87C (0015987C)    dwSig: 00000000
+    pfnMethod0031: 0001EAD0 (00159AD0)    dwSig: 00000000
+    pfnMethod0032: 0002B620 (00166620)    dwSig: 00000014
+    pfnMethod0033: 00043768 (0017E768)    dwSig: 00000000
+    pfnMethod0034: 000436D8 (0017E6D8)    dwSig: 00000000
+    pfnMethod0035: 00043358 (0017E358)    dwSig: 00000000
+    pfnMethod0036: 000441E4 (0017F1E4)    dwSig: 00000000
+    pfnMethod0037: 00019C54 (00154C54)    dwSig: 00000000
+    pfnMethod0038: 00057278 (00192278)    dwSig: 00000001
+    pfnMethod0039: 00044190 (0017F190)    dwSig: 00000000
+    pfnMethod003A: 0002F4DC (0016A4DC)    dwSig: 00000000
+    pfnMethod003B: 0002ED98 (00169D98)    dwSig: 00000000
+    pfnMethod003C: 0002F0D0 (0016A0D0)    dwSig: 00000000
+    pfnMethod003D: 0002E96C (0016996C)    dwSig: 00000000
+    pfnMethod003E: 0002C800 (00167800)    dwSig: 00000000
+    pfnMethod003F: 0002E574 (00169574)    dwSig: 00000400
+    pfnMethod0040: 000574C8 (001924C8)    dwSig: 00000004
+    pfnMethod0041: 0002F2EC (0016A2EC)    dwSig: 00000000
+    pfnMethod0042: 0001CFE0 (00157FE0)    dwSig: 00000000
+    pfnMethod0043: 0001CCE4 (00157CE4)    dwSig: 00000000
+    pfnMethod0044: 0001CE10 (00157E10)    dwSig: 00000004
+    pfnMethod0045: 0001CCB0 (00157CB0)    dwSig: 00000000
+    pfnMethod0046: 0001CC88 (00157C88)    dwSig: 00000000
+    pfnMethod0047: 0001CB80 (00157B80)    dwSig: 00000000
+    pfnMethod0048: 00045298 (00180298)    dwSig: 00000000
+    pfnMethod0049: 0001CA64 (00157A64)    dwSig: 00000004
+    pfnMethod004A: 0005758C (0019258C)    dwSig: 00000004
+    pfnMethod004B: 0002F248 (0016A248)    dwSig: 00000000
+    pfnMethod004C: 0002F10C (0016A10C)    dwSig: 00000000
+    pfnMethod004D: 0002E950 (00169950)    dwSig: 00000000
+    pfnMethod004E: 00057660 (00192660)    dwSig: 00000004
+    pfnMethod004F: 0005787C (0019287C)    dwSig: 00000000
+    pfnMethod0050: 00057688 (00192688)    dwSig: 00000000
+    pfnMethod0051: 00020FD4 (0015BFD4)    dwSig: 00000000
+    pfnMethod0052: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod0053: 00057C9C (00192C9C)    dwSig: 00000044
+    pfnMethod0054: 00057BB8 (00192BB8)    dwSig: 00000000
+    pfnMethod0055: 000585B0 (001935B0)    dwSig: 00000000
+    pfnMethod0056: 000592F8 (001942F8)    dwSig: 00000000
+    pfnMethod0057: 00024014 (0015F014)    dwSig: 00000000
+    pfnMethod0058: 000220C8 (0015D0C8)    dwSig: 00000004
+    pfnMethod0059: 00022088 (0015D088)    dwSig: 00000005
+    pfnMethod005A: 00020D90 (0015BD90)    dwSig: 00000500
+    pfnMethod005B: 00022034 (0015D034)    dwSig: 00005450
+    pfnMethod005C: 00021124 (0015C124)    dwSig: 00000000
+    pfnMethod005D: 0001F244 (0015A244)    dwSig: 00000000
+    pfnMethod005E: 0005A688 (00195688)    dwSig: 00000010
+    pfnMethod005F: 0005AB58 (00195B58)    dwSig: 00000000
+    pfnMethod0060: 0005AA78 (00195A78)    dwSig: 00000000
+    pfnMethod0061: 00059ADC (00194ADC)    dwSig: 00000010
+    pfnMethod0062: 00026278 (00161278)    dwSig: 00000001
+    pfnMethod0063: 00020ED4 (0015BED4)    dwSig: 00000000
+    pfnMethod0064: 00026368 (00161368)    dwSig: 00000001
+    pfnMethod0065: 0001C938 (00157938)    dwSig: 00000004
+    pfnMethod0066: 0004208C (0017D08C)    dwSig: 00000010
+    pfnMethod0067: 0005B3D0 (001963D0)    dwSig: 00000004
+    pfnMethod0068: 00044150 (0017F150)    dwSig: 00000000
+    pfnMethod0069: 000439DC (0017E9DC)    dwSig: 00000000
+    pfnMethod006A: 00041EFC (0017CEFC)    dwSig: 00000000
+    pfnMethod006B: 000433EC (0017E3EC)    dwSig: 00000000
+    pfnMethod006C: 00044DA0 (0017FDA0)    dwSig: 00000000
+    pfnMethod006D: 00028B44 (00163B44)    dwSig: 00000014
+    pfnMethod006E: 0005840C (0019340C)    dwSig: 00000000
+    pfnMethod006F: 0002A4C4 (001654C4)    dwSig: 00000044
+    pfnMethod0070: 00059394 (00194394)    dwSig: 00000004
+    pfnMethod0071: 000592B4 (001942B4)    dwSig: 00000000
+    pfnMethod0072: 0005906C (0019406C)    dwSig: 00000010
+    pfnMethod0073: 00041C98 (0017CC98)    dwSig: 00000005
+    pfnMethod0074: 00051FF0 (0018CFF0)    dwSig: 00000000
+    pfnMethod0075: 000520A8 (0018D0A8)    dwSig: 00000000
+    pfnMethod0076: 0005213C (0018D13C)    dwSig: 00000000
+    pfnMethod0077: 000521D8 (0018D1D8)    dwSig: 00000000
+    pfnMethod0078: 00052274 (0018D274)    dwSig: 00000000
+    pfnMethod0079: 00052318 (0018D318)    dwSig: 00000001
+    pfnMethod007A: 00032580 (0016D580)    dwSig: 00000001
+    pfnMethod007B: 00032554 (0016D554)    dwSig: 00000001
+    pfnMethod007C: 00032528 (0016D528)    dwSig: 00000001
+    pfnMethod007D: 00032490 (0016D490)    dwSig: 00000000
+    pfnMethod007E: 00029FD0 (00164FD0)    dwSig: 00000051
+    pfnMethod007F: 000229FC (0015D9FC)    dwSig: 00000040
+    pfnMethod0080: 00022BE8 (0015DBE8)    dwSig: 00000000
+    pfnMethod0081: 0005832C (0019332C)    dwSig: 00000000
+    pfnMethod0082: 00058F64 (00193F64)    dwSig: 00000000
+    pfnMethod0083: 00045048 (00180048)    dwSig: 00000000
+    pfnMethod0084: 00044F60 (0017FF60)    dwSig: 00000000
+    pfnMethod0085: 0002F568 (0016A568)    dwSig: 00000000
+    pfnMethod0086: 0002E4F0 (001694F0)    dwSig: 00000000
+    pfnMethod0087: 00058ACC (00193ACC)    dwSig: 00000000
+    pfnMethod0088: 000267A0 (001617A0)    dwSig: 00000000
+    pfnMethod0089: 000238D8 (0015E8D8)    dwSig: 00000000
+    pfnMethod008A: 0005B4D0 (001964D0)    dwSig: 00000014
+    pfnMethod008B: 000B0F2C (001EBF2C)    dwSig: 00000001
+    pfnMethod008C: 000B0F2C (001EBF2C)    dwSig: 00000004
+    pfnMethod008D: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod008E: 0003B370 (00176370)    dwSig: 00000000
+    pfnMethod008F: 0003B84C (0017684C)    dwSig: 00000000
+    pfnMethod0090: 0003B9F4 (001769F4)    dwSig: 00000000
+    pfnMethod0091: 0003C1D0 (001771D0)    dwSig: 00000000
+    pfnMethod0092: 0003DD74 (00178D74)    dwSig: 00000000
+    pfnMethod0093: 0003BCC8 (00176CC8)    dwSig: 00000000
+    pfnMethod0094: 0003BDA4 (00176DA4)    dwSig: 00000000
+    pfnMethod0095: 0003CEDC (00177EDC)    dwSig: 00000000
+    pfnMethod0096: 0003DC90 (00178C90)    dwSig: 00000000
+    pfnMethod0097: 0003C474 (00177474)    dwSig: 00000000
+    pfnMethod0098: 0003C280 (00177280)    dwSig: 00000000
+    pfnMethod0099: 0003DC1C (00178C1C)    dwSig: 00000000
+    pfnMethod009A: 0003CAA0 (00177AA0)    dwSig: 00000000
+    pfnMethod009B: 0003C6CC (001776CC)    dwSig: 00000000
+    pfnMethod009C: 0003B5A8 (001765A8)    dwSig: 00000004
+    pfnMethod009D: 0003E48C (0017948C)    dwSig: 00000000
+    pfnMethod009E: 0003EC44 (00179C44)    dwSig: 00000000
+    pfnMethod009F: 0003E5CC (001795CC)    dwSig: 00000000
+    pfnMethod00A0: 0003E698 (00179698)    dwSig: 00000000
+    pfnMethod00A1: 0003E158 (00179158)    dwSig: 00000000
+    pfnMethod00A2: 0003EB34 (00179B34)    dwSig: 00000000
+    pfnMethod00A3: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00A4: 00053458 (0018E458)    dwSig: 00001140
+    pfnMethod00A5: 0001C5B0 (001575B0)    dwSig: 00001140
+    pfnMethod00A6: 00040DC8 (0017BDC8)    dwSig: 00000000
+    pfnMethod00A7: 00040BEC (0017BBEC)    dwSig: 00000000
+    pfnMethod00A8: 00040EA0 (0017BEA0)    dwSig: 00000000
+    pfnMethod00A9: 000409FC (0017B9FC)    dwSig: 00000004
+    pfnMethod00AA: 00040814 (0017B814)    dwSig: 00000000
+    pfnMethod00AB: 000402E0 (0017B2E0)    dwSig: 00000001
+    pfnMethod00AC: 00040778 (0017B778)    dwSig: 00000000
+    pfnMethod00AD: 000406B4 (0017B6B4)    dwSig: 00000000
+    pfnMethod00AE: 00040490 (0017B490)    dwSig: 00000004
+    pfnMethod00AF: 00040C64 (0017BC64)    dwSig: 00000000
+    pfnMethod00B0: 000405F8 (0017B5F8)    dwSig: 00000000
+    pfnMethod00B1: 00040518 (0017B518)    dwSig: 00000001
+    pfnMethod00B2: 00040E94 (0017BE94)    dwSig: 00000000
+    pfnMethod00B3: 0005B6A0 (001966A0)    dwSig: 00000000
+    pfnMethod00B4: 00018A2C (00153A2C)    dwSig: 00000000
+    pfnMethod00B5: 00018A3C (00153A3C)    dwSig: 00000000
+    pfnMethod00B6: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00B7: 000435AC (0017E5AC)    dwSig: 00000000
+    pfnMethod00B8: 00043648 (0017E648)    dwSig: 00000000
+    pfnMethod00B9: 00016C28 (00151C28)    dwSig: 00000000
+    pfnMethod00BA: 0002EB3C (00169B3C)    dwSig: 00000040
+    pfnMethod00BB: 0002E988 (00169988)    dwSig: 00000040
+    pfnMethod00BC: 000523B4 (0018D3B4)    dwSig: 00000000
+    pfnMethod00BD: 00052450 (0018D450)    dwSig: 00000000
+    pfnMethod00BE: 00024258 (0015F258)    dwSig: 00000000
+    pfnMethod00BF: 000416AC (0017C6AC)    dwSig: 00000014
+    pfnMethod00C0: 000417F0 (0017C7F0)    dwSig: 00000000
+    pfnMethod00C1: 0002231C (0015D31C)    dwSig: 00000004
+    pfnMethod00C2: 00022338 (0015D338)    dwSig: 00000004
+    pfnMethod00C3: 0003A630 (00175630)    dwSig: 00000001
+    pfnMethod00C4: 0001C21C (0015721C)    dwSig: 00000004
+    pfnMethod00C5: 0002AF04 (00165F04)    dwSig: 00000004
+    pfnMethod00C6: 00035C6C (00170C6C)    dwSig: 00000001
+    pfnMethod00C7: 0002B05C (0016605C)    dwSig: 00000000
+    pfnMethod00C8: 00019C48 (00154C48)    dwSig: 00000000
+    pfnMethod00C9: 00046284 (00181284)    dwSig: 00000004
+    pfnMethod00CA: 00057710 (00192710)    dwSig: 00000001
+    pfnMethod00CB: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00CC: 000180F4 (001530F4)    dwSig: 00000000
+    pfnMethod00CD: 00035CB0 (00170CB0)    dwSig: 00000015
+    pfnMethod00CE: 000B09E0 (001EB9E0)    dwSig: 00000000
+    pfnMethod00CF: 000165D0 (001515D0)    dwSig: 00000000
+    pfnMethod00D0: 00035E48 (00170E48)    dwSig: 00000004
+    pfnMethod00D1: 00032888 (0016D888)    dwSig: 00000004
+    pfnMethod00D2: 0003295C (0016D95C)    dwSig: 00000000
+    pfnMethod00D3: 000B0ED8 (001EBED8)    dwSig: 00000000
+    pfnMethod00D4: 000524E4 (0018D4E4)    dwSig: 00000000
+    pfnMethod00D5: 00052580 (0018D580)    dwSig: 00000000
+    pfnMethod00D6: 0001F738 (0015A738)    dwSig: 00000011
+    pfnMethod00D7: 000B09EC (001EB9EC)    dwSig: 00000000
+    pfnMethod00D8: 00020B64 (0015BB64)    dwSig: 00000000
+    pfnMethod00D9: 00020AE0 (0015BAE0)    dwSig: 00000000
+    pfnMethod00DA: 00019CC0 (00154CC0)    dwSig: 00000000
+    pfnMethod00DB: 00020F08 (0015BF08)    dwSig: 00000000
+    pfnMethod00DC: 00024378 (0015F378)    dwSig: 00000004
+    pfnMethod00DD: 0001BB58 (00156B58)    dwSig: 00000000
+    pfnMethod00DE: 0001BA90 (00156A90)    dwSig: 00000000
+    pfnMethod00DF: 0005B6F8 (001966F8)    dwSig: 00000000
+    pfnMethod00E0: 0005B7B0 (001967B0)    dwSig: 00000014
+    pfnMethod00E1: 0004C434 (00187434)    dwSig: 00000004
+    pfnMethod00E2: 000B0EAC (001EBEAC)    dwSig: 00001400
+    pfnMethod00E3: 00041900 (0017C900)    dwSig: 00000001
+    pfnMethod00E4: 00016960 (00151960)    dwSig: 00000010
+    pfnMethod00E5: 0001F0F8 (0015A0F8)    dwSig: 00000004
+    pfnMethod00E6: 00058F2C (00193F2C)    dwSig: 00000000
+    pfnMethod00E7: 00058F00 (00193F00)    dwSig: 00000010
+    pfnMethod00E8: 00058ECC (00193ECC)    dwSig: 00000010
+    pfnMethod00E9: 000231F0 (0015E1F0)    dwSig: 00000000
+    pfnMethod00EA: 00053AE8 (0018EAE8)    dwSig: 00000000
+    pfnMethod00EB: 00053998 (0018E998)    dwSig: 00000000
+    pfnMethod00EC: 0003CBEC (00177BEC)    dwSig: 00000000
+    pfnMethod00ED: 0003EE28 (00179E28)    dwSig: 00000000
+    pfnMethod00EE: 0003BA24 (00176A24)    dwSig: 00000000
+    pfnMethod00EF: 0005387C (0018E87C)    dwSig: 00000000
+    pfnMethod00F0: 0001B9F8 (001569F8)    dwSig: 00000000
+    pfnMethod00F1: 0001B84C (0015684C)    dwSig: 00001540
+    pfnMethod00F2: 0005C238 (00197238)    dwSig: 00000000
+    pfnMethod00F3: 0001B690 (00156690)    dwSig: 00000000
+    pfnMethod00F4: 0001B3CC (001563CC)    dwSig: 00000000
+    pfnMethod00F5: 0001B200 (00156200)    dwSig: 00000000
+    pfnMethod00F6: 0005C2D4 (001972D4)    dwSig: 00000054
+    pfnMethod00F7: 0001D3C8 (001583C8)    dwSig: 00000000
+    pfnMethod00F8: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00F9: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00FA: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00FB: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00FC: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00FD: 000B0F2C (001EBF2C)    dwSig: 00000000
+    pfnMethod00FE: 00035B1C (00170B1C)    dwSig: 00000001
+    pfnMethod00FF: 00020C3C (0015BC3C)    dwSig: 00000001
+
+API Set 12: 00000000 (00000000)
+
+API Set 13: 80F46F7C (00F46F7C)
+  acName: AFD     disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 026    pServer: device.exe      80669A40 (00669A40)
+                  dwVMBase: 06000000
+  ppfnMethods: 01D2D110 (00F45110)    pdwSig: 01D21468 (0035C468)
+    pfnMethod0000: 01D219EC (0035C9EC)    dwSig: 00000000
+    pfnMethod0001: 01D21A5C (0035CA5C)    dwSig: 00000000
+    pfnMethod0002: 01D22994 (0035D994)    dwSig: 00000000
+    pfnMethod0003: 01D22F64 (0035DF64)    dwSig: 00000550
+    pfnMethod0004: 01D22E30 (0035DE30)    dwSig: 00000015
+    pfnMethod0005: 01DD3900 (00326900)    dwSig: 00000415
+    pfnMethod0006: 01DD3B14 (00326B14)    dwSig: 00000000
+    pfnMethod0007: 01D25948 (00360948)    dwSig: 00000015
+    pfnMethod0008: 01D232F4 (0035E2F4)    dwSig: 00000015
+    pfnMethod0009: 01DD402C (0032702C)    dwSig: 00001110
+    pfnMethod000A: 01D263D0 (003613D0)    dwSig: 00005444
+    pfnMethod000B: 01DD36F4 (003266F4)    dwSig: 00000155
+    pfnMethod000C: 01DD3378 (00326378)    dwSig: 00000015
+    pfnMethod000D: 01DD2F7C (00325F7C)    dwSig: 00000005
+    pfnMethod000E: 01DD2938 (00325938)    dwSig: 00000555
+    pfnMethod000F: 01DD2C28 (00325C28)    dwSig: 00000115
+    pfnMethod0010: 01DD28E0 (003258E0)    dwSig: 00000005
+    pfnMethod0011: 01DD2564 (00325564)    dwSig: 00000005
+    pfnMethod0012: 01DD2830 (00325830)    dwSig: 00000015
+    pfnMethod0013: 01D25D04 (00360D04)    dwSig: 00044005
+    pfnMethod0014: 01DD3B7C (00326B7C)    dwSig: 00000015
+    pfnMethod0015: 01DD3C8C (00326C8C)    dwSig: 00000004
+    pfnMethod0016: 01DD2410 (00325410)    dwSig: 00000155
+    pfnMethod0017: 01DD2340 (00325340)    dwSig: 00000045
+    pfnMethod0018: 01D21A64 (0035CA64)    dwSig: 00001110
+    pfnMethod0019: 01CE188C (0038188C)    dwSig: 00001110
+
+API Set 14: 80FE99CC (00FE99CC)
+  acName: W32A    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 064    pServer: filesys.exe     80669990 (00669990)
+                  dwVMBase: 04000000
+  ppfnMethods: 00011160 (00127160)    pdwSig: 00011260 (00127260)
+    pfnMethod0000: 000143FC (0012A3FC)    dwSig: 00000000
+    pfnMethod0002: 00015340 (0012B340)    dwSig: 00000005
+    pfnMethod0003: 00015270 (0012B270)    dwSig: 00000001
+    pfnMethod0004: 00015058 (0012B058)    dwSig: 00000005
+    pfnMethod0005: 00014DE8 (0012ADE8)    dwSig: 00000005
+    pfnMethod0006: 00014D24 (0012AD24)    dwSig: 00000001
+    pfnMethod0007: 00014C34 (0012AC34)    dwSig: 00000001
+    pfnMethod0008: 00014B0C (0012AB0C)    dwSig: 00000005
+    pfnMethod0009: 0001485C (0012A85C)    dwSig: 00000041
+    pfnMethod000A: 000147C8 (0012A7C8)    dwSig: 00000000
+    pfnMethod000B: 0001472C (0012A72C)    dwSig: 00000001
+    pfnMethod000C: 000145EC (0012A5EC)    dwSig: 00000011
+    pfnMethod000D: 00016854 (0012C854)    dwSig: 00000001
+    pfnMethod000E: 00017618 (0012D618)    dwSig: 00000005
+    pfnMethod000F: 00016D28 (0012CD28)    dwSig: 00000011
+    pfnMethod0010: 000160DC (0012C0DC)    dwSig: 00000415
+    pfnMethod0011: 00019C88 (0012FC88)    dwSig: 00000000
+    pfnMethod0012: 0001BBC0 (00131BC0)    dwSig: 00015044
+    pfnMethod0013: 0001B178 (00131178)    dwSig: 00000004
+    pfnMethod0014: 0001B43C (0013143C)    dwSig: 00000004
+    pfnMethod0015: 0001AB44 (00130B44)    dwSig: 00005550
+    pfnMethod0016: 0001A8F0 (001308F0)    dwSig: 00005550
+    pfnMethod0017: 0001B9D0 (001319D0)    dwSig: 00000104
+    pfnMethod0018: 00019DE8 (0012FDE8)    dwSig: 00555554
+    pfnMethod0019: 0001A5B0 (001305B0)    dwSig: 00000554
+    pfnMethod001A: 0001B7C8 (001317C8)    dwSig: 00000104
+    pfnMethod001B: 00021B10 (00137B10)    dwSig: 00000004
+    pfnMethod001C: 000171DC (0012D1DC)    dwSig: 00000001
+    pfnMethod001D: 00023764 (00139764)    dwSig: 00000001
+    pfnMethod001E: 00023830 (00139830)    dwSig: 00000005
+    pfnMethod001F: 000144CC (0012A4CC)    dwSig: 00000001
+    pfnMethod0020: 00026E58 (0013CE58)    dwSig: 00000001
+    pfnMethod0021: 000257E4 (0013B7E4)    dwSig: 00000001
+    pfnMethod0022: 000257C4 (0013B7C4)    dwSig: 00000000
+    pfnMethod0023: 00025700 (0013B700)    dwSig: 00000011
+    pfnMethod0024: 0002563C (0013B63C)    dwSig: 00000001
+    pfnMethod0025: 000254B4 (0013B4B4)    dwSig: 00000011
+    pfnMethod0026: 000253F0 (0013B3F0)    dwSig: 00000001
+    pfnMethod0027: 0002796C (0013D96C)    dwSig: 00000015
+    pfnMethod0028: 00027578 (0013D578)    dwSig: 00000000
+    pfnMethod0029: 0001C634 (00132634)    dwSig: 00000001
+    pfnMethod002A: 00014494 (0012A494)    dwSig: 00000000
+    pfnMethod002B: 000142A0 (0012A2A0)    dwSig: 00000005
+    pfnMethod002C: 0001C74C (0013274C)    dwSig: 00000001
+    pfnMethod002D: 00014238 (0012A238)    dwSig: 00000000
+    pfnMethod002E: 00014140 (0012A140)    dwSig: 00000000
+    pfnMethod002F: 00023A08 (00139A08)    dwSig: 00000000
+    pfnMethod0030: 00023A34 (00139A34)    dwSig: 00000004
+    pfnMethod0031: 00019B00 (0012FB00)    dwSig: 00000000
+    pfnMethod0032: 0001406C (0012A06C)    dwSig: 00000000
+    pfnMethod0033: 00025578 (0013B578)    dwSig: 00000001
+    pfnMethod0034: 00013E60 (00129E60)    dwSig: 00000001
+    pfnMethod0035: 00013D58 (00129D58)    dwSig: 00000000
+    pfnMethod0036: 00013BAC (00129BAC)    dwSig: 00000055
+    pfnMethod0037: 00013B40 (00129B40)    dwSig: 00000000
+    pfnMethod0038: 00017B68 (0012DB68)    dwSig: 00000001
+    pfnMethod0039: 00024B44 (0013AB44)    dwSig: 00000000
+    pfnMethod003A: 00029B50 (0013FB50)    dwSig: 00000005
+    pfnMethod003B: 00016AD0 (0012CAD0)    dwSig: 00000005
+    pfnMethod003C: 000297E8 (0013F7E8)    dwSig: 00000001
+    pfnMethod003D: 000299C4 (0013F9C4)    dwSig: 00000001
+    pfnMethod003E: 00013B10 (00129B10)    dwSig: 00000001
+    pfnMethod003F: 00013820 (00129820)    dwSig: 00000111
+
+API Set 15: 80EA0B8C (00EA0B8C)
+  acName: SHEL    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 024    pServer: Shell32.exe     80669BA0 (00669BA0)
+                  dwVMBase: 0A000000
+  ppfnMethods: 000110E8 (00E870E8)    pdwSig: 00011148 (00E87148)
+    pfnMethod0000: 000138C4 (00E978C4)    dwSig: 00000000
+    pfnMethod0001: 00013AC0 (00E97AC0)    dwSig: 00000000
+    pfnMethod0002: 00024DAC (00E59DAC)    dwSig: 00000001
+    pfnMethod0003: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0004: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0005: 00013E38 (00E97E38)    dwSig: 00000011
+    pfnMethod0006: 00013C8C (00E97C8C)    dwSig: 00000004
+    pfnMethod0007: 00025C1C (00E95C1C)    dwSig: 00000004
+    pfnMethod0008: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0009: 00013AC8 (00E97AC8)    dwSig: 00000001
+    pfnMethod000A: 00025C2C (00E95C2C)    dwSig: 00000001
+    pfnMethod000B: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod000C: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod000D: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod000E: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod000F: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0010: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0011: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0012: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0013: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0014: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0015: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0016: 00024DAC (00E59DAC)    dwSig: 00000000
+    pfnMethod0017: 00013DA0 (00E97DA0)    dwSig: 00000001
+
+API Set 16: 80FE2D58 (00FE2D58)
+  acName: WFLD    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 012    pServer: device.exe      80669A40 (00669A40)
+                  dwVMBase: 06000000
+  ppfnMethods: 00011190 (001F4190)    pdwSig: 000111C0 (001F41C0)
+    pfnMethod0000: 0001396C (001F696C)    dwSig: 00000000
+    pfnMethod0002: 000137B0 (001F67B0)    dwSig: 00000011
+    pfnMethod0003: 00011C4C (001F4C4C)    dwSig: 00000000
+    pfnMethod0004: 00013740 (001F6740)    dwSig: 00000000
+    pfnMethod0005: 00013568 (001F6568)    dwSig: 00000001
+    pfnMethod0006: 00013540 (001F6540)    dwSig: 00000005
+    pfnMethod0007: 00013500 (001F6500)    dwSig: 00000001
+    pfnMethod0008: 000134BC (001F64BC)    dwSig: 00000000
+    pfnMethod0009: 000133A4 (001F63A4)    dwSig: 00000005
+    pfnMethod000A: 00013298 (001F6298)    dwSig: 00000004
+    pfnMethod000B: 00013168 (001F6168)    dwSig: 00000000
+
+API Set 17: 80F253B0 (00F253B0)
+  acName: TAPI    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 091    pServer: device.exe      80669A40 (00669A40)
+                  dwVMBase: 06000000
+  ppfnMethods: 01C81070 (003B8070)    pdwSig: 01C811E0 (003B81E0)
+    pfnMethod0000: 01C818BC (003B88BC)    dwSig: 00000000
+    pfnMethod0001: 01C81958 (003B8958)    dwSig: 00000000
+    pfnMethod0002: 01C89F44 (003C0F44)    dwSig: 00000000
+    pfnMethod0003: 01C89C28 (003C0C28)    dwSig: 00000450
+    pfnMethod0004: 01C89B88 (003C0B88)    dwSig: 00000000
+    pfnMethod0005: 01C898AC (003C08AC)    dwSig: 00000004
+    pfnMethod0006: 01C88C98 (003BFC98)    dwSig: 00000100
+    pfnMethod0007: 01C88C10 (003BFC10)    dwSig: 00000014
+    pfnMethod0008: 01C87EE4 (003BEEE4)    dwSig: 00000010
+    pfnMethod0009: 01C87B78 (003BEB78)    dwSig: 00000141
+    pfnMethod000A: 01C87858 (003BE858)    dwSig: 00000114
+    pfnMethod000B: 01C87458 (003BE458)    dwSig: 00000500
+    pfnMethod000C: 01C86F1C (003BDF1C)    dwSig: 00010010
+    pfnMethod000D: 01C86130 (003BD130)    dwSig: 00000044
+    pfnMethod000E: 01C85E2C (003BCE2C)    dwSig: 00000000
+    pfnMethod000F: 01C856B4 (003BC6B4)    dwSig: 00000000
+    pfnMethod0010: 01C854BC (003BC4BC)    dwSig: 00001040
+    pfnMethod0011: 01C852F4 (003BC2F4)    dwSig: 00000100
+    pfnMethod0012: 01C88A04 (003BFA04)    dwSig: 00000500
+    pfnMethod0013: 01C8A2EC (003C12EC)    dwSig: 00000011
+    pfnMethod0014: 01C861CC (003BD1CC)    dwSig: 00000000
+    pfnMethod0015: 01C8A558 (003C1558)    dwSig: 00000004
+    pfnMethod0016: 01C8A188 (003C1188)    dwSig: 00000000
+    pfnMethod0017: 01C8A0A8 (003C10A8)    dwSig: 00000004
+    pfnMethod0018: 01C8A008 (003C1008)    dwSig: 00000004
+    pfnMethod0019: 01C89CE0 (003C0CE0)    dwSig: 00000010
+    pfnMethod001A: 01C89A44 (003C0A44)    dwSig: 00000040
+    pfnMethod001B: 01C89998 (003C0998)    dwSig: 00000004
+    pfnMethod001C: 01C89718 (003C0718)    dwSig: 00001440
+    pfnMethod001D: 01C89664 (003C0664)    dwSig: 00000010
+    pfnMethod001E: 01C89594 (003C0594)    dwSig: 00000100
+    pfnMethod001F: 01C8946C (003C046C)    dwSig: 00000400
+    pfnMethod0020: 01C89398 (003C0398)    dwSig: 00000044
+    pfnMethod0021: 01C8930C (003C030C)    dwSig: 00000010
+    pfnMethod0022: 01C86CDC (003BDCDC)    dwSig: 00000511
+    pfnMethod0023: 01C8916C (003C016C)    dwSig: 00000004
+    pfnMethod0024: 01C890D8 (003C00D8)    dwSig: 00000004
+    pfnMethod0025: 01C88DF8 (003BFDF8)    dwSig: 00000004
+    pfnMethod0026: 01C88B80 (003BFB80)    dwSig: 00000014
+    pfnMethod0027: 01C88948 (003BF948)    dwSig: 00000004
+    pfnMethod0028: 01C88814 (003BF814)    dwSig: 00000004
+    pfnMethod0029: 01C88578 (003BF578)    dwSig: 00000040
+    pfnMethod002A: 01C8846C (003BF46C)    dwSig: 00000010
+    pfnMethod002B: 01C882A8 (003BF2A8)    dwSig: 00000004
+    pfnMethod002C: 01C88214 (003BF214)    dwSig: 00000014
+    pfnMethod002D: 01C87C04 (003BEC04)    dwSig: 00000004
+    pfnMethod002E: 01C87B84 (003BEB84)    dwSig: 00000000
+    pfnMethod002F: 01C87A40 (003BEA40)    dwSig: 00001541
+    pfnMethod0030: 01C87788 (003BE788)    dwSig: 00000000
+    pfnMethod0031: 01C876A8 (003BE6A8)    dwSig: 00000000
+    pfnMethod0032: 01C87360 (003BE360)    dwSig: 00000400
+    pfnMethod0033: 01C86B54 (003BDB54)    dwSig: 00000150
+    pfnMethod0034: 01C869B8 (003BD9B8)    dwSig: 00000014
+    pfnMethod0035: 01C8690C (003BD90C)    dwSig: 00000004
+    pfnMethod0036: 01C8688C (003BD88C)    dwSig: 00000000
+    pfnMethod0037: 01C867E8 (003BD7E8)    dwSig: 00000000
+    pfnMethod0038: 01C86728 (003BD728)    dwSig: 00000004
+    pfnMethod0039: 01C86678 (003BD678)    dwSig: 00000111
+    pfnMethod003A: 01C8648C (003BD48C)    dwSig: 00000100
+    pfnMethod003B: 01C86364 (003BD364)    dwSig: 00000000
+    pfnMethod003C: 01C860A4 (003BD0A4)    dwSig: 00000000
+    pfnMethod003D: 01C85FAC (003BCFAC)    dwSig: 00000000
+    pfnMethod003E: 01C85CA4 (003BCCA4)    dwSig: 00000000
+    pfnMethod003F: 01C85BCC (003BCBCC)    dwSig: 00000010
+    pfnMethod0040: 01C858EC (003BC8EC)    dwSig: 00000450
+    pfnMethod0041: 01C85780 (003BC780)    dwSig: 00000014
+    pfnMethod0042: 01C855D8 (003BC5D8)    dwSig: 00000000
+    pfnMethod0043: 01C851A8 (003BC1A8)    dwSig: 00000000
+    pfnMethod0044: 01C8BB98 (003C2B98)    dwSig: 00000000
+    pfnMethod0045: 01C8BB20 (003C2B20)    dwSig: 00000010
+    pfnMethod0046: 01C8BA40 (003C2A40)    dwSig: 00000004
+    pfnMethod0047: 01C8B950 (003C2950)    dwSig: 00000100
+    pfnMethod0048: 01C8B8B8 (003C28B8)    dwSig: 00000010
+    pfnMethod0049: 01C8B838 (003C2838)    dwSig: 00000004
+    pfnMethod004A: 01C8B7B0 (003C27B0)    dwSig: 00000014
+    pfnMethod004B: 01C8B714 (003C2714)    dwSig: 00000014
+    pfnMethod004C: 01C8B5DC (003C25DC)    dwSig: 00000004
+    pfnMethod004D: 01C8B544 (003C2544)    dwSig: 00000014
+    pfnMethod004E: 01C8B3A0 (003C23A0)    dwSig: 00000004
+    pfnMethod004F: 01C8B2E8 (003C22E8)    dwSig: 00000054
+    pfnMethod0050: 01C8B238 (003C2238)    dwSig: 00000010
+    pfnMethod0051: 01C8B12C (003C212C)    dwSig: 00001541
+    pfnMethod0052: 01C8AFD0 (003C1FD0)    dwSig: 00000500
+    pfnMethod0053: 01C8AED0 (003C1ED0)    dwSig: 00000400
+    pfnMethod0054: 01C8AD88 (003C1D88)    dwSig: 00000010
+    pfnMethod0055: 01C8ACB8 (003C1CB8)    dwSig: 00000000
+    pfnMethod0056: 01C8ABD8 (003C1BD8)    dwSig: 00000000
+    pfnMethod0057: 01C8AB24 (003C1B24)    dwSig: 00000000
+    pfnMethod0058: 01C8A948 (003C1948)    dwSig: 00000000
+    pfnMethod0059: 01C8A894 (003C1894)    dwSig: 00000000
+    pfnMethod005A: 01C8A7A8 (003C17A8)    dwSig: 00000000
+
+API Set 18: 00000000 (00000000)
+
+API Set 19: 00000000 (00000000)
+
+API Set 1A: 00000000 (00000000)
+
+API Set 1B: 00000000 (00000000)
+
+API Set 1C: 00000000 (00000000)
+
+API Set 1D: 00000000 (00000000)
+
+API Set 1E: 00000000 (00000000)
+
+API Set 1F: 80F00804 (00F00804)
+  acName: DDRW    disp: DISPATCH_I_PSL         type: SH_WIN32             
+  cMethods: 140    pServer: gwes.exe        80669AF0 (00669AF0)
+                  dwVMBase: 08000000
+  ppfnMethods: 01BC1028 (00433028)    pdwSig: 01BC1260 (00433260)
+    pfnMethod0000: 01BC3E74 (00435E74)    dwSig: 00000000
+    pfnMethod0001: 01BC3E98 (00435E98)    dwSig: 00000000
+    pfnMethod0002: 01BC3E20 (00435E20)    dwSig: 00000150
+    pfnMethod0003: 01BC3DB8 (00435DB8)    dwSig: 00000050
+    pfnMethod0004: 01BC3D70 (00435D70)    dwSig: 00000050
+    pfnMethod0005: 01BC3D34 (00435D34)    dwSig: 00000010
+    pfnMethod0006: 01BC3D10 (00435D10)    dwSig: 00000000
+    pfnMethod0007: 01BC3CEC (00435CEC)    dwSig: 00000000
+    pfnMethod0008: 01BC3CA4 (00435CA4)    dwSig: 00000054
+    pfnMethod0009: 01BC3C74 (00435C74)    dwSig: 00000004
+    pfnMethod000A: 01BC3C38 (00435C38)    dwSig: 00000000
+    pfnMethod000B: 01BC3C08 (00435C08)    dwSig: 00000004
+    pfnMethod000C: 01BC3BCC (00435BCC)    dwSig: 00000014
+    pfnMethod000D: 01BC3BA8 (00435BA8)    dwSig: 00000000
+    pfnMethod000E: 01BC3B6C (00435B6C)    dwSig: 00000004
+    pfnMethod000F: 01BC3B30 (00435B30)    dwSig: 00000000
+    pfnMethod0010: 01BC3B00 (00435B00)    dwSig: 00000004
+    pfnMethod0011: 01BC3AD0 (00435AD0)    dwSig: 00000004
+    pfnMethod0012: 01BC3AAC (00435AAC)    dwSig: 00000000
+    pfnMethod0013: 01BC3A64 (00435A64)    dwSig: 00000050
+    pfnMethod0014: 01BC3A10 (00435A10)    dwSig: 00000150
+    pfnMethod0015: 01BC39A8 (004359A8)    dwSig: 00000054
+    pfnMethod0016: 01BC3940 (00435940)    dwSig: 00000054
+    pfnMethod0017: 01BC391C (0043591C)    dwSig: 00000000
+    pfnMethod0018: 01BC38E0 (004358E0)    dwSig: 00000014
+    pfnMethod0019: 01BC38BC (004358BC)    dwSig: 00000000
+    pfnMethod001A: 01BC3880 (00435880)    dwSig: 00000010
+    pfnMethod001B: 01BC37F8 (004357F8)    dwSig: 00000050
+    pfnMethod001C: 01BC3770 (00435770)    dwSig: 00000050
+    pfnMethod001D: 01BC36E8 (004356E8)    dwSig: 00000050
+    pfnMethod001E: 01BC3660 (00435660)    dwSig: 00000050
+    pfnMethod001F: 01BC363C (0043563C)    dwSig: 00000000
+    pfnMethod0020: 01BC35D0 (004355D0)    dwSig: 00001404
+    pfnMethod0021: 01BC3594 (00435594)    dwSig: 00000014
+    pfnMethod0022: 01BC3570 (00435570)    dwSig: 00000000
+    pfnMethod0023: 01BC354C (0043554C)    dwSig: 00000000
+    pfnMethod0024: 01BC3504 (00435504)    dwSig: 00000054
+    pfnMethod0025: 01BC34BC (004354BC)    dwSig: 00000054
+    pfnMethod0026: 01BC3480 (00435480)    dwSig: 00000014
+    pfnMethod0027: 01BC3444 (00435444)    dwSig: 00000004
+    pfnMethod0028: 01BC33EC (004353EC)    dwSig: 00000004
+    pfnMethod0029: 01BC33B0 (004353B0)    dwSig: 00000014
+    pfnMethod002A: 01BC3380 (00435380)    dwSig: 00000004
+    pfnMethod002B: 01BC3350 (00435350)    dwSig: 00000004
+    pfnMethod002C: 01BC3320 (00435320)    dwSig: 00000004
+    pfnMethod002D: 01BC32E4 (004352E4)    dwSig: 00000010
+    pfnMethod002E: 01BC32B4 (004352B4)    dwSig: 00000004
+    pfnMethod002F: 01BC3284 (00435284)    dwSig: 00000004
+    pfnMethod0030: 01BC3260 (00435260)    dwSig: 00000000
+    pfnMethod0031: 01BC3230 (00435230)    dwSig: 00000004
+    pfnMethod0032: 01BC31DC (004351DC)    dwSig: 00000100
+    pfnMethod0033: 01BC3194 (00435194)    dwSig: 00000040
+    pfnMethod0034: 01BC3158 (00435158)    dwSig: 00000014
+    pfnMethod0035: 01BC3134 (00435134)    dwSig: 00000000
+    pfnMethod0036: 01BC30E0 (004350E0)    dwSig: 00000100
+    pfnMethod0037: 01BC30A4 (004350A4)    dwSig: 00000014
+    pfnMethod0038: 01BC3080 (00435080)    dwSig: 00000000
+    pfnMethod0039: 01BC305C (0043505C)    dwSig: 00000000
+    pfnMethod003A: 01BC3038 (00435038)    dwSig: 00000000
+    pfnMethod003B: 01BC2FFC (00434FFC)    dwSig: 00000000
+    pfnMethod003C: 01BC2FB4 (00434FB4)    dwSig: 00000000
+    pfnMethod003D: 01BC2F54 (00434F54)    dwSig: 00000000
+    pfnMethod003E: 01BC2F24 (00434F24)    dwSig: 00000000
+    pfnMethod003F: 01BC2EF4 (00434EF4)    dwSig: 00000004
+    pfnMethod0040: 01BC2ED0 (00434ED0)    dwSig: 00000000
+    pfnMethod0041: 01BC2E70 (00434E70)    dwSig: 00000444
+    pfnMethod0042: 01BC2E10 (00434E10)    dwSig: 00000444
+    pfnMethod0043: 01BC2DC8 (00434DC8)    dwSig: 00000004
+    pfnMethod0044: 01BC2D68 (00434D68)    dwSig: 00000100
+    pfnMethod0045: 01BC2D44 (00434D44)    dwSig: 00000000
+    pfnMethod0046: 01BC2D08 (00434D08)    dwSig: 00000000
+    pfnMethod0047: 01BC2CBC (00434CBC)    dwSig: 00000004
+    pfnMethod0048: 01BC2C70 (00434C70)    dwSig: 00000004
+    pfnMethod0049: 01BC2C14 (00434C14)    dwSig: 00000010
+    pfnMethod004A: 01BC2BB8 (00434BB8)    dwSig: 00000010
+    pfnMethod004B: 01BC2B7C (00434B7C)    dwSig: 00000000
+    pfnMethod004C: 01BC2B4C (00434B4C)    dwSig: 00000000
+    pfnMethod004D: 01BC2B10 (00434B10)    dwSig: 00000014
+    pfnMethod004E: 01BC2AD4 (00434AD4)    dwSig: 00000014
+    pfnMethod004F: 01BC2AA4 (00434AA4)    dwSig: 00000000
+    pfnMethod0050: 01BC2A74 (00434A74)    dwSig: 00000004
+    pfnMethod0051: 01BC2A44 (00434A44)    dwSig: 00000004
+    pfnMethod0052: 01BC2A08 (00434A08)    dwSig: 00000010
+    pfnMethod0053: 01BC29D8 (004349D8)    dwSig: 00000004
+    pfnMethod0054: 01BC29A8 (004349A8)    dwSig: 00000004
+    pfnMethod0055: 01BC2978 (00434978)    dwSig: 00000000
+    pfnMethod0056: 01BC293C (0043493C)    dwSig: 00000014
+    pfnMethod0057: 01BC290C (0043490C)    dwSig: 00000004
+    pfnMethod0058: 01BC28DC (004348DC)    dwSig: 00000004
+    pfnMethod0059: 01BC2894 (00434894)    dwSig: 00000050
+    pfnMethod005A: 01BC283C (0043483C)    dwSig: 00000004
+    pfnMethod005B: 01BC27E4 (004347E4)    dwSig: 00000004
+    pfnMethod005C: 01BC27B4 (004347B4)    dwSig: 00000004
+    pfnMethod005D: 01BC2750 (00434750)    dwSig: 00000010
+    pfnMethod005E: 01BC272C (0043472C)    dwSig: 00000000
+    pfnMethod005F: 01BC26B4 (004346B4)    dwSig: 00000014
+    pfnMethod0060: 01BC2684 (00434684)    dwSig: 00000000
+    pfnMethod0061: 01BC2654 (00434654)    dwSig: 00000000
+    pfnMethod0062: 01BC2618 (00434618)    dwSig: 00000014
+    pfnMethod0063: 01BC25F4 (004345F4)    dwSig: 00000000
+    pfnMethod0064: 01BC25C4 (004345C4)    dwSig: 00000000
+    pfnMethod0065: 01BC25A0 (004345A0)    dwSig: 00000000
+    pfnMethod0066: 01BC2570 (00434570)    dwSig: 00000000
+    pfnMethod0067: 01BC2534 (00434534)    dwSig: 00000010
+    pfnMethod0068: 01BC24F8 (004344F8)    dwSig: 00000000
+    pfnMethod0069: 01BC24C8 (004344C8)    dwSig: 00000000
+    pfnMethod006A: 01BC2474 (00434474)    dwSig: 00000010
+    pfnMethod006B: 01BC2414 (00434414)    dwSig: 00000004
+    pfnMethod006C: 01BC23B4 (004343B4)    dwSig: 00000004
+    pfnMethod006D: 01BC2384 (00434384)    dwSig: 00000004
+    pfnMethod006E: 01BC2324 (00434324)    dwSig: 00000444
+    pfnMethod006F: 01BC22F4 (004342F4)    dwSig: 00000000
+    pfnMethod0070: 01BC22B8 (004342B8)    dwSig: 00000000
+    pfnMethod0071: 01BC2294 (00434294)    dwSig: 00000000
+    pfnMethod0072: 01BC2270 (00434270)    dwSig: 00000000
+    pfnMethod0073: 01BC2234 (00434234)    dwSig: 00000000
+    pfnMethod0074: 01BC21D4 (004341D4)    dwSig: 00000404
+    pfnMethod0075: 01BC21A4 (004341A4)    dwSig: 00000004
+    pfnMethod0076: 01BC2174 (00434174)    dwSig: 00000004
+    pfnMethod0077: 01BC212C (0043412C)    dwSig: 00000014
+    pfnMethod0078: 01BC20FC (004340FC)    dwSig: 00000004
+    pfnMethod0079: 01BC20A8 (004340A8)    dwSig: 00000054
+    pfnMethod007A: 01BC2078 (00434078)    dwSig: 00000004
+    pfnMethod007B: 01BC203C (0043403C)    dwSig: 00000014
+    pfnMethod007C: 01BC2018 (00434018)    dwSig: 00000000
+    pfnMethod007D: 01BC1FE8 (00433FE8)    dwSig: 00000004
+    pfnMethod007E: 01BC1FAC (00433FAC)    dwSig: 00000000
+    pfnMethod007F: 01BC1F40 (00433F40)    dwSig: 00000004
+    pfnMethod0080: 01BC1F1C (00433F1C)    dwSig: 00000000
+    pfnMethod0081: 01BC1EB0 (00433EB0)    dwSig: 00000004
+    pfnMethod0082: 01BC1DD0 (00433DD0)    dwSig: 00000000
+    pfnMethod0083: 01BC1D94 (00433D94)    dwSig: 00000000
+    pfnMethod0084: 01BC1D58 (00433D58)    dwSig: 00000015
+    pfnMethod0085: 01BC1D1C (00433D1C)    dwSig: 00000014
+    pfnMethod0086: 01BC1CE0 (00433CE0)    dwSig: 00000004
+    pfnMethod0087: 01BC1C94 (00433C94)    dwSig: 00000004
+    pfnMethod0088: 01BC1C48 (00433C48)    dwSig: 00000004
+    pfnMethod0089: 01BC1C0C (00433C0C)    dwSig: 00000004
+    pfnMethod008A: 01BC1BF0 (00433BF0)    dwSig: 00000000
+    pfnMethod008B: 01BC1BB4 (00433BB4)    dwSig: 00000014
+

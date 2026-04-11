@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD>
+<!-- hennerik CVSweb $Revision: 1.112 $ -->
+<TITLE>web/web/hackers/toolchain.php - view - 1.3</TITLE></HEAD>
+<BODY BGCOLOR="#eeeeee">
+<table width="100%" border=0 cellspacing=0 cellpadding=1 bgcolor="#9999ee"><tr valign=bottom><td><a href="toolchain.php.html"><IMG SRC="/icons/back.gif" ALT="[BACK]" BORDER="0" WIDTH="20" HEIGHT="22"></a> <b>Return to <A HREF="toolchain.php?sortby=date#rev1.3">toolchain.php</A>
+ CVS log</b> <IMG SRC="/icons/text.gif" ALT="[TXT]" BORDER="0" WIDTH="20" HEIGHT="22"></td><td align=right><IMG SRC="/icons/dir.gif" ALT="[DIR]" BORDER="0" WIDTH="20" HEIGHT="22"> <b>Up to  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a></b></td></tr></table><HR noshade><table width="100%"><tr><td bgcolor="#ffffff">File:  <a href="../../../../../cgi-bin/cvsweb.cgi/?sortby=date#dirlist">[Linux4.BE]</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/?sortby=date#dirlist">web</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/?sortby=date#dirlist">hackers</a> / <a href="../../../../../cgi-bin/cvsweb.cgi/web/web/hackers/toolchain.php.html">toolchain.php</a>&nbsp;(<A HREF="/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/toolchain.php?rev=1.3&amp;sortby=date" target="cvs_checkout" onClick="window.open('/cgi-bin/cvsweb.cgi/~checkout~/web/web/hackers/toolchain.php?rev=1.3','cvs_checkout','resizeable,scrollbars');"><b>download</b></A>)<BR>
+Revision <B>1.3</B>, <i>Fri Nov 29 09:15:49 2002 UTC</i> (9 months, 1 week ago) by <i>filip</i>
+<BR>CVS Tags: <b>HEAD</b><BR>Changes since <b>1.2: +3 -3
+ lines</b><PRE>
+Timesys link changed
+</PRE>
+</td></tr></table><HR noshade><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;meta name=&quot;VERSION&quot; content=&quot;$Id: toolchain.php,v 1.3 2002/11/29 09:15:49 filip Exp $&quot;&gt;
+&lt;meta name=&quot;SOURCE&quot; content=&quot;$Source: /cvsroot/web/web/hackers/toolchain.php,v $&quot;&gt;
+&lt;title&gt;Linux4.BE :: Hackers :: Toolchain&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/linux4be&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;? include &quot;../header.php&quot;; ?&gt;
+&lt;table width=&quot;100%&quot;&gt;
+&lt;tr&gt;
+&lt;td width=&quot;10%&quot; valign=&quot;top&quot;&gt;
+&lt;? include &quot;menu.php&quot;; ?&gt;
+&lt;/td&gt;
+&lt;td&gt;
+ &nbsp;&lt;P&gt;
+ &nbsp;&lt;span class=&quot;subtitle&quot;&gt;Hackers :: Toolchain&lt;/span&gt;
+ &nbsp;&lt;/p&gt;&lt;span class=&quot;bodytext&quot;&gt;
+
+&lt;p&gt;
+You can get a precompiled toolchain (BSP) from TimeSys, after (free) registration: &lt;p&gt;
+&lt;a href=&quot;<A HREF="http://www.timesys.com/index.cfm?hdr=linux_header.cfm">http://www.timesys.com/index.cfm?hdr=linux_header.cfm</A>&amp;bdy=linux_bdy_download.cfm&amp;item_id=78&quot;&gt;http://www.timesys.com/index.cfm?hdr=linux_header.cfm&amp;bdy=linux_bdy_download.cfm&amp;item_id=78&lt;/a&gt;
+&lt;br&gt;Trust me, registering is much faster and easier than building your own ;-)&lt;p&gt;
+&lt;span class=&quot;subtitle&quot;&gt;Build your own&lt;/span&gt;
+&lt;p&gt;If you want to build your own, I strongly suggest to take a look at &lt;a href=&quot;/~jal0/&quot;&gt;jal0's pages&lt;/a&gt; for detailed instructions.
+
+&lt;/p&gt;
+&lt;p&gt;
+Below are the outdated instructions to build you own on Linux, based on instructions from Bradley D. LaRonde (&lt;a href=&quot;<A HREF="http://www.ltc.com/~brad/mips/mipsel-linux-cross-toolchain-building.txt">http://www.ltc.com/~brad/mips/mipsel-linux-cross-toolchain-building.txt</A>&quot;&gt;http://www.ltc.com/~brad/mips/mipsel-linux-cross-toolchain-building.txt&lt;/a&gt;) 
+&lt;/p&gt;
+&lt;p&gt;
+If you want to use a Win32 host instead of a linux host, please take a look at 
+&lt;a href=&quot;/~jal0/&quot;&gt;jal0's instructions&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;span class=&quot;code&quot;&gt;
+&lt;br&gt;# get the files
+&lt;br&gt;wget <A HREF="ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-2.11.92.0.12.3.tar.gz">ftp://ftp.kernel.org/pub/linux/devel/binutils/binutils-2.11.92.0.12.3.tar.gz</A>
+&lt;br&gt;wget <A HREF="ftp://ftp.gnu.org/gnu/gcc/gcc-3.0.3/gcc-3.0.3.tar.gz">ftp://ftp.gnu.org/gnu/gcc/gcc-3.0.3/gcc-3.0.3.tar.gz</A>
+&lt;br&gt;wget <A HREF="ftp://ftp.gnu.org/gnu/glibc/glibc-2.2.4.tar.gz">ftp://ftp.gnu.org/gnu/glibc/glibc-2.2.4.tar.gz</A>
+&lt;br&gt;wget <A HREF="ftp://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-2.2.4.tar.gz">ftp://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-2.2.4.tar.gz</A>
+&lt;br&gt;wget <A HREF="http://www.linux4.BE/download/toolchain/kernel-headers-mipsel-linux-2.4.0-test9-1lv.i386.rpm">http://www.linux4.BE/download/toolchain/kernel-headers-mipsel-linux-2.4.0-test9-1lv.i386.rpm</A>
+&lt;br&gt;
+&lt;br&gt;# Build the cross-binutils
+&lt;br&gt;tar -xzf binutils-2.11.92.0.12.3.tar.gz
+&lt;br&gt;mkdir mipsel-binutils
+&lt;br&gt;cd mipsel-binutils
+&lt;br&gt;../binutils-2.11.92.0.12.3/configure --target=mipsel-linux \
+&lt;br&gt; &nbsp;--libdir='${exec_prefix}'/mipsel-linux/i386-linux/lib
+&lt;br&gt;make
+&lt;br&gt;make install
+&lt;br&gt;cd ..
+&lt;br&gt;
+&lt;br&gt;# Build the C cross-compiler
+&lt;br&gt;tar -xzf gcc-3.0.3.tar.gz
+&lt;br&gt;mkdir mipsel-gcc
+&lt;br&gt;cd mipsel-gcc
+&lt;br&gt;#../gcc-3.0.3/configure --target=mipsel-linux --enable-languages=c \
+&lt;br&gt;# &nbsp;--disable-shared --with-headers=/usr/local/mipsel-linux/include
+&lt;br&gt;../gcc-3.0.3/configure --target=mipsel-linux --enable-languages=c \
+&lt;br&gt; &nbsp;--disable-shared --with-headers=/home/filip/vr/snow-gcc/mipsel-linux/include/
+&lt;br&gt;make
+&lt;br&gt;make install
+&lt;br&gt;cd ..
+&lt;br&gt;
+&lt;br&gt;# Cross-build glibc
+&lt;br&gt;tar -xzf glibc-2.2.4.tar.gz
+&lt;br&gt;cd glibc-2.2.4
+&lt;br&gt;tar -xzf ../glibc-linuxthreads-2.2.4.tar.gz
+&lt;br&gt;cd ..
+&lt;br&gt;mkdir mipsel-glibc
+&lt;br&gt;cd mipsel-glibc
+&lt;br&gt;../glibc-2.2.4/configure --build=i686-linux --host=mipsel-linux \
+&lt;br&gt; &nbsp;--enable-add-ons --prefix=/usr --disable-sanity-checks
+&lt;br&gt;make
+&lt;br&gt;make install install_root=/usr/local/mipsel-linux/glibc
+&lt;br&gt;cd ..
+&lt;br&gt;cp -a /usr/local/mipsel-linux/glibc/lib/* /usr/local/mipsel-linux/lib/
+&lt;br&gt;cp -a /usr/local/mipsel-linux/glibc/usr/include/* /usr/local/mipsel-linux/include/
+&lt;br&gt;cp -a /usr/local/mipsel-linux/glibc/usr/lib/* /usr/local/mipsel-linux/lib/
+&lt;br&gt;
+&lt;br&gt;# Copying the files isn't quite enough though. You also need to edit /usr/local/
+&lt;br&gt;# mipsel-linux/lib/libc.so (yes, it is a text file suprisingly enough) to point
+&lt;br&gt;# to the cross-built glibc files so that the cross-build tools know to use the
+&lt;br&gt;# mipsel libc and not the host's libc, something like:
+&lt;br&gt;#
+&lt;br&gt;# GROUP ( /usr/local/mipsel-linux/lib/libc.so.6
+&lt;br&gt;# &nbsp;/usr/local/mipsel-linux/lib/libc_nonshared.a )
+&lt;br&gt;
+&lt;br&gt;# Build the final C and C++ cross-compilers
+&lt;br&gt;cd mipsel-gcc
+&lt;br&gt;../gcc-3.0.3/configure --target=mipsel-linux --enable-languages=c,c++
+&lt;br&gt;make
+&lt;br&gt;make install
+&lt;br&gt;
+&lt;/span&gt;
+&lt;br&gt;and that's all ...
+&lt;br&gt;
+ &nbsp;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;br&gt;
+&lt;p&gt;
+&lt;span class=&quot;date&quot;&gt;Last updated on $Date: 2002/11/29 09:15:49 $&lt;/span&gt;
+&lt;/html&gt; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>

@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_01_22.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_01_22.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Jan 22 00:00:21 2003
+02:42 -!- filip [Filip@193.190.11.245] has joined #linux4be
+04:30 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4BE
+04:34 < filip> morning mouse
+04:37 < MouseLRN> filip: good day ;-)
+04:37 < filip> sdlregstat is really cool , just a couple of small issues (and it used the 'parachute'  a couple of times)
+04:39 < MouseLRN> I know ;-)
+04:41 < filip> I'm pretty sure there must be a register indicating if the value for x/y  is valid (reliable) or not. seen such a thing before with analog/digital convertors
+04:42 < filip> so basically just add acheck to see if you should use the value or just ignore it. 
+04:43 < filip> I've seen several controllers that contain double ADCcircuits, performing two conversions  and compare both results to see if they are close enough to be reliable
+04:43 < MouseLRN> see source of regstat.c (kernel driver) and check line, where I return 0
+04:45 < filip> is that test also in the sdlregstat I've been using ?
+04:46 < filip> I get a  couple of noise samples at each pen up/down 
+04:47 < MouseLRN> ?
+04:52 < filip> as long as I keep stylus down, I  get no 'noise' and all seems perfect (but no calibaration so it is a little 'shifted')
+04:53 < filip> but each time I do pen up/down, I get 2-4 'noise' pixels which are not accurate  (but relatively close, within 20 pixels  or so of the exact location)
+04:59 < MouseLRN> I try to control it by cntrl register, but after touching some times, cntrl reg will always have 3704 instead 1304 (pen up). How to set reset to 1304 - I don't know (I can complete reset every time after touch, but it's incorrect) and need to disasm touch.dll
+04:59 < filip> I see ...
+05:04 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has quit [Read error: 104 (Connection reset by peer)]
+05:05 -!- MouseLRN [~mouse@caltrop.alt.iph.ras.ru] has joined #linux4BE
+05:12 < MouseLRN> filip: with CF patch your scan_be driver works?
+05:19 < filip> didn't try it yet
+05:26 < filip> mouse, look at http://doc.trolltech.com/2.3/pointer-qws.html    : Writing a custom touch panel handler for Qt/Embedded is not as hard as the QVrTPanelHandlerPrivate class makes it look. The Vr41XX touch panel handler is complex; it handles filtering of noisy input data, and it generates mouse release events by using a timer
+05:27 < MouseLRN> one moment
+05:28 < filip> and http://www.ltc.com/linux-mips/tpanel.html : 
+05:28 < filip> Bit 15 = xyz data valid, 1 is valid, 0 is invalid 
+05:28 < filip> Bit 14 = pen contact state, 1 is down, 0 is up 
+05:29 < MouseLRN> about linux-mips - this values produced by the tpanel driver, not hw
+05:36 < MouseLRN> hmm, about Qt - I can rewrite driver, that will produce data in that structure... but I may have some trouble. I need to think.
+05:40 < filip> it should containcode filternoisy input data, that might b worth a look
+05:42 < MouseLRN> did you see QCalibratedMouseHandler::sendFiltered ?
+05:45 < filip> yep
+05:51 < MouseLRN> and what do you think about "worth" samples?
+05:56 < filip> could be worth a try  ?  
+05:59 < MouseLRN> ok
+06:00 < MouseLRN> I'll try it later
+06:04 < MouseLRN> did you know, that if you removed first 576 bytes from backup file (created by backup utility on CE), you can mount backup as loop device? ;-)
+06:04 < filip> yep, you can also open it using winimage(don't even need to remove the header)
+06:05 < filip> but it doesn't contin the rom-files :-(
+06:05 < MouseLRN> I know ;-( how we can get rom-files?
+06:06 < MouseLRN> any tools exists?
+06:12  * MouseLRN is away: have dinner
+07:02  * MouseLRN is back (gone 00:49:56)
+07:11 -!- MattLSU [MattLSU@139.84.178.44] has quit [Read error: 110 (Connection timed out)]
+07:11 -!- MouseLRN is now known as mouse
+07:12 -!- mouse is now known as Mouse
+07:15 -!- Mouse is now known as mouse
+07:29 < filip> mouse ?
+07:30 < filip> about the romfiles: I can give you a tool to dump the full memory to a file, or a  16MB dumpfile I made from my BE
+07:41 < mouse> filip: yes
+07:41 -!- filip [Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+07:41 < mouse> tool and dumpfile, plz
+07:43 -!- filip [Filip@193.190.11.245] has joined #linux4be
+07:44 < filip> mouse, shall I put them somewhere on the server, or email to you ?
+07:44 < mouse> on server (I'm on the LAN)
+07:47 < filip> look at /home/sites/www.linux4.be/web/download/dumps in a couple of minutes (uploading now)
+07:50 < mouse> ok
+08:01 < mouse> downloading...
+09:16 -!- Filip_ [Filip@193.190.11.245] has joined #linux4be
+09:16 -!- filip [Filip@193.190.11.245] has quit [Read error: 54 (Connection reset by peer)]
+09:18 < mouse> Filip_: no, from Mandrake we took only installer (later, we'll use our installer)
+09:20 < Filip_> is it your company, or do you work for them ?
+09:57 < mouse> I'm working in this company
+09:58  * mouse is away: Lord of The rings 2
+11:14 -!- Filip_ [Filip@193.190.11.245] has left #linux4be []
+12:22 -!- mouse [~mouse@caltrop.alt.iph.ras.ru] has quit ["(va a casa...)"]
+13:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.139] has joined #linux4be
+13:48 -!- jal0atWrk [~jal0_wrkn@208.33.58.139] has quit [Client Quit]
+15:04 -!- sinfonian [~bshirclif@np-dsl-216-12-216-66.ev1.net] has joined #linux4be
+15:06 < sinfonian> anyone here?
+15:15 -!- filip___ [~Filip@250.98-136-217.adsl.skynet.be] has joined #linux4be
+15:15 -!- filip___ is now known as filip
+15:16 < filip> hi Brian
+15:17  * filip is going to grab some food, be back later
+15:19 < sinfonian> hi filip
+15:23  * filip is back
+15:30 < sinfonian> hey filip
+15:32 < filip> so how's life these days.
+15:42 -!- EMota [~emota@200.148.197.21] has joined #linux4be
+15:42 < EMota> hello / oi ?
+15:43 -!- EMota [~emota@200.148.197.21] has left #linux4be []
+15:43 < sinfonian> life is alright
+15:43 < sinfonian> a little busy
+15:46 < sinfonian> I see you are looking into the QTopia touch pannel driver.... is that helping?
+15:59 -!- filip___ [~Filip@93.53-200-80.adsl.skynet.be] has joined #linux4be
+16:06 -!- filip [~Filip@250.98-136-217.adsl.skynet.be] has quit [Read error: 60 (Operation timed out)]
+16:27 -!- sinfonian [~bshirclif@np-dsl-216-12-216-66.ev1.net] has quit []
+16:30 -!- filip___ is now known as Filip
+16:44 -!- Filip [~Filip@93.53-200-80.adsl.skynet.be] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+17:43 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has joined #linux4be
+17:44 -!- Baalz [~Baal@modemcable185.98-200-24.mtl.mc.videotron.ca] has quit [Remote closed the connection]
+21:02 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: jal0, PsycoXul, jal0_logger
+21:03 -!- Netsplit over, joins: PsycoXul, jal0_logger, jal0
+21:21 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit []
+22:08 -!- Netsplit hogan.freenode.net <-> irc.freenode.net quits: PsycoXul, jal0_logger
+22:10 -!- Netsplit over, joins: jal0_logger, PsycoXul
+--- Log closed Thu Jan 23 00:00:46 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2003_03_12.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2003_03_12.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Wed Mar 12 00:00:55 2003
+03:00  * mouse is back (gone 13:12:27)
+10:40 -!- Filip_ [~Filip@193.190.11.245] has joined #linux4be
+10:40 < Filip_> anyone around ?
+10:42 < mouse> Filip_: yeah
+10:43 < Filip_> hi mouse
+10:43 < Filip_> has been a long time ....
+10:43 < Filip_> just dropped into let you all know I'm still alive ;-)
+10:43 < Filip_> (in case someone might be interested)
+10:44 < mouse> ;-)
+10:44 < Filip_> business has been really hectic overhere :-(
+10:44 < Filip_> has your distro been released ?
+10:48 < mouse> yes
+10:48 < Filip_> howare the reactions (nr of downloads, press, ...)
+10:50 < mouse> good, some articles in magazines, downloads - I don't know, a lot of orders to buy
+10:52 < Filip_> orders to buy are better than downloads
+10:56 < mouse> yes ;-)
+11:04 < Filip_> got to go now, I'll try to drop by more often again  soon .....
+11:04 < Filip_> cheers
+11:04 -!- Filip_ [~Filip@193.190.11.245] has quit ["Trillian (http://www.ceruleanstudios.com)"]
+11:11  * jal0 look around and see's he missed filip .... :(
+12:38  * mouse is away: va a casa...
+12:48 -!- jal0 is now known as jal0_wrkn
+13:53 -!- WebGuest8568 [~eirc@MTL-HSE-ppp177912.qc.sympatico.ca] has joined #Linux4BE
+13:53 -!- WebGuest8568 is now known as Gandalf
+13:54 < Gandalf> Jal0, know you are at work, but when you see this, just to let you know, my site is back up, www.abfunlimited.zmoz.com but all of the old posts are gone, but the members still exist, so you don't have to register or anything,
+13:55 < Gandalf> anyways, I set up a section for wince hacking, it has it's own category, but I don't know what forums to create inside of it. I'l set you as an admin, so you can fix it up as you please, thanks
+13:56 -!- Gandalf [~eirc@MTL-HSE-ppp177912.qc.sympatico.ca] has quit [Client Quit]
+14:56 -!- souterrain [~souterrai@pool-141-149-123-16.pghk.east.verizon.net] has joined #Linux4BE
+18:42 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has joined #linux4be
+19:24 -!- jal0atWrk [~jal0_wrkn@208.33.58.203] has quit []
+23:41 -!- jal0_wrkn is now known as jal0
+--- Log closed Thu Mar 13 00:00:33 2003
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+

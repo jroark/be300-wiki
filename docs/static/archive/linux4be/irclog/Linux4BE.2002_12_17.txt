@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta name="VERSION" content="$Id: index.php,v 1.4 2002/11/14 22:38:20 filip Exp $">
+<meta name="SOURCE" content="$Source: /cvsroot/web/web/hackers/index.php,v $">
+<title>Linux4.BE :: Hackers :: IRC logfile Linux4BE.2002_12_17.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/css/linux4be" type="text/css">
+</head>
+<a href="http://www.antheld.org" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.org"></a>
+<a href="http://www.antheld.com" >
+<img src="/img/pix.gif" border=0" alt="http://www.antheld.com"></a>
+<center>
+<img src="/img/linux4be_logo.jpg" border=0 alt="Linux4.BE" align="middle">
+</center>
+<table width="100%">
+<tr>
+<td></td><td>
+<a href="/pivot/index.html" >Home</a>
+</td>
+<td>
+<a href="http://forum.linux4.be/phpBB2/" >Forum</a>
+</td>
+<td>
+<a href="/dummies/index.php" >Dummies</a>
+</td>
+<td>
+<a href="/developers/index.php" >Developers</a>
+</td>
+<td>
+<a href="/hackers/index.php" >Hackers</a>
+</td>
+<td>
+<a href="/contact/index.php" >Contact</a>
+</td>
+<td>&nbsp;
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="10%" valign="top">
+<table>
+<tr><td>
+  <span class="subtitle">Hackers</span>
+</td></tr>
+<tr><td>
+<a href="/hackers/index.php">overview</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/books.php">some books</a>
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<a href="/hackers/faq.php">FAQ</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/bootloader.php">Bootloader</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/toolchain.php">Toolchain</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/kernel.php">Kernel</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/ramdisk.php">Ramdisk</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/hardware.php">Hardware</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/memorymap.php">MemoryMap</a>
+</td></tr>
+<tr><td>
+<a href="/irclog/index.php">IRC Logs</a>
+</td></tr>
+<tr><td>
+<a href="/hackers/cvs.php">CVS</a>
+</td></tr>
+</table>
+</td>
+<td valign="top">
+  <P>
+  <span class="subtitle">Hackers :: IRC logfile Linux4BE.2002_12_17.txt</span>
+  </p><p><span class="bodytext">
+  <br>
+<b>All time stamps are EST</b>
+<p>
+
+<pre>
+--- Log opened Tue Dec 17 00:00:25 2002
+00:08 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: jal0_logger
+00:09 -!- Netsplit over, joins: jal0_logger
+00:30 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has joined #linux4be
+00:32 -!- metalac [~dejann@12-228-100-37.client.attbi.com] has quit [Client Quit]
+01:29 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has quit ["Client Exiting"]
+01:51 -!- antagonizt [~johnbot@node-423a413a-bos-onnet.worldcom.com] has joined #Linux4BE
+04:05 -!- askew375 [~askew375@dclient217-162-92-89.hispeed.ch] has joined #linux4be
+04:05 -!- askew375 [~askew375@dclient217-162-92-89.hispeed.ch] has left #linux4be ["Client Exiting"]
+11:46 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: jal0_logger
+11:52 -!- Netsplit over, joins: jal0_logger
+17:43 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has quit [Read error: 110 (Connection timed out)]
+17:52 -!- jal0 [~not@12-243-94-89.client.attbi.com] has quit [Read error: 60 (Operation timed out)]
+18:11 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has joined #linux4be
+18:11 < hewhew> hi
+18:12 < antagonizt> hello hewhew
+18:12 < hewhew> sup
+18:12 < antagonizt> nothing...
+18:12 < antagonizt> you?
+18:13 < hewhew> exam madness
+18:13 < hewhew> and no gf for a month
+18:13 < hewhew> and divorced parents
+18:13 < hewhew> heh
+18:13 < hewhew> anything new developpement for the be?
+18:13 < antagonizt> what was the last you heard?
+18:14 < hewhew> dunno.. like 1-2 weeks ago
+18:14 < antagonizt> have you played with the kb driver?
+18:14 < hewhew> nope
+18:14 < hewhew> keyboard?
+18:14 < antagonizt> yeah...
+18:15 < antagonizt> and jal0 is making some interesting progress with the HW hacking
+18:15 < hewhew> neat
+18:15 < antagonizt> he is going to try and flash a be with a bootloader/monitor debugging prog he is working on
+18:16 < antagonizt> should be interesting
+18:16 < antagonizt> but they kb driver is fun... you can run all kinds of console apps and goof off
+18:16 < antagonizt> i took some screen caps and pics
+18:17 < antagonizt> http://www.linux4.be/~jroark
+18:17 < hewhew> thnaks
+18:17 < antagonizt> filip is doing some low level irq hacking...
+18:18 < hewhew> holy sh!t 
+18:18 < antagonizt> ?
+18:19 < hewhew> thats great
+18:20 < antagonizt> what?
+18:20 < antagonizt> filip also updated the bootloader code to set the serial speed to 115200 on boot
+18:20 < antagonizt> much faster now
+18:21 < hewhew> its getting really close to 'working' 'perfectly'
+18:21 < antagonizt> we get the interrupts on from the companion all set up... things should progress nicely
+18:22 < antagonizt> i've been working on getting X to run on the BE...
+18:23 < hewhew> cool
+18:23 < antagonizt> and goofing around with screen shots
+18:23 < hewhew> ill be able to use my be for next session =)
+18:23 < antagonizt> the server starts up... but clients can't connect for some reason?
+18:23 < hewhew> as soon as that thing displays pdfs.. im gonna use it atleast 4 hours a day
+18:24 < hewhew> all my notes/lectures are in pdf
+18:24 < antagonizt> you can use acrobat in CE can't you?
+18:24 < hewhew> nope
+18:24 < antagonizt> I thought I saw a bunch of posts on the various forums about fixing that issue
+18:24 < hewhew> what!#
+18:24 < hewhew> ?!%#$
+18:26 < antagonizt> heres one about eXpod 5.1
+18:26 < antagonizt> http://www.groom-family.com/forum/showthread.php?s=&threadid=4609
+18:26 < antagonizt> but i guess it works with anything as long as you have the proper dlls
+18:26 < antagonizt> haven't tried it myself...
+18:27 < hewhew> AHH
+18:27  * hewhew hugs antagonizt
+18:29 < antagonizt> np
+18:30 < hewhew> but still i want linux... to run adobe
+18:30 < hewhew> but neat#$@!%
+18:31 < antagonizt> i can't wait to flash my be and remove every bit and byte of M$ code
+18:31 < antagonizt> it will feel so nice... no more topmenu or pods hacks!
+18:31 < hewhew> theres a CE thing engraved in the back
+18:31 < hewhew> are you a registered member of that board?
+18:31 < antagonizt> i have sandpaper :)
+18:31 < antagonizt> yes
+18:32 < hewhew> im not.. =(
+18:32 < hewhew> can you do me a big favor?
+18:32 < antagonizt> need the files?
+18:32 < hewhew> yea.. hehe
+18:33 < antagonizt> do you have dcc?
+18:33 < hewhew> yea...
+18:35 < hewhew> hmm =(
+18:35 < hewhew> email ?
+18:36 < antagonizt> did dcc fail?
+18:36 < hewhew> yea..
+18:36 < antagonizt> hmm must be my firewall
+18:36 < antagonizt> what is your e-mail?
+18:38 < antagonizt> ok
+18:43 < hewhew> thanks
+18:54 < antagonizt> np
+18:55 < hewhew> this is the happiest day of my life!#
+19:00 < hewhew> whats the dir i must copy the dlls to?
+19:01 < hewhew> patch?
+19:04 < antagonizt> i think so...
+19:11 < hewhew> ahh it worksr!#%
+19:26 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has joined #linux4be
+19:30  * hewhew has acrobat on his be#!%
+19:48 -!- Netsplit anthony.freenode.net <-> irc.freenode.net quits: hewhew
+19:49 -!- Netsplit over, joins: hewhew
+19:52 -!- jal0atWrk [~jal0_wrkn@208.33.58.207] has quit [Read error: 113 (No route to host)]
+19:58 -!- hewhew [~astwrhetj@d217-195.RES.UMontreal.CA] has quit []
+--- Log closed Tue Dec 17 21:59:04 2002
+--- Log opened Tue Dec 17 22:01:16 2002
+22:01 !irc.freenode.net *** Looking up your hostname...
+22:01 !irc.freenode.net *** Checking ident
+22:01 !irc.freenode.net *** No identd (auth) response
+22:01 !irc.freenode.net *** Found your hostname
+--- Log closed Tue Dec 17 22:06:58 2002
+--- Log opened Tue Dec 17 23:00:48 2002
+23:00 -!- someguy [~some@psyche.eggs.net] has joined #Linux4BE
+23:45 -!- jal0_logger [jal0_logge@12-243-94-89.client.attbi.com] has joined #linux4be
+--- Log closed Wed Dec 18 00:00:14 2002
+</pre>
+  </p>
+  <p>
+  <span class="date">Last updated on $Date: 2002/11/20 22:38:20 $</span>
+  </p>
+</td>
+</tr>
+</table>
+</html> 
+
+
