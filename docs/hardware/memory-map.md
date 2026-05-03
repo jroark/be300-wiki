@@ -8,7 +8,7 @@ This page documents the complete physical address map of the BE-300, including S
 |---|---|---|
 | 0x00000000 - 0x00FFFFFF | 16 MB | SDRAM |
 | 0x0A000000 - 0x0A00FFFF | 64 KB | VRC4173 companion chip I/O |
-| 0x0A200000 - 0x0A227FFF | ~160 KB | Framebuffer (video memory) |
+| 0x0A200000 - 0x0A227FFF | ~160 KB | Framebuffer (240x320 visible, 256-pixel stride) |
 | 0x0C000120 - 0x0C000620 | -- | PPSH debug interface |
 | 0x0F000000 - 0x0F000FFF | 4 KB | VR4131 on-chip peripheral I/O |
 | 0x1FC00000 - 0x1FC03FFF | 16 KB | Masked Boot ROM |
@@ -43,9 +43,10 @@ Base physical address: `0x0A000000` (kseg1: `0xAA000000`)
 | 0x000 | 0xAA000000 | PIU/CAK/GPIO | Peripheral interface base |
 | 0x004 | 0xAA000004 | GIRQ0 | Sub-cascade interrupt status |
 | 0x060 | 0xAA000060 | SYSINT1REG | System interrupt 1 (read-only) |
-| 0x301 | 0xAA000301 | Touch | Touchpanel register |
-| 0x304 | 0xAA000304 | Touch | Pen-down detection |
-| 0x31C | 0xAA00031C | Touch | Touchpanel register |
+| 0x300 | 0xAA000300 | PIU | Touch control / PADSTATE |
+| 0x304 | 0xAA000304 | PIU | Touch interrupt pending/mask |
+| 0x320 | 0xAA000320 | PIU | Page 0 coordinate buffers |
+| 0x350 | 0xAA000350 | PIU | Page 1 coordinate buffers |
 | 0x980 | 0xAA000980 | Buzzer | BlgReg_BASE (size 0x68) |
 | 0x1000 | 0xAA001000 | CF | CompactFlash status |
 | 0x1120 | 0xAA001120 | IRQ | Interrupt register |
@@ -79,7 +80,7 @@ Base physical address: `0x0A000000` (kseg1: `0xAA000000`)
 
 | Address | Kseg1 Address | Size | Description |
 |---|---|---|---|
-| 0x0A200000 | 0xAA200000 | ~160 KB | Video memory, 320x240 @ 16bpp |
+| 0x0A200000 | 0xAA200000 | ~160 KB | Video memory, 240x320 visible @ 16bpp |
 
 ## Boot ROM Vectors
 

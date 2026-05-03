@@ -1,97 +1,112 @@
 # Architecture
 
-The BE-300 emulator combines a modified GXemul 0.7.0 CPU engine with custom hardware peripheral emulation to reproduce the Casio BE-300's system architecture.
+The emulator combines a patched GXemul MIPS CPU engine with BE-300-specific
+device models. The board model is physical-address based: MIPS kseg0/kseg1
+aliases are handled by the CPU/memory core, while devices are registered at the
+physical addresses used by real hardware.
 
 ## Target Hardware
 
-- **CPU:** NEC VR4131 (MIPS32 little-endian, PRId 0x00000C81)
-- **RAM:** 16 MiB SDRAM at PA 0x00000000
-- **Companion Chip:** NEC VRC4173 (I/O, interrupts, NAND, audio, touchscreen)
-- **Display:** 240x320 pixel, 16-bit color framebuffer
-- **Storage:** Samsung K9F2808U0B NAND flash (16 MB)
+| Component | Emulated behavior |
+|-----------|-------------------|
+| CPU | NEC VR4131-class MIPS, little-endian, CP0/TLB/MMU, MIPS16 for ROM code |
+| RAM | 16 MiB SDRAM default at PA `0x00000000` |
+| ROM | 16 KB reset ROM at PA `0x1FC00000`, entered through VA `0xBFC00000` |
+| Companion | NEC VRC4173 register windows at PA `0x0A000000` |
+| Display | 240x320 guest framebuffer at PA `0x0A200000`, 256-pixel stride |
+| Storage | 16 MB NAND plus optional ATA CompactFlash images |
+| Serial | VRC4173 SIU UART at PA `0x0A008680`, 8250/16550-compatible |
 
-## CPU Engine
+## Boot Paths
 
-The GXemul 0.7.0 engine provides the core MIPS execution environment:
+### WinCE NAND Cold Boot
 
-- **Instruction execution** — Full MIPS32 instruction set plus MIPS16 compact encoding
-- **CP0 coprocessor** — System control registers (Status, Cause, EPC, Config, PRId, etc.)
-- **TLB** — 32-entry Translation Lookaside Buffer with variable page sizes (4KB-16MB)
-- **Exception handling** — TLB refill, general exceptions, cache errors, interrupts
-- **dyntrans JIT** — Dynamic binary translation for improved execution speed
+The primary path starts from the ROM reset vector and does not patch guest
+binaries or force handoff state:
 
-## MIPS Address Spaces
+```text
+0xBFC00000 ROM reset
+  -> ROM CPU/cache/platform setup
+  -> ROM NAND reads
+  -> SPL/Kloader from NAND
+  -> NK.exe decompression
+  -> WinCE kernel entry
+  -> first-boot UI and shell paths
+```
 
-The VR4131 uses standard MIPS address segmentation:
+Native cold boots leave the RTC in the default first-boot state unless
+`--rtc-host-time` is supplied.
 
-| Segment | Virtual Address Range | Translation | Caching |
-|---------|----------------------|-------------|---------|
-| kuseg | `0x00000000`-`0x7FFFFFFF` | TLB-mapped | Per-TLB entry |
-| kseg0 | `0x80000000`-`0x9FFFFFFF` | PA = VA - 0x80000000 | Cached |
-| kseg1 | `0xA0000000`-`0xBFFFFFFF` | PA = VA - 0xA0000000 | Uncached |
-| kseg2 | `0xC0000000`-`0xFFFFFFFF` | TLB-mapped | Per-TLB entry |
+### ROM Image Path
 
-Most kernel code and data lives in kseg0 (cached). Hardware registers are accessed through kseg1 (uncached). User-mode code runs in kuseg with TLB translation.
+A positional ROM image can be loaded at the reset ROM window for targeted ROM
+experiments. It is mutually exclusive with `--nand` and `--restore`.
+
+### Restore Path
+
+`--restore --cf <image>` enters the CompactFlash recovery path used by
+NANDWRITER-style restore flows. This path uses the primary PCMCIA socket and
+cannot be combined with `--ne2000`.
 
 ## Physical Memory Map
 
 | Physical Address | Size | Device |
-|-----------------|------|--------|
-| `0x00000000` | 16 MiB | SDRAM |
-| `0x0A000000` | 64 KiB | VRC4173 I/O registers |
-| `0x0A200000` | 256 KiB | Framebuffer |
-| `0x0C000000` | — | PPSH debug interface |
-| `0x0F000000` | 64 KiB | VR4131 SoC registers (ICU, timer, GPIO) |
-| `0x1FC00000` | 16 KiB | Boot ROM |
+|------------------|------|--------|
+| `0x00000000` | 16 MiB default | SDRAM |
+| `0x0A000000` | VRC4173 windows | Companion-chip registers, PIU, GIU, latches |
+| `0x0A008680` | UART window | VRC4173 SIU / COM1 |
+| `0x0A200000` | Framebuffer | LCD framebuffer backing store |
+| `0x0C000120` | PPSH data/status | Parallel Port Shell probe/debug transport |
+| `0x0F000000` | VR4131 I/O | BCU, CMU, PMU, ICU, RTC, GPIO |
+| `0x1FC00000` | 16 KiB active ROM | Reset vector and masked boot ROM |
 
-## Interrupt Controller
+## CPU And MMU
 
-The VR4131 Interrupt Control Unit (ICU) manages interrupt routing between peripherals and the CPU:
+GXemul provides the MIPS execution core:
 
-- Status and mask registers for each interrupt source
-- Write-one-to-clear semantics for interrupt acknowledgment
-- Parent IRQ line assertion to the CPU when any unmasked interrupt is pending
-- VRC4173 cascaded interrupts routed through the VR4131 ICU
+- MIPS32 instruction execution
+- MIPS16 interpreter for the ROM's compact code sections
+- CP0 system registers, exceptions, and interrupt delivery
+- 32-entry TLB with variable page sizes
+- kseg0/kseg1 direct-mapped translation
+- dynamic translation for performance where supported
 
-## Timer
+The BE-300 ROM uses cross-mode MIPS32/MIPS16 calls, including `JALX`, during
+NAND loading and boot dispatch. NK.exe itself is MIPS32.
 
-The RTC periodic interrupt provides the system tick:
+## Interrupts And Timing
 
-- 100 Hz periodic interrupt (RTCINTREG)
-- Write-one-to-clear for interrupt acknowledgment
-- Used by both Linux and WinCE for scheduling and timekeeping
+The VR4131 ICU and VRC4173 cascades are modeled enough for WinCE driver and
+OAL paths:
 
-## UART
+- Interrupt pending/mask registers use write-one-to-clear where hardware does.
+- The PIU touch path routes through the GIU cascade and PIUINTREG.
+- CompactFlash/PCMCIA state and level events route through the GIRQ0 cascade.
+- CP0 Compare delivery is driven by emulated instruction progress rather than
+  host wall-clock SIGALRM cadence, which keeps scheduler and touch behavior
+  deterministic under tracing.
 
-An 8250/16550-compatible serial port at PA `0x0A008680` (VRC4173 SIU):
+## Display And Input
 
-- Directly handled by GXemul's `dev_ns16550` device
-- Linux kernels use it as `ttyS0` for serial console output
-- WinCE uses it for debug output during boot
+The guest-visible framebuffer is 240x320 with a 256-pixel stride. The native
+SDL frontend can show either the LCD alone or the LCD inside the BE-300 frame.
 
-## Display
+The touchscreen model implements the VRC4173 PIU scan sequencer used by WinCE:
 
-The framebuffer is mapped at PA `0x0A200000` (VA `0xAA200000` in kseg1):
+- WaitPenTouch, PenDataScan, and IntervalNextScan state progression
+- page 0/page 1 coordinate buffers
+- page-valid interrupts, data-lost interrupt, and W1C acknowledgement
+- conversion timing tied to emulated CP0 Count cycles
 
-- 240x320 pixels, 16-bit color (RGB565)
-- Rendered to an SDL2 window on the host
-- WinCE renders "Starting..." and "Initializing..." text at runtime via GWE font engine
-- Linux kernels use a standard framebuffer driver
+## Serial Peers
 
-## Boot ABI
+COM1 is the VRC4173 SIU UART. Several emulator features intentionally share
+that one guest-visible UART and are mutually exclusive:
 
-The emulator supports two boot paths:
+- PPSH debug shell probe
+- PC Connect time-sync peer
+- PC Connect host chardev bridge
+- Stowaway keyboard dock
 
-**Linux kernel boot (`--kernel`):**
-
-- Loads ELF binary into memory
-- Sets up argc/argv in MIPS registers (`$a0`/`$a1`)
-- Jumps to ELF entry point
-
-**WinCE cold boot (`--nand`):**
-
-- Starts at ROM reset vector (VA `0xBFC00000`)
-- ROM initializes hardware, reads NAND, loads SPL
-- SPL decompresses NK.exe into RAM
-- ROM's MIPS16 boot dispatcher sets up callback tables
-- ROM jumps to NK.exe entry point (VA `0x80076B50`)
+This matches the hardware model: these are different peers on the same serial
+path, not independent guest devices.

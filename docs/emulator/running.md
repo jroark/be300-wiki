@@ -1,91 +1,156 @@
 # Running
 
-The `be300` emulator supports two primary boot modes: Linux kernel boot and WinCE NAND cold boot.
-
-## Linux Kernel Boot
-
-### Linux 2.4 (PicoGUI Demo)
+The native emulator binary is normally built into `build-host/be300`. From the
+emulator repository root:
 
 ```bash
-./be300 --cmdline "console=tty0 console=ttyS0,9600 root=/dev/ram" \
-  --kernel kernels/vmlinux-pgui-demo
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin
 ```
 
-This boots a Linux 2.4.18 kernel with a PicoGUI desktop environment to userspace. The kernel runs indefinitely until terminated.
-
-### Linux 2.6
-
-```bash
-./be300 --cmdline "console=tty0 root=/dev/ram" \
-  --kernel kernels/vmlinux-2.6 --sfb-5bit-green
-```
-
-!!! note "Color correction"
-    The `--sfb-5bit-green` flag is required for the 2.6 kernel to display correct framebuffer colors. The 2.6 kernel uses a different pixel format (5-bit green channel) than the 2.4 kernels.
-
-!!! warning "2.6 kernel ignores --cmdline"
-    The Linux 2.6 kernel's `prom_init()` does not read bootloader arguments. The `--cmdline` flag has no effect. The kernel's serial console is hardcoded to the UART at `0xAA008680`.
+Serial output is written to stdout. Emulator diagnostics, MMIO logs, and boot
+messages are written to stderr. When SDL2 is available, a host window displays
+the 240x320 guest framebuffer.
 
 ## WinCE Cold Boot
 
 ```bash
-./be300 --nand ce/restore_images/All_nand_300.bin
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin
 ```
 
-This starts a full cold boot from the ROM reset vector, exactly as real hardware does after battery removal:
+This starts from the ROM reset vector and follows the real cold-boot chain:
 
-1. Boot ROM initializes hardware and reads NAND
-2. SPL (Secondary Program Loader) is loaded and decompresses NK.exe
-3. ROM's MIPS16 boot dispatcher sets up callback tables
-4. NK.exe entry point is called
+1. Boot ROM initializes CPU and board state.
+2. ROM reads NAND and loads SPL/Kloader.
+3. SPL reads and decompresses NK.exe.
+4. ROM/NK handoff starts the WinCE kernel.
+5. WinCE reaches first-boot UI, date/time, touch calibration, and shell paths.
 
-Available NAND images:
+For interactive testing with a current guest date:
 
-| Image | Contents |
-|-------|----------|
-| `All_nand_300.bin` | WinCE 3.0 (SPL v0.52) |
-| `All_nand_Net.bin` | WinCE 4.0 (.NET) |
-| `org_CE_30.bin` | WinCE 3.0 (SPL v0.60) |
-| `BE500.bin` | BE-500 variant (SPL v0.62) |
-| `CE_Net.bin` | WinCE 4.0 (SPL v0.62) |
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --rtc-host-time
+```
+
+Without `--rtc-host-time`, the emulator leaves the RTC in the cold-boot/default
+state so WinCE can prompt for date/time like real hardware after battery
+removal.
+
+## Bounded Smoke Test
+
+WinCE does not exit by itself. Use GNU `timeout` or `gtimeout` for automated
+runs:
+
+```bash
+cd build-host
+gtimeout 60s ./be300 --nand ../ce/restore_images/All_nand_300.bin \
+  > cold_stdout.log 2> cold_stderr.log
+```
+
+Exit code `124` from `gtimeout` is expected for a long-running boot.
+
+## Display And Input
+
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --frame --scale 2
+```
+
+| Option | Description |
+|--------|-------------|
+| `--frame` | Show the BE-300 bezel around the LCD |
+| `--scale <N>` | Render scale, `1.0` through `4.0` |
+| `BE300_AUDIO=0` | Mute the host-rendered buzzer without changing guest hardware state |
+| `BE300_TOUCH_MIN_DWELL_MS=<N>` | Minimum guest pen-down time for host clicks |
+
+Touch input is routed through the VRC4173 PIU model. Host clicks are coalesced
+into stable guest pen sessions so WinCE calibration sees repeated coordinate
+samples.
+
+## Accessories
+
+### CompactFlash Storage
+
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --cf cf.img
+```
+
+The image must be a multiple of 512 bytes. The emulator exposes an ATA CF card
+with a minimal CIS that WinCE can classify as fixed-disk storage.
+
+### NANDWRITER Restore Path
+
+```bash
+./build-host/be300 --restore --cf cf.img
+```
+
+`--restore` uses the primary PCMCIA socket for the recovery/restore path, so it
+cannot be combined with `--ne2000`.
+
+### PCMCIA NE2000
+
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --ne2000
+```
+
+Use `--net-mac aa:bb:cc:dd:ee:ff` to override the default unicast MAC. When
+one `--cf` image is combined with `--ne2000`, that CF image is attached to the
+secondary socket; current WinCE visibility for the secondary socket is limited.
+
+### Stowaway Keyboard
+
+```bash
+./build-host/be300 --nand nand_stowaway.bin --stowaway-keyboard
+```
+
+This enables the COM1 serial keyboard dock model. The NAND image must contain
+the Stowaway driver registration, for example one built by
+`tools/inject_stowaway.py`.
 
 ### PPSH Debug Shell
 
 ```bash
-./be300 --nand ce/restore_images/All_nand_300.bin --ppsh
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --ppsh
 ```
 
-The `--ppsh` flag enables the Parallel Port Shell debug interface. When enabled, WinCE routes console I/O to the debug shell instead of booting to the GUI, eventually presenting a `Windows CE>` prompt.
+`--ppsh` makes the WinCE PPSH probe succeed and routes console I/O to the
+debug shell instead of the normal GUI path.
+
+### PC Connect
+
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin \
+  --pcconnect-bridge tcp:127.0.0.1:5555 \
+  --pcconnect-tee /tmp/pcc.tee
+```
+
+`--pcconnect-time-sync`, `--pcconnect-bridge`, and `--stowaway-keyboard` all
+claim the same VRC4173 SIU UART, so only one can be enabled at a time.
 
 ## Command Line Options
 
 | Option | Description |
 |--------|-------------|
-| `--kernel <path>` | Load a Linux ELF kernel |
-| `--nand <path>` | Boot from a NAND restore image (WinCE cold boot) |
-| `--cmdline <string>` | Kernel command line arguments (Linux only) |
-| `--sfb-5bit-green` | Use 5-bit green channel for framebuffer (Linux 2.6) |
-| `--ram <size>` | Set RAM size |
-| `--sdram` | Enable SDRAM mode |
-| `--speed <mhz>` | Set CPU speed |
-| `--trace` | Enable instruction tracing |
-| `--log-mmio` | Log memory-mapped I/O accesses to stderr |
-| `--ppsh` | Enable PPSH debug shell (WinCE only) |
+| `--nand <image>` | Boot WinCE from a raw NAND restore image |
+| `--restore` | Enter CompactFlash recovery boot mode; requires `--cf` |
+| `--cf <image>` | Attach a FAT/ATA CompactFlash image; may be specified twice |
+| `--ne2000` | Attach a PCMCIA NE2000 Ethernet card |
+| `--net-mac <mac>` | Override NE2000 MAC address |
+| `--sdram <MB>` | SDRAM size in MiB, default 16 |
+| `--rtc-host-time` | Initialize guest RTC from host local time |
+| `--ppsh` | Enable PPSH debug-shell probe |
+| `--pcconnect-time-sync` | Enable experimental PC Connect time-sync peer |
+| `--pcconnect-bridge <spec>` | Pipe COM1 to TCP, Unix socket, or PTY chardev |
+| `--pcconnect-tee <path>` | Write PC Connect bridge traffic to an annotated log |
+| `--pcconnect-baud <N>` | Throttle bridge guest-to-host bytes; default 115200, `0` unlimited |
+| `--stowaway-keyboard` | Enable the serial keyboard dock model on COM1 |
+| `--frame` | Show the BE-300 frame asset |
+| `--scale <N>` | Host render scale from `1.0` to `4.0` |
+| `--speed <N>` | Target million guest instructions/sec; `0` unthrottled |
+| `--trace` | Print each executed instruction to stderr |
+| `--log-mmio` | Log MMIO register reads/writes |
+| `--mmio-coverage` | Log first hit per MMIO device/offset/op and shutdown table |
+| `--detect-stall` | Emit `[BE300_STALL]` for sustained tight PC loops |
+| `--stall-window=N` | Instructions per stall sampling bucket |
+| `--stall-threshold=K` | Unique-PC threshold for stall detection |
+| `--stall-wall-secs=T` | Sustained wall-seconds before stall report |
 
-## Output
-
-- **Serial output** goes to **stdout** (kernel printk messages, WinCE debug output)
-- **Emulator diagnostics** go to **stderr** (MMIO logs, boot checkpoints, warnings)
-- **SDL window** shows the framebuffer in real-time
-
-!!! tip "Non-interactive runs"
-    For automated testing, use `gtimeout` (GNU coreutils) to kill the emulator after a set duration, since kernels run indefinitely:
-    ```bash
-    gtimeout 20s ./be300 --kernel kernels/vmlinux-pgui-demo \
-      --cmdline "console=tty0 console=ttyS0,9600 root=/dev/ram" \
-      > stdout.log 2> stderr.log
-    ```
-
-## Screenshots
-
-The emulator saves a BMP screenshot on clean exit (ui_quit or `be300_stop`). Note that when the process is killed by a signal (e.g., `gtimeout` sending SIGTERM), no screenshot is saved.
+Run `./build-host/be300 --help` for the exact option text of the built binary.

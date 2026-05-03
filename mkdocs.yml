@@ -93,6 +93,8 @@ nav:
     - Running: emulator/running.md
     - Source Layout: emulator/source-layout.md
     - GXemul Integration: emulator/gxemul.md
+    - Web and Android: emulator/frontends.md
+    - PC Connect Bridge: emulator/pc-connect.md
     - BEDiag Tool: emulator/bediag.md
     - Analysis Tools: emulator/tools.md
   - Reference:

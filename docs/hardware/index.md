@@ -33,7 +33,7 @@ The Casio BE-300 is built around a two-chip architecture: the **NEC VR4131** sys
 | Companion Chip | NEC VRC4173 | Peripheral controller, Board ID 0x7100 |
 | SDRAM | Samsung K4S641633D (x2) | 16 MB total (two 8 MB chips) |
 | NAND Flash | Samsung K9F2808U0B | 16 MB, 1004 blocks, 32 pages/block, 512 bytes/page |
-| LCD Controller | EPSON L50753 | Drives 320x240 32768-color STN panel |
+| LCD Controller | EPSON L50753 | 240x320 portrait framebuffer in the current emulator model |
 | Boot ROM | Masked ROM | 16 KB at PA 0x1FC00000 |
 | Custom Chip | Casio CAK2007 | Proprietary Casio logic |
 

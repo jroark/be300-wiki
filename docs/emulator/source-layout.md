@@ -1,72 +1,76 @@
 # Source Layout
 
-The emulator codebase is organized into three main areas: core emulation logic, hardware peripheral models, and the GXemul CPU engine submodule.
+The emulator repo is organized around a reusable BE-300 machine core, a patched
+GXemul MIPS engine, and native/web/Android frontends.
 
-## src/ -- Core Emulation
+## Core Machine
 
-| File | Purpose |
+| Path | Purpose |
 |------|---------|
-| `machine_be300.c` | Machine setup: GXemul framework initialization, VR4131 CPU configuration, device registration, kernel loading, and main emulation loop |
-| `be300.h` | Central state struct (`be300_state_t`), machine configuration (`machine_config_t`), physical address map constants |
-| `loader.c` / `loader.h` | ELF kernel loader for Linux boots; NAND image file reader for WinCE boots |
-| `ui.c` / `ui.h` | SDL2 display rendering, input handling, screenshot capture |
-| `main.c` | CLI argument parsing; calls `be300_create`, `be300_run`, `be300_destroy` |
-| `host_io.c` / `host_io.h` | Host I/O handling |
-| `wince_boot.c` / `wince_boot.h` | WinCE cold-boot vector tracking and boot checkpoint logging |
-| `wince_boot_types.h` | WinCE boot state machine flags and definitions |
-| `be300_devices.c` | VRC4173 latch register, PPSH parallel port debug shell, WinCE auxiliary device |
-| `ppsh.h` | PPSH protocol definitions (sync words, message types, framing) |
+| `src/main.c` | Native CLI option parsing and process entry point |
+| `src/machine_be300.c` | Machine creation, ROM/NAND loading, GXemul setup, run loop, RTC host-time setup, shutdown |
+| `src/be300.h` | Main state structs, physical address constants, public embeddable API |
+| `src/be300_devices.c` | VRC4173 board glue, input devices, latches, PPSH, PCMCIA routing, buzzer, WinCE auxiliary devices |
+| `src/be300_probe.c` | MMIO coverage and stall-detection instrumentation helpers |
+| `src/host_io.c` | Host stdin/nonblocking I/O helpers |
+| `src/ui.c` | SDL2 display/audio/input frontend, frame asset support, screenshot and frame callbacks |
+| `src/pcconnect.c` | UART backend dispatch shared by PC Connect peers |
+| `src/pcconnect_bridge.c` | TCP/Unix/PTY bridge, cable gating, byte tee, baud throttle |
+| `src/pcconnect_ring.h` | Shared ring buffer for serial bridge paths |
+| `src/stowaway.c` | Targus/Stowaway serial keyboard dock model |
 
-## src/hw/ -- Hardware Peripherals
+## Hardware Models
 
-Each peripheral is modeled as a pair of `.c` and `.h` files handling register reads, writes, and device behavior:
+| Path | Peripheral |
+|------|------------|
+| `src/hw/bcu.c` | VR4131 Bus Control Unit |
+| `src/hw/cmu.c` | Clock Management Unit |
+| `src/hw/pmu.c` | Power Management Unit |
+| `src/hw/icu.c` | Interrupt Control Unit status, mask, and W1C behavior |
+| `src/hw/siu.c` | Serial Interface Unit configuration state |
+| `src/hw/rtc.c` | Real-Time Clock and elapsed counter helpers |
+| `src/hw/gpio.c` | GPIO registers and interrupt configuration |
+| `src/hw/nand.c` | NAND controller, SPL/NK read paths, OOB/ECC synthesis, restore writes |
+| `src/hw/cf.c` | PCMCIA/CompactFlash ATA, NANDWRITER boot taskfile, NE2000 model |
 
-| File | Peripheral |
-|------|-----------|
-| `bcu.c` / `bcu.h` | Bus Control Unit -- bus arbitration, chip select, revision registers |
-| `icu.c` / `icu.h` | Interrupt Control Unit -- interrupt status, mask, and routing |
-| `rtc.c` / `rtc.h` | Real-Time Clock -- elapsed time registers, RTCL1 periodic timer, RTCINTREG write-one-to-clear |
-| `siu.c` / `siu.h` | Serial Interface Unit -- UART configuration and control |
-| `nand.c` / `nand.h` | NAND flash controller -- command/address registers, page read engine, OOB synthesis, ECC |
-| `gpio.c` / `gpio.h` | General-purpose I/O -- pin direction, data, interrupt configuration |
-| `cmu.c` / `cmu.h` | Clock Management Unit -- clock enables and dividers |
-| `pmu.c` / `pmu.h` | Power Management Unit -- power state, standby control |
+## GXemul Engine
 
-## gxemul/ -- CPU Engine (Git Submodule)
+`gxemul/` is a MIPS-focused GXemul 0.7.0 tree. The BE-300 build compiles only
+the CPU, memory, timer, interrupt, console, symbol, network, and device pieces
+needed by this machine.
 
-The GXemul 0.7.0 engine is included as a Git submodule from the `jroark/GXemul` repository (`be300` branch). It provides the MIPS CPU core and several native device models.
+Important GXemul paths:
 
-### gxemul/src/cpus/
+| Path | Purpose |
+|------|---------|
+| `gxemul/src/cpus/cpu_mips.c` | Main MIPS CPU engine and included templates |
+| `gxemul/src/cpus/cpu_mips16.c` | MIPS16 interpreter needed by the BE-300 boot ROM |
+| `gxemul/src/cpus/cpu_mips_coproc.c` | CP0, TLB, Count/Compare, exception helpers |
+| `gxemul/src/core/memory.c` | Physical/virtual memory access and device dispatch |
+| `gxemul/src/core/timer.c` | GXemul timer framework |
+| `gxemul/src/devices/dev_vr41xx.c` | VR41xx timer/interrupt support used by the board |
+| `gxemul/src/devices/dev_ns16550.c` | 8250/16550-compatible VRC4173 SIU UART |
+| `gxemul/src/devices/dev_fb.c` | Framebuffer backing store |
+| `gxemul/src/net/` | Native networking backend used by NE2000 |
 
-VR4131 MIPS CPU implementation:
+## Frontends
 
-- Instruction execution (MIPS32 + MIPS16)
-- CP0 coprocessor (system control registers)
-- TLB management (32 entries, variable page sizes)
-- dyntrans dynamic binary translation
-- Exception and interrupt delivery
+| Path | Purpose |
+|------|---------|
+| `web/main_web.c` | Emscripten exports for browser worker control |
+| `web/` | Browser UI, worker, styles, favicon, static frontend assets |
+| `android/app/src/main/cpp/be300_jni.c` | Android JNI bridge into the emulator core |
+| `android/app/src/main/java/com/jroark/be300/` | Android activity, view, asset loading, input mapping |
+| `src/ui/assets/` | BE-300 frame and button-mask PNG assets shared by native/web/Android |
 
-### gxemul/src/core/
+## Tools And Reference Material
 
-Framework services:
-
-- Memory subsystem (physical and virtual address translation)
-- Interrupt controller framework
-- Timer infrastructure
-- Settings and configuration
-- Console I/O framework
-
-### gxemul/src/devices/
-
-Native device models used by the BE-300 machine:
-
-| Device | File | Function |
-|--------|------|----------|
-| VR41xx | `dev_vr41xx.c` | VR4131 ICU, timer, GPIO, interrupt assertion/deassertion |
-| NS16550 | `dev_ns16550.c` | VRC4173 SIU UART (8250/16550-compatible) |
-| Framebuffer | `dev_fb.c` | Generic framebuffer device |
-| RAM | `dev_ram.c` | RAM and ROM memory regions |
-
-### gxemul/config.h
-
-MIPS-only build configuration. Unnecessary architecture support (ARM, PowerPC, etc.) is stripped from the build.
+| Path | Purpose |
+|------|---------|
+| `tools/build_web.sh` | WebAssembly build helper |
+| `tools/be300_nand.py` | NAND image inspection/manipulation helpers |
+| `tools/inject_stowaway.py` | Build NAND image variant with Stowaway driver registration |
+| `tools/pcconnect_diff_tee.py` | Compare bridge tee logs with real PortMon captures |
+| `ce/bediag/` | WinCE diagnostic stream driver source |
+| `ce/restore_images/` | Restore-image references and recovery utilities |
+| `docs/CURRENT_STATUS.md` | Maintained emulator status and investigation guidance |

@@ -18,7 +18,7 @@ Boot ROM reverse engineering (16KB masked ROM with MIPS16 code), SPL/Kloader (B0
 Historical archive of the Linux4.BE project (2002-2004) that ported Linux to the BE-300. Includes project history, getting started guide, CyaCE bootloader, kernel building (2.4/2.6), ramdisk creation, cross-compilation toolchain, GUI frameworks (PicoGUI, MicroWindows, X11, Qt/Embedded), downloads, blog archive, and community resources.
 
 ### Emulator
-Architecture guide, build instructions, running Linux kernels and WinCE NAND boots, source code layout, GXemul CPU engine integration (with MIPS16 support), BEDiag diagnostic tool, and analysis scripts.
+Architecture guide, build instructions, current WinCE NAND boot workflow, source code layout, GXemul CPU engine integration (with MIPS16 support), web/Android frontends, PC Connect bridge notes, BEDiag diagnostic tool, and analysis scripts.
 
 ### Reference
 Datasheet index, ground truth hardware register dumps from real hardware, NK.exe memory layout, and glossary.
@@ -68,7 +68,7 @@ be300-wiki/
     hardware/                   # 13 pages: CPU, companion chip, memory map, etc.
     wince/                      # 10 pages: boot ROM, SPL, NK.exe, NAND, PPSH, etc.
     linux4be/                   # 10 pages: history, guides, blog, community
-    emulator/                   # 8 pages: architecture, building, running, tools
+    emulator/                   # emulator pages: architecture, building, running, tools, frontends
     reference/                  # 5 pages: datasheets, ground truth, glossary
     images/
       hardware/                 # Board photos from disassembly

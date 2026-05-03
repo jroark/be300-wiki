@@ -1,8 +1,8 @@
 # Casio Cassiopeia BE-300 Wiki
 
-The **Casio Cassiopeia BE-300** is a Windows CE-based pocket PC released in 2002. Built around the NEC VR4131 MIPS processor at 166 MHz with 16 MB of SDRAM and 16 MB of NAND flash, it features a 320x240 color STN display and runs Windows CE 3.0 out of the box.
+The **Casio Cassiopeia BE-300** is a Windows CE-based pocket PC released in 2002. Built around the NEC VR4131 MIPS processor at 166 MHz with 16 MB of SDRAM and 16 MB of NAND flash, it features a 240x320 color STN display and runs Windows CE 3.0 out of the box.
 
-This wiki documents the hardware architecture, Windows CE firmware internals, the historical Linux4.BE porting effort (2002--2004), and a modern cycle-accurate emulator that boots the device from its ROM reset vector through the full cold-boot sequence.
+This wiki documents the hardware architecture, Windows CE firmware internals, the historical Linux4.BE porting effort (2002--2004), and a modern emulator that boots the device from its ROM reset vector through the full cold-boot sequence.
 
 <div class="grid cards" markdown>
 
@@ -34,7 +34,7 @@ This wiki documents the hardware architecture, Windows CE firmware internals, th
 
     ---
 
-    Architecture, building, running, GXemul integration, and analysis tools for the cycle-accurate BE-300 emulator.
+    Architecture, building, running, GXemul integration, web/Android frontends, PC Connect, and analysis tools.
 
     [:octicons-arrow-right-24: Emulator](emulator/index.md)
 
@@ -50,7 +50,7 @@ The BE-300 was one of the few MIPS-based Windows CE handhelds to receive a commu
 
 ![Emulated WinCE boot](images/screenshots/All_nand_300.png){ width="320" }
 
-The emulator performs a true cold boot from the 16 KB masked ROM at `0xBFC00000`, loading the SPL from NAND, decompressing NK.exe into RAM, and handing off to the Windows CE kernel -- exactly as real hardware does after battery removal. It uses GXemul 0.7.0 as its MIPS CPU engine with native CP0, TLB, and dyntrans JIT support.
+The emulator performs a true cold boot from the 16 KB masked ROM at `0xBFC00000`, loading the SPL from NAND, decompressing NK.exe into RAM, and reaching the Windows CE first-boot UI from unmodified guest binaries. It uses GXemul 0.7.0 as its MIPS CPU engine with native CP0, TLB, MIPS16, and dyntrans support.
 
 ## Key Specifications
 
@@ -59,7 +59,7 @@ The emulator performs a true cold boot from the 16 KB masked ROM at `0xBFC00000`
 | CPU | NEC VR4131, MIPS32 LE, 166 MHz |
 | RAM | 16 MB SDRAM (2x Samsung K4S641633D) |
 | Storage | 16 MB NAND (Samsung K9F2808U0B) |
-| Display | 320x240, 16-bit color STN (EPSON L50753) |
+| Display | 240x320, 16-bit color STN |
 | ROM | 16 KB masked ROM at PA 0x1FC00000 |
 | OS | Windows CE 3.0 (upgradeable to .NET 4.x) |
 | Companion | NEC VRC4173 |

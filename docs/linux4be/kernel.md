@@ -9,7 +9,7 @@ Linux4.BE used the Linux 2.4.18 kernel as its base, adapted for the NEC VR4131 S
 The following hardware was supported by the original Linux4.BE kernels:
 
 - **Serial console** (VR4131 SIU UART at 0x0A008680)
-- **Framebuffer** (320x240, 16-bit color)
+- **Framebuffer** (240x320 portrait, 16-bit color in the current emulator model)
 - **Ramdisk boot** (initrd loaded by CyaCE)
 
 ## Not Supported
@@ -43,9 +43,11 @@ The reference kernel for testing is `vmlinux-pgui-demo`, which is confirmed to b
 Mouse contributed a Linux 2.6.8.1 port (`linux2.6-l4be.diff`). Key differences from the 2.4 kernels:
 
 - `prom_init()` takes no parameters; `arcs_cmdline` is not populated from bootloader arguments
-- The `--cmdline` bootloader argument has no effect (the kernel ignores `fw_arg0`/`fw_arg1`)
+- Bootloader arguments were not consumed by the 2.6 `prom_init()` path
 - Serial console is registered directly via `be300_console_init()` in `prom_init` (UART at 0xAA008680)
-- The framebuffer uses 5-bit green encoding (requires `--sfb-5bit-green` flag in the emulator)
+- The framebuffer color interpretation differs from the 2.4 kernels; older
+  emulator builds carried a compatibility flag for this, but the current
+  source CLI is focused on WinCE NAND/ROM paths.
 
 ## Building from Source
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Several graphical user interface frameworks were tested on the BE-300's 320x240 16-bit color display. The primary challenge was fitting a usable GUI into the limited RAM (16 MB shared with the kernel and ramdisk) while providing text input through the device's minimal hardware buttons.
+Several graphical user interface frameworks were tested on the BE-300's small 16-bit color display. The primary challenge was fitting a usable GUI into the limited RAM (16 MB shared with the kernel and ramdisk) while providing text input through the device's minimal hardware buttons.
 
 ## PicoGUI
 

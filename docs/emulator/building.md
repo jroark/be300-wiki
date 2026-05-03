@@ -3,73 +3,97 @@
 ## Prerequisites
 
 - CMake 3.10 or later
-- C11-compatible compiler (GCC or Clang)
-- SDL2 development libraries (optional; omit for headless builds)
-- Git (for submodule checkout)
+- C11-compatible compiler
+- SDL2 development libraries for the native framebuffer window and buzzer audio
+- libpng if SDL frame PNG support is desired
+- Git submodules initialized for the GXemul CPU engine
+- `gtimeout` or GNU `timeout` for bounded boot smoke tests
 
-## Clone and Build
-
-The GXemul CPU engine is included as a Git submodule. Clone with `--recurse-submodules` to fetch it automatically:
+## Clone And Submodules
 
 ```bash
 git clone --recurse-submodules https://github.com/jroark/be300-framebuffer.git
 cd be300-framebuffer
 ```
 
-If you already cloned without submodules:
+If the repository was cloned without submodules:
 
 ```bash
 git submodule update --init
 ```
 
-Build with CMake:
+## Native CLI Build
 
 ```bash
-mkdir build && cd build
+mkdir -p build-host
+cd build-host
 cmake ..
 make -j$(nproc)
 ```
 
-The resulting `be300` binary is placed in the build directory.
+On macOS, use a fixed job count or `$(sysctl -n hw.ncpu)` instead of
+`$(nproc)`:
 
-!!! note "macOS"
-    On macOS, use `make -j$(sysctl -n hw.ncpu)` instead of `make -j$(nproc)`, or simply `make -j8` (adjust to your core count). SDL2 can be installed via Homebrew: `brew install sdl2`.
+```bash
+make -j$(sysctl -n hw.ncpu)
+```
+
+The native executable is written to `build-host/be300`.
+
+!!! note "Apple Silicon"
+    The CMake configuration defaults to `arm64` on Apple Silicon hardware when
+    no `CMAKE_OSX_ARCHITECTURES` value is supplied. Homebrew SDL2 and libpng
+    from `/opt/homebrew` are detected when available.
 
 ## Headless Build
 
-To build without SDL2 (no display window), the build system will automatically detect the absence of SDL2 and compile in headless mode. Serial output still goes to stdout.
+SDL2 is optional for the native CLI. If SDL2 is not found, CMake builds a
+headless binary. Serial output and diagnostics still work, but no host display
+or audio window is opened.
+
+## WebAssembly Build
+
+The web frontend reuses the same emulator core and adds Emscripten glue in
+`web/main_web.c`.
+
+```bash
+./tools/build_web.sh
+```
+
+The generated browser bundle is written to `build-web/web/`. See
+[Web And Android Frontends](frontends.md) for local serving and runtime notes.
+
+## Android Build
+
+The Android app embeds the emulator core through JNI and renders the framebuffer
+in Java/Kotlin UI code:
+
+```bash
+cd android
+./gradlew :app:assembleDebug
+```
+
+The debug APK is written to `android/app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Docker Cross-Tools
 
-A Docker environment provides MIPS cross-compilation toolchains for analyzing BE-300 binaries. This is used for disassembly and reverse engineering, not for building the emulator itself.
+The Docker `mips-dev` environment is for MIPS and WinCE binary analysis, not
+for building the native emulator:
 
 ```bash
 docker compose build mips-dev
 docker compose run --rm mips-dev /bin/bash
 ```
 
-The container includes two toolchains:
+The source tree is mounted at `/work` inside the container.
 
-| Toolchain | Target | Tools |
-|-----------|--------|-------|
-| `mipsel-linux-gnu` | Linux ELF | `objdump`, `nm`, `objcopy`, `ar`, `readelf` |
-| `mipsel-pe` | WinCE PE | `objdump`, `nm`, `objcopy`, `ar` |
+| Toolchain | Target | Examples |
+|-----------|--------|----------|
+| `mipsel-linux-gnu` | Linux ELF and raw MIPS disassembly | `objdump`, `nm`, `readelf` |
+| `mipsel-pe` | WinCE PE binaries | `objdump`, `nm`, `objcopy` |
 
-The local source directory is mounted as `/work` inside the container.
-
-!!! warning "Host vs. Container"
-    The Docker container is for binary analysis only. Build the emulator on the host. Git operations (commit, push) should also be done from the host, not inside the container.
-
-### Example: Disassemble a WinCE Binary
+Example:
 
 ```bash
-# Inside the Docker container
-mipsel-pe-objdump -d /work/ce/loader.exe | head -n 50
-```
-
-### Example: Disassemble NK.exe
-
-```bash
-# Inside the Docker container
-mipsel-linux-gnu-objdump -D -b binary -m mips:3000 -EL /work/docs/nk_decompressed.bin | less
+mipsel-linux-gnu-objdump -D -b binary -m mips:3000 -EL /work/docs/nk_decompressed.bin
 ```

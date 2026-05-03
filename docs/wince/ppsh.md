@@ -43,6 +43,18 @@ The PPSH detection result determines the entire boot path:
 
 When PPSH is detected, WinCE boots to a `Windows CE>` command prompt instead of the graphical shell.
 
+## Emulator Usage
+
+The emulator makes the PPSH probe succeed when `--ppsh` is supplied:
+
+```bash
+./build-host/be300 --nand ce/restore_images/All_nand_300.bin --ppsh
+```
+
+PPSH uses the same guest serial/debug path family as the other COM1 peers. Do
+not combine it with `--pcconnect-time-sync`, `--pcconnect-bridge`, or
+`--stowaway-keyboard`.
+
 ## Protocol
 
 PPSH uses a framed message protocol:

@@ -11,7 +11,7 @@ The BE-300 exposes an RS-232C serial port through the TCX3110 level shifter, dri
 | Compatibility | 8250/16550 |
 | Register Stride | 4 bytes |
 | Clock | 18.432 MHz |
-| Default Baud | 9600 |
+| Default Baud | 9600 for Linux console; 115200 for PC Connect-style dock use |
 
 ## Register Map
 
@@ -45,3 +45,19 @@ The 2.6 kernel registers the serial console directly via `be300_console_init()` 
 
 !!! note "Serial Console and Userspace"
     The 2.4 Linux kernels have a known issue where the serial console driver blocks userspace writes. When testing with the emulator, avoid using `console=ttyS0` if userspace startup is needed -- use `console=tty0` (framebuffer console) instead, or omit the serial console entirely.
+
+## WinCE COM1 Peers
+
+Windows CE uses the same VRC4173 SIU path for several mutually exclusive dock
+or debug peers:
+
+| Peer | Emulator option | Notes |
+|------|-----------------|-------|
+| PPSH debug shell | `--ppsh` | Makes the firmware PPSH probe succeed |
+| PC Connect time sync | `--pcconnect-time-sync` | Experimental synthetic peer |
+| PC Connect bridge | `--pcconnect-bridge <spec>` | Pipes COM1 to TCP, Unix socket, or PTY |
+| Stowaway keyboard dock | `--stowaway-keyboard` | Serial keyboard scancode source |
+
+Only one of these can own COM1 at a time. This is intentional: they are
+different devices or peers on the same UART path, not independent hardware
+ports.

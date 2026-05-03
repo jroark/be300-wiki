@@ -48,7 +48,7 @@ The project used a non-destructive boot method based on the CyaCE loader. Users 
 
 ## GUI Environments
 
-Several graphical environments were tested on the 320x240 display:
+Several graphical environments were tested on the BE-300 display:
 
 - **PicoGUI** --- the primary GUI framework, with a working desktop and virtual keyboard
 - **MicroWindows/Nano-X** --- alternative lightweight GUI

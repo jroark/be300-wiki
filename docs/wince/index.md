@@ -1,67 +1,78 @@
 # Windows CE Overview
 
-The Casio BE-300 ships with **Windows CE 3.0** as its stock operating system. Some later models and firmware updates use **Windows CE 4.0** (also known as .NET). The entire OS, bootloader, and user filesystem are stored on 16MB of onboard NAND flash.
+The Casio BE-300 ships with Windows CE 3.0 as its stock operating system. Some
+later restore images and related models use Windows CE .NET/4.x. The operating
+system, bootloader, and user filesystem live on the onboard NAND flash.
 
 ## Stock Firmware
 
-The BE-300's firmware consists of four partitions on NAND flash:
+The primary WinCE 3.0 restore image used by emulator development is
+`All_nand_300.bin`.
 
-| Partition | Contents | Size |
-|-----------|----------|------|
-| Boot metadata | Partition table, boot flags | 16 KB |
-| SPL / Kloader | Second-stage bootloader (B000FF format) | 64 KB |
-| NK.exe | Compressed WinCE kernel image | ~3.6 MB |
-| FAT16 filesystem | User data and system files | ~12 MB |
+| Region | Contents |
+|--------|----------|
+| Boot metadata | NAND partition table, boot flags, metadata |
+| SPL / Kloader | Second-stage loader in B000FF format |
+| NK.exe | Compressed WinCE kernel image |
+| FAT16 filesystem | System files, drivers, user-visible storage |
 
-The kernel image (NK.exe) contains 95 XIP (execute-in-place) modules that make up the WinCE operating system, including the shell, device drivers, and the GWE (Graphics, Windowing, and Events) subsystem.
+The decompressed NK.exe image contains XIP modules for the kernel, shell,
+drivers, GWE, and built-in applications.
 
-## Boot Sequence
+## Cold Boot Sequence
 
-A cold boot (from full power-off, as after battery removal) follows this chain:
+A battery-removal cold boot follows this chain:
 
+```text
+Boot ROM at 0xBFC00000
+  -> CP0/cache/platform setup
+  -> NAND reads
+  -> SPL/Kloader load
+
+SPL / Kloader
+  -> hardware setup
+  -> NK.exe read from NAND
+  -> NK.exe decompression into SDRAM
+  -> entry mailbox update
+
+WinCE NK.exe
+  -> OAL hardware initialization
+  -> exception vectors and kernel memory setup
+  -> XIP module initialization
+  -> scheduler and shell paths
+  -> first-boot UI
 ```
-Boot ROM (0xBFC00000)
-  --> CP0 init, SDRAM timing, clock setup
-  --> Read NAND, load SPL into RAM
 
-SPL / Kloader (0x80F00000)
-  --> HW init (VR4131, VRC4173)
-  --> Read NK.exe from NAND
-  --> Decompress into RAM at 0x80060000
-  --> Write entry address to mailbox (PA 0x24FC)
-
-Boot ROM (continued)
-  --> BINFS section copier (copies .data/.bss)
-  --> Boot dispatcher (registers OEMInit callbacks)
-  --> Jump to NK.exe entry point
-
-NK.exe (0x80076B50)
-  --> OAL hardware initialization
-  --> Exception handler installation
-  --> kernel_init(pTOC) -- loads 95 XIP modules
-  --> Scheduler starts
-  --> Shell launches
-```
+The emulator now runs this chain from the real ROM and NAND image without guest
+patches, RAM seeds, or synthetic handoff state.
 
 ## Cold Boot Display Sequence
 
-After a cold boot, the user sees:
+The stock first-boot path can show:
 
-1. **"Initializing..."** with a progress bar that fills up (NK.exe pre-init phase)
-2. **"Starting..."** displayed briefly (post-init, shell loading)
-3. **Touch calibration screen** (first boot or after factory reset)
-4. **WinCE desktop**
+1. "Initializing..." with a progress bar
+2. "Starting..." during shell/display transition
+3. date/time setup when the RTC is in the first-boot/default state
+4. touch calibration
+5. WinCE desktop
 
 !!! note
-    The "Starting..." and "Initializing..." strings do not exist anywhere in NK.exe or the NAND image as static text. They are rendered at runtime by the GWE graphics subsystem using font rendering into memory buffers that are zero-filled in the binary.
+    The "Starting..." and "Initializing..." strings are rendered at runtime by
+    the GWE/display path. They are not stored as ready-made splash bitmaps in
+    NK.exe.
 
-## Reverse Engineering
+## Current Emulator-Relevant Findings
 
-The entire boot chain -- from the 16KB masked ROM through SPL decompression and NK.exe kernel initialization -- has been reverse-engineered as part of the emulator project. Key discoveries include:
+- The historical "Starting..." splash stall and Welcome.exe/launcher
+  dependency theories are superseded by current emulator behavior.
+- Normal cold boots no longer rely on the legacy resume-context workaround or
+  a forced warm-to-cold return path.
+- Touch calibration depends on VRC4173 PIU page-buffer, interrupt, and timing
+  behavior.
+- Native emulator boots default to cold-boot RTC state. `--rtc-host-time`
+  supplies host local time for interactive testing.
+- PC Connect, PPSH, Stowaway keyboard, and the time-sync peer all share the
+  VRC4173 SIU UART from the guest point of view.
 
-- The ROM contains both **MIPS32 and MIPS16 code**, with cross-mode calls via JALX
-- NK.exe always takes the "warm" restore path due to a register clobber bug, requiring the emulator to seed a resume context with cold-start values
-- The PPSH (Parallel Port Shell) debug interface can redirect WinCE console I/O to a debug shell, bypassing the GUI entirely
-- The SPL uses a Casio proprietary compression scheme for NK.exe
-
-See the subsections for detailed documentation of each boot stage.
+See the subsections for ROM, SPL, NK.exe, restore-image, PPSH, and hibernate
+details.

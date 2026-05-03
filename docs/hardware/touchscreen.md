@@ -1,39 +1,73 @@
 # Touchscreen
 
-The BE-300 has a resistive touchscreen overlay on the LCD panel, controlled by the VRC4173 companion chip PIU (Pen Input Unit).
+The BE-300 has a resistive touchscreen controlled by the VRC4173 PIU
+(Pen Input Unit). The current emulator models the PIU behavior needed by the
+WinCE touch driver and calibration UI.
 
-## Registers
+## Register Window
 
-| Address | Kseg1 Address | Function |
-|---|---|---|
-| 0x0A000000 | 0xAA000000 | PIU base |
-| 0x0A000301 | 0xAA000301 | Touchpanel register |
-| 0x0A000304 | 0xAA000304 | Pen-down detection |
-| 0x0A00031C | 0xAA00031C | Touchpanel register |
+| Address | Kseg1 address | Function |
+|---------|---------------|----------|
+| `0x0A000300` | `0xAA000300` | PIUCNTREG / control and PADSTATE |
+| `0x0A000304` | `0xAA000304` | PIUINTREG pending/mask byte pair |
+| `0x0A000308` | `0xAA000308` | PIUSIVLREG scan interval |
+| `0x0A00030C` | `0xAA00030C` | PIUSTBLREG stabilization timing |
+| `0x0A000320`-`0x0A00032C` | `0xAA000320`-`0xAA00032C` | page 0 ADC coordinate buffer |
+| `0x0A000350`-`0x0A00035C` | `0xAA000350`-`0xAA00035C` | page 1 ADC coordinate buffer |
 
-## Pen-Down Detection
+The coordinate buffers hold the VRC4173 y+/y-/x-/x+ sample values consumed by
+WinCE `touch.dll`.
 
-The pen-down register at `0xAA000304` indicates whether the stylus is touching the screen. When a touch is detected, the PIU asserts an interrupt through the GIU cascade.
+## Scan Sequencer
 
-## Interrupt Path
+The PIU state machine includes:
 
-The touchscreen interrupt follows this path through the interrupt cascade:
+- WaitPenTouch
+- PenDataScan
+- IntervalNextScan
+- standby/reset behavior
 
-1. Stylus contacts the touchscreen
-2. VRC4173 PIU detects pen-down
-3. GIU line 9 asserts
-4. GIUINTLREG (0xAF000088) bit 9 is set
-5. SYSINT1REG (0xAF000080) bit 8 (GIUINTR) asserts
-6. VR4131 ICU dispatches to GIU handler
-7. Handler reads pen-down register at `0xAA000304`
-8. Returns SYSINTR_TOUCH (0x11) for initial pen-down, or SYSINTR_TOUCH_CHANGED (0x18) for movement
+On pen contact, the model raises a pen-change interrupt, samples coordinates
+after the configured stabilization/conversion delay, and alternates page 0 and
+page 1 valid-buffer interrupts. If both page buffers remain pending, the
+data-lost bit is set.
 
-## WinCE Touch Calibration
+## Interrupt Semantics
 
-After a cold boot, the first user interaction in Windows CE is the touch calibration screen. The OS presents crosshair targets that the user must tap with the stylus to establish the mapping between touch coordinates and screen pixels.
+PIUINTREG is a pending/mask pair:
 
-This calibration screen appears after the "Starting..." splash screen and before the WinCE desktop loads.
+- pending bits are set by hardware behavior
+- the guest acknowledges with write-one-to-clear
+- page 0/page 1 acknowledgements clear the matching valid-buffer state
+- the PIU interrupt line is asserted while unmasked pending bits remain
+
+The interrupt routes through the BE-300 cascade:
+
+1. PIU condition changes
+2. VRC4173 GIRQ0-9 path asserts
+3. GIU line reaches the VR4131 ICU
+4. WinCE OAL dispatches touch SYSINTR paths
+
+## Timing
+
+The emulator schedules PIU conversion completion against emulated CP0 Count
+cycles. This avoids trace/logging sensitivity: touch behavior should not depend
+on how fast the host happens to run the emulator.
+
+The default scan/stabilization values come from real VRC4173 hardware dumps.
+
+## Calibration
+
+After a first boot or factory-reset style state, WinCE presents touch
+calibration before the desktop. Calibration expects several stable coordinate
+pages for each held pen press, so host click handling deliberately keeps a
+minimum guest pen-down dwell time.
+
+Set `BE300_TOUCH_MIN_DWELL_MS=0` for direct host timing, or a larger value to
+make short host clicks look like longer stylus presses to the guest.
 
 ## Linux Support
 
-The Linux4.BE project did not implement touchscreen support. The Linux kernels use only the framebuffer console and serial console for I/O.
+The historical Linux4.BE kernels did not implement BE-300 touchscreen support.
+Touchscreen work in the current emulator is driven by WinCE calibration and
+input behavior.

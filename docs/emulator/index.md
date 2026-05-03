@@ -1,20 +1,57 @@
 # Emulator Overview
 
-The BE-300 emulator is a modified [GXemul 0.7.0](https://gavare.se/gxemul/) system emulator purpose-built for the Casio BE-300 handheld. It provides cycle-accurate emulation of the NEC VR4131 MIPS CPU and surrounding hardware, enabling both Linux and Windows CE operating systems to boot and run.
+The BE-300 emulator is a GXemul 0.7.0-based system emulator for the Casio
+Cassiopeia BE-300. It runs the same VR4131 MIPS CPU model, ROM reset vector,
+NAND boot path, and companion-chip peripherals that the stock device depends
+on.
 
-## Capabilities
+The active target is accurate Windows CE 3.0 cold boot from the real 16 KB
+masked boot ROM and a raw NAND restore image:
 
-- **Linux kernel boot** — Boots Linux 2.4, 2.6, and 4.2.9 kernels to userspace with framebuffer and serial console output
-- **WinCE cold boot** — Cold-boots Windows CE 3.0 and 4.0 from the real 16KB boot ROM through the Secondary Program Loader (SPL) to NK.exe, exactly as real hardware does after battery removal
-- **Hardware-accurate emulation** — VR4131 MIPS CPU with full TLB/MMU, CP0 coprocessor, MIPS16 instruction support, and peripheral emulation (ICU, RTC, NAND, GPIO, UART, framebuffer)
-- **Cross-platform** — Runs natively on macOS and Linux; also available as a web application via Emscripten/WebAssembly
+```bash
+./be300 --nand ce/restore_images/All_nand_300.bin
+```
+
+That path runs:
+
+```text
+ROM reset vector -> SPL/Kloader from NAND -> NK.exe decompression -> WinCE 3.0
+```
 
 ## Current Status
 
-The emulator is under active development. Linux kernels boot fully to userspace with PicoGUI desktop environments. WinCE cold boot reaches kernel initialization and the scheduler, progressing through the ROM boot sequence, SPL decompression, and NK.exe entry.
+- WinCE 3.0 cold boot reaches the shell / first-boot UI path from the
+  unmodified ROM and NAND image.
+- Touch input is usable enough to complete calibration and reach applications.
+- Native boots default to the cold-boot RTC presentation so WinCE can ask for
+  date/time like real hardware after battery removal.
+- `--rtc-host-time` initializes the guest RTC from host local time for
+  interactive testing.
+- CompactFlash, PCMCIA NE2000, Stowaway keyboard, PC Connect bridge, and the
+  PPSH debug-shell probe are implemented as targeted accessory paths.
+- Linux kernel boot support remains in the codebase for historical and
+  regression work, but current CLI and regression focus are WinCE NAND boots.
 
-!!! info "Development Philosophy"
-    The project prioritizes hardware-accurate emulation over workarounds. The ROM and NK.exe binaries are captured from real hardware and run unmodified. When guest OS behavior fails, the root cause is always a missing or incorrect hardware behavior in the emulator.
+!!! info "Development rule"
+    Guest binaries stay unmodified. The emulator should model missing hardware
+    behavior instead of patching WinCE, pre-seeding RAM, or forcing handoff
+    state.
+
+## Key Features
+
+| Feature | Details |
+|---------|---------|
+| CPU | NEC VR4131-class MIPS, GXemul CP0/TLB/MMU, MIPS32 and MIPS16 |
+| Boot ROM | 16 KB masked ROM embedded from `docs/hardware/be300_boot_rom.bin` |
+| RAM | 16 MiB default SDRAM, configurable with `--sdram` |
+| Display | 240x320 guest framebuffer, optional SDL2 host window and BE-300 frame |
+| NAND | Samsung K9F2808U0B-style NAND controller model with OOB/ECC synthesis |
+| Input | VRC4173 PIU touchscreen, front buttons, optional Stowaway serial keyboard |
+| Storage | ATA CompactFlash image support and NANDWRITER restore path |
+| Networking | PCMCIA NE2000 model with native and WebAssembly bridge hooks |
+| Serial | VRC4173 SIU UART, PPSH probe, PC Connect time-sync peer, PC Connect bridge |
+| Frontends | Native CLI/SDL, WebAssembly worker/frontend, Android JNI app |
+| Diagnostics | MMIO logging, first-hit MMIO coverage, trace mode, stall detection |
 
 ## Screenshots
 
@@ -25,16 +62,3 @@ The emulator is under active development. Linux kernels boot fully to userspace 
 **Linux PicoGUI Desktop**
 
 ![Linux PicoGUI](../images/screenshots/vmlinux-pgui-demo.png)
-
-## Key Features
-
-| Feature | Details |
-|---------|---------|
-| CPU | NEC VR4131 (MIPS32 little-endian) via GXemul engine |
-| RAM | 16 MiB SDRAM |
-| Display | 240x320 16-bit framebuffer via SDL2 |
-| Boot ROM | Real 16KB masked ROM from hardware (PA 0x1FC00000) |
-| MIPS16 | Full interpreter for boot ROM's compact code sections |
-| NAND | Controller emulation with OOB synthesis and ECC |
-| Peripherals | ICU, RTC, BCU, CMU, PMU, GPIO, SIU (UART), PPSH |
-| dyntrans | GXemul dynamic binary translation for performance |
