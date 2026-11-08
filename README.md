@@ -82,13 +82,13 @@ be300-wiki/
 
 Wiki content is synthesized from:
 
-- **[be300-framebuffer](https://github.com/jroark/be300)** -- Emulator source, hardware documentation, reverse engineering notes, boot ROM analysis, register dumps from real hardware
+- **[be300](https://github.com/jroark/be300)** -- Emulator source, hardware documentation, reverse engineering notes, boot ROM analysis, register dumps from real hardware
 - **linux4.be archive** -- Wayback Machine capture of the original Linux4.BE project website (2002-2004), including technical pages, blog posts, IRC logs, forum, and downloads
 - **Real BE-300 hardware** -- Register dumps, TLB snapshots, memory diffs, and diagnostic captures from a physical device
 
 ## Related projects
 
-- [be300-framebuffer](https://github.com/jroark/be300) -- BE-300 emulator (GXemul-based, boots Linux and WinCE)
+- [be300](https://github.com/jroark/be300) -- BE-300 emulator (GXemul-based, boots Linux and WinCE)
 - [GXemul](https://github.com/jroark/GXemul) -- Forked MIPS CPU engine with MIPS16 and VR4131 support
 
 ## License
